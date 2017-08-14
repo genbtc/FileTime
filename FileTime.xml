@@ -6,26 +6,17 @@
     <members>
         <member name="T:genBTC.FileTime.Form_Main">
             <summary>
-            Main Form Window of the Program. 
+            GUI : Main Form Window of the Program. 
             </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Form_Main.Confirmation">
+            <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         </member>
         <member name="F:genBTC.FileTime.Form_Main.FilesReadOnlytoFix">
             <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
         </member>
         <member name="F:genBTC.FileTime.Form_Main.FilestoConfirmList">
             <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Form_Main.Confirmation">
-            <summary> Stub for Form 2 to be accessed once it is opened. </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Form_Main._skippedHiddenCount">
-            <summary> Count of the number of hidden files skipped </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Form_Main._skippedReadOnlyCount">
-            <summary> Count of the number of Read-only files skipped </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Form_Main._skippedSystemCount">
-            <summary> Count of the number of System files skipped </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.#ctor">
             <summary>Init the main startup form </summary>
@@ -50,6 +41,14 @@
         <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
             <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
         </member>
+        <member name="M:genBTC.FileTime.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
+            <summary>
+            Update the textlabel box for FilePath when the Explorer Tree path changes.
+            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:genBTC.FileTime.Form_Main.OpenFile">
             <summary>
             Display the Folder Browser Dialog and then display the selected
@@ -64,8 +63,8 @@
         </member>
         <member name="M:genBTC.FileTime.Form_Main.GoUpdateDateTimeMode1">
             <summary>
-            The Update-Button runs a long process on folders/files, how to decide which time to use, 
-            then adds them to the confirm list to be handled by form 2.
+            This Update-Button runs a long process on the folders/files. It decides which time to use, 
+            then adds them to the confirm list to be handled by the form_confirm window (part2).
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String)">
@@ -116,10 +115,21 @@
             The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(System.String,genBTC.FileTime.Classes.NameDateObject)">
+        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(System.String)">
             <summary>
-            Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+            Very long function that does a simple task. Read in the options the user set for the operation, and
+            Decide on the timestamp it should use, by the end we will have a single object with 3 times.
+            This will need to be hit with broad strokes if we attempt to do any more work on the program.
             </summary>
+            <param name="directoryPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.SetFolderDateTimeMode2(System.String,genBTC.FileTime.Classes.NameDateObject)">
+            <summary>
+            Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+            </summary>
+            <param name="folderPath"></param>
+            <param name="subFile"></param>
         </member>
         <member name="F:genBTC.FileTime.Form_Main.components">
             <summary>
@@ -138,6 +148,21 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:genBTC.FileTime.Form_Main._skippedHiddenCount">
+            <summary> Count of the number of hidden files skipped </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Form_Main._skippedReadOnlyCount">
+            <summary> Count of the number of Read-only files skipped </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Form_Main._skippedSystemCount">
+            <summary> Count of the number of System files skipped </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(System.String,genBTC.FileTime.Classes.NameDateObject)">
+            <summary>
+            Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+            VIEWMODEL
+            </summary>
+        </member>
         <member name="T:genBTC.FileTime.Form_Main.ListViewIcon">
             <summary> Icon in listView image list </summary>
         </member>
@@ -146,6 +171,12 @@
         </member>
         <member name="F:genBTC.FileTime.Form_Main.ListViewIcon.Directory">
             <summary> Directory icon in listView image list </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.ExplorerComparerstring">
+            <summary> Explorer-like Sort, for strings </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.ListViewItemExplorerLikeComparer">
+            <summary> Explorer-like Sort, for use by listview.Sorter </summary>
         </member>
         <member name="T:genBTC.FileTime.Classes.CustomListView">
             <summary>
@@ -325,108 +356,42 @@
             Return an int specifying the type of drive.
             </summary>
         </member>
-        <member name="T:genBTC.FileTime.Classes.NameDateObject">
-            <summary>Class object with 5 properties to refer to a file/dir</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObject.#ctor(System.Windows.Forms.ListViewItem)">
-            <summary> constructor with a listviewitem </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObject.#ctor">
-            <summary> default Constructor (Initializer)</summary>
-        </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObject.FileOrDirType">
-            <summary>quick flag to know whether we're a file or a dir
-            int FileOrDirType: 0 (File) or 1 (Dir)
-            </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObject.Name">
-            <summary>string Name: the file name</summary>
-        </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObject.Created">
-            <summary>returns an object: DateTime or null </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObject.Modified">
-            <summary>returns an object: DateTime or null </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObject.Accessed">
-            <summary>returns an object: DateTime or null </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.NameDateObject.ExplorerLikeSort">
-            <summary>
-            Explorer-like Sort, that orders two NameDateObject's by their name property
-            </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.NameDateObjectListViewVM">
+        <member name="T:genBTC.FileTime.Classes.NameDateObjectListViewVm">
             <summary>ViewModel version of the NameDateObject(Name + 3 Dates)</summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVM.#ctor(System.Windows.Forms.ListViewItem)">
+        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVm.#ctor(System.Windows.Forms.ListViewItem)">
             <summary> construct with a listviewitem </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVM.#ctor(genBTC.FileTime.Classes.NameDateObject)">
+        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVm.#ctor(genBTC.FileTime.Classes.NameDateObject)">
             <summary> construct with a NameDateObject </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVM.#ctor">
+        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVm.#ctor">
             <summary> Empty default constructor (initializer) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVM.Compare(genBTC.FileTime.Classes.NameDateObjectListViewVM,genBTC.FileTime.Classes.NameDateObjectListViewVM)">
+        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVm.Compare(genBTC.FileTime.Classes.NameDateObjectListViewVm,genBTC.FileTime.Classes.NameDateObjectListViewVm)">
             <summary>
             Compares two of these objects's DATES, Combines any dates that are null or not null and returns only one
             Looks super stupid, but makes the "Try to combine DUPlicate filenames" actually work. Help ?
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVM.Converter">
+        <member name="M:genBTC.FileTime.Classes.NameDateObjectListViewVm.Converter">
             <summary> Converts this class into a ListViewItem. </summary>
             <returns>  Returns a listviewitem</returns>
         </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVM.FileOrDirType">
+        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVm.FileOrDirType">
             <summary>int FileOrDirType: 0 (File) or 1 (Dir)</summary>
         </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVM.Name">
+        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVm.Name">
             <summary>string Name: filepathname</summary>
         </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVM.Created">
+        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVm.Created">
             <summary>returns a string of DateTime.ToString or null </summary>
         </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVM.Modified">
+        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVm.Modified">
             <summary>returns a string of DateTime.ToString or null </summary>
         </member>
-        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVM.Accessed">
+        <member name="P:genBTC.FileTime.Classes.NameDateObjectListViewVm.Accessed">
             <summary>returns a string of DateTime.ToString or null </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.OldNewDate">
-            <summary>
-            Class: given a list of DateTime?s, get oldest and newest date and the index of each
-            This is for the "Source time from" option - it looks at an entire subfolder of files.
-            </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.OldNewDate.Index">
-            <summary> total indexes </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.OldNewDate.MaxDate">
-            <summary> maxdate </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.OldNewDate.MaxIndex">
-            <summary> maxindex are indexes of the maxdate </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.OldNewDate.MinDate">
-            <summary> mindate </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.OldNewDate.MinIndex">
-            <summary> minindex are indexes of the mindate </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.OldNewDate.#ctor(System.Collections.Generic.List{System.Nullable{System.DateTime}})">
-            <summary>
-            Takes a list of datetimes(which came from a list of files) and
-            calculates the newest and oldest dates and stores the indexes too.
-            Constructor for the class. Also does all the work.
-            </summary>
-            <param name="timelist">a List of DateTime?s</param>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.ExplorerComparerstring">
-            <summary> Explorer-like Sort, for strings </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.ListViewItemExplorerLikeComparer">
-            <summary> Explorer-like Sort, for use by listview.Sorter </summary>
         </member>
         <member name="M:genBTC.FileTime.Classes.NativeMethods.SelectAllItems(System.Windows.Forms.ListView)">
             <summary>
@@ -452,27 +417,27 @@
         <member name="M:genBTC.FileTime.Program.Main">
             <summary> The main entry point for the application.</summary>
         </member>
-        <member name="T:genBTC.FileTime.Form_Preferences">
+        <member name="T:genBTC.FileTime.FormPreferences">
             <summary> Preferences window class </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Preferences.components">
+        <member name="F:genBTC.FileTime.FormPreferences.components">
             <summary>
             Required designer variable.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Preferences.Dispose(System.Boolean)">
+        <member name="M:genBTC.FileTime.FormPreferences.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Preferences.InitializeComponent">
+        <member name="M:genBTC.FileTime.FormPreferences.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Preferences.#ctor(System.String)">
+        <member name="M:genBTC.FileTime.FormPreferences.#ctor(System.String)">
             <summary>Show preferences window</summary>
         </member>
         <member name="T:genBTC.FileTime.Form_Confirm">
@@ -748,6 +713,66 @@
         </member>
         <member name="F:genBTC.FileTime.Classes.ExtractIcon.SHGFI.OverlayIndex">
             <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.NameDateObject">
+            <summary>Class object with 5 properties to refer to a file/dir</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.NameDateObject.#ctor(System.Windows.Forms.ListViewItem)">
+            <summary> constructor with a listviewitem </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.NameDateObject.#ctor">
+            <summary> default Constructor (Initializer)</summary>
+        </member>
+        <member name="P:genBTC.FileTime.Classes.NameDateObject.FileOrDirType">
+            <summary>quick flag to know whether we're a file or a dir
+            int FileOrDirType: 0 (File) or 1 (Dir)
+            </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Classes.NameDateObject.Name">
+            <summary>string Name: the file name</summary>
+        </member>
+        <member name="P:genBTC.FileTime.Classes.NameDateObject.Created">
+            <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Classes.NameDateObject.Modified">
+            <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Classes.NameDateObject.Accessed">
+            <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.NameDateObject.ExplorerLikeSort">
+            <summary>
+            Explorer-like Sort, that orders two NameDateObject's by their name property
+            </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.OldNewDate">
+            <summary>
+            Class: given a list of DateTime?s, get oldest and newest date and the index of each
+            This is for the "Source time from" option - it looks at an entire subfolder of files.
+            </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.OldNewDate.Index">
+            <summary> total indexes </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.OldNewDate.MaxDate">
+            <summary> maxdate </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.OldNewDate.MaxIndex">
+            <summary> maxindex are indexes of the maxdate </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.OldNewDate.MinDate">
+            <summary> mindate </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.OldNewDate.MinIndex">
+            <summary> minindex are indexes of the mindate </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.OldNewDate.#ctor(System.Collections.Generic.List{System.Nullable{System.DateTime}})">
+            <summary>
+            Takes a list of datetimes(which came from a list of files) and
+            calculates the newest and oldest dates and stores the indexes too.
+            Constructor for the class. Also does all the work.
+            </summary>
+            <param name="timelist">a List of DateTime?s</param>
         </member>
     </members>
 </doc>

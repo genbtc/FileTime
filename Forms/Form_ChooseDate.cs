@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using genBTC.FileTime.Classes;
+using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime
 {

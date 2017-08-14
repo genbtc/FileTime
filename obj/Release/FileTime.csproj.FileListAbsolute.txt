@@ -23,7 +23,8 @@ C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTim
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_About.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_Confirm.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_Main.resources
-C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_Preferences.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\WindowsExplorer.ExplorerTree.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\FileTime.csproj.GenerateResource.Cache
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\FileTime.exe
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\FileTime.csprojResolveAssemblyReference.cache
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.FormPreferences.resources

@@ -8,6 +8,8 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
+using genBTC.FileTime.Models;
+using genBTC.FileTime.mViewModels;
 
 namespace genBTC.FileTime
 {

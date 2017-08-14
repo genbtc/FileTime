@@ -1,7 +1,7 @@
 /*
- * ###  This file is for the Main program window ###
+ * ###  This file is codebehind for the Main program window ###
  * 
- *   /// Sets the creation, last write and last access date and time of user selection with various options
+ *   /// FileTime: Sets the creation, last write and last access date and time of user selection with various options
  *   /// Version: 1.0
  *   /// Date: 17 July 2014, Last Modified: 8/26/2014
  *   ///                        comments    8/13/2017
@@ -11,32 +11,22 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
+using genBTC.FileTime.Models;
 using genBTC.FileTime.Properties;
-using Timer = System.Windows.Forms.Timer;
 
 namespace genBTC.FileTime
 {
     /// <summary>
-    /// Main Form Window of the Program. 
+    /// GUI : Main Form Window of the Program. 
     /// </summary>
     public partial class Form_Main
     {
-        //native call to do string compare like the OS
-        [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
-        public static extern int StrCmpLogicalW(String x, String y);
-
-        #region Data Containers
-        //Data Containers
-        private static readonly char Seperator = Path.DirectorySeparatorChar;
-        private static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
-        private readonly List<string> contentsDirList = new List<string>();
-        private readonly List<string> contentsFileList = new List<string>();
-        private readonly List<string> filextlist = new List<string>();
+       //Form 2 stuff we need to have in Form1.
+        /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
+        public Form_Confirm Confirmation;
 
         /// <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
         public List<string> FilesReadOnlytoFix = new List<string>();
@@ -44,39 +34,14 @@ namespace genBTC.FileTime
         /// <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
         public List<NameDateObject> FilestoConfirmList = new List<NameDateObject>();
 
-        #endregion
-
-        #region Declarations
-        //Declarations
-        private readonly IComparer<string> explorerStringComparer = new ExplorerComparerstring();
-        private readonly Timer itemSelectionChangedTimer = new Timer();
-
-        private readonly Random random = new Random();
-
-        /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
-        public Form_Confirm Confirmation;
-
-        /// <summary> Count of the number of hidden files skipped </summary>
-        private int _skippedHiddenCount;
-
-        /// <summary> Count of the number of Read-only files skipped </summary>
-        private int _skippedReadOnlyCount;
-
-        /// <summary> Count of the number of System files skipped </summary>
-        private int _skippedSystemCount;
-
-        #endregion
-
         #region Main startup/load code
-        //Main startup/load code
         /// <summary>Init the main startup form </summary>
         public Form_Main()
         {
             //Required for Windows Form Designer support
             InitializeComponent();
-            //This is needed AFTER InitializeComponent because SplitterDistance must be declared FIRST.
-            // The designer sorts by alphabetical order and puts P for Panel2Minsize before S for SplitterDistance
-            // throwing an exception.
+            //Reason Explanation: This is needed AFTER InitializeComponent because SplitterDistance must be declared FIRST. The designer 
+            // sorts by alphabetical order and puts P for Panel2Minsize before S for SplitterDistance throwing an exception.
             splitContainer1.Panel2MinSize = 150;
         }
 
@@ -153,6 +118,7 @@ namespace genBTC.FileTime
         {
             switch (tabControl1.SelectedIndex)
             {
+                //Branch to launch the selected mode.
                 case 0:
                     GoUpdateDateTimeMode1();
                     break;
@@ -165,7 +131,7 @@ namespace genBTC.FileTime
         #endregion //Buttons
 
         #region Menu...
-
+        //Menu items:
         private void menuItem_FileOpen_Click(object sender, EventArgs e)
         {
             OpenFile();
@@ -204,6 +170,12 @@ namespace genBTC.FileTime
             UpdateButtonEnable();
         }
 
+        /// <summary>
+        /// Update the textlabel box for FilePath when the Explorer Tree path changes.
+        /// (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void explorerTree1_PathChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -252,15 +224,6 @@ namespace genBTC.FileTime
             explorerTree1.BrowseTo();
         }
 
-        private FileAttributes reasonsToBeInvisible;
-
-        private void SyncSettingstoInvisibleFlag()
-        {
-            reasonsToBeInvisible = (Settings.Default.ShowHidden ? 0 : FileAttributes.Hidden) |
-                                   (Settings.Default.ShowSystem ? 0 : FileAttributes.System) |
-                                   (Settings.Default.ShowReadOnly ? 0 : FileAttributes.ReadOnly);
-        }
-
         /// <summary>
         /// Display subfiles and subdirectories in the right panel listview
         /// </summary>
@@ -295,15 +258,13 @@ namespace genBTC.FileTime
                 }
             }
 
-            SyncSettingstoInvisibleFlag();
-
             // Display all of the files and show a file icon
             try
             {
                 foreach (string file in Directory.GetFiles(directoryName))
                 {
                     var fileAttribs = File.GetAttributes(file);
-                    if ((fileAttribs & reasonsToBeInvisible) != 0)
+                    if ((fileAttribs & SyncSettingstoInvisibleFlag()) != 0)
                         continue; //skip the rest if its supposed to be "invisible" based on the mask 
                     var justName = Path.GetFileName(file);
                     SharedHelper.CurrExten = Path.GetExtension(file);
@@ -334,8 +295,8 @@ namespace genBTC.FileTime
         }
 
         /// <summary>
-        /// The Update-Button runs a long process on folders/files, how to decide which time to use, 
-        /// then adds them to the confirm list to be handled by form 2.
+        /// This Update-Button runs a long process on the folders/files. It decides which time to use, 
+        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
         private void GoUpdateDateTimeMode1()
         {
@@ -846,14 +807,13 @@ namespace genBTC.FileTime
                 //decide if they wanted to use time from subfile or subdir
                 if (radioButton1_useTimefromFile.Checked)
                 {
-                    SyncSettingstoInvisibleFlag();
                     try
                     {
                         // Get List of the subfiles (full path)
                         foreach (string subFile in Directory.GetFiles(directoryPath))
                         {
                             var fileAttribs = File.GetAttributes(subFile);
-                            if ((fileAttribs & reasonsToBeInvisible) != 0)
+                            if ((fileAttribs & SyncSettingstoInvisibleFlag()) != 0)
                                 continue;
                             var fullPathtoFileName = Path.Combine(directoryPath, subFile);
                             extractlist.Add(fullPathtoFileName);
@@ -1046,24 +1006,6 @@ namespace genBTC.FileTime
 
             subFile = Makedateobject(folderPath, subFile);
             FilestoConfirmList.Add(subFile);
-        }
-
-        /// <summary>
-        /// Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
- /// VIEWMODEL
-        /// </summary>
-        private NameDateObject Makedateobject(string folderPath, NameDateObject subObject)
-        {
-            var currentobject = new NameDateObjectListViewVm(subObject) {Name = folderPath, FileOrDirType = 1};
-
-            //If Checkbox is selected:
-            if (!checkBox_CreationDateTime.Checked)
-                currentobject.Created = "N/A"; // Set the Creation date/time if selected
-            if (!checkBox_ModifiedDateTime.Checked)
-                currentobject.Modified = "N/A"; // Set the Modified date/time if selected	
-            if (!checkBox_AccessedDateTime.Checked)
-                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
-            return new NameDateObject(currentobject.Converter());
         }
 
         #endregion
