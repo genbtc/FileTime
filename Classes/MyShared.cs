@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 
+//WTF is this just some poorly named and badly defined general helper class. 
 namespace genBTC.FileTime.Classes
 {
-    class MyShared
+    class SharedHelper
     {
         public static string CurrExten;
         public List<string> Filextlist = new List<string>();

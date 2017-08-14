@@ -1,6 +1,17 @@
+/*
+ * ###  This file is for the Main program window ###
+ * 
+ *   /// Sets the creation, last write and last access date and time of user selection with various options
+ *   /// Version: 1.0
+ *   /// Date: 17 July 2014, Last Modified: 8/26/2014
+ *   ///                        comments    8/13/2017
+ * ###  Author: genBTC ###
+ */
+
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
@@ -10,15 +21,16 @@ using Timer = System.Windows.Forms.Timer;
 namespace genBTC.FileTime
 {
     /// <summary>
-    /// Sets the creation, last write and last access date and time of user selection with various options
-    /// Version: 1.0
-    /// Date: 17 July 2014, Last Modified: 8/26/2014
-    /// Author: genBTC
+    /// Main Form Window of the Program. 
     /// </summary>
     public partial class Form_Main
     {
-        #region Data Containers
+        //native call to do string compare like the OS
+        [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
+        public static extern int StrCmpLogicalW(String x, String y);
 
+        #region Data Containers
+        //Data Containers
         private static readonly char Seperator = Path.DirectorySeparatorChar;
         private static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
@@ -35,7 +47,7 @@ namespace genBTC.FileTime
         #endregion
 
         #region Declarations
-
+        //Declarations
         private readonly IComparer<string> explorerStringComparer = new ExplorerComparerstring();
         private readonly Timer itemSelectionChangedTimer = new Timer();
 
@@ -56,7 +68,7 @@ namespace genBTC.FileTime
         #endregion
 
         #region Main startup/load code
-
+        //Main startup/load code
         /// <summary>Init the main startup form </summary>
         public Form_Main()
         {
@@ -178,7 +190,7 @@ namespace genBTC.FileTime
         /// <summary> Create and initialize preferences </summary>
         private void menuItem_Preferences_Click(object sender, EventArgs e)
         {
-            var prefs = new Form_Preferences(label_FPath.Text);
+            var prefs = new FormPreferences(label_FPath.Text);
             prefs.ShowDialog(this);
         }
 
@@ -294,15 +306,15 @@ namespace genBTC.FileTime
                     if ((fileAttribs & reasonsToBeInvisible) != 0)
                         continue; //skip the rest if its supposed to be "invisible" based on the mask 
                     var justName = Path.GetFileName(file);
-                    MyShared.CurrExten = Path.GetExtension(file);
-                    if ((MyShared.CurrExten != ".lnk")) //if its not a shortcut
+                    SharedHelper.CurrExten = Path.GetExtension(file);
+                    if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
                     {
                         //if not already in the list, then add it
-                        if (filextlist.FindLastIndex(MyShared.FindCurExt) == -1)
+                        if (filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
                         {
-                            filextlist.Add(MyShared.CurrExten);
+                            filextlist.Add(SharedHelper.CurrExten);
                             //call ExtractIcon to get the filesystem icon of the filename
-                            imageList_Files.Images.Add(MyShared.CurrExten, ExtractIcon.GetIcon(file, true));
+                            imageList_Files.Images.Add(SharedHelper.CurrExten, ExtractIcon.GetIcon(file, true));
                         }
                     }
                     else //if it is a shortcut, grab icon directly.
@@ -338,19 +350,25 @@ namespace genBTC.FileTime
             _skippedReadOnlyCount = 0;
             _skippedSystemCount = 0;
 
-            //where I should add worker process
-            DateTime? nullorfileDateTime = DecideWhichTimeMode1();
-            if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
-            {
-                MessageBox.Show("Error! Nothing to decide time from. \n" +
-                                "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
-                    "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            var fileDateTime = (DateTime) nullorfileDateTime;
             if (Settings.Default.mode1addrootdir)
+            {
+                DateTime? nullorfileDateTime = DecideWhichTimeMode1(startingdir);
+                if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
+                {
+                    MessageBox.Show("Error! Nothing to decide time from. \n" +
+                                    "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
+                        "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                var fileDateTime = (DateTime)nullorfileDateTime;
+
                 SetFileDateTimeMode1(startingdir, fileDateTime, true);
-            RecurseSubDirectoryMode1(startingdir, fileDateTime);
+            }
+            //where I should add worker process
+            if (Settings.Default.useRootDirAsContainer)
+                RecurseSubDirectoryMode1B(startingdir);
+            else
+                RecurseSubDirectoryMode1(startingdir);
             //end worker process
 
             var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
@@ -373,12 +391,14 @@ namespace genBTC.FileTime
                 Confirmation.MakeListView();
         }
 
+
         /// <summary>
         /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
         /// </summary>
-        private DateTime? DecideWhichTimeMode1()
+        private DateTime? DecideWhichTimeMode1(string path)
         {
             contentsDirList.Clear();
+            contentsFileList.Clear();
 
             var dateToUse = new DateTime();
             if (radioGroupBox1_SpecifyTime.Checked)
@@ -401,10 +421,14 @@ namespace genBTC.FileTime
             {
                 var extractlist = new List<string>();
                 if (radioButton1_useTimefromFile.Checked)
+                {
+                    foreach (string filename in Directory.GetFiles(path))
+                        contentsFileList.Add(Path.GetFileName(filename));
                     extractlist = contentsFileList;
+                }
                 else if (radioButton2_useTimefromSubdir.Checked)
                 {
-                    foreach (string subDirectory in Directory.GetDirectories(label_FPath.Text))
+                    foreach (string subDirectory in Directory.GetDirectories(path))
                         contentsDirList.Add(Path.GetFileName(subDirectory));
                     extractlist = contentsDirList;
                 }
@@ -418,11 +442,11 @@ namespace genBTC.FileTime
                 //start iterating through
                 foreach (string subitem in extractlist)
                 {
-                    string timelisttype;
+                    string timelisttype;    //this was used once. just in case.
                     var looptempDate = new DateTime();
                     try
                     {
-                        string fullpath = Path.Combine(label_FPath.Text, subitem);
+                        string fullpath = Path.Combine(path, subitem);
                         if (radioButton1_setfromCreated.Checked)
                         {
                             timelisttype = "Created";
@@ -487,9 +511,15 @@ namespace genBTC.FileTime
         /// (Only adds to the confirm list, Form 2 will actually write changes).
         /// </summary>
         /// <param name="directoryPath">Full path to the directory</param>
-        /// <param name="fileDateTime">File Date/Time</param>
-        private void RecurseSubDirectoryMode1(string directoryPath, DateTime fileDateTime)
+        private void RecurseSubDirectoryMode1(string directoryPath)
         {
+            DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath);
+            if (nullorfileDateTime == null) 
+            {
+                return; //if nothing could be decided, exit. otherwise continue
+            }
+            var fileDateTime = (DateTime)nullorfileDateTime;
+
             // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
             if (checkBox_Recurse.Checked)
             {
@@ -502,7 +532,7 @@ namespace genBTC.FileTime
                         // Set the date/time for the sub directory
                         SetFileDateTimeMode1(eachdir, fileDateTime, true);
                         // Recurse (loop) through each sub-sub directory
-                        RecurseSubDirectoryMode1(eachdir, fileDateTime);
+                        RecurseSubDirectoryMode1(eachdir);
                     }
                 } //catch for GetDirs
                 catch (UnauthorizedAccessException)
@@ -521,6 +551,19 @@ namespace genBTC.FileTime
                 catch (UnauthorizedAccessException)
                 {}
             }
+        }
+
+        private void RecurseSubDirectoryMode1B(string startingdir)
+        {
+            try
+            {
+                foreach (string subfolder in Directory.GetDirectories(startingdir))
+                    RecurseSubDirectoryMode1(Path.Combine(startingdir, subfolder));
+            }
+            catch (UnauthorizedAccessException)
+            { }
+            catch (DirectoryNotFoundException)
+            { }
         }
 
         /// <summary>
@@ -657,7 +700,7 @@ namespace genBTC.FileTime
         #endregion
 
         #region Form EventHandlers Functions, tabcontrol and tooltip
-
+    //EVENT HANDLERS
         private void label1_CreationDate_Click(object sender, EventArgs e)
         {
             radioButton1_CreationDate.Checked = radioGroupBox2_CurrentSelectionTime.Checked;
@@ -706,7 +749,13 @@ namespace genBTC.FileTime
             _skippedReadOnlyCount = 0;
             _skippedSystemCount = 0;
 
-            RecurseSubDirectoryMode2(label_FPath.Text);
+            if (Settings.Default.useRootDirAsContainer)
+                RecurseSubDirectoryMode2B(label_FPath.Text);
+            else
+            {
+                RecurseSubDirectoryMode2(label_FPath.Text);
+            }
+            
 
             var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
             string skippedmessage = "";
@@ -727,6 +776,8 @@ namespace genBTC.FileTime
                 Confirmation.MakeListView();
         }
 
+
+
         private void RecurseSubDirectoryMode2(string directoryPath)
         {
             NameDateObject timeInside = DecideWhichTimeMode2(directoryPath);
@@ -742,6 +793,27 @@ namespace genBTC.FileTime
             {}
         }
 
+        private void RecurseSubDirectoryMode2B(string directoryPath)
+        {
+            try
+            {
+                foreach (string subfolder in Directory.GetDirectories(directoryPath))
+                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder));
+            }
+            catch (UnauthorizedAccessException)
+            { }
+            catch (DirectoryNotFoundException)
+            { }
+        }
+
+
+        /// <summary>
+        /// Very long function that does a simple task. Read in the options the user set for the operation, and
+        /// Decide on the timestamp it should use, by the end we will have a single object with 3 times.
+        /// This will need to be hit with broad strokes if we attempt to do any more work on the program.
+        /// </summary>
+        /// <param name="directoryPath"></param>
+        /// <returns></returns>
         private NameDateObject DecideWhichTimeMode2(string directoryPath)
         {
             var extractlist = new List<string>();
@@ -807,13 +879,20 @@ namespace genBTC.FileTime
                             extractlist.Add(directoryName);
                         }
                     } // catch failure from GetDirs
-                    catch (UnauthorizedAccessException ex)
+                    catch (UnauthorizedAccessException)
                     {} //show nothing because this is normal for this method when encountering inaccessible dirs
                 }
 
-                //if the list is empty, theres nothing to do, then return an empty object.?????
+                // ## Exit out early:
+                // if the list is empty, theres nothing to do, then return an empty object.?????
                 if (extractlist.Count == 0)
                     return thingtoreturn;
+
+                // ---------------------------------------------------------------------------------//
+                // ## MID WAY POINT ##
+                // We have our first list and now we apply it to the 3 other CMA lists per all the files
+                // And where we actually decide whether to keep our time or use the new time.
+                // ---------------------------------------------------------------------------------//
 
                 foreach (string fullpath in extractlist)
                 {
@@ -927,6 +1006,12 @@ namespace genBTC.FileTime
             return thingtoreturn;
         }
 
+
+        /// <summary>
+        /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+        /// </summary>
+        /// <param name="folderPath"></param>
+        /// <param name="subFile"></param>
         private void SetFolderDateTimeMode2(string folderPath, NameDateObject subFile)
         {
             FileAttributes folderAttributes = File.GetAttributes(folderPath);
@@ -965,10 +1050,11 @@ namespace genBTC.FileTime
 
         /// <summary>
         /// Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+ /// VIEWMODEL
         /// </summary>
         private NameDateObject Makedateobject(string folderPath, NameDateObject subObject)
         {
-            var currentobject = new NameDateObjectListViewVM(subObject) {Name = folderPath, FileOrDirType = 1};
+            var currentobject = new NameDateObjectListViewVm(subObject) {Name = folderPath, FileOrDirType = 1};
 
             //If Checkbox is selected:
             if (!checkBox_CreationDateTime.Checked)

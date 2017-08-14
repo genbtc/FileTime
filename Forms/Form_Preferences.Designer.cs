@@ -1,6 +1,6 @@
 ﻿namespace genBTC.FileTime
 {
-    partial class Form_Preferences
+    partial class FormPreferences
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Preferences));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreferences));
             this.button1_OK = new System.Windows.Forms.Button();
             this.button2_Cancel = new System.Windows.Forms.Button();
             this.button_UseCurrentDir = new System.Windows.Forms.Button();
             this.button_Browse = new System.Windows.Forms.Button();
+            this.checkBox8_useRootDirAsContainer = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.checkBox7_Mode1addRootDir = new System.Windows.Forms.CheckBox();
             this.checkBox4a_ShowReadOnly = new System.Windows.Forms.CheckBox();
             this.checkBox2a_ShowSystem = new System.Windows.Forms.CheckBox();
@@ -48,7 +51,7 @@
             // button1_OK
             // 
             this.button1_OK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1_OK.Location = new System.Drawing.Point(279, 223);
+            this.button1_OK.Location = new System.Drawing.Point(279, 232);
             this.button1_OK.Name = "button1_OK";
             this.button1_OK.Size = new System.Drawing.Size(81, 29);
             this.button1_OK.TabIndex = 11;
@@ -60,7 +63,7 @@
             // 
             this.button2_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button2_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2_Cancel.Location = new System.Drawing.Point(194, 226);
+            this.button2_Cancel.Location = new System.Drawing.Point(194, 235);
             this.button2_Cancel.Name = "button2_Cancel";
             this.button2_Cancel.Size = new System.Drawing.Size(64, 23);
             this.button2_Cancel.TabIndex = 12;
@@ -87,6 +90,25 @@
             this.button_Browse.Text = "Browse...";
             this.button_Browse.UseVisualStyleBackColor = true;
             this.button_Browse.Click += new System.EventHandler(this.button_Browse_Click);
+            // 
+            // checkBox8_useRootDirAsContainer
+            // 
+            this.checkBox8_useRootDirAsContainer.AutoSize = true;
+            this.checkBox8_useRootDirAsContainer.Checked = global::genBTC.FileTime.Properties.Settings.Default.useRootDirAsContainer;
+            this.checkBox8_useRootDirAsContainer.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::genBTC.FileTime.Properties.Settings.Default, "useRootDirAsContainer", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox8_useRootDirAsContainer.Location = new System.Drawing.Point(13, 211);
+            this.checkBox8_useRootDirAsContainer.Name = "checkBox8_useRootDirAsContainer";
+            this.checkBox8_useRootDirAsContainer.Size = new System.Drawing.Size(318, 17);
+            this.checkBox8_useRootDirAsContainer.TabIndex = 19;
+            this.checkBox8_useRootDirAsContainer.Text = "Use root directory as container and operate on all subfolders";
+            this.toolTip1.SetToolTip(this.checkBox8_useRootDirAsContainer, resources.GetString("checkBox8_useRootDirAsContainer.ToolTip"));
+            this.checkBox8_useRootDirAsContainer.UseVisualStyleBackColor = true;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 25000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // checkBox7_Mode1addRootDir
             // 
@@ -215,7 +237,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2_Cancel;
-            this.ClientSize = new System.Drawing.Size(370, 262);
+            this.ClientSize = new System.Drawing.Size(370, 271);
+            this.Controls.Add(this.checkBox8_useRootDirAsContainer);
             this.Controls.Add(this.checkBox7_Mode1addRootDir);
             this.Controls.Add(this.button_Browse);
             this.Controls.Add(this.button_UseCurrentDir);
@@ -235,7 +258,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(386, 299);
-            this.Name = "Form_Preferences";
+            this.Name = "FormPreferences";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Preferences";
@@ -260,5 +283,7 @@
         private System.Windows.Forms.Button button_UseCurrentDir;
         private System.Windows.Forms.Button button_Browse;
         private System.Windows.Forms.CheckBox checkBox7_Mode1addRootDir;
+        private System.Windows.Forms.CheckBox checkBox8_useRootDirAsContainer;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

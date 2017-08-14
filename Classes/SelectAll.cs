@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+//This is a file to properly select stuff. Why did it have to be weird though.
 namespace genBTC.FileTime.Classes
 {
     internal class NativeMethods

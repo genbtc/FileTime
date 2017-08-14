@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* #
+ * # This file is the Program launcher. It creates a new window of Form_Main
+ * # go to Form_Main.cs to see the program there.
+ */
+
+using System;
 using System.Windows.Forms;
 
 namespace genBTC.FileTime

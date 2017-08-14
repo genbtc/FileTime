@@ -129,6 +129,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\CustomTypes.cs" />
+    <Compile Include="Classes\DateStuff.cs" />
     <Compile Include="Classes\Native.cs" />
     <Compile Include="Classes\MyShared.cs" />
     <Compile Include="Forms\Form_ChooseDate.cs">

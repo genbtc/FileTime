@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * ## This file is for the Preferences popup window
+ */
+
+using System;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -7,15 +11,15 @@ using genBTC.FileTime.Properties;
 namespace genBTC.FileTime
 {
     /// <summary> Preferences window class </summary>
-    public partial class Form_Preferences : Form
+    public partial class FormPreferences : Form
     {
-        private readonly string currentdir;
+        private readonly string _currentdir;
 
         /// <summary>Show preferences window</summary>
-        public Form_Preferences(string currentdirParam)
+        public FormPreferences(string currentdirParam)
         {
             InitializeComponent();
-            this.currentdir = currentdirParam;
+            this._currentdir = currentdirParam;
         }
 
         //OK button saves stuff
@@ -43,7 +47,7 @@ namespace genBTC.FileTime
         //use dir from last window
         private void button_UseCurrentDir_Click(object sender, EventArgs e)
         {
-            textBox6_startupdir.Text = currentdir;
+            textBox6_startupdir.Text = _currentdir;
         }
 
         private void button_Browse_Click(object sender, EventArgs e)
@@ -55,7 +59,7 @@ namespace genBTC.FileTime
                 var openFile = new FolderBrowserDialog
                 {
                     ShowNewFolderButton = false,
-                    SelectedPath = path,
+                    SelectedPath = path,    //This sketches me out.
                     Description = "Select the folder you want to set as the Default Start-Up directory:"
                 };
                 //use current path as dialog path

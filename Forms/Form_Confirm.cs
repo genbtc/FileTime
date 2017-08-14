@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * ## This file is the 2nd Window the confirmation window, "step 2" of the program
+ */
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -69,7 +72,7 @@ namespace genBTC.FileTime
                     foreach (string file in _formmain.FilesReadOnlytoFix)
                     {
                         FileAttributes fileattribs = File.GetAttributes(file);
-                        File.SetAttributes(file, MyShared.RemoveAttributes(fileattribs, FileAttributes.ReadOnly));
+                        File.SetAttributes(file, SharedHelper.RemoveAttributes(fileattribs, FileAttributes.ReadOnly));
                     }
                     DialogResult dr2 = MessageBox.Show("Turn read-only back on when the confirm window is closed?",
                         "Make Files Read-Only again?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -105,14 +108,14 @@ namespace genBTC.FileTime
                 theitem.Checked = true;
                 if (newobject.FileOrDirType == 0)
                 {
-                    MyShared.CurrExten = Path.GetExtension(newobject.Name);
-                    if (_filextlist.FindLastIndex(MyShared.FindCurExt) == -1)
+                    SharedHelper.CurrExten = Path.GetExtension(newobject.Name);
+                    if (_filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
                     {
-                        _filextlist.Add(MyShared.CurrExten);
+                        _filextlist.Add(SharedHelper.CurrExten);
                         //call ExtractIcon to get the filesystem icon of the filename
-                        imageList_Files.Images.Add(MyShared.CurrExten, ExtractIcon.GetIcon(newobject.Name, true));
+                        imageList_Files.Images.Add(SharedHelper.CurrExten, ExtractIcon.GetIcon(newobject.Name, true));
                     }
-                    theitem.ImageKey = MyShared.CurrExten;
+                    theitem.ImageKey = SharedHelper.CurrExten;
                 }
                 listView1_Confirm.Items.Add(theitem);
             }
@@ -352,9 +355,9 @@ namespace genBTC.FileTime
             {
                 for (int i = 0; i < listView1_Confirm.Items.Count - 1; i++)
                 {
-                    var thing1 = new NameDateObjectListViewVM(listView1_Confirm.Items[i]);
-                    var thing2 = new NameDateObjectListViewVM(listView1_Confirm.Items[i + 1]);
-                    var newthing = new NameDateObjectListViewVM();
+                    var thing1 = new NameDateObjectListViewVm(listView1_Confirm.Items[i]);
+                    var thing2 = new NameDateObjectListViewVm(listView1_Confirm.Items[i + 1]);
+                    var newthing = new NameDateObjectListViewVm();
                     if (newthing.Compare(thing1, thing2))
                     {
                         listView1_Confirm.Items.RemoveAt(i);

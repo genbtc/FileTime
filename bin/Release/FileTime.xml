@@ -71,12 +71,12 @@
             then adds them to the confirm list to be handled by form 2.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1">
+        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String)">
             <summary>
             Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String,System.DateTime)">
+        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String)">
             <summary>
             Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
             (Only adds to the confirm list, Form 2 will actually write changes).

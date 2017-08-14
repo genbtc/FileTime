@@ -190,7 +190,6 @@ namespace genBTC.FileTime
             this.dateTimePicker_Date.Name = "dateTimePicker_Date";
             this.dateTimePicker_Date.Size = new System.Drawing.Size(99, 21);
             this.dateTimePicker_Date.TabIndex = 2;
-            this.dateTimePicker_Date.MouseWheel += this.dateTimePicker_MouseWheel;
             // 
             // dateTimePicker_Time
             // 
@@ -201,7 +200,6 @@ namespace genBTC.FileTime
             this.dateTimePicker_Time.ShowUpDown = true;
             this.dateTimePicker_Time.Size = new System.Drawing.Size(99, 21);
             this.dateTimePicker_Time.TabIndex = 3;
-            this.dateTimePicker_Time.MouseWheel += this.dateTimePicker_MouseWheel;
             // 
             // checkBox_CreationDateTime
             // 
@@ -771,6 +769,7 @@ namespace genBTC.FileTime
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.explorerTree1.BackColor = System.Drawing.Color.White;
+            this.explorerTree1.CurrentPath = null;
             this.explorerTree1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.explorerTree1.Location = new System.Drawing.Point(0, 0);
             this.explorerTree1.Name = "explorerTree1";

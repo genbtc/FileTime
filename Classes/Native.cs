@@ -3,6 +3,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+
+//try to do these imports somewhere else.
+
 namespace genBTC.FileTime.Classes
 {
     internal static class NativeScroll
