@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
+using genBTC.FileTime.mViewModels;
 
 namespace genBTC.FileTime
 {
@@ -69,7 +70,7 @@ namespace genBTC.FileTime
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.listView1_Confirm = new genBTC.FileTime.Classes.CustomListView();
+            this.listView1_Confirm = new CustomListView();
             this.ColumnHeader_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader_Created = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader_Modified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));

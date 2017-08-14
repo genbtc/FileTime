@@ -122,6 +122,7 @@ namespace genBTC.FileTime
             this.radioButton3_LastAccessDate = new System.Windows.Forms.RadioButton();
             this.label_LastAccess = new System.Windows.Forms.Label();
             this.radioButtonPanel1_DecideWhichTime = new UIToolbox.RadioButtonPanel();
+            this.radioGroupBox1_pickFolderForCompare = new UIToolbox.RadioGroupBox();
             this.label3_AccessDate = new System.Windows.Forms.Label();
             this.label2_ModifiedDate = new System.Windows.Forms.Label();
             this.label1_CreationDate = new System.Windows.Forms.Label();
@@ -146,10 +147,11 @@ namespace genBTC.FileTime
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.explorerTree1 = new WindowsExplorer.ExplorerTree();
-            this.radioGroupBox1_pickFolderForCompare = new UIToolbox.RadioGroupBox();
             this.groupBoxCMA.SuspendLayout();
             this.radioButtonPanel1_DecideWhichTime.SuspendLayout();
+            this.radioGroupBox1_pickFolderForCompare.SuspendLayout();
             this.radioGroupBox3_UseTimeFrom.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -484,6 +486,16 @@ namespace genBTC.FileTime
             this.radioButtonPanel1_DecideWhichTime.Size = new System.Drawing.Size(430, 161);
             this.radioButtonPanel1_DecideWhichTime.TabIndex = 1;
             // 
+            // radioGroupBox1_pickFolderForCompare
+            // 
+            this.radioGroupBox1_pickFolderForCompare.Controls.Add(this.label1);
+            this.radioGroupBox1_pickFolderForCompare.Location = new System.Drawing.Point(9, 82);
+            this.radioGroupBox1_pickFolderForCompare.Name = "radioGroupBox1_pickFolderForCompare";
+            this.radioGroupBox1_pickFolderForCompare.Size = new System.Drawing.Size(114, 73);
+            this.radioGroupBox1_pickFolderForCompare.TabIndex = 13;
+            this.radioGroupBox1_pickFolderForCompare.TabStop = false;
+            this.radioGroupBox1_pickFolderForCompare.Text = " ";
+            // 
             // label3_AccessDate
             // 
             this.label3_AccessDate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -631,7 +643,6 @@ namespace genBTC.FileTime
             // 
             // radioGroupBox1_SpecifyTime
             // 
-            this.radioGroupBox1_SpecifyTime.Checked = true;
             this.radioGroupBox1_SpecifyTime.Controls.Add(this.dateTimePicker_Time);
             this.radioGroupBox1_SpecifyTime.Controls.Add(this.dateTimePicker_Date);
             this.radioGroupBox1_SpecifyTime.DisableChildrenIfUnchecked = true;
@@ -765,6 +776,16 @@ namespace genBTC.FileTime
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 23;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(2, 19);
+            this.label1.MaximumSize = new System.Drawing.Size(118, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Choose 2nd identical folder as source, at the prompt...";
+            // 
             // explorerTree1
             // 
             this.explorerTree1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -783,15 +804,6 @@ namespace genBTC.FileTime
             this.explorerTree1.Size = new System.Drawing.Size(221, 220);
             this.explorerTree1.TabIndex = 6;
             this.explorerTree1.PathChanged += new WindowsExplorer.ExplorerTree.PathChangedEventHandler(this.explorerTree1_PathChanged);
-            // 
-            // radioGroupBox1_pickFolderForCompare
-            // 
-            this.radioGroupBox1_pickFolderForCompare.Location = new System.Drawing.Point(9, 82);
-            this.radioGroupBox1_pickFolderForCompare.Name = "radioGroupBox1_pickFolderForCompare";
-            this.radioGroupBox1_pickFolderForCompare.Size = new System.Drawing.Size(107, 73);
-            this.radioGroupBox1_pickFolderForCompare.TabIndex = 13;
-            this.radioGroupBox1_pickFolderForCompare.TabStop = false;
-            this.radioGroupBox1_pickFolderForCompare.Text = "Choose 2nd identical folder as source, at the prompt...";
             // 
             // Form_Main
             // 
@@ -817,6 +829,8 @@ namespace genBTC.FileTime
             this.groupBoxCMA.ResumeLayout(false);
             this.radioButtonPanel1_DecideWhichTime.ResumeLayout(false);
             this.radioButtonPanel1_DecideWhichTime.PerformLayout();
+            this.radioGroupBox1_pickFolderForCompare.ResumeLayout(false);
+            this.radioGroupBox1_pickFolderForCompare.PerformLayout();
             this.radioGroupBox3_UseTimeFrom.ResumeLayout(false);
             this.radioGroupBox3_UseTimeFrom.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -845,6 +859,7 @@ namespace genBTC.FileTime
         private WindowsExplorer.ExplorerTree explorerTree1;
         private SplitContainer splitContainer1;
         private UIToolbox.RadioGroupBox radioGroupBox1_pickFolderForCompare;
+        private Label label1;
 
     }
 

@@ -46,7 +46,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.OpenFile">
+        <member name="M:genBTC.FileTime.Form_Main.OpenFile(System.String)">
             <summary>
             Display the Folder Browser Dialog and then display the selected
             file path and the directories and files in the folder.
@@ -178,36 +178,6 @@
         <member name="F:genBTC.FileTime.Form_Main.ListViewIcon.Directory">
             <summary> Directory icon in listView image list </summary>
         </member>
-        <member name="T:genBTC.FileTime.Classes.ExplorerComparerstring">
-            <summary> Explorer-like Sort, for strings </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.ListViewItemExplorerLikeComparer">
-            <summary> Explorer-like Sort, for use by listview.Sorter </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.CustomListView">
-            <summary>
-            Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.CustomListView.SendMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
-            <summary> Send a P/Invoke to a listview </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.CustomListView.ItemSelectionChangedTimer">
-            <summary> keeps track of how often the selection is firing </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.CustomListView.#ctor">
-            <summary> Constructor. activate the listview with desired options. </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.CustomListView.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
-            <summary>
-            Subscribe to MouseDown event for the ListView. 
-            Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
-            If they hit on an item AND it was a right click, set contextMenuAllowed to true.
-            </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Classes.CustomListView.ContextMenuAllowed">
-            <summary> Bool to determine if the context menu should be shown</summary>
-        </member>
         <member name="T:genBTC.FileTime.AssemblyVersion">
             <summary>
             This class uses the System.Reflection.Assembly class to
@@ -285,6 +255,78 @@
             <summary>
             Gets the major, minor, revision, and build numbers of the assembly.
             </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.Native.NativeExtractIcon">
+            <summary> Grabs the filesystem or system icon cache for a string filePath.</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_PATH">
+            <summary>Maximal Length of unmanaged Windows-Path-strings</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_TYPE">
+            <summary>Maximal Length of unmanaged Typename</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon(System.String,System.Boolean)">
+            <summary>
+            Get the associated Icon for a file or application, this method always returns
+            an icon.  If the strPath is invalid or there is no idonc the default icon is returned
+            </summary>
+            <param name="strPath">full path to the file</param>
+            <param name="bSmall">if true, the 16x16 icon is returned otherwise the 32x32</param>
+            <returns></returns>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Icon">
+            <summary>get icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.DisplayName">
+            <summary>get display name</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.TypeName">
+            <summary>get type name</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attributes">
+            <summary>get attributes</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.IconLocation">
+            <summary>get icon location</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ExeType">
+            <summary>return exe type</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SysIconIndex">
+            <summary>get system icon index</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LinkOverlay">
+            <summary>put a link overlay on icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Selected">
+            <summary>show icon in selected state</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attr_Specified">
+            <summary>get only specified attributes</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LargeIcon">
+            <summary>get large icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SmallIcon">
+            <summary>get small icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OpenIcon">
+            <summary>get open icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ShellIconSize">
+            <summary>get shell size icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.PIDL">
+            <summary>pszPath is a pidl</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.UseFileAttributes">
+            <summary>use passed dwFileAttribute</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.AddOverlays">
+            <summary>apply the appropriate overlays</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OverlayIndex">
+            <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
         </member>
         <member name="T:WindowsExplorer.ExplorerTree">
             <summary>
@@ -372,27 +414,27 @@
         <member name="M:genBTC.FileTime.Program.Main">
             <summary> The main entry point for the application.</summary>
         </member>
-        <member name="T:genBTC.FileTime.FormPreferences">
+        <member name="T:genBTC.FileTime.Form_Preferences">
             <summary> Preferences window class </summary>
         </member>
-        <member name="F:genBTC.FileTime.FormPreferences.components">
+        <member name="F:genBTC.FileTime.Form_Preferences.components">
             <summary>
             Required designer variable.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.FormPreferences.Dispose(System.Boolean)">
+        <member name="M:genBTC.FileTime.Form_Preferences.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:genBTC.FileTime.FormPreferences.InitializeComponent">
+        <member name="M:genBTC.FileTime.Form_Preferences.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.FormPreferences.#ctor(System.String)">
+        <member name="M:genBTC.FileTime.Form_Preferences.#ctor(System.String)">
             <summary>Show preferences window</summary>
         </member>
         <member name="T:genBTC.FileTime.Form_Confirm">
@@ -534,52 +576,42 @@
         <member name="M:genBTC.FileTime.Form_ChooseDate.#ctor(System.Windows.Forms.ListViewItem)">
             <summary>  a small form, used only for choosing a date. </summary>
         </member>
-        <member name="T:genBTC.FileTime.Form_About">
+        <member name="T:genBTC.FileTime.mViewModels.NameDateObjectListViewVm">
+            <summary>ViewModel version of the NameDateObject(Name + 3 Dates)</summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor(System.Windows.Forms.ListViewItem)">
+            <summary> construct with a listviewitem </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor(genBTC.FileTime.Models.NameDateObject)">
+            <summary> construct with a NameDateObject </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor">
+            <summary> Empty default constructor (initializer) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Compare(genBTC.FileTime.mViewModels.NameDateObjectListViewVm,genBTC.FileTime.mViewModels.NameDateObjectListViewVm)">
             <summary>
-            About Form. Shows basic program information.
+            Compares two of these objects's DATES, Combines any dates that are null or not null and returns only one
+            Looks super stupid, but makes the "Try to combine DUPlicate filenames" actually work. Help ?
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_About._components">
-            <summary>
-            Required designer variables.
-            </summary>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Converter">
+            <summary> Converts this class into a ListViewItem. </summary>
+            <returns>  Returns a listviewitem</returns>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.#ctor">
-            <summary>
-            the About... form window
-            </summary>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.FileOrDirType">
+            <summary>int FileOrDirType: 0 (File) or 1 (Dir)</summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Name">
+            <summary>string Name: filepathname</summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Created">
+            <summary>returns a string of DateTime.ToString or null </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.Form_About_Load(System.Object,System.EventArgs)">
-            <summary>
-            Load the About Form
-            </summary>
-            <param name="sender">Object</param>
-            <param name="e">EventArgs</param>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Modified">
+            <summary>returns a string of DateTime.ToString or null </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.linkLabel_Address_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
-            <summary>
-            Link to mailto: genbtc
-            </summary>
-            <param name="sender">object</param>
-            <param name="e">EventArgs</param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_About.button_Close_Click(System.Object,System.EventArgs)">
-            <summary>
-            Close this form
-            </summary>
-            <param name="sender">object</param>
-            <param name="e">EventArgs</param>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Accessed">
+            <summary>returns a string of DateTime.ToString or null </summary>
         </member>
         <member name="T:genBTC.FileTime.Models.NameDateObject">
             <summary>Class object with 5 properties to refer to a file/dir</summary>
@@ -641,43 +673,6 @@
             </summary>
             <param name="timelist">a List of DateTime?s</param>
         </member>
-        <member name="T:genBTC.FileTime.mViewModels.NameDateObjectListViewVm">
-            <summary>ViewModel version of the NameDateObject(Name + 3 Dates)</summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor(System.Windows.Forms.ListViewItem)">
-            <summary> construct with a listviewitem </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor(genBTC.FileTime.Models.NameDateObject)">
-            <summary> construct with a NameDateObject </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor">
-            <summary> Empty default constructor (initializer) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Compare(genBTC.FileTime.mViewModels.NameDateObjectListViewVm,genBTC.FileTime.mViewModels.NameDateObjectListViewVm)">
-            <summary>
-            Compares two of these objects's DATES, Combines any dates that are null or not null and returns only one
-            Looks super stupid, but makes the "Try to combine DUPlicate filenames" actually work. Help ?
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Converter">
-            <summary> Converts this class into a ListViewItem. </summary>
-            <returns>  Returns a listviewitem</returns>
-        </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.FileOrDirType">
-            <summary>int FileOrDirType: 0 (File) or 1 (Dir)</summary>
-        </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Name">
-            <summary>string Name: filepathname</summary>
-        </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Created">
-            <summary>returns a string of DateTime.ToString or null </summary>
-        </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Modified">
-            <summary>returns a string of DateTime.ToString or null </summary>
-        </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Accessed">
-            <summary>returns a string of DateTime.ToString or null </summary>
-        </member>
         <member name="M:genBTC.FileTime.Classes.Native.NativeScroll.SetScrollPos(System.IntPtr,System.Int32,System.Int32,System.Boolean)">
             <summary> Manually scroll a control </summary>
             <param name="hWnd">Window Handle</param>
@@ -690,6 +685,53 @@
             <param name="thing">the TreeNode being passed, to scroll into view.</param>
             <param name="pixelsH">pixels to scroll by</param>
             <param name="abs">absolute? otherwise, get current position and add pixelsH to that</param>
+        </member>
+        <member name="T:genBTC.FileTime.Form_About">
+            <summary>
+            About Form. Shows basic program information.
+            </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Form_About._components">
+            <summary>
+            Required designer variables.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_About.#ctor">
+            <summary>
+            the About... form window
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_About.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_About.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_About.Form_About_Load(System.Object,System.EventArgs)">
+            <summary>
+            Load the About Form
+            </summary>
+            <param name="sender">Object</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:genBTC.FileTime.Form_About.linkLabel_Address_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
+            <summary>
+            Link to mailto: genbtc
+            </summary>
+            <param name="sender">object</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:genBTC.FileTime.Form_About.button_Close_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close this form
+            </summary>
+            <param name="sender">object</param>
+            <param name="e">EventArgs</param>
         </member>
         <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems(System.Windows.Forms.ListView)">
             <summary>
@@ -712,77 +754,35 @@
             <param name="mask">Which bits of the value are to be set?</param>
             <param name="value">The value to be set</param>
         </member>
-        <member name="T:genBTC.FileTime.Classes.Native.NativeExtractIcon">
-            <summary> Grabs the filesystem or system icon cache for a string filePath.</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_PATH">
-            <summary>Maximal Length of unmanaged Windows-Path-strings</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_TYPE">
-            <summary>Maximal Length of unmanaged Typename</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon(System.String,System.Boolean)">
+        <member name="T:genBTC.FileTime.mViewModels.CustomListView">
             <summary>
-            Get the associated Icon for a file or application, this method always returns
-            an icon.  If the strPath is invalid or there is no idonc the default icon is returned
+            Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
             </summary>
-            <param name="strPath">full path to the file</param>
-            <param name="bSmall">if true, the 16x16 icon is returned otherwise the 32x32</param>
-            <returns></returns>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Icon">
-            <summary>get icon</summary>
+        <member name="M:genBTC.FileTime.mViewModels.CustomListView.SendMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary> Send a P/Invoke to a listview </summary>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.DisplayName">
-            <summary>get display name</summary>
+        <member name="F:genBTC.FileTime.mViewModels.CustomListView.ItemSelectionChangedTimer">
+            <summary> keeps track of how often the selection is firing </summary>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.TypeName">
-            <summary>get type name</summary>
+        <member name="M:genBTC.FileTime.mViewModels.CustomListView.#ctor">
+            <summary> Constructor. activate the listview with desired options. </summary>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attributes">
-            <summary>get attributes</summary>
+        <member name="M:genBTC.FileTime.mViewModels.CustomListView.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Subscribe to MouseDown event for the ListView. 
+            Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
+            If they hit on an item AND it was a right click, set contextMenuAllowed to true.
+            </summary>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.IconLocation">
-            <summary>get icon location</summary>
+        <member name="P:genBTC.FileTime.mViewModels.CustomListView.ContextMenuAllowed">
+            <summary> Bool to determine if the context menu should be shown</summary>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ExeType">
-            <summary>return exe type</summary>
+        <member name="T:genBTC.FileTime.mViewModels.ListViewItemExplorerLikeComparer">
+            <summary> Explorer-like Sort, for use by listview.Sorter </summary>
         </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SysIconIndex">
-            <summary>get system icon index</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LinkOverlay">
-            <summary>put a link overlay on icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Selected">
-            <summary>show icon in selected state</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attr_Specified">
-            <summary>get only specified attributes</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LargeIcon">
-            <summary>get large icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SmallIcon">
-            <summary>get small icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OpenIcon">
-            <summary>get open icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ShellIconSize">
-            <summary>get shell size icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.PIDL">
-            <summary>pszPath is a pidl</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.UseFileAttributes">
-            <summary>use passed dwFileAttribute</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.AddOverlays">
-            <summary>apply the appropriate overlays</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OverlayIndex">
-            <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
+        <member name="T:genBTC.FileTime.mViewModels.ExplorerComparerstring">
+            <summary> Explorer-like Sort, for strings </summary>
         </member>
     </members>
 </doc>

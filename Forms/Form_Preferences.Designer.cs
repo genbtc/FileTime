@@ -1,6 +1,6 @@
 ﻿namespace genBTC.FileTime
 {
-    partial class FormPreferences
+    partial class Form_Preferences
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreferences));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Preferences));
             this.button1_OK = new System.Windows.Forms.Button();
             this.button2_Cancel = new System.Windows.Forms.Button();
             this.button_UseCurrentDir = new System.Windows.Forms.Button();
@@ -258,7 +258,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(386, 299);
-            this.Name = "FormPreferences";
+            this.Name = "Form_Preferences";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Preferences";

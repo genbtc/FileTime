@@ -14,6 +14,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes.Native;
+using genBTC.FileTime.mViewModels;
 
 namespace WindowsExplorer
 {
@@ -225,7 +226,7 @@ namespace WindowsExplorer
             {
                 return;
             }
-            var comparer = new genBTC.FileTime.Classes.ExplorerComparerstring();
+            var comparer = new ExplorerComparerstring();
             Array.Sort(dirList, comparer);
 
             //check if dir already exists in case click same dir twice

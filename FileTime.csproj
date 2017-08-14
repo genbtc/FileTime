@@ -125,9 +125,11 @@
     <Compile Include="AssemblyVersion.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\CustomListView.cs">
+    <Compile Include="mViewModels\CustomListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="mViewModels\ExplorerComparerstring.cs" />
+    <Compile Include="mViewModels\ListViewItemExplorerLikeComparer.cs" />
     <Compile Include="Classes\Native\NativeScroll.cs" />
     <Compile Include="Classes\Native\NativeSelect.cs" />
     <Compile Include="Models\DataModel.cs" />
@@ -135,8 +137,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Native\NativeExtractIcon.cs" />
-    <Compile Include="Classes\MyShared.cs" />
-    <Compile Include="mViewModels\ViewModelStuff.cs" />
+    <Compile Include="Classes\SharedHelper.cs" />
+    <Compile Include="mViewModels\NameDateObjectListViewVm.cs" />
     <Compile Include="Forms\Form_ChooseDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,7 +180,7 @@
       <DependentUpon>ExplorerTree.cs</DependentUpon>
     </Compile>
     <Content Include="Resources\FileTime.ICO" />
-    <EmbeddedResource Include="Classes\CustomListView.resx">
+    <EmbeddedResource Include="mViewModels\CustomListView.resx">
       <DependentUpon>CustomListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_ChooseDate.resx">

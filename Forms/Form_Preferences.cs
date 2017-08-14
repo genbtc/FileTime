@@ -11,12 +11,12 @@ using genBTC.FileTime.Properties;
 namespace genBTC.FileTime
 {
     /// <summary> Preferences window class </summary>
-    public partial class FormPreferences : Form
+    public partial class Form_Preferences : Form
     {
         private readonly string _currentdir;
 
         /// <summary>Show preferences window</summary>
-        public FormPreferences(string currentdirParam)
+        public Form_Preferences(string currentdirParam)
         {
             InitializeComponent();
             this._currentdir = currentdirParam;

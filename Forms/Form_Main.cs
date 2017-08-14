@@ -11,6 +11,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography;
 using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
@@ -99,7 +100,10 @@ namespace genBTC.FileTime
 
         private void button_Browse_Click(object sender, EventArgs e)
         {
-            OpenFile();
+            string path = OpenFile();
+            //if (path == label_FPath.Text) //if nothing was changed
+            explorerTree1.SetCurrentPath(path);
+            explorerTree1.BrowseTo();
         }
 
         private void button_Update_Click(object sender, EventArgs e)
@@ -114,6 +118,10 @@ namespace genBTC.FileTime
                     GoUpdateDateTimeMode2();
                     break;
             }
+            string comparefolder;
+            if (radioGroupBox1_pickFolderForCompare.Checked)
+                comparefolder = OpenFile();
+
         }
 
         #endregion //Buttons
@@ -144,7 +152,7 @@ namespace genBTC.FileTime
         /// <summary> Create and initialize preferences </summary>
         private void menuItem_Preferences_Click(object sender, EventArgs e)
         {
-            var prefs = new FormPreferences(label_FPath.Text);
+            var prefs = new Form_Preferences(label_FPath.Text);
             prefs.ShowDialog(this);
         }
 
@@ -182,10 +190,12 @@ namespace genBTC.FileTime
         /// Display the Folder Browser Dialog and then display the selected
         /// file path and the directories and files in the folder.
         /// </summary>
-        private void OpenFile()
+        private string OpenFile(string path = "")
         {
-            //Code was needed for when running as MultiThreaded App. [MTAThread]
-            string path = label_FPath.Text;
+            //use current path as dialog path, or feed in a path to start in.:
+            if (path == "")
+                path = label_FPath.Text;
+            //start a new filebrowser dialog thread.
             var t = new Thread(() =>
             {
                 var openFile = new FolderBrowserDialog
@@ -194,28 +204,26 @@ namespace genBTC.FileTime
                     SelectedPath = path,
                     Description = "Select the folder you want to view/change the subfolders of:"
                 };
-                //use current path as dialog path
+                
                 //openFile.RootFolder = System.Environment.SpecialFolder.MyComputer;
                 //openFile.ShowNewFolderButton = true;
                 if (openFile.ShowDialog() == DialogResult.Cancel)
                     return;
-                //path is also the variable that returns what was selected
+                //re-use the path variable to return what was selected
                 path = openFile.SelectedPath;
             });
+            //TODO: check if Code is needed for when running as MultiThreaded App. [MTAThread]
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-
-            if (path == label_FPath.Text)
-                return; //if nothing was changed
-            explorerTree1.SetCurrentPath(path);
-            explorerTree1.BrowseTo();
+            return path;
         }
 
         /// <summary>
         /// Display subfiles and subdirectories in the right panel listview
         /// </summary>
         /// <param name="filesonly">Don't show the directories, only files.</param>
+        /// reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         private void DisplayContentsList(bool filesonly = true)
         {
             //Clear the contents UI + containers
@@ -286,6 +294,8 @@ namespace genBTC.FileTime
         /// Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
+        /// reqs: label_Fpathtext, FilestoConfirmList, ref to Confirmation, skipcount of H,R,S, 
+        /// Launches the creation of Form2_Confirm, and interacts with it.
         private void GoUpdateDateTimeMode1()
         {
             string startingdir = label_FPath.Text;
@@ -344,12 +354,20 @@ namespace genBTC.FileTime
         /// <summary>
         /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
         /// </summary>
+        /// reqs: (string path), contentsDirList, contentsFileList, Thi
+        /// This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
+        /// This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
+        /// radioGroupBox1_SpecifyTime.Checked
+        /// radioGroupBox2_CurrentSelectionTime.Checked
+        /// radioGroupBox3_UseTimeFrom.Checked
+        ///     =radioButton1_useTimefromFile.Checked
+        ///     =radioButton2_useTimefromSubdir.Checked
         private DateTime? DecideWhichTimeMode1(string path)
         {
             contentsDirList.Clear();
             contentsFileList.Clear();
 
-            var dateToUse = new DateTime();
+            var dateToUse = new DateTime?();
             if (radioGroupBox1_SpecifyTime.Checked)
             {
                 dateToUse = DateTime.Parse(dateTimePicker_Date.Value.Date.ToString("d") + " " +
@@ -367,6 +385,14 @@ namespace genBTC.FileTime
                     dateToUse = DateTime.Parse(label_LastAccess.Text);
             }
             else if (radioGroupBox3_UseTimeFrom.Checked)
+            {
+                dateToUse = RadioBox3FunctionName(path, dateToUse);
+            }
+            return dateToUse;
+        }
+
+        private DateTime? RadioBox3FunctionName(string path, DateTime? dateToUse)
+        {
             {
                 var extractlist = new List<string>();
                 if (radioButton1_useTimefromFile.Checked)
@@ -391,7 +417,7 @@ namespace genBTC.FileTime
                 //start iterating through
                 foreach (string subitem in extractlist)
                 {
-                    string timelisttype;    //this was used once. just in case.
+                    string timelisttype; //this was made just in case.
                     var looptempDate = new DateTime();
                     try
                     {
@@ -438,18 +464,18 @@ namespace genBTC.FileTime
                 if (radioButton1_Oldest.Checked)
                 {
                     if (minmax.MinDate != null)
-                        dateToUse = (DateTime) minmax.MinDate; //explicit typecast from nullable
+                        dateToUse = (DateTime)minmax.MinDate; //explicit typecast from nullable
                 }
                 else if (radioButton2_Newest.Checked)
                 {
                     if (minmax.MaxDate != null)
-                        dateToUse = (DateTime) minmax.MaxDate;
+                        dateToUse = (DateTime)minmax.MaxDate;
                 }
                 else if (radioButton3_Random.Checked)
                 {
                     int randomFile = random.Next(0, minmax.Index);
                     if (timelist[randomFile] != null)
-                        dateToUse = (DateTime) timelist[randomFile];
+                        dateToUse = (DateTime)timelist[randomFile];
                 }
             }
             return dateToUse;
