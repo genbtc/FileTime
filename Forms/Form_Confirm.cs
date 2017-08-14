@@ -93,7 +93,9 @@ namespace genBTC.FileTime
             }
         }
 
-        /// <summary> turn the NameDateObject lists from Form_Main into the listview on Form_Confirm </summary>
+        /// <summary> 
+        /// turn the NameDateObject lists from Form_Main into the listview on Form_Confirm </summary>
+        /// use the results as the new data model.
         public void MakeListView()
         {
             FixReadonlyResults();
@@ -164,7 +166,6 @@ namespace genBTC.FileTime
         {
             try
             {
-
                 var olddate = new DateTime();
                 if (cmAtype == 1)
                     olddate = File.GetCreationTime(pathName);

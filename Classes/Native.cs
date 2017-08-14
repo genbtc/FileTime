@@ -3,11 +3,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-
-//try to do these imports somewhere else.
-
 namespace genBTC.FileTime.Classes
 {
+    //only used once on ExplorerTree.cs line 581 to scroll programmatically.
     internal static class NativeScroll
     {
         private const int SB_HORZ = 0x0;

@@ -295,7 +295,7 @@ namespace genBTC.FileTime
         }
 
         /// <summary>
-        /// This Update-Button runs a long process on the folders/files. It decides which time to use, 
+        /// Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
         private void GoUpdateDateTimeMode1()
@@ -325,12 +325,12 @@ namespace genBTC.FileTime
 
                 SetFileDateTimeMode1(startingdir, fileDateTime, true);
             }
-            //where I should add worker process
+        //TODO: where I should add worker process
             if (Settings.Default.useRootDirAsContainer)
                 RecurseSubDirectoryMode1B(startingdir);
             else
                 RecurseSubDirectoryMode1(startingdir);
-            //end worker process
+        //end worker process
 
             var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
             if (itemsSkippedCount > 0)
