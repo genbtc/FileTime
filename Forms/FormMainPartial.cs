@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
@@ -51,22 +52,21 @@ namespace genBTC.FileTime
             return reasonsToBeInvisible;
         }
 
-        /// <summary>
-        /// Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
-        /// VIEWMODEL
-        /// </summary>
-        private NameDateObject Makedateobject(string folderPath, NameDateObject subObject)
-        {
-            var currentobject = new NameDateObjectListViewVm(subObject) { Name = folderPath, FileOrDirType = 1 };
 
-            //If Checkbox is selected:
-            if (!checkBox_CreationDateTime.Checked)
-                currentobject.Created = "N/A"; // Set the Creation date/time if selected
-            if (!checkBox_ModifiedDateTime.Checked)
-                currentobject.Modified = "N/A"; // Set the Modified date/time if selected	
-            if (!checkBox_AccessedDateTime.Checked)
-                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
-            return new NameDateObject(currentobject.Converter());
+        /// <summary> Icon in listView image list </summary>
+        private enum ListViewIcon
+        {
+            /// <summary> File icon in listView image list </summary>
+            File = 0,
+            /// <summary> Directory icon in listView image list </summary>
+            Directory = 1
         }
+        /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        private static int Bool2Int(bool fileOrDir)
+        {
+            return fileOrDir ? 1 : 0;
+        }
+
+        //>
     }
 }

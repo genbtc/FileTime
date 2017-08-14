@@ -1,3 +1,13 @@
+/*
+ * /// Form_About: Displays information about this application.
+ * /// Version: 1.0
+ * /// Company: genBTc
+ * /// Date Created: July 17 2014
+ * /// Date Modified: August 18 2014 and Aug 14 2017.
+ * /// Author: genBTC, code snippets from elsewhere creative commons
+ * /// Note:-has the codebehind right in this file.
+ * ///      -email address is hardcoded in here line 204
+ */
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -6,12 +16,7 @@ using System.Windows.Forms;
 namespace genBTC.FileTime
 {
     /// <summary>
-    /// Form_About: Displays information about this application.
-    /// Version: 1.0
-    /// Company: genBTC
-    /// Date Created: July 17 2014
-    /// Date Modified: August 18 2014
-    /// Author: genBTC, code snippets from elsewhere creative commons
+    /// About Form. Shows basic program information.
     /// </summary>
     public class Form_About : Form
     {
@@ -175,14 +180,9 @@ namespace genBTC.FileTime
         private void Form_About_Load(object sender, EventArgs e)
         {
             // Set the abouts forms icon from the owner form
-            try
-            {
-                Icon = Owner.Icon;
-                pictureBox_Icon.Image = Icon.ToBitmap();
-                Text = "About: " + Owner.Text;
-            } catch
-            { /* Do nothing on error */
-            }
+            Icon = Owner.Icon;
+            pictureBox_Icon.Image = Icon.ToBitmap();
+            Text = "About: " + Owner.Text;
 
             // Set the version information from the AssemblyInfo file
             // using the AssemblyVersion class.
@@ -215,7 +215,6 @@ namespace genBTC.FileTime
         }
 
         #endregion
-
-        //email address is in here
+        
     }
 }

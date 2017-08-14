@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
+using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
 
@@ -117,7 +118,7 @@ namespace genBTC.FileTime
                     {
                         _filextlist.Add(SharedHelper.CurrExten);
                         //call ExtractIcon to get the filesystem icon of the filename
-                        imageList_Files.Images.Add(SharedHelper.CurrExten, ExtractIcon.GetIcon(newobject.Name, true));
+                        imageList_Files.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(newobject.Name, true));
                     }
                     theitem.ImageKey = SharedHelper.CurrExten;
                 }
@@ -210,7 +211,8 @@ namespace genBTC.FileTime
         }
 
         /// <summary>
-        /// Confirm Button - Actually finally set the files datetimes, if it matches conditions
+        /// Confirm Button - Actually finally set the files datetimes, if it matches conditions.
+        /// Shows a progress bar.
         /// </summary>
         private void button1_Confirm_Click(object sender, EventArgs e)
         {
@@ -303,14 +305,14 @@ namespace genBTC.FileTime
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listView1_Confirm.BeginUpdate();
-            NativeMethods.SelectAllItems(listView1_Confirm);
+            NativeSelect.SelectAllItems(listView1_Confirm);
             listView1_Confirm.EndUpdate();
         }
 
         private void deSelectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listView1_Confirm.BeginUpdate();
-            NativeMethods.DeselectAllItems(listView1_Confirm);
+            NativeSelect.DeselectAllItems(listView1_Confirm);
             listView1_Confirm.EndUpdate();
         }
 

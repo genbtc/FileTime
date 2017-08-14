@@ -13,6 +13,7 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using genBTC.FileTime.Classes.Native;
 
 namespace WindowsExplorer
 {
@@ -578,7 +579,7 @@ namespace WindowsExplorer
                             currNode.TreeView.Focus();
                             currNode.TreeView.SelectedNode = currNode;
                             //currNode.EnsureVisible();
-                            genBTC.FileTime.Classes.NativeScroll.ScrollH(currNode, 37);
+                            NativeScroll.ScrollH(currNode, 37);
                             if (currNode.Nodes.Count > 0)
                             {
                                 currNode.Expand();

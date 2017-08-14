@@ -14,7 +14,9 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
+using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
+using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
 
 namespace genBTC.FileTime
@@ -80,11 +82,6 @@ namespace genBTC.FileTime
             label_FPath.Text = "";
         }
 
-        /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        private static int Bool2Int(bool fileOrDir)
-        {
-            return fileOrDir ? 1 : 0;
-        }
 
         /// <summary> Only enable the update button if something is selected </summary>
         private void UpdateButtonEnable()
@@ -95,15 +92,6 @@ namespace genBTC.FileTime
                  checkBox_AccessedDateTime.Checked);
         }
 
-        /// <summary> Icon in listView image list </summary>
-        private enum ListViewIcon
-        {
-            /// <summary> File icon in listView image list </summary>
-            File = 0,
-
-            /// <summary> Directory icon in listView image list </summary>
-            Directory = 1
-        }
 
         #endregion //Helper functions
 
@@ -274,12 +262,12 @@ namespace genBTC.FileTime
                         if (filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
                         {
                             filextlist.Add(SharedHelper.CurrExten);
-                            //call ExtractIcon to get the filesystem icon of the filename
-                            imageList_Files.Images.Add(SharedHelper.CurrExten, ExtractIcon.GetIcon(file, true));
+                            //call NativeExtractIcon to get the filesystem icon of the filename
+                            imageList_Files.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
                         }
                     }
                     else //if it is a shortcut, grab icon directly.
-                        imageList_Files.Images.Add(justName, ExtractIcon.GetIcon(file, true));
+                        imageList_Files.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
 
                     contentsFileList.Add(justName);
                 }
@@ -295,7 +283,7 @@ namespace genBTC.FileTime
         }
 
         /// <summary>
-        /// Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
+        /// Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
         private void GoUpdateDateTimeMode1()
@@ -588,6 +576,23 @@ namespace genBTC.FileTime
                 currentobject.Accessed = fileTime;
             return currentobject;
         }
+        /// <summary>
+        /// Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+        /// VIEWMODEL
+        /// </summary>
+        private NameDateObject Makedateobject(string folderPath, NameDateObject subObject)
+        {
+            var currentobject = new NameDateObjectListViewVm(subObject) { Name = folderPath, FileOrDirType = 1 };
+
+            //If Checkbox is selected:
+            if (!checkBox_CreationDateTime.Checked)
+                currentobject.Created = "N/A"; // Set the Creation date/time if selected
+            if (!checkBox_ModifiedDateTime.Checked)
+                currentobject.Modified = "N/A"; // Set the Modified date/time if selected	
+            if (!checkBox_AccessedDateTime.Checked)
+                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
+            return new NameDateObject(currentobject.Converter());
+        }
 
         /// <summary>
         /// Display the date and time of the selected file (also works on Directories)
@@ -618,7 +623,7 @@ namespace genBTC.FileTime
         }
 
         /// <summary>
-        /// Logic to decide which file's times to display for the currently selected Tri-Textbox UI
+        /// Display file's times in the Tri-Textbox bottom UI for the currently selected file.
         /// </summary>
         private void UpdateDisplayFileDateTime()
         {
@@ -687,20 +692,20 @@ namespace genBTC.FileTime
 
         private void tabControl1_MouseHover(object sender, EventArgs e)
         {
-            toolTip1.Show("Mode 1: Standard Mode\n" +
-                          "Mode 2: Recursively Set Folders based on Files/Dirs Inside",
+            toolTip1.Show("Mode 1: Standard mode: Set child folders/files\n" +
+                          "Mode 2: Upward mode: Set Parent Folders based on Files/Dirs Inside",
                 tabControl1);
         }
 
-        private void dateTimePicker_MouseWheel(object sender, MouseEventArgs e)
-        {
-            SendKeys.Send(e.Delta > 0 ? "{UP}" : "{DOWN}");
-        }
 
         #endregion
 
         #region Mode2 code
 
+        /// <summary>
+        /// Mode 2 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
+        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
+        /// </summary>
         private void GoUpdateDateTimeMode2()
         {
             //initialize/clear
@@ -1009,5 +1014,6 @@ namespace genBTC.FileTime
         }
 
         #endregion
+
     }
 }

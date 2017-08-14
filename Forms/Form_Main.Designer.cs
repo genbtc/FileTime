@@ -147,6 +147,7 @@ namespace genBTC.FileTime
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.explorerTree1 = new WindowsExplorer.ExplorerTree();
+            this.radioGroupBox1_pickFolderForCompare = new UIToolbox.RadioGroupBox();
             this.groupBoxCMA.SuspendLayout();
             this.radioButtonPanel1_DecideWhichTime.SuspendLayout();
             this.radioGroupBox3_UseTimeFrom.SuspendLayout();
@@ -178,7 +179,7 @@ namespace genBTC.FileTime
             this.button_Browse.Location = new System.Drawing.Point(477, 2);
             this.button_Browse.Name = "button_Browse";
             this.button_Browse.Size = new System.Drawing.Size(78, 23);
-            this.button_Browse.TabIndex = 2;
+            this.button_Browse.TabIndex = 0;
             this.button_Browse.Text = "Browse...";
             this.button_Browse.Click += new System.EventHandler(this.button_Browse_Click);
             // 
@@ -300,7 +301,7 @@ namespace genBTC.FileTime
             this.button_GoUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_GoUpdate.Enabled = false;
             this.button_GoUpdate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_GoUpdate.Location = new System.Drawing.Point(7, 382);
+            this.button_GoUpdate.Location = new System.Drawing.Point(7, 381);
             this.button_GoUpdate.Name = "button_GoUpdate";
             this.button_GoUpdate.Size = new System.Drawing.Size(110, 30);
             this.button_GoUpdate.TabIndex = 13;
@@ -337,7 +338,7 @@ namespace genBTC.FileTime
             this.checkBox_Recurse.Name = "checkBox_Recurse";
             this.checkBox_Recurse.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBox_Recurse.Size = new System.Drawing.Size(172, 18);
-            this.checkBox_Recurse.TabIndex = 6;
+            this.checkBox_Recurse.TabIndex = 9;
             this.checkBox_Recurse.Text = "Recurse Sub-Directories";
             // 
             // checkBoxShouldFiles
@@ -347,10 +348,10 @@ namespace genBTC.FileTime
             this.checkBoxShouldFiles.Checked = true;
             this.checkBoxShouldFiles.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxShouldFiles.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxShouldFiles.Location = new System.Drawing.Point(0, 204);
+            this.checkBoxShouldFiles.Location = new System.Drawing.Point(0, 203);
             this.checkBoxShouldFiles.Name = "checkBoxShouldFiles";
             this.checkBoxShouldFiles.Size = new System.Drawing.Size(210, 17);
-            this.checkBoxShouldFiles.TabIndex = 11;
+            this.checkBoxShouldFiles.TabIndex = 8;
             this.checkBoxShouldFiles.Text = "Perform the operation on FILES inside also";
             this.checkBoxShouldFiles.UseVisualStyleBackColor = true;
             // 
@@ -361,10 +362,10 @@ namespace genBTC.FileTime
             this.groupBoxCMA.Controls.Add(this.checkBox_ModifiedDateTime);
             this.groupBoxCMA.Controls.Add(this.checkBox_AccessedDateTime);
             this.groupBoxCMA.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCMA.Location = new System.Drawing.Point(8, 251);
+            this.groupBoxCMA.Location = new System.Drawing.Point(8, 250);
             this.groupBoxCMA.Name = "groupBoxCMA";
             this.groupBoxCMA.Size = new System.Drawing.Size(105, 101);
-            this.groupBoxCMA.TabIndex = 7;
+            this.groupBoxCMA.TabIndex = 1;
             this.groupBoxCMA.TabStop = false;
             this.groupBoxCMA.Text = "Set Timestamp of    Destination:";
             // 
@@ -467,6 +468,7 @@ namespace genBTC.FileTime
             // 
             this.radioButtonPanel1_DecideWhichTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButtonPanel1_DecideWhichTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox1_pickFolderForCompare);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_CreationTime);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label3_AccessDate);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_Modified);
@@ -477,10 +479,10 @@ namespace genBTC.FileTime
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox1_SpecifyTime);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox2_CurrentSelectionTime);
             this.radioButtonPanel1_DecideWhichTime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonPanel1_DecideWhichTime.Location = new System.Drawing.Point(124, 250);
+            this.radioButtonPanel1_DecideWhichTime.Location = new System.Drawing.Point(124, 249);
             this.radioButtonPanel1_DecideWhichTime.Name = "radioButtonPanel1_DecideWhichTime";
             this.radioButtonPanel1_DecideWhichTime.Size = new System.Drawing.Size(430, 161);
-            this.radioButtonPanel1_DecideWhichTime.TabIndex = 15;
+            this.radioButtonPanel1_DecideWhichTime.TabIndex = 1;
             // 
             // label3_AccessDate
             // 
@@ -523,7 +525,7 @@ namespace genBTC.FileTime
             this.radioGroupBox3_UseTimeFrom.Name = "radioGroupBox3_UseTimeFrom";
             this.radioGroupBox3_UseTimeFrom.Padding = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.radioGroupBox3_UseTimeFrom.Size = new System.Drawing.Size(123, 156);
-            this.radioGroupBox3_UseTimeFrom.TabIndex = 1;
+            this.radioGroupBox3_UseTimeFrom.TabIndex = 12;
             this.radioGroupBox3_UseTimeFrom.TabStop = false;
             this.radioGroupBox3_UseTimeFrom.Text = "Source Time From:";
             // 
@@ -637,7 +639,7 @@ namespace genBTC.FileTime
             this.radioGroupBox1_SpecifyTime.Location = new System.Drawing.Point(9, 0);
             this.radioGroupBox1_SpecifyTime.Name = "radioGroupBox1_SpecifyTime";
             this.radioGroupBox1_SpecifyTime.Size = new System.Drawing.Size(114, 78);
-            this.radioGroupBox1_SpecifyTime.TabIndex = 0;
+            this.radioGroupBox1_SpecifyTime.TabIndex = 10;
             this.radioGroupBox1_SpecifyTime.TabStop = false;
             this.radioGroupBox1_SpecifyTime.Text = "Specify Time:";
             // 
@@ -651,7 +653,7 @@ namespace genBTC.FileTime
             this.radioGroupBox2_CurrentSelectionTime.Name = "radioGroupBox2_CurrentSelectionTime";
             this.radioGroupBox2_CurrentSelectionTime.Padding = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.radioGroupBox2_CurrentSelectionTime.Size = new System.Drawing.Size(150, 155);
-            this.radioGroupBox2_CurrentSelectionTime.TabIndex = 3;
+            this.radioGroupBox2_CurrentSelectionTime.TabIndex = 11;
             this.radioGroupBox2_CurrentSelectionTime.TabStop = false;
             this.radioGroupBox2_CurrentSelectionTime.Text = "From Currently Selected:";
             // 
@@ -689,9 +691,9 @@ namespace genBTC.FileTime
             this.listView_Contents.Location = new System.Drawing.Point(0, 20);
             this.listView_Contents.MultiSelect = false;
             this.listView_Contents.Name = "listView_Contents";
-            this.listView_Contents.Size = new System.Drawing.Size(326, 182);
+            this.listView_Contents.Size = new System.Drawing.Size(326, 181);
             this.listView_Contents.SmallImageList = this.imageList_Files;
-            this.listView_Contents.TabIndex = 4;
+            this.listView_Contents.TabIndex = 7;
             this.listView_Contents.UseCompatibleStateImageBehavior = false;
             this.listView_Contents.View = System.Windows.Forms.View.Details;
             this.listView_Contents.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_Contents_ItemSelectionChanged);
@@ -708,11 +710,11 @@ namespace genBTC.FileTime
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(11, 357);
+            this.tabControl1.Location = new System.Drawing.Point(11, 356);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(106, 24);
-            this.tabControl1.TabIndex = 20;
+            this.tabControl1.TabIndex = 5;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             this.tabControl1.MouseHover += new System.EventHandler(this.tabControl1_MouseHover);
             // 
@@ -758,7 +760,7 @@ namespace genBTC.FileTime
             this.splitContainer1.Panel2.Controls.Add(this.checkBoxShouldFiles);
             this.splitContainer1.Panel2.Controls.Add(this.checkBox_Recurse);
             this.splitContainer1.Panel2.Controls.Add(this.listView_Contents);
-            this.splitContainer1.Size = new System.Drawing.Size(549, 221);
+            this.splitContainer1.Size = new System.Drawing.Size(549, 220);
             this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 23;
@@ -778,14 +780,23 @@ namespace genBTC.FileTime
             this.explorerTree1.ShowMyFavorites = false;
             this.explorerTree1.ShowMyNetwork = true;
             this.explorerTree1.ShowToolbar = false;
-            this.explorerTree1.Size = new System.Drawing.Size(221, 221);
-            this.explorerTree1.TabIndex = 22;
+            this.explorerTree1.Size = new System.Drawing.Size(221, 220);
+            this.explorerTree1.TabIndex = 6;
             this.explorerTree1.PathChanged += new WindowsExplorer.ExplorerTree.PathChangedEventHandler(this.explorerTree1_PathChanged);
+            // 
+            // radioGroupBox1_pickFolderForCompare
+            // 
+            this.radioGroupBox1_pickFolderForCompare.Location = new System.Drawing.Point(9, 82);
+            this.radioGroupBox1_pickFolderForCompare.Name = "radioGroupBox1_pickFolderForCompare";
+            this.radioGroupBox1_pickFolderForCompare.Size = new System.Drawing.Size(107, 73);
+            this.radioGroupBox1_pickFolderForCompare.TabIndex = 13;
+            this.radioGroupBox1_pickFolderForCompare.TabStop = false;
+            this.radioGroupBox1_pickFolderForCompare.Text = "Choose 2nd identical folder as source, at the prompt...";
             // 
             // Form_Main
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
-            this.ClientSize = new System.Drawing.Size(560, 416);
+            this.ClientSize = new System.Drawing.Size(560, 415);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.button_Browse);
             this.Controls.Add(this.button_GoUpdate);
@@ -833,6 +844,7 @@ namespace genBTC.FileTime
         private ToolTip toolTip1;
         private WindowsExplorer.ExplorerTree explorerTree1;
         private SplitContainer splitContainer1;
+        private UIToolbox.RadioGroupBox radioGroupBox1_pickFolderForCompare;
 
     }
 

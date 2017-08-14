@@ -5,16 +5,26 @@ using System.Windows.Forms;
 namespace genBTC.FileTime.Classes
 {
     /// <summary>
-    /// Custom control that supports context menu, explorer-like sorting, and explorer-like styles.
+    /// Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
     /// </summary>
     public class CustomListView : ListView
     {
+        #region Native Imports
+        /// <summary> Send a P/Invoke to a listview </summary>
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
+        #endregion
+
+        private static extern int SetWindowTheme(IntPtr hWnd, string textSubAppName, string textSubIdList);
+
         private const int WM_CHANGEUISTATE = 0x127;
 
         /// <summary> keeps track of how often the selection is firing </summary>
         public Timer ItemSelectionChangedTimer;
 
-        /// <summary> Constructor. </summary>
+        /// <summary> Constructor. activate the listview with desired options. </summary>
         public CustomListView()
         {
             //Activate double buffering
@@ -23,15 +33,16 @@ namespace genBTC.FileTime.Classes
 
             View = View.Details;
             FullRowSelect = true;
+            //Instanciate the listview with sorting activated:
 //            this.ListViewItemSorter = new ListViewItemExplorerLikeComparer();
 
-            // removes the ugly dotted line around focused item
+            //this removes the ugly dotted line around focused item:
             SendMessage(Handle, WM_CHANGEUISTATE, 0x10001, 0);
 
             ItemSelectionChangedTimer = new Timer {Interval = 800};
             ItemSelectionChangedTimer.Tick += _ItemSelectionChangedTimer_Tick;
             //Enable the OnNotifyMessage event so we get a chance to filter out 
-            // Windows messages before they get to the form's WndProc
+            // Windows messages before they get to the form's WndProc:
             //this.SetStyle(ControlStyles.EnableNotifyMessage, true);
         }
 
@@ -42,17 +53,13 @@ namespace genBTC.FileTime.Classes
         {
             ItemSelectionChangedTimer.Stop();
         }
+        
 
-        /// <summary> Send a P/Invoke to a listview </summary>
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
-        private static extern int SetWindowTheme(IntPtr hWnd, string textSubAppName, string textSubIdList);
-
-        // Subscribe to MouseDown event for the ListView. 
-        // Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
-        // If they hit on an item AND it was a right click, set contextMenuAllowed to true.
+        /// <summary>
+        /// Subscribe to MouseDown event for the ListView. 
+        /// Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
+        /// If they hit on an item AND it was a right click, set contextMenuAllowed to true.
+        /// </summary>
         protected override void OnMouseDown(MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
