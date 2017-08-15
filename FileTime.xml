@@ -37,12 +37,6 @@
         <member name="M:genBTC.FileTime.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
             <summary> Create and initialize preferences </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.OpenFile(System.String)">
-            <summary>
-            Display the Folder Browser Dialog and then display the selected
-            file path and the directories and files in the folder.
-            </summary>
-        </member>
         <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(System.Boolean)">
             <summary>
             Display subfiles and subdirectories in the right panel listview
@@ -81,11 +75,14 @@
         </member>
         <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String)">
             <summary>
-            Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
+            Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
             (Only adds to the confirm list, Form 2 will actually write changes).
             </summary>
             <param name="directoryPath">Full path to the directory</param>
             req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1B(System.String)">
+            <summary>  Mode 1B </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String)">
             <summary>
@@ -109,15 +106,6 @@
             <summary>
             Set File Time
             </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(System.String)">
-            <summary>
-            Very long function that does a simple task. Read in the options the user set for the operation, and
-            Decide on the timestamp it should use, by the end we will have a single object with 3 times.
-            This will need to be hit with broad strokes if we attempt to do any more work on the program.
-            </summary>
-            <param name="directoryPath"></param>
-            <returns></returns>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
             <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
@@ -172,6 +160,11 @@
             Static. Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
             </summary>
         </member>
+        <member name="M:genBTC.FileTime.Form_Main.GetCmaTimes(System.String)">
+            <summary>
+            Display the date and time of the selected file (also works on Directories)
+            </summary>
+        </member>
         <member name="M:genBTC.FileTime.Form_Main.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.DataModel,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton)">
             <summary>
             Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
@@ -189,6 +182,36 @@
             <param name="radioButton3Random"></param>
             <returns></returns>
         </member>
+        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(genBTC.FileTime.DataModel,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,UIToolbox.RadioGroupBox,System.Windows.Forms.Label,System.Windows.Forms.Label,System.Windows.Forms.Label,UIToolbox.RadioGroupBox,System.Windows.Forms.DateTimePicker,System.Windows.Forms.DateTimePicker,System.Windows.Forms.Label,UIToolbox.RadioGroupBox,System.String)">
+            <summary>
+            Very long function that does a simple task. Read in the options the user set for the operation, and
+            Decide on the timestamp it should use, by the end we will have a single object with 3 times.
+            This will need to be hit with broad strokes if we attempt to do any more work on the program.
+            </summary>
+            <param name="dataModel"></param>
+            <param name="radioButton3Random"></param>
+            <param name="radioButton2Newest"></param>
+            <param name="radioButton1Oldest"></param>
+            <param name="radioButton2UseTimefromSubdir"></param>
+            <param name="radioButton1UseTimefromFile"></param>
+            <param name="radioGroupBox3UseTimeFrom"></param>
+            <param name="labelLastAccess"></param>
+            <param name="labelModified"></param>
+            <param name="labelCreationTime"></param>
+            <param name="radioGroupBox2CurrentSelectionTime"></param>
+            <param name="dateTimePickerTime"></param>
+            <param name="dateTimePickerDate"></param>
+            <param name="labelHiddenPathName"></param>
+            <param name="radioGroupBox1SpecifyTime"></param>
+            <param name="directoryPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.OpenFile(System.String)">
+            <summary>
+            Display the Folder Browser Dialog and then display the selected
+            file path and the directories and files in the folder.
+            </summary>
+        </member>
         <member name="T:genBTC.FileTime.Form_Main.ListViewIcon">
             <summary> Icon in listView image list </summary>
         </member>
@@ -197,11 +220,6 @@
         </member>
         <member name="F:genBTC.FileTime.Form_Main.ListViewIcon.Directory">
             <summary> Directory icon in listView image list </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Form_Main.DisplayCmaTimeData">
-            <summary>
-            Display the date and time of the selected file (also works on Directories)
-            </summary>
         </member>
         <member name="T:genBTC.FileTime.AssemblyVersion">
             <summary>

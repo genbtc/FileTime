@@ -17,6 +17,7 @@ using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.Properties;
+using UIToolbox;
 
 namespace genBTC.FileTime
 {
@@ -106,7 +107,7 @@ namespace genBTC.FileTime
             label_Modified.Text = cma.Modified;
             label_LastAccess.Text = cma.Accessed;
             labelHidden_PathName.Text = cma.HiddenPathName;
-            radioGroupBox2_CurrentSelectionTime.Enabled = cma.RadioGroupBox2_CurrentSelectionTime_Enabled;
+            radioGroupBox2_CurrentSelectionTime.Enabled = cma.Selected;
             if (!radioGroupBox2_CurrentSelectionTime.Enabled)
                 radioGroupBox1_SpecifyTime.Checked = true;
             label_FPath.Text = "";
@@ -128,7 +129,7 @@ namespace genBTC.FileTime
 
         private void button_Browse_Click(object sender, EventArgs e)
         {
-            string path = OpenFile();
+            string path = OpenFile(label_FPath.Text);
             //if (path == label_FPath.Text) //if nothing was changed
             explorerTree1.SetCurrentPath(path);
             explorerTree1.BrowseTo();
@@ -139,7 +140,7 @@ namespace genBTC.FileTime
             StartUpBOTHModes1and2(tabControl1.SelectedIndex);
             string comparefolder;
             if (radioGroupBox1_pickFolderForCompare.Checked)
-                comparefolder = OpenFile();
+                comparefolder = OpenFile(label_FPath.Text);
 
         }
 
@@ -149,7 +150,7 @@ namespace genBTC.FileTime
         //Menu items:
         private void menuItem_FileOpen_Click(object sender, EventArgs e)
         {
-            OpenFile();
+            OpenFile(label_FPath.Text);
         }
 
         private void menuItem_FileExit_Click(object sender, EventArgs e)
@@ -178,39 +179,6 @@ namespace genBTC.FileTime
         #endregion //Menu
 
         #region >>Main Logic Code<<
-
-        /// <summary>
-        /// Display the Folder Browser Dialog and then display the selected
-        /// file path and the directories and files in the folder.
-        /// </summary>
-        private string OpenFile(string path = "")
-        {
-            //use current path as dialog path, or feed in a path to start in.:
-            if (path == "")
-                path = label_FPath.Text;
-            //start a new filebrowser dialog thread.
-            var t = new Thread(() =>
-            {
-                var openFile = new FolderBrowserDialog
-                {
-                    ShowNewFolderButton = false,
-                    SelectedPath = path,
-                    Description = "Select the folder you want to view/change the subfolders of:"
-                };
-                
-                //openFile.RootFolder = System.Environment.SpecialFolder.MyComputer;
-                //openFile.ShowNewFolderButton = true;
-                if (openFile.ShowDialog() == DialogResult.Cancel)
-                    return;
-                //re-use the path variable to return what was selected
-                path = openFile.SelectedPath;
-            });
-            //TODO: check if Code is needed for when running as MultiThreaded App. [MTAThread]
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-            t.Join();
-            return path;
-        }
 
         /// <summary>
         /// Display subfiles and subdirectories in the right panel listview
@@ -443,7 +411,7 @@ namespace genBTC.FileTime
 
         #region Mode 1 Specific code
         /// <summary>
-        /// Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
+        /// Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
         /// (Only adds to the confirm list, Form 2 will actually write changes).
         /// </summary>
         /// <param name="directoryPath">Full path to the directory</param>
@@ -463,7 +431,7 @@ namespace genBTC.FileTime
                 SetTimeDateEachFile(directoryPath, fileDateTime);
         }
 
-        //this looks strikingly similar 
+        /// <summary>  Mode 1B </summary>
         private void RecurseSubDirectoryMode1B(string startingdir)
         {
             try
@@ -561,7 +529,7 @@ namespace genBTC.FileTime
 
         private void RecurseSubDirectoryMode2(string directoryPath)
         {
-            NameDateObject timeInside = DecideWhichTimeMode2(directoryPath);
+            NameDateObject timeInside = DecideWhichTimeMode2(_dataModel, radioButton3_Random, radioButton2_Newest, radioButton1_Oldest, radioButton2_useTimefromSubdir, radioButton1_useTimefromFile, radioGroupBox3_UseTimeFrom, label_LastAccess, label_Modified, label_CreationTime, radioGroupBox2_CurrentSelectionTime, dateTimePicker_Time, dateTimePicker_Date, labelHidden_PathName, radioGroupBox1_SpecifyTime, directoryPath);
             
             SetFolderDateTimeMode2(_dataModel, QueryCMAcheckboxes(), directoryPath, timeInside);
             try
@@ -586,205 +554,6 @@ namespace genBTC.FileTime
             { }
             catch (DirectoryNotFoundException)
             { }
-        }
-
-
-        /// <summary>
-        /// Very long function that does a simple task. Read in the options the user set for the operation, and
-        /// Decide on the timestamp it should use, by the end we will have a single object with 3 times.
-        /// This will need to be hit with broad strokes if we attempt to do any more work on the program.
-        /// </summary>
-        /// <param name="directoryPath"></param>
-        /// <returns></returns>
-        private NameDateObject DecideWhichTimeMode2(string directoryPath)
-        {
-            var extractlist = new List<string>();
-
-            var timelist = new List<NameDateObject>();
-            var thingtoreturn = new NameDateObject();
-
-            if (radioGroupBox1_SpecifyTime.Checked)
-            {
-                thingtoreturn.Name = labelHidden_PathName.Text;
-                var specifiedDate = DateTime.Parse(dateTimePicker_Date.Value.Date.ToString("d") + " " +
-                                                   dateTimePicker_Time.Value.Hour + ":" +
-                                                   dateTimePicker_Time.Value.Minute + ":" +
-                                                   dateTimePicker_Time.Value.Second);
-                thingtoreturn.Created = specifiedDate;
-                thingtoreturn.Modified = specifiedDate;
-                thingtoreturn.Accessed = specifiedDate;
-            }
-
-            else if (radioGroupBox2_CurrentSelectionTime.Checked)
-            {
-                thingtoreturn.Name = labelHidden_PathName.Text;
-                thingtoreturn.Created = DateTime.Parse(label_CreationTime.Text);
-                thingtoreturn.Modified = DateTime.Parse(label_Modified.Text);
-                thingtoreturn.Accessed = DateTime.Parse(label_LastAccess.Text);
-            }
-                //Begin checking Conditional for which file is newest oldest etc
-            else if (radioGroupBox3_UseTimeFrom.Checked)
-            {
-                //decide if they wanted to use time from subfile or subdir
-                if (radioButton1_useTimefromFile.Checked)
-                {
-                    try
-                    {
-                        // Get List of the subfiles (full path)
-                        foreach (string subFile in Directory.GetFiles(directoryPath))
-                        {
-                            var fileAttribs = File.GetAttributes(subFile);
-                            if ((fileAttribs & SyncSettingstoInvisibleFlag()) != 0)
-                                continue;
-                            var fullPathtoFileName = Path.Combine(directoryPath, subFile);
-                            extractlist.Add(fullPathtoFileName);
-                        }
-                    } // catch failure of GetAttributes
-                    catch (FileNotFoundException ex)
-                    {
-                        MessageBox.Show(
-                            "Error getting attributes of a file in '" + directoryPath + "': \r\n\r\n" + ex.Message,
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    } // catch failure of GetFiles
-                    catch (UnauthorizedAccessException)
-                    {} //show nothing because this is normal for this method when encountering inaccessible files
-                }
-                else if (radioButton2_useTimefromSubdir.Checked)
-                {
-                    try
-                    {
-                        // Get List of the subdirs (full path)
-                        foreach (string subDirectory in Directory.GetDirectories(directoryPath))
-                        {
-                            var directoryName = Path.Combine(directoryPath, subDirectory);
-                            extractlist.Add(directoryName);
-                        }
-                    } // catch failure from GetDirs
-                    catch (UnauthorizedAccessException)
-                    {} //show nothing because this is normal for this method when encountering inaccessible dirs
-                }
-
-                // ## Exit out early:
-                // if the list is empty, theres nothing to do, then return an empty object.?????
-                if (extractlist.Count == 0)
-                    return thingtoreturn;
-
-                // ---------------------------------------------------------------------------------//
-                // ## MID WAY POINT ##
-                // We have our first list and now we apply it to the 3 other CMA lists per all the files
-                // And where we actually decide whether to keep our time or use the new time.
-                // ---------------------------------------------------------------------------------//
-
-                foreach (string fullpath in extractlist)
-                {
-                    var decidetemp = new NameDateObject {Name = fullpath};
-                    //grab all 3 times and put them in a decidetemp object
-                    try
-                    {
-                        decidetemp.Created = File.GetCreationTime(fullpath); // File Class works on dirs also
-                        decidetemp.Modified = File.GetLastWriteTime(fullpath);
-                        decidetemp.Accessed = File.GetLastAccessTime(fullpath);
-                        //add the temp object to the list of objects
-                        timelist.Add(decidetemp);
-                    }
-                    catch (UnauthorizedAccessException)
-                    {}
-                }
-                //make 3 new lists, one for each date containing every NameDateObject
-                var creationtimelist = new List<DateTime?>();
-                var modtimelist = new List<DateTime?>();
-                var accesstimelist = new List<DateTime?>();
-                //populate the new seperated lists with the times from the combinedobject list (timelist)
-                foreach (NameDateObject timeobject in timelist)
-                {
-                    creationtimelist.Add((DateTime?) timeobject.Created);
-                    modtimelist.Add((DateTime?) timeobject.Modified);
-                    accesstimelist.Add((DateTime?) timeobject.Accessed);
-                }
-                //Make a new list of the lists we just made (Collection initializer)
-                var threetimelists = new List<List<DateTime?>> {creationtimelist, modtimelist, accesstimelist};
-                //Instantiate 3 new vars as a new class that processes the min and max date from the 3 lists we just made
-                var cre = new OldNewDate(creationtimelist);
-                var mod = new OldNewDate(modtimelist);
-                var acc = new OldNewDate(accesstimelist);
-
-                ////Create 2 lists(min and max), containing the 3 min/max dates.
-                //DateTime?[] minarray = { cre.minDate, mod.minDate, acc.minDate };
-                //DateTime?[] maxarray = { cre.maxDate, mod.maxDate, acc.maxDate };
-                ////Instantiate themin/themax as the new class that calculates the min and max date from the 3 dates above. 
-                //var themin = new OldNewDate(new List<DateTime?>(minarray));
-                //var themax = new OldNewDate(new List<DateTime?>(maxarray));
-                ////Keep track of the min/max indexes in this 1,2,3 format too.
-                //int[] minindexesarray = { cre.minIndex, mod.minIndex, acc.minIndex };
-                //int[] maxindexesarray = { cre.maxIndex, mod.maxIndex, acc.maxIndex };
-
-                string filenameused = "";
-                //var dateToUse = new DateTime?();
-
-                //Decide which to use.
-
-                if (radioButton1_Oldest.Checked)
-                {
-                    //mode a: set ALL attributes to the oldest date of whichever attribute was oldest.                    
-                    //                    dateToUse = (DateTime?)minarray[themin.minIndex];
-                    //                    filenameused = timelist[minindexesarray[themin.minIndex]].Name;
-                    //                    thingtoreturn.Created = dateToUse;
-                    //                    thingtoreturn.Modified= dateToUse;
-                    //                    thingtoreturn.Accessed = dateToUse;
-
-                    //mode b: the more desirable mode:
-                    //set each attribute to OLDest date from EACH attribute
-                    thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
-                    thingtoreturn.Created = cre.MinDate;
-                    thingtoreturn.Modified = mod.MinDate;
-                    thingtoreturn.Accessed = acc.MinDate;
-                }
-                    //the above comments obviously can apply to newer mode also with a small edit.
-                else if (radioButton2_Newest.Checked)
-                {
-                    //set each attribute to NEWest date from EACH attribute
-                    thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
-                    thingtoreturn.Created = cre.MaxDate;
-                    thingtoreturn.Modified = mod.MaxDate;
-                    thingtoreturn.Accessed = acc.MaxDate;
-                }
-                else if (radioButton3_Random.Checked)
-                {
-                    //Mode A: (old) - removed the following 4 radio buttons
-                    //pick a subfile/dir at random, then pick an attribute(C,M,A) at random
-                    //    int randomindex = random.Next(0, timelist.Count);
-                    //    filenameused = timelist[randomindex].Name;
-
-                    //    if (radioButton1_setfromCreated.Checked)
-                    //        thingtoreturn.Created = (DateTime?)threetimelists[0][randomindex];
-                    //    if (radioButton2_setfromModified.Checked)
-                    //        thingtoreturn.Modified = (DateTime?)threetimelists[1][randomindex];
-                    //    if (radioButton3_setfromAccessed.Checked)
-                    //        thingtoreturn.Accessed = (DateTime?)threetimelists[2][randomindex];
-                    //    if (radioButton4_setfromRandom.Checked)
-                    //    {
-                    //        int cmarandomize = random.Next(0, 3);
-                    //        dateToUse = (DateTime?)threetimelists[cmarandomize][randomindex];
-
-                    //        if (cmarandomize == 0)
-                    //            thingtoreturn.Created = dateToUse;
-                    //        else if (cmarandomize == 1)
-                    //            thingtoreturn.Modified = dateToUse;
-                    //        else if (cmarandomize == 2)
-                    //            thingtoreturn.Accessed = dateToUse;
-                    //    }
-                    //Mode B: (current)
-                    //Pick a subfile/dir at random, copy all 3 attributes from it, to the return object.
-                    int randomindex = _dataModel.random.Next(0, timelist.Count);
-                    filenameused = timelist[randomindex].Name;
-                    thingtoreturn.Created = threetimelists[0][randomindex];
-                    thingtoreturn.Modified = threetimelists[1][randomindex];
-                    thingtoreturn.Accessed = threetimelists[2][randomindex];
-                }
-                //Set the thingtoReturn Name to what we just determined.
-                thingtoreturn.Name = filenameused;
-            }
-            return thingtoreturn;
         }
 
         #endregion
