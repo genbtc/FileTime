@@ -3,10 +3,6 @@ using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime.mViewModels
 {
-
-    //should this be in a Viewmodel file ?
-    //should this be repeated ? or can we base this class off the previous one? Combine them? refactor?
-
     /// <summary>ViewModel version of the NameDateObject(Name + 3 Dates)</summary>
     public class NameDateObjectListViewVm
     {

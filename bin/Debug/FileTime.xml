@@ -22,11 +22,11 @@
             <summary>Init the main startup form </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.Form_Main_Load(System.Object,System.EventArgs)">
-            <summary> Load the main form (from an event handler on this.Load in Form_Main.Designer.cs)</summary>
+            <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.ClearOnError">
+        <member name="M:genBTC.FileTime.Form_Main.Form_Main_Run">
             <summary>
-            Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
+            At this point we can run our code (that wants to interact with our designer GUI).
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.UpdateButtonEnable">
@@ -34,17 +34,6 @@
         </member>
         <member name="M:genBTC.FileTime.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
             <summary> Create and initialize preferences </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
-            <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
-            <summary>
-            Update the textlabel box for FilePath when the Explorer Tree path changes.
-            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.OpenFile(System.String)">
             <summary>
@@ -57,49 +46,7 @@
             Display subfiles and subdirectories in the right panel listview
             </summary>
             <param name="filesonly">Don't show the directories, only files.</param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.GoUpdateDateTimeMode1">
-            <summary>
-            Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
-            then adds them to the confirm list to be handled by the form_confirm window (part2).
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String)">
-            <summary>
-            Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String)">
-            <summary>
-            Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
-            (Only adds to the confirm list, Form 2 will actually write changes).
-            </summary>
-            <param name="directoryPath">Full path to the directory</param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetFileDateTimeMode1(System.String,System.DateTime,System.Boolean)">
-            <summary>
-            Set the date/time for a single file/directory (This works on files and directories)
-            (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
-            </summary>
-            <param name="filePath">Full path to the file/directory</param>
-            <param name="fileTime">Date/Time to set the file/directory</param>
-            <param name="isDirectory">This path is a directory</param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(System.String,System.DateTime,System.Boolean)">
-            <summary>
-            Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(System.String,genBTC.FileTime.Models.NameDateObject)">
-            <summary>
-            Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
-            VIEWMODEL
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DisplayCma(System.String)">
-            <summary>
-            Display the date and time of the selected file (also works on Directories)
-            </summary>
+            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         </member>
         <member name="M:genBTC.FileTime.Form_Main.UpdateDisplayFileDateTime">
             <summary>
@@ -117,6 +64,44 @@
             <summary>
             The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
             </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.GoUpdateDateTimeMode1">
+            <summary>
+            Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
+            then adds them to the confirm list to be handled by the form_confirm window (part2).
+            </summary>
+            reqs: label_Fpathtext, FilestoConfirmList, ref to Confirmation, skipcount of H,R,S, 
+            Launches the creation of Form2_Confirm, and interacts with it.
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String)">
+            <summary>
+            Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+            </summary>
+            reqs: (string path), contentsDirList, contentsFileList, Thi
+            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
+            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
+            radioGroupBox1_SpecifyTime.Checked
+            radioGroupBox2_CurrentSelectionTime.Checked
+            radioGroupBox3_UseTimeFrom.Checked
+                =radioButton1_useTimefromFile.Checked
+                =radioButton2_useTimefromSubdir.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String)">
+            <summary>
+            Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
+            (Only adds to the confirm list, Form 2 will actually write changes).
+            </summary>
+            <param name="directoryPath">Full path to the directory</param>
+            req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.SetFileDateTimeMode1(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Set the date/time for a single file/directory (This works on files and directories)
+            (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+            </summary>
+            <param name="filePath">Full path to the file/directory</param>
+            <param name="fileTime">Date/Time to set the file/directory</param>
+            <param name="isDirectory">This path is a directory</param>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.GoUpdateDateTimeMode2">
             <summary>
@@ -139,6 +124,15 @@
             </summary>
             <param name="folderPath"></param>
             <param name="subFile"></param>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
+            <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
+            <summary>
+            Update the textlabel box for FilePath when the Explorer Tree path changes.
+            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+            </summary>
         </member>
         <member name="F:genBTC.FileTime.Form_Main.components">
             <summary>
@@ -168,6 +162,27 @@
         </member>
         <member name="M:genBTC.FileTime.Form_Main.Bool2Int(System.Boolean)">
             <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.ClearOnError">
+            <summary>
+            Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(System.String,genBTC.FileTime.Models.NameDateObject)">
+            <summary>
+            Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+            VIEWMODEL
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.DisplayCma(System.String)">
+            <summary>
+            Display the date and time of the selected file (also works on Directories)
+            </summary>
         </member>
         <member name="T:genBTC.FileTime.Form_Main.ListViewIcon">
             <summary> Icon in listView image list </summary>

@@ -11,13 +11,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
-using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
 
 namespace genBTC.FileTime
@@ -27,6 +25,7 @@ namespace genBTC.FileTime
     /// </summary>
     public partial class Form_Main
     {
+        private DataModel _dataModel;
        //Form 2 stuff we need to have in Form1.
         /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         public Form_Confirm Confirmation;
@@ -41,6 +40,9 @@ namespace genBTC.FileTime
         /// <summary>Init the main startup form </summary>
         public Form_Main()
         {
+            //The DataModel can be loaded here.
+            _dataModel = new DataModel();
+
             //Required for Windows Form Designer support
             InitializeComponent();
             //Reason Explanation: This is needed AFTER InitializeComponent because SplitterDistance must be declared FIRST. The designer 
@@ -48,8 +50,16 @@ namespace genBTC.FileTime
             splitContainer1.Panel2MinSize = 150;
         }
 
-        /// <summary> Load the main form (from an event handler on this.Load in Form_Main.Designer.cs)</summary>
+        /// <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
         private void Form_Main_Load(object sender, EventArgs e)
+        {
+            Form_Main_Run();
+        }
+
+        /// <summary>
+        /// At this point we can run our code (that wants to interact with our designer GUI).
+        /// </summary>
+        private void Form_Main_Run()
         {
             try
             {
@@ -71,17 +81,6 @@ namespace genBTC.FileTime
 
         #region Helper functions...
 
-        /// <summary>
-        /// Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
-        /// </summary>
-        private void ClearOnError()
-        {
-            listView_Contents.Items.Clear();
-            contentsDirList.Clear();
-            contentsFileList.Clear();
-            DisplayCma("");
-            label_FPath.Text = "";
-        }
 
 
         /// <summary> Only enable the update button if something is selected </summary>
@@ -158,32 +157,6 @@ namespace genBTC.FileTime
 
         #endregion //Menu
 
-        #region Event functions: Onselected ListView main panels & checkbox
-
-        /// <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
-        private void checkBox_DateTime_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateButtonEnable();
-        }
-
-        /// <summary>
-        /// Update the textlabel box for FilePath when the Explorer Tree path changes.
-        /// (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void explorerTree1_PathChanged(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            label_FPath.Text = explorerTree1.CurrentPath;
-            if (!label_FPath.Text.EndsWith(Seperator.ToString()))
-                label_FPath.Text += Seperator;
-            DisplayContentsList();
-            Cursor.Current = Cursors.Default;
-        }
-
-        #endregion //Listbox + Checkbox Functions
-
         #region >>Main Logic Code<<
 
         /// <summary>
@@ -228,8 +201,8 @@ namespace genBTC.FileTime
         {
             //Clear the contents UI + containers
             listView_Contents.Items.Clear();
-            contentsDirList.Clear();
-            contentsFileList.Clear();
+            _dataModel.contentsDirList.Clear();
+            _dataModel.contentsFileList.Clear();
 
             string directoryName = label_FPath.Text;
 
@@ -242,12 +215,12 @@ namespace genBTC.FileTime
                 {
                     //grab and store all the subdirectories
                     foreach (string subDirectory in Directory.GetDirectories(directoryName))
-                        contentsDirList.Add(Path.GetFileName(subDirectory));
+                        _dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
                 }
                 catch (UnauthorizedAccessException)
                 {}
-                contentsDirList.Sort(explorerStringComparer);
-                foreach (string subDirectory in contentsDirList)
+                _dataModel.contentsDirList.Sort(explorerStringComparer);
+                foreach (string subDirectory in _dataModel.contentsDirList)
                 {
                     // Display all the sub directories using the directory icon (enum 1)
                     listView_Contents.Items.Add(subDirectory, (int) ListViewIcon.Directory);
@@ -267,9 +240,9 @@ namespace genBTC.FileTime
                     if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
                     {
                         //if not already in the list, then add it
-                        if (filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
+                        if (_dataModel.filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
                         {
-                            filextlist.Add(SharedHelper.CurrExten);
+                            _dataModel.filextlist.Add(SharedHelper.CurrExten);
                             //call NativeExtractIcon to get the filesystem icon of the filename
                             imageList_Files.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
                         }
@@ -277,376 +250,19 @@ namespace genBTC.FileTime
                     else //if it is a shortcut, grab icon directly.
                         imageList_Files.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
 
-                    contentsFileList.Add(justName);
+                    _dataModel.contentsFileList.Add(justName);
                 }
             }
             catch (UnauthorizedAccessException)
             {}
-            contentsFileList.Sort(explorerStringComparer);
-            foreach (string file in contentsFileList)
+            _dataModel.contentsFileList.Sort(explorerStringComparer);
+            foreach (string file in _dataModel.contentsFileList)
             {
                 string exten = Path.GetExtension(file);
                 listView_Contents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
 
-        /// <summary>
-        /// Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
-        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
-        /// </summary>
-        /// reqs: label_Fpathtext, FilestoConfirmList, ref to Confirmation, skipcount of H,R,S, 
-        /// Launches the creation of Form2_Confirm, and interacts with it.
-        private void GoUpdateDateTimeMode1()
-        {
-            string startingdir = label_FPath.Text;
-
-            FilestoConfirmList.Clear();
-
-            if (Confirmation.active > 0)
-                Confirmation.FixReadonlyResults();
-
-            _skippedHiddenCount = 0;
-            _skippedReadOnlyCount = 0;
-            _skippedSystemCount = 0;
-
-            if (Settings.Default.mode1addrootdir)
-            {
-                DateTime? nullorfileDateTime = DecideWhichTimeMode1(startingdir);
-                if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
-                {
-                    MessageBox.Show("Error! Nothing to decide time from. \n" +
-                                    "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
-                        "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                var fileDateTime = (DateTime)nullorfileDateTime;
-
-                SetFileDateTimeMode1(startingdir, fileDateTime, true);
-            }
-        //TODO: where I should add worker process
-            if (Settings.Default.useRootDirAsContainer)
-                RecurseSubDirectoryMode1B(startingdir);
-            else
-                RecurseSubDirectoryMode1(startingdir);
-        //end worker process
-
-            var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
-            if (itemsSkippedCount > 0)
-            {
-                string skippedmessage = "";
-                skippedmessage += "There were " + _skippedSystemCount + " System files/directories skipped.\n";
-                skippedmessage += "There were " + _skippedHiddenCount + " Hidden files/directories skipped.\n";
-                skippedmessage += "There were " + _skippedReadOnlyCount + " Read-Only files/directories skipped.";
-                MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            //Code to show files to be changed in the confirmation window (Show Form 2)
-            if (!Confirmation.Visible)
-            {
-                Confirmation = new Form_Confirm(this);
-                Confirmation.Show();
-            }
-            else
-                Confirmation.MakeListView();
-        }
-
-
-        /// <summary>
-        /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
-        /// </summary>
-        /// reqs: (string path), contentsDirList, contentsFileList, Thi
-        /// This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
-        /// This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
-        /// radioGroupBox1_SpecifyTime.Checked
-        /// radioGroupBox2_CurrentSelectionTime.Checked
-        /// radioGroupBox3_UseTimeFrom.Checked
-        ///     =radioButton1_useTimefromFile.Checked
-        ///     =radioButton2_useTimefromSubdir.Checked
-        private DateTime? DecideWhichTimeMode1(string path)
-        {
-            contentsDirList.Clear();
-            contentsFileList.Clear();
-
-            var dateToUse = new DateTime?();
-            if (radioGroupBox1_SpecifyTime.Checked)
-            {
-                dateToUse = DateTime.Parse(dateTimePicker_Date.Value.Date.ToString("d") + " " +
-                                           dateTimePicker_Time.Value.Hour + ":" +
-                                           dateTimePicker_Time.Value.Minute + ":" +
-                                           dateTimePicker_Time.Value.Second);
-            }
-            else if (radioGroupBox2_CurrentSelectionTime.Checked)
-            {
-                if (radioButton1_CreationDate.Checked)
-                    dateToUse = DateTime.Parse(label_CreationTime.Text);
-                else if (radioButton2_ModifiedDate.Checked)
-                    dateToUse = DateTime.Parse(label_Modified.Text);
-                else if (radioButton3_LastAccessDate.Checked)
-                    dateToUse = DateTime.Parse(label_LastAccess.Text);
-            }
-            else if (radioGroupBox3_UseTimeFrom.Checked)
-            {
-                dateToUse = RadioBox3FunctionName(path, dateToUse);
-            }
-            return dateToUse;
-        }
-
-        private DateTime? RadioBox3FunctionName(string path, DateTime? dateToUse)
-        {
-            {
-                var extractlist = new List<string>();
-                if (radioButton1_useTimefromFile.Checked)
-                {
-                    foreach (string filename in Directory.GetFiles(path))
-                        contentsFileList.Add(Path.GetFileName(filename));
-                    extractlist = contentsFileList;
-                }
-                else if (radioButton2_useTimefromSubdir.Checked)
-                {
-                    foreach (string subDirectory in Directory.GetDirectories(path))
-                        contentsDirList.Add(Path.GetFileName(subDirectory));
-                    extractlist = contentsDirList;
-                }
-
-                // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
-                if (extractlist.Count == 0)
-                    return null;
-                //for Any/Random attribute mode, decide which attribute and stick with it.
-                int randomNumber = random.Next(0, 3);
-                var timelist = new List<DateTime?>();
-                //start iterating through
-                foreach (string subitem in extractlist)
-                {
-                    string timelisttype; //this was made just in case.
-                    var looptempDate = new DateTime();
-                    try
-                    {
-                        string fullpath = Path.Combine(path, subitem);
-                        if (radioButton1_setfromCreated.Checked)
-                        {
-                            timelisttype = "Created";
-                            looptempDate = File.GetCreationTime(fullpath);
-                        }
-                        else if (radioButton2_setfromModified.Checked)
-                        {
-                            timelisttype = "Modified";
-                            looptempDate = File.GetLastWriteTime(fullpath);
-                        }
-                        else if (radioButton3_setfromAccessed.Checked)
-                        {
-                            timelisttype = "Accessed";
-                            looptempDate = File.GetLastAccessTime(fullpath);
-                        }
-                        else if (radioButton4_setfromRandom.Checked)
-                        {
-                            switch (randomNumber)
-                            {
-                                case 0:
-                                    timelisttype = "Created";
-                                    looptempDate = File.GetCreationTime(fullpath);
-                                    break;
-                                case 1:
-                                    timelisttype = "Modified";
-                                    looptempDate = File.GetLastWriteTime(fullpath);
-                                    break;
-                                case 2:
-                                    timelisttype = "Accessed";
-                                    looptempDate = File.GetLastAccessTime(fullpath);
-                                    break;
-                            }
-                        }
-                        timelist.Add(looptempDate);
-                    }
-                    catch (UnauthorizedAccessException)
-                    {}
-                }
-                var minmax = new OldNewDate(timelist);
-                if (radioButton1_Oldest.Checked)
-                {
-                    if (minmax.MinDate != null)
-                        dateToUse = (DateTime)minmax.MinDate; //explicit typecast from nullable
-                }
-                else if (radioButton2_Newest.Checked)
-                {
-                    if (minmax.MaxDate != null)
-                        dateToUse = (DateTime)minmax.MaxDate;
-                }
-                else if (radioButton3_Random.Checked)
-                {
-                    int randomFile = random.Next(0, minmax.Index);
-                    if (timelist[randomFile] != null)
-                        dateToUse = (DateTime)timelist[randomFile];
-                }
-            }
-            return dateToUse;
-        }
-
-        /// <summary>
-        /// Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
-        /// (Only adds to the confirm list, Form 2 will actually write changes).
-        /// </summary>
-        /// <param name="directoryPath">Full path to the directory</param>
-        private void RecurseSubDirectoryMode1(string directoryPath)
-        {
-            DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath);
-            if (nullorfileDateTime == null) 
-            {
-                return; //if nothing could be decided, exit. otherwise continue
-            }
-            var fileDateTime = (DateTime)nullorfileDateTime;
-
-            // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
-            if (checkBox_Recurse.Checked)
-            {
-                try
-                {
-                    string[] subDirectories = Directory.GetDirectories(directoryPath);
-                    Array.Sort(subDirectories, explorerStringComparer);
-                    foreach (string eachdir in subDirectories)
-                    {
-                        // Set the date/time for the sub directory
-                        SetFileDateTimeMode1(eachdir, fileDateTime, true);
-                        // Recurse (loop) through each sub-sub directory
-                        RecurseSubDirectoryMode1(eachdir);
-                    }
-                } //catch for GetDirs
-                catch (UnauthorizedAccessException)
-                {}
-            }
-            // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
-            if (checkBoxShouldFiles.Checked)
-            {
-                try
-                {
-                    string[] subFiles = Directory.GetFiles(directoryPath);
-                    Array.Sort(subFiles, explorerStringComparer);
-                    foreach (string filename in subFiles)
-                        SetFileDateTimeMode1(filename, fileDateTime, false);
-                } //catch for GetFiles
-                catch (UnauthorizedAccessException)
-                {}
-            }
-        }
-
-        private void RecurseSubDirectoryMode1B(string startingdir)
-        {
-            try
-            {
-                foreach (string subfolder in Directory.GetDirectories(startingdir))
-                    RecurseSubDirectoryMode1(Path.Combine(startingdir, subfolder));
-            }
-            catch (UnauthorizedAccessException)
-            { }
-            catch (DirectoryNotFoundException)
-            { }
-        }
-
-        /// <summary>
-        /// Set the date/time for a single file/directory (This works on files and directories)
-        /// (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
-        /// </summary>
-        /// <param name="filePath">Full path to the file/directory</param>
-        /// <param name="fileTime">Date/Time to set the file/directory</param>
-        /// <param name="isDirectory">This path is a directory</param>
-        private void SetFileDateTimeMode1(string filePath, DateTime fileTime, bool isDirectory)
-        {
-            FileAttributes fileAttributes = File.GetAttributes(filePath);
-
-            if (((fileAttributes & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
-            {
-                _skippedSystemCount++;
-                return; // Skip system files and directories
-            }
-            if (((fileAttributes & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
-            {
-                _skippedHiddenCount++;
-                return; // Skip hidden files and directories 
-            }
-            if (((fileAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
-            {
-                if (Settings.Default.SkipReadOnly)
-                {
-                    _skippedReadOnlyCount++;
-                    return;
-                }
-                if (Settings.Default.ShowNoticesReadOnly)
-                {
-                    DialogResult dr =
-                        MessageBox.Show(
-                            "The file '" + filePath + "' is Read-Only.\n\nContinue showing Read-Only notifications?",
-                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.Yes);
-                }
-                FilesReadOnlytoFix.Add(filePath);
-            }
-
-            NameDateObject currentobject = Makedateobject(filePath, fileTime, isDirectory);
-            FilestoConfirmList.Add(currentobject);
-        }
-
-        /// <summary>
-        /// Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
-        /// </summary>
-        private NameDateObject Makedateobject(string filePath, DateTime fileTime, bool isDirectory)
-        {
-            var currentobject = new NameDateObject {Name = filePath, FileOrDirType = Bool2Int(isDirectory)};
-
-            // Set the Creation date/time if selected
-            if (checkBox_CreationDateTime.Checked)
-                currentobject.Created = fileTime;
-            // Set the Modified date/time is selected					
-            if (checkBox_ModifiedDateTime.Checked)
-                currentobject.Modified = fileTime;
-            // Set the last access time if selected
-            if (checkBox_AccessedDateTime.Checked)
-                currentobject.Accessed = fileTime;
-            return currentobject;
-        }
-        /// <summary>
-        /// Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
-        /// VIEWMODEL
-        /// </summary>
-        private NameDateObject Makedateobject(string folderPath, NameDateObject subObject)
-        {
-            var currentobject = new NameDateObjectListViewVm(subObject) { Name = folderPath, FileOrDirType = 1 };
-
-            //If Checkbox is selected:
-            if (!checkBox_CreationDateTime.Checked)
-                currentobject.Created = "N/A"; // Set the Creation date/time if selected
-            if (!checkBox_ModifiedDateTime.Checked)
-                currentobject.Modified = "N/A"; // Set the Modified date/time if selected	
-            if (!checkBox_AccessedDateTime.Checked)
-                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
-            return new NameDateObject(currentobject.Converter());
-        }
-
-        /// <summary>
-        /// Display the date and time of the selected file (also works on Directories)
-        /// </summary>
-        private void DisplayCma(string pathName)
-        {
-            if (pathName != "")
-            {
-                label_CreationTime.Text = File.GetCreationTime(pathName).ToString();
-                label_Modified.Text = File.GetLastWriteTime(pathName).ToString();
-                label_LastAccess.Text = File.GetLastAccessTime(pathName).ToString();
-                labelHidden_PathName.Text = pathName;
-                radioGroupBox2_CurrentSelectionTime.Enabled = true;
-            }
-
-            else
-            {
-                // Maybe no file/directory is selected
-                // Then Blank out the display of date/time.
-                label_CreationTime.Text = "";
-                label_Modified.Text = "";
-                label_LastAccess.Text = "";
-                labelHidden_PathName.Text = "";
-                radioGroupBox2_CurrentSelectionTime.Enabled = false;
-                radioGroupBox1_SpecifyTime.Checked = true;
-            }
-            itemSelectionChangedTimer.Stop();
-        }
 
         /// <summary>
         /// Display file's times in the Tri-Textbox bottom UI for the currently selected file.
@@ -724,6 +340,312 @@ namespace genBTC.FileTime
         }
 
 
+        #endregion
+
+        #region Mode 1 code
+        /// <summary>
+        /// Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
+        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
+        /// </summary>
+        /// reqs: label_Fpathtext, FilestoConfirmList, ref to Confirmation, skipcount of H,R,S, 
+        /// Launches the creation of Form2_Confirm, and interacts with it.
+        private void GoUpdateDateTimeMode1()
+        {
+            string startingdir = label_FPath.Text;
+
+            FilestoConfirmList.Clear();
+
+            if (Confirmation.active > 0)
+                Confirmation.FixReadonlyResults();
+
+            _skippedHiddenCount = 0;
+            _skippedReadOnlyCount = 0;
+            _skippedSystemCount = 0;
+
+            if (Settings.Default.mode1addrootdir)
+            {
+                DateTime? nullorfileDateTime = DecideWhichTimeMode1(startingdir);
+                if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
+                {
+                    MessageBox.Show("Error! Nothing to decide time from. \n" +
+                                    "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
+                        "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                var fileDateTime = (DateTime)nullorfileDateTime;
+
+                SetFileDateTimeMode1(startingdir, fileDateTime, true);
+            }
+            //TODO: where I should add worker process
+            if (Settings.Default.useRootDirAsContainer)
+                RecurseSubDirectoryMode1B(startingdir);
+            else
+                RecurseSubDirectoryMode1(startingdir);
+            //end worker process
+
+            var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
+            if (itemsSkippedCount > 0)
+            {
+                string skippedmessage = "";
+                skippedmessage += "There were " + _skippedSystemCount + " System files/directories skipped.\n";
+                skippedmessage += "There were " + _skippedHiddenCount + " Hidden files/directories skipped.\n";
+                skippedmessage += "There were " + _skippedReadOnlyCount + " Read-Only files/directories skipped.";
+                MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            //Code to show files to be changed in the confirmation window (Show Form 2)
+            if (!Confirmation.Visible)
+            {
+                Confirmation = new Form_Confirm(this);
+                Confirmation.Show();
+            }
+            else
+                Confirmation.MakeListView();
+        }
+
+
+        /// <summary>
+        /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+        /// </summary>
+        /// reqs: (string path), contentsDirList, contentsFileList, Thi
+        /// This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
+        /// This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
+        /// radioGroupBox1_SpecifyTime.Checked
+        /// radioGroupBox2_CurrentSelectionTime.Checked
+        /// radioGroupBox3_UseTimeFrom.Checked
+        ///     =radioButton1_useTimefromFile.Checked
+        ///     =radioButton2_useTimefromSubdir.Checked
+        private DateTime? DecideWhichTimeMode1(string path)
+        {
+            _dataModel.contentsDirList.Clear();
+            _dataModel.contentsFileList.Clear();
+
+            var dateToUse = new DateTime?();
+            if (radioGroupBox1_SpecifyTime.Checked)
+            {
+                dateToUse = DateTime.Parse(dateTimePicker_Date.Value.Date.ToString("d") + " " +
+                                           dateTimePicker_Time.Value.Hour + ":" +
+                                           dateTimePicker_Time.Value.Minute + ":" +
+                                           dateTimePicker_Time.Value.Second);
+            }
+            else if (radioGroupBox2_CurrentSelectionTime.Checked)
+            {
+                if (radioButton1_CreationDate.Checked)
+                    dateToUse = DateTime.Parse(label_CreationTime.Text);
+                else if (radioButton2_ModifiedDate.Checked)
+                    dateToUse = DateTime.Parse(label_Modified.Text);
+                else if (radioButton3_LastAccessDate.Checked)
+                    dateToUse = DateTime.Parse(label_LastAccess.Text);
+            }
+            else if (radioGroupBox3_UseTimeFrom.Checked)
+            {
+                dateToUse = UseTimeFromSubDirFile(path);
+            }
+            return dateToUse;
+        }
+
+        private DateTime? UseTimeFromSubDirFile(string path)
+        {
+            var dateToUse = new DateTime?();
+            var extractlist = new List<string>();
+            if (radioButton1_useTimefromFile.Checked)
+            {
+                foreach (string filename in Directory.GetFiles(path))
+                    _dataModel.contentsFileList.Add(Path.GetFileName(filename));
+                extractlist = _dataModel.contentsFileList;
+            }
+            else if (radioButton2_useTimefromSubdir.Checked)
+            {
+                foreach (string subDirectory in Directory.GetDirectories(path))
+                    _dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
+                extractlist = _dataModel.contentsDirList;
+            }
+
+            // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
+            if (extractlist.Count == 0)
+                return null;
+            //for Any/Random attribute mode, decide which attribute and stick with it.
+            int randomNumber = random.Next(0, 3);
+            var timelist = new List<DateTime?>();
+            //start iterating through
+            foreach (string subitem in extractlist)
+            {
+                string timelisttype; //this was made just in case.
+                var looptempDate = new DateTime();
+                try
+                {
+                    string fullpath = Path.Combine(path, subitem);
+                    if (radioButton1_setfromCreated.Checked)
+                    {
+                        timelisttype = "Created";
+                        looptempDate = File.GetCreationTime(fullpath);
+                    }
+                    else if (radioButton2_setfromModified.Checked)
+                    {
+                        timelisttype = "Modified";
+                        looptempDate = File.GetLastWriteTime(fullpath);
+                    }
+                    else if (radioButton3_setfromAccessed.Checked)
+                    {
+                        timelisttype = "Accessed";
+                        looptempDate = File.GetLastAccessTime(fullpath);
+                    }
+                    else if (radioButton4_setfromRandom.Checked)
+                    {
+                        switch (randomNumber)
+                        {
+                            case 0:
+                                timelisttype = "Created";
+                                looptempDate = File.GetCreationTime(fullpath);
+                                break;
+                            case 1:
+                                timelisttype = "Modified";
+                                looptempDate = File.GetLastWriteTime(fullpath);
+                                break;
+                            case 2:
+                                timelisttype = "Accessed";
+                                looptempDate = File.GetLastAccessTime(fullpath);
+                                break;
+                        }
+                    }
+                    timelist.Add(looptempDate);
+                }
+                catch (UnauthorizedAccessException)
+                { }
+            }
+            var minmax = new OldNewDate(timelist);
+            if (radioButton1_Oldest.Checked)
+            {
+                if (minmax.MinDate != null)
+                    dateToUse = minmax.MinDate; //explicit typecast from nullable
+            }
+            else if (radioButton2_Newest.Checked)
+            {
+                if (minmax.MaxDate != null)
+                    dateToUse = minmax.MaxDate;
+            }
+            else if (radioButton3_Random.Checked)
+            {
+                int randomFile = random.Next(0, minmax.Index);
+                if (timelist[randomFile] != null)
+                    dateToUse = timelist[randomFile];
+            }
+            return dateToUse;
+        }
+
+        /// <summary>
+        /// Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
+        /// (Only adds to the confirm list, Form 2 will actually write changes).
+        /// </summary>
+        /// <param name="directoryPath">Full path to the directory</param>
+        /// req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
+        private void RecurseSubDirectoryMode1(string directoryPath)
+        {
+            DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath);
+            if (nullorfileDateTime == null)
+            {
+                return; //if nothing could be decided, exit. otherwise continue
+            }
+            var fileDateTime = (DateTime)nullorfileDateTime;
+
+            // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
+            if (checkBox_Recurse.Checked)
+            {
+                SetTimeDateEachDirectory(directoryPath, fileDateTime);
+            }
+            // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
+            if (checkBoxShouldFiles.Checked)
+            {
+                SetTimeDateEachFile(directoryPath, fileDateTime);
+            }
+        }
+
+        private void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime)
+        {
+            try
+            {
+                string[] subDirectories = Directory.GetDirectories(directoryPath);
+                Array.Sort(subDirectories, explorerStringComparer);
+                foreach (string eachdir in subDirectories)
+                {
+                    // Set the date/time for the sub directory
+                    SetFileDateTimeMode1(eachdir, fileDateTime, true);
+                    // Recurse (loop) through each sub-sub directory
+                    RecurseSubDirectoryMode1(eachdir);
+                }
+            } //catch for GetDirs
+            catch (UnauthorizedAccessException)
+            { }
+        }
+
+        private void SetTimeDateEachFile(string directoryPath, DateTime fileDateTime)
+        {
+            try
+            {
+                string[] subFiles = Directory.GetFiles(directoryPath);
+                Array.Sort(subFiles, explorerStringComparer);
+                foreach (string filename in subFiles)
+                    SetFileDateTimeMode1(filename, fileDateTime, false);
+            } //catch for GetFiles
+            catch (UnauthorizedAccessException)
+            { }
+        }
+
+        private void RecurseSubDirectoryMode1B(string startingdir)
+        {
+            try
+            {
+                foreach (string subfolder in Directory.GetDirectories(startingdir))
+                    RecurseSubDirectoryMode1(Path.Combine(startingdir, subfolder));
+            }
+            catch (UnauthorizedAccessException)
+            { }
+            catch (DirectoryNotFoundException)
+            { }
+        }
+
+        /// <summary>
+        /// Set the date/time for a single file/directory (This works on files and directories)
+        /// (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+        /// </summary>
+        /// <param name="filePath">Full path to the file/directory</param>
+        /// <param name="fileTime">Date/Time to set the file/directory</param>
+        /// <param name="isDirectory">This path is a directory</param>
+        private void SetFileDateTimeMode1(string filePath, DateTime fileTime, bool isDirectory)
+        {
+            FileAttributes fileAttributes = File.GetAttributes(filePath);
+
+            if (((fileAttributes & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
+            {
+                _skippedSystemCount++;
+                return; // Skip system files and directories
+            }
+            if (((fileAttributes & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
+            {
+                _skippedHiddenCount++;
+                return; // Skip hidden files and directories 
+            }
+            if (((fileAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
+            {
+                if (Settings.Default.SkipReadOnly)
+                {
+                    _skippedReadOnlyCount++;
+                    return;
+                }
+                if (Settings.Default.ShowNoticesReadOnly)
+                {
+                    DialogResult dr =
+                        MessageBox.Show(
+                            "The file '" + filePath + "' is Read-Only.\n\nContinue showing Read-Only notifications?",
+                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.Yes);
+                }
+                FilesReadOnlytoFix.Add(filePath);
+            }
+
+            NameDateObject currentobject = Makedateobject(filePath, fileTime, isDirectory);
+            FilestoConfirmList.Add(currentobject);
+        }
         #endregion
 
         #region Mode2 code
@@ -1040,6 +962,30 @@ namespace genBTC.FileTime
         }
 
         #endregion
+
+        #region Event functions: Onselected ListView main panels & checkbox
+
+        /// <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
+        private void checkBox_DateTime_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateButtonEnable();
+        }
+
+        /// <summary>
+        /// Update the textlabel box for FilePath when the Explorer Tree path changes.
+        /// (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+        /// </summary>
+        private void explorerTree1_PathChanged(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            label_FPath.Text = explorerTree1.CurrentPath;
+            if (!label_FPath.Text.EndsWith(Seperator.ToString()))
+                label_FPath.Text += Seperator;
+            DisplayContentsList();
+            Cursor.Current = Cursors.Default;
+        }
+
+        #endregion //Listbox + Checkbox Functions
 
     }
 }

@@ -57,7 +57,7 @@
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>3</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
@@ -124,6 +124,9 @@
     </Compile>
     <Compile Include="AssemblyVersion.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mViewModels\FormMainModel.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="mViewModels\CustomListView.cs">
       <SubType>Component</SubType>

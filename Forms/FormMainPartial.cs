@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using genBTC.FileTime.Classes;
-using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
 using Timer = System.Windows.Forms.Timer;
@@ -22,9 +19,7 @@ namespace genBTC.FileTime
         private static readonly char Seperator = Path.DirectorySeparatorChar;
         private static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-        private readonly List<string> contentsDirList = new List<string>();
-        private readonly List<string> contentsFileList = new List<string>();
-        private readonly List<string> filextlist = new List<string>();
+
 
         #endregion
 
