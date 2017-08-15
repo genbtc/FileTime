@@ -121,7 +121,7 @@ namespace genBTC.FileTime
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            FinishUpBOTHModes1and2(tabControl1.SelectedIndex);
+            StartUpBOTHModes1and2(tabControl1.SelectedIndex);
             string comparefolder;
             if (radioGroupBox1_pickFolderForCompare.Checked)
                 comparefolder = OpenFile();
@@ -308,7 +308,69 @@ namespace genBTC.FileTime
                 itemSelectionChangedTimer.Start();
             }
         }
-        
+
+        /// <summary>
+        /// Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, 
+        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
+        /// </summary>
+        /// reqs: Datamodel , label_Fpathtext
+        private void StartUpBOTHModes1and2(int Mode2)
+        {
+            _dataModel.FilestoConfirmList.Clear();
+
+            _dataModel.Skips.H = 0;
+            _dataModel.Skips.R = 0;
+            _dataModel.Skips.S = 0;
+
+            switch (Mode2)
+            {
+                case (0):
+                    if (Confirmation.active > 0)
+                        Confirmation.FixReadonlyResults();
+                    string startingdir = label_FPath.Text;
+                    if (Settings.Default.mode1addrootdir)
+                    {
+                        DateTime? nullorfileDateTime = DecideWhichTimeMode1(startingdir);
+                        if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
+                        {
+                            MessageBox.Show("Error! Nothing to decide time from. \n" +
+                                            "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
+                                "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        var fileDateTime = (DateTime)nullorfileDateTime;
+
+                        SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), startingdir, fileDateTime, true);
+                    }
+
+                    //TODO: where I should add worker process
+                    if (Settings.Default.useRootDirAsContainer)
+                        RecurseSubDirectoryMode1B(startingdir);
+                    else
+                        RecurseSubDirectoryMode1(startingdir);
+                    //end worker process
+                    break;
+                case (1):
+                    if (Settings.Default.useRootDirAsContainer)
+                        RecurseSubDirectoryMode2B(label_FPath.Text);
+                    else
+                        RecurseSubDirectoryMode2(label_FPath.Text);
+                    break;
+            }
+
+            var itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.S;
+            if (itemsSkippedCount > 0)
+            {
+                string skippedmessage = "";
+                skippedmessage += "There were " + _dataModel.Skips.S + " System files/directories skipped.\n";
+                skippedmessage += "There were " + _dataModel.Skips.H + " Hidden files/directories skipped.\n";
+                skippedmessage += "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
+                MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            //Launch Form 2
+            LaunchForm2Go();
+        }
+
         /// <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
         private void LaunchForm2Go()
         {
@@ -320,6 +382,7 @@ namespace genBTC.FileTime
             else
                 Confirmation.MakeListView();
         }
+
         #endregion
 
         #region Form EventHandlers Functions, tabcontrol and tooltip
@@ -357,7 +420,7 @@ namespace genBTC.FileTime
 
         #endregion
 
-        #region Mode 1 code
+        #region Mode 1 Specific code
         /// <summary>
         /// Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
         /// (Only adds to the confirm list, Form 2 will actually write changes).
@@ -368,21 +431,29 @@ namespace genBTC.FileTime
         {
             DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath);
             if (nullorfileDateTime == null)
-            {
                 return; //if nothing could be decided, exit. otherwise continue
-            }
             var fileDateTime = (DateTime)nullorfileDateTime;
 
             // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
             if (checkBox_Recurse.Checked)
-            {
                 SetTimeDateEachDirectory(directoryPath, fileDateTime);
-            }
             // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
             if (checkBoxShouldFiles.Checked)
-            {
                 SetTimeDateEachFile(directoryPath, fileDateTime);
+        }
+
+        //this looks strikingly similar 
+        private void RecurseSubDirectoryMode1B(string startingdir)
+        {
+            try
+            {
+                foreach (string subfolder in Directory.GetDirectories(startingdir))
+                    RecurseSubDirectoryMode1(Path.Combine(startingdir, subfolder));
             }
+            catch (UnauthorizedAccessException)
+            { }
+            catch (DirectoryNotFoundException)
+            { }
         }
 
         /// <summary>
@@ -545,84 +616,9 @@ namespace genBTC.FileTime
             { }
         }
 
-        //this looks strikingly similar 
-        private void RecurseSubDirectoryMode1B(string startingdir)
-        {
-            try
-            {
-                foreach (string subfolder in Directory.GetDirectories(startingdir))
-                    RecurseSubDirectoryMode1(Path.Combine(startingdir, subfolder));
-            }
-            catch (UnauthorizedAccessException)
-            { }
-            catch (DirectoryNotFoundException)
-            { }
-        }
-        /// <summary>
-        /// Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
-        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
-        /// </summary>
-        /// reqs: Datamodel , label_Fpathtext
-        private void FinishUpBOTHModes1and2(int Mode2)
-        {
-            _dataModel.FilestoConfirmList.Clear();
-
-            _dataModel.Skips.H = 0;
-            _dataModel.Skips.R = 0;
-            _dataModel.Skips.C = 0;
-
-            switch (Mode2)
-            {
-                case (0):
-                    if (Confirmation.active > 0)
-                        Confirmation.FixReadonlyResults();
-                    string startingdir = label_FPath.Text;
-                    if (Settings.Default.mode1addrootdir)
-                    {
-                        DateTime? nullorfileDateTime = DecideWhichTimeMode1(startingdir);
-                        if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
-                        {
-                            MessageBox.Show("Error! Nothing to decide time from. \n" +
-                                            "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
-                                "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        var fileDateTime = (DateTime)nullorfileDateTime;
-
-                        SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), startingdir, fileDateTime, true);
-                    }
-
-                    //TODO: where I should add worker process
-                    if (Settings.Default.useRootDirAsContainer)
-                        RecurseSubDirectoryMode1B(startingdir);
-                    else
-                        RecurseSubDirectoryMode1(startingdir);
-                    //end worker process
-                    break;
-                case (1):
-                    if (Settings.Default.useRootDirAsContainer)
-                        RecurseSubDirectoryMode2B(label_FPath.Text);
-                    else
-                        RecurseSubDirectoryMode2(label_FPath.Text);
-                    break;
-            }
-
-            var itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.C;
-            if (itemsSkippedCount > 0)
-            {
-                string skippedmessage = "";
-                skippedmessage += "There were " + _dataModel.Skips.C + " System files/directories skipped.\n";
-                skippedmessage += "There were " + _dataModel.Skips.H + " Hidden files/directories skipped.\n";
-                skippedmessage += "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
-                MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            //Launch Form 2
-            LaunchForm2Go();
-        }
-
         #endregion
 
-        #region Mode2 code
+        #region Mode 2 Specific code
 
         private void RecurseSubDirectoryMode2(string directoryPath)
         {

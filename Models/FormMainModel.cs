@@ -23,7 +23,7 @@ namespace genBTC.FileTime
         /// <summary> Count of the number of Read-only files skipped </summary>
         public int R;
         /// <summary> Count of the number of System files skipped </summary>
-        public int C;
+        public int S;
     }
 
     public class DataModel
@@ -50,6 +50,41 @@ namespace genBTC.FileTime
 
     public partial class Form_Main
     {
+        private static void SkipOrAddFile(DataModel dataModel, string path, bool isDirectory)
+        {
+            FileAttributes fAttr = File.GetAttributes(path);
+
+            if (((fAttr & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
+            {
+                dataModel.Skips.S++;
+                return; // Skip system files and directories
+            }
+            if (((fAttr & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
+            {
+                dataModel.Skips.H++;
+                return; // Skip hidden files and directories 
+            }
+            if (((fAttr & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
+            {
+                if (Settings.Default.SkipReadOnly)
+                {
+                    dataModel.Skips.R++;
+                    return;
+                }
+                if (Settings.Default.ShowNoticesReadOnly)
+                {
+                    DialogResult dr =
+                        MessageBox.Show(
+                            "The file '" + path + "' is Read-Only.\n\nContinue showing Read-Only notifications?",
+                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.Yes);
+                }
+                //add them to the list to be readOnly+Fixed before they are timewritten.
+                dataModel.FilesReadOnlytoFix.Add(path);
+            }
+        }
+    
+
         /// <summary> STATIC.
         /// Set the date/time for a single file/directory (This works on files and directories)
         /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
@@ -61,35 +96,7 @@ namespace genBTC.FileTime
         /// <param name="isDirectory">Is this a directory???</param>
         private static void SetFileDateTimeMode1(DataModel dataModel, BoolCMA checkboxes, string filePath, DateTime fileTime, bool isDirectory)
         {
-            FileAttributes fileAttributes = File.GetAttributes(filePath);
-
-            if (((fileAttributes & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
-            {
-                dataModel.Skips.C++;
-                return; // Skip system files and directories
-            }
-            if (((fileAttributes & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
-            {
-                dataModel.Skips.H++;
-                return; // Skip hidden files and directories 
-            }
-            if (((fileAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
-            {
-                if (Settings.Default.SkipReadOnly)
-                {
-                    dataModel.Skips.R++;
-                    return;
-                }
-                if (Settings.Default.ShowNoticesReadOnly)
-                {
-                    DialogResult dr =
-                        MessageBox.Show(
-                            "The file '" + filePath + "' is Read-Only.\n\nContinue showing Read-Only notifications?",
-                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.Yes);
-                }
-                dataModel.FilesReadOnlytoFix.Add(filePath);
-            }
+            SkipOrAddFile(dataModel,filePath,isDirectory);
 
             NameDateObject currentobject = Makedateobject(checkboxes, filePath, fileTime, isDirectory);
             dataModel.FilestoConfirmList.Add(currentobject);
@@ -98,35 +105,8 @@ namespace genBTC.FileTime
         //Mode #2 (same like above). Static.
         private static void SetFolderDateTimeMode2(DataModel dataModel, BoolCMA checkboxes, string folderPath, NameDateObject subFile)
         {
-            FileAttributes folderAttributes = File.GetAttributes(folderPath);
+            SkipOrAddFile(dataModel, folderPath, true);
 
-            if (((folderAttributes & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
-            {
-                dataModel.Skips.C++;
-                return; // Skip system files and directories
-            }
-            if (((folderAttributes & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
-            {
-                dataModel.Skips.H++;
-                return; // Skip hidden files and directories 
-            }
-            if ((folderAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
-            {
-                if (Settings.Default.ShowNoticesReadOnly)
-                {
-                    DialogResult dr =
-                        MessageBox.Show(
-                            "The folder '" + folderPath +
-                            "' is Read-Only and was skipped.\n\nContinue showing Read-Only notifications?",
-                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.OK);
-                }
-                if (Settings.Default.SkipReadOnly)
-                {
-                    dataModel.Skips.R++;
-                    return;
-                }
-            }
             subFile = Makedateobject(checkboxes, folderPath, subFile);
             dataModel.FilestoConfirmList.Add(subFile);
         }

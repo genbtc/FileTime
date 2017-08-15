@@ -786,7 +786,7 @@
         <member name="F:genBTC.FileTime.SkippedHSR.R">
             <summary> Count of the number of Read-only files skipped </summary>
         </member>
-        <member name="F:genBTC.FileTime.SkippedHSR.C">
+        <member name="F:genBTC.FileTime.SkippedHSR.S">
             <summary> Count of the number of System files skipped </summary>
         </member>
         <member name="F:genBTC.FileTime.DataModel.FilesReadOnlytoFix">
