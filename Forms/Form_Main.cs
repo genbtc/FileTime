@@ -92,10 +92,25 @@ namespace genBTC.FileTime
         /// </summary>
         private void ClearOnError()
         {
-            _dataModel.ClearOnError();
+            _dataModel.Clear();
             listView_Contents.Items.Clear();
+
             DisplayCma("");
+        }
+
+        private void DisplayCma(string path)
+        {
+            var cma = GetCmaTimes(path);
+
+            label_CreationTime.Text = cma.Created;
+            label_Modified.Text = cma.Modified;
+            label_LastAccess.Text = cma.Accessed;
+            labelHidden_PathName.Text = cma.HiddenPathName;
+            radioGroupBox2_CurrentSelectionTime.Enabled = cma.RadioGroupBox2_CurrentSelectionTime_Enabled;
+            if (!radioGroupBox2_CurrentSelectionTime.Enabled)
+                radioGroupBox1_SpecifyTime.Checked = true;
             label_FPath.Text = "";
+            itemSelectionChangedTimer.Stop();            
         }
         
         /// <summary> Only enable the update button if something is selected </summary>
@@ -216,15 +231,16 @@ namespace genBTC.FileTime
 
             if (!filesonly && checkBox_Recurse.Checked)
             {
+                //part 1: list and store all the subdirectories
                 try
                 {
-                    //grab and store all the subdirectories
-                    foreach (string subDirectory in Directory.GetDirectories(directoryName))
-                        _dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
+                    PopulateDirList(directoryName, _dataModel);
                 }
                 catch (UnauthorizedAccessException)
                 {}
+                //Sort them
                 _dataModel.contentsDirList.Sort(explorerStringComparer);
+                //Add them to the listview.
                 foreach (string subDirectory in _dataModel.contentsDirList)
                 {
                     // Display all the sub directories using the directory icon (enum 1)
@@ -232,9 +248,10 @@ namespace genBTC.FileTime
                 }
             }
 
-            // Display all of the files and show a file icon
+            // (Display all of the files and show a file icon)
             try
             {
+                //part 2: list all subfiles, match the extension and find the icon.
                 foreach (string file in Directory.GetFiles(directoryName))
                 {
                     var fileAttribs = File.GetAttributes(file);
@@ -260,25 +277,29 @@ namespace genBTC.FileTime
             }
             catch (UnauthorizedAccessException)
             {}
+            //Sort them
             _dataModel.contentsFileList.Sort(explorerStringComparer);
+            //Add them to the listview.
             foreach (string file in _dataModel.contentsFileList)
             {
                 string exten = Path.GetExtension(file);
                 listView_Contents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
-        
+
         /// <summary>
         /// Display file's times in the Tri-Textbox bottom UI for the currently selected file.
         /// </summary>
-        private void UpdateDisplayFileDateTime()
+        /// <param name="listViewContents"></param>
+        /// <param name="labelFPath"></param>
+        private void UpdateDisplayFileDateTime(ListView listViewContents, Label labelFPath)
         {
             //If none of the below conditions are true, "" means blank date/time during displayCMA()
             string pathName = "";
 
-            if (listView_Contents.SelectedItems.Count == 1 && listView_Contents.SelectedItems[0].ImageIndex != 1)
+            if (listViewContents.SelectedItems.Count == 1 && listViewContents.SelectedItems[0].ImageIndex != 1)
                 // If one file is selected
-                pathName = Path.Combine(label_FPath.Text, listView_Contents.SelectedItems[0].Text);
+                pathName = Path.Combine(labelFPath.Text, listViewContents.SelectedItems[0].Text);
             //Always Call the display date/time function
             DisplayCma(pathName);
         }
@@ -291,7 +312,7 @@ namespace genBTC.FileTime
         private void _ItemSelectionChangedTimer_Tick(object sender, EventArgs e)
         {
             if (listView_Contents.SelectedItems.Count == 0)
-                UpdateDisplayFileDateTime();
+                UpdateDisplayFileDateTime(listView_Contents, label_FPath);
         }
 
         /// <summary>
@@ -300,7 +321,7 @@ namespace genBTC.FileTime
         private void listView_Contents_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             if (listView_Contents.SelectedItems.Count == 1)
-                UpdateDisplayFileDateTime();
+                UpdateDisplayFileDateTime(listView_Contents, label_FPath);
             else
             {
                 itemSelectionChangedTimer.Interval = 100;
@@ -491,100 +512,15 @@ namespace genBTC.FileTime
             }
             else if (radioGroupBox3_UseTimeFrom.Checked)
             {
-                dateToUse = DecideTimeFromSubDirFile(path);
+                dateToUse = DecideTimeFromSubDirFile(path, _dataModel, radioButton1_useTimefromFile, radioButton2_useTimefromSubdir, radioButton1_setfromCreated, radioButton2_setfromModified, radioButton3_setfromAccessed, radioButton4_setfromRandom, radioButton1_Oldest, radioButton2_Newest, radioButton3_Random);
             }
             return dateToUse;
         }
 
-        private DateTime? DecideTimeFromSubDirFile(string path)
-        {
-            var dateToUse = new DateTime?();
-            var extractlist = new List<string>();
-            if (radioButton1_useTimefromFile.Checked)
-            {
-                foreach (string filename in Directory.GetFiles(path))
-                    _dataModel.contentsFileList.Add(Path.GetFileName(filename));
-                extractlist = _dataModel.contentsFileList;
-            }
-            else if (radioButton2_useTimefromSubdir.Checked)
-            {
-                foreach (string subDirectory in Directory.GetDirectories(path))
-                    _dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
-                extractlist = _dataModel.contentsDirList;
-            }
 
-            // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
-            if (extractlist.Count == 0)
-                return null;
-            //for Any/Random attribute mode, decide which attribute and stick with it.
-            int randomNumber = random.Next(0, 3);
-            var timelist = new List<DateTime?>();
-            //start iterating through
-            foreach (string subitem in extractlist)
-            {
-                string timelisttype; //this was made just in case.
-                var looptempDate = new DateTime();
-                try
-                {
-                    string fullpath = Path.Combine(path, subitem);
-                    if (radioButton1_setfromCreated.Checked)
-                    {
-                        timelisttype = "Created";
-                        looptempDate = File.GetCreationTime(fullpath);
-                    }
-                    else if (radioButton2_setfromModified.Checked)
-                    {
-                        timelisttype = "Modified";
-                        looptempDate = File.GetLastWriteTime(fullpath);
-                    }
-                    else if (radioButton3_setfromAccessed.Checked)
-                    {
-                        timelisttype = "Accessed";
-                        looptempDate = File.GetLastAccessTime(fullpath);
-                    }
-                    else if (radioButton4_setfromRandom.Checked)
-                    {
-                        switch (randomNumber)
-                        {
-                            case 0:
-                                timelisttype = "Created";
-                                looptempDate = File.GetCreationTime(fullpath);
-                                break;
-                            case 1:
-                                timelisttype = "Modified";
-                                looptempDate = File.GetLastWriteTime(fullpath);
-                                break;
-                            case 2:
-                                timelisttype = "Accessed";
-                                looptempDate = File.GetLastAccessTime(fullpath);
-                                break;
-                        }
-                    }
-                    timelist.Add(looptempDate);
-                }
-                catch (UnauthorizedAccessException)
-                { }
-            }
-            var minmax = new OldNewDate(timelist);
-            if (radioButton1_Oldest.Checked)
-            {
-                if (minmax.MinDate != null)
-                    dateToUse = minmax.MinDate; //explicit typecast from nullable
-            }
-            else if (radioButton2_Newest.Checked)
-            {
-                if (minmax.MaxDate != null)
-                    dateToUse = minmax.MaxDate;
-            }
-            else if (radioButton3_Random.Checked)
-            {
-                int randomFile = random.Next(0, minmax.Index);
-                if (timelist[randomFile] != null)
-                    dateToUse = timelist[randomFile];
-            }
-            return dateToUse;
-        }
-
+        /// <summary>
+        /// Set Directory Time
+        /// </summary>
         private void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime)
         {
             try
@@ -603,6 +539,9 @@ namespace genBTC.FileTime
             { }
         }
 
+        /// <summary>
+        /// Set File Time
+        /// </summary>
         private void SetTimeDateEachFile(string directoryPath, DateTime fileDateTime)
         {
             try
@@ -836,7 +775,7 @@ namespace genBTC.FileTime
                     //    }
                     //Mode B: (current)
                     //Pick a subfile/dir at random, copy all 3 attributes from it, to the return object.
-                    int randomindex = random.Next(0, timelist.Count);
+                    int randomindex = _dataModel.random.Next(0, timelist.Count);
                     filenameused = timelist[randomindex].Name;
                     thingtoreturn.Created = threetimelists[0][randomindex];
                     thingtoreturn.Modified = threetimelists[1][randomindex];

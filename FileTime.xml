@@ -50,10 +50,12 @@
             <param name="filesonly">Don't show the directories, only files.</param>
             reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.UpdateDisplayFileDateTime">
+        <member name="M:genBTC.FileTime.Form_Main.UpdateDisplayFileDateTime(System.Windows.Forms.ListView,System.Windows.Forms.Label)">
             <summary>
             Display file's times in the Tri-Textbox bottom UI for the currently selected file.
             </summary>
+            <param name="listViewContents"></param>
+            <param name="labelFPath"></param>
         </member>
         <member name="M:genBTC.FileTime.Form_Main._ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
             <summary>
@@ -66,6 +68,13 @@
             <summary>
             The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
             </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.StartUpBOTHModes1and2(System.Int32)">
+            <summary>
+            Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, 
+            then adds them to the confirm list to be handled by the form_confirm window (part2).
+            </summary>
+            reqs: Datamodel , label_Fpathtext
         </member>
         <member name="M:genBTC.FileTime.Form_Main.LaunchForm2Go">
             <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
@@ -91,12 +100,15 @@
                 =radioButton1_useTimefromFile.Checked
                 =radioButton2_useTimefromSubdir.Checked
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.FinishUpBOTHModes1and2(System.Int32)">
+        <member name="M:genBTC.FileTime.Form_Main.SetTimeDateEachDirectory(System.String,System.DateTime)">
             <summary>
-            Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
-            then adds them to the confirm list to be handled by the form_confirm window (part2).
+            Set Directory Time
             </summary>
-            reqs: Datamodel , label_Fpathtext
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.SetTimeDateEachFile(System.String,System.DateTime)">
+            <summary>
+            Set File Time
+            </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(System.String)">
             <summary>
@@ -160,10 +172,22 @@
             Static. Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.DisplayCma(System.String)">
+        <member name="M:genBTC.FileTime.Form_Main.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.DataModel,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton)">
             <summary>
-            Display the date and time of the selected file (also works on Directories)
+            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
             </summary>
+            <param name="path"></param>
+            <param name="dataModel"></param>
+            <param name="radioButton1UseTimefromFile"></param>
+            <param name="radioButton2UseTimefromSubdir"></param>
+            <param name="radioButton1SetfromCreated"></param>
+            <param name="radioButton2SetfromModified"></param>
+            <param name="radioButton3SetfromAccessed"></param>
+            <param name="radioButton4SetfromRandom"></param>
+            <param name="radioButton1Oldest"></param>
+            <param name="radioButton2Newest"></param>
+            <param name="radioButton3Random"></param>
+            <returns></returns>
         </member>
         <member name="T:genBTC.FileTime.Form_Main.ListViewIcon">
             <summary> Icon in listView image list </summary>
@@ -173,6 +197,11 @@
         </member>
         <member name="F:genBTC.FileTime.Form_Main.ListViewIcon.Directory">
             <summary> Directory icon in listView image list </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Form_Main.DisplayCmaTimeData">
+            <summary>
+            Display the date and time of the selected file (also works on Directories)
+            </summary>
         </member>
         <member name="T:genBTC.FileTime.AssemblyVersion">
             <summary>
@@ -795,7 +824,7 @@
         <member name="F:genBTC.FileTime.DataModel.FilestoConfirmList">
             <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
         </member>
-        <member name="M:genBTC.FileTime.DataModel.ClearOnError">
+        <member name="M:genBTC.FileTime.DataModel.Clear">
             <summary>
             Clear Function.
             </summary>

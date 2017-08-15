@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
+using UIToolbox;
 
 namespace genBTC.FileTime
 {
@@ -37,10 +38,14 @@ namespace genBTC.FileTime
         public List<NameDateObject> FilestoConfirmList = new List<NameDateObject>();
 
         public SkippedHSR Skips = new SkippedHSR();
+
+        public readonly Random random = new Random();
+
+
         /// <summary>
         /// Clear Function.
         /// </summary>
-        public void ClearOnError()
+        public void Clear()
         {
             contentsDirList.Clear();
             contentsFileList.Clear();
@@ -149,29 +154,158 @@ namespace genBTC.FileTime
         /// <summary>
         /// Display the date and time of the selected file (also works on Directories)
         /// </summary>
-        private void DisplayCma(string pathName)
+
+        struct DisplayCmaTimeData
         {
-            if (pathName != "")
+            public string pathName;
+            
+            public bool RadioGroupBox2_CurrentSelectionTime_Enabled;
+
+            public string Created;
+            public string Modified;
+            public string Accessed;
+
+            public string HiddenPathName;
+        }
+
+        private static DisplayCmaTimeData GetCmaTimes(string pathName)
+        {
+            var cma = new DisplayCmaTimeData {pathName = pathName};
+            if (cma.pathName != "")
             {
-                label_CreationTime.Text = File.GetCreationTime(pathName).ToString();
-                label_Modified.Text = File.GetLastWriteTime(pathName).ToString();
-                label_LastAccess.Text = File.GetLastAccessTime(pathName).ToString();
-                labelHidden_PathName.Text = pathName;
-                radioGroupBox2_CurrentSelectionTime.Enabled = true;
+                cma.Created = File.GetCreationTime(cma.pathName).ToString();
+                cma.Modified = File.GetLastWriteTime(cma.pathName).ToString();
+                cma.Accessed = File.GetLastAccessTime(cma.pathName).ToString();
+                cma.HiddenPathName = cma.pathName;
+                cma.RadioGroupBox2_CurrentSelectionTime_Enabled = true;
             }
 
             else
             {
                 // Maybe no file/directory is selected
                 // Then Blank out the display of date/time.
-                label_CreationTime.Text = "";
-                label_Modified.Text = "";
-                label_LastAccess.Text = "";
-                labelHidden_PathName.Text = "";
-                radioGroupBox2_CurrentSelectionTime.Enabled = false;
-                radioGroupBox1_SpecifyTime.Checked = true;
+                cma.Created = "";
+                cma.Modified = "";
+                cma.Accessed = "";
+                cma.HiddenPathName = "";
+                cma.RadioGroupBox2_CurrentSelectionTime_Enabled = false;
             }
-            itemSelectionChangedTimer.Stop();
+            return cma;
+        }
+
+
+        /// <summary>
+        /// Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="dataModel"></param>
+        /// <param name="radioButton1UseTimefromFile"></param>
+        /// <param name="radioButton2UseTimefromSubdir"></param>
+        /// <param name="radioButton1SetfromCreated"></param>
+        /// <param name="radioButton2SetfromModified"></param>
+        /// <param name="radioButton3SetfromAccessed"></param>
+        /// <param name="radioButton4SetfromRandom"></param>
+        /// <param name="radioButton1Oldest"></param>
+        /// <param name="radioButton2Newest"></param>
+        /// <param name="radioButton3Random"></param>
+        /// <returns></returns>
+        private static DateTime? DecideTimeFromSubDirFile(string path, DataModel dataModel, RadioButton radioButton1UseTimefromFile, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1SetfromCreated, RadioButton radioButton2SetfromModified, RadioButton radioButton3SetfromAccessed, RadioButton radioButton4SetfromRandom, RadioButton radioButton1Oldest, RadioButton radioButton2Newest, RadioButton radioButton3Random)
+        {
+            var dateToUse = new DateTime?();
+            var extractlist = new List<string>();
+            if (radioButton1UseTimefromFile.Checked)
+            {
+                extractlist = PopulateFileList(path, dataModel);
+            }
+            else if (radioButton2UseTimefromSubdir.Checked)
+            {
+                extractlist = PopulateDirList(path, dataModel);
+            }
+
+            // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
+            if (extractlist.Count == 0)
+                return null;
+            //for Any/Random attribute mode, decide which attribute and stick with it.
+            int randomNumber = dataModel.random.Next(0, 3);
+            var timelist = new List<DateTime?>();
+            //start iterating through
+            foreach (string subitem in extractlist)
+            {
+                string timelisttype; //this was made just in case.
+                var looptempDate = new DateTime();
+                try
+                {
+                    string fullpath = Path.Combine(path, subitem);
+                    if (radioButton1SetfromCreated.Checked)
+                    {
+                        timelisttype = "Created";
+                        looptempDate = File.GetCreationTime(fullpath);
+                    }
+                    else if (radioButton2SetfromModified.Checked)
+                    {
+                        timelisttype = "Modified";
+                        looptempDate = File.GetLastWriteTime(fullpath);
+                    }
+                    else if (radioButton3SetfromAccessed.Checked)
+                    {
+                        timelisttype = "Accessed";
+                        looptempDate = File.GetLastAccessTime(fullpath);
+                    }
+                    else if (radioButton4SetfromRandom.Checked)
+                    {
+                        switch (randomNumber)
+                        {
+                            case 0:
+                                timelisttype = "Created";
+                                looptempDate = File.GetCreationTime(fullpath);
+                                break;
+                            case 1:
+                                timelisttype = "Modified";
+                                looptempDate = File.GetLastWriteTime(fullpath);
+                                break;
+                            case 2:
+                                timelisttype = "Accessed";
+                                looptempDate = File.GetLastAccessTime(fullpath);
+                                break;
+                        }
+                    }
+                    timelist.Add(looptempDate);
+                }
+                catch (UnauthorizedAccessException)
+                { }
+            }
+            var minmax = new OldNewDate(timelist);
+            if (radioButton1Oldest.Checked)
+            {
+                if (minmax.MinDate != null)
+                    dateToUse = minmax.MinDate; //explicit typecast from nullable
+            }
+            else if (radioButton2Newest.Checked)
+            {
+                if (minmax.MaxDate != null)
+                    dateToUse = minmax.MaxDate;
+            }
+            else if (radioButton3Random.Checked)
+            {
+                int randomFile = dataModel.random.Next(0, minmax.Index);
+                if (timelist[randomFile] != null)
+                    dateToUse = timelist[randomFile];
+            }
+            return dateToUse;
+        }
+
+        private static List<string> PopulateDirList(string path, DataModel dataModel)
+        {
+            foreach (string subDirectory in Directory.GetDirectories(path))
+                dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
+            return dataModel.contentsDirList; 
+        }
+
+        private static List<string> PopulateFileList(string path, DataModel dataModel)
+        {
+            foreach (string filename in Directory.GetFiles(path))
+                dataModel.contentsFileList.Add(Path.GetFileName(filename));
+            return dataModel.contentsFileList;
         }
     }
 }

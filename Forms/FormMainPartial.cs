@@ -22,7 +22,7 @@ namespace genBTC.FileTime
         private readonly IComparer<string> explorerStringComparer = new ExplorerComparerstring();
         private readonly Timer itemSelectionChangedTimer = new Timer();
 
-        private readonly Random random = new Random();
+        
 
         #endregion Vars
 
