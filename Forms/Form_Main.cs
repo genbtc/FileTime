@@ -25,16 +25,10 @@ namespace genBTC.FileTime
     /// </summary>
     public partial class Form_Main
     {
-        private DataModel _dataModel;
+        public DataModel _dataModel;
        //Form 2 stuff we need to have in Form1.
         /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         public Form_Confirm Confirmation;
-
-        /// <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
-        public List<string> FilesReadOnlytoFix = new List<string>();
-
-        /// <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        public List<NameDateObject> FilestoConfirmList = new List<NameDateObject>();
 
         #region Main startup/load code
         /// <summary>Init the main startup form </summary>
@@ -42,6 +36,8 @@ namespace genBTC.FileTime
         {
             //The DataModel can be loaded here.
             _dataModel = new DataModel();
+            //The form 2 can be created here.
+            Confirmation = new Form_Confirm(this);
 
             //Required for Windows Form Designer support
             InitializeComponent();
@@ -63,7 +59,6 @@ namespace genBTC.FileTime
         {
             try
             {
-                Confirmation = new Form_Confirm(this);
                 explorerTree1.SetCurrentPath(Settings.Default.useStartupDir
                     ? Settings.Default.StartupDir.TrimEnd(Seperator)
                     : UserDesktop);
@@ -76,12 +71,9 @@ namespace genBTC.FileTime
                 ClearOnError();
             }
         }
-
-        #endregion //Main Form Code
+        #endregion //Main Startup Code
 
         #region Helper functions...
-
-
 
         /// <summary> Only enable the update button if something is selected </summary>
         private void UpdateButtonEnable()
@@ -353,14 +345,14 @@ namespace genBTC.FileTime
         {
             string startingdir = label_FPath.Text;
 
-            FilestoConfirmList.Clear();
+            _dataModel.FilestoConfirmList.Clear();
 
             if (Confirmation.active > 0)
                 Confirmation.FixReadonlyResults();
 
-            _skippedHiddenCount = 0;
-            _skippedReadOnlyCount = 0;
-            _skippedSystemCount = 0;
+            _dataModel.Skips.H = 0;
+            _dataModel.Skips.R = 0;
+            _dataModel.Skips.C = 0;
 
             if (Settings.Default.mode1addrootdir)
             {
@@ -374,7 +366,7 @@ namespace genBTC.FileTime
                 }
                 var fileDateTime = (DateTime)nullorfileDateTime;
 
-                SetFileDateTimeMode1(startingdir, fileDateTime, true);
+                SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), startingdir, fileDateTime, true);
             }
             //TODO: where I should add worker process
             if (Settings.Default.useRootDirAsContainer)
@@ -383,13 +375,13 @@ namespace genBTC.FileTime
                 RecurseSubDirectoryMode1(startingdir);
             //end worker process
 
-            var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
+            var itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.C;
             if (itemsSkippedCount > 0)
             {
                 string skippedmessage = "";
-                skippedmessage += "There were " + _skippedSystemCount + " System files/directories skipped.\n";
-                skippedmessage += "There were " + _skippedHiddenCount + " Hidden files/directories skipped.\n";
-                skippedmessage += "There were " + _skippedReadOnlyCount + " Read-Only files/directories skipped.";
+                skippedmessage += "There were " + _dataModel.Skips.C + " System files/directories skipped.\n";
+                skippedmessage += "There were " + _dataModel.Skips.H + " Hidden files/directories skipped.\n";
+                skippedmessage += "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
                 MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -569,7 +561,7 @@ namespace genBTC.FileTime
                 foreach (string eachdir in subDirectories)
                 {
                     // Set the date/time for the sub directory
-                    SetFileDateTimeMode1(eachdir, fileDateTime, true);
+                    SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), eachdir, fileDateTime, true);
                     // Recurse (loop) through each sub-sub directory
                     RecurseSubDirectoryMode1(eachdir);
                 }
@@ -585,7 +577,7 @@ namespace genBTC.FileTime
                 string[] subFiles = Directory.GetFiles(directoryPath);
                 Array.Sort(subFiles, explorerStringComparer);
                 foreach (string filename in subFiles)
-                    SetFileDateTimeMode1(filename, fileDateTime, false);
+                    SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), filename, fileDateTime, false);
             } //catch for GetFiles
             catch (UnauthorizedAccessException)
             { }
@@ -611,41 +603,7 @@ namespace genBTC.FileTime
         /// <param name="filePath">Full path to the file/directory</param>
         /// <param name="fileTime">Date/Time to set the file/directory</param>
         /// <param name="isDirectory">This path is a directory</param>
-        private void SetFileDateTimeMode1(string filePath, DateTime fileTime, bool isDirectory)
-        {
-            FileAttributes fileAttributes = File.GetAttributes(filePath);
 
-            if (((fileAttributes & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
-            {
-                _skippedSystemCount++;
-                return; // Skip system files and directories
-            }
-            if (((fileAttributes & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
-            {
-                _skippedHiddenCount++;
-                return; // Skip hidden files and directories 
-            }
-            if (((fileAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
-            {
-                if (Settings.Default.SkipReadOnly)
-                {
-                    _skippedReadOnlyCount++;
-                    return;
-                }
-                if (Settings.Default.ShowNoticesReadOnly)
-                {
-                    DialogResult dr =
-                        MessageBox.Show(
-                            "The file '" + filePath + "' is Read-Only.\n\nContinue showing Read-Only notifications?",
-                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.Yes);
-                }
-                FilesReadOnlytoFix.Add(filePath);
-            }
-
-            NameDateObject currentobject = Makedateobject(filePath, fileTime, isDirectory);
-            FilestoConfirmList.Add(currentobject);
-        }
         #endregion
 
         #region Mode2 code
@@ -657,11 +615,11 @@ namespace genBTC.FileTime
         private void GoUpdateDateTimeMode2()
         {
             //initialize/clear
-            FilestoConfirmList.Clear();
+            _dataModel.FilestoConfirmList.Clear();
 
-            _skippedHiddenCount = 0;
-            _skippedReadOnlyCount = 0;
-            _skippedSystemCount = 0;
+            _dataModel.Skips.H = 0;
+            _dataModel.Skips.R = 0;
+            _dataModel.Skips.C = 0;
 
             if (Settings.Default.useRootDirAsContainer)
                 RecurseSubDirectoryMode2B(label_FPath.Text);
@@ -671,13 +629,13 @@ namespace genBTC.FileTime
             }
             
 
-            var itemsSkippedCount = _skippedHiddenCount + _skippedReadOnlyCount + _skippedSystemCount;
+            var itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.C;
             string skippedmessage = "";
             if (itemsSkippedCount > 0)
             {
-                skippedmessage += "There were " + _skippedSystemCount + " System files/directories skipped.\n";
-                skippedmessage += "There were " + _skippedHiddenCount + " Hidden files/directories skipped.\n";
-                skippedmessage += "There were " + _skippedReadOnlyCount + " Read-Only files/directories skipped.";
+                skippedmessage += "There were " + _dataModel.Skips.C + " System files/directories skipped.\n";
+                skippedmessage += "There were " + _dataModel.Skips.H + " Hidden files/directories skipped.\n";
+                skippedmessage += "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
                 MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             //Code to show files to be changed in the confirmation window (Show Form 2)
@@ -695,7 +653,8 @@ namespace genBTC.FileTime
         private void RecurseSubDirectoryMode2(string directoryPath)
         {
             NameDateObject timeInside = DecideWhichTimeMode2(directoryPath);
-            SetFolderDateTimeMode2(directoryPath, timeInside);
+            
+            SetFolderDateTimeMode2(_dataModel, QueryCMAcheckboxes(), directoryPath, timeInside);
             try
             {
                 foreach (string subfolder in Directory.GetDirectories(directoryPath))
@@ -920,46 +879,6 @@ namespace genBTC.FileTime
         }
 
 
-        /// <summary>
-        /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
-        /// </summary>
-        /// <param name="folderPath"></param>
-        /// <param name="subFile"></param>
-        private void SetFolderDateTimeMode2(string folderPath, NameDateObject subFile)
-        {
-            FileAttributes folderAttributes = File.GetAttributes(folderPath);
-
-            if (((folderAttributes & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
-            {
-                _skippedSystemCount++;
-                return; // Skip system files and directories
-            }
-            if (((folderAttributes & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
-            {
-                _skippedHiddenCount++;
-                return; // Skip hidden files and directories 
-            }
-            if ((folderAttributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
-            {
-                if (Settings.Default.ShowNoticesReadOnly)
-                {
-                    DialogResult dr =
-                        MessageBox.Show(
-                            "The folder '" + folderPath +
-                            "' is Read-Only and was skipped.\n\nContinue showing Read-Only notifications?",
-                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.OK);
-                }
-                if (Settings.Default.SkipReadOnly)
-                {
-                    _skippedReadOnlyCount++;
-                    return;
-                }
-            }
-
-            subFile = Makedateobject(folderPath, subFile);
-            FilestoConfirmList.Add(subFile);
-        }
 
         #endregion
 

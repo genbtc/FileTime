@@ -125,7 +125,9 @@
     <Compile Include="AssemblyVersion.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="mViewModels\FormMainModel.cs">
+    <Compile Include="Models\NameDateObject.cs" />
+    <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\FormMainModel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mViewModels\CustomListView.cs">
@@ -135,7 +137,7 @@
     <Compile Include="mViewModels\ListViewItemExplorerLikeComparer.cs" />
     <Compile Include="Classes\Native\NativeScroll.cs" />
     <Compile Include="Classes\Native\NativeSelect.cs" />
-    <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\OldNewDate.cs" />
     <Compile Include="Forms\FormMainPartial.cs">
       <SubType>Form</SubType>
     </Compile>

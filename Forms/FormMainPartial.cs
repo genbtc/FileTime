@@ -14,31 +14,19 @@ namespace genBTC.FileTime
         [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
         public static extern int StrCmpLogicalW(String x, String y);
 
-        #region Data Containers (Private)
-        //Data Containers (Private)
+        #region Vars
+
         private static readonly char Seperator = Path.DirectorySeparatorChar;
         private static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
-
-
-        #endregion
-
-        #region Declarations
-        //Declarations
+        
         private readonly IComparer<string> explorerStringComparer = new ExplorerComparerstring();
         private readonly Timer itemSelectionChangedTimer = new Timer();
 
         private readonly Random random = new Random();
 
-        /// <summary> Count of the number of hidden files skipped </summary>
-        private int _skippedHiddenCount;
-        /// <summary> Count of the number of Read-only files skipped </summary>
-        private int _skippedReadOnlyCount;
-        /// <summary> Count of the number of System files skipped </summary>
-        private int _skippedSystemCount;
+        #endregion Vars
 
-        #endregion
-
+        /// <summary>  Reasons to be invisible  </summary>
         private static FileAttributes SyncSettingstoInvisibleFlag()
         {
             FileAttributes reasonsToBeInvisible = (Settings.Default.ShowHidden ? 0 : FileAttributes.Hidden) |
@@ -46,7 +34,6 @@ namespace genBTC.FileTime
                                                   (Settings.Default.ShowReadOnly ? 0 : FileAttributes.ReadOnly);
             return reasonsToBeInvisible;
         }
-
 
         /// <summary> Icon in listView image list </summary>
         private enum ListViewIcon
@@ -56,6 +43,7 @@ namespace genBTC.FileTime
             /// <summary> Directory icon in listView image list </summary>
             Directory = 1
         }
+
         /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         private static int Bool2Int(bool fileOrDir)
         {
