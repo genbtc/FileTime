@@ -75,6 +75,29 @@ namespace genBTC.FileTime
 
         #region Helper functions...
 
+        /// <summary>  Return the value of the checkboxes "CMA Time"   </summary>
+        private BoolCMA QueryCMAcheckboxes()
+        {
+            var checkboxes = new BoolCMA
+            {
+                C = checkBox_CreationDateTime.Checked,
+                M = checkBox_ModifiedDateTime.Checked,
+                A = checkBox_AccessedDateTime.Checked
+            };
+            return checkboxes;
+        }
+
+        /// <summary>
+        /// Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
+        /// </summary>
+        private void ClearOnError()
+        {
+            _dataModel.ClearOnError();
+            listView_Contents.Items.Clear();
+            DisplayCma("");
+            label_FPath.Text = "";
+        }
+        
         /// <summary> Only enable the update button if something is selected </summary>
         private void UpdateButtonEnable()
         {
@@ -83,7 +106,6 @@ namespace genBTC.FileTime
                  checkBox_ModifiedDateTime.Checked |
                  checkBox_AccessedDateTime.Checked);
         }
-
 
         #endregion //Helper functions
 
@@ -103,10 +125,10 @@ namespace genBTC.FileTime
             {
                 //Branch to launch the selected mode.
                 case 0:
-                    GoUpdateDateTimeMode1();
+                    FinishUpMode1();
                     break;
                 case 1:
-                    GoUpdateDateTimeMode2();
+                    FinishUpMode2();
                     break;
             }
             string comparefolder;
@@ -335,13 +357,14 @@ namespace genBTC.FileTime
         #endregion
 
         #region Mode 1 code
+
         /// <summary>
         /// Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
-        /// reqs: label_Fpathtext, FilestoConfirmList, ref to Confirmation, skipcount of H,R,S, 
-        /// Launches the creation of Form2_Confirm, and interacts with it.
-        private void GoUpdateDateTimeMode1()
+        /// reqs: Datamodel , label_Fpathtext
+
+        private void FinishUpMode1()
         {
             string startingdir = label_FPath.Text;
 
@@ -384,8 +407,13 @@ namespace genBTC.FileTime
                 skippedmessage += "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
                 MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            //Launch Form 2
+            LaunchForm2Go();
+        }
 
-            //Code to show files to be changed in the confirmation window (Show Form 2)
+        /// <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
+        private void LaunchForm2Go()
+        {
             if (!Confirmation.Visible)
             {
                 Confirmation = new Form_Confirm(this);
@@ -394,7 +422,6 @@ namespace genBTC.FileTime
             else
                 Confirmation.MakeListView();
         }
-
 
         /// <summary>
         /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
@@ -596,14 +623,6 @@ namespace genBTC.FileTime
             { }
         }
 
-        /// <summary>
-        /// Set the date/time for a single file/directory (This works on files and directories)
-        /// (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
-        /// </summary>
-        /// <param name="filePath">Full path to the file/directory</param>
-        /// <param name="fileTime">Date/Time to set the file/directory</param>
-        /// <param name="isDirectory">This path is a directory</param>
-
         #endregion
 
         #region Mode2 code
@@ -612,7 +631,7 @@ namespace genBTC.FileTime
         /// Mode 2 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
-        private void GoUpdateDateTimeMode2()
+        private void FinishUpMode2()
         {
             //initialize/clear
             _dataModel.FilestoConfirmList.Clear();
@@ -627,7 +646,6 @@ namespace genBTC.FileTime
             {
                 RecurseSubDirectoryMode2(label_FPath.Text);
             }
-            
 
             var itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.C;
             string skippedmessage = "";
@@ -638,16 +656,9 @@ namespace genBTC.FileTime
                 skippedmessage += "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
                 MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            //Code to show files to be changed in the confirmation window (Show Form 2)
-            if (!Confirmation.Visible)
-            {
-                Confirmation = new Form_Confirm(this);
-                Confirmation.Show();
-            }
-            else
-                Confirmation.MakeListView();
+            //Launch Form 2
+            LaunchForm2Go();
         }
-
 
 
         private void RecurseSubDirectoryMode2(string directoryPath)

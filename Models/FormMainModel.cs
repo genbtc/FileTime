@@ -50,6 +50,15 @@ namespace genBTC.FileTime
 
     public partial class Form_Main
     {
+        /// <summary> STATIC.
+        /// Set the date/time for a single file/directory (This works on files and directories)
+        /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+        /// (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+        /// </summary>
+        /// Requires: Pass in the datamodel and the checkbox states.
+        /// <param name="filePath">Full path to the file/directory</param>
+        /// <param name="fileTime">Date/Time to set the file/directory</param>
+        /// <param name="isDirectory">Is this a directory???</param>
         private static void SetFileDateTimeMode1(DataModel dataModel, BoolCMA checkboxes, string filePath, DateTime fileTime, bool isDirectory)
         {
             FileAttributes fileAttributes = File.GetAttributes(filePath);
@@ -86,11 +95,7 @@ namespace genBTC.FileTime
             dataModel.FilestoConfirmList.Add(currentobject);
         }
 
-        /// <summary>
-        /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
-        /// </summary>
-        /// <param name="folderPath"></param>
-        /// <param name="subFile"></param>
+        //Mode #2 (same like above). Static.
         private static void SetFolderDateTimeMode2(DataModel dataModel, BoolCMA checkboxes, string folderPath, NameDateObject subFile)
         {
             FileAttributes folderAttributes = File.GetAttributes(folderPath);
@@ -126,28 +131,6 @@ namespace genBTC.FileTime
             dataModel.FilestoConfirmList.Add(subFile);
         }
 
-        private BoolCMA QueryCMAcheckboxes()
-        {
-            var checkboxes = new BoolCMA
-            {
-                C = checkBox_CreationDateTime.Checked,
-                M = checkBox_ModifiedDateTime.Checked,
-                A = checkBox_AccessedDateTime.Checked
-            };
-            return checkboxes;
-        }
-
-        /// <summary>
-        /// Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
-        /// </summary>
-        private void ClearOnError()
-        {
-            _dataModel.ClearOnError();
-            listView_Contents.Items.Clear();
-            DisplayCma("");
-            label_FPath.Text = "";
-        }
-        
         /// <summary>
         /// Static. Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
         /// </summary>

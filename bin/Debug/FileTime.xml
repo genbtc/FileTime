@@ -23,6 +23,14 @@
             At this point we can run our code (that wants to interact with our designer GUI).
             </summary>
         </member>
+        <member name="M:genBTC.FileTime.Form_Main.QueryCMAcheckboxes">
+            <summary>  Return the value of the checkboxes "CMA Time"   </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.ClearOnError">
+            <summary>
+            Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
+            </summary>
+        </member>
         <member name="M:genBTC.FileTime.Form_Main.UpdateButtonEnable">
             <summary> Only enable the update button if something is selected </summary>
         </member>
@@ -59,13 +67,15 @@
             The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.GoUpdateDateTimeMode1">
+        <member name="M:genBTC.FileTime.Form_Main.FinishUpMode1">
             <summary>
             Mode 1 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
             then adds them to the confirm list to be handled by the form_confirm window (part2).
             </summary>
-            reqs: label_Fpathtext, FilestoConfirmList, ref to Confirmation, skipcount of H,R,S, 
-            Launches the creation of Form2_Confirm, and interacts with it.
+            reqs: Datamodel , label_Fpathtext
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.LaunchForm2Go">
+            <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String)">
             <summary>
@@ -88,7 +98,7 @@
             <param name="directoryPath">Full path to the directory</param>
             req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.GoUpdateDateTimeMode2">
+        <member name="M:genBTC.FileTime.Form_Main.FinishUpMode2">
             <summary>
             Mode 2 Update-Button Command. This runs a LONG process on the folders/files. It decides which time to use, 
             then adds them to the confirm list to be handled by the form_confirm window (part2).
@@ -135,17 +145,16 @@
         <member name="M:genBTC.FileTime.Form_Main.Bool2Int(System.Boolean)">
             <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetFolderDateTimeMode2(genBTC.FileTime.DataModel,genBTC.FileTime.BoolCMA,System.String,genBTC.FileTime.Models.NameDateObject)">
-            <summary>
+        <member name="M:genBTC.FileTime.Form_Main.SetFileDateTimeMode1(genBTC.FileTime.DataModel,genBTC.FileTime.BoolCMA,System.String,System.DateTime,System.Boolean)">
+            <summary> STATIC.
+            Set the date/time for a single file/directory (This works on files and directories)
             Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+            (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
             </summary>
-            <param name="folderPath"></param>
-            <param name="subFile"></param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.ClearOnError">
-            <summary>
-            Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
-            </summary>
+            Requires: Pass in the datamodel and the checkbox states.
+            <param name="filePath">Full path to the file/directory</param>
+            <param name="fileTime">Date/Time to set the file/directory</param>
+            <param name="isDirectory">Is this a directory???</param>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.Makedateobject(genBTC.FileTime.BoolCMA,System.String,System.DateTime,System.Boolean)">
             <summary>
