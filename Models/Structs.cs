@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace genBTC.FileTime.Models
+﻿namespace genBTC.FileTime.Models
 {
     struct BoolCMA
     {
@@ -35,11 +31,13 @@ namespace genBTC.FileTime.Models
     }
 
     /// <summary> Icon in listView image list </summary>
-    enum ListViewIcon
+    internal enum ListViewIcon
     {
         /// <summary> File icon in listView image list </summary>
         File = 0,
+
         /// <summary> Directory icon in listView image list </summary>
         Directory = 1
-    }
+    };
+
 }

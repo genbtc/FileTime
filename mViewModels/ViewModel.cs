@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace genBTC.FileTime
 {
@@ -36,9 +34,6 @@ namespace genBTC.FileTime
         }
 
 
-
-        //private guistatus radios;
-
         private guistatus GetGUIRadioButtonStatusData()
         {
             var radios = new guistatus
@@ -65,24 +60,7 @@ namespace genBTC.FileTime
                 dateTimePickerTime = dateTimePicker_Time.Value,
                 labelHiddenPathName = labelHidden_PathName.Text
             };
-/*
-radioGroupBox1SpecifyTime
-labelHiddenPathName
-dateTimePickerDate
-dateTimePickerTime
-dateTimePickerTime
-dateTimePickerTime
-radioGroupBox2CurrentSelect
-labelCreationTime
-labelModified
-labelLastAccess
-radioGroupBox3UseTimeFrom
-radioButton1UseTimefromFile
-radioButton2UseTimefromSub
-radioButton1Oldest
-radioButton2Newest
-radioButton3Random
- */
+
             return radios;
         }
     }

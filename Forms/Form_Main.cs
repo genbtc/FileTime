@@ -137,7 +137,7 @@ namespace genBTC.FileTime
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            StartUpBOTHModes1and2(tabControl1.SelectedIndex, label_FPath.Text);
+            StartUpBothModes1And2(tabControl1.SelectedIndex, label_FPath.Text);
             string comparefolder;
             if (radioGroupBox1_pickFolderForCompare.Checked)
                 comparefolder = OpenFile(label_FPath.Text);
@@ -303,7 +303,7 @@ namespace genBTC.FileTime
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
         /// reqs: Datamodel , label_Fpathtext
-        private void StartUpBOTHModes1and2(int Mode2, string startingdir)
+        private void StartUpBothModes1And2(int mode2, string startingdir)
         {
             _dataModel.FilestoConfirmList.Clear();
 
@@ -313,7 +313,7 @@ namespace genBTC.FileTime
 
             var gui = GetGUIRadioButtonStatusData();
             
-            switch (Mode2)
+            switch (mode2)
             {
                 case (0):
                     if (Confirmation.active > 0)
@@ -408,171 +408,6 @@ namespace genBTC.FileTime
                 tabControl1);
         }
 
-
-        #endregion
-
-        #region Mode 1 Specific code
-
-        /// <summary>
-        /// Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
-        /// (Only adds to the confirm list, Form 2 will actually write changes).
-        /// </summary>
-        /// <param name="directoryPath">Full path to the directory</param>
-        /// <param name="checkedRecurse"></param>
-        /// <param name="checkedShouldFiles"></param>
-        /// <param name="checkboxes"></param>
-        /// <param name="dataModel"></param>
-        /// req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        private static void RecurseSubDirectoryMode1(string directoryPath, bool checkedRecurse, bool checkedShouldFiles, BoolCMA checkboxes, DataModel dataModel, guistatus gui)
-        {
-            DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath, gui, dataModel);
-            if (nullorfileDateTime == null)
-                return; //if nothing could be decided, exit. otherwise continue
-            var fileDateTime = (DateTime)nullorfileDateTime;
-
-            // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
-            if (checkedRecurse)
-                SetTimeDateEachDirectory(directoryPath, fileDateTime, checkboxes, dataModel, checkedRecurse, checkedShouldFiles, gui);
-            // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
-            if (checkedShouldFiles)
-                SetTimeDateEachFile(directoryPath, fileDateTime, checkboxes, dataModel);
-        }
-
-        /// <summary>  Mode 1B </summary>
-        private static void RecurseSubDirectoryMode1B(string directoryPath, bool checkedRecurse, bool checkedShouldFiles, BoolCMA checkboxes, DataModel dataModel, guistatus gui)
-        {
-            try
-            {
-                foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode1(Path.Combine(directoryPath, subfolder), checkedRecurse, checkedShouldFiles, checkboxes, dataModel, gui);
-            }
-            catch (UnauthorizedAccessException)
-            { }
-            catch (DirectoryNotFoundException)
-            { }
-        }
-
-        /// <summary>
-        /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
-        /// </summary>
-        /// reqs: (string path), contentsDirList, contentsFileList, Thi
-        /// This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
-        /// This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
-        /// radioGroupBox1_SpecifyTime.Checked
-        /// radioGroupBox2_CurrentSelectionTime.Checked
-        /// radioGroupBox3_UseTimeFrom.Checked
-        ///     =radioButton1_useTimefromFile.Checked
-        ///     =radioButton2_useTimefromSubdir.Checked
-        private static DateTime? DecideWhichTimeMode1(string path, guistatus gui, DataModel dataModel)
-        {
-            dataModel.contentsDirList.Clear();
-            dataModel.contentsFileList.Clear();
-
-            var dateToUse = new DateTime?();
-            if (gui.radioGroupBox1SpecifyTime)
-            {
-                dateToUse = DateTime.Parse(gui.dateTimePickerDate.Date.ToString("d") + " " +
-                                           gui.dateTimePickerTime.Hour + ":" +
-                                           gui.dateTimePickerTime.Minute + ":" +
-                                           gui.dateTimePickerTime.Second);
-            }
-            else if (gui.radioGroupBox2CurrentSelect)
-            {
-                if (gui.rg2rb1Creation)
-                    dateToUse = DateTime.Parse(gui.Created);
-                else if (gui.rg2rb2Modified)
-                    dateToUse = DateTime.Parse(gui.Modified);
-                else if (gui.rg2rb3LastAccess)
-                    dateToUse = DateTime.Parse(gui.Accessed);
-            }
-            else if (gui.radioGroupBox3UseTimeFrom)
-            {
-                dateToUse = DecideTimeFromSubDirFile(path, dataModel, gui);
-            }
-            return dateToUse;
-        }
-
-
-        /// <summary>
-        /// Set Directory Time
-        /// </summary>
-        private static void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime, BoolCMA checkboxes, DataModel dataModel, bool checkedRecurse, bool checkedShouldFiles, guistatus gui)
-        {
-            try
-            {
-                string[] subDirectories = Directory.GetDirectories(directoryPath);
-                Array.Sort(subDirectories, explorerStringComparer());
-                foreach (string eachdir in subDirectories)
-                {
-                    // Set the date/time for the sub directory
-                    SetFileDateTimeMode1(dataModel, checkboxes, eachdir, fileDateTime, true);
-                    // Recurse (loop) through each sub-sub directory
-                    RecurseSubDirectoryMode1(eachdir, checkedRecurse, checkedShouldFiles, checkboxes, dataModel, gui);
-                }
-            } //catch for GetDirs
-            catch (UnauthorizedAccessException)
-            { }
-        }
-
-        /// <summary>
-        /// Set File Time
-        /// </summary>
-        private static void SetTimeDateEachFile(string directoryPath, DateTime fileDateTime, BoolCMA checkboxes, DataModel dataModel)
-        {
-            try
-            {
-                string[] subFiles = Directory.GetFiles(directoryPath);
-                Array.Sort(subFiles, explorerStringComparer());
-                foreach (string filename in subFiles)
-                    SetFileDateTimeMode1(dataModel, checkboxes, filename, fileDateTime, false);
-            } //catch for GetFiles
-            catch (UnauthorizedAccessException)
-            { }
-        }
-
-        #endregion
-
-        #region Mode 2 Specific code
-
-        /// <summary>
-        /// Mode 2. Recursive.
-        /// </summary>
-        /// <param name="directoryPath">Path to start in.</param>
-        /// <param name="dataModel"></param>
-        /// <param name="checkboxes"></param>
-        private static void RecurseSubDirectoryMode2(string directoryPath, DataModel dataModel, BoolCMA checkboxes,guistatus gui)
-        {
-            //Actually does important stuff.
-            NameDateObject timeInside = DecideWhichTimeMode2(dataModel, directoryPath, gui);
-
-            SkipOrAddFile(dataModel, directoryPath, true);
-            NameDateObject subFile = Makedateobject(checkboxes, directoryPath, timeInside);
-            dataModel.FilestoConfirmList.Add(subFile);
-            //.
-            try
-            {
-                foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder), dataModel, checkboxes, gui);
-            }
-            catch (UnauthorizedAccessException)
-            {}
-            catch (DirectoryNotFoundException)
-            {}
-        }
-
-        // Just points back to the above function, uses the parent instead.
-        private static void RecurseSubDirectoryMode2B(string directoryPath, DataModel dataModel, BoolCMA checkboxes, guistatus gui)
-        {
-            try
-            {
-                foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder), dataModel, checkboxes, gui);
-            }
-            catch (UnauthorizedAccessException)
-            { }
-            catch (DirectoryNotFoundException)
-            { }
-        }
 
         #endregion
 
