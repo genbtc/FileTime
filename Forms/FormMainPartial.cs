@@ -20,17 +20,30 @@ namespace genBTC.FileTime
         [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
         public static extern int StrCmpLogicalW(String x, String y);
 
-        #region Vars
+        #region Vars & Dupe Helper Methods
 
         private static readonly char Seperator = Path.DirectorySeparatorChar;
         private static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
+        private readonly Timer itemSelectionChangedTimer = new Timer();
         public static IComparer<string> explorerStringComparer()
         {
             return new ExplorerComparerstringHelper();
         }
+        /// <summary>  Reasons to be invisible  </summary>
+        private static FileAttributes SyncSettingstoInvisibleFlag()
+        {
+            FileAttributes reasonsToBeInvisible = (Settings.Default.ShowHidden ? 0 : FileAttributes.Hidden) |
+                                                  (Settings.Default.ShowSystem ? 0 : FileAttributes.System) |
+                                                  (Settings.Default.ShowReadOnly ? 0 : FileAttributes.ReadOnly);
+            return reasonsToBeInvisible;
+        }
 
-        private readonly Timer itemSelectionChangedTimer = new Timer();
+        /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        private static int Bool2Int(bool fileOrDir)
+        {
+            return fileOrDir ? 1 : 0;
+        }
 
         #endregion Vars
 
@@ -39,12 +52,11 @@ namespace genBTC.FileTime
         /// </summary>
         /// <param name="filesonly">Don't show the directories, only files.</param>
         /// reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
-        private static void DisplayContentsList(DataModel dataModel, bool checkboxRecurse, string labelname, ListView.ListViewItemCollection listViewContentsItems, ImageList.ImageCollection imageCollection, bool filesonly = true)
+        private static void DisplayContentsList(DataModel dataModel, bool checkboxRecurse, string labelname, bool filesonly = true)
         {
             //Clear the contents UI + datamodel
-            listViewContentsItems.Clear();
             dataModel.Clear();
-
+            
             string directoryName = labelname;
 
             if (!Directory.Exists(directoryName))
@@ -55,7 +67,7 @@ namespace genBTC.FileTime
                 //part 1: list and store all the subdirectories
                 try
                 {
-                    PopulateDirList(directoryName, dataModel);
+                    DataModel.PopulateDirList(directoryName, dataModel);
                 }
                 catch (UnauthorizedAccessException)
                 { }
@@ -65,7 +77,7 @@ namespace genBTC.FileTime
                 foreach (string subDirectory in dataModel.contentsDirList)
                 {
                     // Display all the sub directories using the directory icon (enum 1)
-                    listViewContentsItems.Add(subDirectory, (int)ListViewIcon.Directory);
+                    dataModel.listViewContents.Items.Add(subDirectory, (int)ListViewIcon.Directory);
                 }
             }
 
@@ -87,11 +99,11 @@ namespace genBTC.FileTime
                         {
                             dataModel.filextlist.Add(SharedHelper.CurrExten);
                             //call NativeExtractIcon to get the filesystem icon of the filename
-                            imageCollection.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
+                            dataModel.imageListFiles.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
                         }
                     }
                     else //if it is a shortcut, grab icon directly.
-                        imageCollection.Add(justName, NativeExtractIcon.GetIcon(file, true));
+                        dataModel.imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
 
                     dataModel.contentsFileList.Add(justName);
                 }
@@ -104,7 +116,7 @@ namespace genBTC.FileTime
             foreach (string file in dataModel.contentsFileList)
             {
                 string exten = Path.GetExtension(file);
-                listViewContentsItems.Add(file, exten != ".lnk" ? exten : file);
+                dataModel.listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
 
@@ -266,22 +278,6 @@ namespace genBTC.FileTime
         }
 
 
-
-        /// <summary>  Reasons to be invisible  </summary>
-        private static FileAttributes SyncSettingstoInvisibleFlag()
-        {
-            FileAttributes reasonsToBeInvisible = (Settings.Default.ShowHidden ? 0 : FileAttributes.Hidden) |
-                                                  (Settings.Default.ShowSystem ? 0 : FileAttributes.System) |
-                                                  (Settings.Default.ShowReadOnly ? 0 : FileAttributes.ReadOnly);
-            return reasonsToBeInvisible;
-        }
-
-        /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        private static int Bool2Int(bool fileOrDir)
-        {
-            return fileOrDir ? 1 : 0;
-        }
-
         private static void SkipOrAddFile(DataModel dataModel, string path, bool isDirectory)
         {
             FileAttributes fAttr = File.GetAttributes(path);
@@ -416,11 +412,11 @@ namespace genBTC.FileTime
             var extractlist = new List<string>();
             if (gui.radioButton1_useTimefromFile)
             {
-                extractlist = PopulateFileList(path, dataModel);
+                extractlist = DataModel.PopulateFileList(path, dataModel);
             }
             else if (gui.radioButton2_useTimefromSubdir)
             {
-                extractlist = PopulateDirList(path, dataModel);
+                extractlist = DataModel.PopulateDirList(path, dataModel);
             }
 
             // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
@@ -497,19 +493,8 @@ namespace genBTC.FileTime
             return dateToUse;
         }
 
-        private static List<string> PopulateDirList(string path, DataModel dataModel)
-        {
-            foreach (string subDirectory in Directory.GetDirectories(path))
-                dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
-            return dataModel.contentsDirList;
-        }
 
-        private static List<string> PopulateFileList(string path, DataModel dataModel)
-        {
-            foreach (string filename in Directory.GetFiles(path))
-                dataModel.contentsFileList.Add(Path.GetFileName(filename));
-            return dataModel.contentsFileList;
-        }
+
 
         /// <summary>
         /// Very long function that does a simple task. Read in the options the user set for the operation, and

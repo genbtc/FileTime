@@ -7,6 +7,7 @@
         <member name="T:genBTC.FileTime.mViewModels.CustomListView">
             <summary>
             Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
+            (Currently used for FORM_CONFIRM
             </summary>
         </member>
         <member name="M:genBTC.FileTime.mViewModels.CustomListView.SendMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
@@ -118,7 +119,13 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Windows.Forms.ListView.ListViewItemCollection,System.Windows.Forms.ImageList.ImageCollection,System.Boolean)">
+        <member name="M:genBTC.FileTime.Form_Main.SyncSettingstoInvisibleFlag">
+            <summary>  Reasons to be invisible  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.Bool2Int(System.Boolean)">
+            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Boolean)">
             <summary>
             Display subfiles and subdirectories in the right panel listview
             </summary>
@@ -170,12 +177,6 @@
             <param name="directoryPath">Path to start in.</param>
             <param name="dataModel"></param>
             <param name="checkboxes"></param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.SyncSettingstoInvisibleFlag">
-            <summary>  Reasons to be invisible  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Bool2Int(System.Boolean)">
-            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.SetFileDateTimeMode1(genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
             <summary> STATIC.
@@ -745,6 +746,19 @@
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.Clear">
             <summary> Clear contents Dir + File lists </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Display subfiles and subdirectories in the right panel listview
+            </summary>
+            <param name="filesonly">Don't show the directories, only files.</param>
+            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.SyncSettingstoInvisibleFlag">
+            <summary>  Reasons to be invisible  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Bool2Int(System.Boolean)">
+            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         </member>
         <member name="T:genBTC.FileTime.mViewModels.ListViewItemExplorerLikeComparer">
             <summary> Explorer-like Sort, for use by listview.Sorter </summary>

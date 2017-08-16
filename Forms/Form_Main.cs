@@ -11,8 +11,6 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
-using genBTC.FileTime.Classes;
-using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.Properties;
 
@@ -34,11 +32,6 @@ namespace genBTC.FileTime
         /// <summary>Init the main startup form </summary>
         public Form_Main()
         {
-            //The DataModel can be loaded here.
-            _dataModel = new DataModel();
-            //The form 2 can be created here.
-            Confirmation = new Form_Confirm(this);
-
             //Required for Windows Form Designer support
             InitializeComponent();
             //Reason Explanation: This is needed AFTER InitializeComponent because SplitterDistance must be declared FIRST. The designer
@@ -49,6 +42,11 @@ namespace genBTC.FileTime
         /// <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
         private void Form_Main_Load(object sender, EventArgs e)
         {
+            //The DataModel can be loaded here.
+            _dataModel = new DataModel { listViewContents = listView_Contents };
+            //The form 2 can be created here.
+            Confirmation = new Form_Confirm(this);
+            
             Form_Main_Run();
         }
 
@@ -213,7 +211,10 @@ namespace genBTC.FileTime
         /// <summary>  alias for DisplayContentsList. </summary>
         private void RefreshContentsRightPanel()
         {
-            DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text, listView_Contents.Items, imageList_Files.Images);
+            _dataModel.imageListFiles = imageList_Files;
+            DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text);
+            imageList_Files = _dataModel.imageListFiles;
+            listView_Contents = _dataModel.listViewContents;
         }
 
         #endregion Event functions: Onselected ListView main panels & checkbox
@@ -237,9 +238,9 @@ namespace genBTC.FileTime
         /// </summary>
         private void ClearOnError()
         {
+            //Clear the contents UI + datamodel
             _dataModel.Clear();
-            listView_Contents.Items.Clear();
-
+            //Blank out the CMA, clear.
             DisplayCma("");
         }
 
@@ -257,13 +258,9 @@ namespace genBTC.FileTime
             radioGroupBox2_CurrentSelectionTime.Enabled = cma.Selected;
             if (!radioGroupBox2_CurrentSelectionTime.Enabled)
                 radioGroupBox1_SpecifyTime.Checked = true;
-            label_FPath.Text = "";
+            label_FPath.Text = path;
             itemSelectionChangedTimer.Stop();
         }
-
-        #endregion Helper functions: QueryCMAcheckboxes, ClearOnError, DisplayCma, UpdateButtonEnable
-
-        #region >>Main Logic Code<<
 
         /// <summary>  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma </summary>
         private void CallDisplayCma(ListView listViewContents, string srcPath)
@@ -276,6 +273,10 @@ namespace genBTC.FileTime
             //Always Call the display date/time function
             DisplayCma(pathName);
         }
+        
+        #endregion Helper functions: QueryCMAcheckboxes, ClearOnError, DisplayCma, UpdateButtonEnable
+
+        #region >>Main Logic Code<<
 
         /// <summary>
         /// Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,

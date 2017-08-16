@@ -6,6 +6,7 @@ namespace genBTC.FileTime.mViewModels
 {
     /// <summary>
     /// Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
+    /// (Currently used for FORM_CONFIRM
     /// </summary>
     public class CustomListView : ListView
     {

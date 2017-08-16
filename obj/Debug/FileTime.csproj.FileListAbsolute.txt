@@ -17,14 +17,14 @@ C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTim
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Debug\FileTime.pdb
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Debug\FileTime.xml
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Debug\UIToolbox.RadioGroupBox.dll
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\FileTime.csprojResolveAssemblyReference.cache
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.mViewModels.CustomListView.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.Form_ChooseDate.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.Form_About.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.Form_Confirm.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.Form_Main.resources
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.Form_Preferences.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\WindowsExplorer.ExplorerTree.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\FileTime.csproj.GenerateResource.Cache
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\FileTime.exe
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\FileTime.pdb
-C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\FileTime.csprojResolveAssemblyReference.cache
-C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.Form_Preferences.resources
-C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Debug\genBTC.FileTime.mViewModels.CustomListView.resources
