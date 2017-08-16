@@ -22,7 +22,7 @@ namespace genBTC.FileTime
             assemblyType = GetType();
         }
 
-        #endregion
+        #endregion Constructor...
 
         #region Assembly Attributes...
 
@@ -57,9 +57,9 @@ namespace genBTC.FileTime
         {
             get
             {
-                var at = typeof (AssemblyCopyrightAttribute);
+                var at = typeof(AssemblyCopyrightAttribute);
                 var r = assemblyType.Assembly.GetCustomAttributes(at, false);
-                var ct = (AssemblyCopyrightAttribute) r[0];
+                var ct = (AssemblyCopyrightAttribute)r[0];
                 return ct.Copyright;
             }
         }
@@ -71,9 +71,9 @@ namespace genBTC.FileTime
         {
             get
             {
-                var at = typeof (AssemblyCompanyAttribute);
+                var at = typeof(AssemblyCompanyAttribute);
                 var r = assemblyType.Assembly.GetCustomAttributes(at, false);
-                var ct = (AssemblyCompanyAttribute) r[0];
+                var ct = (AssemblyCompanyAttribute)r[0];
                 return ct.Company;
             }
         }
@@ -85,9 +85,9 @@ namespace genBTC.FileTime
         {
             get
             {
-                var at = typeof (AssemblyDescriptionAttribute);
+                var at = typeof(AssemblyDescriptionAttribute);
                 var r = assemblyType.Assembly.GetCustomAttributes(at, false);
-                var da = (AssemblyDescriptionAttribute) r[0];
+                var da = (AssemblyDescriptionAttribute)r[0];
                 return da.Description;
             }
         }
@@ -99,9 +99,9 @@ namespace genBTC.FileTime
         {
             get
             {
-                var at = typeof (AssemblyProductAttribute);
+                var at = typeof(AssemblyProductAttribute);
                 var r = assemblyType.Assembly.GetCustomAttributes(at, false);
-                var pt = (AssemblyProductAttribute) r[0];
+                var pt = (AssemblyProductAttribute)r[0];
                 return pt.Product;
             }
         }
@@ -113,9 +113,9 @@ namespace genBTC.FileTime
         {
             get
             {
-                var at = typeof (AssemblyTitleAttribute);
+                var at = typeof(AssemblyTitleAttribute);
                 var r = assemblyType.Assembly.GetCustomAttributes(at, false);
-                var ta = (AssemblyTitleAttribute) r[0];
+                var ta = (AssemblyTitleAttribute)r[0];
                 return ta.Title;
             }
         }
@@ -127,9 +127,9 @@ namespace genBTC.FileTime
         {
             get
             {
-                var at = typeof (AssemblyTrademarkAttribute);
+                var at = typeof(AssemblyTrademarkAttribute);
                 var r = assemblyType.Assembly.GetCustomAttributes(at, false);
-                var ta = (AssemblyTrademarkAttribute) r[0];
+                var ta = (AssemblyTrademarkAttribute)r[0];
                 return ta.Trademark;
             }
         }
@@ -156,12 +156,12 @@ namespace genBTC.FileTime
             }
         }
 
-        #endregion
+        #endregion Assembly Attributes...
 
         #region Display Functions...
 
         /// <summary>
-        /// Returns a string with the assembly version attributes 
+        /// Returns a string with the assembly version attributes
         /// </summary>
         /// <returns>String with the assembly version attributes</returns>
         public override string ToString()
@@ -201,6 +201,6 @@ namespace genBTC.FileTime
             return str;
         }
 
-        #endregion
+        #endregion Display Functions...
     }
 }

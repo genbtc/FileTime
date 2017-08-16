@@ -1,6 +1,6 @@
 /*
  * ###  This file is codebehind for the Main program window ###
- * 
+ *
  *   /// FileTime: Sets the creation, last write and last access date and time of user selection with various options
  *   /// Version: 1.0
  *   /// Date: 17 July 2014, Last Modified: 8/26/2014
@@ -9,25 +9,22 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.Properties;
-using UIToolbox;
 
 namespace genBTC.FileTime
 {
     /// <summary>
-    /// GUI : Main Form Window of the Program. 
+    /// GUI : Main Form Window of the Program.
     /// </summary>
     public partial class Form_Main
     {
         public DataModel _dataModel;
-       //Form 2 stuff we need to have in Form1.
+        //Form 2 stuff we need to have in Form1.
         /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         public Form_Confirm Confirmation;
 
@@ -42,7 +39,7 @@ namespace genBTC.FileTime
 
             //Required for Windows Form Designer support
             InitializeComponent();
-            //Reason Explanation: This is needed AFTER InitializeComponent because SplitterDistance must be declared FIRST. The designer 
+            //Reason Explanation: This is needed AFTER InitializeComponent because SplitterDistance must be declared FIRST. The designer
             // sorts by alphabetical order and puts P for Panel2Minsize before S for SplitterDistance throwing an exception.
             splitContainer1.Panel2MinSize = 150;
         }
@@ -72,7 +69,7 @@ namespace genBTC.FileTime
                 ClearOnError();
             }
         }
-        #endregion //Main Startup Code
+        #endregion Main startup/load code
 
         #region Helper functions...
 
@@ -111,9 +108,9 @@ namespace genBTC.FileTime
             if (!radioGroupBox2_CurrentSelectionTime.Enabled)
                 radioGroupBox1_SpecifyTime.Checked = true;
             label_FPath.Text = "";
-            itemSelectionChangedTimer.Stop();            
+            itemSelectionChangedTimer.Stop();
         }
-        
+
         /// <summary> Only enable the update button if something is selected </summary>
         private void UpdateButtonEnable()
         {
@@ -123,7 +120,7 @@ namespace genBTC.FileTime
                  checkBox_AccessedDateTime.Checked);
         }
 
-        #endregion //Helper functions
+        #endregion Helper functions...
 
         #region Buttons
 
@@ -141,10 +138,9 @@ namespace genBTC.FileTime
             string comparefolder;
             if (radioGroupBox1_pickFolderForCompare.Checked)
                 comparefolder = OpenFile(label_FPath.Text);
-
         }
 
-        #endregion //Buttons
+        #endregion Buttons
 
         #region Menu...
         //Menu items:
@@ -176,7 +172,7 @@ namespace genBTC.FileTime
             prefs.ShowDialog(this);
         }
 
-        #endregion //Menu
+        #endregion Menu...
 
         #region >>Main Logic Code<<
 
@@ -205,14 +201,14 @@ namespace genBTC.FileTime
                     PopulateDirList(directoryName, _dataModel);
                 }
                 catch (UnauthorizedAccessException)
-                {}
+                { }
                 //Sort them
                 _dataModel.contentsDirList.Sort(explorerStringComparer());
                 //Add them to the listview.
                 foreach (string subDirectory in _dataModel.contentsDirList)
                 {
                     // Display all the sub directories using the directory icon (enum 1)
-                    listView_Contents.Items.Add(subDirectory, (int) ListViewIcon.Directory);
+                    listView_Contents.Items.Add(subDirectory, (int)ListViewIcon.Directory);
                 }
             }
 
@@ -224,7 +220,7 @@ namespace genBTC.FileTime
                 {
                     var fileAttribs = File.GetAttributes(file);
                     if ((fileAttribs & SyncSettingstoInvisibleFlag()) != 0)
-                        continue; //skip the rest if its supposed to be "invisible" based on the mask 
+                        continue; //skip the rest if its supposed to be "invisible" based on the mask
                     var justName = Path.GetFileName(file);
                     SharedHelper.CurrExten = Path.GetExtension(file);
                     if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
@@ -244,7 +240,7 @@ namespace genBTC.FileTime
                 }
             }
             catch (UnauthorizedAccessException)
-            {}
+            { }
             //Sort them
             _dataModel.contentsFileList.Sort(explorerStringComparer());
             //Add them to the listview.
@@ -299,7 +295,7 @@ namespace genBTC.FileTime
         }
 
         /// <summary>
-        /// Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, 
+        /// Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
         /// then adds them to the confirm list to be handled by the form_confirm window (part2).
         /// </summary>
         /// reqs: Datamodel , label_Fpathtext
@@ -312,7 +308,7 @@ namespace genBTC.FileTime
             _dataModel.Skips.S = 0;
 
             var gui = GetGUIRadioButtonStatusData();
-            
+
             switch (mode2)
             {
                 case (0):
@@ -341,6 +337,7 @@ namespace genBTC.FileTime
                         RecurseSubDirectoryMode1(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
                     //end worker process
                     break;
+
                 case (1):
                     if (Settings.Default.useRootDirAsContainer)
                         RecurseSubDirectoryMode2B(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
@@ -374,10 +371,10 @@ namespace genBTC.FileTime
                 Confirmation.MakeListView();
         }
 
-        #endregion
+        #endregion >>Main Logic Code<<
 
         #region Form EventHandlers Functions, tabcontrol and tooltip
-    //EVENT HANDLERS
+        //EVENT HANDLERS
         private void label1_CreationDate_Click(object sender, EventArgs e)
         {
             radioButton1_CreationDate.Checked = radioGroupBox2_CurrentSelectionTime.Checked;
@@ -408,8 +405,7 @@ namespace genBTC.FileTime
                 tabControl1);
         }
 
-
-        #endregion
+        #endregion Form EventHandlers Functions, tabcontrol and tooltip
 
         #region Event functions: Onselected ListView main panels & checkbox
 
@@ -433,7 +429,6 @@ namespace genBTC.FileTime
             Cursor.Current = Cursors.Default;
         }
 
-        #endregion //Listbox + Checkbox Functions
-
+        #endregion Event functions: Onselected ListView main panels & checkbox
     }
 }

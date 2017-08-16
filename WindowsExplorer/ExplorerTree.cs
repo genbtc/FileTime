@@ -61,7 +61,6 @@ namespace WindowsExplorer
 
         public bool ShowToolbar { get; set; }
 
-
         private void ExplorerTree_Load(object sender, EventArgs e)
         {
             InitialPopulate();
@@ -143,7 +142,6 @@ namespace WindowsExplorer
             };
             nodeMyComputer.Nodes.Add(nodeMyCompSubNodePlaceholder);
 
-
             if (ShowMyDocuments)
             {
                 //Add My Documents folder outside
@@ -157,7 +155,6 @@ namespace WindowsExplorer
                 rootnodeDesktop.Nodes.Add(nodeMyDocuments);
                 GetDirectories(nodeMyDocuments);
             }
-
 
             if (ShowMyNetwork)
             {
@@ -209,7 +206,7 @@ namespace WindowsExplorer
             Cursor.Current = Cursors.WaitCursor;
             //get dirs
             GetDirectories(n, isInitial);
-            //get dirs one more level deep in current dir so user can see 
+            //get dirs one more level deep in current dir so user can see
             // that there are more dirs underneath current dir
             foreach (TreeNode node in n.Nodes)
                 GetDirectories(node, isInitial);
@@ -222,7 +219,8 @@ namespace WindowsExplorer
             try
             {
                 dirList = Directory.GetDirectories(node.Tag.ToString());
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 return;
             }
@@ -286,18 +284,19 @@ namespace WindowsExplorer
             Cursor.Current = Cursors.WaitCursor;
             DriveInfo[] myDrives = DriveInfo.GetDrives();
 
-            //if the only thing in here is the placeholder. 
+            //if the only thing in here is the placeholder.
             if (nodeMyComputer.Nodes[0].Text == "My Computer Placeholder Node")
             {
                 nodeMyComputer.FirstNode.Remove();
 
                 foreach (DriveInfo drive in myDrives)
                 {
-                    var nodeDrive = new TreeNode {Tag = drive.Name};
+                    var nodeDrive = new TreeNode { Tag = drive.Name };
                     try
                     {
                         nodeDrive.Text = drive.VolumeLabel + " (" + drive.Name.Substring(0, 2) + ")";
-                    } catch (IOException) //because !(drive.IsReady) - used for cdrom
+                    }
+                    catch (IOException) //because !(drive.IsReady) - used for cdrom
                     {
                         nodeDrive.Text = drive.Name;
                     }
@@ -307,12 +306,15 @@ namespace WindowsExplorer
                         case 2: //Floppy/Removable
                             drivetype = 17;
                             break;
+
                         case 3: //Fixed Disk (Hard Drive)
                             drivetype = 0;
                             break;
+
                         case 4: //Network Drive
                             drivetype = 8;
                             break;
+
                         case 5: //CDRom (don't add these ones)
                             //drivetype = 7;
                             continue;
@@ -341,7 +343,8 @@ namespace WindowsExplorer
                                 nodeDrive.Nodes.Add(node);
                             }
                         }
-                    } catch (Exception ex) //shouldn't really happen but just in case.
+                    }
+                    catch (Exception ex) //shouldn't really happen but just in case.
                     {
                         MessageBox.Show("Error while filling the My Computer node:" + ex.Message);
                     }
@@ -472,9 +475,8 @@ namespace WindowsExplorer
             txtPath.Text = e.Node.Tag.ToString();
         }
 
-
         /// <summary>
-        /// Event for collapse/expand 
+        /// Event for collapse/expand
         /// </summary>
         private void tvwMain_DoubleClick(object sender, EventArgs e)
         {
@@ -565,7 +567,7 @@ namespace WindowsExplorer
                 if (!textboxPath.EndsWith(Seperator))
                     textboxPath += Seperator;
 
-                StartAgain:
+            StartAgain:
 
                 do
                 {
@@ -613,10 +615,12 @@ namespace WindowsExplorer
                     try
                     {
                         loopRootNode = loopRootNode.NextNode;
-                    } catch (Exception)
-                    {} //no more nodes (not an error, so suppress)
+                    }
+                    catch (Exception)
+                    { } //no more nodes (not an error, so suppress)
                 } while (sentinel >= 0);
-            } catch (Exception e1)
+            }
+            catch (Exception e1)
             {
                 MessageBox.Show("Error: " + e1.Message);
             }
@@ -670,9 +674,10 @@ namespace WindowsExplorer
                     txtPath.Text = myinfo.Parent.FullName;
                 UpdateList(txtPath.Text);
                 btnGo_Click(sender, e);
-            } catch (Exception)
+            }
+            catch (Exception)
             {
-                //MessageBox.Show ("Parent directory does not exists","Directory Not Found",MessageBoxButtons.OK,MessageBoxIcon.Information ); 
+                //MessageBox.Show ("Parent directory does not exists","Directory Not Found",MessageBoxButtons.OK,MessageBoxIcon.Information );
             }
         }
 
@@ -698,7 +703,7 @@ namespace WindowsExplorer
         {
             try
             {
-                var nodemyC = new TreeNode {Tag = path, Text = name, ImageIndex = 18, SelectedImageIndex = 18};
+                var nodemyC = new TreeNode { Tag = path, Text = name, ImageIndex = 18, SelectedImageIndex = 18 };
                 rootnodeDesktop.Nodes.Add(nodemyC);
 
                 try
@@ -717,11 +722,13 @@ namespace WindowsExplorer
                             nodemyC.Nodes.Add(node);
                         }
                     }
-                } catch (Exception ex) //error
+                }
+                catch (Exception ex) //error
                 {
                     MessageBox.Show("Error while Filling the Explorer:" + ex.Message);
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -732,7 +739,6 @@ namespace WindowsExplorer
             if (treeview1.SelectedNode.ImageIndex == 18)
                 treeview1.SelectedNode.Remove();
         }
-
 
         private void txtPath_KeyUp(object sender, KeyEventArgs e)
         {
@@ -746,7 +752,6 @@ namespace WindowsExplorer
         private void btnInfo_Click(object sender, EventArgs e)
         {
         }
-
 
         private void UpdateListAddCurrent()
         {
@@ -817,7 +822,8 @@ namespace WindowsExplorer
                 listviewitem.SubItems.Add("Selected");
                 listviewitem.Tag = f;
                 listView1.Items.Add(listviewitem);
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -895,7 +901,7 @@ namespace WindowsExplorer
             return aData.GetEnumerator();
         }
 
-        #endregion
+        #endregion IEnumerable Members
 
         public int Count
         {
@@ -913,12 +919,11 @@ namespace WindowsExplorer
         private static extern ErrorCodes WNetEnumResource(IntPtr hEnum, ref uint lpcCount, IntPtr buffer,
             ref uint lpBufferSize);
 
-
         private void EnumerateServers(NETRESOURCE pRsrc, ResourceScope scope, ResourceType type, ResourceUsage usage,
             ResourceDisplayType displayType, string kPath)
         {
             uint bufferSize = 16384;
-            IntPtr buffer = Marshal.AllocHGlobal((int) bufferSize);
+            IntPtr buffer = Marshal.AllocHGlobal((int)bufferSize);
             IntPtr handle;
             uint cEntries = 1;
             bool serverenum = false;

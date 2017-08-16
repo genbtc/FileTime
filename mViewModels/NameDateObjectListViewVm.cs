@@ -78,7 +78,7 @@ namespace genBTC.FileTime.mViewModels
         public bool Compare(NameDateObjectListViewVm thing1, NameDateObjectListViewVm thing2)
         {
             if (thing1.Name != thing2.Name) return false;
-            //Created 
+            //Created
             if ((thing1.Created == null) && (thing2.Created != null))
                 //if one is null and one isnt, use the one that isnt.
                 Created = thing2.Created;

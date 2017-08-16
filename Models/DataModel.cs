@@ -35,6 +35,5 @@ namespace genBTC.FileTime.Models
             contentsDirList.Clear();
             contentsFileList.Clear();
         }
-
     }
 }

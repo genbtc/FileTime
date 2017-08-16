@@ -21,7 +21,7 @@ namespace genBTC.FileTime
 
         private static readonly char Seperator = Path.DirectorySeparatorChar;
         private static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        
+
         public static IComparer<string> explorerStringComparer()
         {
             return new ExplorerComparerstringHelper();
@@ -34,7 +34,7 @@ namespace genBTC.FileTime
         #region Mode 1 Specific code
 
         /// <summary>
-        /// Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
+        /// Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
         /// (Only adds to the confirm list, Form 2 will actually write changes).
         /// </summary>
         /// <param name="directoryPath">Full path to the directory</param>
@@ -112,7 +112,6 @@ namespace genBTC.FileTime
             return dateToUse;
         }
 
-
         /// <summary>
         /// Set Directory Time
         /// </summary>
@@ -150,7 +149,7 @@ namespace genBTC.FileTime
             { }
         }
 
-        #endregion
+        #endregion Mode 1 Specific code
 
         #region Mode 2 Specific code
 
@@ -194,7 +193,7 @@ namespace genBTC.FileTime
             { }
         }
 
-        #endregion
+        #endregion Mode 2 Specific code
 
         /// <summary>  Reasons to be invisible  </summary>
         private static FileAttributes SyncSettingstoInvisibleFlag()
@@ -223,7 +222,7 @@ namespace genBTC.FileTime
             if (((fAttr & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
             {
                 dataModel.Skips.H++;
-                return; // Skip hidden files and directories 
+                return; // Skip hidden files and directories
             }
             if (((fAttr & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
             {
@@ -244,7 +243,6 @@ namespace genBTC.FileTime
                 dataModel.FilesReadOnlytoFix.Add(path);
             }
         }
-
 
         /// <summary> STATIC.
         /// Set the date/time for a single file/directory (This works on files and directories)
@@ -273,7 +271,7 @@ namespace genBTC.FileTime
             // Set the Creation date/time if selected
             if (checkboxes.C)
                 currentobject.Created = fileTime;
-            // Set the Modified date/time is selected					
+            // Set the Modified date/time is selected
             if (checkboxes.M)
                 currentobject.Modified = fileTime;
             // Set the last access time if selected
@@ -292,7 +290,7 @@ namespace genBTC.FileTime
             if (!checkboxes.C)
                 currentobject.Created = "N/A"; // Set the Creation date/time if selected
             if (!checkboxes.M)
-                currentobject.Modified = "N/A"; // Set the Modified date/time if selected	
+                currentobject.Modified = "N/A"; // Set the Modified date/time if selected
             if (!checkboxes.A)
                 currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
             return new NameDateObject(currentobject.Converter());
@@ -312,7 +310,6 @@ namespace genBTC.FileTime
                 cma.HiddenPathName = cma.PathName;
                 cma.Selected = true;
             }
-
             else
             {
                 // Maybe no file/directory is selected
@@ -325,7 +322,6 @@ namespace genBTC.FileTime
             }
             return cma;
         }
-
 
         /// <summary>
         /// Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
@@ -392,10 +388,12 @@ namespace genBTC.FileTime
                                 timelisttype = "Created";
                                 looptempDate = File.GetCreationTime(fullpath);
                                 break;
+
                             case 1:
                                 timelisttype = "Modified";
                                 looptempDate = File.GetLastWriteTime(fullpath);
                                 break;
+
                             case 2:
                                 timelisttype = "Accessed";
                                 looptempDate = File.GetLastAccessTime(fullpath);
@@ -464,7 +462,7 @@ namespace genBTC.FileTime
         /// <param name="directoryPath"></param>
         /// <returns></returns>
         // radioButton3Random, radioButton2Newest, radioButton1Oldest, radioButton2_useTimefromSubdir, radioButton1_useTimefromFile, radioGroupBox3_UseTimeFrom, label_AccessedTime, label_ModificationTime, label_CreationTime, radioGroupBox2_CurrentSelectionTime, dateTimePickerTime, dateTimePickerDate, labelHidden_PathName, radioGroupBox1_SpecifyTime,
-        // RadioButton radioButton3Random, RadioButton radioButton2Newest, RadioButton radioButton1Oldest, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1UseTimefromFile, RadioGroupBox radioGroupBox3UseTimeFrom, Label labelLastAccess, Label labelModified, Label labelCreationTime, RadioGroupBox radioGroupBox2CurrentSelectionTime, DateTimePicker dateTimePickerTime, DateTimePicker dateTimePickerDate, Label labelHiddenPathName, RadioGroupBox radioGroupBox1SpecifyTime, 
+        // RadioButton radioButton3Random, RadioButton radioButton2Newest, RadioButton radioButton1Oldest, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1UseTimefromFile, RadioGroupBox radioGroupBox3UseTimeFrom, Label labelLastAccess, Label labelModified, Label labelCreationTime, RadioGroupBox radioGroupBox2CurrentSelectionTime, DateTimePicker dateTimePickerTime, DateTimePicker dateTimePickerDate, Label labelHiddenPathName, RadioGroupBox radioGroupBox1SpecifyTime,
         private static NameDateObject DecideWhichTimeMode2(DataModel dataModel, string directoryPath, guistatus gui)
         {
             var extractlist = new List<string>();
@@ -483,7 +481,6 @@ namespace genBTC.FileTime
                 thingtoreturn.Modified = specifiedDate;
                 thingtoreturn.Accessed = specifiedDate;
             }
-
             else if (gui.radioGroupBox2CurrentSelect)
             {
                 thingtoreturn.Name = gui.labelHiddenPathName;
@@ -580,7 +577,7 @@ namespace genBTC.FileTime
                 ////Create 2 lists(min and max), containing the 3 min/max dates.
                 //DateTime?[] minarray = { cre.minDate, mod.minDate, acc.minDate };
                 //DateTime?[] maxarray = { cre.maxDate, mod.maxDate, acc.maxDate };
-                ////Instantiate themin/themax as the new class that calculates the min and max date from the 3 dates above. 
+                ////Instantiate themin/themax as the new class that calculates the min and max date from the 3 dates above.
                 //var themin = new OldNewDate(new List<DateTime?>(minarray));
                 //var themax = new OldNewDate(new List<DateTime?>(maxarray));
                 ////Keep track of the min/max indexes in this 1,2,3 format too.
@@ -594,7 +591,7 @@ namespace genBTC.FileTime
 
                 if (gui.radioButton1Oldest)
                 {
-                    //mode a: set ALL attributes to the oldest date of whichever attribute was oldest.                    
+                    //mode a: set ALL attributes to the oldest date of whichever attribute was oldest.
                     //                    dateToUse = (DateTime?)minarray[themin.minIndex];
                     //                    filenameused = timelist[minindexesarray[themin.minIndex]].Name;
                     //                    thingtoreturn.Created = dateToUse;

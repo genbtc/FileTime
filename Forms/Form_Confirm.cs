@@ -53,7 +53,7 @@ namespace genBTC.FileTime
             MakeListView();
         }
 
-        #endregion
+        #endregion Form_Confirm declarations, startup Code
 
         #region Main logic and actions, Buttons, Behind-Code and Logic Functions
 
@@ -94,7 +94,7 @@ namespace genBTC.FileTime
             }
         }
 
-        /// <summary> 
+        /// <summary>
         /// turn the NameDateObject lists from Form_Main into the listview on Form_Confirm </summary>
         /// use the results as the new data model.
         public void MakeListView()
@@ -140,7 +140,7 @@ namespace genBTC.FileTime
         /// <summary> Adds the read-only attribute back after it was removed </summary>
         public void ResetReadOnly()
         {
-            if (_formmain._dataModel.FilesReadOnlytoFix.Count <= 0) 
+            if (_formmain._dataModel.FilesReadOnlytoFix.Count <= 0)
                 return;
             foreach (string file in _formmain._dataModel.FilesReadOnlytoFix)
                 File.SetAttributes(file, File.GetAttributes(file) | FileAttributes.ReadOnly);
@@ -183,7 +183,6 @@ namespace genBTC.FileTime
             catch (UnauthorizedAccessException) { return false; }
         }
 
-
         /// <summary> Function which touches the filesystem to set the dates </summary>
         private static bool SetTime(int cma, string path, DateTime date)
         {
@@ -191,16 +190,19 @@ namespace genBTC.FileTime
             {
                 switch (cma)
                 {
-                        //Directory works on both files and dirs.
+                    //Directory works on both files and dirs.
                     case 1:
                         Directory.SetCreationTime(path, date);
                         break;
+
                     case 2:
                         Directory.SetLastWriteTime(path, date);
                         break;
+
                     case 3:
                         Directory.SetLastAccessTime(path, date);
                         break;
+
                     default:
                         return false;
                 }
@@ -229,7 +231,7 @@ namespace genBTC.FileTime
                     //for boxes, 1, 2 and 3
                     for (int i = 1; i <= 3; i++)
                     {
-                        if (thing.SubItems[i].Text == "N/A") 
+                        if (thing.SubItems[i].Text == "N/A")
                             continue;   //skip if it was N/A
                         DateTime dateToUse = DateTime.Parse(thing.SubItems[i].Text);
                         if (DoConditionalAgeCheck(dateToUse, thing.Text, i))
@@ -243,7 +245,7 @@ namespace genBTC.FileTime
                                 thing.BackColor = Color.FromName("Red");
                                 MessageBox.Show(
                                     "Error in setting date/time:  " + dateToUse + "   on '" + thing.Text + "': \r\n\r\n",
-                                    "Date/Time Error " + _itemsErrorsCount, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                                    
+                                    "Date/Time Error " + _itemsErrorsCount, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
                     }
@@ -265,7 +267,7 @@ namespace genBTC.FileTime
         //Column Header ComboBox Event
         private void ThreeComboBox_SelectedChange(object sender, EventArgs e)
         {
-            var currentbox = (ComboBox) sender;
+            var currentbox = (ComboBox)sender;
             int boxnumber = 0;
             //current columnboxnumber that was clicked
             if (sender.Equals(ComboBox1)) //created column combobox
@@ -275,11 +277,11 @@ namespace genBTC.FileTime
             if (sender.Equals(ComboBox3)) //accessed column combobox
                 boxnumber = 3;
             //two dimensional array. outer = current column, inner = column numbers to copy
-            int[,] cols = {{2, 3}, {1, 3}, {1, 2}};
+            int[,] cols = { { 2, 3 }, { 1, 3 }, { 1, 2 } };
             listView1_Confirm.BeginUpdate();
             foreach (ListViewItem thing in listView1_Confirm.Items)
             {
-                if (!thing.Checked) 
+                if (!thing.Checked)
                     continue; //if not checked, skip to next
                 if (currentbox.SelectedIndex == 1) //copy cols[x][0] to this
                 {
@@ -298,7 +300,7 @@ namespace genBTC.FileTime
             currentbox.SelectedIndex = 0;
         }
 
-        #endregion
+        #endregion Main logic and actions, Buttons, Behind-Code and Logic Functions
 
         #region the menubar (Edit... MenuStrip)
 
@@ -326,7 +328,7 @@ namespace genBTC.FileTime
                 if (item.Selected)
                     lastselectedindex = item.Index;
             }
-            if (listView1_Confirm.FocusedItem != null) 
+            if (listView1_Confirm.FocusedItem != null)
                 listView1_Confirm.FocusedItem.Focused = false;
             listView1_Confirm.Items[lastselectedindex].Focused = true;
             listView1_Confirm.EndUpdate();
@@ -338,7 +340,7 @@ namespace genBTC.FileTime
             listView1_Confirm.SelectedIndices.Clear();
             foreach (ListViewItem thing in listView1_Confirm.Items)
             {
-                if ((thing.SubItems[1].Text == "N/A") && 
+                if ((thing.SubItems[1].Text == "N/A") &&
                     (thing.SubItems[2].Text == "N/A") &&
                     (thing.SubItems[3].Text == "N/A"))
                     listView1_Confirm.Items.RemoveAt(thing.Index);
@@ -377,7 +379,7 @@ namespace genBTC.FileTime
             UpdateStatusBar();
         }
 
-        #endregion
+        #endregion the menubar (Edit... MenuStrip)
 
         #region CustomListView RightClick ContextMenu
 
@@ -430,11 +432,11 @@ namespace genBTC.FileTime
             foreach (ListViewItem thing in listView1_Confirm.SelectedItems)
                 path = thing.ImageIndex == 1 ? thing.SubItems[0].Text : Path.GetDirectoryName(thing.SubItems[0].Text);
             //old
-/*              if (thing.ImageIndex == 1)  //if its a directory, 
-                    path = thing.SubItems[0].Text;
-                else                        //if its a file, get the directory of it
-                    path = Path.GetDirectoryName(thing.SubItems[0].Text);
-*/
+            /*              if (thing.ImageIndex == 1)  //if its a directory,
+                                path = thing.SubItems[0].Text;
+                            else                        //if its a file, get the directory of it
+                                path = Path.GetDirectoryName(thing.SubItems[0].Text);
+            */
             Process.Start("explorer.exe", @path);
         }
 
@@ -461,7 +463,7 @@ namespace genBTC.FileTime
             while (selectlist.Count > 0)
             {
                 allitemsList.RemoveAt(selectlist[0] - i);
-                    //remove the first index counteracted by the number of iterations
+                //remove the first index counteracted by the number of iterations
                 selectlist.RemoveAt(0); //remove the first index (always)
                 i++; //keep track of number of iterations
             }
@@ -476,16 +478,16 @@ namespace genBTC.FileTime
             UpdateStatusBar();
         }
 
-        #endregion
+        #endregion CustomListView RightClick ContextMenu
 
         #region Checkbox handler/protector and Event Handler Functions
 
         /// <summary> restore all the checkboxes at once (not used?) </summary>
         private void RestoreCheckboxes()
         {
-            if (_checklist.Count <= 0) 
+            if (_checklist.Count <= 0)
                 return;
-            int index = 0;            
+            int index = 0;
             foreach (ListViewItem thing in listView1_Confirm.Items)
             {
                 thing.Checked = _checklist[index];
@@ -545,7 +547,7 @@ namespace genBTC.FileTime
             else //store checkboxes incrementally
                 StoreCheckboxes(e);
         }
-        
+
         /// <summary>change focus back to the listview when the menu is clicked (so it doesnt go gray)</summary>
         private void menuStrip1_Click(object sender, EventArgs e)
         {
@@ -561,6 +563,6 @@ namespace genBTC.FileTime
             }
         }
 
-        #endregion
+        #endregion Checkbox handler/protector and Event Handler Functions
     }
 }

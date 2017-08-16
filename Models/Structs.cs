@@ -39,5 +39,4 @@
         /// <summary> Directory icon in listView image list </summary>
         Directory = 1
     };
-
 }

@@ -8,7 +8,7 @@ namespace genBTC.FileTime
         {
             public bool radioGroupBox1SpecifyTime;
             public bool radioGroupBox2CurrentSelect;
-            
+
             public bool rg2rb1Creation;
             public bool rg2rb2Modified;
             public bool rg2rb3LastAccess;
@@ -32,7 +32,6 @@ namespace genBTC.FileTime
             public DateTime dateTimePickerDate, dateTimePickerTime;
             public string labelHiddenPathName;
         }
-
 
         private guistatus GetGUIRadioButtonStatusData()
         {

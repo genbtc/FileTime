@@ -6,7 +6,7 @@ namespace genBTC.FileTime.Classes.Native
 {
     /// <summary> Grabs the filesystem or system icon cache for a string filePath.</summary>
     // only used once on ExplorerTree.cs line 581 to scroll programmatically.
-    // http://www.pinvoke.net/default.aspx/shell32.shgetfileinfo 
+    // http://www.pinvoke.net/default.aspx/shell32.shgetfileinfo
     internal class NativeExtractIcon
     {
         /// <summary>Maximal Length of unmanaged Windows-Path-strings</summary>
@@ -40,11 +40,12 @@ namespace genBTC.FileTime.Classes.Native
             else
                 flags = flags | SHGFI.LargeIcon;
 
-            SHGetFileInfo(strPath, 256, out info, (uint) cbFileInfo, flags);
+            SHGetFileInfo(strPath, 256, out info, (uint)cbFileInfo, flags);
             try
             {
                 return Icon.FromHandle(info.hIcon);
-            } catch (ArgumentException){return null;}
+            }
+            catch (ArgumentException) { return null; }
         }
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
@@ -60,8 +61,10 @@ namespace genBTC.FileTime.Classes.Native
             }
 
             public readonly IntPtr hIcon;
-            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)] private readonly string szDisplayName;
-            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_TYPE)] private readonly string szTypeName;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
+            private readonly string szDisplayName;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_TYPE)]
+            private readonly string szTypeName;
         };
 
         [Flags]
@@ -104,6 +107,5 @@ namespace genBTC.FileTime.Classes.Native
             /// <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
             OverlayIndex = 0x000000040,
         }
-
     }
 }

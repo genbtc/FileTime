@@ -15,7 +15,7 @@ namespace genBTC.FileTime.mViewModels
         public static extern int SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
-        #endregion
+        #endregion Native Imports
 
         private static extern int SetWindowTheme(IntPtr hWnd, string textSubAppName, string textSubIdList);
 
@@ -34,14 +34,14 @@ namespace genBTC.FileTime.mViewModels
             View = View.Details;
             FullRowSelect = true;
             //Instanciate the listview with sorting activated:
-//            this.ListViewItemSorter = new ListViewItemExplorerLikeComparer();
+            //            this.ListViewItemSorter = new ListViewItemExplorerLikeComparer();
 
             //this removes the ugly dotted line around focused item:
             SendMessage(Handle, WM_CHANGEUISTATE, 0x10001, 0);
 
-            ItemSelectionChangedTimer = new Timer {Interval = 800};
+            ItemSelectionChangedTimer = new Timer { Interval = 800 };
             ItemSelectionChangedTimer.Tick += _ItemSelectionChangedTimer_Tick;
-            //Enable the OnNotifyMessage event so we get a chance to filter out 
+            //Enable the OnNotifyMessage event so we get a chance to filter out
             // Windows messages before they get to the form's WndProc:
             //this.SetStyle(ControlStyles.EnableNotifyMessage, true);
         }
@@ -53,11 +53,10 @@ namespace genBTC.FileTime.mViewModels
         {
             ItemSelectionChangedTimer.Stop();
         }
-        
 
         /// <summary>
-        /// Subscribe to MouseDown event for the ListView. 
-        /// Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
+        /// Subscribe to MouseDown event for the ListView.
+        /// Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y).
         /// If they hit on an item AND it was a right click, set contextMenuAllowed to true.
         /// </summary>
         protected override void OnMouseDown(MouseEventArgs e)
@@ -69,7 +68,6 @@ namespace genBTC.FileTime.mViewModels
             }
             base.OnMouseDown(e);
         }
-
 
         protected override void OnSelectedIndexChanged(EventArgs e)
         {

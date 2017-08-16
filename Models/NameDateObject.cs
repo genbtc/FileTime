@@ -82,7 +82,6 @@ namespace genBTC.FileTime.Models
             {
                 return Form_Main.StrCmpLogicalW(obj1.Name, obj2.Name);
             }
-
         }
     }
 }

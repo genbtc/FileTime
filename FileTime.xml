@@ -20,8 +20,8 @@
         </member>
         <member name="M:genBTC.FileTime.mViewModels.CustomListView.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
             <summary>
-            Subscribe to MouseDown event for the ListView. 
-            Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
+            Subscribe to MouseDown event for the ListView.
+            Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y).
             If they hit on an item AND it was a right click, set contextMenuAllowed to true.
             </summary>
         </member>
@@ -30,7 +30,7 @@
         </member>
         <member name="T:genBTC.FileTime.Form_Main">
             <summary>
-            GUI : Main Form Window of the Program. 
+            GUI : Main Form Window of the Program.
             </summary>
         </member>
         <member name="F:genBTC.FileTime.Form_Main.Confirmation">
@@ -89,7 +89,7 @@
         </member>
         <member name="M:genBTC.FileTime.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
             <summary>
-            Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, 
+            Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
             then adds them to the confirm list to be handled by the form_confirm window (part2).
             </summary>
             reqs: Datamodel , label_Fpathtext
@@ -125,7 +125,7 @@
         </member>
         <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
             <summary>
-            Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
+            Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
             (Only adds to the confirm list, Form 2 will actually write changes).
             </summary>
             <param name="directoryPath">Full path to the directory</param>
@@ -261,7 +261,7 @@
         </member>
         <member name="M:genBTC.FileTime.AssemblyVersion.ToString">
             <summary>
-            Returns a string with the assembly version attributes 
+            Returns a string with the assembly version attributes
             </summary>
             <returns>String with the assembly version attributes</returns>
         </member>
@@ -436,7 +436,7 @@
         </member>
         <member name="M:WindowsExplorer.ExplorerTree.tvwMain_DoubleClick(System.Object,System.EventArgs)">
             <summary>
-            Event for collapse/expand 
+            Event for collapse/expand
             </summary>
         </member>
         <member name="M:WindowsExplorer.ExplorerTree.RefreshFolders">
@@ -565,7 +565,7 @@
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Confirm.MakeListView">
-            <summary> 
+            <summary>
             turn the NameDateObject lists from Form_Main into the listview on Form_Confirm </summary>
             use the results as the new data model.
         </member>

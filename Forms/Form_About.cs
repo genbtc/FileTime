@@ -63,7 +63,7 @@ namespace genBTC.FileTime
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof (Form_About));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_About));
             this.button_Close = new System.Windows.Forms.Button();
             this.pictureBox_Icon = new System.Windows.Forms.PictureBox();
             this.label_About = new System.Windows.Forms.Label();
@@ -71,49 +71,49 @@ namespace genBTC.FileTime
             this.tabPage_About = new System.Windows.Forms.TabPage();
             this.linkLabel_Address = new System.Windows.Forms.LinkLabel();
             this.pictureBox_automationControls = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox_Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Icon)).BeginInit();
             this.tabControl_About.SuspendLayout();
             this.tabPage_About.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox_automationControls)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_automationControls)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // button_Close
-            // 
+            //
             this.button_Close.Location = new System.Drawing.Point(416, 465);
             this.button_Close.Name = "button_Close";
             this.button_Close.Size = new System.Drawing.Size(80, 26);
             this.button_Close.TabIndex = 0;
             this.button_Close.Text = "Cancel";
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
+            //
             // pictureBox_Icon
-            // 
+            //
             this.pictureBox_Icon.Location = new System.Drawing.Point(8, 69);
             this.pictureBox_Icon.Name = "pictureBox_Icon";
             this.pictureBox_Icon.Size = new System.Drawing.Size(56, 52);
             this.pictureBox_Icon.TabIndex = 2;
             this.pictureBox_Icon.TabStop = false;
-            // 
+            //
             // label_About
-            // 
+            //
             this.label_About.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(432, 362);
             this.label_About.TabIndex = 3;
             this.label_About.Text = "Version:";
-            // 
+            //
             // tabControl_About
-            // 
+            //
             this.tabControl_About.Controls.Add(this.tabPage_About);
             this.tabControl_About.Location = new System.Drawing.Point(56, 69);
             this.tabControl_About.Name = "tabControl_About";
             this.tabControl_About.SelectedIndex = 0;
             this.tabControl_About.Size = new System.Drawing.Size(440, 388);
             this.tabControl_About.TabIndex = 5;
-            // 
+            //
             // tabPage_About
-            // 
+            //
             this.tabPage_About.Controls.Add(this.linkLabel_Address);
             this.tabPage_About.Controls.Add(this.label_About);
             this.tabPage_About.Location = new System.Drawing.Point(4, 22);
@@ -121,9 +121,9 @@ namespace genBTC.FileTime
             this.tabPage_About.Size = new System.Drawing.Size(432, 362);
             this.tabPage_About.TabIndex = 0;
             this.tabPage_About.Text = "About";
-            // 
+            //
             // linkLabel_Address
-            // 
+            //
             this.linkLabel_Address.Location = new System.Drawing.Point(125, 0);
             this.linkLabel_Address.Name = "linkLabel_Address";
             this.linkLabel_Address.Size = new System.Drawing.Size(304, 25);
@@ -132,22 +132,22 @@ namespace genBTC.FileTime
             this.linkLabel_Address.Text = "Send Mail - Submit Feedback";
             this.linkLabel_Address.LinkClicked +=
                 new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Address_LinkClicked);
-            // 
+            //
             // pictureBox_automationControls
-            // 
+            //
             this.pictureBox_automationControls.BackColor = System.Drawing.Color.White;
             this.pictureBox_automationControls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox_automationControls.Image =
-                ((System.Drawing.Image) (resources.GetObject("pictureBox_automationControls.Image")));
+                ((System.Drawing.Image)(resources.GetObject("pictureBox_automationControls.Image")));
             this.pictureBox_automationControls.Location = new System.Drawing.Point(152, 9);
             this.pictureBox_automationControls.Name = "pictureBox_automationControls";
             this.pictureBox_automationControls.Size = new System.Drawing.Size(344, 69);
             this.pictureBox_automationControls.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_automationControls.TabIndex = 7;
             this.pictureBox_automationControls.TabStop = false;
-            // 
+            //
             // Form_About
-            // 
+            //
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 14);
             this.ClientSize = new System.Drawing.Size(506, 464);
             this.Controls.Add(this.pictureBox_automationControls);
@@ -161,14 +161,14 @@ namespace genBTC.FileTime
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
             this.Load += new System.EventHandler(this.Form_About_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox_Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Icon)).EndInit();
             this.tabControl_About.ResumeLayout(false);
             this.tabPage_About.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox_automationControls)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_automationControls)).EndInit();
             this.ResumeLayout(false);
         }
 
-        #endregion
+        #endregion Windows Form Designer generated code
 
         #region Form Events...
 
@@ -190,7 +190,7 @@ namespace genBTC.FileTime
             label_About.Text = "\r\n" + version;
         }
 
-        #endregion
+        #endregion Form Events...
 
         #region Buttons...
 
@@ -214,7 +214,6 @@ namespace genBTC.FileTime
             Close();
         }
 
-        #endregion
-        
+        #endregion Buttons...
     }
 }

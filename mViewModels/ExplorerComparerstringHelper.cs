@@ -9,6 +9,5 @@ namespace genBTC.FileTime.mViewModels
         {
             return Form_Main.StrCmpLogicalW(x, y);
         }
-
     }
 }

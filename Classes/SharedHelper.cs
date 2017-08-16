@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-//WTF is this just some poorly named and badly defined general helper class. 
+//WTF is this just some poorly named and badly defined general helper class.
 
 namespace genBTC.FileTime.Classes
 {
