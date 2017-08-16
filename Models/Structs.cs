@@ -1,33 +1,64 @@
-﻿namespace genBTC.FileTime.Models
+﻿using System;
+
+namespace genBTC.FileTime.Models
 {
-    struct BoolCMA
+    internal struct BoolCMA
     {
-        public bool C;
-        public bool M;
-        public bool A;
+        internal bool C;
+        internal bool M;
+        internal bool A;
     }
 
-    public struct SkippedHSR
+    internal struct SkippedHSR
     {
         /// <summary> Count of the number of hidden files skipped </summary>
-        public int H;
+        internal int H;
         /// <summary> Count of the number of Read-only files skipped </summary>
-        public int R;
+        internal int R;
         /// <summary> Count of the number of System files skipped </summary>
-        public int S;
+        internal int S;
     }
 
-    struct DisplayCmaTimeData
+    internal struct DisplayCmaTimeData
     {
-        public string PathName;
+        internal string PathName;
 
-        public bool Selected;
+        internal bool Selected;
 
-        public string Created;
-        public string Modified;
-        public string Accessed;
+        internal string Created;
+        internal string Modified;
+        internal string Accessed;
 
-        public string HiddenPathName;
+        internal string HiddenPathName;
+    }
+
+    internal struct guistatus
+    {
+        internal bool radioGroupBox1SpecifyTime;
+        internal bool radioGroupBox2CurrentSelect;
+
+        internal bool rg2rb1Creation;
+        internal bool rg2rb2Modified;
+        internal bool rg2rb3LastAccess;
+
+        internal bool radioGroupBox3UseTimeFrom;
+
+        internal string Created;
+        internal string Modified;
+        internal string Accessed;
+
+        internal bool radioButton1_useTimefromFile,
+            radioButton2_useTimefromSubdir,
+            radioButton1_setfromCreated,
+            radioButton2_setfromModified,
+            radioButton3_setfromAccessed,
+            radioButton4_setfromRandom,
+            radioButton1Oldest,
+            radioButton2Newest,
+            radioButton3Random;
+
+        internal DateTime dateTimePickerDate, dateTimePickerTime;
+        internal string labelHiddenPathName;
     }
 
     /// <summary> Icon in listView image list </summary>

@@ -11,6 +11,7 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using genBTC.FileTime.Classes;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.Properties;
 
@@ -22,11 +23,44 @@ namespace genBTC.FileTime
     #region FORM_MAIN1
     public partial class Form_Main
     {
-        
+        #region guistatus
+        private guistatus GetGUIRadioButtonStatusData()
+        {
+            var radios = new guistatus
+            {
+                radioGroupBox1SpecifyTime = radioGroupBox1_SpecifyTime.Checked,
+                radioGroupBox2CurrentSelect = radioGroupBox2_CurrentSelectionTime.Checked,
+                rg2rb1Creation = radioButton1_CreationDate.Checked,
+                rg2rb2Modified = radioButton2_ModifiedDate.Checked,
+                rg2rb3LastAccess = radioButton3_AccessedDate.Checked,
+                radioGroupBox3UseTimeFrom = radioGroupBox3_UseTimeFrom.Checked,
+                Created = label_CreationTime.Text,
+                Modified = label_ModificationTime.Text,
+                Accessed = label_AccessedTime.Text,
+                radioButton1_useTimefromFile = radioButton1_useTimefromFile.Checked,
+                radioButton2_useTimefromSubdir = radioButton2_useTimefromSubdir.Checked,
+                radioButton1_setfromCreated = radioButton1_setfromCreation.Checked,
+                radioButton2_setfromModified = radioButton2_setfromModified.Checked,
+                radioButton3_setfromAccessed = radioButton3_setfromAccessed.Checked,
+                radioButton4_setfromRandom = radioButton4_setfromRandom.Checked,
+                radioButton1Oldest = radioButton1_Oldest.Checked,
+                radioButton2Newest = radioButton2_Newest.Checked,
+                radioButton3Random = radioButton3_Random.Checked,
+                dateTimePickerDate = dateTimePicker_Date.Value,
+                dateTimePickerTime = dateTimePicker_Time.Value,
+                labelHiddenPathName = labelHidden_PathName.Text
+            };
+
+            return radios;
+        }
+        #endregion
+
         public DataModel _dataModel;
         //Form 2 stuff we need to have in Form1.
         /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         public Form_Confirm Confirmation;
+
+        private readonly Timer itemSelectionChangedTimer = new Timer();
 
         #region Main startup/load code
         /// <summary>Init the main startup form </summary>
@@ -58,8 +92,8 @@ namespace genBTC.FileTime
             try
             {
                 explorerTree1.SetCurrentPath(Settings.Default.useStartupDir
-                    ? Settings.Default.StartupDir.TrimEnd(Seperator)
-                    : UserDesktop);
+                    ? Settings.Default.StartupDir.TrimEnd(SharedHelper.Seperator)
+                    : SharedHelper.UserDesktop);
                 explorerTree1.BrowseTo();
                 // Display the folder path and the contents of it.
                 RefreshContentsRightPanel();
@@ -75,7 +109,7 @@ namespace genBTC.FileTime
 
         private void button_Browse_Click(object sender, EventArgs e)
         {
-            string path = OpenFile(label_FPath.Text);
+            string path = SharedHelper.OpenFile(label_FPath.Text);
             //if (path == label_FPath.Text) //if nothing was changed
             explorerTree1.SetCurrentPath(path);
             explorerTree1.BrowseTo();
@@ -86,7 +120,7 @@ namespace genBTC.FileTime
             StartUpBothModes1And2(tabControl1.SelectedIndex, label_FPath.Text);
             string comparefolder;
             if (radioGroupBox1_pickFolderForCompare.Checked)
-                comparefolder = OpenFile(label_FPath.Text);
+                comparefolder = SharedHelper.OpenFile(label_FPath.Text);
         }
 
         #endregion Buttons
@@ -95,7 +129,7 @@ namespace genBTC.FileTime
         //Menu items:
         private void menuItem_FileOpen_Click(object sender, EventArgs e)
         {
-            OpenFile(label_FPath.Text);
+            SharedHelper.OpenFile(label_FPath.Text);
         }
 
         private void menuItem_FileExit_Click(object sender, EventArgs e)
@@ -202,8 +236,8 @@ namespace genBTC.FileTime
         {
             Cursor.Current = Cursors.WaitCursor;
             label_FPath.Text = explorerTree1.CurrentPath;
-            if (!label_FPath.Text.EndsWith(Seperator.ToString()))
-                label_FPath.Text += Seperator;
+            if (!label_FPath.Text.EndsWith(SharedHelper.Seperator.ToString()))
+                label_FPath.Text += SharedHelper.Seperator;
             RefreshContentsRightPanel();
             Cursor.Current = Cursors.Default;
         }
@@ -212,7 +246,7 @@ namespace genBTC.FileTime
         private void RefreshContentsRightPanel()
         {
             _dataModel.imageListFiles = imageList_Files;
-            DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text);
+            DataModel.DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text);
             imageList_Files = _dataModel.imageListFiles;
             listView_Contents = _dataModel.listViewContents;
         }
@@ -249,7 +283,7 @@ namespace genBTC.FileTime
         /// </summary>
         private void DisplayCma(string path)
         {
-            var cma = GetCmaTimes(path);
+            var cma = DataModel.GetCmaTimes(path);
 
             label_CreationTime.Text = cma.Created;
             label_ModificationTime.Text = cma.Modified;
@@ -300,7 +334,7 @@ namespace genBTC.FileTime
 
                     if (Settings.Default.mode1addrootdir)
                     {
-                        DateTime? nullorfileDateTime = DecideWhichTimeMode1(startingdir, gui, _dataModel);
+                        DateTime? nullorfileDateTime = DataModel.DecideWhichTimeMode1(startingdir, gui, _dataModel);
                         if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
                         {
                             MessageBox.Show("Error! Nothing to decide time from. \n" +
@@ -310,22 +344,22 @@ namespace genBTC.FileTime
                         }
                         var fileDateTime = (DateTime)nullorfileDateTime;
 
-                        SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), startingdir, fileDateTime, true);
+                        DataModel.SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), startingdir, fileDateTime, true);
                     }
 
                     //TODO: where I should add worker process
                     if (Settings.Default.useRootDirAsContainer)
-                        RecurseSubDirectoryMode1B(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
+                        DataModel.RecurseSubDirectoryMode1Parent(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
                     else
-                        RecurseSubDirectoryMode1(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
+                        DataModel.RecurseSubDirectoryMode1(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
                     //end worker process
                     break;
 
                 case (1):
                     if (Settings.Default.useRootDirAsContainer)
-                        RecurseSubDirectoryMode2B(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
+                        DataModel.RecurseSubDirectoryMode2Parent(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
                     else
-                        RecurseSubDirectoryMode2(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
+                        DataModel.RecurseSubDirectoryMode2(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
                     break;
             }
 

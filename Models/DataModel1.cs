@@ -9,7 +9,7 @@ using genBTC.FileTime.Properties;
 
 namespace genBTC.FileTime.Models
 {
-    public class DataModel
+    public partial class DataModel
     {
         public List<string> contentsDirList;
         public List<string> contentsFileList;
@@ -23,7 +23,7 @@ namespace genBTC.FileTime.Models
 
         public ImageList imageListFiles;
 
-        public SkippedHSR Skips;
+        internal SkippedHSR Skips;
 
         public Random random;
 
@@ -152,6 +152,7 @@ namespace genBTC.FileTime.Models
         {
             return fileOrDir ? 1 : 0;
         }
+
 
     //
     }

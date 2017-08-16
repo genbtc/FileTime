@@ -80,7 +80,7 @@ namespace genBTC.FileTime.Models
         {
             public int Compare(NameDateObject obj1, NameDateObject obj2)
             {
-                return Form_Main.StrCmpLogicalW(obj1.Name, obj2.Name);
+                return DataModel.StrCmpLogicalW(obj1.Name, obj2.Name);
             }
         }
     }

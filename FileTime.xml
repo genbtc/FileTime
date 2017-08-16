@@ -119,138 +119,6 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.SyncSettingstoInvisibleFlag">
-            <summary>  Reasons to be invisible  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Bool2Int(System.Boolean)">
-            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Boolean)">
-            <summary>
-            Display subfiles and subdirectories in the right panel listview
-            </summary>
-            <param name="filesonly">Don't show the directories, only files.</param>
-            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
-            (Only adds to the confirm list, Form 2 will actually write changes).
-            </summary>
-            <param name="directoryPath">Full path to the directory</param>
-            <param name="checkedRecurse"></param>
-            <param name="checkedShouldFiles"></param>
-            <param name="checkboxes"></param>
-            <param name="dataModel"></param>
-            req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1B(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>  Mode 1B </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String,genBTC.FileTime.Form_Main.guistatus,genBTC.FileTime.Models.DataModel)">
-            <summary>
-            Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
-            </summary>
-            reqs: (string path), contentsDirList, contentsFileList, Thi
-            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
-            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
-            radioGroupBox1_SpecifyTime.Checked
-            radioGroupBox2_CurrentSelectionTime.Checked
-            radioGroupBox3_UseTimeFrom.Checked
-                =radioButton1_useTimefromFile.Checked
-                =radioButton2_useTimefromSubdir.Checked
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetTimeDateEachDirectory(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,System.Boolean,System.Boolean,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Set Directory Time
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetTimeDateEachFile(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel)">
-            <summary>
-            Set File Time
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode2(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Mode 2. Recursive.
-            </summary>
-            <param name="directoryPath">Path to start in.</param>
-            <param name="dataModel"></param>
-            <param name="checkboxes"></param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetFileDateTimeMode1(genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
-            <summary> STATIC.
-            Set the date/time for a single file/directory (This works on files and directories)
-            Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
-            (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
-            </summary>
-            Requires: Pass in the datamodel and the checkbox states.
-            <param name="filePath">Full path to the file/directory</param>
-            <param name="fileTime">Date/Time to set the file/directory</param>
-            <param name="isDirectory">Is this a directory???</param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
-            <summary>
-            Static. Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(genBTC.FileTime.Models.BoolCMA,System.String,genBTC.FileTime.Models.NameDateObject)">
-            <summary>
-            Static. Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.GetCmaTimes(System.String)">
-            <summary>
-            Display the date and time of the selected file (also works on Directories)
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
-            </summary>
-            <param name="path"></param>
-            <param name="dataModel"></param>
-            <param name="radioButton1UseTimefromFile"></param>
-            <param name="radioButton2UseTimefromSubdir"></param>
-            <param name="radioButton1SetfromCreated"></param>
-            <param name="radioButton2SetfromModified"></param>
-            <param name="radioButton3SetfromAccessed"></param>
-            <param name="radioButton4SetfromRandom"></param>
-            <param name="radioButton1Oldest"></param>
-            <param name="radioButton2Newest"></param>
-            <param name="radioButton3Random"></param>
-            <returns></returns>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(genBTC.FileTime.Models.DataModel,System.String,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Very long function that does a simple task. Read in the options the user set for the operation, and
-            Decide on the timestamp it should use, by the end we will have a single object with 3 times.
-            This will need to be hit with broad strokes if we attempt to do any more work on the program.
-            </summary>
-            <param name="dataModel"></param>
-            <param name="radioButton3Random"></param>
-            <param name="radioButton2Newest"></param>
-            <param name="radioButton1Oldest"></param>
-            <param name="radioButton2UseTimefromSubdir"></param>
-            <param name="radioButton1UseTimefromFile"></param>
-            <param name="radioGroupBox3UseTimeFrom"></param>
-            <param name="labelLastAccess"></param>
-            <param name="labelModified"></param>
-            <param name="labelCreationTime"></param>
-            <param name="radioGroupBox2CurrentSelectionTime"></param>
-            <param name="dateTimePickerTime"></param>
-            <param name="dateTimePickerDate"></param>
-            <param name="labelHiddenPathName"></param>
-            <param name="radioGroupBox1SpecifyTime"></param>
-            <param name="directoryPath"></param>
-            <returns></returns>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.OpenFile(System.String)">
-            <summary>
-            Display the Folder Browser Dialog and then display the selected
-            file path and the directories and files in the folder.
-            </summary>
-        </member>
         <member name="T:genBTC.FileTime.AssemblyVersion">
             <summary>
             This class uses the System.Reflection.Assembly class to
@@ -327,6 +195,18 @@
         <member name="P:genBTC.FileTime.AssemblyVersion.VersionDetails">
             <summary>
             Gets the major, minor, revision, and build numbers of the assembly.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag">
+            <summary>  Reasons to be invisible  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
+            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFile(System.String)">
+            <summary>
+            Display the Folder Browser Dialog and then display the selected
+            file path and the directories and files in the folder.
             </summary>
         </member>
         <member name="T:genBTC.FileTime.Classes.Native.NativeExtractIcon">
@@ -735,31 +615,6 @@
         <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Accessed">
             <summary>returns a string of DateTime.ToString or null </summary>
         </member>
-        <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
-            <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
-            <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
-            <summary>  Constructor  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Clear">
-            <summary> Clear contents Dir + File lists </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Boolean)">
-            <summary>
-            Display subfiles and subdirectories in the right panel listview
-            </summary>
-            <param name="filesonly">Don't show the directories, only files.</param>
-            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SyncSettingstoInvisibleFlag">
-            <summary>  Reasons to be invisible  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Bool2Int(System.Boolean)">
-            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        </member>
         <member name="T:genBTC.FileTime.mViewModels.ListViewItemExplorerLikeComparer">
             <summary> Explorer-like Sort, for use by listview.Sorter </summary>
         </member>
@@ -875,6 +730,147 @@
         </member>
         <member name="T:genBTC.FileTime.mViewModels.ExplorerComparerstringHelper">
             <summary> Explorer-like Sort, for strings </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
+            <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
+            <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
+            <summary>  Constructor  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Clear">
+            <summary> Clear contents Dir + File lists </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Display subfiles and subdirectories in the right panel listview
+            </summary>
+            <param name="filesonly">Don't show the directories, only files.</param>
+            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.SyncSettingstoInvisibleFlag">
+            <summary>  Reasons to be invisible  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Bool2Int(System.Boolean)">
+            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+            (Only adds to the confirm list, Form 2 will actually write changes).
+            </summary>
+            <param name="directoryPath">Full path to the directory</param>
+            <param name="checkedRecurse"></param>
+            <param name="checkedShouldFiles"></param>
+            <param name="checkboxes"></param>
+            <param name="dataModel"></param>
+            req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Mode 2: Recursive.
+            </summary>
+            <param name="directoryPath">Path to start in.</param>
+            <param name="dataModel"></param>
+            <param name="checkboxes"></param>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
+            <summary>  Mode 1P (start at its Parent) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
+            <summary>  Mode 2P (start at its Parent)  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1(System.String,genBTC.FileTime.Models.guistatus,genBTC.FileTime.Models.DataModel)">
+            <summary>
+            Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+            </summary>
+            reqs: (string path), contentsDirList, contentsFileList, Thi
+            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
+            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
+            radioGroupBox1_SpecifyTime.Checked
+            radioGroupBox2_CurrentSelectionTime.Checked
+            radioGroupBox3_UseTimeFrom.Checked
+                =radioButton1_useTimefromFile.Checked
+                =radioButton2_useTimefromSubdir.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,System.Boolean,System.Boolean,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Set Directory Time
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachFile(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel)">
+            <summary>
+            Set File Time
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1(genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
+            <summary> STATIC.
+            Set the date/time for a single file/directory (This works on files and directories)
+            Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+            (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+            </summary>
+            Requires: Pass in the datamodel and the checkbox states.
+            <param name="filePath">Full path to the file/directory</param>
+            <param name="fileTime">Date/Time to set the file/directory</param>
+            <param name="isDirectory">Is this a directory???</param>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Makedateobject(genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Static. Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Makedateobject(genBTC.FileTime.Models.BoolCMA,System.String,genBTC.FileTime.Models.NameDateObject)">
+            <summary>
+            Static. Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.GetCmaTimes(System.String)">
+            <summary>
+            Display the date and time of the selected file (also works on Directories)
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+            </summary>
+            <param name="path"></param>
+            <param name="dataModel"></param>
+            <param name="radioButton1UseTimefromFile"></param>
+            <param name="radioButton2UseTimefromSubdir"></param>
+            <param name="radioButton1SetfromCreated"></param>
+            <param name="radioButton2SetfromModified"></param>
+            <param name="radioButton3SetfromAccessed"></param>
+            <param name="radioButton4SetfromRandom"></param>
+            <param name="radioButton1Oldest"></param>
+            <param name="radioButton2Newest"></param>
+            <param name="radioButton3Random"></param>
+            <returns></returns>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2(genBTC.FileTime.Models.DataModel,System.String,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Very long function that does a simple task. Read in the options the user set for the operation, and
+            Decide on the timestamp it should use, by the end we will have a single object with 3 times.
+            This will need to be hit with broad strokes if we attempt to do any more work on the program.
+            </summary>
+            <param name="dataModel"></param>
+            <param name="radioButton3Random"></param>
+            <param name="radioButton2Newest"></param>
+            <param name="radioButton1Oldest"></param>
+            <param name="radioButton2UseTimefromSubdir"></param>
+            <param name="radioButton1UseTimefromFile"></param>
+            <param name="radioGroupBox3UseTimeFrom"></param>
+            <param name="labelLastAccess"></param>
+            <param name="labelModified"></param>
+            <param name="labelCreationTime"></param>
+            <param name="radioGroupBox2CurrentSelectionTime"></param>
+            <param name="dateTimePickerTime"></param>
+            <param name="dateTimePickerDate"></param>
+            <param name="labelHiddenPathName"></param>
+            <param name="radioGroupBox1SpecifyTime"></param>
+            <param name="directoryPath"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

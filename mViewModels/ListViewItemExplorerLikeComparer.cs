@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Windows.Forms;
+using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime.mViewModels
 {
@@ -8,7 +9,7 @@ namespace genBTC.FileTime.mViewModels
     {
         public int Compare(object x, object y)
         {
-            return Form_Main.StrCmpLogicalW(((ListViewItem)x).Text, ((ListViewItem)y).Text);
+            return DataModel.StrCmpLogicalW(((ListViewItem)x).Text, ((ListViewItem)y).Text);
         }
     }
 }

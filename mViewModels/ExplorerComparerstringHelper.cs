@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime.mViewModels
 {
@@ -7,7 +8,7 @@ namespace genBTC.FileTime.mViewModels
     {
         public int Compare(string x, string y)
         {
-            return Form_Main.StrCmpLogicalW(x, y);
+            return DataModel.StrCmpLogicalW(x, y);
         }
     }
 }
