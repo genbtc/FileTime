@@ -335,7 +335,7 @@ namespace genBTC.FileTime.Forms
 
                     if (Settings.Default.mode1addrootdir)
                     {
-                        DateTime? nullorfileDateTime = DataModel.DecideWhichTimeMode1(startingdir, gui, _dataModel);
+                        DateTime? nullorfileDateTime = _dataModel.DecideWhichTimeMode1(startingdir, gui);
                         if (nullorfileDateTime == null) //if nothing could be decided, exit, otherwise continue
                         {
                             MessageBox.Show("Error! Nothing to decide time from. \n" +

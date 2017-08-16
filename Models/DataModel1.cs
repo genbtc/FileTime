@@ -138,6 +138,136 @@ namespace genBTC.FileTime.Models
                 this.listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
+
+        /// <summary>
+        /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+        /// </summary>
+        /// reqs: (string path), contentsDirList, contentsFileList, Thi
+        /// This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
+        /// This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
+        /// radioGroupBox1_SpecifyTime.Checked
+        /// radioGroupBox2_CurrentSelectionTime.Checked
+        /// radioGroupBox3_UseTimeFrom.Checked
+        ///     =radioButton1_useTimefromFile.Checked
+        ///     =radioButton2_useTimefromSubdir.Checked
+        internal DateTime? DecideWhichTimeMode1(string path, guistatus gui)
+        {
+            contentsDirList.Clear();
+            contentsFileList.Clear();
+
+            var dateToUse = new DateTime?();
+            if (gui.radioGroupBox1SpecifyTime)
+            {
+                dateToUse = DateTime.Parse(gui.dateTimePickerDate.Date.ToString("d") + " " +
+                                           gui.dateTimePickerTime.Hour + ":" +
+                                           gui.dateTimePickerTime.Minute + ":" +
+                                           gui.dateTimePickerTime.Second);
+            }
+            else if (gui.radioGroupBox2CurrentSelect)
+            {
+                if (gui.rg2rb1Creation)
+                    dateToUse = DateTime.Parse(gui.Created);
+                else if (gui.rg2rb2Modified)
+                    dateToUse = DateTime.Parse(gui.Modified);
+                else if (gui.rg2rb3LastAccess)
+                    dateToUse = DateTime.Parse(gui.Accessed);
+            }
+            else if (gui.radioGroupBox3UseTimeFrom)
+            {
+                dateToUse = DecideTimeFromSubDirFile(path, gui);
+            }
+            return dateToUse;
+        }
+        /// <summary>
+        /// Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+        /// </summary>
+        internal DateTime? DecideTimeFromSubDirFile(string path, guistatus gui)
+        {
+            var dateToUse = new DateTime?();
+            var extractlist = new List<string>();
+            if (gui.radioButton1_useTimefromFile)
+            {
+                extractlist = PopulateFileList(path);
+            }
+            else if (gui.radioButton2_useTimefromSubdir)
+            {
+                extractlist = PopulateDirList(path);
+            }
+
+            // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
+            if (extractlist.Count == 0)
+                return null;
+            //for Any/Random attribute mode, decide which attribute and stick with it.
+            int randomNumber = random.Next(0, 3);
+            var timelist = new List<DateTime?>();
+            //start iterating through
+            foreach (string subitem in extractlist)
+            {
+                var looptempDate = new DateTime();
+                try
+                {
+                    string fullpath = Path.Combine(path, subitem);
+                    string timelisttype = null; //this was made just in case.
+                    if (gui.radioButton1_setfromCreated)
+                    {
+                        timelisttype = "Created";
+                        looptempDate = File.GetCreationTime(fullpath);
+                    }
+                    else if (gui.radioButton2_setfromModified)
+                    {
+                        timelisttype = "Modified";
+                        looptempDate = File.GetLastWriteTime(fullpath);
+                    }
+                    else if (gui.radioButton3_setfromAccessed)
+                    {
+                        timelisttype = "Accessed";
+                        looptempDate = File.GetLastAccessTime(fullpath);
+                    }
+                    else if (gui.radioButton4_setfromRandom)
+                    {
+                        switch (randomNumber)
+                        {
+                            case 0:
+                                timelisttype = "Created";
+                                looptempDate = File.GetCreationTime(fullpath);
+                                break;
+
+                            case 1:
+                                timelisttype = "Modified";
+                                looptempDate = File.GetLastWriteTime(fullpath);
+                                break;
+
+                            case 2:
+                                timelisttype = "Accessed";
+                                looptempDate = File.GetLastAccessTime(fullpath);
+                                break;
+                        }
+                    }
+                    timelist.Add(looptempDate);
+                    var stopbotheringme = timelisttype; //remove "unused var" warning
+                }
+                catch (UnauthorizedAccessException)
+                { }
+            }
+            var minmax = new DateNewOldObj(timelist);
+            if (gui.radioButton1Oldest)
+            {
+                if (minmax.MinDate != null)
+                    dateToUse = minmax.MinDate; //explicit typecast from nullable
+            }
+            else if (gui.radioButton2Newest)
+            {
+                if (minmax.MaxDate != null)
+                    dateToUse = minmax.MaxDate;
+            }
+            else if (gui.radioButton3Random)
+            {
+                int randomFile = random.Next(0, minmax.Index);
+                if (timelist[randomFile] != null)
+                    dateToUse = timelist[randomFile];
+            }
+            return dateToUse;
+        }
     //
     }
 }

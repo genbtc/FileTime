@@ -659,6 +659,24 @@
             <param name="filesonly">Don't show the directories, only files.</param>
             reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1(System.String,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+            </summary>
+            reqs: (string path), contentsDirList, contentsFileList, Thi
+            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
+            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
+            radioGroupBox1_SpecifyTime.Checked
+            radioGroupBox2_CurrentSelectionTime.Checked
+            radioGroupBox3_UseTimeFrom.Checked
+                =radioButton1_useTimefromFile.Checked
+                =radioButton2_useTimefromSubdir.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.Models.guistatus)">
+            <summary>
+            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+            </summary>
+        </member>
         <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
             <summary>
             Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
@@ -678,19 +696,6 @@
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
             <summary>  Mode 2P (start at its Parent)  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1(System.String,genBTC.FileTime.Models.guistatus,genBTC.FileTime.Models.DataModel)">
-            <summary>
-            Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
-            </summary>
-            reqs: (string path), contentsDirList, contentsFileList, Thi
-            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
-            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
-            radioGroupBox1_SpecifyTime.Checked
-            radioGroupBox2_CurrentSelectionTime.Checked
-            radioGroupBox3_UseTimeFrom.Checked
-                =radioButton1_useTimefromFile.Checked
-                =radioButton2_useTimefromSubdir.Checked
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,System.Boolean,System.Boolean,genBTC.FileTime.Models.guistatus)">
             <summary>
@@ -731,11 +736,6 @@
         <member name="M:genBTC.FileTime.Models.DataModel.GetCmaTimes(System.String)">
             <summary>
             Display the date and time of the selected file (also works on Directories)
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
-            <summary>
-            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2(genBTC.FileTime.Models.DataModel,System.String,genBTC.FileTime.Models.guistatus)">
