@@ -11,54 +11,33 @@ using UIToolbox;
 namespace genBTC.FileTime
 {
 
-    struct BoolCMA
-    {
-        public bool C;
-        public bool M;
-        public bool A;
-    }
-
-    public struct SkippedHSR
-    {
-        /// <summary> Count of the number of hidden files skipped </summary>
-        public int H;
-        /// <summary> Count of the number of Read-only files skipped </summary>
-        public int R;
-        /// <summary> Count of the number of System files skipped </summary>
-        public int S;
-    }
-
-    struct DisplayCmaTimeData
-    {
-        public string PathName;
-
-        public bool Selected;
-
-        public string Created;
-        public string Modified;
-        public string Accessed;
-
-        public string HiddenPathName;
-    }
-
     public class DataModel
     {
-        public readonly List<string> contentsDirList = new List<string>();
-        public readonly List<string> contentsFileList = new List<string>();
-        public readonly List<string> filextlist = new List<string>();
+        public List<string> contentsDirList;
+        public List<string> contentsFileList;
+        public List<string> filextlist;
         /// <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
-        public List<string> FilesReadOnlytoFix = new List<string>();
+        public List<string> FilesReadOnlytoFix;
         /// <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        public List<NameDateObject> FilestoConfirmList = new List<NameDateObject>();
+        public List<NameDateObject> FilestoConfirmList;
 
-        public SkippedHSR Skips = new SkippedHSR();
+        public SkippedHSR Skips;
 
-        public readonly Random random = new Random();
+        public Random random;
 
+        /// <summary>  Constructor  </summary>
+        public DataModel()
+        {
+            contentsDirList = new List<string>();
+            contentsFileList = new List<string>();
+            filextlist = new List<string>();
+            FilesReadOnlytoFix = new List<string>();
+            FilestoConfirmList = new List<NameDateObject>();
+            Skips = new SkippedHSR();
+            random = new Random();
+        }
 
-        /// <summary>
-        /// Clear Function.
-        /// </summary>
+        /// <summary> Clear contents Dir + File lists </summary>
         public void Clear()
         {
             contentsDirList.Clear();
@@ -69,6 +48,22 @@ namespace genBTC.FileTime
 
     public partial class Form_Main
     {
+
+        /// <summary>  Reasons to be invisible  </summary>
+        private static FileAttributes SyncSettingstoInvisibleFlag()
+        {
+            FileAttributes reasonsToBeInvisible = (Settings.Default.ShowHidden ? 0 : FileAttributes.Hidden) |
+                                                  (Settings.Default.ShowSystem ? 0 : FileAttributes.System) |
+                                                  (Settings.Default.ShowReadOnly ? 0 : FileAttributes.ReadOnly);
+            return reasonsToBeInvisible;
+        }
+
+        /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        private static int Bool2Int(bool fileOrDir)
+        {
+            return fileOrDir ? 1 : 0;
+        }
+
         private static void SkipOrAddFile(DataModel dataModel, string path, bool isDirectory)
         {
             FileAttributes fAttr = File.GetAttributes(path);
@@ -119,15 +114,6 @@ namespace genBTC.FileTime
 
             NameDateObject currentobject = Makedateobject(checkboxes, filePath, fileTime, isDirectory);
             dataModel.FilestoConfirmList.Add(currentobject);
-        }
-
-        //Mode #2 (same like above). Static.
-        private static void SetFolderDateTimeMode2(DataModel dataModel, BoolCMA checkboxes, string folderPath, NameDateObject subFile)
-        {
-            SkipOrAddFile(dataModel, folderPath, true);
-
-            subFile = Makedateobject(checkboxes, folderPath, subFile);
-            dataModel.FilestoConfirmList.Add(subFile);
         }
 
         /// <summary>
@@ -209,15 +195,15 @@ namespace genBTC.FileTime
         /// <param name="radioButton2Newest"></param>
         /// <param name="radioButton3Random"></param>
         /// <returns></returns>
-        private static DateTime? DecideTimeFromSubDirFile(string path, DataModel dataModel, RadioButton radioButton1UseTimefromFile, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1SetfromCreated, RadioButton radioButton2SetfromModified, RadioButton radioButton3SetfromAccessed, RadioButton radioButton4SetfromRandom, RadioButton radioButton1Oldest, RadioButton radioButton2Newest, RadioButton radioButton3Random)
+        private static DateTime? DecideTimeFromSubDirFile(string path, DataModel dataModel, guistatus gui)
         {
             var dateToUse = new DateTime?();
             var extractlist = new List<string>();
-            if (radioButton1UseTimefromFile.Checked)
+            if (gui.radioButton1_useTimefromFile)
             {
                 extractlist = PopulateFileList(path, dataModel);
             }
-            else if (radioButton2UseTimefromSubdir.Checked)
+            else if (gui.radioButton2_useTimefromSubdir)
             {
                 extractlist = PopulateDirList(path, dataModel);
             }
@@ -236,22 +222,22 @@ namespace genBTC.FileTime
                 try
                 {
                     string fullpath = Path.Combine(path, subitem);
-                    if (radioButton1SetfromCreated.Checked)
+                    if (gui.radioButton1_setfromCreated)
                     {
                         timelisttype = "Created";
                         looptempDate = File.GetCreationTime(fullpath);
                     }
-                    else if (radioButton2SetfromModified.Checked)
+                    else if (gui.radioButton2_setfromModified)
                     {
                         timelisttype = "Modified";
                         looptempDate = File.GetLastWriteTime(fullpath);
                     }
-                    else if (radioButton3SetfromAccessed.Checked)
+                    else if (gui.radioButton3_setfromAccessed)
                     {
                         timelisttype = "Accessed";
                         looptempDate = File.GetLastAccessTime(fullpath);
                     }
-                    else if (radioButton4SetfromRandom.Checked)
+                    else if (gui.radioButton4_setfromRandom)
                     {
                         switch (randomNumber)
                         {
@@ -275,17 +261,17 @@ namespace genBTC.FileTime
                 { }
             }
             var minmax = new OldNewDate(timelist);
-            if (radioButton1Oldest.Checked)
+            if (gui.radioButton1_Oldest)
             {
                 if (minmax.MinDate != null)
                     dateToUse = minmax.MinDate; //explicit typecast from nullable
             }
-            else if (radioButton2Newest.Checked)
+            else if (gui.radioButton2_Newest)
             {
                 if (minmax.MaxDate != null)
                     dateToUse = minmax.MaxDate;
             }
-            else if (radioButton3Random.Checked)
+            else if (gui.radioButton3_Random)
             {
                 int randomFile = dataModel.random.Next(0, minmax.Index);
                 if (timelist[randomFile] != null)

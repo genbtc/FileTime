@@ -226,7 +226,7 @@ namespace WindowsExplorer
             {
                 return;
             }
-            var comparer = new ExplorerComparerstring();
+            var comparer = new ExplorerComparerstringHelper();
             Array.Sort(dirList, comparer);
 
             //check if dir already exists in case click same dir twice

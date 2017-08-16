@@ -3,7 +3,7 @@
 namespace genBTC.FileTime.mViewModels
 {
     /// <summary> Explorer-like Sort, for strings </summary>
-    public class ExplorerComparerstring : IComparer<string>
+    public class ExplorerComparerstringHelper : IComparer<string>
     {
         public int Compare(string x, string y)
         {

@@ -130,10 +130,11 @@
     <Compile Include="Models\FormMainModel.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Models\Structs.cs" />
     <Compile Include="mViewModels\CustomListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="mViewModels\ExplorerComparerstring.cs" />
+    <Compile Include="mViewModels\ExplorerComparerstringHelper.cs" />
     <Compile Include="mViewModels\ListViewItemExplorerLikeComparer.cs" />
     <Compile Include="Classes\Native\NativeScroll.cs" />
     <Compile Include="Classes\Native\NativeSelect.cs" />
@@ -170,6 +171,9 @@
     </Compile>
     <Compile Include="Forms\Form_Preferences.Designer.cs">
       <DependentUpon>Form_Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mViewModels\ViewModel.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
