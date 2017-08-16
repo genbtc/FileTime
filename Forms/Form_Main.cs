@@ -10,6 +10,7 @@
  * ###  Author: genBTC ###
  */
 
+
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -23,6 +24,7 @@ namespace genBTC.FileTime.Forms
     /// GUI : Main Form Window of the Program.
     /// </summary>
     #region FORM_MAIN1
+
     public partial class Form_Main
     {
         #region guistatus
@@ -57,12 +59,16 @@ namespace genBTC.FileTime.Forms
         }
         #endregion
 
-        public DataModel _dataModel;
-        //Form 2 stuff we need to have in Form1.
+        /// <summary>  A model of the data. Self sufficient.   </summary>
+        internal DataModel _dataModel;
+ 
         /// <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         public Form_Confirm Confirmation;
 
+        /// <summary>  a Timer to keep track of the selected line, prevents clicking too fast (timeout)</summary>
         private readonly Timer itemSelectionChangedTimer = new Timer();
+        /// <summary> Timeout in ms for ListView selection-box's repeat mouse click rejection </summary>
+        private const int SELECTION_TIMEOUT = 100;
 
         #region Main startup/load code
         /// <summary>Init the main startup form </summary>
@@ -78,12 +84,32 @@ namespace genBTC.FileTime.Forms
         /// <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
         private void Form_Main_Load(object sender, EventArgs e)
         {
-            //The DataModel can be loaded here.
-            _dataModel = new DataModel { listViewContents = listView_Contents };
-            //The form 2 can be created here.
+            //Once the designer loads:
+            //The DataModel can be loaded. (with 2 initializer params from .Designer.cs)
+            _dataModel = new DataModel { listViewContents = listView_Contents, imageListFiles = imageList_Files};
+            //The form 2 can now also be constructed.
             Confirmation = new Form_Confirm(this);
-            
+
             Form_Main_Run();
+        }
+
+        /// <summary> Public Setter to the private var in Datamodel.  </summary>
+        public string CwdPathName
+        {
+            get { return _dataModel.CwdPathName; }
+            set
+            {
+                _dataModel.CwdPathName = value;
+                //RefreshDataBinding_labelFPath(); //dont need this because its
+            }
+        }
+        /// <summary>
+        /// The Text Box Data Binding is rebound.
+        /// </summary>
+        public void RefreshDataBinding_labelFPath()
+        {
+            label_FPath.DataBindings.Clear();
+            label_FPath.DataBindings.Add("Text", this, "CwdPathName", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         /// <summary>
@@ -97,7 +123,6 @@ namespace genBTC.FileTime.Forms
                     ? Settings.Default.StartupDir.TrimEnd(SharedHelper.Seperator)
                     : SharedHelper.UserDesktop);
                 explorerTree1.BrowseTo();
-                // Display the folder path and the contents of it.
                 RefreshContentsRightPanel();
             }
             catch //very broad catch, with no reason or explanation?
@@ -105,24 +130,25 @@ namespace genBTC.FileTime.Forms
                 ClearOnError();
             }
         }
+
         #endregion Main startup/load code
 
         #region Buttons
 
         private void button_Browse_Click(object sender, EventArgs e)
         {
-            string path = SharedHelper.OpenFile(label_FPath.Text);
-            //if (path == label_FPath.Text) //if nothing was changed
+            string path = SharedHelper.OpenFile(CwdPathName);
+
             explorerTree1.SetCurrentPath(path);
             explorerTree1.BrowseTo();
         }
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            StartUpBothModes1And2(tabControl1.SelectedIndex, label_FPath.Text);
+            StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
             string comparefolder;
             if (radioGroupBox1_pickFolderForCompare.Checked)
-                comparefolder = SharedHelper.OpenFile(label_FPath.Text);
+                comparefolder = SharedHelper.OpenFile(CwdPathName);
         }
 
         #endregion Buttons
@@ -131,7 +157,7 @@ namespace genBTC.FileTime.Forms
         //Menu items:
         private void menuItem_FileOpen_Click(object sender, EventArgs e)
         {
-            SharedHelper.OpenFile(label_FPath.Text);
+            SharedHelper.OpenFile(CwdPathName);
         }
 
         private void menuItem_FileExit_Click(object sender, EventArgs e)
@@ -153,7 +179,7 @@ namespace genBTC.FileTime.Forms
         /// <summary> Create and initialize preferences </summary>
         private void menuItem_Preferences_Click(object sender, EventArgs e)
         {
-            var prefs = new Form_Preferences(label_FPath.Text);
+            var prefs = new Form_Preferences(CwdPathName);
             prefs.ShowDialog(this);
         }
 
@@ -198,24 +224,24 @@ namespace genBTC.FileTime.Forms
         /// <summary>
         /// Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
         /// when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
-        /// Fires after some delay (100ms) and if there still is nothing selected, calls CallDisplayCma().
+        /// Fires after some delay (SELECTION_TIMEOUT ms) and if there still is nothing selected, calls CallDisplayCma().
         /// </summary>
         private void _ItemSelectionChangedTimer_Tick(object sender, EventArgs e)
         {
             if (listView_Contents.SelectedItems.Count == 0)
-                CallDisplayCma(listView_Contents, label_FPath.Text);
+                CallDisplayCma(listView_Contents, CwdPathName);
         }
 
         /// <summary>
-        /// The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
+        /// The Contents listview (right) selection has changed. Timer-based solution - block re-selection within SELECTION_TIMEOUTms
         /// </summary>
         private void listView_Contents_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             if (listView_Contents.SelectedItems.Count == 1)
-                CallDisplayCma(listView_Contents, label_FPath.Text);
+                CallDisplayCma(listView_Contents, CwdPathName);
             else
             {
-                itemSelectionChangedTimer.Interval = 100;
+                itemSelectionChangedTimer.Interval = SELECTION_TIMEOUT;
                 itemSelectionChangedTimer.Tick += _ItemSelectionChangedTimer_Tick;
                 itemSelectionChangedTimer.Start();
             }
@@ -237,26 +263,30 @@ namespace genBTC.FileTime.Forms
         private void explorerTree1_PathChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            label_FPath.Text = explorerTree1.CurrentPath;
-            if (!label_FPath.Text.EndsWith(SharedHelper.Seperator.ToString()))
-                label_FPath.Text += SharedHelper.Seperator;
+            CwdPathName = explorerTree1.CurrentPath;
+            if (!CwdPathName.EndsWith(SharedHelper.Seperator.ToString()))
+                CwdPathName += SharedHelper.Seperator;
+            // Display the folder path and the contents of it.
             RefreshContentsRightPanel();
             Cursor.Current = Cursors.Default;
-        }
-
-        /// <summary>  alias for DisplayContentsList. </summary>
-        private void RefreshContentsRightPanel()
-        {
-            _dataModel.imageListFiles = imageList_Files;
-            //DataModel.DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text);
-            _dataModel.DisplayContentsList(checkBox_Recurse.Checked, label_FPath.Text);
-            imageList_Files = _dataModel.imageListFiles;
-            listView_Contents = _dataModel.listViewContents;
+            //Refresh Textbox Data Binding
+            RefreshDataBinding_labelFPath();
         }
 
         #endregion Event functions: Onselected ListView main panels & checkbox
 
-        #region Helper functions: QueryCMAcheckboxes, ClearOnError, DisplayCma, UpdateButtonEnable
+        #region Helper functions: RefreshContentsRightPanel, QueryCMAcheckboxes, ClearOnError, DisplayCma, UpdateButtonEnable
+
+        /// <summary>
+        /// Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+        /// </summary>
+        internal void RefreshContentsRightPanel()
+        { 
+            // Display the folder path and the contents of it.
+            _dataModel.DisplayContentsList(checkBox_Recurse.Checked, CwdPathName);
+            imageList_Files = _dataModel.imageListFiles;
+            listView_Contents = _dataModel.listViewContents;
+        }
 
         /// <summary>  Return the value of the checkboxes "CMA Time"   </summary>
         private BoolCMA QueryCMAcheckboxes()
@@ -295,7 +325,6 @@ namespace genBTC.FileTime.Forms
             radioGroupBox2_CurrentSelectionTime.Enabled = cma.Selected;
             if (!radioGroupBox2_CurrentSelectionTime.Enabled)
                 radioGroupBox1_SpecifyTime.Checked = true;
-            label_FPath.Text = path;
             itemSelectionChangedTimer.Stop();
         }
 
@@ -317,7 +346,7 @@ namespace genBTC.FileTime.Forms
 
         /// <summary>
         /// Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
-        /// then adds them to the confirm list to be handled by the form_confirm window (part2).
+        /// then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
         /// </summary>
         private void StartUpBothModes1And2(int mode2, string startingdir)
         {

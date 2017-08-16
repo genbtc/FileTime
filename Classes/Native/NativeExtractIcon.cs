@@ -56,15 +56,11 @@ namespace genBTC.FileTime.Classes.Native
                 hIcon = IntPtr.Zero;
                 int iIcon = 0;
                 uint dwAttributes = 0;
-                szDisplayName = "";
-                szTypeName = "";
+                string szDisplayName = "";
+                string szTypeName = "";
             }
 
             public readonly IntPtr hIcon;
-            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
-            private readonly string szDisplayName;
-            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_TYPE)]
-            private readonly string szTypeName;
         };
 
         [Flags]

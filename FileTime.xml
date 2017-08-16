@@ -34,14 +34,28 @@
             GUI : Main Form Window of the Program.
             </summary>
         </member>
+        <member name="F:genBTC.FileTime.Forms.Form_Main.SELECTION_TIMEOUT">
+            <summary> Timeout in ms for ListView selection-box's repeat mouse click rejection </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Forms.Form_Main._dataModel">
+            <summary>  A model of the data. Self sufficient.   </summary>
+        </member>
         <member name="F:genBTC.FileTime.Forms.Form_Main.Confirmation">
             <summary> Stub for Form 2 to be accessed once it is opened. </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Forms.Form_Main.itemSelectionChangedTimer">
+            <summary>  a Timer to keep track of the selected line, prevents clicking too fast (timeout)</summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.#ctor">
             <summary>Init the main startup form </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.Form_Main_Load(System.Object,System.EventArgs)">
             <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.RefreshDataBinding_labelFPath">
+            <summary>
+            The Text Box Data Binding is rebound.
+            </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.Form_Main_Run">
             <summary>
@@ -55,12 +69,12 @@
             <summary>
             Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
             when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
-            Fires after some delay (100ms) and if there still is nothing selected, calls CallDisplayCma().
+            Fires after some delay (SELECTION_TIMEOUT ms) and if there still is nothing selected, calls CallDisplayCma().
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.listView_Contents_ItemSelectionChanged(System.Object,System.Windows.Forms.ListViewItemSelectionChangedEventArgs)">
             <summary>
-            The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
+            The Contents listview (right) selection has changed. Timer-based solution - block re-selection within SELECTION_TIMEOUTms
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
@@ -75,7 +89,9 @@
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel">
-            <summary>  alias for DisplayContentsList. </summary>
+            <summary>
+            Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+            </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes">
             <summary>  Return the value of the checkboxes "CMA Time"   </summary>
@@ -96,7 +112,7 @@
         <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
             <summary>
             Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
-            then adds them to the confirm list to be handled by the form_confirm window (part2).
+            then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.LaunchForm2Go">
@@ -118,6 +134,9 @@
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Forms.Form_Main.CwdPathName">
+            <summary> Public Setter to the private var in Datamodel.  </summary>
         </member>
         <member name="T:genBTC.FileTime.AssemblyVersion">
             <summary>
@@ -639,6 +658,15 @@
             <param name="itemIndex">The index of the item to be changed</param>
             <param name="mask">Which bits of the value are to be set?</param>
             <param name="value">The value to be set</param>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.contentsDirList">
+            <summary> Main Lists for filenames. Dir , File, Ext </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.contentsFileList">
+            <summary> Main Lists for filenames. Dir , File, Ext </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.filextlist">
+            <summary> Main Lists for filenames. Dir , File, Ext </summary>
         </member>
         <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
             <summary> Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </summary>

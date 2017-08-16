@@ -9,31 +9,30 @@ using genBTC.FileTime.Properties;
 
 namespace genBTC.FileTime.Models
 {
-    public partial class DataModel
+    internal class DataModel
     {
         #region Vars
-
-        public List<string> contentsDirList;
-        public List<string> contentsFileList;
-        public List<string> filextlist;
+        /// <summary> Main Lists for filenames. Dir , File, Ext </summary>
+        internal List<string> contentsDirList, contentsFileList, filextlist;
         /// <summary> Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </summary>
-        public List<string> FilesReadOnlytoFix;
+        internal List<string> FilesReadOnlytoFix;
         /// <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
         internal List<NameDateObj> FilestoConfirmList;
 
-        public ListView listViewContents;
+        internal ListView listViewContents;
 
-        public ImageList imageListFiles;
+        internal ImageList imageListFiles;
 
         internal SkippedHSR Skips;
 
-        public Random random;
+        internal Random random;
+        internal string CwdPathName;
 
         #endregion Vars
 
 
         /// <summary>  Constructor  </summary>
-        public DataModel()
+        internal DataModel()
         {
             contentsDirList = new List<string>();
             contentsFileList = new List<string>();
@@ -42,10 +41,11 @@ namespace genBTC.FileTime.Models
             FilestoConfirmList = new List<NameDateObj>();
             Skips = new SkippedHSR();
             random = new Random();
+            CwdPathName = "";
         }
 
         /// <summary> Clear contents Dir + File lists </summary>
-        public void Clear(bool resetList)
+        internal void Clear(bool resetList)
         {
             contentsDirList.Clear();
             contentsFileList.Clear();
@@ -53,31 +53,29 @@ namespace genBTC.FileTime.Models
                 listViewContents.Items.Clear();
         }
 
-        public List<string> PopulateFileList(string path)
+        internal List<string> PopulateFileList(string path)
         {
             foreach (string filename in Directory.GetFiles(path))
                 contentsFileList.Add(Path.GetFileName(filename));
             return contentsFileList;
         }
 
-        public List<string> PopulateDirList(string path)
+        internal List<string> PopulateDirList(string path)
         {
             foreach (string subDirectory in Directory.GetDirectories(path))
                 contentsDirList.Add(Path.GetFileName(subDirectory));
             return contentsDirList;
         }
 
-
-
         /// <summary>
         /// Display subfiles and subdirectories in the right panel listview
         /// </summary>
         /// <param name="filesonly">Don't show the directories, only files.</param>
         /// reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
-        public void DisplayContentsList(bool checkboxRecurse, string labelname, bool filesonly = true)
+        internal void DisplayContentsList(bool checkboxRecurse, string labelname, bool filesonly = true)
         {
             //Clear the datamodel + contents UI
-            this.Clear(true);
+            Clear(true);
 
             string directoryName = labelname;
 
@@ -94,12 +92,12 @@ namespace genBTC.FileTime.Models
                 catch (UnauthorizedAccessException)
                 { }
                 //Sort them
-                this.contentsDirList.Sort(SharedHelper.explorerStringComparer());
+                contentsDirList.Sort(SharedHelper.explorerStringComparer());
                 //Add them to the listview.
-                foreach (string subDirectory in this.contentsDirList)
+                foreach (string subDirectory in contentsDirList)
                 {
                     // Display all the sub directories using the directory icon (enum 1)
-                    this.listViewContents.Items.Add(subDirectory, (int)ListViewIcon.Directory);
+                    listViewContents.Items.Add(subDirectory, (int)ListViewIcon.Directory);
                 }
             }
 
@@ -117,28 +115,28 @@ namespace genBTC.FileTime.Models
                     if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
                     {
                         //if not already in the resetList, then add it
-                        if (this.filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
+                        if (filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
                         {
-                            this.filextlist.Add(SharedHelper.CurrExten);
+                            filextlist.Add(SharedHelper.CurrExten);
                             //call NativeExtractIcon to get the filesystem icon of the filename
-                            this.imageListFiles.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
+                            listViewContents.LargeImageList.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
                         }
                     }
                     else //if it is a shortcut, grab icon directly.
-                        this.imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
+                        imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
 
-                    this.contentsFileList.Add(justName);
+                    contentsFileList.Add(justName);
                 }
             }
             catch (UnauthorizedAccessException)
             { }
             //Sort them
-            this.contentsFileList.Sort(SharedHelper.explorerStringComparer());
+            contentsFileList.Sort(SharedHelper.explorerStringComparer());
             //Add them to the listview.
-            foreach (string file in this.contentsFileList)
+            foreach (string file in contentsFileList)
             {
                 string exten = Path.GetExtension(file);
-                this.listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
+                listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
 
@@ -149,7 +147,7 @@ namespace genBTC.FileTime.Models
         internal DateTime? DecideWhichTimeMode1(string path, guistatus gui)
         {
             //Clear the datamodel only
-            this.Clear(false);
+            Clear(false);
 
             var dateToUse = new DateTime?();
             if (gui.radioGroupBox1SpecifyTime)
@@ -376,7 +374,7 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
         /// </summary>
-        public void SkipOrAddFile(string path, bool isDirectory)
+        internal void SkipOrAddFile(string path, bool isDirectory)
         {
             FileAttributes fAttr = File.GetAttributes(path);
 
@@ -488,9 +486,6 @@ namespace genBTC.FileTime.Models
             }
             return cma;
         }
-
-
-
 
         /// <summary>
         /// Very long function that does a simple task. Read in the options the user set for the operation, and
