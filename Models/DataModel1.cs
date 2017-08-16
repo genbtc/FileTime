@@ -28,6 +28,8 @@ namespace genBTC.FileTime.Models
         internal Random random;
         internal string CwdPathName;
 
+        internal BoolCMA checkboxes;
+        internal guistatus gui;
         #endregion Vars
 
 
@@ -144,7 +146,7 @@ namespace genBTC.FileTime.Models
         /// Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
         /// </summary>
         /// reqs: (string path), contentsDirList, contentsFileList, guistatus
-        internal DateTime? DecideWhichTimeMode1(string path, guistatus gui)
+        internal DateTime? DecideWhichTimeMode1(string path)
         {
             //Clear the datamodel only
             Clear(false);
@@ -168,14 +170,15 @@ namespace genBTC.FileTime.Models
             }
             else if (gui.radioGroupBox3UseTimeFrom)
             {
-                dateToUse = DecideTimeFromSubDirFile(path, gui);
+                dateToUse = DecideTimeFromSubDirFile(path);
             }
             return dateToUse;
         }
+
         /// <summary>
         /// Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
         /// </summary>
-        internal DateTime? DecideTimeFromSubDirFile(string path, guistatus gui)
+        internal DateTime? DecideTimeFromSubDirFile(string path)
         {
             var dateToUse = new DateTime?();
             var extractlist = new List<string>();
@@ -262,43 +265,43 @@ namespace genBTC.FileTime.Models
             }
             return dateToUse;
         }
-    //
+         
         /// <summary>
         /// Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
         /// (Only adds to the confirm list, Form 2 will actually write changes).
         /// </summary>
         /// <param name="directoryPath">Full path to the directory</param>
         /// req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        internal void RecurseSubDirectoryMode1(string directoryPath, bool checkedRecurse, bool checkedShouldFiles, BoolCMA checkboxes, guistatus gui)
+        internal void RecurseSubDirectoryMode1(string directoryPath, bool checkedRecurse, bool checkedShouldFiles)
         {
-            DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath, gui);
+            DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath);
             if (nullorfileDateTime == null)
                 return; //if nothing could be decided, exit. otherwise continue
             var fileDateTime = (DateTime)nullorfileDateTime;
 
             // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
             if (checkedRecurse)
-                SetTimeDateEachDirectory(directoryPath, fileDateTime, checkboxes, checkedRecurse, checkedShouldFiles, gui);
+                SetTimeDateEachDirectory(directoryPath, fileDateTime, true, checkedShouldFiles);
             // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
             if (checkedShouldFiles)
-                SetTimeDateEachFile(directoryPath, fileDateTime, checkboxes);
+                SetTimeDateEachFile(directoryPath, fileDateTime);
         }
 
         /// <summary>
         /// Mode 2: Recursive.
         /// </summary>
         /// <param name="directoryPath">Path to start in.</param>
-        internal void RecurseSubDirectoryMode2(string directoryPath, BoolCMA checkboxes, guistatus gui)
+        internal void RecurseSubDirectoryMode2(string directoryPath)
         {
-            NameDateObj timeInside = DecideWhichTimeMode2(directoryPath, gui);
+            NameDateObj timeInside = DecideWhichTimeMode2(directoryPath);
             SkipOrAddFile(directoryPath, true);
-            NameDateObj subFile = Makedateobject(checkboxes, directoryPath, timeInside);
+            NameDateObj subFile = Makedateobject(directoryPath, timeInside);
             FilestoConfirmList.Add(subFile);
 
             try
             {
                 foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder), checkboxes, gui);
+                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder));
             }
             catch (UnauthorizedAccessException)
             { }
@@ -307,12 +310,12 @@ namespace genBTC.FileTime.Models
         }
 
         /// <summary>  Mode 1P (start at its Parent) </summary>
-        internal void RecurseSubDirectoryMode1Parent(string directoryPath, bool checkedRecurse, bool checkedShouldFiles, BoolCMA checkboxes, guistatus gui)
+        internal void RecurseSubDirectoryMode1Parent(string directoryPath, bool checkedRecurse, bool checkedShouldFiles)
         {
             try
             {
                 foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode1(Path.Combine(directoryPath, subfolder), checkedRecurse, checkedShouldFiles, checkboxes, gui);
+                    RecurseSubDirectoryMode1(Path.Combine(directoryPath, subfolder), checkedRecurse, checkedShouldFiles);
             }
             catch (UnauthorizedAccessException)
             { }
@@ -321,12 +324,12 @@ namespace genBTC.FileTime.Models
         }
         // These just point back to the above functions, using the parent folderinstead.
         /// <summary>  Mode 2P (start at its Parent)  </summary>
-        internal void RecurseSubDirectoryMode2Parent(string directoryPath, BoolCMA checkboxes, guistatus gui)
+        internal void RecurseSubDirectoryMode2Parent(string directoryPath)
         {
             try
             {
                 foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder), checkboxes, gui);
+                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder));
             }
             catch (UnauthorizedAccessException)
             { }
@@ -337,7 +340,7 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Set Directory Time
         /// </summary>
-        internal void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime, BoolCMA checkboxes, bool checkedRecurse, bool checkedShouldFiles, guistatus gui)
+        internal void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime, bool checkedRecurse, bool checkedShouldFiles)
         {
             try
             {
@@ -346,9 +349,9 @@ namespace genBTC.FileTime.Models
                 foreach (string eachdir in subDirectories)
                 {
                     // Set the date/time for the sub directory
-                    SetFileDateTimeMode1(checkboxes, eachdir, fileDateTime, true);
+                    SetFileDateTimeMode1(eachdir, fileDateTime, true);
                     // Recurse (loop) through each sub-sub directory
-                    RecurseSubDirectoryMode1(eachdir, checkedRecurse, checkedShouldFiles, checkboxes, gui);
+                    RecurseSubDirectoryMode1(eachdir, checkedRecurse, checkedShouldFiles);
                 }
             } //catch for GetDirs
             catch (UnauthorizedAccessException)
@@ -358,14 +361,14 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Set File Time
         /// </summary>
-        internal void SetTimeDateEachFile(string directoryPath, DateTime fileDateTime, BoolCMA checkboxes)
+        internal void SetTimeDateEachFile(string directoryPath, DateTime fileDateTime)
         {
             try
             {
                 string[] subFiles = Directory.GetFiles(directoryPath);
                 Array.Sort(subFiles, SharedHelper.explorerStringComparer());
                 foreach (string filename in subFiles)
-                    SetFileDateTimeMode1(checkboxes, filename, fileDateTime, false);
+                    SetFileDateTimeMode1(filename, fileDateTime, false);
             } //catch for GetFiles
             catch (UnauthorizedAccessException)
             { }
@@ -417,18 +420,18 @@ namespace genBTC.FileTime.Models
         /// <param name="filePath">Full path to the file/directory</param>
         /// <param name="fileTime">Date/Time to set the file/directory</param>
         /// <param name="isDirectory">Is this a directory???</param>
-        internal void SetFileDateTimeMode1(BoolCMA checkboxes, string filePath, DateTime fileTime, bool isDirectory)
+        internal void SetFileDateTimeMode1(string filePath, DateTime fileTime, bool isDirectory)
         {
             SkipOrAddFile(filePath, isDirectory);
 
-            NameDateObj currentobject = Makedateobject(checkboxes, filePath, fileTime, isDirectory);
+            NameDateObj currentobject = Makedateobject(filePath, fileTime, isDirectory);
             FilestoConfirmList.Add(currentobject);
         }
 
         /// <summary>
         /// Static. Overloaded. Make a NameDateObj out of 1 filename; writes A SINGLE time to all 3 date properties.
         /// </summary>
-        internal NameDateObj Makedateobject(BoolCMA checkboxes, string filePath, DateTime fileTime, bool isDirectory)
+        internal NameDateObj Makedateobject(string filePath, DateTime fileTime, bool isDirectory)
         {
             var currentobject = new NameDateObj { Name = filePath, FileOrDirType = SharedHelper.Bool2Int(isDirectory) };
 
@@ -446,7 +449,7 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Static. Overloaded. Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
         /// </summary>
-        internal NameDateObj Makedateobject(BoolCMA checkboxes, string folderPath, NameDateObj subObj)
+        internal NameDateObj Makedateobject(string folderPath, NameDateObj subObj)
         {
             var currentobject = new NameDateObjListViewVMdl(subObj) { Name = folderPath, FileOrDirType = 1 };
 
@@ -492,7 +495,7 @@ namespace genBTC.FileTime.Models
         /// Decide on the timestamp it should use, by the end we will have a single object with 3 times.
         /// This will need to be hit with broad strokes if we attempt to do any more work on the program.
         /// </summary>
-        internal NameDateObj DecideWhichTimeMode2(string directoryPath, guistatus gui)
+        internal NameDateObj DecideWhichTimeMode2(string directoryPath)
         {
             var extractlist = new List<string>();
 
