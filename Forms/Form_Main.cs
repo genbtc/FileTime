@@ -275,8 +275,8 @@ namespace genBTC.FileTime.Forms
         /// </summary>
         private void ClearOnError()
         {
-            //Clear the contents UI + datamodel
-            _dataModel.Clear();
+            //Clear the datamodel + contents UI
+            _dataModel.Clear(true);
             //Blank out the CMA, clear.
             DisplayCma("");
         }
@@ -286,7 +286,7 @@ namespace genBTC.FileTime.Forms
         /// </summary>
         private void DisplayCma(string path)
         {
-            var cma = DataModel.GetCmaTimes(path);
+            var cma = _dataModel.GetCmaTimes(path);
 
             label_CreationTime.Text = cma.Created;
             label_ModificationTime.Text = cma.Modified;
@@ -345,22 +345,22 @@ namespace genBTC.FileTime.Forms
                         }
                         var fileDateTime = (DateTime)nullorfileDateTime;
 
-                        DataModel.SetFileDateTimeMode1(_dataModel, QueryCMAcheckboxes(), startingdir, fileDateTime, true);
+                        _dataModel.SetFileDateTimeMode1(QueryCMAcheckboxes(), startingdir, fileDateTime, true);
                     }
 
                     //TODO: where I should add worker process
                     if (Settings.Default.useRootDirAsContainer)
-                        DataModel.RecurseSubDirectoryMode1Parent(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
+                        _dataModel.RecurseSubDirectoryMode1Parent(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), gui);
                     else
-                        DataModel.RecurseSubDirectoryMode1(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), _dataModel, gui);
+                        _dataModel.RecurseSubDirectoryMode1(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked, QueryCMAcheckboxes(), gui);
                     //end worker process
                     break;
 
                 case (1):
                     if (Settings.Default.useRootDirAsContainer)
-                        DataModel.RecurseSubDirectoryMode2Parent(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
+                        _dataModel.RecurseSubDirectoryMode2Parent(startingdir, QueryCMAcheckboxes(), gui);
                     else
-                        DataModel.RecurseSubDirectoryMode2(startingdir, _dataModel, QueryCMAcheckboxes(), gui);
+                        _dataModel.RecurseSubDirectoryMode2(startingdir, QueryCMAcheckboxes(), gui);
                     break;
             }
 

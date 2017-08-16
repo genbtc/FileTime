@@ -641,7 +641,7 @@
             <param name="value">The value to be set</param>
         </member>
         <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
-            <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
+            <summary> Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </summary>
         </member>
         <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
             <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
@@ -649,7 +649,7 @@
         <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
             <summary>  Constructor  </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Clear">
+        <member name="M:genBTC.FileTime.Models.DataModel.Clear(System.Boolean)">
             <summary> Clear contents Dir + File lists </summary>
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.DisplayContentsList(System.Boolean,System.String,System.Boolean)">
@@ -663,21 +663,14 @@
             <summary>
             Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
             </summary>
-            reqs: (string path), contentsDirList, contentsFileList, Thi
-            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
-            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
-            radioGroupBox1_SpecifyTime.Checked
-            radioGroupBox2_CurrentSelectionTime.Checked
-            radioGroupBox3_UseTimeFrom.Checked
-                =radioButton1_useTimefromFile.Checked
-                =radioButton2_useTimefromSubdir.Checked
+            reqs: (string path), contentsDirList, contentsFileList, guistatus
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.Models.guistatus)">
             <summary>
-            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+            Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
             <summary>
             Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
             (Only adds to the confirm list, Form 2 will actually write changes).
@@ -685,34 +678,34 @@
             <param name="directoryPath">Full path to the directory</param>
             req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2(System.String,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
             <summary>
             Mode 2: Recursive.
             </summary>
             <param name="directoryPath">Path to start in.</param>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
             <summary>  Mode 1P (start at its Parent) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent(System.String,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.guistatus)">
             <summary>  Mode 2P (start at its Parent)  </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,System.Boolean,System.Boolean,genBTC.FileTime.Models.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,System.Boolean,System.Boolean,genBTC.FileTime.Models.guistatus)">
             <summary>
             Set Directory Time
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachFile(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachFile(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA)">
             <summary>
             Set File Time
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SkipOrAddFile(genBTC.FileTime.Models.DataModel,System.String,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SkipOrAddFile(System.String,System.Boolean)">
             <summary>
             Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1(genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1(genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
             <summary> STATIC.
             Set the date/time for a single file/directory (This works on files and directories)
             Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
@@ -738,7 +731,7 @@
             Display the date and time of the selected file (also works on Directories)
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2(genBTC.FileTime.Models.DataModel,System.String,genBTC.FileTime.Models.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2(System.String,genBTC.FileTime.Models.guistatus)">
             <summary>
             Very long function that does a simple task. Read in the options the user set for the operation, and
             Decide on the timestamp it should use, by the end we will have a single object with 3 times.
