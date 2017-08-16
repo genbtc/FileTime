@@ -4,6 +4,8 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
+using genBTC.FileTime.Classes;
+using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
@@ -11,6 +13,7 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace genBTC.FileTime
 {
+    #region FORM_MAIN2
     public partial class Form_Main
     {
         //native call to do string compare like the OS
@@ -31,7 +34,79 @@ namespace genBTC.FileTime
 
         #endregion Vars
 
-        #region Mode 1 Specific code
+        /// <summary>
+        /// Display subfiles and subdirectories in the right panel listview
+        /// </summary>
+        /// <param name="filesonly">Don't show the directories, only files.</param>
+        /// reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
+        private static void DisplayContentsList(DataModel dataModel, bool checkboxRecurse, string labelname, ListView.ListViewItemCollection listViewContentsItems, ImageList.ImageCollection imageCollection, bool filesonly = true)
+        {
+            //Clear the contents UI + datamodel
+            listViewContentsItems.Clear();
+            dataModel.Clear();
+
+            string directoryName = labelname;
+
+            if (!Directory.Exists(directoryName))
+                return;
+
+            if (!filesonly && checkboxRecurse)
+            {
+                //part 1: list and store all the subdirectories
+                try
+                {
+                    PopulateDirList(directoryName, dataModel);
+                }
+                catch (UnauthorizedAccessException)
+                { }
+                //Sort them
+                dataModel.contentsDirList.Sort(explorerStringComparer());
+                //Add them to the listview.
+                foreach (string subDirectory in dataModel.contentsDirList)
+                {
+                    // Display all the sub directories using the directory icon (enum 1)
+                    listViewContentsItems.Add(subDirectory, (int)ListViewIcon.Directory);
+                }
+            }
+
+            // (Display all of the files and show a file icon)
+            try
+            {
+                //part 2: list all subfiles, match the extension and find the icon.
+                foreach (string file in Directory.GetFiles(directoryName))
+                {
+                    var fileAttribs = File.GetAttributes(file);
+                    if ((fileAttribs & SyncSettingstoInvisibleFlag()) != 0)
+                        continue; //skip the rest if its supposed to be "invisible" based on the mask
+                    var justName = Path.GetFileName(file);
+                    SharedHelper.CurrExten = Path.GetExtension(file);
+                    if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
+                    {
+                        //if not already in the list, then add it
+                        if (dataModel.filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
+                        {
+                            dataModel.filextlist.Add(SharedHelper.CurrExten);
+                            //call NativeExtractIcon to get the filesystem icon of the filename
+                            imageCollection.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
+                        }
+                    }
+                    else //if it is a shortcut, grab icon directly.
+                        imageCollection.Add(justName, NativeExtractIcon.GetIcon(file, true));
+
+                    dataModel.contentsFileList.Add(justName);
+                }
+            }
+            catch (UnauthorizedAccessException)
+            { }
+            //Sort them
+            dataModel.contentsFileList.Sort(explorerStringComparer());
+            //Add them to the listview.
+            foreach (string file in dataModel.contentsFileList)
+            {
+                string exten = Path.GetExtension(file);
+                listViewContentsItems.Add(file, exten != ".lnk" ? exten : file);
+            }
+        }
 
         /// <summary>
         /// Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
@@ -149,9 +224,6 @@ namespace genBTC.FileTime
             { }
         }
 
-        #endregion Mode 1 Specific code
-
-        #region Mode 2 Specific code
 
         /// <summary>
         /// Mode 2. Recursive.
@@ -193,7 +265,7 @@ namespace genBTC.FileTime
             { }
         }
 
-        #endregion Mode 2 Specific code
+
 
         /// <summary>  Reasons to be invisible  </summary>
         private static FileAttributes SyncSettingstoInvisibleFlag()
@@ -685,4 +757,5 @@ namespace genBTC.FileTime
             return path;
         }
     }
+    #endregion FORM_MAIN2
 }

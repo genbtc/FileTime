@@ -47,6 +47,35 @@
             At this point we can run our code (that wants to interact with our designer GUI).
             </summary>
         </member>
+        <member name="M:genBTC.FileTime.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
+            <summary> Create and initialize preferences </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main._ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
+            when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
+            Fires after some delay (100ms) and if there still is nothing selected, calls CallDisplayCma().
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.listView_Contents_ItemSelectionChanged(System.Object,System.Windows.Forms.ListViewItemSelectionChangedEventArgs)">
+            <summary>
+            The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
+            <summary> 
+            Creation,Modified,Accessed Checkbox selection changed. Only enable the update button if something is selected 
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
+            <summary>
+            Update the textlabel box for FilePath when the Explorer Tree path changes.
+            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.RefreshContentsRightPanel">
+            <summary>  alias for DisplayContentsList. </summary>
+        </member>
         <member name="M:genBTC.FileTime.Form_Main.QueryCMAcheckboxes">
             <summary>  Return the value of the checkboxes "CMA Time"   </summary>
         </member>
@@ -55,56 +84,22 @@
             Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.UpdateButtonEnable">
-            <summary> Only enable the update button if something is selected </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
-            <summary> Create and initialize preferences </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(System.Boolean)">
-            <summary>
-            Display subfiles and subdirectories in the right panel listview
-            </summary>
-            <param name="filesonly">Don't show the directories, only files.</param>
-            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.UpdateDisplayFileDateTime(System.Windows.Forms.ListView,System.Windows.Forms.Label)">
+        <member name="M:genBTC.FileTime.Form_Main.DisplayCma(System.String)">
             <summary>
             Display file's times in the Tri-Textbox bottom UI for the currently selected file.
             </summary>
-            <param name="listViewContents"></param>
-            <param name="labelFPath"></param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main._ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
-            <summary>
-            Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
-            when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
-            Fires after some delay (100ms) and if there still is nothing selected, calls UpdateDisplayFileDateTime().
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.listView_Contents_ItemSelectionChanged(System.Object,System.Windows.Forms.ListViewItemSelectionChangedEventArgs)">
-            <summary>
-            The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
-            </summary>
+        <member name="M:genBTC.FileTime.Form_Main.CallDisplayCma(System.Windows.Forms.ListView,System.String)">
+            <summary>  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma </summary>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
             <summary>
             Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
             then adds them to the confirm list to be handled by the form_confirm window (part2).
             </summary>
-            reqs: Datamodel , label_Fpathtext
         </member>
         <member name="M:genBTC.FileTime.Form_Main.LaunchForm2Go">
             <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
-            <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
-            <summary>
-            Update the textlabel box for FilePath when the Explorer Tree path changes.
-            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
-            </summary>
         </member>
         <member name="F:genBTC.FileTime.Form_Main.components">
             <summary>
@@ -122,6 +117,13 @@
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(genBTC.FileTime.Models.DataModel,System.Boolean,System.String,System.Windows.Forms.ListView.ListViewItemCollection,System.Windows.Forms.ImageList.ImageCollection,System.Boolean)">
+            <summary>
+            Display subfiles and subdirectories in the right panel listview
+            </summary>
+            <param name="filesonly">Don't show the directories, only files.</param>
+            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         </member>
         <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
             <summary>
@@ -481,6 +483,24 @@
             Return an int specifying the type of drive.
             </summary>
         </member>
+        <member name="F:genBTC.FileTime.Models.SkippedHSR.H">
+            <summary> Count of the number of hidden files skipped </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.SkippedHSR.R">
+            <summary> Count of the number of Read-only files skipped </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.SkippedHSR.S">
+            <summary> Count of the number of System files skipped </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Models.ListViewIcon">
+            <summary> Icon in listView image list </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.ListViewIcon.File">
+            <summary> File icon in listView image list </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.ListViewIcon.Directory">
+            <summary> Directory icon in listView image list </summary>
+        </member>
         <member name="M:genBTC.FileTime.Program.Main">
             <summary> The main entry point for the application.</summary>
         </member>
@@ -714,6 +734,18 @@
         <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Accessed">
             <summary>returns a string of DateTime.ToString or null </summary>
         </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
+            <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
+            <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
+            <summary>  Constructor  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Clear">
+            <summary> Clear contents Dir + File lists </summary>
+        </member>
         <member name="T:genBTC.FileTime.mViewModels.ListViewItemExplorerLikeComparer">
             <summary> Explorer-like Sort, for use by listview.Sorter </summary>
         </member>
@@ -827,38 +859,8 @@
             </summary>
             <param name="timelist">a List of DateTime?s</param>
         </member>
-        <member name="F:genBTC.FileTime.Models.SkippedHSR.H">
-            <summary> Count of the number of hidden files skipped </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.SkippedHSR.R">
-            <summary> Count of the number of Read-only files skipped </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.SkippedHSR.S">
-            <summary> Count of the number of System files skipped </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Models.ListViewIcon">
-            <summary> Icon in listView image list </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.ListViewIcon.File">
-            <summary> File icon in listView image list </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.ListViewIcon.Directory">
-            <summary> Directory icon in listView image list </summary>
-        </member>
         <member name="T:genBTC.FileTime.mViewModels.ExplorerComparerstringHelper">
             <summary> Explorer-like Sort, for strings </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
-            <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
-            <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
-            <summary>  Constructor  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Clear">
-            <summary> Clear contents Dir + File lists </summary>
         </member>
     </members>
 </doc>
