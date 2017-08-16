@@ -1,6 +1,7 @@
 ﻿/*
  * ## This file is the 2nd Window the confirmation window, "step 2" of the program
  */
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +13,7 @@ using genBTC.FileTime.Classes.Native;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
     /// <summary>
     /// Form 2, confirms the action and shows filenames and dates

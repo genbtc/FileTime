@@ -6,20 +6,12 @@ using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
-using Timer = System.Windows.Forms.Timer;
 
 namespace genBTC.FileTime.Models
 {
     #region FORM_MAIN2
     public partial class DataModel
     {
-        //native call to do string compare like the OS
-        [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
-        public static extern int StrCmpLogicalW(String x, String y);
-
-        #region Vars & Dupe Helper Methods
-
-        #endregion Vars
 
         /// <summary>
         /// Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
@@ -293,29 +285,17 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="dataModel"></param>
-        /// <param name="radioButton1UseTimefromFile"></param>
-        /// <param name="radioButton2UseTimefromSubdir"></param>
-        /// <param name="radioButton1SetfromCreated"></param>
-        /// <param name="radioButton2SetfromModified"></param>
-        /// <param name="radioButton3SetfromAccessed"></param>
-        /// <param name="radioButton4SetfromRandom"></param>
-        /// <param name="radioButton1Oldest"></param>
-        /// <param name="radioButton2Newest"></param>
-        /// <param name="radioButton3Random"></param>
-        /// <returns></returns>
         internal static DateTime? DecideTimeFromSubDirFile(string path, DataModel dataModel, guistatus gui)
         {
             var dateToUse = new DateTime?();
             var extractlist = new List<string>();
             if (gui.radioButton1_useTimefromFile)
             {
-                extractlist = DataModel.PopulateFileList(path, dataModel);
+                extractlist = PopulateFileList(path, dataModel);
             }
             else if (gui.radioButton2_useTimefromSubdir)
             {
-                extractlist = DataModel.PopulateDirList(path, dataModel);
+                extractlist = PopulateDirList(path, dataModel);
             }
 
             // if the list is blank due to no files actually existing then we have nothing to do, so stop here.
@@ -327,11 +307,11 @@ namespace genBTC.FileTime.Models
             //start iterating through
             foreach (string subitem in extractlist)
             {
-                string timelisttype; //this was made just in case.
                 var looptempDate = new DateTime();
                 try
                 {
                     string fullpath = Path.Combine(path, subitem);
+                    string timelisttype = null; //this was made just in case.
                     if (gui.radioButton1_setfromCreated)
                     {
                         timelisttype = "Created";
@@ -368,6 +348,7 @@ namespace genBTC.FileTime.Models
                         }
                     }
                     timelist.Add(looptempDate);
+                    var stopbotheringme = timelisttype; //remove "unused var" warning
                 }
                 catch (UnauthorizedAccessException)
                 { }
@@ -393,32 +374,11 @@ namespace genBTC.FileTime.Models
         }
 
 
-
-
         /// <summary>
         /// Very long function that does a simple task. Read in the options the user set for the operation, and
         /// Decide on the timestamp it should use, by the end we will have a single object with 3 times.
         /// This will need to be hit with broad strokes if we attempt to do any more work on the program.
         /// </summary>
-        /// <param name="dataModel"></param>
-        /// <param name="radioButton3Random"></param>
-        /// <param name="radioButton2Newest"></param>
-        /// <param name="radioButton1Oldest"></param>
-        /// <param name="radioButton2UseTimefromSubdir"></param>
-        /// <param name="radioButton1UseTimefromFile"></param>
-        /// <param name="radioGroupBox3UseTimeFrom"></param>
-        /// <param name="labelLastAccess"></param>
-        /// <param name="labelModified"></param>
-        /// <param name="labelCreationTime"></param>
-        /// <param name="radioGroupBox2CurrentSelectionTime"></param>
-        /// <param name="dateTimePickerTime"></param>
-        /// <param name="dateTimePickerDate"></param>
-        /// <param name="labelHiddenPathName"></param>
-        /// <param name="radioGroupBox1SpecifyTime"></param>
-        /// <param name="directoryPath"></param>
-        /// <returns></returns>
-        // radioButton3Random, radioButton2Newest, radioButton1Oldest, radioButton2_useTimefromSubdir, radioButton1_useTimefromFile, radioGroupBox3_UseTimeFrom, label_AccessedTime, label_ModificationTime, label_CreationTime, radioGroupBox2_CurrentSelectionTime, dateTimePickerTime, dateTimePickerDate, labelHidden_PathName, radioGroupBox1_SpecifyTime,
-        // RadioButton radioButton3Random, RadioButton radioButton2Newest, RadioButton radioButton1Oldest, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1UseTimefromFile, RadioGroupBox radioGroupBox3UseTimeFrom, Label labelLastAccess, Label labelModified, Label labelCreationTime, RadioGroupBox radioGroupBox2CurrentSelectionTime, DateTimePicker dateTimePickerTime, DateTimePicker dateTimePickerDate, Label labelHiddenPathName, RadioGroupBox radioGroupBox1SpecifyTime,
         internal static NameDateObject DecideWhichTimeMode2(DataModel dataModel, string directoryPath, guistatus gui)
         {
             var extractlist = new List<string>();

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
     public partial class Form_Main : Form
     {

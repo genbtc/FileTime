@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.mViewModels;
@@ -26,6 +27,10 @@ namespace genBTC.FileTime.Classes
         {
             return attributes & ~attributesToRemove;
         }
+
+        //native call to do string compare like the OS
+        [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
+        public static extern int StrCmpLogicalW(String x, String y);
         public static IComparer<string> explorerStringComparer()
         {
             return new ExplorerComparerstringHelper();

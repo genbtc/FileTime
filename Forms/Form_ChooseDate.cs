@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using genBTC.FileTime.Models;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
     public partial class Form_ChooseDate : Form
     {

@@ -8,7 +8,7 @@ using System.Threading;
 using System.Windows.Forms;
 using genBTC.FileTime.Properties;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
     /// <summary> Preferences window class </summary>
     public partial class Form_Preferences : Form

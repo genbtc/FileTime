@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
@@ -11,6 +12,8 @@ namespace genBTC.FileTime.Models
 {
     public partial class DataModel
     {
+        #region Vars
+
         public List<string> contentsDirList;
         public List<string> contentsFileList;
         public List<string> filextlist;
@@ -26,6 +29,9 @@ namespace genBTC.FileTime.Models
         internal SkippedHSR Skips;
 
         public Random random;
+
+        #endregion Vars
+
 
         /// <summary>  Constructor  </summary>
         public DataModel()
@@ -46,6 +52,7 @@ namespace genBTC.FileTime.Models
             contentsFileList.Clear();
             listViewContents.Items.Clear();
         }
+
 
         public static List<string> PopulateFileList(string path, DataModel dataModel)
         {
@@ -86,7 +93,7 @@ namespace genBTC.FileTime.Models
                 catch (UnauthorizedAccessException)
                 { }
                 //Sort them
-                dataModel.contentsDirList.Sort(explorerStringComparer());
+                dataModel.contentsDirList.Sort(SharedHelper.explorerStringComparer());
                 //Add them to the listview.
                 foreach (string subDirectory in dataModel.contentsDirList)
                 {
@@ -102,7 +109,7 @@ namespace genBTC.FileTime.Models
                 foreach (string file in Directory.GetFiles(directoryName))
                 {
                     var fileAttribs = File.GetAttributes(file);
-                    if ((fileAttribs & SyncSettingstoInvisibleFlag()) != 0)
+                    if ((fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) != 0)
                         continue; //skip the rest if its supposed to be "invisible" based on the mask
                     var justName = Path.GetFileName(file);
                     SharedHelper.CurrExten = Path.GetExtension(file);
@@ -125,7 +132,7 @@ namespace genBTC.FileTime.Models
             catch (UnauthorizedAccessException)
             { }
             //Sort them
-            dataModel.contentsFileList.Sort(explorerStringComparer());
+            dataModel.contentsFileList.Sort(SharedHelper.explorerStringComparer());
             //Add them to the listview.
             foreach (string file in dataModel.contentsFileList)
             {
@@ -133,26 +140,6 @@ namespace genBTC.FileTime.Models
                 dataModel.listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
-
-        public static IComparer<string> explorerStringComparer()
-        {
-            return new ExplorerComparerstringHelper();
-        }
-        /// <summary>  Reasons to be invisible  </summary>
-        private static FileAttributes SyncSettingstoInvisibleFlag()
-        {
-            FileAttributes reasonsToBeInvisible = (Settings.Default.ShowHidden ? 0 : FileAttributes.Hidden) |
-                                                  (Settings.Default.ShowSystem ? 0 : FileAttributes.System) |
-                                                  (Settings.Default.ShowReadOnly ? 0 : FileAttributes.ReadOnly);
-            return reasonsToBeInvisible;
-        }
-
-        /// <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        private static int Bool2Int(bool fileOrDir)
-        {
-            return fileOrDir ? 1 : 0;
-        }
-
 
     //
     }

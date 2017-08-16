@@ -15,7 +15,7 @@ using genBTC.FileTime.Classes;
 using genBTC.FileTime.Models;
 using genBTC.FileTime.Properties;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
     /// <summary>
     /// GUI : Main Form Window of the Program.
@@ -320,9 +320,7 @@ namespace genBTC.FileTime
         {
             _dataModel.FilestoConfirmList.Clear();
 
-            _dataModel.Skips.H = 0;
-            _dataModel.Skips.R = 0;
-            _dataModel.Skips.S = 0;
+            _dataModel.Skips.Reset();
 
             var gui = GetGUIRadioButtonStatusData();
 

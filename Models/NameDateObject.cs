@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using genBTC.FileTime.Classes;
 
 namespace genBTC.FileTime.Models
 {
@@ -80,7 +81,7 @@ namespace genBTC.FileTime.Models
         {
             public int Compare(NameDateObject obj1, NameDateObject obj2)
             {
-                return DataModel.StrCmpLogicalW(obj1.Name, obj2.Name);
+                return SharedHelper.StrCmpLogicalW(obj1.Name, obj2.Name);
             }
         }
     }

@@ -8,12 +8,13 @@
  * /// Note:-has the codebehind right in this file.
  * ///      -email address is hardcoded in here line 204
  */
+
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
     /// <summary>
     /// About Form. Shows basic program information.

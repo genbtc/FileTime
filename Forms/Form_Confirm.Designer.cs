@@ -1,9 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using genBTC.FileTime.Classes;
+﻿using System.Windows.Forms;
 using genBTC.FileTime.mViewModels;
 
-namespace genBTC.FileTime
+namespace genBTC.FileTime.Forms
 {
 
     partial class Form_Confirm 

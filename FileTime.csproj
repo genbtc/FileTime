@@ -131,8 +131,8 @@
     <Compile Include="mViewModels\CustomListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="mViewModels\ExplorerComparerstringHelper.cs" />
-    <Compile Include="mViewModels\ListViewItemExplorerLikeComparer.cs" />
+    <Compile Include="Classes\ExplorerComparerstringHelper.cs" />
+    <Compile Include="Classes\ListViewItemExplorerLikeComparer.cs" />
     <Compile Include="Classes\Native\NativeScroll.cs" />
     <Compile Include="Classes\Native\NativeSelect.cs" />
     <Compile Include="Models\OldNewDate.cs" />

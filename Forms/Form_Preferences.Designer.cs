@@ -1,4 +1,4 @@
-﻿namespace genBTC.FileTime
+﻿namespace genBTC.FileTime.Forms
 {
     partial class Form_Preferences
     {

@@ -13,8 +13,8 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
-using genBTC.FileTime.mViewModels;
 
 namespace WindowsExplorer
 {

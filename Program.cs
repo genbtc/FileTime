@@ -5,6 +5,7 @@
 
 using System;
 using System.Windows.Forms;
+using genBTC.FileTime.Forms;
 
 namespace genBTC.FileTime
 {
