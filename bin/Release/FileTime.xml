@@ -4,9 +4,47 @@
         <name>FileTime</name>
     </assembly>
     <members>
+        <member name="T:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl">
+            <summary>ViewModel version of the NameDateObj(Name + 3 Dates)</summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.#ctor(System.Windows.Forms.ListViewItem)">
+            <summary> construct with a listviewitem </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.#ctor(genBTC.FileTime.Models.NameDateObj)">
+            <summary> construct with a NameDateObj </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.#ctor">
+            <summary> Empty default constructor (initializer) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare(genBTC.FileTime.mViewModels.NameDateObjListViewVMdl,genBTC.FileTime.mViewModels.NameDateObjListViewVMdl)">
+            <summary>
+            Compares two of these objects's DATES, Combines any dates that are null or not null and returns only one
+            Looks super stupid, but makes the "Try to combine DUPlicate filenames" actually work. Help ?
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Converter">
+            <summary> Converts this class into a ListViewItem. </summary>
+            <returns>  Returns a listviewitem</returns>
+        </member>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.FileOrDirType">
+            <summary>int FileOrDirType: 0 (File) or 1 (Dir)</summary>
+        </member>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Name">
+            <summary>string Name: filepathname</summary>
+        </member>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created">
+            <summary>returns a string of DateTime.ToString or null </summary>
+        </member>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Modified">
+            <summary>returns a string of DateTime.ToString or null </summary>
+        </member>
+        <member name="P:genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Accessed">
+            <summary>returns a string of DateTime.ToString or null </summary>
+        </member>
         <member name="T:genBTC.FileTime.mViewModels.CustomListView">
             <summary>
             Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
+            (Currently used for FORM_CONFIRM)
             </summary>
         </member>
         <member name="M:genBTC.FileTime.mViewModels.CustomListView.SendMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
@@ -20,162 +58,198 @@
         </member>
         <member name="M:genBTC.FileTime.mViewModels.CustomListView.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
             <summary>
-            Subscribe to MouseDown event for the ListView. 
-            Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). 
+            Subscribe to MouseDown event for the ListView.
+            Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y).
             If they hit on an item AND it was a right click, set contextMenuAllowed to true.
             </summary>
         </member>
         <member name="P:genBTC.FileTime.mViewModels.CustomListView.ContextMenuAllowed">
             <summary> Bool to determine if the context menu should be shown</summary>
         </member>
-        <member name="T:genBTC.FileTime.Form_Main">
+        <member name="T:genBTC.FileTime.Forms.Form_Main">
             <summary>
-            GUI : Main Form Window of the Program. 
+            GUI : Main Form Window of the Program.
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Main.Confirmation">
+        <member name="F:genBTC.FileTime.Forms.Form_Main.SELECTION_TIMEOUT">
+            <summary> Timeout in ms for ListView selection-box's repeat mouse click rejection </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Forms.Form_Main._dataModel">
+            <summary>  A model of the data. Self sufficient.   </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Forms.Form_Main.Confirmation">
             <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.#ctor">
+        <member name="F:genBTC.FileTime.Forms.Form_Main.itemSelectionChangedTimer">
+            <summary>  a Timer to keep track of the selected line, prevents clicking too fast (timeout)</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.#ctor">
             <summary>Init the main startup form </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.Form_Main_Load(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.Form_Main_Load(System.Object,System.EventArgs)">
             <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.Form_Main_Run">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.RefreshDataBinding_labelFPath">
+            <summary>
+            The Text Box Data Binding is rebound.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.Form_Main_Run">
             <summary>
             At this point we can run our code (that wants to interact with our designer GUI).
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.QueryCMAcheckboxes">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
+            <summary> Create and initialize preferences </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main._ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
+            when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
+            Fires after some delay (SELECTION_TIMEOUT ms) and if there still is nothing selected, calls CallDisplayCma().
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.listView_Contents_ItemSelectionChanged(System.Object,System.Windows.Forms.ListViewItemSelectionChangedEventArgs)">
+            <summary>
+            The Contents listview (right) selection has changed. Timer-based solution - block re-selection within SELECTION_TIMEOUTms
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
+            <summary> 
+            Creation,Modified,Accessed Checkbox selection changed. Only enable the update button if something is selected 
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
+            <summary>
+            Update the textlabel box for FilePath when the Explorer Tree path changes.
+            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel">
+            <summary>
+            Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes">
             <summary>  Return the value of the checkboxes "CMA Time"   </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.ClearOnError">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.ClearOnError">
             <summary>
             Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.UpdateButtonEnable">
-            <summary> Only enable the update button if something is selected </summary>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.DisplayCma(System.String)">
+            <summary>
+            Display file's times in the Tri-Textbox bottom UI for the currently selected file.
+            </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
-            <summary> Create and initialize preferences </summary>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.CallDisplayCma(System.Windows.Forms.ListView,System.String)">
+            <summary>  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.DisplayContentsList(System.Boolean)">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
+            <summary>
+            Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
+            then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.LaunchForm2Go">
+            <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Forms.Form_Main.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Forms.Form_Main.CwdPathName">
+            <summary> Public Setter to the private var in Datamodel.  </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.contentsDirList">
+            <summary> Main Lists for filenames. Dir , File, Ext </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.contentsFileList">
+            <summary> Main Lists for filenames. Dir , File, Ext </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.filextlist">
+            <summary> Main Lists for filenames. Dir , File, Ext </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
+            <summary> Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
+            <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
+            <summary>  Constructor  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.Clear(System.Boolean)">
+            <summary> Clear contents Dir + File lists </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.DisplayContentsList(System.Boolean,System.String,System.Boolean)">
             <summary>
             Display subfiles and subdirectories in the right panel listview
             </summary>
             <param name="filesonly">Don't show the directories, only files.</param>
             reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.UpdateDisplayFileDateTime(System.Windows.Forms.ListView,System.Windows.Forms.Label)">
-            <summary>
-            Display file's times in the Tri-Textbox bottom UI for the currently selected file.
-            </summary>
-            <param name="listViewContents"></param>
-            <param name="labelFPath"></param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main._ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
-            <summary>
-            Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
-            when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
-            Fires after some delay (100ms) and if there still is nothing selected, calls UpdateDisplayFileDateTime().
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.listView_Contents_ItemSelectionChanged(System.Object,System.Windows.Forms.ListViewItemSelectionChangedEventArgs)">
-            <summary>
-            The Contents listview (right) selection has changed, with a timer-based solution to decide if there was a re-selection within 100ms
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
-            <summary>
-            Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, 
-            then adds them to the confirm list to be handled by the form_confirm window (part2).
-            </summary>
-            reqs: Datamodel , label_Fpathtext
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.LaunchForm2Go">
-            <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
-            <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.explorerTree1_PathChanged(System.Object,System.EventArgs)">
-            <summary>
-            Update the textlabel box for FilePath when the Explorer Tree path changes.
-            (making sure it always ends in a \ seperator). Also causes a re-render of Contents!
-            </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Form_Main.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Mode1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() 
-            (Only adds to the confirm list, Form 2 will actually write changes).
-            </summary>
-            <param name="directoryPath">Full path to the directory</param>
-            <param name="checkedRecurse"></param>
-            <param name="checkedShouldFiles"></param>
-            <param name="checkboxes"></param>
-            <param name="dataModel"></param>
-            req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode1B(System.String,System.Boolean,System.Boolean,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>  Mode 1B </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode1(System.String,genBTC.FileTime.Form_Main.guistatus,genBTC.FileTime.Models.DataModel)">
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1(System.String)">
             <summary>
             Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
             </summary>
-            reqs: (string path), contentsDirList, contentsFileList, Thi
-            This is a viewmodel thing sorta. Grab the viewmodel as data first, then act, then update viewmodel.
-            This viewmodel needs to contain: radioGroupBox1_SpecifyTime.Che
-            radioGroupBox1_SpecifyTime.Checked
-            radioGroupBox2_CurrentSelectionTime.Checked
-            radioGroupBox3_UseTimeFrom.Checked
-                =radioButton1_useTimefromFile.Checked
-                =radioButton2_useTimefromSubdir.Checked
+            reqs: (string path), contentsDirList, contentsFileList, guistatus
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetTimeDateEachDirectory(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel,System.Boolean,System.Boolean,genBTC.FileTime.Form_Main.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile(System.String)">
+            <summary>
+            Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+            (Only adds to the confirm list, Form 2 will actually write changes).
+            </summary>
+            <param name="directoryPath">Full path to the directory</param>
+            req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2(System.String)">
+            <summary>
+            Mode 2: Recursive.
+            </summary>
+            <param name="directoryPath">Path to start in.</param>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String,System.Boolean,System.Boolean)">
+            <summary>  Mode 1P (start at its Parent) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent(System.String)">
+            <summary>  Mode 2P (start at its Parent)  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime,System.Boolean,System.Boolean)">
             <summary>
             Set Directory Time
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetTimeDateEachFile(System.String,System.DateTime,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Models.DataModel)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachFile(System.String,System.DateTime)">
             <summary>
             Set File Time
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode2(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Form_Main.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SkipOrAddFile(System.String,System.Boolean)">
             <summary>
-            Mode 2. Recursive.
+            Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
             </summary>
-            <param name="directoryPath">Path to start in.</param>
-            <param name="dataModel"></param>
-            <param name="checkboxes"></param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.SyncSettingstoInvisibleFlag">
-            <summary>  Reasons to be invisible  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.Bool2Int(System.Boolean)">
-            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.SetFileDateTimeMode1(genBTC.FileTime.Models.DataModel,genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1(System.String,System.DateTime,System.Boolean)">
             <summary> STATIC.
             Set the date/time for a single file/directory (This works on files and directories)
             Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
@@ -186,66 +260,57 @@
             <param name="fileTime">Date/Time to set the file/directory</param>
             <param name="isDirectory">Is this a directory???</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(genBTC.FileTime.Models.BoolCMA,System.String,System.DateTime,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.Makedateobject(System.String,System.DateTime,System.Boolean)">
             <summary>
-            Static. Overloaded. Make a NameDateObject out of 1 filename; writes A SINGLE time to all 3 date properties.
+            Static. Overloaded. Make a NameDateObj out of 1 filename; writes A SINGLE time to all 3 date properties.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.Makedateobject(genBTC.FileTime.Models.BoolCMA,System.String,genBTC.FileTime.Models.NameDateObject)">
+        <member name="M:genBTC.FileTime.Models.DataModel.Makedateobject(System.String,genBTC.FileTime.Models.NameDateObj)">
             <summary>
-            Static. Overloaded. Make a NameDateObject out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+            Static. Overloaded. Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.GetCmaTimes(System.String)">
+        <member name="M:genBTC.FileTime.Models.DataModel.GetCmaTimes(System.String)">
             <summary>
             Display the date and time of the selected file (also works on Directories)
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideTimeFromSubDirFile(System.String,genBTC.FileTime.Models.DataModel,genBTC.FileTime.Form_Main.guistatus)">
-            <summary>
-            Static. Check all the subdirs or subfiles. And decide the time. Called from: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
-            </summary>
-            <param name="path"></param>
-            <param name="dataModel"></param>
-            <param name="radioButton1UseTimefromFile"></param>
-            <param name="radioButton2UseTimefromSubdir"></param>
-            <param name="radioButton1SetfromCreated"></param>
-            <param name="radioButton2SetfromModified"></param>
-            <param name="radioButton3SetfromAccessed"></param>
-            <param name="radioButton4SetfromRandom"></param>
-            <param name="radioButton1Oldest"></param>
-            <param name="radioButton2Newest"></param>
-            <param name="radioButton3Random"></param>
-            <returns></returns>
-        </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(genBTC.FileTime.Models.DataModel,System.String,genBTC.FileTime.Form_Main.guistatus)">
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2(System.String)">
             <summary>
             Very long function that does a simple task. Read in the options the user set for the operation, and
             Decide on the timestamp it should use, by the end we will have a single object with 3 times.
             This will need to be hit with broad strokes if we attempt to do any more work on the program.
             </summary>
-            <param name="dataModel"></param>
-            <param name="radioButton3Random"></param>
-            <param name="radioButton2Newest"></param>
-            <param name="radioButton1Oldest"></param>
-            <param name="radioButton2UseTimefromSubdir"></param>
-            <param name="radioButton1UseTimefromFile"></param>
-            <param name="radioGroupBox3UseTimeFrom"></param>
-            <param name="labelLastAccess"></param>
-            <param name="labelModified"></param>
-            <param name="labelCreationTime"></param>
-            <param name="radioGroupBox2CurrentSelectionTime"></param>
-            <param name="dateTimePickerTime"></param>
-            <param name="dateTimePickerDate"></param>
-            <param name="labelHiddenPathName"></param>
-            <param name="radioGroupBox1SpecifyTime"></param>
-            <param name="directoryPath"></param>
-            <returns></returns>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.OpenFile(System.String)">
+        <member name="T:genBTC.FileTime.Models.NameDateObj">
+            <summary>Class object with 5 properties to refer to a file/dir</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor(System.Windows.Forms.ListViewItem)">
+            <summary> constructor with a listviewitem </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor">
+            <summary> default Constructor (Initializer)</summary>
+        </member>
+        <member name="P:genBTC.FileTime.Models.NameDateObj.FileOrDirType">
+            <summary>quick flag to know whether we're a file or a dir
+            int FileOrDirType: 0 (File) or 1 (Dir)
+            </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Models.NameDateObj.Name">
+            <summary>string Name: the file name</summary>
+        </member>
+        <member name="P:genBTC.FileTime.Models.NameDateObj.Created">
+            <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Models.NameDateObj.Modified">
+            <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="P:genBTC.FileTime.Models.NameDateObj.Accessed">
+            <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort">
             <summary>
-            Display the Folder Browser Dialog and then display the selected
-            file path and the directories and files in the folder.
+            Explorer-like Sort, that orders two NameDateObj's by their name property
             </summary>
         </member>
         <member name="T:genBTC.FileTime.AssemblyVersion">
@@ -261,7 +326,7 @@
         </member>
         <member name="M:genBTC.FileTime.AssemblyVersion.ToString">
             <summary>
-            Returns a string with the assembly version attributes 
+            Returns a string with the assembly version attributes
             </summary>
             <returns>String with the assembly version attributes</returns>
         </member>
@@ -324,6 +389,18 @@
         <member name="P:genBTC.FileTime.AssemblyVersion.VersionDetails">
             <summary>
             Gets the major, minor, revision, and build numbers of the assembly.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag">
+            <summary>  Reasons to be invisible  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
+            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFile(System.String)">
+            <summary>
+            Display the Folder Browser Dialog and then display the selected
+            file path and the directories and files in the folder.
             </summary>
         </member>
         <member name="T:genBTC.FileTime.Classes.Native.NativeExtractIcon">
@@ -436,7 +513,7 @@
         </member>
         <member name="M:WindowsExplorer.ExplorerTree.tvwMain_DoubleClick(System.Object,System.EventArgs)">
             <summary>
-            Event for collapse/expand 
+            Event for collapse/expand
             </summary>
         </member>
         <member name="M:WindowsExplorer.ExplorerTree.RefreshFolders">
@@ -481,241 +558,229 @@
             Return an int specifying the type of drive.
             </summary>
         </member>
+        <member name="F:genBTC.FileTime.Models.SkippedHSR.H">
+            <summary> Count of the number of hidden files skipped </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.SkippedHSR.R">
+            <summary> Count of the number of Read-only files skipped </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.SkippedHSR.S">
+            <summary> Count of the number of System files skipped </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.SkippedHSR.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary> Default Constructor   </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.SkippedHSR.Reset">
+            <summary>  Reset the skip count of Hidden system and readonly files  </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Models.DisplayCmaTimeData">
+            <summary>  Store some the fields that the GUI uses. Small Version. </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Models.guistatus">
+            <summary>  Store all(most) the fields that the GUI uses, for populating the viewmodel. </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Models.ListViewIcon">
+            <summary> Icon in listView image list </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.ListViewIcon.File">
+            <summary> File icon in listView image list </summary>
+        </member>
+        <member name="F:genBTC.FileTime.Models.ListViewIcon.Directory">
+            <summary> Directory icon in listView image list </summary>
+        </member>
         <member name="M:genBTC.FileTime.Program.Main">
             <summary> The main entry point for the application.</summary>
         </member>
-        <member name="T:genBTC.FileTime.Form_Preferences">
+        <member name="T:genBTC.FileTime.Forms.Form_Preferences">
             <summary> Preferences window class </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Preferences.components">
+        <member name="F:genBTC.FileTime.Forms.Form_Preferences.components">
             <summary>
             Required designer variable.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Preferences.Dispose(System.Boolean)">
+        <member name="M:genBTC.FileTime.Forms.Form_Preferences.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Preferences.InitializeComponent">
+        <member name="M:genBTC.FileTime.Forms.Form_Preferences.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Preferences.#ctor(System.String)">
+        <member name="M:genBTC.FileTime.Forms.Form_Preferences.#ctor(System.String)">
             <summary>Show preferences window</summary>
         </member>
-        <member name="T:genBTC.FileTime.Models.NameDateObject">
-            <summary>Class object with 5 properties to refer to a file/dir</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.NameDateObject.#ctor(System.Windows.Forms.ListViewItem)">
-            <summary> constructor with a listviewitem </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.NameDateObject.#ctor">
-            <summary> default Constructor (Initializer)</summary>
-        </member>
-        <member name="P:genBTC.FileTime.Models.NameDateObject.FileOrDirType">
-            <summary>quick flag to know whether we're a file or a dir
-            int FileOrDirType: 0 (File) or 1 (Dir)
-            </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Models.NameDateObject.Name">
-            <summary>string Name: the file name</summary>
-        </member>
-        <member name="P:genBTC.FileTime.Models.NameDateObject.Created">
-            <summary>returns an object: DateTime or null </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Models.NameDateObject.Modified">
-            <summary>returns an object: DateTime or null </summary>
-        </member>
-        <member name="P:genBTC.FileTime.Models.NameDateObject.Accessed">
-            <summary>returns an object: DateTime or null </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Models.NameDateObject.ExplorerLikeSort">
-            <summary>
-            Explorer-like Sort, that orders two NameDateObject's by their name property
-            </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Form_Confirm">
+        <member name="T:genBTC.FileTime.Forms.Form_Confirm">
             <summary>
             Form 2, confirms the action and shows filenames and dates
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Confirm._checklist">
+        <member name="F:genBTC.FileTime.Forms.Form_Confirm._checklist">
             <summary> list of listview items's checkbox state bool values </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Confirm._itemsErrorsCount">
+        <member name="F:genBTC.FileTime.Forms.Form_Confirm._itemsErrorsCount">
             <summary> Count of the number of files/directories that have errors setting the date/time </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Confirm._itemsSetCount">
+        <member name="F:genBTC.FileTime.Forms.Form_Confirm._itemsSetCount">
             <summary> Count of the number of files/directories that have been set </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Confirm.active">
+        <member name="F:genBTC.FileTime.Forms.Form_Confirm.active">
             <summary> the fixreadonly active files count (checked in between fix and unfix) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.#ctor(genBTC.FileTime.Form_Main)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.#ctor(genBTC.FileTime.Forms.Form_Main)">
             <summary> Form 2 creation and initialization code. </summary>
             <param name="f1">so we can modify publics in the main form</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.FixReadonlyResults">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.FixReadonlyResults">
             <summary>
             Show a message box of any files that were cleared of their read-only tag.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.MakeListView">
-            <summary> 
-            turn the NameDateObject lists from Form_Main into the listview on Form_Confirm </summary>
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.MakeListView">
+            <summary>
+            turn the NameDateObj lists from Form_Main into the listview on Form_Confirm </summary>
             use the results as the new data model.
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.UpdateStatusBar">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.UpdateStatusBar">
             <summary> Show current number of files on the status bar line, and store all checkboxes each time </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.ResetReadOnly">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.ResetReadOnly">
             <summary> Adds the read-only attribute back after it was removed </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.Form_Confirm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
              <summary>
             Clear the main form's fileconfirm list if form2 is closed.
             If the user does not want to clear the list, they can leave the form_Confirm open
              and access form_Main multiple times to incrementally add to the form_Confirm list.
              </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.DoConditionalAgeCheck(System.DateTime,System.String,System.Int32)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.DoConditionalAgeCheck(System.DateTime,System.String,System.Int32)">
             <summary>
             Check the radiobuttons, then check the filesystem's existing dates and
             returns true if files should be modified.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.SetTime(System.Int32,System.String,System.DateTime)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.SetTime(System.Int32,System.String,System.DateTime)">
             <summary> Function which touches the filesystem to set the dates </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.button1_Confirm_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.button1_Confirm_Click(System.Object,System.EventArgs)">
             <summary>
             Confirm Button - Actually finally set the files datetimes, if it matches conditions.
             Shows a progress bar.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.condenseMultipleLinesToolStripMenuItem_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.condenseMultipleLinesToolStripMenuItem_Click(System.Object,System.EventArgs)">
             <summary>
             Combine all the adjacent items which have the same name, and matching blank/nonblank or identical date attributes
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.toolStripMenuItem1_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1_Click(System.Object,System.EventArgs)">
             <summary> Change Date... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.toolStripMenu_ThreeRemoves(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenu_ThreeRemoves(System.Object,System.EventArgs)">
             <summary> Remove 1=Created,2=Modified,3=Accessed... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.toolStripMenuItem5_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_Click(System.Object,System.EventArgs)">
             <summary> Open Explorer here... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.toolStripMenuItem6_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_Click(System.Object,System.EventArgs)">
             <summary> Delete Item... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.RestoreCheckboxes">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes">
             <summary> restore all the checkboxes at once (not used?) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.RestoreCheckboxes(System.Int32)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes(System.Int32)">
             <summary> restore only one checkbox.  </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.StoreCheckboxes">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes">
             <summary>
             Clear list if any, and store entire new list of checkboxes. (could not direct copy the internal array (see comments))
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.StoreCheckboxes(System.Windows.Forms.ItemCheckedEventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes(System.Windows.Forms.ItemCheckedEventArgs)">
             <summary>
             Change stored value of one checkbox in the checklist storage array.
              Called multiple times from listView1_Confirm_ItemChecked, e is the item being changed.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.menuStrip1_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.menuStrip1_Click(System.Object,System.EventArgs)">
             <summary>change focus back to the listview when the menu is clicked (so it doesnt go gray)</summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.listView1_Confirm_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
             <summary> respond to the delete key as if the delete context menu was clicked </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_Confirm.components">
+        <member name="F:genBTC.FileTime.Forms.Form_Confirm.components">
             <summary>
             Required designer variable.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Confirm.Dispose(System.Boolean)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="F:genBTC.FileTime.Form_Confirm.imageList_Files">
+        <member name="F:genBTC.FileTime.Forms.Form_Confirm.imageList_Files">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_ChooseDate.components">
+        <member name="F:genBTC.FileTime.Forms.Form_ChooseDate.components">
             <summary>
             Required designer variable.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_ChooseDate.Dispose(System.Boolean)">
+        <member name="M:genBTC.FileTime.Forms.Form_ChooseDate.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_ChooseDate.InitializeComponent">
+        <member name="M:genBTC.FileTime.Forms.Form_ChooseDate.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_ChooseDate.Datechosen">
+        <member name="F:genBTC.FileTime.Forms.Form_ChooseDate.Datechosen">
             <summary> the date object that will be accessed by the other form </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_ChooseDate.#ctor(System.Windows.Forms.ListViewItem)">
+        <member name="M:genBTC.FileTime.Forms.Form_ChooseDate.#ctor(System.Windows.Forms.ListViewItem)">
             <summary>  a small form, used only for choosing a date. </summary>
         </member>
-        <member name="T:genBTC.FileTime.mViewModels.NameDateObjectListViewVm">
-            <summary>ViewModel version of the NameDateObject(Name + 3 Dates)</summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor(System.Windows.Forms.ListViewItem)">
-            <summary> construct with a listviewitem </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor(genBTC.FileTime.Models.NameDateObject)">
-            <summary> construct with a NameDateObject </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.#ctor">
-            <summary> Empty default constructor (initializer) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Compare(genBTC.FileTime.mViewModels.NameDateObjectListViewVm,genBTC.FileTime.mViewModels.NameDateObjectListViewVm)">
+        <member name="T:genBTC.FileTime.Models.DateNewOldObj">
             <summary>
-            Compares two of these objects's DATES, Combines any dates that are null or not null and returns only one
-            Looks super stupid, but makes the "Try to combine DUPlicate filenames" actually work. Help ?
+            Class: given a list of DateTime?s, get oldest and newest date and the index of each
+            This is for the "Source time from" option - it looks at an entire subfolder of files.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Converter">
-            <summary> Converts this class into a ListViewItem. </summary>
-            <returns>  Returns a listviewitem</returns>
+        <member name="F:genBTC.FileTime.Models.DateNewOldObj.Index">
+            <summary> total indexes </summary>
         </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.FileOrDirType">
-            <summary>int FileOrDirType: 0 (File) or 1 (Dir)</summary>
+        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MaxDate">
+            <summary> maxdate </summary>
         </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Name">
-            <summary>string Name: filepathname</summary>
+        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MaxIndex">
+            <summary> maxindex are indexes of the maxdate </summary>
         </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Created">
-            <summary>returns a string of DateTime.ToString or null </summary>
+        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MinDate">
+            <summary> mindate </summary>
         </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Modified">
-            <summary>returns a string of DateTime.ToString or null </summary>
+        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MinIndex">
+            <summary> minindex are indexes of the mindate </summary>
         </member>
-        <member name="P:genBTC.FileTime.mViewModels.NameDateObjectListViewVm.Accessed">
-            <summary>returns a string of DateTime.ToString or null </summary>
-        </member>
-        <member name="T:genBTC.FileTime.mViewModels.ListViewItemExplorerLikeComparer">
-            <summary> Explorer-like Sort, for use by listview.Sorter </summary>
+        <member name="M:genBTC.FileTime.Models.DateNewOldObj.#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.DateTime}})">
+            <summary>
+            Takes a list of datetimes(which came from a list of files) and
+            calculates the newest and oldest dates and stores the indexes too.
+            Constructor for the class. Also does all the work.
+            </summary>
+            <param name="timelist">a List of DateTime?s</param>
         </member>
         <member name="M:genBTC.FileTime.Classes.Native.NativeScroll.SetScrollPos(System.IntPtr,System.Int32,System.Int32,System.Boolean)">
             <summary> Manually scroll a control </summary>
@@ -730,47 +795,53 @@
             <param name="pixelsH">pixels to scroll by</param>
             <param name="abs">absolute? otherwise, get current position and add pixelsH to that</param>
         </member>
-        <member name="T:genBTC.FileTime.Form_About">
+        <member name="T:genBTC.FileTime.Classes.ExplorerLikeComparer">
+            <summary> Explorer-like Sort, for strings </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.ExpLikeCmpHelperforListView">
+            <summary> Explorer-like Sort, for ListViewItem - used by listview.Sorter </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Forms.Form_About">
             <summary>
             About Form. Shows basic program information.
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Form_About._components">
+        <member name="F:genBTC.FileTime.Forms.Form_About._components">
             <summary>
             Required designer variables.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.#ctor">
+        <member name="M:genBTC.FileTime.Forms.Form_About.#ctor">
             <summary>
             the About... form window
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.Dispose(System.Boolean)">
+        <member name="M:genBTC.FileTime.Forms.Form_About.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.InitializeComponent">
+        <member name="M:genBTC.FileTime.Forms.Form_About.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.Form_About_Load(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_About.Form_About_Load(System.Object,System.EventArgs)">
             <summary>
             Load the About Form
             </summary>
             <param name="sender">Object</param>
             <param name="e">EventArgs</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.linkLabel_Address_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_About.linkLabel_Address_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
             <summary>
             Link to mailto: genbtc
             </summary>
             <param name="sender">object</param>
             <param name="e">EventArgs</param>
         </member>
-        <member name="M:genBTC.FileTime.Form_About.button_Close_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_About.button_Close_Click(System.Object,System.EventArgs)">
             <summary>
             Close this form
             </summary>
@@ -797,68 +868,6 @@
             <param name="itemIndex">The index of the item to be changed</param>
             <param name="mask">Which bits of the value are to be set?</param>
             <param name="value">The value to be set</param>
-        </member>
-        <member name="T:genBTC.FileTime.Models.OldNewDate">
-            <summary>
-            Class: given a list of DateTime?s, get oldest and newest date and the index of each
-            This is for the "Source time from" option - it looks at an entire subfolder of files.
-            </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.OldNewDate.Index">
-            <summary> total indexes </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.OldNewDate.MaxDate">
-            <summary> maxdate </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.OldNewDate.MaxIndex">
-            <summary> maxindex are indexes of the maxdate </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.OldNewDate.MinDate">
-            <summary> mindate </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.OldNewDate.MinIndex">
-            <summary> minindex are indexes of the mindate </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.OldNewDate.#ctor(System.Collections.Generic.List{System.Nullable{System.DateTime}})">
-            <summary>
-            Takes a list of datetimes(which came from a list of files) and
-            calculates the newest and oldest dates and stores the indexes too.
-            Constructor for the class. Also does all the work.
-            </summary>
-            <param name="timelist">a List of DateTime?s</param>
-        </member>
-        <member name="F:genBTC.FileTime.Models.SkippedHSR.H">
-            <summary> Count of the number of hidden files skipped </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.SkippedHSR.R">
-            <summary> Count of the number of Read-only files skipped </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.SkippedHSR.S">
-            <summary> Count of the number of System files skipped </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Models.ListViewIcon">
-            <summary> Icon in listView image list </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.ListViewIcon.File">
-            <summary> File icon in listView image list </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.ListViewIcon.Directory">
-            <summary> Directory icon in listView image list </summary>
-        </member>
-        <member name="T:genBTC.FileTime.mViewModels.ExplorerComparerstringHelper">
-            <summary> Explorer-like Sort, for strings </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
-            <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
-        </member>
-        <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
-            <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.#ctor">
-            <summary>  Constructor  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Clear">
-            <summary> Clear contents Dir + File lists </summary>
         </member>
     </members>
 </doc>

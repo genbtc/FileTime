@@ -53,13 +53,18 @@ namespace genBTC.FileTime.Forms
         private void button_Browse_Click(object sender, EventArgs e)
         {
             //Code was needed for when running as MultiThreaded App. [MTAThread]
-            string path = textBox6_startupdir.Text;
+            string inpath = textBox6_startupdir.Text;
+            //Feed in a path to start in or use current path as dialog path:
+            if (inpath == null)
+                return;
+            string outpath = "";
+            //start a new filebrowser dialog thread.
             var t = new Thread(() =>
             {
                 var openFile = new FolderBrowserDialog
                 {
                     ShowNewFolderButton = false,
-                    SelectedPath = path,    //This sketches me out.
+                    SelectedPath = inpath,    //This sketches me out.
                     Description = "Select the folder you want to set as the Default Start-Up directory:"
                 };
                 //use current path as dialog path
@@ -68,16 +73,17 @@ namespace genBTC.FileTime.Forms
                 if (openFile.ShowDialog() == DialogResult.Cancel)
                     return;
                 //path is also the variable that returns what was selected
-                path = openFile.SelectedPath;
+                outpath = openFile.SelectedPath;
             });
+            //STAThread is needed for OLE calls to dialog
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-            if (path == textBox6_startupdir.Text)
+            if (outpath == textBox6_startupdir.Text)
                 return; //nothing was changed
-            if (!path.EndsWith("\\"))
-                path += "\\";
-            textBox6_startupdir.Text = path;
+            if (!outpath.EndsWith("\\"))
+                outpath += "\\";
+            textBox6_startupdir.Text = outpath;
         }
     }
 }

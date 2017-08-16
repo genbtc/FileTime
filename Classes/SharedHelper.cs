@@ -54,33 +54,34 @@ namespace genBTC.FileTime.Classes
         /// Display the Folder Browser Dialog and then display the selected
         /// file path and the directories and files in the folder.
         /// </summary>
-        public static string OpenFile(string path)
+        public static string OpenFile(string inpath)
         {
             //Feed in a path to start in or use current path as dialog path:
-            if (path == null)
+            if (inpath == null)
                 return null;
+            string outpath = "";
             //start a new filebrowser dialog thread.
             var t = new Thread(() =>
             {
                 var openFile = new FolderBrowserDialog
                 {
                     ShowNewFolderButton = false,
-                    SelectedPath = path,
+                    SelectedPath = inpath,
                     Description = "Select the folder you want to view/change the subfolders of:"
                 };
-
+                //use current path as dialog path
                 //openFile.RootFolder = System.Environment.SpecialFolder.MyComputer;
                 //openFile.ShowNewFolderButton = true;
                 if (openFile.ShowDialog() == DialogResult.Cancel)
                     return;
-                //re-use the path variable to return what was selected
-                path = openFile.SelectedPath;
+                //path is also the variable that returns what was selected
+                outpath = openFile.SelectedPath;
             });
-            //TODO: check if Code is needed for when running as MultiThreaded App. [MTAThread]
+            //STAThread is needed for OLE calls to dialog
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-            return path;
+            return outpath;
         }
     }
 }
