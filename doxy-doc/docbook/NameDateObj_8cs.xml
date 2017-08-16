@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="NameDateObj_8cs">
+    <title>NameDateObj.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">genBTC::FileTime::Models::NameDateObj</link></para>
+<para><emphasis>&lt;summary&gt;Class object with 5 properties to refer to a file/dir&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort">genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort</link></para>
+<para><emphasis>&lt;summary&gt;
+Explorer-like Sort, that orders two NameDateObj&apos;s by their name property
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1Models">genBTC::FileTime::Models</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file NameDateObj.cs</para>
+    </simplesect>
+</section>

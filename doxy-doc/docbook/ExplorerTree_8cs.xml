@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ExplorerTree_8cs">
+    <title>ExplorerTree.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1ExplorerTree">WindowsExplorer::ExplorerTree</link></para>
+<para><emphasis>&lt;summary&gt;
+Summary description for ExplorerTree.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1Kernel32">WindowsExplorer::Kernel32</link></para>
+<para><emphasis>&lt;summary&gt; a kernel Shell Function &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1ServerEnum">WindowsExplorer::ServerEnum</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE">WindowsExplorer::ServerEnum::NETRESOURCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceWindowsExplorer">WindowsExplorer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file ExplorerTree.cs</para>
+    </simplesect>
+</section>

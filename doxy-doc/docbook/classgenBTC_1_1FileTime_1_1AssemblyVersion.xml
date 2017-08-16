@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1AssemblyVersion">
+<title>genBTC::FileTime::AssemblyVersion class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>readonly Type assemblyType</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4d29ec0b9597d91670c85968c1915757">AssemblyVersion</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override string <link linkend="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1b6eba7338dffe95f2e085eb0bf9b3a5">ToString</link> (
+)<para><emphasis>&lt;summary&gt;
+Returns a string with the assembly version attributes
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ab2f0047cefe5bfff2c56f692c09c8086">ToHTML</link> (
+)<para><emphasis>&lt;summary&gt;
+Returns a HTML format string with the assembly version attributes
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This class uses the System.Reflection.Assembly class to access assembly meta-data </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 11 of file AssemblyVersion.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>AssemblyVersion.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4d29ec0b9597d91670c85968c1915757">
+                <title>genBTC.FileTime.AssemblyVersion.AssemblyVersion ()</title> <emphasis>&lt;summary&gt;
+Constructor
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1b6eba7338dffe95f2e085eb0bf9b3a5">
+                <title>override string genBTC.FileTime.AssemblyVersion.ToString ()</title> <emphasis>&lt;summary&gt;
+Returns a string with the assembly version attributes
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>String with the assembly version attributes</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ab2f0047cefe5bfff2c56f692c09c8086">
+                <title>string genBTC.FileTime.AssemblyVersion.ToHTML ()</title> <emphasis>&lt;summary&gt;
+Returns a HTML format string with the assembly version attributes
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>HTML format string with the assembly version attributes</para>
+</formalpara>
+</para>
+
+            </section>
+</section>

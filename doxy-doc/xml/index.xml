@@ -1,0 +1,775 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.10">
+  <compound refid="classgenBTC_1_1FileTime_1_1AssemblyVersion" kind="class"><name>genBTC::FileTime::AssemblyVersion</name>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a064b14b20f51bc13c9d1239d98f0ccf0" kind="variable"><name>assemblyType</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ad897208f327279cefb9565ee060325d1" kind="property"><name>AssemblyName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a9995b477f1047ac510335cc73bc4cbbf" kind="property"><name>AssemblyFullName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a46d42b7856bb88f214df742a3d766343" kind="property"><name>CodeBase</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1aa0221634e1056b9622009fa051aad8e0" kind="property"><name>Copyright</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ae7a7f50b25bae18de3d78c7f1bfb18b5" kind="property"><name>Company</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4c1f8c1657ff1c27a506a2cd4fcbe52b" kind="property"><name>Description</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4b268c90cae74761d25c313161b32c2d" kind="property"><name>Product</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a76ebd0ef8a7ba40fd2c1dfcbd1bca6b4" kind="property"><name>Title</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a5a73bb519cc81c1aa7d557fcae17ebdc" kind="property"><name>Trademark</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ac054eec17a4a6116d1537c08256f978e" kind="property"><name>Version</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1379c020e21da13c281f4c48568ff234" kind="property"><name>VersionDetails</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4d29ec0b9597d91670c85968c1915757" kind="function"><name>AssemblyVersion</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1b6eba7338dffe95f2e085eb0bf9b3a5" kind="function"><name>ToString</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ab2f0047cefe5bfff2c56f692c09c8086" kind="function"><name>ToHTML</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA" kind="struct"><name>genBTC::FileTime::Models::BoolCMA</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" kind="variable"><name>A</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" kind="variable"><name>C</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" kind="variable"><name>M</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView" kind="class"><name>genBTC::FileTime::mViewModels::CustomListView</name>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a7eb925817339699615514c8d97a961e6" kind="variable"><name>WM_CHANGEUISTATE</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1abb6ec4bb41f8681f34f3da9660181672" kind="variable"><name>ItemSelectionChangedTimer</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1aff2502c0b3ed41a5d45a06e8f5ddb122" kind="property"><name>ContextMenuAllowed</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a6979108fd909da48f901c5ab0756cd05" kind="function"><name>SendMessage</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a10dad3ebcba82659a47554b99f47c009" kind="function"><name>CustomListView</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a691f06d6adaf3371090e009b0fd390f5" kind="function"><name>SetWindowTheme</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ada60d2e0687339738784799af8b93833" kind="function"><name>_ItemSelectionChangedTimer_Tick</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a44d31d00940505c036baef36966bff5a" kind="function"><name>OnMouseDown</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a49943ac10dddcb9278c0bd36624c9f23" kind="function"><name>OnSelectedIndexChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a96ac40bd3a3d205e99a1a29efbdda6ef" kind="function"><name>OnEnter</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ad9a02b35e4c1d1f8a90d1223efdfa147" kind="function"><name>CreateHandle</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a78544a2c6916329360db83e0f2e752d1" kind="function"><name>OnHandleCreated</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a9cafe443a3b9582afca75bbec8e6a7c5" kind="function"><name>OnClick</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ab2b770e61b466f16c7b263fce57c47cc" kind="function"><name>OnKeyUp</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel" kind="class"><name>genBTC::FileTime::Models::DataModel</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70b7904cc633ce90f3dbbda0152f8298" kind="variable"><name>contentsDirList</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0603afa0ebbcc7e07a0f3ac413803986" kind="variable"><name>FilesReadOnlytoFix</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab6a151bd3d3486e1f0cd13423ee7be95" kind="variable"><name>FilestoConfirmList</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3873ffb133524678416b5dc5b35b51ca" kind="variable"><name>listViewContents</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1afb7a9e98ce2debbacd2acf45bda4c499" kind="variable"><name>imageListFiles</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a77d6c20d2d38130887a5a883f9ab9598" kind="variable"><name>Skips</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a95bc953a4fcc598e37ec64649c024f7d" kind="variable"><name>random</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8d92d280391468b77d08f63f5570b77c" kind="variable"><name>CwdPathName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" kind="variable"><name>checkboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" kind="variable"><name>gui</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a23bb91d68f4028304086c4dad5bb41b0" kind="variable"><name>contentsFileList</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0689c0413d3a436b4c4bded1001e977b" kind="variable"><name>filextlist</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad7ce30885dde9101862f8bf75032d402" kind="function"><name>DataModel</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b" kind="function"><name>Clear</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70bf0d8494851633ef774a62b4c9048d" kind="function"><name>PopulateFileList</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4792452d26b386fedb946a81c885ef02" kind="function"><name>PopulateDirList</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" kind="function"><name>DisplayContentsList</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" kind="function"><name>DecideWhichTimeMode1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" kind="function"><name>DecideTimeFromSubDirFile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e" kind="function"><name>RecurseSubDirectoryMode1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4" kind="function"><name>RecurseSubDirectoryMode2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489" kind="function"><name>RecurseSubDirectoryMode1Parent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b" kind="function"><name>RecurseSubDirectoryMode2Parent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85" kind="function"><name>SetTimeDateEachDirectory</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa18f20f8dcf75fb4a7b87dab143ae010" kind="function"><name>SetTimeDateEachFile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" kind="function"><name>SkipOrAddFile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270" kind="function"><name>SetFileDateTimeMode1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" kind="function"><name>Makedateobject</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d" kind="function"><name>Makedateobject</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172" kind="function"><name>GetCmaTimes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" kind="function"><name>DecideWhichTimeMode2</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj" kind="class"><name>genBTC::FileTime::Models::DateNewOldObj</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1af02d00ddb65250c6ceb0c513d631eb52" kind="variable"><name>Index</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a3ddaab21a60aacd3e28cb0210f25a743" kind="variable"><name>MaxDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ace8b01fe15d677ace45e76d3904defaf" kind="variable"><name>MaxIndex</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ab43dd9ac8aec3ccc6b6c53011d1865c7" kind="variable"><name>MinDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a4a72d7694721d7189b507c57129e74f7" kind="variable"><name>MinIndex</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a11e38ed729e9cbfd03733e69434274ca" kind="function"><name>DateNewOldObj</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData" kind="struct"><name>genBTC::FileTime::Models::DisplayCmaTimeData</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a382614b4836f5f22a5a0122a25317216" kind="variable"><name>Accessed</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a6a8b4bb3e7b175308fc52789d2c2093b" kind="variable"><name>Created</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a50c0eafd7bbc8a514c3bdb90b3fccf77" kind="variable"><name>HiddenPathName</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1afe82ba3790315bdedff2f84bdf9228a8" kind="variable"><name>Modified</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a7f03acd23437f8bd3da690deb85941cc" kind="variable"><name>PathName</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a8a312ad9b69b8d251af8f3a3842a77e9" kind="variable"><name>Selected</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView" kind="class"><name>genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb" kind="function"><name>Compare</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer" kind="class"><name>genBTC::FileTime::Classes::ExplorerLikeComparer</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer_1a49799f9eb5dd21baf0714bb6d10f32c9" kind="function"><name>Compare</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort" kind="class"><name>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8" kind="function"><name>Compare</name></member>
+  </compound>
+  <compound refid="classWindowsExplorer_1_1ExplorerTree" kind="class"><name>WindowsExplorer::ExplorerTree</name>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a79fb231d1d279a3b1db95ebc2b28a10f" kind="variable"><name>Seperator</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ad200b16840998a34bebb2955472ca97a" kind="variable"><name>Desktop</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a65df27bbe331aafbc06cfbe76ac2fe0c" kind="variable"><name>MyDocuments</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1af529a357a3253fc338a87e7515c84a14" kind="variable"><name>Favorites</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a8c280bd0695bc6171262f38935cb801a" kind="variable"><name>nodeEntireNetwork</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ac9a453542ad60069c96ebf40ddd21885" kind="variable"><name>nodeMyComputer</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a828cbf491ed809db890eece683452e42" kind="variable"><name>nodeMyDocuments</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab16ce04335e8522ac51dc7fbab01b633" kind="variable"><name>rootnodeDesktop</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a0a84e3dc7e5c6f0f6b84ea2946b4aec1" kind="variable"><name>components</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab702be19ebb01d963eb3cbfa8ffcb14d" kind="variable"><name>btnAdd</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab2c3d1533793277311f70f5254e62725" kind="variable"><name>btnGo</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a5b32e2d13b919b65d63141735227159b" kind="variable"><name>btnRefresh</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1adbb7cc61ac37719cec8fe0286cf2be13" kind="variable"><name>btnHome</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a52745ed52deed309da92e40a5a7b5da7" kind="variable"><name>btnBack</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ae493ccc8ae1cee3dc48f1e7f06e81ab3" kind="variable"><name>btnNext</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ae973d0d220c6668bc1c54a64c2eaa3a5" kind="variable"><name>btnUp</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a4f3bdf708c6594b05be32678b1182d44" kind="variable"><name>btnInfo</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab5fd00d735341fc294f653c420554f76" kind="variable"><name>toolTip1</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" kind="variable"><name>listView1</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aac0b24bd255098fb76b0d7425edb0d8e" kind="variable"><name>column1_Path</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ada1f093d8d790de5f6f15b32587cc15c" kind="variable"><name>column2_Status</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab7630bd902d16891ab78612c1630eadf" kind="variable"><name>imageList1</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a8ded2ab1c3974d33abe5c2576b41284e" kind="variable"><name>cMShortcut</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a5a8402c65ee96c371673b93c19283998" kind="variable"><name>mnuShortcut</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" kind="variable"><name>txtPath</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1adc6845b677867a0f4bc12548ca1e30b7" kind="variable"><name>grptoolbar</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" kind="variable"><name>treeview1</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a67dbc07ba91ff2e9c636a688207bfc4d" kind="variable"><name>PathChangedEvent</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a92eac432414791c8a049a923ec49ddbf" kind="property"><name>CurrentPath</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab43caf85bcc9c8fc655396382e787058" kind="property"><name>GoFlag</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ad3f1f24f2398bbe9509a3020ca82f415" kind="property"><name>ShowAddressbar</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a709e248b1ac93cac4624196c8d5e5cfa" kind="property"><name>ShowMyDocuments</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a61100b4e307e9258b7442dc1e8a07970" kind="property"><name>ShowMyFavorites</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a424194942f92439734e03b54e7d33f17" kind="property"><name>ShowMyNetwork</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ade158d9043ab5028ab67486fba8d8f73" kind="property"><name>ShowToolbar</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ad7605ca27a0d911760ea5a67f9757400" kind="property"><name>PathChanged</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a0ec38e7b2baa52bd055f1c1eb115125b" kind="function"><name>ExplorerTree</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" kind="function"><name>RefreshControlUi</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" kind="function"><name>InitialPopulate</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6" kind="function"><name>SelectRootNode</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" kind="function"><name>SetCurrentPath</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" kind="function"><name>RefreshFolders</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" kind="function"><name>BrowseTo</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247" kind="function"><name>PathChangedEventHandler</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3" kind="function"><name>ExplorerTree_Load</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" kind="function"><name>txtPath_TextChanged</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f" kind="function"><name>PopulateMyComputer</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df" kind="function"><name>tvwMain_AfterExpand</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71" kind="function"><name>tvwMain_AfterSelect</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014" kind="function"><name>tvwMain_DoubleClick</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f" kind="function"><name>btnRefresh_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" kind="function"><name>btnGo_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" kind="function"><name>btnHome_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" kind="function"><name>btnNext_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" kind="function"><name>btnBack_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" kind="function"><name>tvwMain_MouseUp</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" kind="function"><name>btnUp_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6" kind="function"><name>btnAdd_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aefb8598c94c590899ffd0a511a2626cb" kind="function"><name>AddFolderNode</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99" kind="function"><name>mnuShortcut_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa" kind="function"><name>txtPath_KeyUp</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1aabf31272dc5d8c16673031fddd736ce5" kind="function"><name>btnInfo_Click</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0" kind="function"><name>UpdateListAddCurrent</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b" kind="function"><name>UpdateListGoBack</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee" kind="function"><name>UpdateListGoFwd</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" kind="function"><name>UpdateList</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" kind="function"><name>InitializeComponent</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" kind="function"><name>ExploreTreeNode</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73" kind="function"><name>GetDirectories</name></member>
+    <member refid="classWindowsExplorer_1_1ExplorerTree_1a8bc10da47366ba122f22de87c813adce" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="classExtractIcon" kind="class"><name>ExtractIcon</name>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78" kind="enum"><name>SHGFI</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a817434295a673aed431435658b65d9a7" kind="enumvalue"><name>Icon</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a3b868ced6f60acf5ee565ac021d42941" kind="enumvalue"><name>DisplayName</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ae175f7206492c365397d33a0df9cc8d0" kind="enumvalue"><name>TypeName</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a287234a1ff35a314b5b6bc4e5828e745" kind="enumvalue"><name>Attributes</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84e39f86e0843b752c3f58c1828e94df" kind="enumvalue"><name>IconLocation</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ab8a206aa8eb60627304475f67b9f375a" kind="enumvalue"><name>ExeType</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a9b7da861f8f2e6c5f4b7caf079aa8bd6" kind="enumvalue"><name>SysIconIndex</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a887507c977779a51b9c3ecef7049f8e1" kind="enumvalue"><name>LinkOverlay</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a91b442d385b54e1418d81adc34871053" kind="enumvalue"><name>Selected</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78adcedfbbf9e366a750df8772bfbbe22b7" kind="enumvalue"><name>Attr_Specified</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a08f7728d14d36f52bd6d413d9c963e7c" kind="enumvalue"><name>LargeIcon</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af10923216bc690081c9c9e2ce32d66ae" kind="enumvalue"><name>SmallIcon</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78aa01037cba4230c2b8da0f03454ba002e" kind="enumvalue"><name>OpenIcon</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a8afaa9e9ea20194a3ca276c263b94241" kind="enumvalue"><name>ShellIconSize</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a605534a578c2ea820de4a155e1ec542f" kind="enumvalue"><name>PIDL</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a973ca7fddbacaaa1810be24d088446c9" kind="enumvalue"><name>UseFileAttributes</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af4fe4d5d06259cb6ab0fea9d18a7c304" kind="enumvalue"><name>AddOverlays</name></member>
+    <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84aed79d022df97af71a911a474b89e7" kind="enumvalue"><name>OverlayIndex</name></member>
+    <member refid="classExtractIcon_1a27d6eb39702bba19bdd2af80d8907a46" kind="variable"><name>MAX_PATH</name></member>
+    <member refid="classExtractIcon_1aed0e8614e582da32929d6db01ea2fe34" kind="variable"><name>MAX_TYPE</name></member>
+    <member refid="classExtractIcon_1a81c000b4bd05021a0ac00b2154d42ffd" kind="function"><name>SHGetFileInfo</name></member>
+    <member refid="classExtractIcon_1ac568a2bbf178d24eaf0cd498172478c3" kind="function"><name>ExtractIcon</name></member>
+    <member refid="classExtractIcon_1ad9ae4597b218182802d990e363b172e5" kind="function"><name>GetIcon</name></member>
+  </compound>
+  <compound refid="classForm" kind="class"><name>Form</name>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About" kind="class"><name>genBTC::FileTime::Forms::Form_About</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a95b91cbb4170cb6ac5c93bd26881887c" kind="variable"><name>_components</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a32efc6409a40d51b15f3d81bc55f71dc" kind="variable"><name>button_Close</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1ae4dd050fc771b56cfcb7174f2dcf4546" kind="variable"><name>label_About</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a3902e33311968fafed354ba008fe1f80" kind="variable"><name>linkLabel_Address</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a2ed7cb7138db40c178479eb5cb141591" kind="variable"><name>pictureBox_Icon</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1ae864e5fc0e88a985ebfe92976075280b" kind="variable"><name>pictureBox_automationControls</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aefc80e9247adfed001255fdc3b94be6d" kind="variable"><name>tabControl_About</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a3247e3d0037017b4afccd92fddcc3b6f" kind="variable"><name>tabPage_About</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a352ca275f827a64acb8b24dce4acc1f3" kind="function"><name>Form_About</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a0fadd7eb6fa67b81310846120f17e0a4" kind="function"><name>Dispose</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aa58637bf493bac03429b37fe27550709" kind="function"><name>InitializeComponent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a467220e3e50644ce9b0ec071dbd324ca" kind="function"><name>Form_About_Load</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a17da84c3773c106392561fd4c21a7b54" kind="function"><name>linkLabel_Address_LinkClicked</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1af8caafd5f7c34ea2521e6088bfc08ab4" kind="function"><name>button_Close_Click</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate" kind="class"><name>genBTC::FileTime::Forms::Form_ChooseDate</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ade240b66da26463b5558c542e345fa3c" kind="variable"><name>Datechosen</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a24b5b54e0f5f5153195c871a60f70258" kind="variable"><name>components</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a8ec29e8607cd5f00bc4beda999668625" kind="variable"><name>dateTimePicker_CreatedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a4161e89cc8fe06dd6e76f91d5b3f5a78" kind="variable"><name>dateTimePicker_CreatedTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a880e4ee5f516dc00b7ec27971151e5c5" kind="variable"><name>dateTimePicker_ModifiedTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a42d34c2d925a01f2d6b817998a5f8792" kind="variable"><name>dateTimePicker_ModifiedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a8288d23e93e12e5766ce477b5f6dc415" kind="variable"><name>dateTimePicker_AccessedTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a77648885aded496f9c4a0693fe437dd5" kind="variable"><name>dateTimePicker_AccessedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1adf68e4292f04c4673fc52c912df50f5a" kind="variable"><name>button1_OK</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a84a97c11386de5e496a3b6bbcbd697d2" kind="variable"><name>button2_Cancel</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a08ee14bcaea5c033a817912e48a67fb4" kind="variable"><name>checkBox3_Accessed</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab6a7276db2796f221a4357b86b22798a" kind="variable"><name>checkBox2_Modified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a7ea48e70c86668fa33ad4cf25c35f2e7" kind="variable"><name>checkBox1_Created</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a78d33b155b4d15a80ec6103a36c1d197" kind="function"><name>Form_ChooseDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a3a5d7504958999a750e931155f81e2ba" kind="function"><name>PopulateWith</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1a86fac6a14be6cf70353db0d1104e6c" kind="function"><name>button1_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a639b747ee92f49e70ec776822224e3cf" kind="function"><name>button2_Cancel_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1af821fc4b9938682cfe1372f47f5eefa2" kind="function"><name>checkBox1_Created_CheckedChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1ae42bc7d8d5732b6eb54e605849397c" kind="function"><name>checkBox2_Modified_CheckedChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a310833d1136385038da2f5268f07a826" kind="function"><name>checkBox3_Accessed_CheckedChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ae6814664c01a25c2651318693f3c1e6c" kind="function"><name>dateTimePicker_MouseWheel</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a14f73a6edaa3fc3e6e2508b977b1c66d" kind="function"><name>InitializeComponent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab9a5bbef3b5a52f219f91ecce40de00e" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm" kind="class"><name>genBTC::FileTime::Forms::Form_Confirm</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a37bc8e6a954dba0fabf2880baafe6c83" kind="variable"><name>_filextlist</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af477d8d488626f2dafcc97023f4da148" kind="variable"><name>_formmain</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af814be06aa5a0863959c13b2553aff74" kind="variable"><name>_checklist</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a59abffe28d291d962bc7917b5e5f69" kind="variable"><name>_itemsErrorsCount</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3125e5305487cecb2c5c9c5b461d781b" kind="variable"><name>_itemsSetCount</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a74dc1af153ab898e5f395cc8166af1a7" kind="variable"><name>components</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3642f9d3e61d6174b91a38ea0a4915e" kind="variable"><name>imageList_Files</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad859279ef35572af16b7892d517a822f" kind="variable"><name>label1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a94b8aa95d0d2a5d178fda6ba01592fec" kind="variable"><name>button1_Confirm</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acb36bee5d6976cbecda945cf09a6b1dc" kind="variable"><name>listView1_Confirm</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7f642d78dbe42d4ad650b363351acbc6" kind="variable"><name>contextMenuStrip1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a60aa76cf1b84e57a7060ce71baecde9c" kind="variable"><name>groupBoxConditions</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a78523dec38766e2c1ca2148239d09039" kind="variable"><name>radioButton3All</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3d38de87badf2d37b11d34dace27697" kind="variable"><name>radioButton2Older</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a08b570392797b07d300eb6c6613b4e2a" kind="variable"><name>radioButton1Newer</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4b45b5a1372b3f497bdadffe603cc70f" kind="variable"><name>menuStrip1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a897d07259fb1c7657e841cbe49a67ddc" kind="variable"><name>editToolStripMenuItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a44646f92691ba50186ceb50d31afb531" kind="variable"><name>selectAllToolStripMenuItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8101c72e19286de6bcf42a850ded3498" kind="variable"><name>deSelectAllToolStripMenuItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1e4be85619506a93fcb216c2bef5a672" kind="variable"><name>invertSelectionToolStripMenuItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abf92838201f83c108849c52b6d23da06" kind="variable"><name>ComboBox1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae301ad7d805d73e21478263cd0959464" kind="variable"><name>ComboBox2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a18dc01274ca6d2191249f7f0c89ea606" kind="variable"><name>ComboBox3</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae775fb93b7da5cd44d21f0dd9d273d69" kind="variable"><name>removeNAOnlysToolStripMenuItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a346a46754f67e99ecfd964d1afc73b87" kind="variable"><name>label2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac094dbeb2fa056b77cea0a19ad9a0309" kind="variable"><name>panel1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a51dbe650d9888eb4d0ca793225e9ea9e" kind="variable"><name>ColumnHeader_Name</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af8f04124ec9b181c674213693d0fc292" kind="variable"><name>ColumnHeader_Created</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aeddc07228f54ca3d89532561e36a8f12" kind="variable"><name>ColumnHeader_Modified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2a0aeff72d36b5e196f2135cdf80fb5e" kind="variable"><name>ColumnHeader_Accessed</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1bc1c8bdee44edc0b7548134f3028fa1" kind="variable"><name>toolStripMenuItem1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2ec1a40c03ac4fdd8a43841dbc5dca68" kind="variable"><name>toolStripMenuItem2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4fd42c11c21c02ea6214c933b2c600bc" kind="variable"><name>toolStripMenuItem3</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a673a6deb636523702c66e64200f1f6c2" kind="variable"><name>toolStripMenuItem4</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af7d326a11e1cc4fe4afa1616c2735abe" kind="variable"><name>toolStripSeparator1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a56e71cffa65f82ba181d5a9a75be0b71" kind="variable"><name>toolStripMenuItem5</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acea1a126cbbb70c0233dec8d47b72084" kind="variable"><name>statusStrip1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0666b573711accaeb386c72ca16244b6" kind="variable"><name>toolStripProgressBar1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af48a7f3ab10bfff94f0b51396ee5c799" kind="variable"><name>toolStripStatusLabel1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d4e814c3cce5e98c372c68eb33044b" kind="variable"><name>condenseMultipleLinesToolStripMenuItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a372805d1413eca52d5ec1671a63a8086" kind="variable"><name>toolStripMenuItem6</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad29eedba05697d15bc8420c89130a23f" kind="variable"><name>active</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1c414476848ba5e520e59175bfdc0ca5" kind="function"><name>Form_Confirm</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9" kind="function"><name>FixReadonlyResults</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" kind="function"><name>MakeListView</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8cb4bf423609764a3a98fe85de819c55" kind="function"><name>ResetReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af62fb0c7e4aaf23671fcb591c28e436c" kind="function"><name>UpdateStatusBar</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6" kind="function"><name>Form_Confirm_FormClosing</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a117fd75bb0dc712a1bdf49140fb93f07" kind="function"><name>DoConditionalAgeCheck</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a36d17d1505fae79c610daff068c6d5ad" kind="function"><name>button1_Confirm_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3d349d69687095aba05751e9d1cc78d9" kind="function"><name>ThreeComboBox_SelectedChange</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9" kind="function"><name>selectAllToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471" kind="function"><name>deSelectAllToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab0447665a6354a8015a4cbc25dd8857e" kind="function"><name>invertSelectionToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae685e7b9564920a6d03e82cfc4dca4a6" kind="function"><name>removeNAOnlysToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae812db4140d91f832ff782cb0e584fd1" kind="function"><name>condenseMultipleLinesToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa38d84ab108896374502e1d427fb8073" kind="function"><name>toolStripMenuItem1_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a655ed83e871c1ae8f99cc139b742581f" kind="function"><name>toolStripMenu_ThreeRemoves</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae89c06d5a8209746475c1454cb11721e" kind="function"><name>toolStripMenuItem5_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3262dd1dc9413b0b77ef2ad335af6fe7" kind="function"><name>toolStripMenuItem6_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a67e58ae4d8a3a6816c148a8d9f0845cf" kind="function"><name>RestoreCheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72204e6ed2578b7c6196f37d85aa05c0" kind="function"><name>RestoreCheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0afeb990e61b20cf1ad64015b2e03b0d" kind="function"><name>StoreCheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab7410828fda5dc98c741655ea1c115b6" kind="function"><name>StoreCheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae0cda54950b51f40b081432f4d70d5dd" kind="function"><name>listView1_Confirm_ItemChecked</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a03c1e9fd2796db43388d5ba42dc78eee" kind="function"><name>menuStrip1_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a01eff90114426a685e7182097ef665e8" kind="function"><name>listView1_Confirm_KeyUp</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afd8a0d9126bdb2940d7c3240db21f579" kind="function"><name>InitializeComponent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4616216c87c2d9b2e4f7186be47208b3" kind="function"><name>contextMenuStrip1_Opening</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d2f09053bdda2a34bc4453bc0fe50b" kind="function"><name>SetTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1d80bc70235bc2e505c27d38ed0d73a7" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main" kind="class"><name>genBTC::FileTime::Forms::Form_Main</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac43e6cedc1a02cee5f74303c88989e85" kind="variable"><name>_dataModel</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a961c69c26a86d103aa18c94ed47f64fa" kind="variable"><name>Confirmation</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab39f29e05c9c8a5b28ab5bcfe7d24cd6" kind="variable"><name>itemSelectionChangedTimer</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a9dc556ed4e1ff438e51671de2f4f5569" kind="variable"><name>SELECTION_TIMEOUT</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a985eace2323e9c05c017d893130cbcf8" kind="variable"><name>components</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af868ee07ac7c4d39122f578dac492faa" kind="variable"><name>button_Browse</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a85054fc678d2c8dcd2dfbae1a138b631" kind="variable"><name>mainMenu_Main</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0d443440f32c64453c1755a692b82780" kind="variable"><name>menuItem_FileExit</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae264c8918f15224e81f1ed7f25a4e737" kind="variable"><name>menuItem_Help</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa7513fec7f98dc641590d79342fd2f8c" kind="variable"><name>menuItem_HelpAbout</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7a5df0f34eab6ab5fd66a3a7bd9517a1" kind="variable"><name>button_GoUpdate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a96aba344684c8f6330aa7db21ad4724d" kind="variable"><name>menuItem_FileOpen</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a1e9c1c94dd0512c3c1864e0c8e4abcb8" kind="variable"><name>checkBox_CreationDateTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a2b0fc3a80f196bee24582b91718091ea" kind="variable"><name>checkBox_AccessedDateTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a88d33dce294e533be29c371a365b774b" kind="variable"><name>checkBox_ModifiedDateTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6013b83e40ffeea4d81aa42ba2a0538e" kind="variable"><name>label_FPath</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a1a3931ee0a9508a8f1eb729da008c404" kind="variable"><name>dateTimePicker_Time</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a453d71f4c8dcb90bf9429350f197cda2" kind="variable"><name>imageList_Files</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad257b30d2d3ef0fb3c16fbbfa76b0930" kind="variable"><name>checkBox_Recurse</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af8bb5740bead0654311d8256acbba2b4" kind="variable"><name>menuItem_File</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5a1737d7b26ac309a2f4d4a19f26e4a4" kind="variable"><name>menuItem_FileBar01</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a08be770021d24f6fac1f15addd1b88fd" kind="variable"><name>menuItem_HelpContents</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aefdf1c675f4d189a87394837dea1e36e" kind="variable"><name>menuItem_HelpBar01</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aea71844fa0239edfbc60d43adca2ccd6" kind="variable"><name>label_FilePathHeading</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0f23fcf1642e985477fe549ff08354e5" kind="variable"><name>dateTimePicker_Date</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a23e05d132e95baaeaaa68c6aeb6dbe0f" kind="variable"><name>listView_Contents</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae52723da10fd709a29c865c382c6e5d2" kind="variable"><name>listview_ContentsColumHeader1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a429c639d7cf2fca60e3dc1b3f08d3842" kind="variable"><name>checkBoxShouldFiles</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27ee7c2a2435b01cab6c9b278da051f4" kind="variable"><name>groupBoxCMA</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a327857b6d99a92a61620f4f54d59e9b6" kind="variable"><name>radioButton1_CreationDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac6f6bdbd6dc3439f1d32f8477e69ffe4" kind="variable"><name>label_CreationTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac54bf3c3b9b5071a239eb4040922db96" kind="variable"><name>radioButton2_ModifiedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a659db9cb7ce29bbbee06b9c393fe0e53" kind="variable"><name>label_ModificationTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af24f163b8cce2de152daba0c88968515" kind="variable"><name>radioButton3_AccessedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aac04a434dc9cd34e51fe5611348002d8" kind="variable"><name>label_AccessedTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac04797eb1e5a5f70b7731f89bb951b53" kind="variable"><name>radioButton3_setfromAccessed</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af2fe8d20736c37b1c5b35eaab2a838f5" kind="variable"><name>radioButton2_setfromModified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0ca962ec3dc5bd92431fb2b6e377a0b5" kind="variable"><name>radioButton1_setfromCreation</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad530a172ca761d72f10dc5440cfb7899" kind="variable"><name>radioButtonPanel1_DecideWhichTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a61e4303739fc2e77629e00b4207ea1cf" kind="variable"><name>radioGroupBox3_UseTimeFrom</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a52d048c4bd397ab77607f3424c0336da" kind="variable"><name>radioGroupBox1_SpecifyTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a42f93da37b3be9b0138295b715a3c042" kind="variable"><name>panel1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a96c4a529334d24b3f7162b1915b79e06" kind="variable"><name>panel2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab72b1bd02dc01549ca3035ed2cf95131" kind="variable"><name>radioButton3_Random</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae339dcf95860f3e2c8ee7ac035ab77dc" kind="variable"><name>radioButton2_Newest</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20c8b1a9480697f0cda588ff1ae8c3d2" kind="variable"><name>radioButton1_Oldest</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab3a416d5f2087222dba9ac6312b74a8a" kind="variable"><name>radioGroupBox2_CurrentSelectionTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1acbe39624d91452495cd8d772499da4ef" kind="variable"><name>label3_AccessedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a639d41e4ec7f7ca774a48ac7d18feff0" kind="variable"><name>label2_ModifiedDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae52408e3a2cad2c2258f4793dd172e39" kind="variable"><name>label1_CreationDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a65ced4685ab9ded3feac23f6178e5171" kind="variable"><name>radioButtonPanel2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad4ee2b4e2a0f58aff0ffe25c7840fa6d" kind="variable"><name>panel3</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a09a5ca855ef70711a4fbd0838bc685a2" kind="variable"><name>radioButton2_useTimefromSubdir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a91b86e23737873a82f5cacd8b27e25b7" kind="variable"><name>radioButton1_useTimefromFile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a904b6fc2c406bed51a6f0a44a16277a0" kind="variable"><name>radioButton4_setfromRandom</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a00d144629fd550850797c5063a759868" kind="variable"><name>labelHidden_PathName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a16e2c93db17a998c8fac8af0a1ae586c" kind="variable"><name>menuItem_Preferences</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a97bcc785ad611d0d5df55e59428edc9a" kind="variable"><name>tabControl1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a191e31620cf5338399da5c41749be33d" kind="variable"><name>tabPage1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a309cb7e7a6b769582dd7c41d29459e95" kind="variable"><name>tabPage2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae87686c01623663d11467a9747de4e40" kind="variable"><name>toolTip1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a29b482d6669a00e5967bd16c46cf15c4" kind="variable"><name>explorerTree1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a45ace186cc153f05afcf0b23a4431d19" kind="variable"><name>splitContainer1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3d34e27cfa0147a06f0c44e0ae012653" kind="variable"><name>radioGroupBox1_pickFolderForCompare</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a929c6e9d1133d5145320af4a0416ecd2" kind="variable"><name>label1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a61e7729be598283dfdaa71be07313695" kind="variable"><name>dataModelBindingSource</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a001f8fbcdc3eb56ceaa74c55d61c7272" kind="property"><name>CwdPathName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5c5b5a7935885ef5a978c899e132e92f" kind="function"><name>GetGUIRadioButtonStatusData</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a54b091dbe473dade0ab327251d4e39fe" kind="function"><name>Form_Main_Load</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" kind="function"><name>Form_Main_Run</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" kind="function"><name>button_Browse_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310" kind="function"><name>button_Update_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7" kind="function"><name>menuItem_FileOpen_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3e8d7159bc0c46df6759d6a5c0f654d3" kind="function"><name>menuItem_FileExit_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a83f634713107f726b4305b7c48d27521" kind="function"><name>menuItem_HelpContents_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad9c299f1d563c39b5868f74480ad23b9" kind="function"><name>menuItem_HelpAbout_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6e8e09a25d5f722771ef4c3f17b3e50a" kind="function"><name>menuItem_Preferences_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20dffccb97a6238d315aead6ab7aab86" kind="function"><name>label1_CreationDate_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a1cbabe648a4d08483911e416b8e9c0cb" kind="function"><name>label2_ModifiedDate_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a02c021b382703b63cf3c8634545342dc" kind="function"><name>label3_AccessDate_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1addacf24429bcec3cc0ffe054fbbf4a02" kind="function"><name>tabControl1_Selected</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aaf1d361704f1764c55debc5320620d89" kind="function"><name>tabControl1_MouseHover</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e" kind="function"><name>_ItemSelectionChangedTimer_Tick</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af159301a48967d2639cad7e6c9c80bfd" kind="function"><name>listView_Contents_ItemSelectionChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" kind="function"><name>checkBox_DateTime_CheckedChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3f3cfcfcda8f8cf3a6b26167772fb281" kind="function"><name>explorerTree1_PathChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df" kind="function"><name>QueryCMAcheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762" kind="function"><name>ClearOnError</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" kind="function"><name>DisplayCma</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac438e5c68134f0edca782692ed1a4a84" kind="function"><name>CallDisplayCma</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" kind="function"><name>StartUpBothModes1And2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" kind="function"><name>LaunchForm2Go</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba" kind="function"><name>InitializeComponent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7b631f446375bba4fc1ab8c5309f0ce6" kind="function"><name>Form_Main</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aeb572681ad49ed4b9a5483c3652b1175" kind="function"><name>RefreshDataBinding_labelFPath</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5" kind="function"><name>RefreshContentsRightPanel</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1abfce7b3d32aa7fd8988dfb4633f71df5" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences" kind="class"><name>genBTC::FileTime::Forms::Form_Preferences</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a0d0fcc156096c1c1d5bdd7b9a5061405" kind="variable"><name>_currentdir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ad28fafcafcab9fb5ac068f5cbbaebeb8" kind="variable"><name>components</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae9cf65d55f0323eb8f528c8438d963bb" kind="variable"><name>button1_OK</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aed3191bba6aa8cc2822bf8a4c65e43d2" kind="variable"><name>button2_Cancel</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a4ce4f5d3bb13bac70d437aa3f5c5de0c" kind="variable"><name>checkBox2a_ShowSystem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1abaf84c7690a90b4ab91c9387c5f4d6fb" kind="variable"><name>checkBox4a_ShowReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aed606508300ff0198c84db13b8104292" kind="variable"><name>button_UseCurrentDir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a783e099613ea77f61f177a140dffdc5a" kind="variable"><name>button_Browse</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ad96a13454adf2d284161427c223242d8" kind="variable"><name>checkBox7_Mode1addRootDir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a1b62e6c55e43d211c406c9b4269952bc" kind="variable"><name>checkBox8_useRootDirAsContainer</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a43a0a88e39e959daa0c693815c9b3fe3" kind="variable"><name>toolTip1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a4a08890a4ecba4cbd9666e39787803cb" kind="variable"><name>checkBox1_ShowReadOnlyNotices</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8771b4533aa16b3270b43bc5a268cdef" kind="variable"><name>checkBox4b_SkipReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1acd93cb19a7aa2b559ce3fbb0aac89d06" kind="variable"><name>checkBox3b_SkipHidden</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1acfcaf4a1cf951021bba6f0586633ca74" kind="variable"><name>checkBox2b_SkipSystem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a32726198d8a2802ccf2edabbd97ea4fc" kind="variable"><name>checkBox6_StartupDir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a359f7ac41ab689f1241abe98ceeaa735" kind="variable"><name>textBox6_startupdir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aa8b64002b9c854a5943b1bcfffb79739" kind="variable"><name>checkBox3a_ShowHidden</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a044ed6a814780c52529b30be26463f62" kind="function"><name>Form_Preferences</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a281c6a90053ba74e3fd34de00d771f37" kind="function"><name>button1_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aeac9777e8e2d82f4d532578e89ddecac" kind="function"><name>button2_Cancel_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8bb3628fcbffc7fa60373514b76a4457" kind="function"><name>button_UseCurrentDir_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ade029483c7134e7a864ee0b8475f2361" kind="function"><name>button_Browse_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae22d6c0ab2502fd4ece5f5d828e5d313" kind="function"><name>InitializeComponent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a9e1272169f107d98c18de0e0ad643477" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus" kind="struct"><name>genBTC::FileTime::Models::guistatus</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" kind="variable"><name>Accessed</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" kind="variable"><name>Created</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" kind="variable"><name>Modified</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" kind="variable"><name>dateTimePickerDate</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2d57f1ce6d2be16577be655f927df3ce" kind="variable"><name>labelHiddenPathName</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" kind="variable"><name>radioButton1Oldest</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" kind="variable"><name>radioButton1_setfromCreated</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" kind="variable"><name>radioButton1_useTimefromFile</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" kind="variable"><name>radioButton2Newest</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" kind="variable"><name>radioButton2_setfromModified</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" kind="variable"><name>radioButton2_useTimefromSubdir</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" kind="variable"><name>radioButton3Random</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" kind="variable"><name>radioButton3_setfromAccessed</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" kind="variable"><name>radioGroupBox1SpecifyTime</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" kind="variable"><name>radioGroupBox2CurrentSelect</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" kind="variable"><name>radioGroupBox3UseTimeFrom</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1ade2fae85372b8030dce0d5a71b957990" kind="variable"><name>rg2rb1Creation</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a0ee7354921de7a3935388a2dc3cedb27" kind="variable"><name>rg2rb2Modified</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afde815c17bb8aaadf3d7b6a1d22e3426" kind="variable"><name>rg2rb3LastAccess</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" kind="variable"><name>dateTimePickerTime</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a9010a701f58a183bc4e079af909ff838" kind="variable"><name>radioButton4_setfromRandom</name></member>
+  </compound>
+  <compound refid="classIComparer" kind="class"><name>IComparer</name>
+  </compound>
+  <compound refid="classIEnumerable" kind="class"><name>IEnumerable</name>
+  </compound>
+  <compound refid="classWindowsExplorer_1_1Kernel32" kind="class"><name>WindowsExplorer::Kernel32</name>
+    <member refid="classWindowsExplorer_1_1Kernel32_1a7ab4d641c4c7114014a77c92c7d60c3f" kind="function"><name>GetDriveType</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM" kind="struct"><name>genBTC::FileTime::Classes::Native::NativeSelect::LVITEM</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a63fec50b05859fd25e8f247b01131245" kind="variable"><name>mask</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1aaeadaa12a59970add99c33aa5e73618b" kind="variable"><name>iItem</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a00469d8182af47a2ecb01fd87970163c" kind="variable"><name>iSubItem</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1abf073d54b7e3cdf7daf85f50968edc57" kind="variable"><name>state</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a624682f3ea67b78d9fba8af5186508f9" kind="variable"><name>stateMask</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a6794926ee5c37ffbec54e946ce7cb964" kind="variable"><name>pszText</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1ae56b464d4ae565d75c9eb1031f0c9e88" kind="variable"><name>cchTextMax</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a28b8cf92a8faf6896be017fc4550126e" kind="variable"><name>iImage</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1ad2243b593151cde43c370a1d0e53032f" kind="variable"><name>lParam</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a1a15f7814e7933698e715de361d4d5db" kind="variable"><name>iIndent</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1a70585ecc58ecd8cad3fe9708d2b474b4" kind="variable"><name>iGroupId</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1af6ea726b82612a3dcbf02d5cdf3b8a74" kind="variable"><name>cColumns</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM_1aa303c00808f014de2deb57d7abaeb447" kind="variable"><name>puColumns</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kind="class"><name>genBTC::FileTime::Models::NameDateObj</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb6a84eef1fb77726e009f6137e5a46d" kind="variable"><name>_a</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1ab4833eda13289580da2fa04f36aac21f" kind="variable"><name>_c</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1afc51e5988ab164716449336fcb3ae273" kind="variable"><name>_m</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a2edd2e54b89f4feb9f2f6f9b86fee5ba" kind="property"><name>FileOrDirType</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" kind="property"><name>Name</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" kind="property"><name>Created</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" kind="property"><name>Modified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" kind="property"><name>Accessed</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aaceb003af296907c75751349cf9341fd" kind="function"><name>NameDateObj</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1af666b23c7c7ffd453975b06e9f3904d9" kind="function"><name>NameDateObj</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a924b4ce7eb4a8dd2a3da89a66ea2a6c3" kind="function"><name>Nullordate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a830ad481491c740268ae11406359498d" kind="function"><name>Listviewtodateornull</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl" kind="class"><name>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</name>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1aa8e46ec3a548953c766136e0a426a21c" kind="variable"><name>_a</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a75cf9e413ac88c6f8b9a04652d848205" kind="variable"><name>_c</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1aaad80ae4f94148b06c1d1f2ac763818c" kind="variable"><name>_m</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1add443b21423a4056b95874b407553a71" kind="property"><name>FileOrDirType</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a94fa6cac337c3d43dbbcc128fdbdc6f6" kind="property"><name>Name</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abd0793434b14a5d2cb47c4ae7718afb4" kind="property"><name>Created</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1adc152d4f53e4d862491993903ce1c02e" kind="property"><name>Modified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0b1fd55712b915ae20dc82d50cd62573" kind="property"><name>Accessed</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a5297b0991118fe195a70643fc565f600" kind="function"><name>NameDateObjListViewVMdl</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223" kind="function"><name>NameDateObjListViewVMdl</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241" kind="function"><name>NameDateObjListViewVMdl</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" kind="function"><name>Compare</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abef5d6f4fc3c61a17957b52455257203" kind="function"><name>Converter</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a28066a9b990ea14d6b2f3c086ea67bcd" kind="function"><name>Nullordatestring</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1ab8c8af3754d3f8a61189253443562dbc" kind="function"><name>DatestringorNa</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon" kind="class"><name>genBTC::FileTime::Classes::Native::NativeExtractIcon</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81" kind="enum"><name>SHGFI</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a817434295a673aed431435658b65d9a7" kind="enumvalue"><name>Icon</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a3b868ced6f60acf5ee565ac021d42941" kind="enumvalue"><name>DisplayName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81ae175f7206492c365397d33a0df9cc8d0" kind="enumvalue"><name>TypeName</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a287234a1ff35a314b5b6bc4e5828e745" kind="enumvalue"><name>Attributes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a84e39f86e0843b752c3f58c1828e94df" kind="enumvalue"><name>IconLocation</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81ab8a206aa8eb60627304475f67b9f375a" kind="enumvalue"><name>ExeType</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a9b7da861f8f2e6c5f4b7caf079aa8bd6" kind="enumvalue"><name>SysIconIndex</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a887507c977779a51b9c3ecef7049f8e1" kind="enumvalue"><name>LinkOverlay</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a91b442d385b54e1418d81adc34871053" kind="enumvalue"><name>Selected</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81adcedfbbf9e366a750df8772bfbbe22b7" kind="enumvalue"><name>Attr_Specified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a08f7728d14d36f52bd6d413d9c963e7c" kind="enumvalue"><name>LargeIcon</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81af10923216bc690081c9c9e2ce32d66ae" kind="enumvalue"><name>SmallIcon</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81aa01037cba4230c2b8da0f03454ba002e" kind="enumvalue"><name>OpenIcon</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a8afaa9e9ea20194a3ca276c263b94241" kind="enumvalue"><name>ShellIconSize</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a605534a578c2ea820de4a155e1ec542f" kind="enumvalue"><name>PIDL</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a973ca7fddbacaaa1810be24d088446c9" kind="enumvalue"><name>UseFileAttributes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81af4fe4d5d06259cb6ab0fea9d18a7c304" kind="enumvalue"><name>AddOverlays</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a84aed79d022df97af71a911a474b89e7" kind="enumvalue"><name>OverlayIndex</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a76b023853a1be608d7fd988f6672c96d" kind="variable"><name>MAX_PATH</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1af222ca95ab074f17ae7cf09fa58647ab" kind="variable"><name>MAX_TYPE</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a2d8c052a65cce199a71e8b39ab3eadcc" kind="function"><name>SHGetFileInfo</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1abaf93807bc85def078adf6a70604b2d2" kind="function"><name>GetIcon</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll" kind="class"><name>genBTC::FileTime::Classes::Native::NativeScroll</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a4589be01fbeb248bb80c0392e1e1d2fe" kind="variable"><name>SB_HORZ</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aad428db016c0a69a8288b75ba7bcb80d" kind="function"><name>GetScrollPos</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a9ba1ee44347a1e4edcf86074be4f6eae" kind="function"><name>SetScrollPos</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aa1c190e5e4307d7cfebf701c8c9bf44b" kind="function"><name>ScrollH</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect" kind="class"><name>genBTC::FileTime::Classes::Native::NativeSelect</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a78dda0c14cff7dd902c57c3880a370c8" kind="variable"><name>LVM_FIRST</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a87ba590baae60e8857ed1eef3d005bcc" kind="variable"><name>LVM_SETITEMSTATE</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1ab0198e61538c43a87147c674dcdbf8db" kind="function"><name>SendMessageLVItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3" kind="function"><name>SelectAllItems</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" kind="function"><name>DeselectAllItems</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78" kind="function"><name>SetItemState</name></member>
+  </compound>
+  <compound refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE" kind="class"><name>WindowsExplorer::ServerEnum::NETRESOURCE</name>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1af1a0de89fc04bc42c661aecbe2d2ca56" kind="variable"><name>dwScope</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a3438ebf5c3591fdb55c30f7ce59fc952" kind="variable"><name>dwType</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1ad55b7dd1a6fbca400761067033a47129" kind="variable"><name>dwDisplayType</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aa9c32f9d36a3d103e5c0534aafe18313" kind="variable"><name>dwUsage</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a1d934eea3aca96b97fa5cc046a8b9f85" kind="variable"><name>lpLocalName</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aeb8cecf8469107d8ff551cd20cb788e5" kind="variable"><name>lpRemoteName</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a06aa55b16eed9a23e811c9effc2fb7ce" kind="variable"><name>lpComment</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a12b2c2b2f762342a1bba119ed101d185" kind="variable"><name>lpProvider</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Program" kind="class"><name>genBTC::FileTime::Program</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Program_1a7af90a74dc361bd089981cdc3930ca2a" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="classWindowsExplorer_1_1ServerEnum" kind="class"><name>WindowsExplorer::ServerEnum</name>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56" kind="enum"><name>ErrorCodes</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56ad306b6fdee05fe87455110ddf6501e6c" kind="enumvalue"><name>NO_ERROR</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56acb5e548caff1b136c56dd598779a4812" kind="enumvalue"><name>ERROR_NO_MORE_ITEMS</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a048993d3b4f309eddfc95fafdf67ee07" kind="variable"><name>aData</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a76617f55788c32acd7d624894748afaf" kind="property"><name>Count</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a6a3512b9975faa75a8c2490429267174" kind="function"><name>ServerEnum</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a0f5e8b6ae7aecfc3b4f9302a4162a004" kind="function"><name>GetEnumerator</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a55a4aac4d6a375be141fccf5ce59be2e" kind="function"><name>WNetOpenEnum</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a166b42d86b56d3d309082c4fe56518e0" kind="function"><name>WNetCloseEnum</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a8752115a742d12c8d33023457acd5388" kind="function"><name>WNetEnumResource</name></member>
+    <member refid="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c" kind="function"><name>EnumerateServers</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" kind="class"><name>genBTC::FileTime::Properties::Settings</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a353686760c46e04b3f273007e3dbf089" kind="variable"><name>defaultInstance</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" kind="property"><name>Default</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a55d317289f21e284204963254b401e3e" kind="property"><name>ShowNoticesReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a7631f85d156658d00bc611fdeda098c8" kind="property"><name>SkipSystem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a48703dc726b3afeeded4096df966dc6e" kind="property"><name>SkipHidden</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5e754668094b1230292f559313b44cfb" kind="property"><name>SkipReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a62296f8c2e00dddf7b9a5ab271486aa0" kind="property"><name>ShowSystem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a275699f890e2c790a9f988f456934385" kind="property"><name>ShowHidden</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a90f04201b377ff6db5fdb769a0a46733" kind="property"><name>ShowReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5cf92ee59075488246c22bfd07ed61aa" kind="property"><name>useStartupDir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1ab8d2bb6641d879fb83163c1c265056a9" kind="property"><name>StartupDir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a0d95413a8822702c44e33a79aa595b04" kind="property"><name>mode1addrootdir</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a1b0d452a069c8e66e98b2d7e03fc5cd6" kind="property"><name>useRootDirAsContainer</name></member>
+  </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper" kind="class"><name>genBTC::FileTime::Classes::SharedHelper</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" kind="variable"><name>Seperator</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a9027ac895c6f046db2ac5066c74548b3" kind="variable"><name>UserDesktop</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" kind="variable"><name>CurrExten</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a30c0ab78648a723fc6f15a05ea07ee45" kind="variable"><name>Filextlist</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a" kind="function"><name>StrCmpLogicalW</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864" kind="function"><name>explorerStringComparer</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe" kind="function"><name>FindCurExt</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0" kind="function"><name>RemoveAttributes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" kind="function"><name>SyncSettingstoInvisibleFlag</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b" kind="function"><name>Bool2Int</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" kind="function"><name>OpenFile</name></member>
+  </compound>
+  <compound refid="structExtractIcon_1_1SHFILEINFO" kind="struct"><name>ExtractIcon::SHFILEINFO</name>
+    <member refid="structExtractIcon_1_1SHFILEINFO_1a264e1cd859903baff6a667f2a3eced5b" kind="variable"><name>hIcon</name></member>
+    <member refid="structExtractIcon_1_1SHFILEINFO_1a076a7e6bc2f70b56c6ebb774aab1a61d" kind="variable"><name>iIcon</name></member>
+    <member refid="structExtractIcon_1_1SHFILEINFO_1afec72d0ec6a3e102618bec1b34ef426a" kind="variable"><name>dwAttributes</name></member>
+    <member refid="structExtractIcon_1_1SHFILEINFO_1a2d9f6e8e70e6b1d24d279ac84b128bd7" kind="variable"><name>szDisplayName</name></member>
+    <member refid="structExtractIcon_1_1SHFILEINFO_1a83a2dfb2efb37776654a4d7bc14d5b9b" kind="variable"><name>szTypeName</name></member>
+    <member refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" kind="function"><name>SHFILEINFO</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO" kind="struct"><name>genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1ad536b4bd00ef75a587434b9385acc1ae" kind="variable"><name>hIcon</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1aa4eeffbbd0847601c1780647ecb3be83" kind="function"><name>SHFILEINFO</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR" kind="struct"><name>genBTC::FileTime::Models::SkippedHSR</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" kind="variable"><name>H</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" kind="variable"><name>R</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" kind="variable"><name>S</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1af7b494ffc63ac5c484b806a0e48aae97" kind="function"><name>SkippedHSR</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b" kind="function"><name>Reset</name></member>
+  </compound>
+  <compound refid="classUserControl" kind="class"><name>UserControl</name>
+  </compound>
+  <compound refid="namespacegenBTC" kind="namespace"><name>genBTC</name>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime" kind="namespace"><name>genBTC::FileTime</name>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime_1_1Classes" kind="namespace"><name>genBTC::FileTime::Classes</name>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime_1_1Classes_1_1Native" kind="namespace"><name>genBTC::FileTime::Classes::Native</name>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime_1_1Forms" kind="namespace"><name>genBTC::FileTime::Forms</name>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime_1_1Models" kind="namespace"><name>genBTC::FileTime::Models</name>
+    <member refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4" kind="enum"><name>ListViewIcon</name></member>
+    <member refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e" kind="enumvalue"><name>File</name></member>
+    <member refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494" kind="enumvalue"><name>Directory</name></member>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime_1_1mViewModels" kind="namespace"><name>genBTC::FileTime::mViewModels</name>
+  </compound>
+  <compound refid="namespacegenBTC_1_1FileTime_1_1Properties" kind="namespace"><name>genBTC::FileTime::Properties</name>
+  </compound>
+  <compound refid="namespaceSystem" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Collections_1_1Generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1ComponentModel" kind="namespace"><name>System::ComponentModel</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Drawing" kind="namespace"><name>System::Drawing</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1IO" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Resources" kind="namespace"><name>System::Resources</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Runtime_1_1InteropServices" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Threading" kind="namespace"><name>System::Threading</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Windows_1_1Forms" kind="namespace"><name>System::Windows::Forms</name>
+  </compound>
+  <compound refid="namespaceWindowsExplorer" kind="namespace"><name>WindowsExplorer</name>
+    <member refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca" kind="enum"><name>ResourceScope</name></member>
+    <member refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaabb909b3df5acac023922bca7ae890d1c" kind="enumvalue"><name>RESOURCE_CONNECTED</name></member>
+    <member refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa46bb8db4613943a4051a61fa1eaf3d19" kind="enumvalue"><name>RESOURCE_GLOBALNET</name></member>
+    <member refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaab2206a45992c8c7db0d67a87c8e7541c" kind="enumvalue"><name>RESOURCE_REMEMBERED</name></member>
+    <member refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa195f67f2c6e349dc21b97d4973fc5047" kind="enumvalue"><name>RESOURCE_RECENT</name></member>
+    <member refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa52b88d4d42ac56caadc0890e9ba27593" kind="enumvalue"><name>RESOURCE_CONTEXT</name></member>
+    <member refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f" kind="enum"><name>ResourceType</name></member>
+    <member refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa6d5711943560ee0b6d213a70da20b68a" kind="enumvalue"><name>RESOURCETYPE_ANY</name></member>
+    <member refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa191f686b51949fc8d77c584f0b17a072" kind="enumvalue"><name>RESOURCETYPE_DISK</name></member>
+    <member refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa86720d525c985a73595c0076ca043486" kind="enumvalue"><name>RESOURCETYPE_PRINT</name></member>
+    <member refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9faa2f8ea909101793ae2a34e9d936c86a1" kind="enumvalue"><name>RESOURCETYPE_RESERVED</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7" kind="enum"><name>ResourceUsage</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a7a8ecad1261e70ce9d35b49ac25087ed" kind="enumvalue"><name>RESOURCEUSAGE_CONNECTABLE</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a5844b7d7be1e65cc624f2a700eef1f50" kind="enumvalue"><name>RESOURCEUSAGE_CONTAINER</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a2912c36b107394da578f4f932ef3397a" kind="enumvalue"><name>RESOURCEUSAGE_NOLOCALDEVICE</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7ad1880508280941abf9b1c2b04f8360cc" kind="enumvalue"><name>RESOURCEUSAGE_SIBLING</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7adb91e0303ae671c0573098be97d9b0c1" kind="enumvalue"><name>RESOURCEUSAGE_ATTACHED</name></member>
+    <member refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7abf4050ea26aa60a908d9536dd3252f06" kind="enumvalue"><name>RESOURCEUSAGE_ALL</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d" kind="enum"><name>ResourceDisplayType</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735dac800d72d4f7c4b04abc0686862329329" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_GENERIC</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da95d70b4433bf6d3cfa173d3771eeeca4" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_DOMAIN</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da733ca97841ae2dc6a7802e6834a259fe" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_SERVER</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735dac2e0c4ce8b6e5feb5d2f9d9da9af548a" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_SHARE</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da953469e02f9a0aa1a436e74067fc0eab" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_FILE</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da5c22f21a4cfc59e1842271da58e3bdf4" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_GROUP</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da675c1081634d055e23c7b802ef7c17a0" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_NETWORK</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da61d7576bc06cb4f0f9acc8273fd386d8" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_ROOT</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735daac96d73b6aa173a1714dd5b1305ee601" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_SHAREADMIN</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da22c1b3c7d321be52cc5b31636c8f804d" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_DIRECTORY</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da066eae0b538e9f3ac0d8893773f121b2" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_TREE</name></member>
+    <member refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da08587105ef1dc6972c91292748b34082" kind="enumvalue"><name>RESOURCEDISPLAYTYPE_NDSCONTAINER</name></member>
+  </compound>
+  <compound refid="AssemblyInfo_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="AssemblyVersion_8cs" kind="file"><name>AssemblyVersion.cs</name>
+  </compound>
+  <compound refid="CustomListView_8cs" kind="file"><name>CustomListView.cs</name>
+  </compound>
+  <compound refid="DataModel_8cs" kind="file"><name>DataModel.cs</name>
+  </compound>
+  <compound refid="DateNewOldObj_8cs" kind="file"><name>DateNewOldObj.cs</name>
+  </compound>
+  <compound refid="ExplorerLikeSort_8cs" kind="file"><name>ExplorerLikeSort.cs</name>
+  </compound>
+  <compound refid="ExplorerTree_8cs" kind="file"><name>ExplorerTree.cs</name>
+  </compound>
+  <compound refid="ExplorerTree_8Designer_8cs" kind="file"><name>ExplorerTree.Designer.cs</name>
+  </compound>
+  <compound refid="ExtractIcon_8cs" kind="file"><name>ExtractIcon.cs</name>
+  </compound>
+  <compound refid="Form__About_8cs" kind="file"><name>Form_About.cs</name>
+  </compound>
+  <compound refid="Form__ChooseDate_8cs" kind="file"><name>Form_ChooseDate.cs</name>
+  </compound>
+  <compound refid="Form__ChooseDate_8Designer_8cs" kind="file"><name>Form_ChooseDate.Designer.cs</name>
+  </compound>
+  <compound refid="Form__Confirm_8cs" kind="file"><name>Form_Confirm.cs</name>
+  </compound>
+  <compound refid="Form__Confirm_8Designer_8cs" kind="file"><name>Form_Confirm.Designer.cs</name>
+  </compound>
+  <compound refid="Form__Main_8cs" kind="file"><name>Form_Main.cs</name>
+  </compound>
+  <compound refid="Form__Main_8Designer_8cs" kind="file"><name>Form_Main.Designer.cs</name>
+  </compound>
+  <compound refid="Form__Preferences_8cs" kind="file"><name>Form_Preferences.cs</name>
+  </compound>
+  <compound refid="Form__Preferences_8Designer_8cs" kind="file"><name>Form_Preferences.Designer.cs</name>
+  </compound>
+  <compound refid="NameDateObj_8cs" kind="file"><name>NameDateObj.cs</name>
+  </compound>
+  <compound refid="NameDateObjListViewVMdl_8cs" kind="file"><name>NameDateObjListViewVMdl.cs</name>
+  </compound>
+  <compound refid="NativeExtractIcon_8cs" kind="file"><name>NativeExtractIcon.cs</name>
+  </compound>
+  <compound refid="NativeScroll_8cs" kind="file"><name>NativeScroll.cs</name>
+  </compound>
+  <compound refid="NativeSelect_8cs" kind="file"><name>NativeSelect.cs</name>
+  </compound>
+  <compound refid="Program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="Settings_8cs" kind="file"><name>Settings.cs</name>
+  </compound>
+  <compound refid="Settings_8Designer_8cs" kind="file"><name>Settings.Designer.cs</name>
+  </compound>
+  <compound refid="SharedHelper_8cs" kind="file"><name>SharedHelper.cs</name>
+  </compound>
+  <compound refid="Structs_8cs" kind="file"><name>Structs.cs</name>
+  </compound>
+  <compound refid="dir_0c68614ac8d8401edbf4146ded722294" kind="dir"><name>Classes</name>
+  </compound>
+  <compound refid="dir_f5ddc4b96038e2e782829a8a44084eee" kind="dir"><name>Forms</name>
+  </compound>
+  <compound refid="dir_22305cb0964bbe63c21991dd2265ce48" kind="dir"><name>Models</name>
+  </compound>
+  <compound refid="dir_c1f7bb9bfa8ee7c1f06df1bef22ea2f9" kind="dir"><name>mViewModels</name>
+  </compound>
+  <compound refid="dir_0d800a1bc9a2227f570fa51d24a3a788" kind="dir"><name>Native</name>
+  </compound>
+  <compound refid="dir_d051c76eebdc544d9c3d734575641c72" kind="dir"><name>Properties</name>
+  </compound>
+  <compound refid="dir_5b156f3f051148dc61ef5027c05b1105" kind="dir"><name>WindowsExplorer</name>
+  </compound>
+</doxygenindex>

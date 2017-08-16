@@ -1,0 +1,28 @@
+var classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences =
+[
+    [ "Form_Preferences", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a044ed6a814780c52529b30be26463f62", null ],
+    [ "button1_Click", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a281c6a90053ba74e3fd34de00d771f37", null ],
+    [ "button2_Cancel_Click", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#aeac9777e8e2d82f4d532578e89ddecac", null ],
+    [ "button_UseCurrentDir_Click", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a8bb3628fcbffc7fa60373514b76a4457", null ],
+    [ "button_Browse_Click", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#ade029483c7134e7a864ee0b8475f2361", null ],
+    [ "Dispose", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a9e1272169f107d98c18de0e0ad643477", null ],
+    [ "InitializeComponent", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#ae22d6c0ab2502fd4ece5f5d828e5d313", null ],
+    [ "_currentdir", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a0d0fcc156096c1c1d5bdd7b9a5061405", null ],
+    [ "components", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#ad28fafcafcab9fb5ac068f5cbbaebeb8", null ],
+    [ "checkBox1_ShowReadOnlyNotices", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a4a08890a4ecba4cbd9666e39787803cb", null ],
+    [ "checkBox4b_SkipReadOnly", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a8771b4533aa16b3270b43bc5a268cdef", null ],
+    [ "checkBox3b_SkipHidden", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#acd93cb19a7aa2b559ce3fbb0aac89d06", null ],
+    [ "checkBox2b_SkipSystem", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#acfcaf4a1cf951021bba6f0586633ca74", null ],
+    [ "checkBox6_StartupDir", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a32726198d8a2802ccf2edabbd97ea4fc", null ],
+    [ "textBox6_startupdir", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a359f7ac41ab689f1241abe98ceeaa735", null ],
+    [ "button1_OK", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#ae9cf65d55f0323eb8f528c8438d963bb", null ],
+    [ "button2_Cancel", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#aed3191bba6aa8cc2822bf8a4c65e43d2", null ],
+    [ "checkBox3a_ShowHidden", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#aa8b64002b9c854a5943b1bcfffb79739", null ],
+    [ "checkBox2a_ShowSystem", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a4ce4f5d3bb13bac70d437aa3f5c5de0c", null ],
+    [ "checkBox4a_ShowReadOnly", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#abaf84c7690a90b4ab91c9387c5f4d6fb", null ],
+    [ "button_UseCurrentDir", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#aed606508300ff0198c84db13b8104292", null ],
+    [ "button_Browse", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a783e099613ea77f61f177a140dffdc5a", null ],
+    [ "checkBox7_Mode1addRootDir", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#ad96a13454adf2d284161427c223242d8", null ],
+    [ "checkBox8_useRootDirAsContainer", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a1b62e6c55e43d211c406c9b4269952bc", null ],
+    [ "toolTip1", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a43a0a88e39e959daa0c693815c9b3fe3", null ]
+];

@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel">
+<title>genBTC::FileTime::Models::DataModel class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; contentsDirList<para><emphasis>&lt;summary&gt; Main Lists for filenames. Dir , File, Ext &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; FilesReadOnlytoFix<para><emphasis>&lt;summary&gt; Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; NameDateObj &gt; FilestoConfirmList<para><emphasis>&lt;summary&gt; List of Class to be passed to Form 2 for confirmation of files&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ListView listViewContents</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ImageList imageListFiles</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>SkippedHSR Skips</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Random random</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string CwdPathName</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>BoolCMA checkboxes</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>guistatus gui</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; contentsFileList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; filextlist</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad7ce30885dde9101862f8bf75032d402">DataModel</link> (
+)<para><emphasis>&lt;summary&gt;  Constructor  &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b">Clear</link> (
+bool resetList)<para><emphasis>&lt;summary&gt; Clear contents Dir + File lists &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70bf0d8494851633ef774a62b4c9048d">PopulateFileList</link> (
+string path)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4792452d26b386fedb946a81c885ef02">PopulateDirList</link> (
+string path)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a">DisplayContentsList</link> (
+bool checkboxRecurse, string labelname, bool filesonly)<para><emphasis>&lt;summary&gt;
+Display subfiles and subdirectories in the right panel listview
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTime <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3">DecideWhichTimeMode1</link> (
+string path)<para><emphasis>&lt;summary&gt;
+Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTime <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee">DecideTimeFromSubDirFile</link> (
+string path)<para><emphasis>&lt;summary&gt;
+Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e">RecurseSubDirectoryMode1</link> (
+string directoryPath, bool checkedRecurse, bool checkedShouldFiles)<para><emphasis>&lt;summary&gt;
+Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+(Only adds to the confirm list, Form 2 will actually write changes).
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4">RecurseSubDirectoryMode2</link> (
+string directoryPath)<para><emphasis>&lt;summary&gt;
+Mode 2: Recursive.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489">RecurseSubDirectoryMode1Parent</link> (
+string directoryPath, bool checkedRecurse, bool checkedShouldFiles)<para><emphasis>&lt;summary&gt;  Mode 1P (start at its Parent) &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b">RecurseSubDirectoryMode2Parent</link> (
+string directoryPath)<para><emphasis>&lt;summary&gt;  Mode 2P (start at its Parent)  &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85">SetTimeDateEachDirectory</link> (
+string directoryPath, DateTime fileDateTime, bool checkedRecurse, bool checkedShouldFiles)<para><emphasis>&lt;summary&gt;
+Set Directory Time
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa18f20f8dcf75fb4a7b87dab143ae010">SetTimeDateEachFile</link> (
+string directoryPath, DateTime fileDateTime)<para><emphasis>&lt;summary&gt;
+Set File Time
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2">SkipOrAddFile</link> (
+string path, bool isDirectory)<para><emphasis>&lt;summary&gt;
+Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270">SetFileDateTimeMode1</link> (
+string filePath, DateTime fileTime, bool isDirectory)<para><emphasis>&lt;summary&gt; STATIC.
+Set the date/time for a single file/directory (This works on files and directories)
+Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+(Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599">Makedateobject</link> (
+string filePath, DateTime fileTime, bool isDirectory)<para><emphasis>&lt;summary&gt;
+Static. Overloaded. Make a NameDateObj out of 1 filename; writes A SINGLE time to all 3 date properties.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d">Makedateobject</link> (
+string folderPath, <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> subObj)<para><emphasis>&lt;summary&gt;
+Static. Overloaded. Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData">DisplayCmaTimeData</link> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172">GetCmaTimes</link> (
+string pathName)<para><emphasis>&lt;summary&gt;
+Display the date and time of the selected file (also works on Directories)
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0">DecideWhichTimeMode2</link> (
+string directoryPath)<para><emphasis>&lt;summary&gt;
+Very long function that does a simple task. Read in the options the user set for the operation, and
+Decide on the timestamp it should use, by the end we will have a single object with 3 times.
+This will need to be hit with broad strokes if we attempt to do any more work on the program.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <simplesect>
+                <title>List&lt;string&gt; genBTC.FileTime.Models.DataModel.contentsDirList</title>                
+                <para>Definition at line 16 of file DataModel.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>DataModel.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>List&lt;string&gt; genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix</title>                
+                <para>Definition at line 18 of file DataModel.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>DataModel.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>List&lt;NameDateObj&gt; genBTC.FileTime.Models.DataModel.FilestoConfirmList</title>                
+                <para>Definition at line 20 of file DataModel.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>DataModel.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad7ce30885dde9101862f8bf75032d402">
+                <title>genBTC.FileTime.Models.DataModel.DataModel ()</title> <emphasis>&lt;summary&gt;  Constructor  &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b">
+                <title>void genBTC.FileTime.Models.DataModel.Clear (bool resetList)</title> <emphasis>&lt;summary&gt; Clear contents Dir + File lists &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70bf0d8494851633ef774a62b4c9048d">
+                <title>List&lt;string&gt; genBTC.FileTime.Models.DataModel.PopulateFileList (string path)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4792452d26b386fedb946a81c885ef02">
+                <title>List&lt;string&gt; genBTC.FileTime.Models.DataModel.PopulateDirList (string path)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a">
+                <title>void genBTC.FileTime.Models.DataModel.DisplayContentsList (bool checkboxRecurse, string labelname, bool filesonly=true)</title> <emphasis>&lt;summary&gt;
+Display subfiles and subdirectories in the right panel listview
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filesonly</entry>
+                                <entry>
+<para>Don&apos;t show the directories, only files.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3">
+                <title>DateTime genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1 (string path)</title> <emphasis>&lt;summary&gt;
+Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.
+&lt;/summary&gt;</emphasis>
+                
+<para>reqs: (string path), contentsDirList, contentsFileList, guistatus </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee">
+                <title>DateTime genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile (string path)</title> <emphasis>&lt;summary&gt;
+Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e">
+                <title>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1 (string directoryPath, bool checkedRecurse, bool checkedShouldFiles)</title> <emphasis>&lt;summary&gt;
+Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+(Only adds to the confirm list, Form 2 will actually write changes).
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>directoryPath</entry>
+                                <entry>
+<para>Full path to the directory</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4">
+                <title>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2 (string directoryPath)</title> <emphasis>&lt;summary&gt;
+Mode 2: Recursive.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>directoryPath</entry>
+                                <entry>
+<para>Path to start in.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489">
+                <title>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent (string directoryPath, bool checkedRecurse, bool checkedShouldFiles)</title> <emphasis>&lt;summary&gt;  Mode 1P (start at its Parent) &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b">
+                <title>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent (string directoryPath)</title> <emphasis>&lt;summary&gt;  Mode 2P (start at its Parent)  &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85">
+                <title>void genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory (string directoryPath, DateTime fileDateTime, bool checkedRecurse, bool checkedShouldFiles)</title> <emphasis>&lt;summary&gt;
+Set Directory Time
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa18f20f8dcf75fb4a7b87dab143ae010">
+                <title>void genBTC.FileTime.Models.DataModel.SetTimeDateEachFile (string directoryPath, DateTime fileDateTime)</title> <emphasis>&lt;summary&gt;
+Set File Time
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2">
+                <title>void genBTC.FileTime.Models.DataModel.SkipOrAddFile (string path, bool isDirectory)</title> <emphasis>&lt;summary&gt;
+Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270">
+                <title>void genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1 (string filePath, DateTime fileTime, bool isDirectory)</title> <emphasis>&lt;summary&gt; STATIC.
+Set the date/time for a single file/directory (This works on files and directories)
+Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+(Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+&lt;/summary&gt;</emphasis>
+                
+<para>Requires: Pass in the datamodel and the checkbox states. 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filePath</entry>
+                                <entry>
+<para>Full path to the file/directory</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fileTime</entry>
+                                <entry>
+<para>Date/Time to set the file/directory</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>isDirectory</entry>
+                                <entry>
+<para>Is this a directory???</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599">
+                <title>NameDateObj genBTC.FileTime.Models.DataModel.Makedateobject (string filePath, DateTime fileTime, bool isDirectory)</title> <emphasis>&lt;summary&gt;
+Static. Overloaded. Make a NameDateObj out of 1 filename; writes A SINGLE time to all 3 date properties.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d">
+                <title>NameDateObj genBTC.FileTime.Models.DataModel.Makedateobject (string folderPath, NameDateObj subObj)</title> <emphasis>&lt;summary&gt;
+Static. Overloaded. Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172">
+                <title>DisplayCmaTimeData genBTC.FileTime.Models.DataModel.GetCmaTimes (string pathName)</title> <emphasis>&lt;summary&gt;
+Display the date and time of the selected file (also works on Directories)
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0">
+                <title>NameDateObj genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2 (string directoryPath)</title> <emphasis>&lt;summary&gt;
+Very long function that does a simple task. Read in the options the user set for the operation, and
+Decide on the timestamp it should use, by the end we will have a single object with 3 times.
+This will need to be hit with broad strokes if we attempt to do any more work on the program.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

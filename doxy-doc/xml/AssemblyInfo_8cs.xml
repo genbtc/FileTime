@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="AssemblyInfo_8cs" kind="file" language="C#">
+    <compoundname>AssemblyInfo.cs</compoundname>
+    <innernamespace refid="namespaceSystem_1_1Reflection">System::Reflection</innernamespace>
+    <innernamespace refid="namespaceSystem_1_1Resources">System::Resources</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceSystem" kindref="compound">System</ref>.Reflection;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceSystem" kindref="compound">System</ref>.Resources;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>General<sp/>Information<sp/>about<sp/>an<sp/>assembly<sp/>is<sp/>controlled<sp/>through<sp/>the<sp/>following</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>set<sp/>of<sp/>attributes.<sp/>Change<sp/>these<sp/>attribute<sp/>values<sp/>to<sp/>modify<sp/>the<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>associated<sp/>with<sp/>an<sp/>assembly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">[assembly:<sp/>AssemblyTitle(</highlight><highlight class="stringliteral">&quot;FileTime&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">[assembly:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>AssemblyDescription(</highlight><highlight class="stringliteral">&quot;Sets<sp/>the<sp/>creation,<sp/>last<sp/>write<sp/>and<sp/>last<sp/>access<sp/>date<sp/>and<sp/>time<sp/>of<sp/>user<sp/>selected<sp/>files/folders&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">[assembly:<sp/>AssemblyConfiguration(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">[assembly:<sp/>AssemblyCompany(</highlight><highlight class="stringliteral">&quot;genBTC&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">[assembly:<sp/>AssemblyProduct(</highlight><highlight class="stringliteral">&quot;genBTC<sp/>Project:<sp/>FileTime&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">[assembly:<sp/>AssemblyCopyright(</highlight><highlight class="stringliteral">&quot;©<sp/>2014:<sp/>genBTC&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">[assembly:<sp/>AssemblyTrademark(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">[assembly:<sp/>AssemblyCulture(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>information<sp/>for<sp/>an<sp/>assembly<sp/>consists<sp/>of<sp/>the<sp/>following<sp/>four<sp/>values:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Major<sp/>Version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Minor<sp/>Version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Build<sp/>Number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Revision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>specify<sp/>all<sp/>the<sp/>values<sp/>or<sp/>you<sp/>can<sp/>default<sp/>the<sp/>Revision<sp/>and<sp/>Build<sp/>Numbers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>using<sp/>the<sp/>&apos;*&apos;<sp/>as<sp/>shown<sp/>below:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">[assembly:<sp/>AssemblyVersion(</highlight><highlight class="stringliteral">&quot;1.0.*&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>order<sp/>to<sp/>sign<sp/>your<sp/>assembly<sp/>you<sp/>must<sp/>specify<sp/>a<sp/>key<sp/>to<sp/>use.<sp/>Refer<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Microsoft<sp/>.NET<sp/>Framework<sp/>documentation<sp/>for<sp/>more<sp/>information<sp/>on<sp/>assembly<sp/>signing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>attributes<sp/>below<sp/>to<sp/>control<sp/>which<sp/>key<sp/>is<sp/>used<sp/>for<sp/>signing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notes:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>(*)<sp/>If<sp/>no<sp/>key<sp/>is<sp/>specified,<sp/>the<sp/>assembly<sp/>is<sp/>not<sp/>signed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>(*)<sp/>KeyName<sp/>refers<sp/>to<sp/>a<sp/>key<sp/>that<sp/>has<sp/>been<sp/>installed<sp/>in<sp/>the<sp/>Crypto<sp/>Service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Provider<sp/>(CSP)<sp/>on<sp/>your<sp/>machine.<sp/>KeyFile<sp/>refers<sp/>to<sp/>a<sp/>file<sp/>which<sp/>contains</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>key.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>(*)<sp/>If<sp/>the<sp/>KeyFile<sp/>and<sp/>the<sp/>KeyName<sp/>values<sp/>are<sp/>both<sp/>specified,<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>following<sp/>processing<sp/>occurs:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1)<sp/>If<sp/>the<sp/>KeyName<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>CSP,<sp/>that<sp/>key<sp/>is<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)<sp/>If<sp/>the<sp/>KeyName<sp/>does<sp/>not<sp/>exist<sp/>and<sp/>the<sp/>KeyFile<sp/>does<sp/>exist,<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>the<sp/>KeyFile<sp/>is<sp/>installed<sp/>into<sp/>the<sp/>CSP<sp/>and<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>(*)<sp/>In<sp/>order<sp/>to<sp/>create<sp/>a<sp/>KeyFile,<sp/>you<sp/>can<sp/>use<sp/>the<sp/>sn.exe<sp/>(Strong<sp/>Name)<sp/>utility.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>When<sp/>specifying<sp/>the<sp/>KeyFile,<sp/>the<sp/>location<sp/>of<sp/>the<sp/>KeyFile<sp/>should<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>relative<sp/>to<sp/>the<sp/>project<sp/>output<sp/>directory<sp/>which<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>%Project<sp/>Directory%\obj\&lt;configuration&gt;.<sp/>For<sp/>example,<sp/>if<sp/>your<sp/>KeyFile<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>located<sp/>in<sp/>the<sp/>project<sp/>directory,<sp/>you<sp/>would<sp/>specify<sp/>the<sp/>AssemblyKeyFile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute<sp/>as<sp/>[assembly:<sp/>AssemblyKeyFile(&quot;..\\..\\mykey.snk&quot;)]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>(*)<sp/>Delay<sp/>Signing<sp/>is<sp/>an<sp/>advanced<sp/>option<sp/>-<sp/>see<sp/>the<sp/>Microsoft<sp/>.NET<sp/>Framework</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>documentation<sp/>for<sp/>more<sp/>information<sp/>on<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">[assembly:<sp/>AssemblyDelaySign(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">[assembly:<sp/>AssemblyKeyFile(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">[assembly:<sp/>AssemblyKeyName(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">[assembly:<sp/>NeutralResourcesLanguage(</highlight><highlight class="stringliteral">&quot;en-US&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+    </programlisting>
+    <location file="AssemblyInfo.cs"/>
+  </compounddef>
+</doxygen>

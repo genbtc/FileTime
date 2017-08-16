@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_0c68614ac8d8401edbf4146ded722294" kind="dir">
+    <compoundname>Classes</compoundname>
+    <innerdir refid="dir_0d800a1bc9a2227f570fa51d24a3a788">Native</innerdir>
+    <innerfile refid="ExplorerLikeSort_8cs">ExplorerLikeSort.cs</innerfile>
+    <innerfile refid="ExtractIcon_8cs">ExtractIcon.cs</innerfile>
+    <innerfile refid="SharedHelper_8cs">SharedHelper.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1aa8e46ec3a548953c766136e0a426a21c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl._a</definition>
+        <argsstring></argsstring>
+        <name>_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="9" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a75cf9e413ac88c6f8b9a04652d848205" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl._c</definition>
+        <argsstring></argsstring>
+        <name>_c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="9" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1aaad80ae4f94148b06c1d1f2ac763818c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl._m</definition>
+        <argsstring></argsstring>
+        <name>_m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="9" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1add443b21423a4056b95874b407553a71" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.FileOrDirType</definition>
+        <argsstring></argsstring>
+        <name>FileOrDirType</name>
+        <briefdescription>
+<para>int FileOrDirType: 0 (File) or 1 (Dir)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="38" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" compoundref="NameDateObjListViewVMdl_8cs" startline="78" endline="109">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a94fa6cac337c3d43dbbcc128fdbdc6f6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>string Name: filepathname</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="41" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" compoundref="NameDateObjListViewVMdl_8cs" startline="78" endline="109">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abd0793434b14a5d2cb47c4ae7718afb4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created</definition>
+        <argsstring></argsstring>
+        <name>Created</name>
+        <briefdescription>
+<para>returns a string of DateTime.ToString or null </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="44" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" compoundref="NameDateObjListViewVMdl_8cs" startline="78" endline="109">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d" compoundref="DataModel_8cs" startline="452" endline="464">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1adc152d4f53e4d862491993903ce1c02e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Modified</definition>
+        <argsstring></argsstring>
+        <name>Modified</name>
+        <briefdescription>
+<para>returns a string of DateTime.ToString or null </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="51" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" compoundref="NameDateObjListViewVMdl_8cs" startline="78" endline="109">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0b1fd55712b915ae20dc82d50cd62573" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Accessed</definition>
+        <argsstring></argsstring>
+        <name>Accessed</name>
+        <briefdescription>
+<para>returns a string of DateTime.ToString or null </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="58" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" compoundref="NameDateObjListViewVMdl_8cs" startline="78" endline="109">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a5297b0991118fe195a70643fc565f600" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</definition>
+        <argsstring>(ListViewItem thing)</argsstring>
+        <name>NameDateObjListViewVMdl</name>
+        <param>
+          <type>ListViewItem</type>
+          <declname>thing</declname>
+        </param>
+        <briefdescription>
+<para>construct with a listviewitem </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="12" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="12" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</definition>
+        <argsstring>(NameDateObj thing)</argsstring>
+        <name>NameDateObjListViewVMdl</name>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
+          <declname>thing</declname>
+        </param>
+        <briefdescription>
+<para>construct with a NameDateObj </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="22" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="22" bodyend="29"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" compoundref="NameDateObj_8cs" startline="56">genBTC.FileTime.Models.NameDateObj.Accessed</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" compoundref="NameDateObj_8cs" startline="42">genBTC.FileTime.Models.NameDateObj.Created</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a2edd2e54b89f4feb9f2f6f9b86fee5ba" compoundref="NameDateObj_8cs" startline="34">genBTC.FileTime.Models.NameDateObj.FileOrDirType</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" compoundref="NameDateObj_8cs" startline="49">genBTC.FileTime.Models.NameDateObj.Modified</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="37">genBTC.FileTime.Models.NameDateObj.Name</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</definition>
+        <argsstring>()</argsstring>
+        <name>NameDateObjListViewVMdl</name>
+        <briefdescription>
+<para>Empty default constructor (initializer) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="32" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare</definition>
+        <argsstring>(NameDateObjListViewVMdl thing1, NameDateObjListViewVMdl thing2)</argsstring>
+        <name>Compare</name>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl" kindref="compound">NameDateObjListViewVMdl</ref></type>
+          <declname>thing1</declname>
+        </param>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl" kindref="compound">NameDateObjListViewVMdl</ref></type>
+          <declname>thing2</declname>
+        </param>
+        <briefdescription>
+<para>Compares two of these objects&apos;s DATES, Combines any dates that are null or not null and returns only one Looks super stupid, but makes the &quot;Try to combine DUPlicate filenames&quot; actually work. Help ? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="78" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="78" bodyend="109"/>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0b1fd55712b915ae20dc82d50cd62573" compoundref="NameDateObjListViewVMdl_8cs" startline="59">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Accessed</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abd0793434b14a5d2cb47c4ae7718afb4" compoundref="NameDateObjListViewVMdl_8cs" startline="45">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1add443b21423a4056b95874b407553a71" compoundref="NameDateObjListViewVMdl_8cs" startline="38">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.FileOrDirType</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1adc152d4f53e4d862491993903ce1c02e" compoundref="NameDateObjListViewVMdl_8cs" startline="52">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Modified</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a94fa6cac337c3d43dbbcc128fdbdc6f6" compoundref="NameDateObjListViewVMdl_8cs" startline="41">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Name</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abef5d6f4fc3c61a17957b52455257203" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ListViewItem</type>
+        <definition>ListViewItem genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Converter</definition>
+        <argsstring>()</argsstring>
+        <name>Converter</name>
+        <briefdescription>
+<para>Converts this class into a ListViewItem. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns a listviewitem</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="114" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="114" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a28066a9b990ea14d6b2f3c086ea67bcd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Nullordatestring</definition>
+        <argsstring>(string value)</argsstring>
+        <name>Nullordatestring</name>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="64" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1ab8c8af3754d3f8a61189253443562dbc" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.DatestringorNa</definition>
+        <argsstring>(string value)</argsstring>
+        <name>DatestringorNa</name>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/NameDateObjListViewVMdl.cs" line="69" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="69" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ViewModel version of the NameDateObj(Name + 3 Dates)</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="mViewModels/NameDateObjListViewVMdl.cs" line="8" column="1" bodyfile="mViewModels/NameDateObjListViewVMdl.cs" bodystart="7" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1aa8e46ec3a548953c766136e0a426a21c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>_a</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a75cf9e413ac88c6f8b9a04652d848205" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>_c</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1aaad80ae4f94148b06c1d1f2ac763818c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>_m</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0b1fd55712b915ae20dc82d50cd62573" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Accessed</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Compare</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abef5d6f4fc3c61a17957b52455257203" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Converter</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abd0793434b14a5d2cb47c4ae7718afb4" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Created</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1ab8c8af3754d3f8a61189253443562dbc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>DatestringorNa</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1add443b21423a4056b95874b407553a71" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>FileOrDirType</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1adc152d4f53e4d862491993903ce1c02e" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Modified</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a94fa6cac337c3d43dbbcc128fdbdc6f6" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Name</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a5297b0991118fe195a70643fc565f600" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>NameDateObjListViewVMdl</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>NameDateObjListViewVMdl</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>NameDateObjListViewVMdl</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a28066a9b990ea14d6b2f3c086ea67bcd" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</scope><name>Nullordatestring</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

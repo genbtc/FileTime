@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacegenBTC_1_1FileTime_1_1Models">
+<title>genBTC::FileTime::Models</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA">genBTC::FileTime::Models::BoolCMA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel">genBTC::FileTime::Models::DataModel</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj">genBTC::FileTime::Models::DateNewOldObj</link></para>
+<para><emphasis>&lt;summary&gt;
+Class: given a list of DateTime?s, get oldest and newest date and the index of each
+This is for the &quot;Source time from&quot; option - it looks at an entire subfolder of files.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData">genBTC::FileTime::Models::DisplayCmaTimeData</link></para>
+<para><emphasis>&lt;summary&gt;  Store some the fields that the GUI uses. Small Version. &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1guistatus">genBTC::FileTime::Models::guistatus</link></para>
+<para><emphasis>&lt;summary&gt;  Store all(most) the fields that the GUI uses, for populating the viewmodel. &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">genBTC::FileTime::Models::NameDateObj</link></para>
+<para><emphasis>&lt;summary&gt;Class object with 5 properties to refer to a file/dir&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR">genBTC::FileTime::Models::SkippedHSR</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4">ListViewIcon</link> {
+<link linkend="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">File</link>= 0,
+<link linkend="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">Directory</link>= 1
+}</literallayout>
+<para><emphasis>&lt;summary&gt; Icon in listView image list &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

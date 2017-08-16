@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespacegenBTC_1_1FileTime" kind="namespace" language="C#">
+    <compoundname>genBTC::FileTime</compoundname>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1AssemblyVersion" prot="public">genBTC::FileTime::AssemblyVersion</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Program" prot="package">genBTC::FileTime::Program</innerclass>
+    <innernamespace refid="namespacegenBTC_1_1FileTime_1_1Classes">genBTC::FileTime::Classes</innernamespace>
+    <innernamespace refid="namespacegenBTC_1_1FileTime_1_1Forms">genBTC::FileTime::Forms</innernamespace>
+    <innernamespace refid="namespacegenBTC_1_1FileTime_1_1Models">genBTC::FileTime::Models</innernamespace>
+    <innernamespace refid="namespacegenBTC_1_1FileTime_1_1mViewModels">genBTC::FileTime::mViewModels</innernamespace>
+    <innernamespace refid="namespacegenBTC_1_1FileTime_1_1Properties">genBTC::FileTime::Properties</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AssemblyVersion.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

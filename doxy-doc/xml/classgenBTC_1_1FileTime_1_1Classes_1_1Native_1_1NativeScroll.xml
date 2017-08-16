@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Classes::Native::NativeScroll</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a4589be01fbeb248bb80c0392e1e1d2fe" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int genBTC.FileTime.Classes.Native.NativeScroll.SB_HORZ</definition>
+        <argsstring></argsstring>
+        <name>SB_HORZ</name>
+        <initializer>= 0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeScroll.cs" line="9" column="1" bodyfile="Classes/Native/NativeScroll.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aad428db016c0a69a8288b75ba7bcb80d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.Classes.Native.NativeScroll.GetScrollPos</definition>
+        <argsstring>(IntPtr hWnd, int nBar)</argsstring>
+        <name>GetScrollPos</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nBar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeScroll.cs" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a9ba1ee44347a1e4edcf86074be4f6eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.Classes.Native.NativeScroll.SetScrollPos</definition>
+        <argsstring>(IntPtr hWnd, int nBar, int nPos, bool bRedraw)</argsstring>
+        <name>SetScrollPos</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nBar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nPos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bRedraw</declname>
+        </param>
+        <briefdescription>
+<para>Manually scroll a control </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window Handle</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nBar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which scroll Bar?, 0x0 for horizontal or 0x1 for Vertical</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New scroll position, in pixels</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bRedraw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>redraw is usually true</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeScroll.cs" line="21" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aa1c190e5e4307d7cfebf701c8c9bf44b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void genBTC.FileTime.Classes.Native.NativeScroll.ScrollH</definition>
+        <argsstring>(TreeNode thing, int pixelsH, bool abs=true)</argsstring>
+        <name>ScrollH</name>
+        <param>
+          <type>TreeNode</type>
+          <declname>thing</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pixelsH</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>abs</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Only for treenodes. and only horizontal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the TreeNode being passed, to scroll into view.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pixelsH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pixels to scroll by</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>absolute? otherwise, get current position and add pixelsH to that</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeScroll.cs" line="27" column="1" bodyfile="Classes/Native/NativeScroll.cs" bodystart="27" bodyend="46"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/Native/NativeScroll.cs" line="8" column="1" bodyfile="Classes/Native/NativeScroll.cs" bodystart="7" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aad428db016c0a69a8288b75ba7bcb80d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeScroll</scope><name>GetScrollPos</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a4589be01fbeb248bb80c0392e1e1d2fe" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeScroll</scope><name>SB_HORZ</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aa1c190e5e4307d7cfebf701c8c9bf44b" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeScroll</scope><name>ScrollH</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a9ba1ee44347a1e4edcf86074be4f6eae" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeScroll</scope><name>SetScrollPos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ExplorerLikeSort_8cs">
+    <title>ExplorerLikeSort.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer">genBTC::FileTime::Classes::ExplorerLikeComparer</link></para>
+<para><emphasis>&lt;summary&gt; Explorer-like Sort, for strings &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView">genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</link></para>
+<para><emphasis>&lt;summary&gt; Explorer-like Sort, for ListViewItem - used by listview.Sorter &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1Classes">genBTC::FileTime::Classes</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceSystem_1_1Collections">System::Collections</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceSystem_1_1Collections_1_1Generic">System::Collections::Generic</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceSystem_1_1Windows_1_1Forms">System::Windows::Forms</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file ExplorerLikeSort.cs</para>
+    </simplesect>
+</section>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>genBTC FileTime</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespacegenBTC.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime_1_1Classes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime_1_1Classes_1_1Native.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime_1_1Forms.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime_1_1Models.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime_1_1mViewModels.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacegenBTC_1_1FileTime_1_1Properties.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Collections.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Collections_1_1Generic.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1ComponentModel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Diagnostics.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Drawing.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1IO.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Reflection.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Resources.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Runtime_1_1InteropServices.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Threading.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceSystem_1_1Windows_1_1Forms.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceWindowsExplorer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Data Structure Documentation</title>
+        <xi:include href="classglobal_1_1SystemConfiguration_1_1ApplicationSettingsBase.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1AssemblyVersion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classWindowsExplorer_1_1ExplorerTree.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classExtractIcon.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classForm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structgenBTC_1_1FileTime_1_1Models_1_1guistatus.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classIComparer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classIEnumerable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classWindowsExplorer_1_1Kernel32.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classWindowsExplorer_1_1ServerEnum.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Properties_1_1Settings.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structExtractIcon_1_1SHFILEINFO.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classUserControl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="AssemblyInfo_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="AssemblyVersion_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="CustomListView_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="DataModel_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="DateNewOldObj_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ExplorerLikeSort_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ExplorerTree_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ExplorerTree_8Designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ExtractIcon_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__About_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__ChooseDate_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__ChooseDate_8Designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__Confirm_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__Confirm_8Designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__Main_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__Main_8Designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__Preferences_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Form__Preferences_8Designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="NameDateObj_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="NameDateObjListViewVMdl_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="NativeExtractIcon_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="NativeScroll_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="NativeSelect_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Program_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Settings_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Settings_8Designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="SharedHelper_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Structs_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

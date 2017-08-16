@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView">
+<title>genBTC::FileTime::mViewModels::CustomListView class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int WM_CHANGEUISTATE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Timer ItemSelectionChangedTimer<para><emphasis>&lt;summary&gt; keeps track of how often the selection is firing &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a6979108fd909da48f901c5ab0756cd05">SendMessage</link> (
+IntPtr hWnd, int wMsg, int wParam, int lParam)<para><emphasis>&lt;summary&gt; Send a P/Invoke to a listview &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a10dad3ebcba82659a47554b99f47c009">CustomListView</link> (
+)<para><emphasis>&lt;summary&gt; Constructor. activate the listview with desired options. &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a691f06d6adaf3371090e009b0fd390f5">SetWindowTheme</link> (
+IntPtr hWnd, string textSubAppName, string textSubIdList)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ada60d2e0687339738784799af8b93833">_ItemSelectionChangedTimer_Tick</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a44d31d00940505c036baef36966bff5a">OnMouseDown</link> (
+MouseEventArgs e)<para><emphasis>&lt;summary&gt;
+Subscribe to MouseDown event for the ListView.
+Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y).
+If they hit on an item AND it was a right click, set contextMenuAllowed to true.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a49943ac10dddcb9278c0bd36624c9f23">OnSelectedIndexChanged</link> (
+EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a96ac40bd3a3d205e99a1a29efbdda6ef">OnEnter</link> (
+EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ad9a02b35e4c1d1f8a90d1223efdfa147">CreateHandle</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a78544a2c6916329360db83e0f2e752d1">OnHandleCreated</link> (
+EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a9cafe443a3b9582afca75bbec8e6a7c5">OnClick</link> (
+EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ab2b770e61b466f16c7b263fce57c47cc">OnKeyUp</link> (
+KeyEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles. (Currently used for FORM_CONFIRM) </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 12 of file CustomListView.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>CustomListView.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>Timer genBTC.FileTime.mViewModels.CustomListView.ItemSelectionChangedTimer</title>                
+                <para>Definition at line 24 of file CustomListView.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>CustomListView.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a6979108fd909da48f901c5ab0756cd05">
+                <title>static int genBTC.FileTime.mViewModels.CustomListView.SendMessage (IntPtr hWnd, int wMsg, int wParam, int lParam)</title> <emphasis>&lt;summary&gt; Send a P/Invoke to a listview &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a10dad3ebcba82659a47554b99f47c009">
+                <title>genBTC.FileTime.mViewModels.CustomListView.CustomListView ()</title> <emphasis>&lt;summary&gt; Constructor. activate the listview with desired options. &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a691f06d6adaf3371090e009b0fd390f5">
+                <title>static int genBTC.FileTime.mViewModels.CustomListView.SetWindowTheme (IntPtr hWnd, string textSubAppName, string textSubIdList)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ada60d2e0687339738784799af8b93833">
+                <title>void genBTC.FileTime.mViewModels.CustomListView._ItemSelectionChangedTimer_Tick (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a44d31d00940505c036baef36966bff5a">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.OnMouseDown (MouseEventArgs e)</title> <emphasis>&lt;summary&gt;
+Subscribe to MouseDown event for the ListView.
+Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y).
+If they hit on an item AND it was a right click, set contextMenuAllowed to true.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a49943ac10dddcb9278c0bd36624c9f23">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.OnSelectedIndexChanged (EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a96ac40bd3a3d205e99a1a29efbdda6ef">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.OnEnter (EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ad9a02b35e4c1d1f8a90d1223efdfa147">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.CreateHandle ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a78544a2c6916329360db83e0f2e752d1">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.OnHandleCreated (EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a9cafe443a3b9582afca75bbec8e6a7c5">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.OnClick (EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ab2b770e61b466f16c7b263fce57c47cc">
+                <title>override void genBTC.FileTime.mViewModels.CustomListView.OnKeyUp (KeyEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView">
+<title>genBTC::FileTime::Classes::ExpLikeCmpHelperforListView class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb">Compare</link> (
+object x, object y)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Explorer-like Sort, for ListViewItem - used by listview.Sorter </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 18 of file ExplorerLikeSort.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExplorerLikeSort.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb">
+                <title>int genBTC.FileTime.Classes.ExpLikeCmpHelperforListView.Compare (object x, object y)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

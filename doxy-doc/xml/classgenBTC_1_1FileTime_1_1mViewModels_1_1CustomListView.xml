@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::mViewModels::CustomListView</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ListView</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a7eb925817339699615514c8d97a961e6" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int genBTC.FileTime.mViewModels.CustomListView.WM_CHANGEUISTATE</definition>
+        <argsstring></argsstring>
+        <name>WM_CHANGEUISTATE</name>
+        <initializer>= 0x127</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="20" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1abb6ec4bb41f8681f34f3da9660181672" prot="public" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer genBTC.FileTime.mViewModels.CustomListView.ItemSelectionChangedTimer</definition>
+        <argsstring></argsstring>
+        <name>ItemSelectionChangedTimer</name>
+        <briefdescription>
+<para>keeps track of how often the selection is firing </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="24" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1aff2502c0b3ed41a5d45a06e8f5ddb122" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.mViewModels.CustomListView.ContextMenuAllowed</definition>
+        <argsstring></argsstring>
+        <name>ContextMenuAllowed</name>
+        <briefdescription>
+<para>Bool to determine if the context menu should be shown</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="49" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a6979108fd909da48f901c5ab0756cd05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.mViewModels.CustomListView.SendMessage</definition>
+        <argsstring>(IntPtr hWnd, int wMsg, int wParam, int lParam)</argsstring>
+        <name>SendMessage</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wMsg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+<para>Send a P/Invoke to a listview </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a10dad3ebcba82659a47554b99f47c009" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.mViewModels.CustomListView.CustomListView</definition>
+        <argsstring>()</argsstring>
+        <name>CustomListView</name>
+        <briefdescription>
+<para>Constructor. activate the listview with desired options. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="27" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="27" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a691f06d6adaf3371090e009b0fd390f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.mViewModels.CustomListView.SetWindowTheme</definition>
+        <argsstring>(IntPtr hWnd, string textSubAppName, string textSubIdList)</argsstring>
+        <name>SetWindowTheme</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>textSubAppName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>textSubIdList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ada60d2e0687339738784799af8b93833" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.mViewModels.CustomListView._ItemSelectionChangedTimer_Tick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>_ItemSelectionChangedTimer_Tick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="51" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="51" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a44d31d00940505c036baef36966bff5a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.OnMouseDown</definition>
+        <argsstring>(MouseEventArgs e)</argsstring>
+        <name>OnMouseDown</name>
+        <param>
+          <type>MouseEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to MouseDown event for the ListView. Do a HitTest on the ListView using the coordinates of the mouse (e.X and e.Y). If they hit on an item AND it was a right click, set contextMenuAllowed to true. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="61" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a49943ac10dddcb9278c0bd36624c9f23" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.OnSelectedIndexChanged</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnSelectedIndexChanged</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="71" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="71" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a96ac40bd3a3d205e99a1a29efbdda6ef" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.OnEnter</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnEnter</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="80" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ad9a02b35e4c1d1f8a90d1223efdfa147" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.CreateHandle</definition>
+        <argsstring>()</argsstring>
+        <name>CreateHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="86" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a78544a2c6916329360db83e0f2e752d1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.OnHandleCreated</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnHandleCreated</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="92" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a9cafe443a3b9582afca75bbec8e6a7c5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.OnClick</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnClick</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="98" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="98" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ab2b770e61b466f16c7b263fce57c47cc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.mViewModels.CustomListView.OnKeyUp</definition>
+        <argsstring>(KeyEventArgs e)</argsstring>
+        <name>OnKeyUp</name>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mViewModels/CustomListView.cs" line="104" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="104" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles. (Currently used for FORM_CONFIRM) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="mViewModels/CustomListView.cs" line="12" column="1" bodyfile="mViewModels/CustomListView.cs" bodystart="11" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ada60d2e0687339738784799af8b93833" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>_ItemSelectionChangedTimer_Tick</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1aff2502c0b3ed41a5d45a06e8f5ddb122" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>ContextMenuAllowed</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ad9a02b35e4c1d1f8a90d1223efdfa147" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>CreateHandle</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a10dad3ebcba82659a47554b99f47c009" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>CustomListView</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1abb6ec4bb41f8681f34f3da9660181672" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>ItemSelectionChangedTimer</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a9cafe443a3b9582afca75bbec8e6a7c5" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>OnClick</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a96ac40bd3a3d205e99a1a29efbdda6ef" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>OnEnter</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a78544a2c6916329360db83e0f2e752d1" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>OnHandleCreated</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1ab2b770e61b466f16c7b263fce57c47cc" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>OnKeyUp</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a44d31d00940505c036baef36966bff5a" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>OnMouseDown</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a49943ac10dddcb9278c0bd36624c9f23" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>OnSelectedIndexChanged</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a6979108fd909da48f901c5ab0756cd05" prot="public" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>SendMessage</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a691f06d6adaf3371090e009b0fd390f5" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>SetWindowTheme</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView_1a7eb925817339699615514c8d97a961e6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::mViewModels::CustomListView</scope><name>WM_CHANGEUISTATE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

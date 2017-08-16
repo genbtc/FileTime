@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="NativeExtractIcon_8cs">
+    <title>NativeExtractIcon.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon">genBTC::FileTime::Classes::Native::NativeExtractIcon</link></para>
+<para><emphasis>&lt;summary&gt; Grabs the filesystem or system icon cache for a string filePath.&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO">genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1Classes_1_1Native">genBTC::FileTime::Classes::Native</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file NativeExtractIcon.cs</para>
+    </simplesect>
+</section>

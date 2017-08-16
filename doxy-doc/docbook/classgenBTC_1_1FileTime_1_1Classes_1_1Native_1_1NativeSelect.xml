@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect">
+<title>genBTC::FileTime::Classes::Native::NativeSelect class Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM">genBTC::FileTime::Classes::Native::NativeSelect::LVITEM</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int LVM_FIRST</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int LVM_SETITEMSTATE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static IntPtr <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1ab0198e61538c43a87147c674dcdbf8db">SendMessageLVItem</link> (
+IntPtr hWnd, int msg, int wParam, ref <link linkend="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM">LVITEM</link> lvi)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3">SelectAllItems</link> (
+ListView list)<para><emphasis>&lt;summary&gt;
+Select all rows on the given listview
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327">DeselectAllItems</link> (
+ListView list)<para><emphasis>&lt;summary&gt;
+Deselect all rows on the given listview
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78">SetItemState</link> (
+ListView list, int itemIndex, int mask, int value)<para><emphasis>&lt;summary&gt;
+Set the item state on the given item
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1ab0198e61538c43a87147c674dcdbf8db">
+                <title>static IntPtr genBTC.FileTime.Classes.Native.NativeSelect.SendMessageLVItem (IntPtr hWnd, int msg, int wParam, ref LVITEM lvi)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3">
+                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems (ListView list)</title> <emphasis>&lt;summary&gt;
+Select all rows on the given listview
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>list</entry>
+                                <entry>
+<para>The listview whose items are to be selected</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327">
+                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems (ListView list)</title> <emphasis>&lt;summary&gt;
+Deselect all rows on the given listview
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>list</entry>
+                                <entry>
+<para>The listview whose items are to be deselected</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78">
+                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.SetItemState (ListView list, int itemIndex, int mask, int value)</title> <emphasis>&lt;summary&gt;
+Set the item state on the given item
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>list</entry>
+                                <entry>
+<para>The listview whose item&apos;s state is to be changed</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>itemIndex</entry>
+                                <entry>
+<para>The index of the item to be changed</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mask</entry>
+                                <entry>
+<para>Which bits of the value are to be set?</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The value to be set</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

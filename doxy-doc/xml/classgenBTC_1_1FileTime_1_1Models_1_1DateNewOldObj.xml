@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Models::DateNewOldObj</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1af02d00ddb65250c6ceb0c513d631eb52" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.DateNewOldObj.Index</definition>
+        <argsstring></argsstring>
+        <name>Index</name>
+        <briefdescription>
+<para>total indexes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DateNewOldObj.cs" line="13" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a3ddaab21a60aacd3e28cb0210f25a743" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime genBTC.FileTime.Models.DateNewOldObj.MaxDate</definition>
+        <argsstring></argsstring>
+        <name>MaxDate</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>maxdate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DateNewOldObj.cs" line="16" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ace8b01fe15d677ace45e76d3904defaf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.DateNewOldObj.MaxIndex</definition>
+        <argsstring></argsstring>
+        <name>MaxIndex</name>
+        <briefdescription>
+<para>maxindex are indexes of the maxdate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DateNewOldObj.cs" line="19" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ab43dd9ac8aec3ccc6b6c53011d1865c7" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime genBTC.FileTime.Models.DateNewOldObj.MinDate</definition>
+        <argsstring></argsstring>
+        <name>MinDate</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>mindate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DateNewOldObj.cs" line="22" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a4a72d7694721d7189b507c57129e74f7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.DateNewOldObj.MinIndex</definition>
+        <argsstring></argsstring>
+        <name>MinIndex</name>
+        <briefdescription>
+<para>minindex are indexes of the mindate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DateNewOldObj.cs" line="25" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a11e38ed729e9cbfd03733e69434274ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Models.DateNewOldObj.DateNewOldObj</definition>
+        <argsstring>(IEnumerable&lt; DateTime?&gt; timelist)</argsstring>
+        <name>DateNewOldObj</name>
+        <param>
+          <type><ref refid="classIEnumerable" kindref="compound">IEnumerable</ref>&lt; DateTime?&gt;</type>
+          <declname>timelist</declname>
+        </param>
+        <briefdescription>
+<para>Takes a list of datetimes(which came from a list of files) and calculates the newest and oldest dates and stores the indexes too. Constructor for the class. Also does all the work. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timelist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a List of DateTime?s</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DateNewOldObj.cs" line="33" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="33" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class: given a list of DateTime?s, get oldest and newest date and the index of each This is for the &quot;Source time from&quot; option - it looks at an entire subfolder of files. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/DateNewOldObj.cs" line="11" column="1" bodyfile="Models/DateNewOldObj.cs" bodystart="10" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a11e38ed729e9cbfd03733e69434274ca" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DateNewOldObj</scope><name>DateNewOldObj</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1af02d00ddb65250c6ceb0c513d631eb52" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DateNewOldObj</scope><name>Index</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a3ddaab21a60aacd3e28cb0210f25a743" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DateNewOldObj</scope><name>MaxDate</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ace8b01fe15d677ace45e76d3904defaf" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DateNewOldObj</scope><name>MaxIndex</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ab43dd9ac8aec3ccc6b6c53011d1865c7" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DateNewOldObj</scope><name>MinDate</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a4a72d7694721d7189b507c57129e74f7" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DateNewOldObj</scope><name>MinIndex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

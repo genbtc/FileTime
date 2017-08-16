@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">
+<title>genBTC::FileTime::Models::NameDateObj class Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort">genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort</link></para>
+<para><emphasis>&lt;summary&gt;
+Explorer-like Sort, that orders two NameDateObj&apos;s by their name property
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTime _a</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTime _c</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTime _m</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aaceb003af296907c75751349cf9341fd">NameDateObj</link> (
+ListViewItem thing)<para><emphasis>&lt;summary&gt; constructor with a listviewitem &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1af666b23c7c7ffd453975b06e9f3904d9">NameDateObj</link> (
+)<para><emphasis>&lt;summary&gt; default Constructor (Initializer)&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static object <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a924b4ce7eb4a8dd2a3da89a66ea2a6c3">Nullordate</link> (
+DateTime? x)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static DateTime <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a830ad481491c740268ae11406359498d">Listviewtodateornull</link> (
+string x)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Class object with 5 properties to refer to a file/dir</para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 10 of file NameDateObj.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>NameDateObj.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aaceb003af296907c75751349cf9341fd">
+                <title>genBTC.FileTime.Models.NameDateObj.NameDateObj (ListViewItem thing)</title> <emphasis>&lt;summary&gt; constructor with a listviewitem &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1af666b23c7c7ffd453975b06e9f3904d9">
+                <title>genBTC.FileTime.Models.NameDateObj.NameDateObj ()</title> <emphasis>&lt;summary&gt; default Constructor (Initializer)&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a924b4ce7eb4a8dd2a3da89a66ea2a6c3">
+                <title>static object genBTC.FileTime.Models.NameDateObj.Nullordate (DateTime?x)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a830ad481491c740268ae11406359498d">
+                <title>static DateTime genBTC.FileTime.Models.NameDateObj.Listviewtodateornull (string x)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

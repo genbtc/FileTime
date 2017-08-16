@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classIComparer" kind="class" language="C#" prot="public">
+    <compoundname>IComparer</compoundname>
+    <derivedcompoundref refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView" prot="public" virt="non-virtual">genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</derivedcompoundref>
+    <derivedcompoundref refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer" prot="public" virt="non-virtual">genBTC.FileTime.Classes.ExplorerLikeComparer</derivedcompoundref>
+    <derivedcompoundref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort" prot="public" virt="non-virtual">genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>IComparer</label>
+        <link refid="classIComparer"/>
+      </node>
+      <node id="67">
+        <label>genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>genBTC::FileTime::Classes::ExplorerLikeComparer&lt; string &gt;</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort&lt; NameDateObj &gt;</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Classes/ExplorerLikeSort.cs" line="9" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

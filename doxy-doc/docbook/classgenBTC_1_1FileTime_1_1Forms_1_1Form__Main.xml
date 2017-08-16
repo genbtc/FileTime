@@ -1,0 +1,1001 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main">
+<title>genBTC::FileTime::Forms::Form_Main class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataModel _dataModel<para><emphasis>&lt;summary&gt;  A model of the data. Self sufficient.   &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Form_Confirm Confirmation<para><emphasis>&lt;summary&gt; Stub for Form 2 to be accessed once it is opened. &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>readonly Timer itemSelectionChangedTimer<para><emphasis>&lt;summary&gt;  a Timer to keep track of the selected line, prevents clicking too fast (timeout)&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int SELECTION_TIMEOUT<para><emphasis>&lt;summary&gt; Timeout in ms for ListView selection-box&apos;s repeat mouse click rejection &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt;
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button button_Browse</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MainMenu mainMenu_Main</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_FileExit</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_Help</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_HelpAbout</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button button_GoUpdate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_FileOpen</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox_CreationDateTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox_AccessedDateTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox_ModifiedDateTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label_FPath</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_Time</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ImageList imageList_Files</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox_Recurse</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_File</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_FileBar01</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_HelpContents</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_HelpBar01</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label_FilePathHeading</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_Date</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ListView listView_Contents</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ColumnHeader listview_ContentsColumHeader1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBoxShouldFiles</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GroupBox groupBoxCMA</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton1_CreationDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label_CreationTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton2_ModifiedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label_ModificationTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton3_AccessedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label_AccessedTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton3_setfromAccessed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton2_setfromModified</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton1_setfromCreation</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UIToolbox.RadioButtonPanel radioButtonPanel1_DecideWhichTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UIToolbox.RadioGroupBox radioGroupBox3_UseTimeFrom</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UIToolbox.RadioGroupBox radioGroupBox1_SpecifyTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Panel panel1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Panel panel2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton3_Random</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton2_Newest</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton1_Oldest</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UIToolbox.RadioGroupBox radioGroupBox2_CurrentSelectionTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label3_AccessedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label2_ModifiedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label1_CreationDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UIToolbox.RadioButtonPanel radioButtonPanel2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Panel panel3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton2_useTimefromSubdir</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton1_useTimefromFile</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RadioButton radioButton4_setfromRandom</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label labelHidden_PathName</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem menuItem_Preferences</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TabControl tabControl1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TabPage tabPage1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TabPage tabPage2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ToolTip toolTip1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>WindowsExplorer.ExplorerTree explorerTree1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>SplitContainer splitContainer1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UIToolbox.RadioGroupBox radioGroupBox1_pickFolderForCompare</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>BindingSource dataModelBindingSource</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structgenBTC_1_1FileTime_1_1Models_1_1guistatus">guistatus</link> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5c5b5a7935885ef5a978c899e132e92f">GetGUIRadioButtonStatusData</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a54b091dbe473dade0ab327251d4e39fe">Form_Main_Load</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt; After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2">Form_Main_Run</link> (
+)<para><emphasis>&lt;summary&gt;
+At this point we can run our code (that wants to interact with our designer GUI).
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397">button_Browse_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310">button_Update_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7">menuItem_FileOpen_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3e8d7159bc0c46df6759d6a5c0f654d3">menuItem_FileExit_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a83f634713107f726b4305b7c48d27521">menuItem_HelpContents_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad9c299f1d563c39b5868f74480ad23b9">menuItem_HelpAbout_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6e8e09a25d5f722771ef4c3f17b3e50a">menuItem_Preferences_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Create and initialize preferences &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20dffccb97a6238d315aead6ab7aab86">label1_CreationDate_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a1cbabe648a4d08483911e416b8e9c0cb">label2_ModifiedDate_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a02c021b382703b63cf3c8634545342dc">label3_AccessDate_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1addacf24429bcec3cc0ffe054fbbf4a02">tabControl1_Selected</link> (
+object sender, TabControlEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aaf1d361704f1764c55debc5320620d89">tabControl1_MouseHover</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e">_ItemSelectionChangedTimer_Tick</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
+when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() &amp;mdash;
+Fires after some delay (SELECTION_TIMEOUT ms) and if there still is nothing selected, calls CallDisplayCma().
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af159301a48967d2639cad7e6c9c80bfd">listView_Contents_ItemSelectionChanged</link> (
+object sender, ListViewItemSelectionChangedEventArgs e)<para><emphasis>&lt;summary&gt;
+The Contents listview (right) selection has changed. Timer-based solution - block re-selection within SELECTION_TIMEOUTms
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940">checkBox_DateTime_CheckedChanged</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt; 
+Creation,Modified,Accessed Checkbox selection changed. Only enable the update button if something is selected 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3f3cfcfcda8f8cf3a6b26167772fb281">explorerTree1_PathChanged</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Update the textlabel box for FilePath when the Explorer Tree path changes.
+(making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA">BoolCMA</link> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df">QueryCMAcheckboxes</link> (
+)<para><emphasis>&lt;summary&gt;  Return the value of the checkboxes &quot;CMA Time&quot;   &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762">ClearOnError</link> (
+)<para><emphasis>&lt;summary&gt;
+Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b">DisplayCma</link> (
+string path)<para><emphasis>&lt;summary&gt;
+Display file&apos;s times in the Tri-Textbox bottom UI for the currently selected file.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac438e5c68134f0edca782692ed1a4a84">CallDisplayCma</link> (
+ListView listViewContents, string srcPath)<para><emphasis>&lt;summary&gt;  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac">StartUpBothModes1And2</link> (
+int mode2, string startingdir)<para><emphasis>&lt;summary&gt;
+Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
+then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830">LaunchForm2Go</link> (
+)<para><emphasis>&lt;summary&gt; Show files to be changed in the confirmation window (Show Form 2) &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7b631f446375bba4fc1ab8c5309f0ce6">Form_Main</link> (
+)<para><emphasis>&lt;summary&gt;Init the main startup form &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aeb572681ad49ed4b9a5483c3652b1175">RefreshDataBinding_labelFPath</link> (
+)<para><emphasis>&lt;summary&gt;
+The Text Box Data Binding is rebound.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5">RefreshContentsRightPanel</link> (
+)<para><emphasis>&lt;summary&gt;
+Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1abfce7b3d32aa7fd8988dfb4633f71df5">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>GUI : Main <link linkend="classForm">Form</link> Window of the <link linkend="classgenBTC_1_1FileTime_1_1Program">Program</link>. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 29 of file Form_Main.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <simplesect>
+                <title>DataModel genBTC.FileTime.Forms.Form_Main._dataModel</title>                
+                <para>Definition at line 63 of file Form_Main.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>Form_Confirm genBTC.FileTime.Forms.Form_Main.Confirmation</title>                
+                <para>Definition at line 66 of file Form_Main.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>readonly Timer genBTC.FileTime.Forms.Form_Main.itemSelectionChangedTimer</title>                
+                <para>Definition at line 69 of file Form_Main.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>const int genBTC.FileTime.Forms.Form_Main.SELECTION_TIMEOUT</title>                
+                <para>Definition at line 71 of file Form_Main.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>System.ComponentModel.IContainer genBTC.FileTime.Forms.Form_Main.components</title>                
+                <para>Definition at line 11 of file Form_Main.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_Main.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5c5b5a7935885ef5a978c899e132e92f">
+                <title>guistatus genBTC.FileTime.Forms.Form_Main.GetGUIRadioButtonStatusData ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a54b091dbe473dade0ab327251d4e39fe">
+                <title>void genBTC.FileTime.Forms.Form_Main.Form_Main_Load (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2">
+                <title>void genBTC.FileTime.Forms.Form_Main.Form_Main_Run ()</title> <emphasis>&lt;summary&gt;
+At this point we can run our code (that wants to interact with our designer GUI).
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397">
+                <title>void genBTC.FileTime.Forms.Form_Main.button_Browse_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310">
+                <title>void genBTC.FileTime.Forms.Form_Main.button_Update_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7">
+                <title>void genBTC.FileTime.Forms.Form_Main.menuItem_FileOpen_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3e8d7159bc0c46df6759d6a5c0f654d3">
+                <title>void genBTC.FileTime.Forms.Form_Main.menuItem_FileExit_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a83f634713107f726b4305b7c48d27521">
+                <title>void genBTC.FileTime.Forms.Form_Main.menuItem_HelpContents_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad9c299f1d563c39b5868f74480ad23b9">
+                <title>void genBTC.FileTime.Forms.Form_Main.menuItem_HelpAbout_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6e8e09a25d5f722771ef4c3f17b3e50a">
+                <title>void genBTC.FileTime.Forms.Form_Main.menuItem_Preferences_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Create and initialize preferences &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20dffccb97a6238d315aead6ab7aab86">
+                <title>void genBTC.FileTime.Forms.Form_Main.label1_CreationDate_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a1cbabe648a4d08483911e416b8e9c0cb">
+                <title>void genBTC.FileTime.Forms.Form_Main.label2_ModifiedDate_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a02c021b382703b63cf3c8634545342dc">
+                <title>void genBTC.FileTime.Forms.Form_Main.label3_AccessDate_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1addacf24429bcec3cc0ffe054fbbf4a02">
+                <title>void genBTC.FileTime.Forms.Form_Main.tabControl1_Selected (object sender, TabControlEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aaf1d361704f1764c55debc5320620d89">
+                <title>void genBTC.FileTime.Forms.Form_Main.tabControl1_MouseHover (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e">
+                <title>void genBTC.FileTime.Forms.Form_Main._ItemSelectionChangedTimer_Tick (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
+when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() &amp;mdash;
+Fires after some delay (SELECTION_TIMEOUT ms) and if there still is nothing selected, calls CallDisplayCma().
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af159301a48967d2639cad7e6c9c80bfd">
+                <title>void genBTC.FileTime.Forms.Form_Main.listView_Contents_ItemSelectionChanged (object sender, ListViewItemSelectionChangedEventArgs e)</title> <emphasis>&lt;summary&gt;
+The Contents listview (right) selection has changed. Timer-based solution - block re-selection within SELECTION_TIMEOUTms
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940">
+                <title>void genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; 
+Creation,Modified,Accessed Checkbox selection changed. Only enable the update button if something is selected 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3f3cfcfcda8f8cf3a6b26167772fb281">
+                <title>void genBTC.FileTime.Forms.Form_Main.explorerTree1_PathChanged (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Update the textlabel box for FilePath when the Explorer Tree path changes.
+(making sure it always ends in a \ seperator). Also causes a re-render of Contents!
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df">
+                <title>BoolCMA genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes ()</title> <emphasis>&lt;summary&gt;  Return the value of the checkboxes &quot;CMA Time&quot;   &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762">
+                <title>void genBTC.FileTime.Forms.Form_Main.ClearOnError ()</title> <emphasis>&lt;summary&gt;
+Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b">
+                <title>void genBTC.FileTime.Forms.Form_Main.DisplayCma (string path)</title> <emphasis>&lt;summary&gt;
+Display file&apos;s times in the Tri-Textbox bottom UI for the currently selected file.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac438e5c68134f0edca782692ed1a4a84">
+                <title>void genBTC.FileTime.Forms.Form_Main.CallDisplayCma (ListView listViewContents, string srcPath)</title> <emphasis>&lt;summary&gt;  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac">
+                <title>void genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2 (int mode2, string startingdir)</title> <emphasis>&lt;summary&gt;
+Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
+then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830">
+                <title>void genBTC.FileTime.Forms.Form_Main.LaunchForm2Go ()</title> <emphasis>&lt;summary&gt; Show files to be changed in the confirmation window (Show Form 2) &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba">
+                <title>void genBTC.FileTime.Forms.Form_Main.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7b631f446375bba4fc1ab8c5309f0ce6">
+                <title>genBTC.FileTime.Forms.Form_Main.Form_Main ()</title> <emphasis>&lt;summary&gt;Init the main startup form &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aeb572681ad49ed4b9a5483c3652b1175">
+                <title>void genBTC.FileTime.Forms.Form_Main.RefreshDataBinding_labelFPath ()</title> <emphasis>&lt;summary&gt;
+The Text Box Data Binding is rebound.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5">
+                <title>void genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel ()</title> <emphasis>&lt;summary&gt;
+Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1abfce7b3d32aa7fd8988dfb4633f71df5">
+                <title>override void genBTC.FileTime.Forms.Form_Main.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

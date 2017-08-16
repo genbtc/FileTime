@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacegenBTC_1_1FileTime_1_1Classes">
+<title>genBTC::FileTime::Classes</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView">genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</link></para>
+<para><emphasis>&lt;summary&gt; Explorer-like Sort, for ListViewItem - used by listview.Sorter &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer">genBTC::FileTime::Classes::ExplorerLikeComparer</link></para>
+<para><emphasis>&lt;summary&gt; Explorer-like Sort, for strings &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper">genBTC::FileTime::Classes::SharedHelper</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1Classes_1_1Native">genBTC::FileTime::Classes::Native</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+</section>

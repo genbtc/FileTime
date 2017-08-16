@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classWindowsExplorer_1_1ServerEnum" kind="class" language="C#" prot="public">
+    <compoundname>WindowsExplorer::ServerEnum</compoundname>
+    <basecompoundref refid="classIEnumerable" prot="public" virt="non-virtual">IEnumerable</basecompoundref>
+    <innerclass refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE" prot="private">WindowsExplorer::ServerEnum::NETRESOURCE</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56" prot="private" static="no">
+        <name>ErrorCodes</name>
+        <enumvalue id="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56ad306b6fdee05fe87455110ddf6501e6c" prot="public">
+          <name>NO_ERROR</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56acb5e548caff1b136c56dd598779a4812" prot="public">
+          <name>ERROR_NO_MORE_ITEMS</name>
+          <initializer>= 259</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="988" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="987" bodyend="991"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1a048993d3b4f309eddfc95fafdf67ee07" prot="private" static="no" mutable="no">
+        <type>readonly ArrayList</type>
+        <definition>readonly ArrayList WindowsExplorer.ServerEnum.aData</definition>
+        <argsstring></argsstring>
+        <name>aData</name>
+        <initializer>= new ArrayList()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="889" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="889" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classWindowsExplorer_1_1ServerEnum_1a76617f55788c32acd7d624894748afaf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int WindowsExplorer.ServerEnum.Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="906" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="907" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWindowsExplorer_1_1ServerEnum_1a6a3512b9975faa75a8c2490429267174" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WindowsExplorer.ServerEnum.ServerEnum</definition>
+        <argsstring>(ResourceScope scope, ResourceType type, ResourceUsage usage, ResourceDisplayType displayType, string kPath)</argsstring>
+        <name>ServerEnum</name>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca" kindref="member">ResourceScope</ref></type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f" kindref="member">ResourceType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7" kindref="member">ResourceUsage</ref></type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d" kindref="member">ResourceDisplayType</ref></type>
+          <declname>displayType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>kPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="891" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="891" bodyend="895"/>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ServerEnum_1a0f5e8b6ae7aecfc3b4f9302a4162a004" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator WindowsExplorer.ServerEnum.GetEnumerator</definition>
+        <argsstring>()</argsstring>
+        <name>GetEnumerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="899" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="899" bodyend="902"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classWindowsExplorer_1_1ServerEnum_1a55a4aac4d6a375be141fccf5ce59be2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56" kindref="member">ErrorCodes</ref></type>
+        <definition>static ErrorCodes WindowsExplorer.ServerEnum.WNetOpenEnum</definition>
+        <argsstring>(ResourceScope dwScope, ResourceType dwType, ResourceUsage dwUsage, NETRESOURCE p, out IntPtr lphEnum)</argsstring>
+        <name>WNetOpenEnum</name>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca" kindref="member">ResourceScope</ref></type>
+          <declname>dwScope</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f" kindref="member">ResourceType</ref></type>
+          <declname>dwType</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7" kindref="member">ResourceUsage</ref></type>
+          <declname>dwUsage</declname>
+        </param>
+        <param>
+          <type><ref refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE" kindref="compound">NETRESOURCE</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>out IntPtr</type>
+          <declname>lphEnum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="912" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ServerEnum_1a166b42d86b56d3d309082c4fe56518e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56" kindref="member">ErrorCodes</ref></type>
+        <definition>static ErrorCodes WindowsExplorer.ServerEnum.WNetCloseEnum</definition>
+        <argsstring>(IntPtr hEnum)</argsstring>
+        <name>WNetCloseEnum</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hEnum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="916" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ServerEnum_1a8752115a742d12c8d33023457acd5388" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56" kindref="member">ErrorCodes</ref></type>
+        <definition>static ErrorCodes WindowsExplorer.ServerEnum.WNetEnumResource</definition>
+        <argsstring>(IntPtr hEnum, ref uint lpcCount, IntPtr buffer, ref uint lpBufferSize)</argsstring>
+        <name>WNetEnumResource</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hEnum</declname>
+        </param>
+        <param>
+          <type>ref uint</type>
+          <declname>lpcCount</declname>
+        </param>
+        <param>
+          <type>IntPtr</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>ref uint</type>
+          <declname>lpBufferSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="919" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ServerEnum.EnumerateServers</definition>
+        <argsstring>(NETRESOURCE pRsrc, ResourceScope scope, ResourceType type, ResourceUsage usage, ResourceDisplayType displayType, string kPath)</argsstring>
+        <name>EnumerateServers</name>
+        <param>
+          <type><ref refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE" kindref="compound">NETRESOURCE</ref></type>
+          <declname>pRsrc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca" kindref="member">ResourceScope</ref></type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f" kindref="member">ResourceType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7" kindref="member">ResourceUsage</ref></type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d" kindref="member">ResourceDisplayType</ref></type>
+          <declname>displayType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>kPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="922" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="922" bodyend="985"/>
+        <references refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1ad55b7dd1a6fbca400761067033a47129" compoundref="ExplorerTree_8cs" startline="998">WindowsExplorer.ServerEnum.NETRESOURCE.dwDisplayType</references>
+        <references refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aa9c32f9d36a3d103e5c0534aafe18313" compoundref="ExplorerTree_8cs" startline="999">WindowsExplorer.ServerEnum.NETRESOURCE.dwUsage</references>
+        <references refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aeb8cecf8469107d8ff551cd20cb788e5" compoundref="ExplorerTree_8cs" startline="1001">WindowsExplorer.ServerEnum.NETRESOURCE.lpRemoteName</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="92">
+        <label>WindowsExplorer.ServerEnum</label>
+        <link refid="classWindowsExplorer_1_1ServerEnum"/>
+        <childnode refid="93" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>IEnumerable</label>
+        <link refid="classIEnumerable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="94">
+        <label>WindowsExplorer.ServerEnum</label>
+        <link refid="classWindowsExplorer_1_1ServerEnum"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>IEnumerable</label>
+        <link refid="classIEnumerable"/>
+      </node>
+    </collaborationgraph>
+    <location file="WindowsExplorer/ExplorerTree.cs" line="888" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="887" bodyend="1005"/>
+    <listofallmembers>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a048993d3b4f309eddfc95fafdf67ee07" prot="private" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>aData</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a76617f55788c32acd7d624894748afaf" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>Count</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c" prot="private" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>EnumerateServers</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56" prot="private" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>ErrorCodes</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a0f5e8b6ae7aecfc3b4f9302a4162a004" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>GetEnumerator</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a6a3512b9975faa75a8c2490429267174" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>ServerEnum</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a166b42d86b56d3d309082c4fe56518e0" prot="private" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>WNetCloseEnum</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a8752115a742d12c8d33023457acd5388" prot="private" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>WNetEnumResource</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1a55a4aac4d6a375be141fccf5ce59be2e" prot="private" virt="non-virtual"><scope>WindowsExplorer::ServerEnum</scope><name>WNetOpenEnum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

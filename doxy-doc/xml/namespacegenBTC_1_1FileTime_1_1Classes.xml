@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespacegenBTC_1_1FileTime_1_1Classes" kind="namespace" language="C#">
+    <compoundname>genBTC::FileTime::Classes</compoundname>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView" prot="public">genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer" prot="public">genBTC::FileTime::Classes::ExplorerLikeComparer</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper" prot="public">genBTC::FileTime::Classes::SharedHelper</innerclass>
+    <innernamespace refid="namespacegenBTC_1_1FileTime_1_1Classes_1_1Native">genBTC::FileTime::Classes::Native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/ExplorerLikeSort.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="NameDateObjListViewVMdl_8cs">
+    <title>NameDateObjListViewVMdl.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl">genBTC::FileTime::mViewModels::NameDateObjListViewVMdl</link></para>
+<para><emphasis>&lt;summary&gt;ViewModel version of the NameDateObj(Name + 3 Dates)&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1mViewModels">genBTC::FileTime::mViewModels</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file NameDateObjListViewVMdl.cs</para>
+    </simplesect>
+</section>

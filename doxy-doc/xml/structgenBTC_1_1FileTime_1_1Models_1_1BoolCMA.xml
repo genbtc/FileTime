@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA" kind="struct" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Models::BoolCMA</compoundname>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.BoolCMA.A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="8" column="1" bodyfile="Models/Structs.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.BoolCMA.C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="9" column="1" bodyfile="Models/Structs.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.BoolCMA.M</definition>
+        <argsstring></argsstring>
+        <name>M</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="10" column="1" bodyfile="Models/Structs.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/Structs.cs" line="7" column="1" bodyfile="Models/Structs.cs" bodystart="6" bodyend="11"/>
+    <listofallmembers>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::BoolCMA</scope><name>A</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::BoolCMA</scope><name>C</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::BoolCMA</scope><name>M</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

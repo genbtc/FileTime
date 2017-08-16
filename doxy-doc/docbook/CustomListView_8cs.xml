@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="CustomListView_8cs">
+    <title>CustomListView.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView">genBTC::FileTime::mViewModels::CustomListView</link></para>
+<para><emphasis>&lt;summary&gt;
+Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
+(Currently used for FORM_CONFIRM)
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1mViewModels">genBTC::FileTime::mViewModels</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file CustomListView.cs</para>
+    </simplesect>
+</section>

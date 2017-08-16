@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_f5ddc4b96038e2e782829a8a44084eee" kind="dir">
+    <compoundname>Forms</compoundname>
+    <innerfile refid="Form__About_8cs">Form_About.cs</innerfile>
+    <innerfile refid="Form__ChooseDate_8cs">Form_ChooseDate.cs</innerfile>
+    <innerfile refid="Form__ChooseDate_8Designer_8cs">Form_ChooseDate.Designer.cs</innerfile>
+    <innerfile refid="Form__Confirm_8cs">Form_Confirm.cs</innerfile>
+    <innerfile refid="Form__Confirm_8Designer_8cs">Form_Confirm.Designer.cs</innerfile>
+    <innerfile refid="Form__Main_8cs">Form_Main.cs</innerfile>
+    <innerfile refid="Form__Main_8Designer_8cs">Form_Main.Designer.cs</innerfile>
+    <innerfile refid="Form__Preferences_8cs">Form_Preferences.cs</innerfile>
+    <innerfile refid="Form__Preferences_8Designer_8cs">Form_Preferences.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Forms/"/>
+  </compounddef>
+</doxygen>

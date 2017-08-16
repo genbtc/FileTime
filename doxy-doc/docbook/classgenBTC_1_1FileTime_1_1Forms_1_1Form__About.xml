@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About">
+<title>genBTC::FileTime::Forms::Form_About class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>readonly Container _components<para><emphasis>&lt;summary&gt;
+Required designer variables.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button button_Close</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Label label_About</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>LinkLabel linkLabel_Address</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>PictureBox pictureBox_Icon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>PictureBox pictureBox_automationControls</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TabControl tabControl_About</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TabPage tabPage_About</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a352ca275f827a64acb8b24dce4acc1f3">Form_About</link> (
+)<para><emphasis>&lt;summary&gt;
+the About... form window
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a0fadd7eb6fa67b81310846120f17e0a4">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aa58637bf493bac03429b37fe27550709">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a467220e3e50644ce9b0ec071dbd324ca">Form_About_Load</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Load the About Form
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a17da84c3773c106392561fd4c21a7b54">linkLabel_Address_LinkClicked</link> (
+object sender, LinkLabelLinkClickedEventArgs e)<para><emphasis>&lt;summary&gt;
+Link to mailto: genbtc
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1af8caafd5f7c34ea2521e6088bfc08ab4">button_Close_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Close this form
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>About <link linkend="classForm">Form</link>. Shows basic program information. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 23 of file Form_About.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_About.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>readonly Container genBTC.FileTime.Forms.Form_About._components</title>                
+                <para>Definition at line 27 of file Form_About.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_About.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a352ca275f827a64acb8b24dce4acc1f3">
+                <title>genBTC.FileTime.Forms.Form_About.Form_About ()</title> <emphasis>&lt;summary&gt;
+the About... form window
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a0fadd7eb6fa67b81310846120f17e0a4">
+                <title>override void genBTC.FileTime.Forms.Form_About.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aa58637bf493bac03429b37fe27550709">
+                <title>void genBTC.FileTime.Forms.Form_About.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a467220e3e50644ce9b0ec071dbd324ca">
+                <title>void genBTC.FileTime.Forms.Form_About.Form_About_Load (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Load the About Form
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry>
+<para>Object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>EventArgs</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a17da84c3773c106392561fd4c21a7b54">
+                <title>void genBTC.FileTime.Forms.Form_About.linkLabel_Address_LinkClicked (object sender, LinkLabelLinkClickedEventArgs e)</title> <emphasis>&lt;summary&gt;
+Link to mailto: genbtc
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry>
+<para>object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>EventArgs</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1af8caafd5f7c34ea2521e6088bfc08ab4">
+                <title>void genBTC.FileTime.Forms.Form_About.button_Close_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Close this form
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry>
+<para>object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>EventArgs</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

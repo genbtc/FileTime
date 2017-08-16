@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classExtractIcon">
+<title>ExtractIcon class Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structExtractIcon_1_1SHFILEINFO">ExtractIcon::SHFILEINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78">SHGFI</link> {
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a817434295a673aed431435658b65d9a7">Icon</link>= 0x000000100,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a3b868ced6f60acf5ee565ac021d42941">DisplayName</link>= 0x000000200,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ae175f7206492c365397d33a0df9cc8d0">TypeName</link>= 0x000000400,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a287234a1ff35a314b5b6bc4e5828e745">Attributes</link>= 0x000000800,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84e39f86e0843b752c3f58c1828e94df">IconLocation</link>= 0x000001000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ab8a206aa8eb60627304475f67b9f375a">ExeType</link>= 0x000002000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a9b7da861f8f2e6c5f4b7caf079aa8bd6">SysIconIndex</link>= 0x000004000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a887507c977779a51b9c3ecef7049f8e1">LinkOverlay</link>= 0x000008000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a91b442d385b54e1418d81adc34871053">Selected</link>= 0x000010000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78adcedfbbf9e366a750df8772bfbbe22b7">Attr_Specified</link>= 0x000020000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a08f7728d14d36f52bd6d413d9c963e7c">LargeIcon</link>= 0x000000000,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af10923216bc690081c9c9e2ce32d66ae">SmallIcon</link>= 0x000000001,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78aa01037cba4230c2b8da0f03454ba002e">OpenIcon</link>= 0x000000002,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a8afaa9e9ea20194a3ca276c263b94241">ShellIconSize</link>= 0x000000004,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a605534a578c2ea820de4a155e1ec542f">PIDL</link>= 0x000000008,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a973ca7fddbacaaa1810be24d088446c9">UseFileAttributes</link>= 0x000000010,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af4fe4d5d06259cb6ab0fea9d18a7c304">AddOverlays</link>= 0x000000020,
+<link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84aed79d022df97af71a911a474b89e7">OverlayIndex</link>= 0x000000040
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int MAX_PATH<para><emphasis>&lt;summary&gt;Maximal Length of unmanaged Windows-Path-strings&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int MAX_TYPE<para><emphasis>&lt;summary&gt;Maximal Length of unmanaged Typename&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classExtractIcon_1a81c000b4bd05021a0ac00b2154d42ffd">SHGetFileInfo</link> (
+string pszPath, int dwFileAttributes, out <link linkend="structExtractIcon_1_1SHFILEINFO">SHFILEINFO</link> psfi, uint cbfileInfo, <link linkend="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78">SHGFI</link> uFlags)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classExtractIcon_1ac568a2bbf178d24eaf0cd498172478c3">ExtractIcon</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Icon <link linkend="classExtractIcon_1ad9ae4597b218182802d990e363b172e5">GetIcon</link> (
+string strPath, bool bSmall)<para><emphasis>&lt;summary&gt;
+Get the associated Icon for a file or application, this method always returns
+an icon.  If the strPath is invalid or there is no idonc the default icon is returned
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Summary description for <link linkend="classExtractIcon">ExtractIcon</link>.</para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 11 of file ExtractIcon.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExtractIcon.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78">
+               <title>enum SHGFI </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a817434295a673aed431435658b65d9a7">
+                            <term>Icon</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get icon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a3b868ced6f60acf5ee565ac021d42941">
+                            <term>DisplayName</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get display name&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ae175f7206492c365397d33a0df9cc8d0">
+                            <term>TypeName</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get type name&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a287234a1ff35a314b5b6bc4e5828e745">
+                            <term>Attributes</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get attributes&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84e39f86e0843b752c3f58c1828e94df">
+                            <term>IconLocation</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get icon location&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ab8a206aa8eb60627304475f67b9f375a">
+                            <term>ExeType</term>
+                            <listitem>
+                                <para>&lt;summary&gt;return exe type&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a9b7da861f8f2e6c5f4b7caf079aa8bd6">
+                            <term>SysIconIndex</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get system icon index&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a887507c977779a51b9c3ecef7049f8e1">
+                            <term>LinkOverlay</term>
+                            <listitem>
+                                <para>&lt;summary&gt;put a link overlay on icon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a91b442d385b54e1418d81adc34871053">
+                            <term>Selected</term>
+                            <listitem>
+                                <para>&lt;summary&gt;show icon in selected state&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78adcedfbbf9e366a750df8772bfbbe22b7">
+                            <term>Attr_Specified</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get only specified attributes&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a08f7728d14d36f52bd6d413d9c963e7c">
+                            <term>LargeIcon</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get large icon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af10923216bc690081c9c9e2ce32d66ae">
+                            <term>SmallIcon</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get small icon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78aa01037cba4230c2b8da0f03454ba002e">
+                            <term>OpenIcon</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get open icon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a8afaa9e9ea20194a3ca276c263b94241">
+                            <term>ShellIconSize</term>
+                            <listitem>
+                                <para>&lt;summary&gt;get shell size icon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a605534a578c2ea820de4a155e1ec542f">
+                            <term>PIDL</term>
+                            <listitem>
+                                <para>&lt;summary&gt;pszPath is a pidl&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a973ca7fddbacaaa1810be24d088446c9">
+                            <term>UseFileAttributes</term>
+                            <listitem>
+                                <para>&lt;summary&gt;use passed dwFileAttribute&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af4fe4d5d06259cb6ab0fea9d18a7c304">
+                            <term>AddOverlays</term>
+                            <listitem>
+                                <para>&lt;summary&gt;apply the appropriate overlays&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84aed79d022df97af71a911a474b89e7">
+                            <term>OverlayIndex</term>
+                            <listitem>
+                                <para>&lt;summary&gt;Get the index of the overlay in the upper 8 bits of the iIcon&lt;/summary&gt;</para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 51 of file ExtractIcon.cs
+                    <computeroutput><literallayout>
+{
+Icon= 0x000000100, 
+DisplayName= 0x000000200, 
+TypeName= 0x000000400, 
+Attributes= 0x000000800, 
+IconLocation= 0x000001000, 
+ExeType= 0x000002000, 
+SysIconIndex= 0x000004000, 
+LinkOverlay= 0x000008000, 
+Selected= 0x000010000, 
+Attr_Specified= 0x000020000, 
+LargeIcon= 0x000000000, 
+SmallIcon= 0x000000001, 
+OpenIcon= 0x000000002, 
+ShellIconSize= 0x000000004, 
+PIDL= 0x000000008, 
+UseFileAttributes= 0x000000010, 
+AddOverlays= 0x000000020, 
+OverlayIndex= 0x000000040, 
+}SHGFI;
+                    </literallayout></computeroutput>
+                </para>
+            </section>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>const int ExtractIcon.MAX_PATH</title>                
+                <para>Definition at line 21 of file ExtractIcon.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExtractIcon.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>const int ExtractIcon.MAX_TYPE</title>                
+                <para>Definition at line 23 of file ExtractIcon.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExtractIcon.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="classExtractIcon_1a81c000b4bd05021a0ac00b2154d42ffd">
+                <title>static int ExtractIcon.SHGetFileInfo (string pszPath, int dwFileAttributes, out SHFILEINFO psfi, uint cbfileInfo, SHGFI uFlags)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classExtractIcon_1ac568a2bbf178d24eaf0cd498172478c3">
+                <title>ExtractIcon.ExtractIcon ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classExtractIcon_1ad9ae4597b218182802d990e363b172e5">
+                <title>static Icon ExtractIcon.GetIcon (string strPath, bool bSmall)</title> <emphasis>&lt;summary&gt;
+Get the associated Icon for a file or application, this method always returns
+an icon.  If the strPath is invalid or there is no idonc the default icon is returned
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>strPath</entry>
+                                <entry>
+<para>full path to the file</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bSmall</entry>
+                                <entry>
+<para>if true, the 16x16 icon is returned otherwise the 32x32</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

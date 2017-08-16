@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_c1f7bb9bfa8ee7c1f06df1bef22ea2f9" kind="dir">
+    <compoundname>mViewModels</compoundname>
+    <innerfile refid="CustomListView_8cs">CustomListView.cs</innerfile>
+    <innerfile refid="NameDateObjListViewVMdl_8cs">NameDateObjListViewVMdl.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="mViewModels/"/>
+  </compounddef>
+</doxygen>

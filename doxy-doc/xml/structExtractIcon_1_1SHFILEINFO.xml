@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structExtractIcon_1_1SHFILEINFO" kind="struct" language="C#" prot="private">
+    <compoundname>ExtractIcon::SHFILEINFO</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structExtractIcon_1_1SHFILEINFO_1a264e1cd859903baff6a667f2a3eced5b" prot="public" static="no" mutable="no">
+        <type>IntPtr</type>
+        <definition>IntPtr ExtractIcon.SHFILEINFO.hIcon</definition>
+        <argsstring></argsstring>
+        <name>hIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="36" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" compoundref="ExtractIcon_8cs" startline="28" endline="35">ExtractIcon.SHFILEINFO.SHFILEINFO</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structExtractIcon_1_1SHFILEINFO_1a076a7e6bc2f70b56c6ebb774aab1a61d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExtractIcon.SHFILEINFO.iIcon</definition>
+        <argsstring></argsstring>
+        <name>iIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="37" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" compoundref="ExtractIcon_8cs" startline="28" endline="35">ExtractIcon.SHFILEINFO.SHFILEINFO</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structExtractIcon_1_1SHFILEINFO_1afec72d0ec6a3e102618bec1b34ef426a" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint ExtractIcon.SHFILEINFO.dwAttributes</definition>
+        <argsstring></argsstring>
+        <name>dwAttributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="38" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" compoundref="ExtractIcon_8cs" startline="28" endline="35">ExtractIcon.SHFILEINFO.SHFILEINFO</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structExtractIcon_1_1SHFILEINFO_1a2d9f6e8e70e6b1d24d279ac84b128bd7" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ExtractIcon.SHFILEINFO.szDisplayName</definition>
+        <argsstring></argsstring>
+        <name>szDisplayName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="40" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" compoundref="ExtractIcon_8cs" startline="28" endline="35">ExtractIcon.SHFILEINFO.SHFILEINFO</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structExtractIcon_1_1SHFILEINFO_1a83a2dfb2efb37776654a4d7bc14d5b9b" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ExtractIcon.SHFILEINFO.szTypeName</definition>
+        <argsstring></argsstring>
+        <name>szTypeName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="42" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="42" bodyend="-1"/>
+        <referencedby refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" compoundref="ExtractIcon_8cs" startline="28" endline="35">ExtractIcon.SHFILEINFO.SHFILEINFO</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExtractIcon.SHFILEINFO.SHFILEINFO</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>SHFILEINFO</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="28" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="28" bodyend="35"/>
+        <references refid="structExtractIcon_1_1SHFILEINFO_1afec72d0ec6a3e102618bec1b34ef426a" compoundref="ExtractIcon_8cs" startline="38">ExtractIcon.SHFILEINFO.dwAttributes</references>
+        <references refid="structExtractIcon_1_1SHFILEINFO_1a264e1cd859903baff6a667f2a3eced5b" compoundref="ExtractIcon_8cs" startline="36">ExtractIcon.SHFILEINFO.hIcon</references>
+        <references refid="structExtractIcon_1_1SHFILEINFO_1a076a7e6bc2f70b56c6ebb774aab1a61d" compoundref="ExtractIcon_8cs" startline="37">ExtractIcon.SHFILEINFO.iIcon</references>
+        <references refid="structExtractIcon_1_1SHFILEINFO_1a2d9f6e8e70e6b1d24d279ac84b128bd7" compoundref="ExtractIcon_8cs" startline="40">ExtractIcon.SHFILEINFO.szDisplayName</references>
+        <references refid="structExtractIcon_1_1SHFILEINFO_1a83a2dfb2efb37776654a4d7bc14d5b9b" compoundref="ExtractIcon_8cs" startline="42">ExtractIcon.SHFILEINFO.szTypeName</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/ExtractIcon.cs" line="27" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="26" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structExtractIcon_1_1SHFILEINFO_1afec72d0ec6a3e102618bec1b34ef426a" prot="public" virt="non-virtual"><scope>ExtractIcon::SHFILEINFO</scope><name>dwAttributes</name></member>
+      <member refid="structExtractIcon_1_1SHFILEINFO_1a264e1cd859903baff6a667f2a3eced5b" prot="public" virt="non-virtual"><scope>ExtractIcon::SHFILEINFO</scope><name>hIcon</name></member>
+      <member refid="structExtractIcon_1_1SHFILEINFO_1a076a7e6bc2f70b56c6ebb774aab1a61d" prot="public" virt="non-virtual"><scope>ExtractIcon::SHFILEINFO</scope><name>iIcon</name></member>
+      <member refid="structExtractIcon_1_1SHFILEINFO_1ad2246eb571e03c9a62e0222dae4494fa" prot="public" virt="non-virtual"><scope>ExtractIcon::SHFILEINFO</scope><name>SHFILEINFO</name></member>
+      <member refid="structExtractIcon_1_1SHFILEINFO_1a2d9f6e8e70e6b1d24d279ac84b128bd7" prot="public" virt="non-virtual"><scope>ExtractIcon::SHFILEINFO</scope><name>szDisplayName</name></member>
+      <member refid="structExtractIcon_1_1SHFILEINFO_1a83a2dfb2efb37776654a4d7bc14d5b9b" prot="public" virt="non-virtual"><scope>ExtractIcon::SHFILEINFO</scope><name>szTypeName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

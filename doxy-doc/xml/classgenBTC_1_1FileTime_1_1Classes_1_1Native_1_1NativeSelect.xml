@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Classes::Native::NativeSelect</compoundname>
+    <innerclass refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM" prot="public">genBTC::FileTime::Classes::Native::NativeSelect::LVITEM</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a78dda0c14cff7dd902c57c3880a370c8" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int genBTC.FileTime.Classes.Native.NativeSelect.LVM_FIRST</definition>
+        <argsstring></argsstring>
+        <name>LVM_FIRST</name>
+        <initializer>= 0x1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="9" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a87ba590baae60e8857ed1eef3d005bcc" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int genBTC.FileTime.Classes.Native.NativeSelect.LVM_SETITEMSTATE</definition>
+        <argsstring></argsstring>
+        <name>LVM_SETITEMSTATE</name>
+        <initializer>= <ref refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a78dda0c14cff7dd902c57c3880a370c8" kindref="member">LVM_FIRST</ref> + 43</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="10" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1ab0198e61538c43a87147c674dcdbf8db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IntPtr</type>
+        <definition>static IntPtr genBTC.FileTime.Classes.Native.NativeSelect.SendMessageLVItem</definition>
+        <argsstring>(IntPtr hWnd, int msg, int wParam, ref LVITEM lvi)</argsstring>
+        <name>SendMessageLVItem</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>ref <ref refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM" kindref="compound">LVITEM</ref></type>
+          <declname>lvi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems</definition>
+        <argsstring>(ListView list)</argsstring>
+        <name>SelectAllItems</name>
+        <param>
+          <type>ListView</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Select all rows on the given listview </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listview whose items are to be selected</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="19" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="19" bodyend="22"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9" compoundref="Form__Confirm_8cs" startline="308" endline="313">genBTC.FileTime.Forms.Form_Confirm.selectAllToolStripMenuItem_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems</definition>
+        <argsstring>(ListView list)</argsstring>
+        <name>DeselectAllItems</name>
+        <param>
+          <type>ListView</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Deselect all rows on the given listview </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listview whose items are to be deselected</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="28" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="28" bodyend="31"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471" compoundref="Form__Confirm_8cs" startline="315" endline="320">genBTC.FileTime.Forms.Form_Confirm.deSelectAllToolStripMenuItem_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void genBTC.FileTime.Classes.Native.NativeSelect.SetItemState</definition>
+        <argsstring>(ListView list, int itemIndex, int mask, int value)</argsstring>
+        <name>SetItemState</name>
+        <param>
+          <type>ListView</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>itemIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the item state on the given item </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listview whose item&apos;s state is to be changed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item to be changed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which bits of the value are to be set?</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="40" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="40" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/Native/NativeSelect.cs" line="8" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="7" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>DeselectAllItems</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a78dda0c14cff7dd902c57c3880a370c8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>LVM_FIRST</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a87ba590baae60e8857ed1eef3d005bcc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>LVM_SETITEMSTATE</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>SelectAllItems</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1ab0198e61538c43a87147c674dcdbf8db" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>SendMessageLVItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>SetItemState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

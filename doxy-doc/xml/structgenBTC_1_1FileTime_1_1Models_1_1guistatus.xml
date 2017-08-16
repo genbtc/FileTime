@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus" kind="struct" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Models::guistatus</compoundname>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.guistatus.Accessed</definition>
+        <argsstring></argsstring>
+        <name>Accessed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="58" column="1" bodyfile="Models/Structs.cs" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.guistatus.Created</definition>
+        <argsstring></argsstring>
+        <name>Created</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="59" column="1" bodyfile="Models/Structs.cs" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.guistatus.Modified</definition>
+        <argsstring></argsstring>
+        <name>Modified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="60" column="1" bodyfile="Models/Structs.cs" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" prot="package" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime genBTC.FileTime.Models.guistatus.dateTimePickerDate</definition>
+        <argsstring></argsstring>
+        <name>dateTimePickerDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="61" column="1" bodyfile="Models/Structs.cs" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2d57f1ce6d2be16577be655f927df3ce" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.guistatus.labelHiddenPathName</definition>
+        <argsstring></argsstring>
+        <name>labelHiddenPathName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="62" column="1" bodyfile="Models/Structs.cs" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton1Oldest</definition>
+        <argsstring></argsstring>
+        <name>radioButton1Oldest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="63" column="1" bodyfile="Models/Structs.cs" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton1_setfromCreated</definition>
+        <argsstring></argsstring>
+        <name>radioButton1_setfromCreated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="65" column="1" bodyfile="Models/Structs.cs" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</definition>
+        <argsstring></argsstring>
+        <name>radioButton1_useTimefromFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="67" column="1" bodyfile="Models/Structs.cs" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton2Newest</definition>
+        <argsstring></argsstring>
+        <name>radioButton2Newest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="68" column="1" bodyfile="Models/Structs.cs" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton2_setfromModified</definition>
+        <argsstring></argsstring>
+        <name>radioButton2_setfromModified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="70" column="1" bodyfile="Models/Structs.cs" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</definition>
+        <argsstring></argsstring>
+        <name>radioButton2_useTimefromSubdir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="72" column="1" bodyfile="Models/Structs.cs" bodystart="72" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton3Random</definition>
+        <argsstring></argsstring>
+        <name>radioButton3Random</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="73" column="1" bodyfile="Models/Structs.cs" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton3_setfromAccessed</definition>
+        <argsstring></argsstring>
+        <name>radioButton3_setfromAccessed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="75" column="1" bodyfile="Models/Structs.cs" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</definition>
+        <argsstring></argsstring>
+        <name>radioGroupBox1SpecifyTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="78" column="1" bodyfile="Models/Structs.cs" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</definition>
+        <argsstring></argsstring>
+        <name>radioGroupBox2CurrentSelect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="79" column="1" bodyfile="Models/Structs.cs" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</definition>
+        <argsstring></argsstring>
+        <name>radioGroupBox3UseTimeFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="80" column="1" bodyfile="Models/Structs.cs" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1ade2fae85372b8030dce0d5a71b957990" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.rg2rb1Creation</definition>
+        <argsstring></argsstring>
+        <name>rg2rb1Creation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="81" column="1" bodyfile="Models/Structs.cs" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a0ee7354921de7a3935388a2dc3cedb27" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.rg2rb2Modified</definition>
+        <argsstring></argsstring>
+        <name>rg2rb2Modified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="82" column="1" bodyfile="Models/Structs.cs" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afde815c17bb8aaadf3d7b6a1d22e3426" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.rg2rb3LastAccess</definition>
+        <argsstring></argsstring>
+        <name>rg2rb3LastAccess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="83" column="1" bodyfile="Models/Structs.cs" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime genBTC.FileTime.Models.guistatus.dateTimePickerTime</definition>
+        <argsstring></argsstring>
+        <name>dateTimePickerTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="61" column="1" bodyfile="Models/Structs.cs" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a9010a701f58a183bc4e079af909ff838" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.guistatus.radioButton4_setfromRandom</definition>
+        <argsstring></argsstring>
+        <name>radioButton4_setfromRandom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="76" column="1" bodyfile="Models/Structs.cs" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" compoundref="DataModel_8cs" startline="181" endline="267">genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Store all(most) the fields that the GUI uses, for populating the viewmodel. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/Structs.cs" line="57" column="1" bodyfile="Models/Structs.cs" bodystart="56" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>Accessed</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>Created</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>dateTimePickerDate</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>dateTimePickerTime</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2d57f1ce6d2be16577be655f927df3ce" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>labelHiddenPathName</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>Modified</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton1_setfromCreated</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton1_useTimefromFile</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton1Oldest</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton2_setfromModified</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton2_useTimefromSubdir</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton2Newest</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton3_setfromAccessed</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton3Random</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a9010a701f58a183bc4e079af909ff838" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioButton4_setfromRandom</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioGroupBox1SpecifyTime</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioGroupBox2CurrentSelect</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>radioGroupBox3UseTimeFrom</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1ade2fae85372b8030dce0d5a71b957990" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>rg2rb1Creation</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a0ee7354921de7a3935388a2dc3cedb27" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>rg2rb2Modified</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afde815c17bb8aaadf3d7b6a1d22e3426" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::guistatus</scope><name>rg2rb3LastAccess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

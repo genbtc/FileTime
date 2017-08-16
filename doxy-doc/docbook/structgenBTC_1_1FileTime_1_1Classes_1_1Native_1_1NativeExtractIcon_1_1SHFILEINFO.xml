@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO">
+<title>genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO struct Reference</title>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>readonly IntPtr hIcon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1aa4eeffbbd0847601c1780647ecb3be83">SHFILEINFO</link> (
+bool b)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1aa4eeffbbd0847601c1780647ecb3be83">
+                <title>genBTC.FileTime.Classes.Native.NativeExtractIcon.SHFILEINFO.SHFILEINFO (bool b=true)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

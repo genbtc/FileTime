@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespaceWindowsExplorer">
+<title>WindowsExplorer</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1ExplorerTree">WindowsExplorer::ExplorerTree</link></para>
+<para><emphasis>&lt;summary&gt;
+Summary description for ExplorerTree.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1Kernel32">WindowsExplorer::Kernel32</link></para>
+<para><emphasis>&lt;summary&gt; a kernel Shell Function &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1ServerEnum">WindowsExplorer::ServerEnum</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca">ResourceScope</link> {
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaabb909b3df5acac023922bca7ae890d1c">RESOURCE_CONNECTED</link>= 1,
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa46bb8db4613943a4051a61fa1eaf3d19">RESOURCE_GLOBALNET</link>,
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaab2206a45992c8c7db0d67a87c8e7541c">RESOURCE_REMEMBERED</link>,
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa195f67f2c6e349dc21b97d4973fc5047">RESOURCE_RECENT</link>,
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa52b88d4d42ac56caadc0890e9ba27593">RESOURCE_CONTEXT</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f">ResourceType</link> {
+<link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa6d5711943560ee0b6d213a70da20b68a">RESOURCETYPE_ANY</link>,
+<link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa191f686b51949fc8d77c584f0b17a072">RESOURCETYPE_DISK</link>,
+<link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa86720d525c985a73595c0076ca043486">RESOURCETYPE_PRINT</link>,
+<link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9faa2f8ea909101793ae2a34e9d936c86a1">RESOURCETYPE_RESERVED</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7">ResourceUsage</link> {
+<link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a7a8ecad1261e70ce9d35b49ac25087ed">RESOURCEUSAGE_CONNECTABLE</link>= 0x00000001,
+<link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a5844b7d7be1e65cc624f2a700eef1f50">RESOURCEUSAGE_CONTAINER</link>= 0x00000002,
+<link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a2912c36b107394da578f4f932ef3397a">RESOURCEUSAGE_NOLOCALDEVICE</link>= 0x00000004,
+<link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7ad1880508280941abf9b1c2b04f8360cc">RESOURCEUSAGE_SIBLING</link>= 0x00000008,
+<link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7adb91e0303ae671c0573098be97d9b0c1">RESOURCEUSAGE_ATTACHED</link>= 0x00000010,
+<link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7abf4050ea26aa60a908d9536dd3252f06">RESOURCEUSAGE_ALL</link>= (RESOURCEUSAGE_CONNECTABLE | RESOURCEUSAGE_CONTAINER | RESOURCEUSAGE_ATTACHED)
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d">ResourceDisplayType</link> {
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735dac800d72d4f7c4b04abc0686862329329">RESOURCEDISPLAYTYPE_GENERIC</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da95d70b4433bf6d3cfa173d3771eeeca4">RESOURCEDISPLAYTYPE_DOMAIN</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da733ca97841ae2dc6a7802e6834a259fe">RESOURCEDISPLAYTYPE_SERVER</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735dac2e0c4ce8b6e5feb5d2f9d9da9af548a">RESOURCEDISPLAYTYPE_SHARE</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da953469e02f9a0aa1a436e74067fc0eab">RESOURCEDISPLAYTYPE_FILE</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da5c22f21a4cfc59e1842271da58e3bdf4">RESOURCEDISPLAYTYPE_GROUP</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da675c1081634d055e23c7b802ef7c17a0">RESOURCEDISPLAYTYPE_NETWORK</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da61d7576bc06cb4f0f9acc8273fd386d8">RESOURCEDISPLAYTYPE_ROOT</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735daac96d73b6aa173a1714dd5b1305ee601">RESOURCEDISPLAYTYPE_SHAREADMIN</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da22c1b3c7d321be52cc5b31636c8f804d">RESOURCEDISPLAYTYPE_DIRECTORY</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da066eae0b538e9f3ac0d8893773f121b2">RESOURCEDISPLAYTYPE_TREE</link>,
+<link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da08587105ef1dc6972c91292748b34082">RESOURCEDISPLAYTYPE_NDSCONTAINER</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

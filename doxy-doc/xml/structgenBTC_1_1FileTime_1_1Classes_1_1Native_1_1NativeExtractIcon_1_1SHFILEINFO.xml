@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO" kind="struct" language="C#" prot="private">
+    <compoundname>genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1ad536b4bd00ef75a587434b9385acc1ae" prot="public" static="no" mutable="no">
+        <type>readonly IntPtr</type>
+        <definition>readonly IntPtr genBTC.FileTime.Classes.Native.NativeExtractIcon.SHFILEINFO.hIcon</definition>
+        <argsstring></argsstring>
+        <name>hIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="63" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1aa4eeffbbd0847601c1780647ecb3be83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Classes.Native.NativeExtractIcon.SHFILEINFO.SHFILEINFO</definition>
+        <argsstring>(bool b=true)</argsstring>
+        <name>SHFILEINFO</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="54" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="54" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/Native/NativeExtractIcon.cs" line="53" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="52" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1ad536b4bd00ef75a587434b9385acc1ae" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO</scope><name>hIcon</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO_1aa4eeffbbd0847601c1780647ecb3be83" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO</scope><name>SHFILEINFO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

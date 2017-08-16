@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Classes::SharedHelper</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" prot="public" static="yes" mutable="no">
+        <type>readonly char</type>
+        <definition>readonly char genBTC.FileTime.Classes.SharedHelper.Seperator</definition>
+        <argsstring></argsstring>
+        <name>Seperator</name>
+        <initializer>= Path.DirectorySeparatorChar</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="22" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3f3cfcfcda8f8cf3a6b26167772fb281" compoundref="Form__Main_8cs" startline="263" endline="274">genBTC.FileTime.Forms.Form_Main.explorerTree1_PathChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" compoundref="Form__Main_8cs" startline="118" endline="132">genBTC.FileTime.Forms.Form_Main.Form_Main_Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a9027ac895c6f046db2ac5066c74548b3" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string genBTC.FileTime.Classes.SharedHelper.UserDesktop</definition>
+        <argsstring></argsstring>
+        <name>UserDesktop</name>
+        <initializer>= Environment.GetFolderPath(Environment.SpecialFolder.Desktop)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="23" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" compoundref="Form__Main_8cs" startline="118" endline="132">genBTC.FileTime.Forms.Form_Main.Form_Main_Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Classes.SharedHelper.CurrExten</definition>
+        <argsstring></argsstring>
+        <name>CurrExten</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="25" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="101" endline="131">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a30c0ab78648a723fc6f15a05ea07ee45" prot="public" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; genBTC.FileTime.Classes.SharedHelper.Filextlist</definition>
+        <argsstring></argsstring>
+        <name>Filextlist</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="26" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.Classes.SharedHelper.StrCmpLogicalW</definition>
+        <argsstring>(String x, String y)</argsstring>
+        <name>StrCmpLogicalW</name>
+        <param>
+          <type>String</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="16" column="1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer_1a49799f9eb5dd21baf0714bb6d10f32c9" compoundref="ExplorerLikeSort_8cs" startline="10" endline="13">genBTC.FileTime.Classes.ExplorerLikeComparer.Compare</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb" compoundref="ExplorerLikeSort_8cs" startline="19" endline="22">genBTC.FileTime.Classes.ExpLikeCmpHelperforListView.Compare</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8" compoundref="NameDateObj_8cs" startline="82" endline="85">genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort.Compare</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classIComparer" kindref="compound">IComparer</ref>&lt; string &gt;</type>
+        <definition>static IComparer&lt;string&gt; genBTC.FileTime.Classes.SharedHelper.explorerStringComparer</definition>
+        <argsstring>()</argsstring>
+        <name>explorerStringComparer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="17" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="17" bodyend="20"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85" compoundref="DataModel_8cs" startline="343" endline="359">genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa18f20f8dcf75fb4a7b87dab143ae010" compoundref="DataModel_8cs" startline="364" endline="375">genBTC.FileTime.Models.DataModel.SetTimeDateEachFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool genBTC.FileTime.Classes.SharedHelper.FindCurExt</definition>
+        <argsstring>(String s)</argsstring>
+        <name>FindCurExt</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="28" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="28" bodyend="31"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="101" endline="131">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FileAttributes</type>
+        <definition>static FileAttributes genBTC.FileTime.Classes.SharedHelper.RemoveAttributes</definition>
+        <argsstring>(FileAttributes attributes, FileAttributes attributesToRemove)</argsstring>
+        <name>RemoveAttributes</name>
+        <param>
+          <type>FileAttributes</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type>FileAttributes</type>
+          <declname>attributesToRemove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="33" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="33" bodyend="36"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9" compoundref="Form__Confirm_8cs" startline="64" endline="96">genBTC.FileTime.Forms.Form_Confirm.FixReadonlyResults</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FileAttributes</type>
+        <definition>static FileAttributes genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</definition>
+        <argsstring>()</argsstring>
+        <name>SyncSettingstoInvisibleFlag</name>
+        <briefdescription>
+<para>Reasons to be invisible </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="39" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="39" bodyend="45"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a275699f890e2c790a9f988f456934385" compoundref="Settings_8Designer_8cs" startline="89">genBTC.FileTime.Properties.Settings.ShowHidden</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a90f04201b377ff6db5fdb769a0a46733" compoundref="Settings_8Designer_8cs" startline="101">genBTC.FileTime.Properties.Settings.ShowReadOnly</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a62296f8c2e00dddf7b9a5ab271486aa0" compoundref="Settings_8Designer_8cs" startline="77">genBTC.FileTime.Properties.Settings.ShowSystem</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" compoundref="DataModel_8cs" startline="498" endline="686">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.Classes.SharedHelper.Bool2Int</definition>
+        <argsstring>(bool fileOrDir)</argsstring>
+        <name>Bool2Int</name>
+        <param>
+          <type>bool</type>
+          <declname>fileOrDir</declname>
+        </param>
+        <briefdescription>
+<para>Return 1 if bool=true (Directory) otherwise 0=false (File) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="48" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="48" bodyend="51"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string genBTC.FileTime.Classes.SharedHelper.OpenFile</definition>
+        <argsstring>(string inpath)</argsstring>
+        <name>OpenFile</name>
+        <param>
+          <type>string</type>
+          <declname>inpath</declname>
+        </param>
+        <briefdescription>
+<para>Display the Folder Browser Dialog and then display the selected file path and the directories and files in the folder. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/SharedHelper.cs" line="57" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="57" bodyend="85"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" compoundref="Form__Main_8cs" startline="138" endline="144">genBTC.FileTime.Forms.Form_Main.button_Browse_Click</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310" compoundref="Form__Main_8cs" startline="146" endline="152">genBTC.FileTime.Forms.Form_Main.button_Update_Click</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7" compoundref="Form__Main_8cs" startline="158" endline="161">genBTC.FileTime.Forms.Form_Main.menuItem_FileOpen_Click</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/SharedHelper.cs" line="13" column="1" bodyfile="Classes/SharedHelper.cs" bodystart="12" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>Bool2Int</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>CurrExten</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>explorerStringComparer</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a30c0ab78648a723fc6f15a05ea07ee45" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>Filextlist</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>FindCurExt</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>OpenFile</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>RemoveAttributes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>Seperator</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>StrCmpLogicalW</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>SyncSettingstoInvisibleFlag</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a9027ac895c6f046db2ac5066c74548b3" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::SharedHelper</scope><name>UserDesktop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

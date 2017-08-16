@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort</compoundname>
+    <basecompoundref refid="classIComparer" prot="public" virt="non-virtual">IComparer&lt; NameDateObj &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort.Compare</definition>
+        <argsstring>(NameDateObj obj1, NameDateObj obj2)</argsstring>
+        <name>Compare</name>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
+          <declname>obj1</declname>
+        </param>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
+          <declname>obj2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/NameDateObj.cs" line="82" column="1" bodyfile="Models/NameDateObj.cs" bodystart="82" bodyend="85"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="37">genBTC.FileTime.Models.NameDateObj.Name</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a">genBTC.FileTime.Classes.SharedHelper.StrCmpLogicalW</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Explorer-like Sort, that orders two <ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref>&apos;s by their name property </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23">
+        <label>genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>IComparer&lt; NameDateObj &gt;</label>
+        <link refid="classIComparer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>IComparer&lt; NameDateObj &gt;</label>
+        <link refid="classIComparer"/>
+      </node>
+    </collaborationgraph>
+    <location file="Models/NameDateObj.cs" line="81" column="1" bodyfile="Models/NameDateObj.cs" bodystart="80" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort</scope><name>Compare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

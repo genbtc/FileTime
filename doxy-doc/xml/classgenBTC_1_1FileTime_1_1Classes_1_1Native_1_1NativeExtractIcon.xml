@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Classes::Native::NativeExtractIcon</compoundname>
+    <innerclass refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO" prot="private">genBTC::FileTime::Classes::Native::NativeExtractIcon::SHFILEINFO</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81" prot="private" static="no">
+        <name>SHGFI</name>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a817434295a673aed431435658b65d9a7" prot="public">
+          <name>Icon</name>
+          <initializer>= 0x000000100</initializer>
+          <briefdescription>
+<para>get icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a3b868ced6f60acf5ee565ac021d42941" prot="public">
+          <name>DisplayName</name>
+          <initializer>= 0x000000200</initializer>
+          <briefdescription>
+<para>get display name</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81ae175f7206492c365397d33a0df9cc8d0" prot="public">
+          <name>TypeName</name>
+          <initializer>= 0x000000400</initializer>
+          <briefdescription>
+<para>get type name</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a287234a1ff35a314b5b6bc4e5828e745" prot="public">
+          <name>Attributes</name>
+          <initializer>= 0x000000800</initializer>
+          <briefdescription>
+<para>get attributes</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a84e39f86e0843b752c3f58c1828e94df" prot="public">
+          <name>IconLocation</name>
+          <initializer>= 0x000001000</initializer>
+          <briefdescription>
+<para>get icon location</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81ab8a206aa8eb60627304475f67b9f375a" prot="public">
+          <name>ExeType</name>
+          <initializer>= 0x000002000</initializer>
+          <briefdescription>
+<para>return exe type</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a9b7da861f8f2e6c5f4b7caf079aa8bd6" prot="public">
+          <name>SysIconIndex</name>
+          <initializer>= 0x000004000</initializer>
+          <briefdescription>
+<para>get system icon index</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a887507c977779a51b9c3ecef7049f8e1" prot="public">
+          <name>LinkOverlay</name>
+          <initializer>= 0x000008000</initializer>
+          <briefdescription>
+<para>put a link overlay on icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a91b442d385b54e1418d81adc34871053" prot="public">
+          <name>Selected</name>
+          <initializer>= 0x000010000</initializer>
+          <briefdescription>
+<para>show icon in selected state</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81adcedfbbf9e366a750df8772bfbbe22b7" prot="public">
+          <name>Attr_Specified</name>
+          <initializer>= 0x000020000</initializer>
+          <briefdescription>
+<para>get only specified attributes</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a08f7728d14d36f52bd6d413d9c963e7c" prot="public">
+          <name>LargeIcon</name>
+          <initializer>= 0x000000000</initializer>
+          <briefdescription>
+<para>get large icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81af10923216bc690081c9c9e2ce32d66ae" prot="public">
+          <name>SmallIcon</name>
+          <initializer>= 0x000000001</initializer>
+          <briefdescription>
+<para>get small icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81aa01037cba4230c2b8da0f03454ba002e" prot="public">
+          <name>OpenIcon</name>
+          <initializer>= 0x000000002</initializer>
+          <briefdescription>
+<para>get open icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a8afaa9e9ea20194a3ca276c263b94241" prot="public">
+          <name>ShellIconSize</name>
+          <initializer>= 0x000000004</initializer>
+          <briefdescription>
+<para>get shell size icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a605534a578c2ea820de4a155e1ec542f" prot="public">
+          <name>PIDL</name>
+          <initializer>= 0x000000008</initializer>
+          <briefdescription>
+<para>pszPath is a pidl</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a973ca7fddbacaaa1810be24d088446c9" prot="public">
+          <name>UseFileAttributes</name>
+          <initializer>= 0x000000010</initializer>
+          <briefdescription>
+<para>use passed dwFileAttribute</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81af4fe4d5d06259cb6ab0fea9d18a7c304" prot="public">
+          <name>AddOverlays</name>
+          <initializer>= 0x000000020</initializer>
+          <briefdescription>
+<para>apply the appropriate overlays</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81a84aed79d022df97af71a911a474b89e7" prot="public">
+          <name>OverlayIndex</name>
+          <initializer>= 0x000000040</initializer>
+          <briefdescription>
+<para>Get the index of the overlay in the upper 8 bits of the iIcon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="68" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="67" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a76b023853a1be608d7fd988f6672c96d" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_PATH</definition>
+        <argsstring></argsstring>
+        <name>MAX_PATH</name>
+        <initializer>= 260</initializer>
+        <briefdescription>
+<para>Maximal Length of unmanaged Windows-Path-strings</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="13" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1af222ca95ab074f17ae7cf09fa58647ab" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_TYPE</definition>
+        <argsstring></argsstring>
+        <name>MAX_TYPE</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+<para>Maximal Length of unmanaged Typename</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="16" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a2d8c052a65cce199a71e8b39ab3eadcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGetFileInfo</definition>
+        <argsstring>(string pszPath, int dwFileAttributes, out SHFILEINFO psfi, uint cbfileInfo, SHGFI uFlags)</argsstring>
+        <name>SHGetFileInfo</name>
+        <param>
+          <type>string</type>
+          <declname>pszPath</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dwFileAttributes</declname>
+        </param>
+        <param>
+          <type>out <ref refid="structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1_1SHFILEINFO" kindref="compound">SHFILEINFO</ref></type>
+          <declname>psfi</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>cbfileInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81" kindref="member">SHGFI</ref></type>
+          <declname>uFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="19" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1abaf93807bc85def078adf6a70604b2d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Icon</type>
+        <definition>static Icon genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon</definition>
+        <argsstring>(string strPath, bool bSmall)</argsstring>
+        <name>GetIcon</name>
+        <param>
+          <type>string</type>
+          <declname>strPath</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSmall</declname>
+        </param>
+        <briefdescription>
+<para>Get the associated Icon for a file or application, this method always returns an icon. If the strPath is invalid or there is no idonc the default icon is returned </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>full path to the file</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSmall</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, the 16x16 icon is returned otherwise the 32x32</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeExtractIcon.cs" line="33" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="33" bodyend="49"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="101" endline="131">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Grabs the filesystem or system icon cache for a string filePath.</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/Native/NativeExtractIcon.cs" line="11" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="10" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1abaf93807bc85def078adf6a70604b2d2" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon</scope><name>GetIcon</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a76b023853a1be608d7fd988f6672c96d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon</scope><name>MAX_PATH</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1af222ca95ab074f17ae7cf09fa58647ab" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon</scope><name>MAX_TYPE</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a2d8c052a65cce199a71e8b39ab3eadcc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon</scope><name>SHGetFileInfo</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeExtractIcon</scope><name>SHGFI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

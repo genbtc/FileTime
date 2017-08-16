@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll">
+<title>genBTC::FileTime::Classes::Native::NativeScroll class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int SB_HORZ</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aad428db016c0a69a8288b75ba7bcb80d">GetScrollPos</link> (
+IntPtr hWnd, int nBar)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a9ba1ee44347a1e4edcf86074be4f6eae">SetScrollPos</link> (
+IntPtr hWnd, int nBar, int nPos, bool bRedraw)<para><emphasis>&lt;summary&gt; Manually scroll a control &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aa1c190e5e4307d7cfebf701c8c9bf44b">ScrollH</link> (
+TreeNode thing, int pixelsH, bool abs)<para><emphasis>&lt;summary&gt; Only for treenodes. and only horizontal. &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aad428db016c0a69a8288b75ba7bcb80d">
+                <title>static int genBTC.FileTime.Classes.Native.NativeScroll.GetScrollPos (IntPtr hWnd, int nBar)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1a9ba1ee44347a1e4edcf86074be4f6eae">
+                <title>static int genBTC.FileTime.Classes.Native.NativeScroll.SetScrollPos (IntPtr hWnd, int nBar, int nPos, bool bRedraw)</title> <emphasis>&lt;summary&gt; Manually scroll a control &lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>hWnd</entry>
+                                <entry>
+<para>Window Handle</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>nBar</entry>
+                                <entry>
+<para>Which scroll Bar?, 0x0 for horizontal or 0x1 for Vertical</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>nPos</entry>
+                                <entry>
+<para>New scroll position, in pixels</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bRedraw</entry>
+                                <entry>
+<para>redraw is usually true</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aa1c190e5e4307d7cfebf701c8c9bf44b">
+                <title>static void genBTC.FileTime.Classes.Native.NativeScroll.ScrollH (TreeNode thing, int pixelsH, bool abs=true)</title> <emphasis>&lt;summary&gt; Only for treenodes. and only horizontal. &lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>thing</entry>
+                                <entry>
+<para>the TreeNode being passed, to scroll into view.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>pixelsH</entry>
+                                <entry>
+<para>pixels to scroll by</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>abs</entry>
+                                <entry>
+<para>absolute? otherwise, get current position and add pixelsH to that</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

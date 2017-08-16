@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer">
+<title>genBTC::FileTime::Classes::ExplorerLikeComparer class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer_1a49799f9eb5dd21baf0714bb6d10f32c9">Compare</link> (
+string x, string y)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Explorer-like Sort, for strings </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 9 of file ExplorerLikeSort.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExplorerLikeSort.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer_1a49799f9eb5dd21baf0714bb6d10f32c9">
+                <title>int genBTC.FileTime.Classes.ExplorerLikeComparer.Compare (string x, string y)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

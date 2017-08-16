@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort">
+<title>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8">Compare</link> (
+<link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> obj1, <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> obj2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Explorer-like Sort, that orders two <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link>&apos;s by their name property </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 81 of file NameDateObj.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>NameDateObj.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8">
+                <title>int genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort.Compare (NameDateObj obj1, NameDateObj obj2)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

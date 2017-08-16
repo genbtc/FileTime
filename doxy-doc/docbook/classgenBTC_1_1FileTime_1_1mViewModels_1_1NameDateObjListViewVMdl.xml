@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl">
+<title>genBTC::FileTime::mViewModels::NameDateObjListViewVMdl class Reference</title>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _a</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _c</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _m</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a5297b0991118fe195a70643fc565f600">NameDateObjListViewVMdl</link> (
+ListViewItem thing)<para><emphasis>&lt;summary&gt; construct with a listviewitem &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223">NameDateObjListViewVMdl</link> (
+<link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> thing)<para><emphasis>&lt;summary&gt; construct with a NameDateObj &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241">NameDateObjListViewVMdl</link> (
+)<para><emphasis>&lt;summary&gt; Empty default constructor (initializer) &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5">Compare</link> (
+<link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl">NameDateObjListViewVMdl</link> thing1, <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl">NameDateObjListViewVMdl</link> thing2)<para><emphasis>&lt;summary&gt;
+Compares two of these objects&apos;s DATES, Combines any dates that are null or not null and returns only one
+Looks super stupid, but makes the &quot;Try to combine DUPlicate filenames&quot; actually work. Help ?
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ListViewItem <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abef5d6f4fc3c61a17957b52455257203">Converter</link> (
+)<para><emphasis>&lt;summary&gt; Converts this class into a ListViewItem. &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a28066a9b990ea14d6b2f3c086ea67bcd">Nullordatestring</link> (
+string value)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1ab8c8af3754d3f8a61189253443562dbc">DatestringorNa</link> (
+string value)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>ViewModel version of the NameDateObj(Name + 3 Dates)</para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 8 of file NameDateObjListViewVMdl.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>NameDateObjListViewVMdl.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a5297b0991118fe195a70643fc565f600">
+                <title>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl (ListViewItem thing)</title> <emphasis>&lt;summary&gt; construct with a listviewitem &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223">
+                <title>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl (NameDateObj thing)</title> <emphasis>&lt;summary&gt; construct with a NameDateObj &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241">
+                <title>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl ()</title> <emphasis>&lt;summary&gt; Empty default constructor (initializer) &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5">
+                <title>bool genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Compare (NameDateObjListViewVMdl thing1, NameDateObjListViewVMdl thing2)</title> <emphasis>&lt;summary&gt;
+Compares two of these objects&apos;s DATES, Combines any dates that are null or not null and returns only one
+Looks super stupid, but makes the &quot;Try to combine DUPlicate filenames&quot; actually work. Help ?
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abef5d6f4fc3c61a17957b52455257203">
+                <title>ListViewItem genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Converter ()</title> <emphasis>&lt;summary&gt; Converts this class into a ListViewItem. &lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>Returns a listviewitem</para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a28066a9b990ea14d6b2f3c086ea67bcd">
+                <title>static string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Nullordatestring (string value)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1ab8c8af3754d3f8a61189253443562dbc">
+                <title>static string genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.DatestringorNa (string value)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

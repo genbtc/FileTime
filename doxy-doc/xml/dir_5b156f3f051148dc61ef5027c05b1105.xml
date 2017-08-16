@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_5b156f3f051148dc61ef5027c05b1105" kind="dir">
+    <compoundname>WindowsExplorer</compoundname>
+    <innerfile refid="ExplorerTree_8cs">ExplorerTree.cs</innerfile>
+    <innerfile refid="ExplorerTree_8Designer_8cs">ExplorerTree.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="WindowsExplorer/"/>
+  </compounddef>
+</doxygen>

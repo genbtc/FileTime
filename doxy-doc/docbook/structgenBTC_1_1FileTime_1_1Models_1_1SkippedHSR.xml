@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR">
+<title>genBTC::FileTime::Models::SkippedHSR struct Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int H<para><emphasis>&lt;summary&gt; Count of the number of hidden files skipped &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int R<para><emphasis>&lt;summary&gt; Count of the number of Read-only files skipped &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int S<para><emphasis>&lt;summary&gt; Count of the number of System files skipped &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1af7b494ffc63ac5c484b806a0e48aae97">SkippedHSR</link> (
+int h, int r, int s)<para><emphasis>&lt;summary&gt; Default Constructor   &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b">Reset</link> (
+)<para><emphasis>&lt;summary&gt;  Reset the skip count of Hidden system and readonly files  &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <simplesect>
+                <title>int genBTC.FileTime.Models.SkippedHSR.H</title>                
+                <para>Definition at line 16 of file Structs.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Structs.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int genBTC.FileTime.Models.SkippedHSR.R</title>                
+                <para>Definition at line 19 of file Structs.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Structs.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int genBTC.FileTime.Models.SkippedHSR.S</title>                
+                <para>Definition at line 22 of file Structs.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Structs.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+            <section xml:id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1af7b494ffc63ac5c484b806a0e48aae97">
+                <title>genBTC.FileTime.Models.SkippedHSR.SkippedHSR (int h, int r, int s)</title> <emphasis>&lt;summary&gt; Default Constructor   &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b">
+                <title>void genBTC.FileTime.Models.SkippedHSR.Reset ()</title> <emphasis>&lt;summary&gt;  Reset the skip count of Hidden system and readonly files  &lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

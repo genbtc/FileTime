@@ -1,0 +1,1268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Forms::Form_Confirm</compoundname>
+    <basecompoundref refid="classForm" prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a37bc8e6a954dba0fabf2880baafe6c83" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; string &gt;</type>
+        <definition>readonly List&lt;string&gt; genBTC.FileTime.Forms.Form_Confirm._filextlist</definition>
+        <argsstring></argsstring>
+        <name>_filextlist</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="26" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af477d8d488626f2dafcc97023f4da148" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main" kindref="compound">Form_Main</ref></type>
+        <definition>readonly Form_Main genBTC.FileTime.Forms.Form_Confirm._formmain</definition>
+        <argsstring></argsstring>
+        <name>_formmain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="27" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af814be06aa5a0863959c13b2553aff74" prot="private" static="no" mutable="no">
+        <type>List&lt; bool &gt;</type>
+        <definition>List&lt;bool&gt; genBTC.FileTime.Forms.Form_Confirm._checklist</definition>
+        <argsstring></argsstring>
+        <name>_checklist</name>
+        <briefdescription>
+<para>list of listview items&apos;s checkbox state bool values </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="30" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a59abffe28d291d962bc7917b5e5f69" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Forms.Form_Confirm._itemsErrorsCount</definition>
+        <argsstring></argsstring>
+        <name>_itemsErrorsCount</name>
+        <briefdescription>
+<para>Count of the number of files/directories that have errors setting the date/time </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="33" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3125e5305487cecb2c5c9c5b461d781b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Forms.Form_Confirm._itemsSetCount</definition>
+        <argsstring></argsstring>
+        <name>_itemsSetCount</name>
+        <briefdescription>
+<para>Count of the number of files/directories that have been set </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="36" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a74dc1af153ab898e5f395cc8166af1a7" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer genBTC.FileTime.Forms.Form_Confirm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="12" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3642f9d3e61d6174b91a38ea0a4915e" prot="private" static="no" mutable="no">
+        <type>ImageList</type>
+        <definition>ImageList genBTC.FileTime.Forms.Form_Confirm.imageList_Files</definition>
+        <argsstring></argsstring>
+        <name>imageList_Files</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="33" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad859279ef35572af16b7892d517a822f" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label genBTC.FileTime.Forms.Form_Confirm.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="34" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a94b8aa95d0d2a5d178fda6ba01592fec" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button genBTC.FileTime.Forms.Form_Confirm.button1_Confirm</definition>
+        <argsstring></argsstring>
+        <name>button1_Confirm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="35" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acb36bee5d6976cbecda945cf09a6b1dc" prot="private" static="no" mutable="no">
+        <type><ref refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView" kindref="compound">CustomListView</ref></type>
+        <definition>CustomListView genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm</definition>
+        <argsstring></argsstring>
+        <name>listView1_Confirm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="478" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7f642d78dbe42d4ad650b363351acbc6" prot="private" static="no" mutable="no">
+        <type>ContextMenuStrip</type>
+        <definition>ContextMenuStrip genBTC.FileTime.Forms.Form_Confirm.contextMenuStrip1</definition>
+        <argsstring></argsstring>
+        <name>contextMenuStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="479" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a60aa76cf1b84e57a7060ce71baecde9c" prot="private" static="no" mutable="no">
+        <type>GroupBox</type>
+        <definition>GroupBox genBTC.FileTime.Forms.Form_Confirm.groupBoxConditions</definition>
+        <argsstring></argsstring>
+        <name>groupBoxConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="481" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a78523dec38766e2c1ca2148239d09039" prot="private" static="no" mutable="no">
+        <type>RadioButton</type>
+        <definition>RadioButton genBTC.FileTime.Forms.Form_Confirm.radioButton3All</definition>
+        <argsstring></argsstring>
+        <name>radioButton3All</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="482" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3d38de87badf2d37b11d34dace27697" prot="private" static="no" mutable="no">
+        <type>RadioButton</type>
+        <definition>RadioButton genBTC.FileTime.Forms.Form_Confirm.radioButton2Older</definition>
+        <argsstring></argsstring>
+        <name>radioButton2Older</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="483" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a08b570392797b07d300eb6c6613b4e2a" prot="private" static="no" mutable="no">
+        <type>RadioButton</type>
+        <definition>RadioButton genBTC.FileTime.Forms.Form_Confirm.radioButton1Newer</definition>
+        <argsstring></argsstring>
+        <name>radioButton1Newer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="484" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4b45b5a1372b3f497bdadffe603cc70f" prot="private" static="no" mutable="no">
+        <type>MenuStrip</type>
+        <definition>MenuStrip genBTC.FileTime.Forms.Form_Confirm.menuStrip1</definition>
+        <argsstring></argsstring>
+        <name>menuStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="485" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a897d07259fb1c7657e841cbe49a67ddc" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.editToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>editToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="486" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a44646f92691ba50186ceb50d31afb531" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.selectAllToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>selectAllToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="487" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8101c72e19286de6bcf42a850ded3498" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.deSelectAllToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>deSelectAllToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="488" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1e4be85619506a93fcb216c2bef5a672" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.invertSelectionToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>invertSelectionToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="489" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abf92838201f83c108849c52b6d23da06" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox genBTC.FileTime.Forms.Form_Confirm.ComboBox1</definition>
+        <argsstring></argsstring>
+        <name>ComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="490" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae301ad7d805d73e21478263cd0959464" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox genBTC.FileTime.Forms.Form_Confirm.ComboBox2</definition>
+        <argsstring></argsstring>
+        <name>ComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="491" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a18dc01274ca6d2191249f7f0c89ea606" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox genBTC.FileTime.Forms.Form_Confirm.ComboBox3</definition>
+        <argsstring></argsstring>
+        <name>ComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="492" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae775fb93b7da5cd44d21f0dd9d273d69" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.removeNAOnlysToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>removeNAOnlysToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="493" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a346a46754f67e99ecfd964d1afc73b87" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label genBTC.FileTime.Forms.Form_Confirm.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="494" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac094dbeb2fa056b77cea0a19ad9a0309" prot="private" static="no" mutable="no">
+        <type>Panel</type>
+        <definition>Panel genBTC.FileTime.Forms.Form_Confirm.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="495" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a51dbe650d9888eb4d0ca793225e9ea9e" prot="private" static="no" mutable="no">
+        <type>ColumnHeader</type>
+        <definition>ColumnHeader genBTC.FileTime.Forms.Form_Confirm.ColumnHeader_Name</definition>
+        <argsstring></argsstring>
+        <name>ColumnHeader_Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="496" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af8f04124ec9b181c674213693d0fc292" prot="private" static="no" mutable="no">
+        <type>ColumnHeader</type>
+        <definition>ColumnHeader genBTC.FileTime.Forms.Form_Confirm.ColumnHeader_Created</definition>
+        <argsstring></argsstring>
+        <name>ColumnHeader_Created</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="497" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aeddc07228f54ca3d89532561e36a8f12" prot="private" static="no" mutable="no">
+        <type>ColumnHeader</type>
+        <definition>ColumnHeader genBTC.FileTime.Forms.Form_Confirm.ColumnHeader_Modified</definition>
+        <argsstring></argsstring>
+        <name>ColumnHeader_Modified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="498" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2a0aeff72d36b5e196f2135cdf80fb5e" prot="private" static="no" mutable="no">
+        <type>ColumnHeader</type>
+        <definition>ColumnHeader genBTC.FileTime.Forms.Form_Confirm.ColumnHeader_Accessed</definition>
+        <argsstring></argsstring>
+        <name>ColumnHeader_Accessed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="499" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1bc1c8bdee44edc0b7548134f3028fa1" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="500" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2ec1a40c03ac4fdd8a43841dbc5dca68" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem2</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="501" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4fd42c11c21c02ea6214c933b2c600bc" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem3</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="502" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a673a6deb636523702c66e64200f1f6c2" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem4</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="503" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af7d326a11e1cc4fe4afa1616c2735abe" prot="private" static="no" mutable="no">
+        <type>ToolStripSeparator</type>
+        <definition>ToolStripSeparator genBTC.FileTime.Forms.Form_Confirm.toolStripSeparator1</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="504" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a56e71cffa65f82ba181d5a9a75be0b71" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="505" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acea1a126cbbb70c0233dec8d47b72084" prot="private" static="no" mutable="no">
+        <type>StatusStrip</type>
+        <definition>StatusStrip genBTC.FileTime.Forms.Form_Confirm.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="506" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0666b573711accaeb386c72ca16244b6" prot="private" static="no" mutable="no">
+        <type>ToolStripProgressBar</type>
+        <definition>ToolStripProgressBar genBTC.FileTime.Forms.Form_Confirm.toolStripProgressBar1</definition>
+        <argsstring></argsstring>
+        <name>toolStripProgressBar1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="507" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af48a7f3ab10bfff94f0b51396ee5c799" prot="private" static="no" mutable="no">
+        <type>ToolStripStatusLabel</type>
+        <definition>ToolStripStatusLabel genBTC.FileTime.Forms.Form_Confirm.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="508" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d4e814c3cce5e98c372c68eb33044b" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.condenseMultipleLinesToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>condenseMultipleLinesToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="509" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a372805d1413eca52d5ec1671a63a8086" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="510" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad29eedba05697d15bc8420c89130a23f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Forms.Form_Confirm.active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>the fixreadonly active files count (checked in between fix and unfix) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="39" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1c414476848ba5e520e59175bfdc0ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Forms.Form_Confirm.Form_Confirm</definition>
+        <argsstring>(Form_Main f1)</argsstring>
+        <name>Form_Confirm</name>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main" kindref="compound">Form_Main</ref></type>
+          <declname>f1</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classForm" kindref="compound">Form</ref> 2 creation and initialization code. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>so we can modify publics in the main form</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="43" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="43" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.FixReadonlyResults</definition>
+        <argsstring>()</argsstring>
+        <name>FixReadonlyResults</name>
+        <briefdescription>
+<para>Show a message box of any files that were cleared of their read-only tag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="64" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="64" bodyend="96"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0" compoundref="SharedHelper_8cs" startline="33" endline="36">genBTC.FileTime.Classes.SharedHelper.RemoveAttributes</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.MakeListView</definition>
+        <argsstring>()</argsstring>
+        <name>MakeListView</name>
+        <briefdescription>
+<para>turn the NameDateObj lists from <ref refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main" kindref="compound">Form_Main</ref> into the listview on <ref refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm" kindref="compound">Form_Confirm</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>use the results as the new data model. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="101" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="101" bodyend="131"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" compoundref="NameDateObj_8cs" startline="56">genBTC.FileTime.Models.NameDateObj.Accessed</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" compoundref="NameDateObj_8cs" startline="42">genBTC.FileTime.Models.NameDateObj.Created</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" compoundref="SharedHelper_8cs" startline="25">genBTC.FileTime.Classes.SharedHelper.CurrExten</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a2edd2e54b89f4feb9f2f6f9b86fee5ba" compoundref="NameDateObj_8cs" startline="34">genBTC.FileTime.Models.NameDateObj.FileOrDirType</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe" compoundref="SharedHelper_8cs" startline="28" endline="31">genBTC.FileTime.Classes.SharedHelper.FindCurExt</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1abaf93807bc85def078adf6a70604b2d2" compoundref="NativeExtractIcon_8cs" startline="33" endline="49">genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" compoundref="NameDateObj_8cs" startline="49">genBTC.FileTime.Models.NameDateObj.Modified</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="37">genBTC.FileTime.Models.NameDateObj.Name</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" compoundref="Form__Main_8cs" startline="412" endline="421">genBTC.FileTime.Forms.Form_Main.LaunchForm2Go</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8cb4bf423609764a3a98fe85de819c55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.ResetReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>ResetReadOnly</name>
+        <briefdescription>
+<para>Adds the read-only attribute back after it was removed </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="142" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="142" bodyend="150"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af62fb0c7e4aaf23671fcb591c28e436c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.UpdateStatusBar</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateStatusBar</name>
+        <briefdescription>
+<para>Show current number of files on the status bar line, and store all checkboxes each time </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="134" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing</definition>
+        <argsstring>(object sender, FormClosingEventArgs e)</argsstring>
+        <name>Form_Confirm_FormClosing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Clear the main form&apos;s fileconfirm list if form2 is closed. If the user does not want to clear the list, they can leave the form_Confirm open and access form_Main multiple times to incrementally add to the form_Confirm list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="157" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="157" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a117fd75bb0dc712a1bdf49140fb93f07" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Forms.Form_Confirm.DoConditionalAgeCheck</definition>
+        <argsstring>(DateTime newdate, string pathName, int cmAtype)</argsstring>
+        <name>DoConditionalAgeCheck</name>
+        <param>
+          <type>DateTime</type>
+          <declname>newdate</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pathName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cmAtype</declname>
+        </param>
+        <briefdescription>
+<para>Check the radiobuttons, then check the filesystem&apos;s existing dates and returns true if files should be modified. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="167" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="167" bodyend="185"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a36d17d1505fae79c610daff068c6d5ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.button1_Confirm_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button1_Confirm_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Confirm Button - Actually finally set the files datetimes, if it matches conditions. Shows a progress bar. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="220" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="220" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3d349d69687095aba05751e9d1cc78d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.ThreeComboBox_SelectedChange</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ThreeComboBox_SelectedChange</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="269" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="269" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.selectAllToolStripMenuItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>selectAllToolStripMenuItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="308" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="308" bodyend="313"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3" compoundref="NativeSelect_8cs" startline="19" endline="22">genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.deSelectAllToolStripMenuItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>deSelectAllToolStripMenuItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="315" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="315" bodyend="320"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" compoundref="NativeSelect_8cs" startline="28" endline="31">genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab0447665a6354a8015a4cbc25dd8857e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.invertSelectionToolStripMenuItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>invertSelectionToolStripMenuItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="322" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="322" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae685e7b9564920a6d03e82cfc4dca4a6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.removeNAOnlysToolStripMenuItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>removeNAOnlysToolStripMenuItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="338" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="338" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae812db4140d91f832ff782cb0e584fd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.condenseMultipleLinesToolStripMenuItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>condenseMultipleLinesToolStripMenuItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Combine all the adjacent items which have the same name, and matching blank/nonblank or identical date attributes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="356" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="356" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa38d84ab108896374502e1d427fb8073" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>toolStripMenuItem1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Change Date... </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="388" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="388" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a655ed83e871c1ae8f99cc139b742581f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenu_ThreeRemoves</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>toolStripMenu_ThreeRemoves</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Remove 1=Created,2=Modified,3=Accessed... </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="412" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="412" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae89c06d5a8209746475c1454cb11721e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>toolStripMenuItem5_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Open Explorer here... </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="430" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="430" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3262dd1dc9413b0b77ef2ad335af6fe7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>toolStripMenuItem6_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Delete Item... </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="445" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="445" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a67e58ae4d8a3a6816c148a8d9f0845cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes</definition>
+        <argsstring>()</argsstring>
+        <name>RestoreCheckboxes</name>
+        <briefdescription>
+<para>restore all the checkboxes at once (not used?) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="487" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="487" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72204e6ed2578b7c6196f37d85aa05c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes</definition>
+        <argsstring>(int index)</argsstring>
+        <name>RestoreCheckboxes</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>restore only one checkbox. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="500" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="500" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0afeb990e61b20cf1ad64015b2e03b0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes</definition>
+        <argsstring>()</argsstring>
+        <name>StoreCheckboxes</name>
+        <briefdescription>
+<para>Clear list if any, and store entire new list of checkboxes. (could not direct copy the internal array (see comments)) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="510" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="510" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab7410828fda5dc98c741655ea1c115b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes</definition>
+        <argsstring>(ItemCheckedEventArgs e)</argsstring>
+        <name>StoreCheckboxes</name>
+        <param>
+          <type>ItemCheckedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Change stored value of one checkbox in the checklist storage array. Called multiple times from listView1_Confirm_ItemChecked, e is the item being changed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="524" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="524" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae0cda54950b51f40b081432f4d70d5dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm_ItemChecked</definition>
+        <argsstring>(object sender, ItemCheckedEventArgs e)</argsstring>
+        <name>listView1_Confirm_ItemChecked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemCheckedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="531" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="531" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a03c1e9fd2796db43388d5ba42dc78eee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.menuStrip1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>menuStrip1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>change focus back to the listview when the menu is clicked (so it doesnt go gray)</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="553" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="553" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a01eff90114426a685e7182097ef665e8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm_KeyUp</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>listView1_Confirm_KeyUp</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>respond to the delete key as if the delete context menu was clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="559" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="559" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afd8a0d9126bdb2940d7c3240db21f579" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="37" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="37" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4616216c87c2d9b2e4f7186be47208b3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Confirm.contextMenuStrip1_Opening</definition>
+        <argsstring>(object sender, System.ComponentModel.CancelEventArgs e)</argsstring>
+        <name>contextMenuStrip1_Opening</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.ComponentModel.CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="471" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="471" bodyend="475"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d2f09053bdda2a34bc4453bc0fe50b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool genBTC.FileTime.Forms.Form_Confirm.SetTime</definition>
+        <argsstring>(int cma, string path, DateTime date)</argsstring>
+        <name>SetTime</name>
+        <param>
+          <type>int</type>
+          <declname>cma</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+<para>Function which touches the filesystem to set the dates </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.cs" line="188" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="188" bodyend="214"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1d80bc70235bc2e505c27d38ed0d73a7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.Forms.Form_Confirm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Confirm.Designer.cs" line="18" column="1" bodyfile="Forms/Form_Confirm.Designer.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classForm" kindref="compound">Form</ref> 2, confirms the action and shows filenames and dates </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="49">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+      <node id="48">
+        <label>genBTC.FileTime.Forms.Form_Confirm</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="53">
+        <label>genBTC.FileTime.Forms.Form_Main</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>Confirmation</edgelabel>
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+      <node id="50">
+        <label>genBTC.FileTime.Forms.Form_Confirm</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>listView1_Confirm</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>_formmain</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>genBTC.FileTime.mViewModels.CustomListView</label>
+        <link refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView"/>
+      </node>
+    </collaborationgraph>
+    <location file="Forms/Form_Confirm.cs" line="22" column="1" bodyfile="Forms/Form_Confirm.cs" bodystart="21" bodyend="568"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af814be06aa5a0863959c13b2553aff74" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>_checklist</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a37bc8e6a954dba0fabf2880baafe6c83" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>_filextlist</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af477d8d488626f2dafcc97023f4da148" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>_formmain</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a59abffe28d291d962bc7917b5e5f69" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>_itemsErrorsCount</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3125e5305487cecb2c5c9c5b461d781b" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>_itemsSetCount</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad29eedba05697d15bc8420c89130a23f" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>active</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a94b8aa95d0d2a5d178fda6ba01592fec" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>button1_Confirm</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a36d17d1505fae79c610daff068c6d5ad" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>button1_Confirm_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2a0aeff72d36b5e196f2135cdf80fb5e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ColumnHeader_Accessed</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af8f04124ec9b181c674213693d0fc292" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ColumnHeader_Created</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aeddc07228f54ca3d89532561e36a8f12" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ColumnHeader_Modified</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a51dbe650d9888eb4d0ca793225e9ea9e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ColumnHeader_Name</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abf92838201f83c108849c52b6d23da06" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ComboBox1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae301ad7d805d73e21478263cd0959464" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ComboBox2</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a18dc01274ca6d2191249f7f0c89ea606" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ComboBox3</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a74dc1af153ab898e5f395cc8166af1a7" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>components</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d4e814c3cce5e98c372c68eb33044b" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>condenseMultipleLinesToolStripMenuItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae812db4140d91f832ff782cb0e584fd1" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>condenseMultipleLinesToolStripMenuItem_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7f642d78dbe42d4ad650b363351acbc6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>contextMenuStrip1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4616216c87c2d9b2e4f7186be47208b3" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>contextMenuStrip1_Opening</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8101c72e19286de6bcf42a850ded3498" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>deSelectAllToolStripMenuItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>deSelectAllToolStripMenuItem_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1d80bc70235bc2e505c27d38ed0d73a7" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>Dispose</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a117fd75bb0dc712a1bdf49140fb93f07" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>DoConditionalAgeCheck</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a897d07259fb1c7657e841cbe49a67ddc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>editToolStripMenuItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>FixReadonlyResults</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1c414476848ba5e520e59175bfdc0ca5" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>Form_Confirm</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>Form_Confirm_FormClosing</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a60aa76cf1b84e57a7060ce71baecde9c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>groupBoxConditions</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3642f9d3e61d6174b91a38ea0a4915e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>imageList_Files</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afd8a0d9126bdb2940d7c3240db21f579" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>InitializeComponent</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1e4be85619506a93fcb216c2bef5a672" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>invertSelectionToolStripMenuItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab0447665a6354a8015a4cbc25dd8857e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>invertSelectionToolStripMenuItem_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad859279ef35572af16b7892d517a822f" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>label1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a346a46754f67e99ecfd964d1afc73b87" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>label2</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acb36bee5d6976cbecda945cf09a6b1dc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>listView1_Confirm</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae0cda54950b51f40b081432f4d70d5dd" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>listView1_Confirm_ItemChecked</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a01eff90114426a685e7182097ef665e8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>listView1_Confirm_KeyUp</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>MakeListView</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4b45b5a1372b3f497bdadffe603cc70f" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>menuStrip1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a03c1e9fd2796db43388d5ba42dc78eee" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>menuStrip1_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac094dbeb2fa056b77cea0a19ad9a0309" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>panel1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a08b570392797b07d300eb6c6613b4e2a" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>radioButton1Newer</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3d38de87badf2d37b11d34dace27697" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>radioButton2Older</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a78523dec38766e2c1ca2148239d09039" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>radioButton3All</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae775fb93b7da5cd44d21f0dd9d273d69" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>removeNAOnlysToolStripMenuItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae685e7b9564920a6d03e82cfc4dca4a6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>removeNAOnlysToolStripMenuItem_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8cb4bf423609764a3a98fe85de819c55" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ResetReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a67e58ae4d8a3a6816c148a8d9f0845cf" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>RestoreCheckboxes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72204e6ed2578b7c6196f37d85aa05c0" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>RestoreCheckboxes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a44646f92691ba50186ceb50d31afb531" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>selectAllToolStripMenuItem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>selectAllToolStripMenuItem_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d2f09053bdda2a34bc4453bc0fe50b" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>SetTime</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acea1a126cbbb70c0233dec8d47b72084" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>statusStrip1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0afeb990e61b20cf1ad64015b2e03b0d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>StoreCheckboxes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab7410828fda5dc98c741655ea1c115b6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>StoreCheckboxes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3d349d69687095aba05751e9d1cc78d9" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>ThreeComboBox_SelectedChange</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a655ed83e871c1ae8f99cc139b742581f" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenu_ThreeRemoves</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1bc1c8bdee44edc0b7548134f3028fa1" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa38d84ab108896374502e1d427fb8073" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem1_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2ec1a40c03ac4fdd8a43841dbc5dca68" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem2</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4fd42c11c21c02ea6214c933b2c600bc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem3</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a673a6deb636523702c66e64200f1f6c2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem4</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a56e71cffa65f82ba181d5a9a75be0b71" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem5</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae89c06d5a8209746475c1454cb11721e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem5_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a372805d1413eca52d5ec1671a63a8086" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem6</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3262dd1dc9413b0b77ef2ad335af6fe7" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripMenuItem6_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0666b573711accaeb386c72ca16244b6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripProgressBar1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af7d326a11e1cc4fe4afa1616c2735abe" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripSeparator1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af48a7f3ab10bfff94f0b51396ee5c799" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af62fb0c7e4aaf23671fcb591c28e436c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Confirm</scope><name>UpdateStatusBar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,749 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classWindowsExplorer_1_1ExplorerTree">
+<title>WindowsExplorer::ExplorerTree class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly string Seperator</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly string Desktop</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly string MyDocuments</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly string Favorites</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TreeNode nodeEntireNetwork</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TreeNode nodeMyComputer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TreeNode nodeMyDocuments</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TreeNode rootnodeDesktop</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnAdd</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnGo</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnRefresh</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnHome</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnBack</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnNext</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnUp</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button btnInfo</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ToolTip toolTip1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ListView listView1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ColumnHeader column1_Path</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ColumnHeader column2_Status</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ImageList imageList1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ContextMenu cMShortcut</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MenuItem mnuShortcut</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TextBox txtPath</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GroupBox grptoolbar</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>TreeView treeview1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>PathChangedEventHandler PathChangedEvent</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classWindowsExplorer_1_1ExplorerTree_1a0ec38e7b2baa52bd055f1c1eb115125b">ExplorerTree</link> (
+)<para><emphasis>&lt;summary&gt; Explorer-Like TreeView control. &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28">RefreshControlUi</link> (
+)<para><emphasis>&lt;summary&gt;
+Refresh the Control itself (toolbar, etc) (public)
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b">InitialPopulate</link> (
+)<para><emphasis>&lt;summary&gt;
+Initially Populate the Treeview (public)
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6">SelectRootNode</link> (
+)<para><emphasis>&lt;summary&gt;
+Select and scroll to the topmost node (Desktop), after it has been initialized.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83">SetCurrentPath</link> (
+string strPath)<para><emphasis>&lt;summary&gt;
+Set the path in the textbox, and fires the path changed event... Call BrowseTo() afterwards to go to it.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617">RefreshFolders</link> (
+)<para><emphasis>&lt;summary&gt;
+Refresh Button - Re-Initialize the TreeView from the beginning (Desktop).
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb">BrowseTo</link> (
+)<para><emphasis>&lt;summary&gt;
+Navigate the treeview to the path in the textbox. Must be called manually when CurrentPath changes.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>delegate void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247">PathChangedEventHandler</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3">ExplorerTree_Load</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c">txtPath_TextChanged</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Fires after every character is typed, or an item is selected.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f">PopulateMyComputer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df">tvwMain_AfterExpand</link> (
+object sender, TreeViewEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71">tvwMain_AfterSelect</link> (
+object sender, TreeViewEventArgs e)<para><emphasis>&lt;summary&gt; Updates path textbox after selectionchange &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014">tvwMain_DoubleClick</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Event for collapse/expand
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f">btnRefresh_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928">btnGo_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+The event handler for when the actual button is clicked.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783">btnHome_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de">btnNext_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075">btnBack_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6">tvwMain_MouseUp</link> (
+object sender, MouseEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20">btnUp_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6">btnAdd_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1aefb8598c94c590899ffd0a511a2626cb">AddFolderNode</link> (
+string name, string path)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99">mnuShortcut_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa">txtPath_KeyUp</link> (
+object sender, KeyEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1aabf31272dc5d8c16673031fddd736ce5">btnInfo_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0">UpdateListAddCurrent</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b">UpdateListGoBack</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee">UpdateListGoFwd</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01">UpdateList</link> (
+string f)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt; 
+Required method for Designer support - do not modify 
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064">ExploreTreeNode</link> (
+TreeNode n, bool isInitial)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73">GetDirectories</link> (
+TreeNode node, bool isInitial)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classWindowsExplorer_1_1ExplorerTree_1a8bc10da47366ba122f22de87c813adce">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt; 
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Summary description for <link linkend="classWindowsExplorer_1_1ExplorerTree">ExplorerTree</link>. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 25 of file ExplorerTree.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExplorerTree.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a0ec38e7b2baa52bd055f1c1eb115125b">
+                <title>WindowsExplorer.ExplorerTree.ExplorerTree ()</title> <emphasis>&lt;summary&gt; Explorer-Like TreeView control. &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28">
+                <title>void WindowsExplorer.ExplorerTree.RefreshControlUi ()</title> <emphasis>&lt;summary&gt;
+Refresh the Control itself (toolbar, etc) (public)
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b">
+                <title>void WindowsExplorer.ExplorerTree.InitialPopulate ()</title> <emphasis>&lt;summary&gt;
+Initially Populate the Treeview (public)
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6">
+                <title>void WindowsExplorer.ExplorerTree.SelectRootNode ()</title> <emphasis>&lt;summary&gt;
+Select and scroll to the topmost node (Desktop), after it has been initialized.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83">
+                <title>void WindowsExplorer.ExplorerTree.SetCurrentPath (string strPath)</title> <emphasis>&lt;summary&gt;
+Set the path in the textbox, and fires the path changed event... Call BrowseTo() afterwards to go to it.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617">
+                <title>void WindowsExplorer.ExplorerTree.RefreshFolders ()</title> <emphasis>&lt;summary&gt;
+Refresh Button - Re-Initialize the TreeView from the beginning (Desktop).
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb">
+                <title>void WindowsExplorer.ExplorerTree.BrowseTo ()</title> <emphasis>&lt;summary&gt;
+Navigate the treeview to the path in the textbox. Must be called manually when CurrentPath changes.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247">
+                <title>delegate void WindowsExplorer.ExplorerTree.PathChangedEventHandler (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3">
+                <title>void WindowsExplorer.ExplorerTree.ExplorerTree_Load (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c">
+                <title>void WindowsExplorer.ExplorerTree.txtPath_TextChanged (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Fires after every character is typed, or an item is selected.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f">
+                <title>void WindowsExplorer.ExplorerTree.PopulateMyComputer ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df">
+                <title>void WindowsExplorer.ExplorerTree.tvwMain_AfterExpand (object sender, TreeViewEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71">
+                <title>void WindowsExplorer.ExplorerTree.tvwMain_AfterSelect (object sender, TreeViewEventArgs e)</title> <emphasis>&lt;summary&gt; Updates path textbox after selectionchange &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014">
+                <title>void WindowsExplorer.ExplorerTree.tvwMain_DoubleClick (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Event for collapse/expand
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f">
+                <title>void WindowsExplorer.ExplorerTree.btnRefresh_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928">
+                <title>void WindowsExplorer.ExplorerTree.btnGo_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+The event handler for when the actual button is clicked.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783">
+                <title>void WindowsExplorer.ExplorerTree.btnHome_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de">
+                <title>void WindowsExplorer.ExplorerTree.btnNext_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075">
+                <title>void WindowsExplorer.ExplorerTree.btnBack_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6">
+                <title>void WindowsExplorer.ExplorerTree.tvwMain_MouseUp (object sender, MouseEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20">
+                <title>void WindowsExplorer.ExplorerTree.btnUp_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6">
+                <title>void WindowsExplorer.ExplorerTree.btnAdd_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1aefb8598c94c590899ffd0a511a2626cb">
+                <title>void WindowsExplorer.ExplorerTree.AddFolderNode (string name, string path)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99">
+                <title>void WindowsExplorer.ExplorerTree.mnuShortcut_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa">
+                <title>void WindowsExplorer.ExplorerTree.txtPath_KeyUp (object sender, KeyEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1aabf31272dc5d8c16673031fddd736ce5">
+                <title>void WindowsExplorer.ExplorerTree.btnInfo_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0">
+                <title>void WindowsExplorer.ExplorerTree.UpdateListAddCurrent ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b">
+                <title>void WindowsExplorer.ExplorerTree.UpdateListGoBack ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee">
+                <title>void WindowsExplorer.ExplorerTree.UpdateListGoFwd ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01">
+                <title>void WindowsExplorer.ExplorerTree.UpdateList (string f)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e">
+                <title>void WindowsExplorer.ExplorerTree.InitializeComponent ()</title> <emphasis>&lt;summary&gt; 
+Required method for Designer support - do not modify 
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064">
+                <title>static void WindowsExplorer.ExplorerTree.ExploreTreeNode (TreeNode n, bool isInitial=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73">
+                <title>static void WindowsExplorer.ExplorerTree.GetDirectories (TreeNode node, bool isInitial=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ExplorerTree_1a8bc10da47366ba122f22de87c813adce">
+                <title>override void WindowsExplorer.ExplorerTree.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt; 
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

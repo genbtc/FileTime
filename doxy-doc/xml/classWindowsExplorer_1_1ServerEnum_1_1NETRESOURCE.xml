@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE" kind="class" language="C#" prot="private">
+    <compoundname>WindowsExplorer::ServerEnum::NETRESOURCE</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1af1a0de89fc04bc42c661aecbe2d2ca56" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca" kindref="member">ResourceScope</ref></type>
+        <definition>ResourceScope WindowsExplorer.ServerEnum.NETRESOURCE.dwScope</definition>
+        <argsstring></argsstring>
+        <name>dwScope</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="996" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a3438ebf5c3591fdb55c30f7ce59fc952" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f" kindref="member">ResourceType</ref></type>
+        <definition>ResourceType WindowsExplorer.ServerEnum.NETRESOURCE.dwType</definition>
+        <argsstring></argsstring>
+        <name>dwType</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="997" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1ad55b7dd1a6fbca400761067033a47129" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d" kindref="member">ResourceDisplayType</ref></type>
+        <definition>ResourceDisplayType WindowsExplorer.ServerEnum.NETRESOURCE.dwDisplayType</definition>
+        <argsstring></argsstring>
+        <name>dwDisplayType</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="998" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="998" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c" compoundref="ExplorerTree_8cs" startline="922" endline="985">WindowsExplorer.ServerEnum.EnumerateServers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aa9c32f9d36a3d103e5c0534aafe18313" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7" kindref="member">ResourceUsage</ref></type>
+        <definition>ResourceUsage WindowsExplorer.ServerEnum.NETRESOURCE.dwUsage</definition>
+        <argsstring></argsstring>
+        <name>dwUsage</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="999" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="999" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c" compoundref="ExplorerTree_8cs" startline="922" endline="985">WindowsExplorer.ServerEnum.EnumerateServers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a1d934eea3aca96b97fa5cc046a8b9f85" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string WindowsExplorer.ServerEnum.NETRESOURCE.lpLocalName</definition>
+        <argsstring></argsstring>
+        <name>lpLocalName</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="1000" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="1000" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aeb8cecf8469107d8ff551cd20cb788e5" prot="public" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string WindowsExplorer.ServerEnum.NETRESOURCE.lpRemoteName</definition>
+        <argsstring></argsstring>
+        <name>lpRemoteName</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="1001" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="1001" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c" compoundref="ExplorerTree_8cs" startline="922" endline="985">WindowsExplorer.ServerEnum.EnumerateServers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a06aa55b16eed9a23e811c9effc2fb7ce" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string WindowsExplorer.ServerEnum.NETRESOURCE.lpComment</definition>
+        <argsstring></argsstring>
+        <name>lpComment</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="1002" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="1002" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a12b2c2b2f762342a1bba119ed101d185" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string WindowsExplorer.ServerEnum.NETRESOURCE.lpProvider</definition>
+        <argsstring></argsstring>
+        <name>lpProvider</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="1003" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="1003" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="WindowsExplorer/ExplorerTree.cs" line="995" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="994" bodyend="1004"/>
+    <listofallmembers>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1ad55b7dd1a6fbca400761067033a47129" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>dwDisplayType</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1af1a0de89fc04bc42c661aecbe2d2ca56" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>dwScope</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a3438ebf5c3591fdb55c30f7ce59fc952" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>dwType</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aa9c32f9d36a3d103e5c0534aafe18313" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>dwUsage</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a06aa55b16eed9a23e811c9effc2fb7ce" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>lpComment</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a1d934eea3aca96b97fa5cc046a8b9f85" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>lpLocalName</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1a12b2c2b2f762342a1bba119ed101d185" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>lpProvider</name></member>
+      <member refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE_1aeb8cecf8469107d8ff551cd20cb788e5" prot="public" virt="non-virtual"><scope>WindowsExplorer::ServerEnum::NETRESOURCE</scope><name>lpRemoteName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

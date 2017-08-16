@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Forms::Form_ChooseDate</compoundname>
+    <basecompoundref refid="classForm" prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ade240b66da26463b5558c542e345fa3c" prot="package" static="no" mutable="no">
+        <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
+        <definition>NameDateObj genBTC.FileTime.Forms.Form_ChooseDate.Datechosen</definition>
+        <argsstring></argsstring>
+        <name>Datechosen</name>
+        <initializer>= new <ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref>()</initializer>
+        <briefdescription>
+<para>the date object that will be accessed by the other form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="10" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a24b5b54e0f5f5153195c871a60f70258" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer genBTC.FileTime.Forms.Form_ChooseDate.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="10" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a8ec29e8607cd5f00bc4beda999668625" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_CreatedDate</definition>
+        <argsstring></argsstring>
+        <name>dateTimePicker_CreatedDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="209" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a4161e89cc8fe06dd6e76f91d5b3f5a78" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_CreatedTime</definition>
+        <argsstring></argsstring>
+        <name>dateTimePicker_CreatedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="210" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a880e4ee5f516dc00b7ec27971151e5c5" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_ModifiedTime</definition>
+        <argsstring></argsstring>
+        <name>dateTimePicker_ModifiedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="211" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a42d34c2d925a01f2d6b817998a5f8792" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_ModifiedDate</definition>
+        <argsstring></argsstring>
+        <name>dateTimePicker_ModifiedDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="212" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a8288d23e93e12e5766ce477b5f6dc415" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_AccessedTime</definition>
+        <argsstring></argsstring>
+        <name>dateTimePicker_AccessedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="213" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a77648885aded496f9c4a0693fe437dd5" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_AccessedDate</definition>
+        <argsstring></argsstring>
+        <name>dateTimePicker_AccessedDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="214" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1adf68e4292f04c4673fc52c912df50f5a" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button genBTC.FileTime.Forms.Form_ChooseDate.button1_OK</definition>
+        <argsstring></argsstring>
+        <name>button1_OK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="215" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a84a97c11386de5e496a3b6bbcbd697d2" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button genBTC.FileTime.Forms.Form_ChooseDate.button2_Cancel</definition>
+        <argsstring></argsstring>
+        <name>button2_Cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="216" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a08ee14bcaea5c033a817912e48a67fb4" prot="private" static="no" mutable="no">
+        <type>CheckBox</type>
+        <definition>CheckBox genBTC.FileTime.Forms.Form_ChooseDate.checkBox3_Accessed</definition>
+        <argsstring></argsstring>
+        <name>checkBox3_Accessed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="217" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab6a7276db2796f221a4357b86b22798a" prot="private" static="no" mutable="no">
+        <type>CheckBox</type>
+        <definition>CheckBox genBTC.FileTime.Forms.Form_ChooseDate.checkBox2_Modified</definition>
+        <argsstring></argsstring>
+        <name>checkBox2_Modified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="218" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a7ea48e70c86668fa33ad4cf25c35f2e7" prot="private" static="no" mutable="no">
+        <type>CheckBox</type>
+        <definition>CheckBox genBTC.FileTime.Forms.Form_ChooseDate.checkBox1_Created</definition>
+        <argsstring></argsstring>
+        <name>checkBox1_Created</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="219" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a78d33b155b4d15a80ec6103a36c1d197" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Forms.Form_ChooseDate.Form_ChooseDate</definition>
+        <argsstring>(ListViewItem theitem)</argsstring>
+        <name>Form_ChooseDate</name>
+        <param>
+          <type>ListViewItem</type>
+          <declname>theitem</declname>
+        </param>
+        <briefdescription>
+<para>a small form, used only for choosing a date. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="13" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="13" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a3a5d7504958999a750e931155f81e2ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.PopulateWith</definition>
+        <argsstring>(ListViewItem theitem)</argsstring>
+        <name>PopulateWith</name>
+        <param>
+          <type>ListViewItem</type>
+          <declname>theitem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="19" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="19" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1a86fac6a14be6cf70353db0d1104e6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.button1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="38" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="38" bodyend="64"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" compoundref="NameDateObj_8cs" startline="56">genBTC.FileTime.Models.NameDateObj.Accessed</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" compoundref="NameDateObj_8cs" startline="42">genBTC.FileTime.Models.NameDateObj.Created</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" compoundref="NameDateObj_8cs" startline="49">genBTC.FileTime.Models.NameDateObj.Modified</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a639b747ee92f49e70ec776822224e3cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.button2_Cancel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button2_Cancel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="66" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1af821fc4b9938682cfe1372f47f5eefa2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.checkBox1_Created_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>checkBox1_Created_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="72" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1ae42bc7d8d5732b6eb54e605849397c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.checkBox2_Modified_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>checkBox2_Modified_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="78" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a310833d1136385038da2f5268f07a826" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.checkBox3_Accessed_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>checkBox3_Accessed_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="84" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ae6814664c01a25c2651318693f3c1e6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_MouseWheel</definition>
+        <argsstring>(object sender, MouseEventArgs e)</argsstring>
+        <name>dateTimePicker_MouseWheel</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.cs" line="90" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a14f73a6edaa3fc3e6e2508b977b1c66d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_ChooseDate.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="31" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="31" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab9a5bbef3b5a52f219f91ecce40de00e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.Forms.Form_ChooseDate.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_ChooseDate.Designer.cs" line="16" column="1" bodyfile="Forms/Form_ChooseDate.Designer.cs" bodystart="16" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="44">
+        <label>genBTC.FileTime.Forms.Form_ChooseDate</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="46">
+        <label>genBTC.FileTime.Forms.Form_ChooseDate</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+    </collaborationgraph>
+    <location file="Forms/Form_ChooseDate.cs" line="8" column="1" bodyfile="Forms/Form_ChooseDate.cs" bodystart="7" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1a86fac6a14be6cf70353db0d1104e6c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>button1_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1adf68e4292f04c4673fc52c912df50f5a" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>button1_OK</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a84a97c11386de5e496a3b6bbcbd697d2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>button2_Cancel</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a639b747ee92f49e70ec776822224e3cf" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>button2_Cancel_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a7ea48e70c86668fa33ad4cf25c35f2e7" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>checkBox1_Created</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1af821fc4b9938682cfe1372f47f5eefa2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>checkBox1_Created_CheckedChanged</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab6a7276db2796f221a4357b86b22798a" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>checkBox2_Modified</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1ae42bc7d8d5732b6eb54e605849397c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>checkBox2_Modified_CheckedChanged</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a08ee14bcaea5c033a817912e48a67fb4" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>checkBox3_Accessed</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a310833d1136385038da2f5268f07a826" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>checkBox3_Accessed_CheckedChanged</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a24b5b54e0f5f5153195c871a60f70258" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>components</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ade240b66da26463b5558c542e345fa3c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>Datechosen</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a77648885aded496f9c4a0693fe437dd5" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_AccessedDate</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a8288d23e93e12e5766ce477b5f6dc415" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_AccessedTime</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a8ec29e8607cd5f00bc4beda999668625" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_CreatedDate</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a4161e89cc8fe06dd6e76f91d5b3f5a78" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_CreatedTime</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a42d34c2d925a01f2d6b817998a5f8792" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_ModifiedDate</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a880e4ee5f516dc00b7ec27971151e5c5" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_ModifiedTime</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ae6814664c01a25c2651318693f3c1e6c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>dateTimePicker_MouseWheel</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab9a5bbef3b5a52f219f91ecce40de00e" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>Dispose</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a78d33b155b4d15a80ec6103a36c1d197" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>Form_ChooseDate</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a14f73a6edaa3fc3e6e2508b977b1c66d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>InitializeComponent</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a3a5d7504958999a750e931155f81e2ba" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_ChooseDate</scope><name>PopulateWith</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

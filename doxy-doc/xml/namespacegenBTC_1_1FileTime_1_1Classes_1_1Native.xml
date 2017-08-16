@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespacegenBTC_1_1FileTime_1_1Classes_1_1Native" kind="namespace" language="C#">
+    <compoundname>genBTC::FileTime::Classes::Native</compoundname>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon" prot="package">genBTC::FileTime::Classes::Native::NativeExtractIcon</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll" prot="package">genBTC::FileTime::Classes::Native::NativeScroll</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect" prot="package">genBTC::FileTime::Classes::Native::NativeSelect</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/Native/NativeExtractIcon.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classWindowsExplorer_1_1ExplorerTree" kind="class" language="C#" prot="public">
+    <compoundname>WindowsExplorer::ExplorerTree</compoundname>
+    <basecompoundref refid="classUserControl" prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a79fb231d1d279a3b1db95ebc2b28a10f" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string WindowsExplorer.ExplorerTree.Seperator</definition>
+        <argsstring></argsstring>
+        <name>Seperator</name>
+        <initializer>= Path.DirectorySeparatorChar.ToString()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="26" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ad200b16840998a34bebb2955472ca97a" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string WindowsExplorer.ExplorerTree.Desktop</definition>
+        <argsstring></argsstring>
+        <name>Desktop</name>
+        <initializer>= Environment.GetFolderPath(Environment.SpecialFolder.Desktop)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="27" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a65df27bbe331aafbc06cfbe76ac2fe0c" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string WindowsExplorer.ExplorerTree.MyDocuments</definition>
+        <argsstring></argsstring>
+        <name>MyDocuments</name>
+        <initializer>= Environment.GetFolderPath(Environment.SpecialFolder.Personal)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="28" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1af529a357a3253fc338a87e7515c84a14" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string WindowsExplorer.ExplorerTree.Favorites</definition>
+        <argsstring></argsstring>
+        <name>Favorites</name>
+        <initializer>= Environment.GetFolderPath(Environment.SpecialFolder.Favorites)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="29" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a8c280bd0695bc6171262f38935cb801a" prot="private" static="no" mutable="no">
+        <type>TreeNode</type>
+        <definition>TreeNode WindowsExplorer.ExplorerTree.nodeEntireNetwork</definition>
+        <argsstring></argsstring>
+        <name>nodeEntireNetwork</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="30" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ac9a453542ad60069c96ebf40ddd21885" prot="private" static="no" mutable="no">
+        <type>TreeNode</type>
+        <definition>TreeNode WindowsExplorer.ExplorerTree.nodeMyComputer</definition>
+        <argsstring></argsstring>
+        <name>nodeMyComputer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="31" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a828cbf491ed809db890eece683452e42" prot="private" static="no" mutable="no">
+        <type>TreeNode</type>
+        <definition>TreeNode WindowsExplorer.ExplorerTree.nodeMyDocuments</definition>
+        <argsstring></argsstring>
+        <name>nodeMyDocuments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="32" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ab16ce04335e8522ac51dc7fbab01b633" prot="private" static="no" mutable="no">
+        <type>TreeNode</type>
+        <definition>TreeNode WindowsExplorer.ExplorerTree.rootnodeDesktop</definition>
+        <argsstring></argsstring>
+        <name>rootnodeDesktop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="33" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6" compoundref="ExplorerTree_8cs" startline="254" endline="258">WindowsExplorer.ExplorerTree.SelectRootNode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a0a84e3dc7e5c6f0f6b84ea2946b4aec1" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer WindowsExplorer.ExplorerTree.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="22" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a8bc10da47366ba122f22de87c813adce" compoundref="ExplorerTree_8Designer_8cs" startline="63" endline="73">WindowsExplorer.ExplorerTree.Dispose</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ab702be19ebb01d963eb3cbfa8ffcb14d" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnAdd</definition>
+        <argsstring></argsstring>
+        <name>btnAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="23" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ab2c3d1533793277311f70f5254e62725" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnGo</definition>
+        <argsstring></argsstring>
+        <name>btnGo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="24" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a5b32e2d13b919b65d63141735227159b" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnRefresh</definition>
+        <argsstring></argsstring>
+        <name>btnRefresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="25" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1adbb7cc61ac37719cec8fe0286cf2be13" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnHome</definition>
+        <argsstring></argsstring>
+        <name>btnHome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="26" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a52745ed52deed309da92e40a5a7b5da7" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnBack</definition>
+        <argsstring></argsstring>
+        <name>btnBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="27" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ae493ccc8ae1cee3dc48f1e7f06e81ab3" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnNext</definition>
+        <argsstring></argsstring>
+        <name>btnNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="28" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ae973d0d220c6668bc1c54a64c2eaa3a5" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnUp</definition>
+        <argsstring></argsstring>
+        <name>btnUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="29" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a4f3bdf708c6594b05be32678b1182d44" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button WindowsExplorer.ExplorerTree.btnInfo</definition>
+        <argsstring></argsstring>
+        <name>btnInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="30" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ab5fd00d735341fc294f653c420554f76" prot="private" static="no" mutable="no">
+        <type>ToolTip</type>
+        <definition>ToolTip WindowsExplorer.ExplorerTree.toolTip1</definition>
+        <argsstring></argsstring>
+        <name>toolTip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="31" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" prot="private" static="no" mutable="no">
+        <type>ListView</type>
+        <definition>ListView WindowsExplorer.ExplorerTree.listView1</definition>
+        <argsstring></argsstring>
+        <name>listView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="32" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" compoundref="ExplorerTree_8cs" startline="497" endline="503">WindowsExplorer.ExplorerTree.RefreshFolders</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" compoundref="ExplorerTree_8cs" startline="809" endline="830">WindowsExplorer.ExplorerTree.UpdateList</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0" compoundref="ExplorerTree_8cs" startline="756" endline="768">WindowsExplorer.ExplorerTree.UpdateListAddCurrent</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b" compoundref="ExplorerTree_8cs" startline="770" endline="787">WindowsExplorer.ExplorerTree.UpdateListGoBack</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee" compoundref="ExplorerTree_8cs" startline="789" endline="807">WindowsExplorer.ExplorerTree.UpdateListGoFwd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1aac0b24bd255098fb76b0d7425edb0d8e" prot="private" static="no" mutable="no">
+        <type>ColumnHeader</type>
+        <definition>ColumnHeader WindowsExplorer.ExplorerTree.column1_Path</definition>
+        <argsstring></argsstring>
+        <name>column1_Path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="33" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ada1f093d8d790de5f6f15b32587cc15c" prot="private" static="no" mutable="no">
+        <type>ColumnHeader</type>
+        <definition>ColumnHeader WindowsExplorer.ExplorerTree.column2_Status</definition>
+        <argsstring></argsstring>
+        <name>column2_Status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="34" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ab7630bd902d16891ab78612c1630eadf" prot="private" static="no" mutable="no">
+        <type>ImageList</type>
+        <definition>ImageList WindowsExplorer.ExplorerTree.imageList1</definition>
+        <argsstring></argsstring>
+        <name>imageList1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="35" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a8ded2ab1c3974d33abe5c2576b41284e" prot="private" static="no" mutable="no">
+        <type>ContextMenu</type>
+        <definition>ContextMenu WindowsExplorer.ExplorerTree.cMShortcut</definition>
+        <argsstring></argsstring>
+        <name>cMShortcut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="36" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" compoundref="ExplorerTree_8cs" startline="659" endline="665">WindowsExplorer.ExplorerTree.tvwMain_MouseUp</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a5a8402c65ee96c371673b93c19283998" prot="private" static="no" mutable="no">
+        <type>MenuItem</type>
+        <definition>MenuItem WindowsExplorer.ExplorerTree.mnuShortcut</definition>
+        <argsstring></argsstring>
+        <name>mnuShortcut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="37" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox WindowsExplorer.ExplorerTree.txtPath</definition>
+        <argsstring></argsstring>
+        <name>txtPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="38" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6" compoundref="ExplorerTree_8cs" startline="684" endline="700">WindowsExplorer.ExplorerTree.btnAdd_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" compoundref="ExplorerTree_8cs" startline="648" endline="657">WindowsExplorer.ExplorerTree.btnBack_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" compoundref="ExplorerTree_8cs" startline="637" endline="646">WindowsExplorer.ExplorerTree.btnNext_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" compoundref="ExplorerTree_8cs" startline="667" endline="682">WindowsExplorer.ExplorerTree.btnUp_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" compoundref="ExplorerTree_8cs" startline="263" endline="268">WindowsExplorer.ExplorerTree.SetCurrentPath</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71" compoundref="ExplorerTree_8cs" startline="473" endline="476">WindowsExplorer.ExplorerTree.tvwMain_AfterSelect</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" compoundref="ExplorerTree_8cs" startline="659" endline="665">WindowsExplorer.ExplorerTree.tvwMain_MouseUp</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa" compoundref="ExplorerTree_8cs" startline="743" endline="750">WindowsExplorer.ExplorerTree.txtPath_KeyUp</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" compoundref="ExplorerTree_8cs" startline="273" endline="280">WindowsExplorer.ExplorerTree.txtPath_TextChanged</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b" compoundref="ExplorerTree_8cs" startline="770" endline="787">WindowsExplorer.ExplorerTree.UpdateListGoBack</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee" compoundref="ExplorerTree_8cs" startline="789" endline="807">WindowsExplorer.ExplorerTree.UpdateListGoFwd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1adc6845b677867a0f4bc12548ca1e30b7" prot="private" static="no" mutable="no">
+        <type>GroupBox</type>
+        <definition>GroupBox WindowsExplorer.ExplorerTree.grptoolbar</definition>
+        <argsstring></argsstring>
+        <name>grptoolbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="39" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" prot="private" static="no" mutable="no">
+        <type>TreeView</type>
+        <definition>TreeView WindowsExplorer.ExplorerTree.treeview1</definition>
+        <argsstring></argsstring>
+        <name>treeview1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="40" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99" compoundref="ExplorerTree_8cs" startline="737" endline="741">WindowsExplorer.ExplorerTree.mnuShortcut_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" compoundref="ExplorerTree_8cs" startline="497" endline="503">WindowsExplorer.ExplorerTree.RefreshFolders</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6" compoundref="ExplorerTree_8cs" startline="254" endline="258">WindowsExplorer.ExplorerTree.SelectRootNode</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014" compoundref="ExplorerTree_8cs" startline="481" endline="492">WindowsExplorer.ExplorerTree.tvwMain_DoubleClick</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" compoundref="ExplorerTree_8cs" startline="659" endline="665">WindowsExplorer.ExplorerTree.tvwMain_MouseUp</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classWindowsExplorer_1_1ExplorerTree_1a67dbc07ba91ff2e9c636a688207bfc4d" prot="private" static="no" mutable="no">
+        <type><ref refid="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247" kindref="member">PathChangedEventHandler</ref></type>
+        <definition>PathChangedEventHandler WindowsExplorer.ExplorerTree.PathChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>PathChangedEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="43" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" compoundref="ExplorerTree_8cs" startline="273" endline="280">WindowsExplorer.ExplorerTree.txtPath_TextChanged</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1a92eac432414791c8a049a923ec49ddbf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string WindowsExplorer.ExplorerTree.CurrentPath</definition>
+        <argsstring></argsstring>
+        <name>CurrentPath</name>
+        <briefdescription>
+<para>Startup Path, what is shown in text box. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="50" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" compoundref="ExplorerTree_8cs" startline="263" endline="268">WindowsExplorer.ExplorerTree.SetCurrentPath</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" compoundref="ExplorerTree_8cs" startline="273" endline="280">WindowsExplorer.ExplorerTree.txtPath_TextChanged</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1ab43caf85bcc9c8fc655396382e787058" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool WindowsExplorer.ExplorerTree.GoFlag</definition>
+        <argsstring></argsstring>
+        <name>GoFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="52" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" compoundref="ExplorerTree_8cs" startline="648" endline="657">WindowsExplorer.ExplorerTree.btnBack_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" compoundref="ExplorerTree_8cs" startline="637" endline="646">WindowsExplorer.ExplorerTree.btnNext_Click</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1ad3f1f24f2398bbe9509a3020ca82f415" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool WindowsExplorer.ExplorerTree.ShowAddressbar</definition>
+        <argsstring></argsstring>
+        <name>ShowAddressbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="54" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1a709e248b1ac93cac4624196c8d5e5cfa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool WindowsExplorer.ExplorerTree.ShowMyDocuments</definition>
+        <argsstring></argsstring>
+        <name>ShowMyDocuments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="56" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1a61100b4e307e9258b7442dc1e8a07970" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool WindowsExplorer.ExplorerTree.ShowMyFavorites</definition>
+        <argsstring></argsstring>
+        <name>ShowMyFavorites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="58" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1a424194942f92439734e03b54e7d33f17" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool WindowsExplorer.ExplorerTree.ShowMyNetwork</definition>
+        <argsstring></argsstring>
+        <name>ShowMyNetwork</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="60" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1ade158d9043ab5028ab67486fba8d8f73" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool WindowsExplorer.ExplorerTree.ShowToolbar</definition>
+        <argsstring></argsstring>
+        <name>ShowToolbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="62" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classWindowsExplorer_1_1ExplorerTree_1ad7605ca27a0d911760ea5a67f9757400" prot="public" static="no" readable="no" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247" kindref="member">PathChangedEventHandler</ref></type>
+        <definition>PathChangedEventHandler WindowsExplorer.ExplorerTree.PathChanged</definition>
+        <argsstring></argsstring>
+        <name>PathChanged</name>
+        <briefdescription>
+<para>Event that fires when the textbox path changes(including but not limited to after a node selection), but only if the directory is valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="48" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a0ec38e7b2baa52bd055f1c1eb115125b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WindowsExplorer.ExplorerTree.ExplorerTree</definition>
+        <argsstring>()</argsstring>
+        <name>ExplorerTree</name>
+        <briefdescription>
+<para>Explorer-Like TreeView control. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="36" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="36" bodyend="46"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</references>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.RefreshControlUi</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshControlUi</name>
+        <briefdescription>
+<para>Refresh the Control itself (toolbar, etc) (public) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="73" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="73" bodyend="114"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab2c3d1533793277311f70f5254e62725" compoundref="ExplorerTree_8Designer_8cs" startline="24">WindowsExplorer.ExplorerTree.btnGo</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1adc6845b677867a0f4bc12548ca1e30b7" compoundref="ExplorerTree_8Designer_8cs" startline="39">WindowsExplorer.ExplorerTree.grptoolbar</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ad3f1f24f2398bbe9509a3020ca82f415" compoundref="ExplorerTree_8cs" startline="54">WindowsExplorer.ExplorerTree.ShowAddressbar</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ade158d9043ab5028ab67486fba8d8f73" compoundref="ExplorerTree_8cs" startline="62">WindowsExplorer.ExplorerTree.ShowToolbar</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f" compoundref="ExplorerTree_8cs" startline="505" endline="511">WindowsExplorer.ExplorerTree.btnRefresh_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3" compoundref="ExplorerTree_8cs" startline="64" endline="68">WindowsExplorer.ExplorerTree.ExplorerTree_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.InitialPopulate</definition>
+        <argsstring>()</argsstring>
+        <name>InitialPopulate</name>
+        <briefdescription>
+<para>Initially Populate the Treeview (public) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="119" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="119" bodyend="202"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ad200b16840998a34bebb2955472ca97a" compoundref="ExplorerTree_8cs" startline="27">WindowsExplorer.ExplorerTree.Desktop</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" compoundref="ExplorerTree_8cs" startline="204" endline="214">WindowsExplorer.ExplorerTree.ExploreTreeNode</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1af529a357a3253fc338a87e7515c84a14" compoundref="ExplorerTree_8cs" startline="29">WindowsExplorer.ExplorerTree.Favorites</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73" compoundref="ExplorerTree_8cs" startline="216" endline="249">WindowsExplorer.ExplorerTree.GetDirectories</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a65df27bbe331aafbc06cfbe76ac2fe0c" compoundref="ExplorerTree_8cs" startline="28">WindowsExplorer.ExplorerTree.MyDocuments</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a709e248b1ac93cac4624196c8d5e5cfa" compoundref="ExplorerTree_8cs" startline="56">WindowsExplorer.ExplorerTree.ShowMyDocuments</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a61100b4e307e9258b7442dc1e8a07970" compoundref="ExplorerTree_8cs" startline="58">WindowsExplorer.ExplorerTree.ShowMyFavorites</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a424194942f92439734e03b54e7d33f17" compoundref="ExplorerTree_8cs" startline="60">WindowsExplorer.ExplorerTree.ShowMyNetwork</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3" compoundref="ExplorerTree_8cs" startline="64" endline="68">WindowsExplorer.ExplorerTree.ExplorerTree_Load</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" compoundref="ExplorerTree_8cs" startline="497" endline="503">WindowsExplorer.ExplorerTree.RefreshFolders</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.SelectRootNode</definition>
+        <argsstring>()</argsstring>
+        <name>SelectRootNode</name>
+        <briefdescription>
+<para>Select and scroll to the topmost node (Desktop), after it has been initialized. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="254" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="254" bodyend="258"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab16ce04335e8522ac51dc7fbab01b633" compoundref="ExplorerTree_8cs" startline="33">WindowsExplorer.ExplorerTree.rootnodeDesktop</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.SetCurrentPath</definition>
+        <argsstring>(string strPath)</argsstring>
+        <name>SetCurrentPath</name>
+        <param>
+          <type>string</type>
+          <declname>strPath</declname>
+        </param>
+        <briefdescription>
+<para>Set the path in the textbox, and fires the path changed event... Call <ref refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" kindref="member">BrowseTo()</ref> afterwards to go to it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="263" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="263" bodyend="268"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a92eac432414791c8a049a923ec49ddbf" compoundref="ExplorerTree_8cs" startline="50">WindowsExplorer.ExplorerTree.CurrentPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" compoundref="ExplorerTree_8cs" startline="630" endline="635">WindowsExplorer.ExplorerTree.btnHome_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" compoundref="ExplorerTree_8cs" startline="497" endline="503">WindowsExplorer.ExplorerTree.RefreshFolders</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.RefreshFolders</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshFolders</name>
+        <briefdescription>
+<para>Refresh Button - Re-Initialize the TreeView from the beginning (Desktop). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="497" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="497" bodyend="503"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" compoundref="ExplorerTree_8Designer_8cs" startline="32">WindowsExplorer.ExplorerTree.listView1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" compoundref="ExplorerTree_8cs" startline="263" endline="268">WindowsExplorer.ExplorerTree.SetCurrentPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f" compoundref="ExplorerTree_8cs" startline="505" endline="511">WindowsExplorer.ExplorerTree.btnRefresh_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.BrowseTo</definition>
+        <argsstring>()</argsstring>
+        <name>BrowseTo</name>
+        <briefdescription>
+<para>Navigate the treeview to the path in the textbox. Must be called manually when CurrentPath changes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="524" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="524" bodyend="628"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a8c280bd0695bc6171262f38935cb801a" compoundref="ExplorerTree_8cs" startline="30">WindowsExplorer.ExplorerTree.nodeEntireNetwork</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ac9a453542ad60069c96ebf40ddd21885" compoundref="ExplorerTree_8cs" startline="31">WindowsExplorer.ExplorerTree.nodeMyComputer</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a828cbf491ed809db890eece683452e42" compoundref="ExplorerTree_8cs" startline="32">WindowsExplorer.ExplorerTree.nodeMyDocuments</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f" compoundref="ExplorerTree_8cs" startline="282" endline="355">WindowsExplorer.ExplorerTree.PopulateMyComputer</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab16ce04335e8522ac51dc7fbab01b633" compoundref="ExplorerTree_8cs" startline="33">WindowsExplorer.ExplorerTree.rootnodeDesktop</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll_1aa1c190e5e4307d7cfebf701c8c9bf44b" compoundref="NativeScroll_8cs" startline="27" endline="46">genBTC.FileTime.Classes.Native.NativeScroll.ScrollH</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void WindowsExplorer.ExplorerTree.PathChangedEventHandler</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PathChangedEventHandler</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.ExplorerTree_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ExplorerTree_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="64" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="64" bodyend="68"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.txtPath_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtPath_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fires after every character is typed, or an item is selected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="273" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="273" bodyend="280"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a92eac432414791c8a049a923ec49ddbf" compoundref="ExplorerTree_8cs" startline="50">WindowsExplorer.ExplorerTree.CurrentPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a67dbc07ba91ff2e9c636a688207bfc4d" compoundref="ExplorerTree_8Designer_8cs" startline="43">WindowsExplorer.ExplorerTree.PathChangedEvent</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.PopulateMyComputer</definition>
+        <argsstring>()</argsstring>
+        <name>PopulateMyComputer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="282" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="282" bodyend="355"/>
+        <references refid="classWindowsExplorer_1_1Kernel32_1a7ab4d641c4c7114014a77c92c7d60c3f">WindowsExplorer.Kernel32.GetDriveType</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" compoundref="ExplorerTree_8cs" startline="630" endline="635">WindowsExplorer.ExplorerTree.btnHome_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df" compoundref="ExplorerTree_8cs" startline="357" endline="470">WindowsExplorer.ExplorerTree.tvwMain_AfterExpand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.tvwMain_AfterExpand</definition>
+        <argsstring>(object sender, TreeViewEventArgs e)</argsstring>
+        <name>tvwMain_AfterExpand</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>TreeViewEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="357" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="357" bodyend="470"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" compoundref="ExplorerTree_8cs" startline="204" endline="214">WindowsExplorer.ExplorerTree.ExploreTreeNode</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f" compoundref="ExplorerTree_8cs" startline="282" endline="355">WindowsExplorer.ExplorerTree.PopulateMyComputer</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.tvwMain_AfterSelect</definition>
+        <argsstring>(object sender, TreeViewEventArgs e)</argsstring>
+        <name>tvwMain_AfterSelect</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>TreeViewEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Updates path textbox after selectionchange </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="473" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="473" bodyend="476"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.tvwMain_DoubleClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>tvwMain_DoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event for collapse/expand </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="481" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="481" bodyend="492"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" compoundref="ExplorerTree_8cs" startline="204" endline="214">WindowsExplorer.ExplorerTree.ExploreTreeNode</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnRefresh_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRefresh_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="505" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="505" bodyend="511"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" compoundref="ExplorerTree_8cs" startline="73" endline="114">WindowsExplorer.ExplorerTree.RefreshControlUi</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" compoundref="ExplorerTree_8cs" startline="497" endline="503">WindowsExplorer.ExplorerTree.RefreshFolders</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnGo_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnGo_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>The event handler for when the actual button is clicked. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="516" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="516" bodyend="519"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" compoundref="ExplorerTree_8cs" startline="524" endline="628">WindowsExplorer.ExplorerTree.BrowseTo</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" compoundref="ExplorerTree_8cs" startline="648" endline="657">WindowsExplorer.ExplorerTree.btnBack_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" compoundref="ExplorerTree_8cs" startline="630" endline="635">WindowsExplorer.ExplorerTree.btnHome_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" compoundref="ExplorerTree_8cs" startline="637" endline="646">WindowsExplorer.ExplorerTree.btnNext_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" compoundref="ExplorerTree_8cs" startline="667" endline="682">WindowsExplorer.ExplorerTree.btnUp_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa" compoundref="ExplorerTree_8cs" startline="743" endline="750">WindowsExplorer.ExplorerTree.txtPath_KeyUp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnHome_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnHome_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="630" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="630" bodyend="635"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f" compoundref="ExplorerTree_8cs" startline="282" endline="355">WindowsExplorer.ExplorerTree.PopulateMyComputer</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" compoundref="ExplorerTree_8cs" startline="263" endline="268">WindowsExplorer.ExplorerTree.SetCurrentPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnNext_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNext_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="637" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="637" bodyend="646"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab43caf85bcc9c8fc655396382e787058" compoundref="ExplorerTree_8cs" startline="52">WindowsExplorer.ExplorerTree.GoFlag</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee" compoundref="ExplorerTree_8cs" startline="789" endline="807">WindowsExplorer.ExplorerTree.UpdateListGoFwd</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnBack_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnBack_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="648" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="648" bodyend="657"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab43caf85bcc9c8fc655396382e787058" compoundref="ExplorerTree_8cs" startline="52">WindowsExplorer.ExplorerTree.GoFlag</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b" compoundref="ExplorerTree_8cs" startline="770" endline="787">WindowsExplorer.ExplorerTree.UpdateListGoBack</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.tvwMain_MouseUp</definition>
+        <argsstring>(object sender, MouseEventArgs e)</argsstring>
+        <name>tvwMain_MouseUp</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="659" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="659" bodyend="665"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a8ded2ab1c3974d33abe5c2576b41284e" compoundref="ExplorerTree_8Designer_8cs" startline="36">WindowsExplorer.ExplorerTree.cMShortcut</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" compoundref="ExplorerTree_8cs" startline="809" endline="830">WindowsExplorer.ExplorerTree.UpdateList</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnUp_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnUp_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="667" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="667" bodyend="682"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" compoundref="ExplorerTree_8cs" startline="809" endline="830">WindowsExplorer.ExplorerTree.UpdateList</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnAdd_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAdd_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="684" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="684" bodyend="700"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefb8598c94c590899ffd0a511a2626cb" compoundref="ExplorerTree_8cs" startline="702" endline="735">WindowsExplorer.ExplorerTree.AddFolderNode</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1aefb8598c94c590899ffd0a511a2626cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.AddFolderNode</definition>
+        <argsstring>(string name, string path)</argsstring>
+        <name>AddFolderNode</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="702" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="702" bodyend="735"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6" compoundref="ExplorerTree_8cs" startline="684" endline="700">WindowsExplorer.ExplorerTree.btnAdd_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.mnuShortcut_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>mnuShortcut_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="737" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="737" bodyend="741"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" compoundref="ExplorerTree_8Designer_8cs" startline="40">WindowsExplorer.ExplorerTree.treeview1</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.txtPath_KeyUp</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>txtPath_KeyUp</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="743" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="743" bodyend="750"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1aabf31272dc5d8c16673031fddd736ce5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.btnInfo_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnInfo_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="752" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="752" bodyend="754"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" compoundref="ExplorerTree_8Designer_8cs" startline="79" endline="351">WindowsExplorer.ExplorerTree.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.UpdateListAddCurrent</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateListAddCurrent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="756" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="756" bodyend="768"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" compoundref="ExplorerTree_8Designer_8cs" startline="32">WindowsExplorer.ExplorerTree.listView1</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" compoundref="ExplorerTree_8cs" startline="809" endline="830">WindowsExplorer.ExplorerTree.UpdateList</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.UpdateListGoBack</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateListGoBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="770" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="770" bodyend="787"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" compoundref="ExplorerTree_8Designer_8cs" startline="32">WindowsExplorer.ExplorerTree.listView1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" compoundref="ExplorerTree_8cs" startline="648" endline="657">WindowsExplorer.ExplorerTree.btnBack_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.UpdateListGoFwd</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateListGoFwd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="789" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="789" bodyend="807"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" compoundref="ExplorerTree_8Designer_8cs" startline="32">WindowsExplorer.ExplorerTree.listView1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" compoundref="ExplorerTree_8Designer_8cs" startline="38">WindowsExplorer.ExplorerTree.txtPath</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" compoundref="ExplorerTree_8cs" startline="637" endline="646">WindowsExplorer.ExplorerTree.btnNext_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.UpdateList</definition>
+        <argsstring>(string f)</argsstring>
+        <name>UpdateList</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="809" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="809" bodyend="830"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" compoundref="ExplorerTree_8Designer_8cs" startline="32">WindowsExplorer.ExplorerTree.listView1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0" compoundref="ExplorerTree_8cs" startline="756" endline="768">WindowsExplorer.ExplorerTree.UpdateListAddCurrent</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" compoundref="ExplorerTree_8cs" startline="667" endline="682">WindowsExplorer.ExplorerTree.btnUp_Click</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" compoundref="ExplorerTree_8cs" startline="659" endline="665">WindowsExplorer.ExplorerTree.tvwMain_MouseUp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowsExplorer.ExplorerTree.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="79" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="79" bodyend="351"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6" compoundref="ExplorerTree_8cs" startline="684" endline="700">WindowsExplorer.ExplorerTree.btnAdd_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" compoundref="ExplorerTree_8cs" startline="648" endline="657">WindowsExplorer.ExplorerTree.btnBack_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" compoundref="ExplorerTree_8cs" startline="516" endline="519">WindowsExplorer.ExplorerTree.btnGo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" compoundref="ExplorerTree_8cs" startline="630" endline="635">WindowsExplorer.ExplorerTree.btnHome_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aabf31272dc5d8c16673031fddd736ce5" compoundref="ExplorerTree_8cs" startline="752" endline="754">WindowsExplorer.ExplorerTree.btnInfo_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" compoundref="ExplorerTree_8cs" startline="637" endline="646">WindowsExplorer.ExplorerTree.btnNext_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f" compoundref="ExplorerTree_8cs" startline="505" endline="511">WindowsExplorer.ExplorerTree.btnRefresh_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" compoundref="ExplorerTree_8cs" startline="667" endline="682">WindowsExplorer.ExplorerTree.btnUp_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a0a84e3dc7e5c6f0f6b84ea2946b4aec1" compoundref="ExplorerTree_8Designer_8cs" startline="22">WindowsExplorer.ExplorerTree.components</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3" compoundref="ExplorerTree_8cs" startline="64" endline="68">WindowsExplorer.ExplorerTree.ExplorerTree_Load</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab7630bd902d16891ab78612c1630eadf" compoundref="ExplorerTree_8Designer_8cs" startline="35">WindowsExplorer.ExplorerTree.imageList1</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99" compoundref="ExplorerTree_8cs" startline="737" endline="741">WindowsExplorer.ExplorerTree.mnuShortcut_Click</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df" compoundref="ExplorerTree_8cs" startline="357" endline="470">WindowsExplorer.ExplorerTree.tvwMain_AfterExpand</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71" compoundref="ExplorerTree_8cs" startline="473" endline="476">WindowsExplorer.ExplorerTree.tvwMain_AfterSelect</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014" compoundref="ExplorerTree_8cs" startline="481" endline="492">WindowsExplorer.ExplorerTree.tvwMain_DoubleClick</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" compoundref="ExplorerTree_8cs" startline="659" endline="665">WindowsExplorer.ExplorerTree.tvwMain_MouseUp</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa" compoundref="ExplorerTree_8cs" startline="743" endline="750">WindowsExplorer.ExplorerTree.txtPath_KeyUp</references>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" compoundref="ExplorerTree_8cs" startline="273" endline="280">WindowsExplorer.ExplorerTree.txtPath_TextChanged</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a0ec38e7b2baa52bd055f1c1eb115125b" compoundref="ExplorerTree_8cs" startline="36" endline="46">WindowsExplorer.ExplorerTree.ExplorerTree</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void WindowsExplorer.ExplorerTree.ExploreTreeNode</definition>
+        <argsstring>(TreeNode n, bool isInitial=false)</argsstring>
+        <name>ExploreTreeNode</name>
+        <param>
+          <type>TreeNode</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isInitial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="204" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="204" bodyend="214"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73" compoundref="ExplorerTree_8cs" startline="216" endline="249">WindowsExplorer.ExplorerTree.GetDirectories</references>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df" compoundref="ExplorerTree_8cs" startline="357" endline="470">WindowsExplorer.ExplorerTree.tvwMain_AfterExpand</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014" compoundref="ExplorerTree_8cs" startline="481" endline="492">WindowsExplorer.ExplorerTree.tvwMain_DoubleClick</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void WindowsExplorer.ExplorerTree.GetDirectories</definition>
+        <argsstring>(TreeNode node, bool isInitial=false)</argsstring>
+        <name>GetDirectories</name>
+        <param>
+          <type>TreeNode</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isInitial</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="216" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="216" bodyend="249"/>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" compoundref="ExplorerTree_8cs" startline="204" endline="214">WindowsExplorer.ExplorerTree.ExploreTreeNode</referencedby>
+        <referencedby refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" compoundref="ExplorerTree_8cs" startline="119" endline="202">WindowsExplorer.ExplorerTree.InitialPopulate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classWindowsExplorer_1_1ExplorerTree_1a8bc10da47366ba122f22de87c813adce" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void WindowsExplorer.ExplorerTree.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="63" column="1" bodyfile="WindowsExplorer/ExplorerTree.Designer.cs" bodystart="63" bodyend="73"/>
+        <references refid="classWindowsExplorer_1_1ExplorerTree_1a0a84e3dc7e5c6f0f6b84ea2946b4aec1" compoundref="ExplorerTree_8Designer_8cs" startline="22">WindowsExplorer.ExplorerTree.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Summary description for <ref refid="classWindowsExplorer_1_1ExplorerTree" kindref="compound">ExplorerTree</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="27">
+        <label>WindowsExplorer.ExplorerTree</label>
+        <link refid="classWindowsExplorer_1_1ExplorerTree"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>UserControl</label>
+        <link refid="classUserControl"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>WindowsExplorer.ExplorerTree</label>
+        <link refid="classWindowsExplorer_1_1ExplorerTree"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>UserControl</label>
+        <link refid="classUserControl"/>
+      </node>
+    </collaborationgraph>
+    <location file="WindowsExplorer/ExplorerTree.cs" line="25" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="24" bodyend="831"/>
+    <listofallmembers>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aefb8598c94c590899ffd0a511a2626cb" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>AddFolderNode</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ac5abf6963255f50ee77c90860c02b0eb" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>BrowseTo</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab702be19ebb01d963eb3cbfa8ffcb14d" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnAdd</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a9b7de11ed608fa02e018b98d38dcb7b6" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnAdd_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a52745ed52deed309da92e40a5a7b5da7" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnBack</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aca75391af667bd4b2062602d38ae1075" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnBack_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab2c3d1533793277311f70f5254e62725" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnGo</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a3e84e47720cf2fc073118cbefece1928" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnGo_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1adbb7cc61ac37719cec8fe0286cf2be13" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnHome</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ada952c382b8dc303d2b19ad450c3b783" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnHome_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a4f3bdf708c6594b05be32678b1182d44" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnInfo</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aabf31272dc5d8c16673031fddd736ce5" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnInfo_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ae493ccc8ae1cee3dc48f1e7f06e81ab3" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnNext</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a600db31b9ac7f02b22fb580bc72557de" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnNext_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a5b32e2d13b919b65d63141735227159b" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnRefresh</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a8d262d8bac14ea8b414054d07592c62f" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnRefresh_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ae973d0d220c6668bc1c54a64c2eaa3a5" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnUp</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a28f63818d9c541c279ae6c26fe0b1d20" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>btnUp_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a8ded2ab1c3974d33abe5c2576b41284e" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>cMShortcut</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aac0b24bd255098fb76b0d7425edb0d8e" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>column1_Path</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ada1f093d8d790de5f6f15b32587cc15c" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>column2_Status</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a0a84e3dc7e5c6f0f6b84ea2946b4aec1" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>components</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a92eac432414791c8a049a923ec49ddbf" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>CurrentPath</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ad200b16840998a34bebb2955472ca97a" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>Desktop</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a8bc10da47366ba122f22de87c813adce" prot="protected" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>Dispose</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a0ec38e7b2baa52bd055f1c1eb115125b" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ExplorerTree</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a1ebf6b0aa1e4967215c06d9f23d8b4c3" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ExplorerTree_Load</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ad2ec799a282838ed34e89015658a5064" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ExploreTreeNode</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1af529a357a3253fc338a87e7515c84a14" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>Favorites</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab1b4fd90e9a5de87285d6b9ad01d8c73" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>GetDirectories</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab43caf85bcc9c8fc655396382e787058" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>GoFlag</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1adc6845b677867a0f4bc12548ca1e30b7" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>grptoolbar</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab7630bd902d16891ab78612c1630eadf" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>imageList1</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1adae3e2ce1d5edc6c1e114f3a49f2748e" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>InitializeComponent</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a31fc24c75393c7dee970c7506f1edb5b" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>InitialPopulate</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1afb2730f69de14a4b6a847642743c3a3c" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>listView1</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a5a8402c65ee96c371673b93c19283998" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>mnuShortcut</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a55a01c9521a666660554d277b05f9f99" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>mnuShortcut_Click</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a65df27bbe331aafbc06cfbe76ac2fe0c" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>MyDocuments</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a8c280bd0695bc6171262f38935cb801a" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>nodeEntireNetwork</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ac9a453542ad60069c96ebf40ddd21885" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>nodeMyComputer</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a828cbf491ed809db890eece683452e42" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>nodeMyDocuments</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ad7605ca27a0d911760ea5a67f9757400" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>PathChanged</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a67dbc07ba91ff2e9c636a688207bfc4d" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>PathChangedEvent</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a2d3be98576123804e7acf04c54f10247" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>PathChangedEventHandler</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aba07f77055391e533ba7c2830b3ab34f" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>PopulateMyComputer</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aa1b7e614cd7fb3eec67406ba6e10ed28" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>RefreshControlUi</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ae62652a15a30e1937135ca0bde335617" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>RefreshFolders</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab16ce04335e8522ac51dc7fbab01b633" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>rootnodeDesktop</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1af31b9ad969f7b6e900896c311f31cff6" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>SelectRootNode</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a79fb231d1d279a3b1db95ebc2b28a10f" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>Seperator</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a4aaf202d7457d4f953b40a62848bea83" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>SetCurrentPath</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ad3f1f24f2398bbe9509a3020ca82f415" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ShowAddressbar</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a709e248b1ac93cac4624196c8d5e5cfa" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ShowMyDocuments</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a61100b4e307e9258b7442dc1e8a07970" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ShowMyFavorites</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a424194942f92439734e03b54e7d33f17" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ShowMyNetwork</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ade158d9043ab5028ab67486fba8d8f73" prot="public" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>ShowToolbar</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ab5fd00d735341fc294f653c420554f76" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>toolTip1</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aefc2b572efa6146cadfb226c0ce91b66" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>treeview1</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a4d3c0964ed850028e9403a5cadd741df" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>tvwMain_AfterExpand</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a0faaf5fdea6cbe56177c263e764f8a71" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>tvwMain_AfterSelect</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1aa20b36bd0613a1bbae15ef353f02b014" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>tvwMain_DoubleClick</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a7a0a9b98d59ae9e303bbc7a6d4c01ac6" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>tvwMain_MouseUp</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ace1cd424f1d07bd77ccb82ac626e7145" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>txtPath</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a98d908d062bdd5ede9a469c036a5b7aa" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>txtPath_KeyUp</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1ae46502caf665568af19625ad752cbd2c" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>txtPath_TextChanged</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a916fec330b472cbc7315cd59c08bce01" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>UpdateList</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a4e6af2c78a44d1560de59727c5593ea0" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>UpdateListAddCurrent</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1a638dadc7d77f617191b631ecf0a61f8b" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>UpdateListGoBack</name></member>
+      <member refid="classWindowsExplorer_1_1ExplorerTree_1afe63f4ef12c09c1fd19092f0867317ee" prot="private" virt="non-virtual"><scope>WindowsExplorer::ExplorerTree</scope><name>UpdateListGoFwd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

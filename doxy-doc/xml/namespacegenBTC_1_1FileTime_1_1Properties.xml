@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespacegenBTC_1_1FileTime_1_1Properties" kind="namespace" language="C#">
+    <compoundname>genBTC::FileTime::Properties</compoundname>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" prot="package">genBTC::FileTime::Properties::Settings</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Properties/Settings.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

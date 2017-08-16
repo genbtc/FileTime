@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classExtractIcon" kind="class" language="C#" prot="public">
+    <compoundname>ExtractIcon</compoundname>
+    <innerclass refid="structExtractIcon_1_1SHFILEINFO" prot="private">ExtractIcon::SHFILEINFO</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78" prot="private" static="no">
+        <name>SHGFI</name>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a817434295a673aed431435658b65d9a7" prot="public">
+          <name>Icon</name>
+          <initializer>= 0x000000100</initializer>
+          <briefdescription>
+<para>get icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a3b868ced6f60acf5ee565ac021d42941" prot="public">
+          <name>DisplayName</name>
+          <initializer>= 0x000000200</initializer>
+          <briefdescription>
+<para>get display name</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ae175f7206492c365397d33a0df9cc8d0" prot="public">
+          <name>TypeName</name>
+          <initializer>= 0x000000400</initializer>
+          <briefdescription>
+<para>get type name</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a287234a1ff35a314b5b6bc4e5828e745" prot="public">
+          <name>Attributes</name>
+          <initializer>= 0x000000800</initializer>
+          <briefdescription>
+<para>get attributes</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84e39f86e0843b752c3f58c1828e94df" prot="public">
+          <name>IconLocation</name>
+          <initializer>= 0x000001000</initializer>
+          <briefdescription>
+<para>get icon location</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78ab8a206aa8eb60627304475f67b9f375a" prot="public">
+          <name>ExeType</name>
+          <initializer>= 0x000002000</initializer>
+          <briefdescription>
+<para>return exe type</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a9b7da861f8f2e6c5f4b7caf079aa8bd6" prot="public">
+          <name>SysIconIndex</name>
+          <initializer>= 0x000004000</initializer>
+          <briefdescription>
+<para>get system icon index</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a887507c977779a51b9c3ecef7049f8e1" prot="public">
+          <name>LinkOverlay</name>
+          <initializer>= 0x000008000</initializer>
+          <briefdescription>
+<para>put a link overlay on icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a91b442d385b54e1418d81adc34871053" prot="public">
+          <name>Selected</name>
+          <initializer>= 0x000010000</initializer>
+          <briefdescription>
+<para>show icon in selected state</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78adcedfbbf9e366a750df8772bfbbe22b7" prot="public">
+          <name>Attr_Specified</name>
+          <initializer>= 0x000020000</initializer>
+          <briefdescription>
+<para>get only specified attributes</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a08f7728d14d36f52bd6d413d9c963e7c" prot="public">
+          <name>LargeIcon</name>
+          <initializer>= 0x000000000</initializer>
+          <briefdescription>
+<para>get large icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af10923216bc690081c9c9e2ce32d66ae" prot="public">
+          <name>SmallIcon</name>
+          <initializer>= 0x000000001</initializer>
+          <briefdescription>
+<para>get small icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78aa01037cba4230c2b8da0f03454ba002e" prot="public">
+          <name>OpenIcon</name>
+          <initializer>= 0x000000002</initializer>
+          <briefdescription>
+<para>get open icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a8afaa9e9ea20194a3ca276c263b94241" prot="public">
+          <name>ShellIconSize</name>
+          <initializer>= 0x000000004</initializer>
+          <briefdescription>
+<para>get shell size icon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a605534a578c2ea820de4a155e1ec542f" prot="public">
+          <name>PIDL</name>
+          <initializer>= 0x000000008</initializer>
+          <briefdescription>
+<para>pszPath is a pidl</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a973ca7fddbacaaa1810be24d088446c9" prot="public">
+          <name>UseFileAttributes</name>
+          <initializer>= 0x000000010</initializer>
+          <briefdescription>
+<para>use passed dwFileAttribute</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78af4fe4d5d06259cb6ab0fea9d18a7c304" prot="public">
+          <name>AddOverlays</name>
+          <initializer>= 0x000000020</initializer>
+          <briefdescription>
+<para>apply the appropriate overlays</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78a84aed79d022df97af71a911a474b89e7" prot="public">
+          <name>OverlayIndex</name>
+          <initializer>= 0x000000040</initializer>
+          <briefdescription>
+<para>Get the index of the overlay in the upper 8 bits of the iIcon</para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="51" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="49" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classExtractIcon_1a27d6eb39702bba19bdd2af80d8907a46" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ExtractIcon.MAX_PATH</definition>
+        <argsstring></argsstring>
+        <name>MAX_PATH</name>
+        <initializer>= 260</initializer>
+        <briefdescription>
+<para>Maximal Length of unmanaged Windows-Path-strings</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="21" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtractIcon_1aed0e8614e582da32929d6db01ea2fe34" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ExtractIcon.MAX_TYPE</definition>
+        <argsstring></argsstring>
+        <name>MAX_TYPE</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+<para>Maximal Length of unmanaged Typename</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="23" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classExtractIcon_1a81c000b4bd05021a0ac00b2154d42ffd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ExtractIcon.SHGetFileInfo</definition>
+        <argsstring>(string pszPath, int dwFileAttributes, out SHFILEINFO psfi, uint cbfileInfo, SHGFI uFlags)</argsstring>
+        <name>SHGetFileInfo</name>
+        <param>
+          <type>string</type>
+          <declname>pszPath</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dwFileAttributes</declname>
+        </param>
+        <param>
+          <type>out <ref refid="structExtractIcon_1_1SHFILEINFO" kindref="compound">SHFILEINFO</ref></type>
+          <declname>psfi</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>cbfileInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78" kindref="member">SHGFI</ref></type>
+          <declname>uFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="13" column="1"/>
+        <referencedby refid="classExtractIcon_1ad9ae4597b218182802d990e363b172e5" compoundref="ExtractIcon_8cs" startline="97" endline="116">GetIcon</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classExtractIcon_1ac568a2bbf178d24eaf0cd498172478c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExtractIcon.ExtractIcon</definition>
+        <argsstring>()</argsstring>
+        <name>ExtractIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="45" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classExtractIcon_1ad9ae4597b218182802d990e363b172e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Icon</type>
+        <definition>static Icon ExtractIcon.GetIcon</definition>
+        <argsstring>(string strPath, bool bSmall)</argsstring>
+        <name>GetIcon</name>
+        <param>
+          <type>string</type>
+          <declname>strPath</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSmall</declname>
+        </param>
+        <briefdescription>
+<para>Get the associated Icon for a file or application, this method always returns an icon. If the strPath is invalid or there is no idonc the default icon is returned </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>full path to the file</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSmall</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, the 16x16 icon is returned otherwise the 32x32</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExtractIcon.cs" line="97" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="97" bodyend="116"/>
+        <references refid="classExtractIcon_1a81c000b4bd05021a0ac00b2154d42ffd">SHGetFileInfo</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Summary description for <ref refid="classExtractIcon" kindref="compound">ExtractIcon</ref>.</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/ExtractIcon.cs" line="11" column="1" bodyfile="Classes/ExtractIcon.cs" bodystart="10" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classExtractIcon_1ac568a2bbf178d24eaf0cd498172478c3" prot="private" virt="non-virtual"><scope>ExtractIcon</scope><name>ExtractIcon</name></member>
+      <member refid="classExtractIcon_1ad9ae4597b218182802d990e363b172e5" prot="public" virt="non-virtual"><scope>ExtractIcon</scope><name>GetIcon</name></member>
+      <member refid="classExtractIcon_1a27d6eb39702bba19bdd2af80d8907a46" prot="private" virt="non-virtual"><scope>ExtractIcon</scope><name>MAX_PATH</name></member>
+      <member refid="classExtractIcon_1aed0e8614e582da32929d6db01ea2fe34" prot="private" virt="non-virtual"><scope>ExtractIcon</scope><name>MAX_TYPE</name></member>
+      <member refid="classExtractIcon_1a81c000b4bd05021a0ac00b2154d42ffd" prot="private" virt="non-virtual"><scope>ExtractIcon</scope><name>SHGetFileInfo</name></member>
+      <member refid="classExtractIcon_1aa6e65fa158bafe61bc14e380937eaf78" prot="private" virt="non-virtual"><scope>ExtractIcon</scope><name>SHGFI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

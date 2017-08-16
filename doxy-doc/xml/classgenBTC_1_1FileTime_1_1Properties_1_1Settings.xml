@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a353686760c46e04b3f273007e3dbf089" prot="private" static="yes" mutable="no">
+        <type><ref refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" kindref="compound">Settings</ref></type>
+        <definition>Settings genBTC.FileTime.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((<ref refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" kindref="compound">Settings</ref>)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new <ref refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" kindref="compound">Settings</ref>())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="18" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings" kindref="compound">Settings</ref></type>
+        <definition>Settings genBTC.FileTime.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="20" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a281c6a90053ba74e3fd34de00d771f37" compoundref="Form__Preferences_8cs" startline="26" endline="38">genBTC.FileTime.Forms.Form_Preferences.button1_Click</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aeac9777e8e2d82f4d532578e89ddecac" compoundref="Form__Preferences_8cs" startline="41" endline="45">genBTC.FileTime.Forms.Form_Preferences.button2_Cancel_Click</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" compoundref="Form__Main_8cs" startline="118" endline="132">genBTC.FileTime.Forms.Form_Main.Form_Main_Run</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="39" endline="45">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a55d317289f21e284204963254b401e3e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.ShowNoticesReadOnly</definition>
+        <argsstring></argsstring>
+        <name>ShowNoticesReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="29" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a7631f85d156658d00bc611fdeda098c8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.SkipSystem</definition>
+        <argsstring></argsstring>
+        <name>SkipSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="41" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a48703dc726b3afeeded4096df966dc6e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.SkipHidden</definition>
+        <argsstring></argsstring>
+        <name>SkipHidden</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="53" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5e754668094b1230292f559313b44cfb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.SkipReadOnly</definition>
+        <argsstring></argsstring>
+        <name>SkipReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="65" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a62296f8c2e00dddf7b9a5ab271486aa0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.ShowSystem</definition>
+        <argsstring></argsstring>
+        <name>ShowSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="77" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="39" endline="45">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a275699f890e2c790a9f988f456934385" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.ShowHidden</definition>
+        <argsstring></argsstring>
+        <name>ShowHidden</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="89" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="39" endline="45">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a90f04201b377ff6db5fdb769a0a46733" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.ShowReadOnly</definition>
+        <argsstring></argsstring>
+        <name>ShowReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="101" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="101" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="39" endline="45">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5cf92ee59075488246c22bfd07ed61aa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.useStartupDir</definition>
+        <argsstring></argsstring>
+        <name>useStartupDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="113" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="113" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" compoundref="Form__Main_8cs" startline="118" endline="132">genBTC.FileTime.Forms.Form_Main.Form_Main_Run</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1ab8d2bb6641d879fb83163c1c265056a9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Properties.Settings.StartupDir</definition>
+        <argsstring></argsstring>
+        <name>StartupDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="125" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="125" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" compoundref="Form__Main_8cs" startline="118" endline="132">genBTC.FileTime.Forms.Form_Main.Form_Main_Run</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a0d95413a8822702c44e33a79aa595b04" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.mode1addrootdir</definition>
+        <argsstring></argsstring>
+        <name>mode1addrootdir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="137" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="137" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a1b0d452a069c8e66e98b2d7e03fc5cd6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Properties.Settings.useRootDirAsContainer</definition>
+        <argsstring></argsstring>
+        <name>useRootDirAsContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Properties/Settings.Designer.cs" line="149" column="1" bodyfile="Properties/Settings.Designer.cs" bodystart="149" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="97">
+        <label>genBTC.FileTime.Properties.Settings</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings"/>
+        <childnode refid="97" relation="usage">
+          <edgelabel>defaultInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Properties/Settings.cs" line="9" column="1" bodyfile="Properties/Settings.cs" bodystart="8" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>Default</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a353686760c46e04b3f273007e3dbf089" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>defaultInstance</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a0d95413a8822702c44e33a79aa595b04" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>mode1addrootdir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a275699f890e2c790a9f988f456934385" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>ShowHidden</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a55d317289f21e284204963254b401e3e" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>ShowNoticesReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a90f04201b377ff6db5fdb769a0a46733" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>ShowReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a62296f8c2e00dddf7b9a5ab271486aa0" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>ShowSystem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a48703dc726b3afeeded4096df966dc6e" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>SkipHidden</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5e754668094b1230292f559313b44cfb" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>SkipReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a7631f85d156658d00bc611fdeda098c8" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>SkipSystem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1ab8d2bb6641d879fb83163c1c265056a9" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>StartupDir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a1b0d452a069c8e66e98b2d7e03fc5cd6" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>useRootDirAsContainer</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5cf92ee59075488246c22bfd07ed61aa" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Properties::Settings</scope><name>useStartupDir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

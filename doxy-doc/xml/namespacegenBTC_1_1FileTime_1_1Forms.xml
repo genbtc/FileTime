@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespacegenBTC_1_1FileTime_1_1Forms" kind="namespace" language="C#">
+    <compoundname>genBTC::FileTime::Forms</compoundname>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About" prot="public">genBTC::FileTime::Forms::Form_About</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate" prot="public">genBTC::FileTime::Forms::Form_ChooseDate</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm" prot="public">genBTC::FileTime::Forms::Form_Confirm</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main" prot="public">genBTC::FileTime::Forms::Form_Main</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences" prot="public">genBTC::FileTime::Forms::Form_Preferences</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Forms/Form_About.cs" line="18" column="1"/>
+  </compounddef>
+</doxygen>

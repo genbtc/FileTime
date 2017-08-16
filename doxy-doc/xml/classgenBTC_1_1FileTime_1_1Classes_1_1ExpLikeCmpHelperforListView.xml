@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</compoundname>
+    <basecompoundref refid="classIComparer" prot="public" virt="non-virtual">IComparer</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Classes.ExpLikeCmpHelperforListView.Compare</definition>
+        <argsstring>(object x, object y)</argsstring>
+        <name>Compare</name>
+        <param>
+          <type>object</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/ExplorerLikeSort.cs" line="19" column="1" bodyfile="Classes/ExplorerLikeSort.cs" bodystart="19" bodyend="22"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a">genBTC.FileTime.Classes.SharedHelper.StrCmpLogicalW</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Explorer-like Sort, for ListViewItem - used by listview.Sorter </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="16">
+        <label>IComparer</label>
+        <link refid="classIComparer"/>
+      </node>
+      <node id="15">
+        <label>genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18">
+        <label>IComparer</label>
+        <link refid="classIComparer"/>
+      </node>
+      <node id="17">
+        <label>genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Classes/ExplorerLikeSort.cs" line="18" column="1" bodyfile="Classes/ExplorerLikeSort.cs" bodystart="17" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</scope><name>Compare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

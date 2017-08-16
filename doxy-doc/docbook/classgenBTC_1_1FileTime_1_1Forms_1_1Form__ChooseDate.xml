@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate">
+<title>genBTC::FileTime::Forms::Form_ChooseDate class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>NameDateObj Datechosen<para><emphasis>&lt;summary&gt; the date object that will be accessed by the other form &lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt;
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_CreatedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_CreatedTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_ModifiedTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_ModifiedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_AccessedTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTimePicker dateTimePicker_AccessedDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button button1_OK</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Button button2_Cancel</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox3_Accessed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox2_Modified</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CheckBox checkBox1_Created</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a78d33b155b4d15a80ec6103a36c1d197">Form_ChooseDate</link> (
+ListViewItem theitem)<para><emphasis>&lt;summary&gt;  a small form, used only for choosing a date. &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a3a5d7504958999a750e931155f81e2ba">PopulateWith</link> (
+ListViewItem theitem)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1a86fac6a14be6cf70353db0d1104e6c">button1_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a639b747ee92f49e70ec776822224e3cf">button2_Cancel_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1af821fc4b9938682cfe1372f47f5eefa2">checkBox1_Created_CheckedChanged</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1ae42bc7d8d5732b6eb54e605849397c">checkBox2_Modified_CheckedChanged</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a310833d1136385038da2f5268f07a826">checkBox3_Accessed_CheckedChanged</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ae6814664c01a25c2651318693f3c1e6c">dateTimePicker_MouseWheel</link> (
+object sender, MouseEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a14f73a6edaa3fc3e6e2508b977b1c66d">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab9a5bbef3b5a52f219f91ecce40de00e">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <simplesect>
+                <title>NameDateObj genBTC.FileTime.Forms.Form_ChooseDate.Datechosen</title>                
+                <para>Definition at line 10 of file Form_ChooseDate.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_ChooseDate.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>System.ComponentModel.IContainer genBTC.FileTime.Forms.Form_ChooseDate.components</title>                
+                <para>Definition at line 10 of file Form_ChooseDate.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Form_ChooseDate.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a78d33b155b4d15a80ec6103a36c1d197">
+                <title>genBTC.FileTime.Forms.Form_ChooseDate.Form_ChooseDate (ListViewItem theitem)</title> <emphasis>&lt;summary&gt;  a small form, used only for choosing a date. &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a3a5d7504958999a750e931155f81e2ba">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.PopulateWith (ListViewItem theitem)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1a86fac6a14be6cf70353db0d1104e6c">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.button1_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a639b747ee92f49e70ec776822224e3cf">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.button2_Cancel_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1af821fc4b9938682cfe1372f47f5eefa2">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.checkBox1_Created_CheckedChanged (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a1ae42bc7d8d5732b6eb54e605849397c">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.checkBox2_Modified_CheckedChanged (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a310833d1136385038da2f5268f07a826">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.checkBox3_Accessed_CheckedChanged (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ae6814664c01a25c2651318693f3c1e6c">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.dateTimePicker_MouseWheel (object sender, MouseEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1a14f73a6edaa3fc3e6e2508b977b1c66d">
+                <title>void genBTC.FileTime.Forms.Form_ChooseDate.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate_1ab9a5bbef3b5a52f219f91ecce40de00e">
+                <title>override void genBTC.FileTime.Forms.Form_ChooseDate.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

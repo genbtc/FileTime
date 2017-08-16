@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classWindowsExplorer_1_1ServerEnum">
+<title>WindowsExplorer::ServerEnum class Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE">WindowsExplorer::ServerEnum::NETRESOURCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56">ErrorCodes</link> {
+<link linkend="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56ad306b6fdee05fe87455110ddf6501e6c">NO_ERROR</link>= 0,
+<link linkend="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56acb5e548caff1b136c56dd598779a4812">ERROR_NO_MORE_ITEMS</link>= 259
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>readonly ArrayList aData</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classWindowsExplorer_1_1ServerEnum_1a6a3512b9975faa75a8c2490429267174">ServerEnum</link> (
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca">ResourceScope</link> scope, <link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f">ResourceType</link> type, <link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7">ResourceUsage</link> usage, <link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d">ResourceDisplayType</link> displayType, string kPath)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>IEnumerator <link linkend="classWindowsExplorer_1_1ServerEnum_1a0f5e8b6ae7aecfc3b4f9302a4162a004">GetEnumerator</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56">ErrorCodes</link> <link linkend="classWindowsExplorer_1_1ServerEnum_1a55a4aac4d6a375be141fccf5ce59be2e">WNetOpenEnum</link> (
+<link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca">ResourceScope</link> dwScope, <link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f">ResourceType</link> dwType, <link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7">ResourceUsage</link> dwUsage, <link linkend="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE">NETRESOURCE</link> p, out IntPtr lphEnum)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56">ErrorCodes</link> <link linkend="classWindowsExplorer_1_1ServerEnum_1a166b42d86b56d3d309082c4fe56518e0">WNetCloseEnum</link> (
+IntPtr hEnum)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56">ErrorCodes</link> <link linkend="classWindowsExplorer_1_1ServerEnum_1a8752115a742d12c8d33023457acd5388">WNetEnumResource</link> (
+IntPtr hEnum, ref uint lpcCount, IntPtr buffer, ref uint lpBufferSize)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c">EnumerateServers</link> (
+<link linkend="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE">NETRESOURCE</link> pRsrc, <link linkend="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca">ResourceScope</link> scope, <link linkend="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f">ResourceType</link> type, <link linkend="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7">ResourceUsage</link> usage, <link linkend="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d">ResourceDisplayType</link> displayType, string kPath)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56">
+               <title>enum ErrorCodes </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56ad306b6fdee05fe87455110ddf6501e6c">
+                            <term>NO_ERROR</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classWindowsExplorer_1_1ServerEnum_1a7fa27252f86df0624b1b5b9fc76b6b56acb5e548caff1b136c56dd598779a4812">
+                            <term>ERROR_NO_MORE_ITEMS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 988 of file ExplorerTree.cs
+                    <computeroutput><literallayout>
+{
+NO_ERROR= 0, 
+ERROR_NO_MORE_ITEMS= 259, 
+}ErrorCodes;
+                    </literallayout></computeroutput>
+                </para>
+            </section>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a6a3512b9975faa75a8c2490429267174">
+                <title>WindowsExplorer.ServerEnum.ServerEnum (ResourceScope scope, ResourceType type, ResourceUsage usage, ResourceDisplayType displayType, string kPath)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a0f5e8b6ae7aecfc3b4f9302a4162a004">
+                <title>IEnumerator WindowsExplorer.ServerEnum.GetEnumerator ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a55a4aac4d6a375be141fccf5ce59be2e">
+                <title>static ErrorCodes WindowsExplorer.ServerEnum.WNetOpenEnum (ResourceScope dwScope, ResourceType dwType, ResourceUsage dwUsage, NETRESOURCE p, out IntPtr lphEnum)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a166b42d86b56d3d309082c4fe56518e0">
+                <title>static ErrorCodes WindowsExplorer.ServerEnum.WNetCloseEnum (IntPtr hEnum)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a8752115a742d12c8d33023457acd5388">
+                <title>static ErrorCodes WindowsExplorer.ServerEnum.WNetEnumResource (IntPtr hEnum, ref uint lpcCount, IntPtr buffer, ref uint lpBufferSize)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classWindowsExplorer_1_1ServerEnum_1a30e1d08e02e0e5fc0fb01df71623597c">
+                <title>void WindowsExplorer.ServerEnum.EnumerateServers (NETRESOURCE pRsrc, ResourceScope scope, ResourceType type, ResourceUsage usage, ResourceDisplayType displayType, string kPath)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

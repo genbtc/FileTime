@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR" kind="struct" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Models::SkippedHSR</compoundname>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.SkippedHSR.H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <briefdescription>
+<para>Count of the number of hidden files skipped </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="16" column="1" bodyfile="Models/Structs.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.SkippedHSR.R</definition>
+        <argsstring></argsstring>
+        <name>R</name>
+        <briefdescription>
+<para>Count of the number of Read-only files skipped </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="19" column="1" bodyfile="Models/Structs.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.SkippedHSR.S</definition>
+        <argsstring></argsstring>
+        <name>S</name>
+        <briefdescription>
+<para>Count of the number of System files skipped </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="22" column="1" bodyfile="Models/Structs.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1af7b494ffc63ac5c484b806a0e48aae97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Models.SkippedHSR.SkippedHSR</definition>
+        <argsstring>(int h, int r, int s)</argsstring>
+        <name>SkippedHSR</name>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Default Constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="25" column="1" bodyfile="Models/Structs.cs" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.SkippedHSR.Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+<para>Reset the skip count of Hidden system and readonly files </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="34" column="1" bodyfile="Models/Structs.cs" bodystart="34" bodyend="39"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/Structs.cs" line="14" column="1" bodyfile="Models/Structs.cs" bodystart="13" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>H</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>R</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>Reset</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>S</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1af7b494ffc63ac5c484b806a0e48aae97" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>SkippedHSR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

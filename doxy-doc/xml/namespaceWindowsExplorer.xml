@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespaceWindowsExplorer" kind="namespace" language="C#">
+    <compoundname>WindowsExplorer</compoundname>
+    <innerclass refid="classWindowsExplorer_1_1ExplorerTree" prot="public">WindowsExplorer::ExplorerTree</innerclass>
+    <innerclass refid="classWindowsExplorer_1_1Kernel32" prot="public">WindowsExplorer::Kernel32</innerclass>
+    <innerclass refid="classWindowsExplorer_1_1ServerEnum" prot="public">WindowsExplorer::ServerEnum</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bca" prot="public" static="no">
+        <name>ResourceScope</name>
+        <enumvalue id="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaabb909b3df5acac023922bca7ae890d1c" prot="public">
+          <name>RESOURCE_CONNECTED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa46bb8db4613943a4051a61fa1eaf3d19" prot="public">
+          <name>RESOURCE_GLOBALNET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaab2206a45992c8c7db0d67a87c8e7541c" prot="public">
+          <name>RESOURCE_REMEMBERED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa195f67f2c6e349dc21b97d4973fc5047" prot="public">
+          <name>RESOURCE_RECENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a388807fe84b0d5ee75f72a5afac61bcaa52b88d4d42ac56caadc0890e9ba27593" prot="public">
+          <name>RESOURCE_CONTEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="844" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="843" bodyend="850"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9f" prot="public" static="no">
+        <name>ResourceType</name>
+        <enumvalue id="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa6d5711943560ee0b6d213a70da20b68a" prot="public">
+          <name>RESOURCETYPE_ANY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa191f686b51949fc8d77c584f0b17a072" prot="public">
+          <name>RESOURCETYPE_DISK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9fa86720d525c985a73595c0076ca043486" prot="public">
+          <name>RESOURCETYPE_PRINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a23d514cab2ceb794a74907ddcbb64f9faa2f8ea909101793ae2a34e9d936c86a1" prot="public">
+          <name>RESOURCETYPE_RESERVED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="853" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="852" bodyend="858"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7" prot="public" static="no">
+        <name>ResourceUsage</name>
+        <enumvalue id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a7a8ecad1261e70ce9d35b49ac25087ed" prot="public">
+          <name>RESOURCEUSAGE_CONNECTABLE</name>
+          <initializer>= 0x00000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a5844b7d7be1e65cc624f2a700eef1f50" prot="public">
+          <name>RESOURCEUSAGE_CONTAINER</name>
+          <initializer>= 0x00000002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7a2912c36b107394da578f4f932ef3397a" prot="public">
+          <name>RESOURCEUSAGE_NOLOCALDEVICE</name>
+          <initializer>= 0x00000004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7ad1880508280941abf9b1c2b04f8360cc" prot="public">
+          <name>RESOURCEUSAGE_SIBLING</name>
+          <initializer>= 0x00000008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7adb91e0303ae671c0573098be97d9b0c1" prot="public">
+          <name>RESOURCEUSAGE_ATTACHED</name>
+          <initializer>= 0x00000010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1af529d9f6f7c06897549ef3b2ab6287d7abf4050ea26aa60a908d9536dd3252f06" prot="public">
+          <name>RESOURCEUSAGE_ALL</name>
+          <initializer>= (RESOURCEUSAGE_CONNECTABLE | RESOURCEUSAGE_CONTAINER | RESOURCEUSAGE_ATTACHED)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="862" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="861" bodyend="869"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735d" prot="public" static="no">
+        <name>ResourceDisplayType</name>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735dac800d72d4f7c4b04abc0686862329329" prot="public">
+          <name>RESOURCEDISPLAYTYPE_GENERIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da95d70b4433bf6d3cfa173d3771eeeca4" prot="public">
+          <name>RESOURCEDISPLAYTYPE_DOMAIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da733ca97841ae2dc6a7802e6834a259fe" prot="public">
+          <name>RESOURCEDISPLAYTYPE_SERVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735dac2e0c4ce8b6e5feb5d2f9d9da9af548a" prot="public">
+          <name>RESOURCEDISPLAYTYPE_SHARE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da953469e02f9a0aa1a436e74067fc0eab" prot="public">
+          <name>RESOURCEDISPLAYTYPE_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da5c22f21a4cfc59e1842271da58e3bdf4" prot="public">
+          <name>RESOURCEDISPLAYTYPE_GROUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da675c1081634d055e23c7b802ef7c17a0" prot="public">
+          <name>RESOURCEDISPLAYTYPE_NETWORK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da61d7576bc06cb4f0f9acc8273fd386d8" prot="public">
+          <name>RESOURCEDISPLAYTYPE_ROOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735daac96d73b6aa173a1714dd5b1305ee601" prot="public">
+          <name>RESOURCEDISPLAYTYPE_SHAREADMIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da22c1b3c7d321be52cc5b31636c8f804d" prot="public">
+          <name>RESOURCEDISPLAYTYPE_DIRECTORY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da066eae0b538e9f3ac0d8893773f121b2" prot="public">
+          <name>RESOURCEDISPLAYTYPE_TREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceWindowsExplorer_1a795dc6ff13e889a583fab9ae21da735da08587105ef1dc6972c91292748b34082" prot="public">
+          <name>RESOURCEDISPLAYTYPE_NDSCONTAINER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="WindowsExplorer/ExplorerTree.cs" line="872" column="1" bodyfile="WindowsExplorer/ExplorerTree.cs" bodystart="871" bodyend="885"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="WindowsExplorer/ExplorerTree.cs" line="20" column="1"/>
+  </compounddef>
+</doxygen>

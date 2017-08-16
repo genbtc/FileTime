@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_0d800a1bc9a2227f570fa51d24a3a788" kind="dir">
+    <compoundname>Native</compoundname>
+    <innerfile refid="NativeExtractIcon_8cs">NativeExtractIcon.cs</innerfile>
+    <innerfile refid="NativeScroll_8cs">NativeScroll.cs</innerfile>
+    <innerfile refid="NativeSelect_8cs">NativeSelect.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Classes/Native/"/>
+  </compounddef>
+</doxygen>

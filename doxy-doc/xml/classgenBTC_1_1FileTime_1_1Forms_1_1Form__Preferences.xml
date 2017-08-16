@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Forms::Form_Preferences</compoundname>
+    <basecompoundref refid="classForm" prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a0d0fcc156096c1c1d5bdd7b9a5061405" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string genBTC.FileTime.Forms.Form_Preferences._currentdir</definition>
+        <argsstring></argsstring>
+        <name>_currentdir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.cs" line="16" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ad28fafcafcab9fb5ac068f5cbbaebeb8" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer genBTC.FileTime.Forms.Form_Preferences.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="8" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae9cf65d55f0323eb8f528c8438d963bb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button genBTC.FileTime.Forms.Form_Preferences.button1_OK</definition>
+        <argsstring></argsstring>
+        <name>button1_OK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="278" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aed3191bba6aa8cc2822bf8a4c65e43d2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button genBTC.FileTime.Forms.Form_Preferences.button2_Cancel</definition>
+        <argsstring></argsstring>
+        <name>button2_Cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="279" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a4ce4f5d3bb13bac70d437aa3f5c5de0c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox2a_ShowSystem</definition>
+        <argsstring></argsstring>
+        <name>checkBox2a_ShowSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="281" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1abaf84c7690a90b4ab91c9387c5f4d6fb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox4a_ShowReadOnly</definition>
+        <argsstring></argsstring>
+        <name>checkBox4a_ShowReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="282" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aed606508300ff0198c84db13b8104292" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button genBTC.FileTime.Forms.Form_Preferences.button_UseCurrentDir</definition>
+        <argsstring></argsstring>
+        <name>button_UseCurrentDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="283" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a783e099613ea77f61f177a140dffdc5a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button genBTC.FileTime.Forms.Form_Preferences.button_Browse</definition>
+        <argsstring></argsstring>
+        <name>button_Browse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="284" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ad96a13454adf2d284161427c223242d8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox7_Mode1addRootDir</definition>
+        <argsstring></argsstring>
+        <name>checkBox7_Mode1addRootDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="285" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a1b62e6c55e43d211c406c9b4269952bc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox8_useRootDirAsContainer</definition>
+        <argsstring></argsstring>
+        <name>checkBox8_useRootDirAsContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="286" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a43a0a88e39e959daa0c693815c9b3fe3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolTip</type>
+        <definition>System.Windows.Forms.ToolTip genBTC.FileTime.Forms.Form_Preferences.toolTip1</definition>
+        <argsstring></argsstring>
+        <name>toolTip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="287" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a4a08890a4ecba4cbd9666e39787803cb" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox1_ShowReadOnlyNotices</definition>
+        <argsstring></argsstring>
+        <name>checkBox1_ShowReadOnlyNotices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="272" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8771b4533aa16b3270b43bc5a268cdef" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox4b_SkipReadOnly</definition>
+        <argsstring></argsstring>
+        <name>checkBox4b_SkipReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="273" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1acd93cb19a7aa2b559ce3fbb0aac89d06" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox3b_SkipHidden</definition>
+        <argsstring></argsstring>
+        <name>checkBox3b_SkipHidden</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="274" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1acfcaf4a1cf951021bba6f0586633ca74" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox2b_SkipSystem</definition>
+        <argsstring></argsstring>
+        <name>checkBox2b_SkipSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="275" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a32726198d8a2802ccf2edabbd97ea4fc" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox6_StartupDir</definition>
+        <argsstring></argsstring>
+        <name>checkBox6_StartupDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="276" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a359f7ac41ab689f1241abe98ceeaa735" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox genBTC.FileTime.Forms.Form_Preferences.textBox6_startupdir</definition>
+        <argsstring></argsstring>
+        <name>textBox6_startupdir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="277" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aa8b64002b9c854a5943b1bcfffb79739" prot="public" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox genBTC.FileTime.Forms.Form_Preferences.checkBox3a_ShowHidden</definition>
+        <argsstring></argsstring>
+        <name>checkBox3a_ShowHidden</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="280" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a044ed6a814780c52529b30be26463f62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Forms.Form_Preferences.Form_Preferences</definition>
+        <argsstring>(string currentdirParam)</argsstring>
+        <name>Form_Preferences</name>
+        <param>
+          <type>string</type>
+          <declname>currentdirParam</declname>
+        </param>
+        <briefdescription>
+<para>Show preferences window</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.cs" line="19" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="19" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a281c6a90053ba74e3fd34de00d771f37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Preferences.button1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.cs" line="26" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="26" bodyend="38"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aeac9777e8e2d82f4d532578e89ddecac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Preferences.button2_Cancel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button2_Cancel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.cs" line="41" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="41" bodyend="45"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8bb3628fcbffc7fa60373514b76a4457" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Preferences.button_UseCurrentDir_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button_UseCurrentDir_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.cs" line="48" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ade029483c7134e7a864ee0b8475f2361" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Preferences.button_Browse_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button_Browse_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.cs" line="53" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="53" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae22d6c0ab2502fd4ece5f5d828e5d313" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Preferences.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="29" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="29" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a9e1272169f107d98c18de0e0ad643477" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.Forms.Form_Preferences.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Preferences.Designer.cs" line="14" column="1" bodyfile="Forms/Form_Preferences.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Preferences window class </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="61">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+      <node id="60">
+        <label>genBTC.FileTime.Forms.Form_Preferences</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="63">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+      <node id="62">
+        <label>genBTC.FileTime.Forms.Form_Preferences</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Forms/Form_Preferences.cs" line="15" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="14" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a0d0fcc156096c1c1d5bdd7b9a5061405" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>_currentdir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a281c6a90053ba74e3fd34de00d771f37" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button1_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae9cf65d55f0323eb8f528c8438d963bb" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button1_OK</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aed3191bba6aa8cc2822bf8a4c65e43d2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button2_Cancel</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aeac9777e8e2d82f4d532578e89ddecac" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button2_Cancel_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a783e099613ea77f61f177a140dffdc5a" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button_Browse</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ade029483c7134e7a864ee0b8475f2361" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button_Browse_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aed606508300ff0198c84db13b8104292" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button_UseCurrentDir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8bb3628fcbffc7fa60373514b76a4457" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button_UseCurrentDir_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a4a08890a4ecba4cbd9666e39787803cb" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox1_ShowReadOnlyNotices</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a4ce4f5d3bb13bac70d437aa3f5c5de0c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox2a_ShowSystem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1acfcaf4a1cf951021bba6f0586633ca74" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox2b_SkipSystem</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aa8b64002b9c854a5943b1bcfffb79739" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox3a_ShowHidden</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1acd93cb19a7aa2b559ce3fbb0aac89d06" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox3b_SkipHidden</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1abaf84c7690a90b4ab91c9387c5f4d6fb" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox4a_ShowReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8771b4533aa16b3270b43bc5a268cdef" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox4b_SkipReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a32726198d8a2802ccf2edabbd97ea4fc" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox6_StartupDir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ad96a13454adf2d284161427c223242d8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox7_Mode1addRootDir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a1b62e6c55e43d211c406c9b4269952bc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>checkBox8_useRootDirAsContainer</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ad28fafcafcab9fb5ac068f5cbbaebeb8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>components</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a9e1272169f107d98c18de0e0ad643477" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>Dispose</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a044ed6a814780c52529b30be26463f62" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>Form_Preferences</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae22d6c0ab2502fd4ece5f5d828e5d313" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>InitializeComponent</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a359f7ac41ab689f1241abe98ceeaa735" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>textBox6_startupdir</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a43a0a88e39e959daa0c693815c9b3fe3" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>toolTip1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

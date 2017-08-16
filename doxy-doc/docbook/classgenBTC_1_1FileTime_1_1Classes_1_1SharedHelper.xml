@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper">
+<title>genBTC::FileTime::Classes::SharedHelper class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly char Seperator</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static readonly string UserDesktop</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string CurrExten</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>List&lt; string &gt; Filextlist</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a">StrCmpLogicalW</link> (
+String x, String y)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="classIComparer">IComparer</link>&lt; string &gt; <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864">explorerStringComparer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static bool <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe">FindCurExt</link> (
+String s)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static FileAttributes <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0">RemoveAttributes</link> (
+FileAttributes attributes, FileAttributes attributesToRemove)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static FileAttributes <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4">SyncSettingstoInvisibleFlag</link> (
+)<para><emphasis>&lt;summary&gt;  Reasons to be invisible  &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b">Bool2Int</link> (
+bool fileOrDir)<para><emphasis>&lt;summary&gt; Return 1 if bool=true (Directory) otherwise 0=false (File) &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5">OpenFile</link> (
+string inpath)<para><emphasis>&lt;summary&gt;
+Display the Folder Browser Dialog and then display the selected
+file path and the directories and files in the folder.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a">
+                <title>static int genBTC.FileTime.Classes.SharedHelper.StrCmpLogicalW (String x, String y)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864">
+                <title>static IComparer&lt;string&gt; genBTC.FileTime.Classes.SharedHelper.explorerStringComparer ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe">
+                <title>static bool genBTC.FileTime.Classes.SharedHelper.FindCurExt (String s)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0">
+                <title>static FileAttributes genBTC.FileTime.Classes.SharedHelper.RemoveAttributes (FileAttributes attributes, FileAttributes attributesToRemove)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4">
+                <title>static FileAttributes genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag ()</title> <emphasis>&lt;summary&gt;  Reasons to be invisible  &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b">
+                <title>static int genBTC.FileTime.Classes.SharedHelper.Bool2Int (bool fileOrDir)</title> <emphasis>&lt;summary&gt; Return 1 if bool=true (Directory) otherwise 0=false (File) &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5">
+                <title>static string genBTC.FileTime.Classes.SharedHelper.OpenFile (string inpath)</title> <emphasis>&lt;summary&gt;
+Display the Folder Browser Dialog and then display the selected
+file path and the directories and files in the folder.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

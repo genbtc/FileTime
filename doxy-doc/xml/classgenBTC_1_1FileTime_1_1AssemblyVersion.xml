@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1AssemblyVersion" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::AssemblyVersion</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a064b14b20f51bc13c9d1239d98f0ccf0" prot="private" static="no" mutable="no">
+        <type>readonly Type</type>
+        <definition>readonly Type genBTC.FileTime.AssemblyVersion.assemblyType</definition>
+        <argsstring></argsstring>
+        <name>assemblyType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="15" column="1" bodyfile="AssemblyVersion.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ad897208f327279cefb9565ee060325d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.AssemblyName</definition>
+        <argsstring></argsstring>
+        <name>AssemblyName</name>
+        <briefdescription>
+<para>Describes an assembly&apos;s unique identity in full. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="32" column="1" bodyfile="AssemblyVersion.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a9995b477f1047ac510335cc73bc4cbbf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.AssemblyFullName</definition>
+        <argsstring></argsstring>
+        <name>AssemblyFullName</name>
+        <briefdescription>
+<para>Gets the full name of the assembly, also known as the display name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="40" column="1" bodyfile="AssemblyVersion.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a46d42b7856bb88f214df742a3d766343" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.CodeBase</definition>
+        <argsstring></argsstring>
+        <name>CodeBase</name>
+        <briefdescription>
+<para>Gets the location of the assembly as specified originally, for example, in an AssemblyName object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="48" column="1" bodyfile="AssemblyVersion.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1aa0221634e1056b9622009fa051aad8e0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Copyright</definition>
+        <argsstring></argsstring>
+        <name>Copyright</name>
+        <briefdescription>
+<para>Defines a copyright custom attribute for an assembly manifest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="56" column="1" bodyfile="AssemblyVersion.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ae7a7f50b25bae18de3d78c7f1bfb18b5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Company</definition>
+        <argsstring></argsstring>
+        <name>Company</name>
+        <briefdescription>
+<para>Defines a company name custom attribute for an assembly manifest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="70" column="1" bodyfile="AssemblyVersion.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4c1f8c1657ff1c27a506a2cd4fcbe52b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+<para>Defines an assembly description custom attribute for an assembly manifest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="84" column="1" bodyfile="AssemblyVersion.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4b268c90cae74761d25c313161b32c2d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Product</definition>
+        <argsstring></argsstring>
+        <name>Product</name>
+        <briefdescription>
+<para>Defines a product name custom attribute for an assembly manifest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="98" column="1" bodyfile="AssemblyVersion.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a76ebd0ef8a7ba40fd2c1dfcbd1bca6b4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <briefdescription>
+<para>Defines an assembly title custom attribute for an assembly manifest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="112" column="1" bodyfile="AssemblyVersion.cs" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a5a73bb519cc81c1aa7d557fcae17ebdc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Trademark</definition>
+        <argsstring></argsstring>
+        <name>Trademark</name>
+        <briefdescription>
+<para>Defines a trademark custom attribute for an assembly manifest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="126" column="1" bodyfile="AssemblyVersion.cs" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ac054eec17a4a6116d1537c08256f978e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <briefdescription>
+<para>Gets the major, minor, revision, and build numbers of the assembly. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="140" column="1" bodyfile="AssemblyVersion.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1379c020e21da13c281f4c48568ff234" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.VersionDetails</definition>
+        <argsstring></argsstring>
+        <name>VersionDetails</name>
+        <briefdescription>
+<para>Gets the major, minor, revision, and build numbers of the assembly. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="148" column="1" bodyfile="AssemblyVersion.cs" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4d29ec0b9597d91670c85968c1915757" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.AssemblyVersion.AssemblyVersion</definition>
+        <argsstring>()</argsstring>
+        <name>AssemblyVersion</name>
+        <briefdescription>
+<para>Constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="20" column="1" bodyfile="AssemblyVersion.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1b6eba7338dffe95f2e085eb0bf9b3a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string genBTC.FileTime.AssemblyVersion.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Returns a string with the assembly version attributes </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String with the assembly version attributes</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="167" column="1" bodyfile="AssemblyVersion.cs" bodystart="167" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ab2f0047cefe5bfff2c56f692c09c8086" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string genBTC.FileTime.AssemblyVersion.ToHTML</definition>
+        <argsstring>()</argsstring>
+        <name>ToHTML</name>
+        <briefdescription>
+<para>Returns a HTML format string with the assembly version attributes </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>HTML format string with the assembly version attributes</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AssemblyVersion.cs" line="187" column="1" bodyfile="AssemblyVersion.cs" bodystart="187" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class uses the System.Reflection.Assembly class to access assembly meta-data </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AssemblyVersion.cs" line="11" column="1" bodyfile="AssemblyVersion.cs" bodystart="10" bodyend="205"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a9995b477f1047ac510335cc73bc4cbbf" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>AssemblyFullName</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ad897208f327279cefb9565ee060325d1" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>AssemblyName</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a064b14b20f51bc13c9d1239d98f0ccf0" prot="private" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>assemblyType</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4d29ec0b9597d91670c85968c1915757" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>AssemblyVersion</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a46d42b7856bb88f214df742a3d766343" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>CodeBase</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ae7a7f50b25bae18de3d78c7f1bfb18b5" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Company</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1aa0221634e1056b9622009fa051aad8e0" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Copyright</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4c1f8c1657ff1c27a506a2cd4fcbe52b" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Description</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a4b268c90cae74761d25c313161b32c2d" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Product</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a76ebd0ef8a7ba40fd2c1dfcbd1bca6b4" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Title</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ab2f0047cefe5bfff2c56f692c09c8086" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>ToHTML</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1b6eba7338dffe95f2e085eb0bf9b3a5" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>ToString</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a5a73bb519cc81c1aa7d557fcae17ebdc" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Trademark</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1ac054eec17a4a6116d1537c08256f978e" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>Version</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1AssemblyVersion_1a1379c020e21da13c281f4c48568ff234" prot="public" virt="non-virtual"><scope>genBTC::FileTime::AssemblyVersion</scope><name>VersionDetails</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

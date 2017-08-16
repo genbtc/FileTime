@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classWindowsExplorer_1_1Kernel32">
+<title>WindowsExplorer::Kernel32 class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint <link linkend="classWindowsExplorer_1_1Kernel32_1a7ab4d641c4c7114014a77c92c7d60c3f">GetDriveType</link> (
+string lpRootPathName)<para><emphasis>&lt;summary&gt;
+Return an int specifying the type of drive.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>a kernel Shell Function </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 835 of file ExplorerTree.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ExplorerTree.cs</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classWindowsExplorer_1_1Kernel32_1a7ab4d641c4c7114014a77c92c7d60c3f">
+                <title>static uint WindowsExplorer.Kernel32.GetDriveType (string lpRootPathName)</title> <emphasis>&lt;summary&gt;
+Return an int specifying the type of drive.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classUserControl" kind="class" language="C#" prot="public">
+    <compoundname>UserControl</compoundname>
+    <derivedcompoundref refid="classWindowsExplorer_1_1ExplorerTree" prot="public" virt="non-virtual">WindowsExplorer.ExplorerTree</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="107">
+        <label>WindowsExplorer.ExplorerTree</label>
+        <link refid="classWindowsExplorer_1_1ExplorerTree"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>UserControl</label>
+        <link refid="classUserControl"/>
+      </node>
+    </inheritancegraph>
+    <location file="WindowsExplorer/ExplorerTree.Designer.cs" line="21" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

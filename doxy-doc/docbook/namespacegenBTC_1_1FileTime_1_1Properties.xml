@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacegenBTC_1_1FileTime_1_1Properties">
+<title>genBTC::FileTime::Properties</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Properties_1_1Settings">genBTC::FileTime::Properties::Settings</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

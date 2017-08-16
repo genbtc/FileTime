@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About" kind="class" language="C#" prot="public">
+    <compoundname>genBTC::FileTime::Forms::Form_About</compoundname>
+    <basecompoundref refid="classForm" prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a95b91cbb4170cb6ac5c93bd26881887c" prot="private" static="no" mutable="no">
+        <type>readonly Container</type>
+        <definition>readonly Container genBTC.FileTime.Forms.Form_About._components</definition>
+        <argsstring></argsstring>
+        <name>_components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="27" column="1" bodyfile="Forms/Form_About.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a32efc6409a40d51b15f3d81bc55f71dc" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button genBTC.FileTime.Forms.Form_About.button_Close</definition>
+        <argsstring></argsstring>
+        <name>button_Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="29" column="1" bodyfile="Forms/Form_About.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1ae4dd050fc771b56cfcb7174f2dcf4546" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label genBTC.FileTime.Forms.Form_About.label_About</definition>
+        <argsstring></argsstring>
+        <name>label_About</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="30" column="1" bodyfile="Forms/Form_About.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a3902e33311968fafed354ba008fe1f80" prot="private" static="no" mutable="no">
+        <type>LinkLabel</type>
+        <definition>LinkLabel genBTC.FileTime.Forms.Form_About.linkLabel_Address</definition>
+        <argsstring></argsstring>
+        <name>linkLabel_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="31" column="1" bodyfile="Forms/Form_About.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a2ed7cb7138db40c178479eb5cb141591" prot="private" static="no" mutable="no">
+        <type>PictureBox</type>
+        <definition>PictureBox genBTC.FileTime.Forms.Form_About.pictureBox_Icon</definition>
+        <argsstring></argsstring>
+        <name>pictureBox_Icon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="32" column="1" bodyfile="Forms/Form_About.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1ae864e5fc0e88a985ebfe92976075280b" prot="private" static="no" mutable="no">
+        <type>PictureBox</type>
+        <definition>PictureBox genBTC.FileTime.Forms.Form_About.pictureBox_automationControls</definition>
+        <argsstring></argsstring>
+        <name>pictureBox_automationControls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="33" column="1" bodyfile="Forms/Form_About.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aefc80e9247adfed001255fdc3b94be6d" prot="private" static="no" mutable="no">
+        <type>TabControl</type>
+        <definition>TabControl genBTC.FileTime.Forms.Form_About.tabControl_About</definition>
+        <argsstring></argsstring>
+        <name>tabControl_About</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="34" column="1" bodyfile="Forms/Form_About.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a3247e3d0037017b4afccd92fddcc3b6f" prot="private" static="no" mutable="no">
+        <type>TabPage</type>
+        <definition>TabPage genBTC.FileTime.Forms.Form_About.tabPage_About</definition>
+        <argsstring></argsstring>
+        <name>tabPage_About</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="35" column="1" bodyfile="Forms/Form_About.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a352ca275f827a64acb8b24dce4acc1f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>genBTC.FileTime.Forms.Form_About.Form_About</definition>
+        <argsstring>()</argsstring>
+        <name>Form_About</name>
+        <briefdescription>
+<para>the About... form window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="40" column="1" bodyfile="Forms/Form_About.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a0fadd7eb6fa67b81310846120f17e0a4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void genBTC.FileTime.Forms.Form_About.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="49" column="1" bodyfile="Forms/Form_About.cs" bodystart="49" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aa58637bf493bac03429b37fe27550709" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_About.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="65" column="1" bodyfile="Forms/Form_About.cs" bodystart="65" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a467220e3e50644ce9b0ec071dbd324ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_About.Form_About_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Form_About_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Load the About <ref refid="classForm" kindref="compound">Form</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>EventArgs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="181" column="1" bodyfile="Forms/Form_About.cs" bodystart="181" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a17da84c3773c106392561fd4c21a7b54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_About.linkLabel_Address_LinkClicked</definition>
+        <argsstring>(object sender, LinkLabelLinkClickedEventArgs e)</argsstring>
+        <name>linkLabel_Address_LinkClicked</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>LinkLabelLinkClickedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Link to mailto: genbtc </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>EventArgs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="203" column="1" bodyfile="Forms/Form_About.cs" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1af8caafd5f7c34ea2521e6088bfc08ab4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_About.button_Close_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button_Close_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Close this form </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>EventArgs</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_About.cs" line="213" column="1" bodyfile="Forms/Form_About.cs" bodystart="213" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>About <ref refid="classForm" kindref="compound">Form</ref>. Shows basic program information. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="41">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+      <node id="40">
+        <label>genBTC.FileTime.Forms.Form_About</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>Form</label>
+        <link refid="classForm"/>
+      </node>
+      <node id="42">
+        <label>genBTC.FileTime.Forms.Form_About</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Forms/Form_About.cs" line="23" column="1" bodyfile="Forms/Form_About.cs" bodystart="22" bodyend="219"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a95b91cbb4170cb6ac5c93bd26881887c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>_components</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a32efc6409a40d51b15f3d81bc55f71dc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>button_Close</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1af8caafd5f7c34ea2521e6088bfc08ab4" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>button_Close_Click</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a0fadd7eb6fa67b81310846120f17e0a4" prot="protected" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>Dispose</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a352ca275f827a64acb8b24dce4acc1f3" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>Form_About</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a467220e3e50644ce9b0ec071dbd324ca" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>Form_About_Load</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aa58637bf493bac03429b37fe27550709" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>InitializeComponent</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1ae4dd050fc771b56cfcb7174f2dcf4546" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>label_About</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a3902e33311968fafed354ba008fe1f80" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>linkLabel_Address</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a17da84c3773c106392561fd4c21a7b54" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>linkLabel_Address_LinkClicked</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1ae864e5fc0e88a985ebfe92976075280b" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>pictureBox_automationControls</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a2ed7cb7138db40c178479eb5cb141591" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>pictureBox_Icon</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1aefc80e9247adfed001255fdc3b94be6d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>tabControl_About</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About_1a3247e3d0037017b4afccd92fddcc3b6f" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_About</scope><name>tabPage_About</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
