@@ -53,12 +53,12 @@ namespace genBTC.FileTime
         private RadioButton radioButton1_CreationDate;
         private Label label_CreationTime;
         private RadioButton radioButton2_ModifiedDate;
-        private Label label_Modified;
-        private RadioButton radioButton3_LastAccessDate;
-        private Label label_LastAccess;
+        private Label label_ModificationTime;
+        private RadioButton radioButton3_AccessedDate;
+        private Label label_AccessedTime;
         private RadioButton radioButton3_setfromAccessed;
         private RadioButton radioButton2_setfromModified;
-        private RadioButton radioButton1_setfromCreated;
+        private RadioButton radioButton1_setfromCreation;
         private UIToolbox.RadioButtonPanel radioButtonPanel1_DecideWhichTime;
         private UIToolbox.RadioGroupBox radioGroupBox3_UseTimeFrom;
         private UIToolbox.RadioGroupBox radioGroupBox1_SpecifyTime;
@@ -68,7 +68,7 @@ namespace genBTC.FileTime
         private RadioButton radioButton2_Newest;
         private RadioButton radioButton1_Oldest;
         private UIToolbox.RadioGroupBox radioGroupBox2_CurrentSelectionTime;
-        private Label label3_AccessDate;
+        private Label label3_AccessedDate;
         private Label label2_ModifiedDate;
         private Label label1_CreationDate;
         private UIToolbox.RadioButtonPanel radioButtonPanel2;
@@ -114,16 +114,16 @@ namespace genBTC.FileTime
             this.groupBoxCMA = new System.Windows.Forms.GroupBox();
             this.radioButton3_setfromAccessed = new System.Windows.Forms.RadioButton();
             this.radioButton2_setfromModified = new System.Windows.Forms.RadioButton();
-            this.radioButton1_setfromCreated = new System.Windows.Forms.RadioButton();
+            this.radioButton1_setfromCreation = new System.Windows.Forms.RadioButton();
             this.radioButton1_CreationDate = new System.Windows.Forms.RadioButton();
             this.label_CreationTime = new System.Windows.Forms.Label();
             this.radioButton2_ModifiedDate = new System.Windows.Forms.RadioButton();
-            this.label_Modified = new System.Windows.Forms.Label();
-            this.radioButton3_LastAccessDate = new System.Windows.Forms.RadioButton();
-            this.label_LastAccess = new System.Windows.Forms.Label();
+            this.label_ModificationTime = new System.Windows.Forms.Label();
+            this.radioButton3_AccessedDate = new System.Windows.Forms.RadioButton();
+            this.label_AccessedTime = new System.Windows.Forms.Label();
             this.radioButtonPanel1_DecideWhichTime = new UIToolbox.RadioButtonPanel();
             this.radioGroupBox1_pickFolderForCompare = new UIToolbox.RadioGroupBox();
-            this.label3_AccessDate = new System.Windows.Forms.Label();
+            this.label3_AccessedDate = new System.Windows.Forms.Label();
             this.label2_ModifiedDate = new System.Windows.Forms.Label();
             this.label1_CreationDate = new System.Windows.Forms.Label();
             this.radioGroupBox3_UseTimeFrom = new UIToolbox.RadioGroupBox();
@@ -185,7 +185,7 @@ namespace genBTC.FileTime
             this.button_Browse.Text = "Browse...";
             this.button_Browse.Click += new System.EventHandler(this.button_Browse_Click);
             // 
-            // dateTimePicker_Date
+            // dateTimePickerDate
             // 
             this.dateTimePicker_Date.CustomFormat = "  MM/dd/yyyy";
             this.dateTimePicker_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -194,7 +194,7 @@ namespace genBTC.FileTime
             this.dateTimePicker_Date.Size = new System.Drawing.Size(99, 21);
             this.dateTimePicker_Date.TabIndex = 2;
             // 
-            // dateTimePicker_Time
+            // dateTimePickerTime
             // 
             this.dateTimePicker_Time.CustomFormat = "HH";
             this.dateTimePicker_Time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -391,15 +391,15 @@ namespace genBTC.FileTime
             this.radioButton2_setfromModified.Text = "Modified";
             this.radioButton2_setfromModified.UseVisualStyleBackColor = true;
             // 
-            // radioButton1_setfromCreated
+            // radioButton1_setfromCreation
             // 
-            this.radioButton1_setfromCreated.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1_setfromCreated.Location = new System.Drawing.Point(7, 0);
-            this.radioButton1_setfromCreated.Name = "radioButton1_setfromCreated";
-            this.radioButton1_setfromCreated.Size = new System.Drawing.Size(64, 17);
-            this.radioButton1_setfromCreated.TabIndex = 0;
-            this.radioButton1_setfromCreated.Text = "Created";
-            this.radioButton1_setfromCreated.UseVisualStyleBackColor = true;
+            this.radioButton1_setfromCreation.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1_setfromCreation.Location = new System.Drawing.Point(7, 0);
+            this.radioButton1_setfromCreation.Name = "radioButton1_setfromCreation";
+            this.radioButton1_setfromCreation.Size = new System.Drawing.Size(64, 17);
+            this.radioButton1_setfromCreation.TabIndex = 0;
+            this.radioButton1_setfromCreation.Text = "Created";
+            this.radioButton1_setfromCreation.UseVisualStyleBackColor = true;
             // 
             // radioButton1_CreationDate
             // 
@@ -432,39 +432,39 @@ namespace genBTC.FileTime
             this.radioButton2_ModifiedDate.Size = new System.Drawing.Size(14, 13);
             this.radioButton2_ModifiedDate.TabIndex = 0;
             // 
-            // label_Modified
+            // label_ModificationTime
             // 
-            this.label_Modified.AutoSize = true;
-            this.label_Modified.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_Modified.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label_Modified.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Modified.Location = new System.Drawing.Point(140, 83);
-            this.label_Modified.MinimumSize = new System.Drawing.Size(137, 21);
-            this.label_Modified.Name = "label_Modified";
-            this.label_Modified.Size = new System.Drawing.Size(137, 21);
-            this.label_Modified.TabIndex = 0;
-            this.label_Modified.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_ModificationTime.AutoSize = true;
+            this.label_ModificationTime.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_ModificationTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label_ModificationTime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ModificationTime.Location = new System.Drawing.Point(140, 83);
+            this.label_ModificationTime.MinimumSize = new System.Drawing.Size(137, 21);
+            this.label_ModificationTime.Name = "label_ModificationTime";
+            this.label_ModificationTime.Size = new System.Drawing.Size(137, 21);
+            this.label_ModificationTime.TabIndex = 0;
+            this.label_ModificationTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radioButton3_LastAccessDate
+            // radioButton3_AccessedDate
             // 
-            this.radioButton3_LastAccessDate.AutoSize = true;
-            this.radioButton3_LastAccessDate.Location = new System.Drawing.Point(3, 90);
-            this.radioButton3_LastAccessDate.Name = "radioButton3_LastAccessDate";
-            this.radioButton3_LastAccessDate.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3_LastAccessDate.TabIndex = 0;
+            this.radioButton3_AccessedDate.AutoSize = true;
+            this.radioButton3_AccessedDate.Location = new System.Drawing.Point(3, 90);
+            this.radioButton3_AccessedDate.Name = "radioButton3_AccessedDate";
+            this.radioButton3_AccessedDate.Size = new System.Drawing.Size(14, 13);
+            this.radioButton3_AccessedDate.TabIndex = 0;
             // 
-            // label_LastAccess
+            // label_AccessedTime
             // 
-            this.label_LastAccess.AutoSize = true;
-            this.label_LastAccess.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_LastAccess.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label_LastAccess.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_LastAccess.Location = new System.Drawing.Point(139, 124);
-            this.label_LastAccess.MinimumSize = new System.Drawing.Size(137, 21);
-            this.label_LastAccess.Name = "label_LastAccess";
-            this.label_LastAccess.Size = new System.Drawing.Size(137, 21);
-            this.label_LastAccess.TabIndex = 0;
-            this.label_LastAccess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_AccessedTime.AutoSize = true;
+            this.label_AccessedTime.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_AccessedTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label_AccessedTime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_AccessedTime.Location = new System.Drawing.Point(139, 124);
+            this.label_AccessedTime.MinimumSize = new System.Drawing.Size(137, 21);
+            this.label_AccessedTime.Name = "label_AccessedTime";
+            this.label_AccessedTime.Size = new System.Drawing.Size(137, 21);
+            this.label_AccessedTime.TabIndex = 0;
+            this.label_AccessedTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radioButtonPanel1_DecideWhichTime
             // 
@@ -472,11 +472,11 @@ namespace genBTC.FileTime
             this.radioButtonPanel1_DecideWhichTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox1_pickFolderForCompare);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_CreationTime);
-            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label3_AccessDate);
-            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_Modified);
+            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label3_AccessedDate);
+            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_ModificationTime);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label2_ModifiedDate);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label1_CreationDate);
-            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_LastAccess);
+            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_AccessedTime);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox3_UseTimeFrom);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox1_SpecifyTime);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox2_CurrentSelectionTime);
@@ -496,15 +496,15 @@ namespace genBTC.FileTime
             this.radioGroupBox1_pickFolderForCompare.TabStop = false;
             this.radioGroupBox1_pickFolderForCompare.Text = " ";
             // 
-            // label3_AccessDate
+            // label3_AccessedDate
             // 
-            this.label3_AccessDate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_AccessDate.Location = new System.Drawing.Point(153, 108);
-            this.label3_AccessDate.Name = "label3_AccessDate";
-            this.label3_AccessDate.Size = new System.Drawing.Size(122, 13);
-            this.label3_AccessDate.TabIndex = 3;
-            this.label3_AccessDate.Text = "Last Access Date/Time";
-            this.label3_AccessDate.Click += new System.EventHandler(this.label3_AccessDate_Click);
+            this.label3_AccessedDate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_AccessedDate.Location = new System.Drawing.Point(153, 108);
+            this.label3_AccessedDate.Name = "label3_AccessedDate";
+            this.label3_AccessedDate.Size = new System.Drawing.Size(122, 13);
+            this.label3_AccessedDate.TabIndex = 3;
+            this.label3_AccessedDate.Text = "Last Access Date/Time";
+            this.label3_AccessedDate.Click += new System.EventHandler(this.label3_AccessDate_Click);
             // 
             // label2_ModifiedDate
             // 
@@ -546,7 +546,7 @@ namespace genBTC.FileTime
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.radioButton4_setfromRandom);
             this.panel1.Controls.Add(this.radioButton3_setfromAccessed);
-            this.panel1.Controls.Add(this.radioButton1_setfromCreated);
+            this.panel1.Controls.Add(this.radioButton1_setfromCreation);
             this.panel1.Controls.Add(this.radioButton2_setfromModified);
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(12, 81);
@@ -578,7 +578,7 @@ namespace genBTC.FileTime
             this.panel2.Size = new System.Drawing.Size(71, 52);
             this.panel2.TabIndex = 2;
             // 
-            // radioButton3_Random
+            // radioButton3Random
             // 
             this.radioButton3_Random.Checked = true;
             this.radioButton3_Random.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -589,7 +589,7 @@ namespace genBTC.FileTime
             this.radioButton3_Random.TabStop = true;
             this.radioButton3_Random.Text = "Random";
             // 
-            // radioButton2_Newest
+            // radioButton2Newest
             // 
             this.radioButton2_Newest.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2_Newest.Location = new System.Drawing.Point(4, 17);
@@ -598,7 +598,7 @@ namespace genBTC.FileTime
             this.radioButton2_Newest.TabIndex = 1;
             this.radioButton2_Newest.Text = "Newest";
             // 
-            // radioButton1_Oldest
+            // radioButton1Oldest
             // 
             this.radioButton1_Oldest.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1_Oldest.Location = new System.Drawing.Point(4, 1);
@@ -681,7 +681,7 @@ namespace genBTC.FileTime
             // radioButtonPanel2
             // 
             this.radioButtonPanel2.Controls.Add(this.radioButton1_CreationDate);
-            this.radioButtonPanel2.Controls.Add(this.radioButton3_LastAccessDate);
+            this.radioButtonPanel2.Controls.Add(this.radioButton3_AccessedDate);
             this.radioButtonPanel2.Controls.Add(this.radioButton2_ModifiedDate);
             this.radioButtonPanel2.Enabled = false;
             this.radioButtonPanel2.Location = new System.Drawing.Point(4, 18);

@@ -135,11 +135,13 @@
             Set File Time
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode2(System.String)">
+        <member name="M:genBTC.FileTime.Form_Main.RecurseSubDirectoryMode2(System.String,genBTC.FileTime.DataModel,genBTC.FileTime.Models.BoolCMA,genBTC.FileTime.Form_Main.guistatus)">
             <summary>
             Mode 2. Recursive.
             </summary>
             <param name="directoryPath">Path to start in.</param>
+            <param name="dataModel"></param>
+            <param name="checkboxes"></param>
         </member>
         <member name="M:genBTC.FileTime.Form_Main.checkBox_DateTime_CheckedChanged(System.Object,System.EventArgs)">
             <summary> Creation,Modified,Accessed Checkbox selection changed </summary>
@@ -199,7 +201,7 @@
             <param name="radioButton3Random"></param>
             <returns></returns>
         </member>
-        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(genBTC.FileTime.DataModel,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,System.Windows.Forms.RadioButton,UIToolbox.RadioGroupBox,System.Windows.Forms.Label,System.Windows.Forms.Label,System.Windows.Forms.Label,UIToolbox.RadioGroupBox,System.Windows.Forms.DateTimePicker,System.Windows.Forms.DateTimePicker,System.Windows.Forms.Label,UIToolbox.RadioGroupBox,System.String)">
+        <member name="M:genBTC.FileTime.Form_Main.DecideWhichTimeMode2(genBTC.FileTime.DataModel,System.String,genBTC.FileTime.Form_Main.guistatus)">
             <summary>
             Very long function that does a simple task. Read in the options the user set for the operation, and
             Decide on the timestamp it should use, by the end we will have a single object with 3 times.

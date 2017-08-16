@@ -261,17 +261,17 @@ namespace genBTC.FileTime
                 { }
             }
             var minmax = new OldNewDate(timelist);
-            if (gui.radioButton1_Oldest)
+            if (gui.radioButton1Oldest)
             {
                 if (minmax.MinDate != null)
                     dateToUse = minmax.MinDate; //explicit typecast from nullable
             }
-            else if (gui.radioButton2_Newest)
+            else if (gui.radioButton2Newest)
             {
                 if (minmax.MaxDate != null)
                     dateToUse = minmax.MaxDate;
             }
-            else if (gui.radioButton3_Random)
+            else if (gui.radioButton3Random)
             {
                 int randomFile = dataModel.random.Next(0, minmax.Index);
                 if (timelist[randomFile] != null)
@@ -316,37 +316,39 @@ namespace genBTC.FileTime
         /// <param name="radioGroupBox1SpecifyTime"></param>
         /// <param name="directoryPath"></param>
         /// <returns></returns>
-        private static NameDateObject DecideWhichTimeMode2(DataModel dataModel, RadioButton radioButton3Random, RadioButton radioButton2Newest, RadioButton radioButton1Oldest, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1UseTimefromFile, RadioGroupBox radioGroupBox3UseTimeFrom, Label labelLastAccess, Label labelModified, Label labelCreationTime, RadioGroupBox radioGroupBox2CurrentSelectionTime, DateTimePicker dateTimePickerTime, DateTimePicker dateTimePickerDate, Label labelHiddenPathName, RadioGroupBox radioGroupBox1SpecifyTime, string directoryPath)
+        // radioButton3Random, radioButton2Newest, radioButton1Oldest, radioButton2_useTimefromSubdir, radioButton1_useTimefromFile, radioGroupBox3_UseTimeFrom, label_AccessedTime, label_ModificationTime, label_CreationTime, radioGroupBox2_CurrentSelectionTime, dateTimePickerTime, dateTimePickerDate, labelHidden_PathName, radioGroupBox1_SpecifyTime,
+        // RadioButton radioButton3Random, RadioButton radioButton2Newest, RadioButton radioButton1Oldest, RadioButton radioButton2UseTimefromSubdir, RadioButton radioButton1UseTimefromFile, RadioGroupBox radioGroupBox3UseTimeFrom, Label labelLastAccess, Label labelModified, Label labelCreationTime, RadioGroupBox radioGroupBox2CurrentSelectionTime, DateTimePicker dateTimePickerTime, DateTimePicker dateTimePickerDate, Label labelHiddenPathName, RadioGroupBox radioGroupBox1SpecifyTime, 
+        private static NameDateObject DecideWhichTimeMode2(DataModel dataModel, string directoryPath, guistatus gui)
         {
             var extractlist = new List<string>();
 
             var timelist = new List<NameDateObject>();
             var thingtoreturn = new NameDateObject();
 
-            if (radioGroupBox1SpecifyTime.Checked)
+            if (gui.radioGroupBox1SpecifyTime)
             {
-                thingtoreturn.Name = labelHiddenPathName.Text;
-                var specifiedDate = DateTime.Parse(dateTimePickerDate.Value.Date.ToString("d") + " " +
-                                                   dateTimePickerTime.Value.Hour + ":" +
-                                                   dateTimePickerTime.Value.Minute + ":" +
-                                                   dateTimePickerTime.Value.Second);
+                thingtoreturn.Name = gui.labelHiddenPathName;
+                var specifiedDate = DateTime.Parse(gui.dateTimePickerDate.Date.ToString("d") + " " +
+                                                   gui.dateTimePickerTime.Hour + ":" +
+                                                   gui.dateTimePickerTime.Minute + ":" +
+                                                   gui.dateTimePickerTime.Second);
                 thingtoreturn.Created = specifiedDate;
                 thingtoreturn.Modified = specifiedDate;
                 thingtoreturn.Accessed = specifiedDate;
             }
 
-            else if (radioGroupBox2CurrentSelectionTime.Checked)
+            else if (gui.radioGroupBox2CurrentSelect)
             {
-                thingtoreturn.Name = labelHiddenPathName.Text;
-                thingtoreturn.Created = DateTime.Parse(labelCreationTime.Text);
-                thingtoreturn.Modified = DateTime.Parse(labelModified.Text);
-                thingtoreturn.Accessed = DateTime.Parse(labelLastAccess.Text);
+                thingtoreturn.Name = gui.labelHiddenPathName;
+                thingtoreturn.Created = DateTime.Parse(gui.Created);
+                thingtoreturn.Modified = DateTime.Parse(gui.Modified);
+                thingtoreturn.Accessed = DateTime.Parse(gui.Accessed);
             }
                 //Begin checking Conditional for which file is newest oldest etc
-            else if (radioGroupBox3UseTimeFrom.Checked)
+            else if (gui.radioGroupBox3UseTimeFrom)
             {
                 //decide if they wanted to use time from subfile or subdir
-                if (radioButton1UseTimefromFile.Checked)
+                if (gui.radioButton1_useTimefromFile)
                 {
                     try
                     {
@@ -369,7 +371,7 @@ namespace genBTC.FileTime
                     catch (UnauthorizedAccessException)
                     {} //show nothing because this is normal for this method when encountering inaccessible files
                 }
-                else if (radioButton2UseTimefromSubdir.Checked)
+                else if (gui.radioButton2_useTimefromSubdir)
                 {
                     try
                     {
@@ -443,7 +445,7 @@ namespace genBTC.FileTime
 
                 //Decide which to use.
 
-                if (radioButton1Oldest.Checked)
+                if (gui.radioButton1Oldest)
                 {
                     //mode a: set ALL attributes to the oldest date of whichever attribute was oldest.                    
                     //                    dateToUse = (DateTime?)minarray[themin.minIndex];
@@ -460,7 +462,7 @@ namespace genBTC.FileTime
                     thingtoreturn.Accessed = acc.MinDate;
                 }
                     //the above comments obviously can apply to newer mode also with a small edit.
-                else if (radioButton2Newest.Checked)
+                else if (gui.radioButton2Newest)
                 {
                     //set each attribute to NEWest date from EACH attribute
                     thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
@@ -468,14 +470,14 @@ namespace genBTC.FileTime
                     thingtoreturn.Modified = mod.MaxDate;
                     thingtoreturn.Accessed = acc.MaxDate;
                 }
-                else if (radioButton3Random.Checked)
+                else if (gui.radioButton3Random)
                 {
                     //Mode A: (old) - removed the following 4 radio buttons
                     //pick a subfile/dir at random, then pick an attribute(C,M,A) at random
                     //    int randomindex = random.Next(0, timelist.Count);
                     //    filenameused = timelist[randomindex].Name;
 
-                    //    if (radioButton1_setfromCreated.Checked)
+                    //    if (radioButton1_setfromCreation.Checked)
                     //        thingtoreturn.Created = (DateTime?)threetimelists[0][randomindex];
                     //    if (radioButton2_setfromModified.Checked)
                     //        thingtoreturn.Modified = (DateTime?)threetimelists[1][randomindex];

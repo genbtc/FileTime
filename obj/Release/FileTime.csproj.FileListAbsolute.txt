@@ -18,7 +18,6 @@ C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTim
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\FileTime.exe
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\FileTime.xml
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\UIToolbox.RadioGroupBox.dll
-C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Classes.CustomListView.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_ChooseDate.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_About.resources
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_Confirm.resources
@@ -27,4 +26,5 @@ C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTim
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\FileTime.csproj.GenerateResource.Cache
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\FileTime.exe
 C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\FileTime.csprojResolveAssemblyReference.cache
-C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.FormPreferences.resources
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.mViewModels.CustomListView.resources
+C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\obj\Release\genBTC.FileTime.Form_Preferences.resources
