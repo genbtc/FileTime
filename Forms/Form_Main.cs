@@ -4,7 +4,9 @@
  *   /// FileTime: Sets the creation, last write and last access date and time of user selection with various options
  *   /// Version: 1.0
  *   /// Date: 17 July 2014, Last Modified: 8/26/2014
- *   ///                        comments    8/13/2017
+ *   ///               comments+Modified    8/13-14/2017
+ *   ///                   Heavily Modified 8/15/2017
+ *   ///                        Modified    8/16-17/2017
  * ###  Author: genBTC ###
  */
 
@@ -246,7 +248,8 @@ namespace genBTC.FileTime.Forms
         private void RefreshContentsRightPanel()
         {
             _dataModel.imageListFiles = imageList_Files;
-            DataModel.DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text);
+            //DataModel.DisplayContentsList(_dataModel, checkBox_Recurse.Checked, label_FPath.Text);
+            _dataModel.DisplayContentsList(checkBox_Recurse.Checked, label_FPath.Text);
             imageList_Files = _dataModel.imageListFiles;
             listView_Contents = _dataModel.listViewContents;
         }

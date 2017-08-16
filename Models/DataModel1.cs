@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
-using genBTC.FileTime.mViewModels;
-using genBTC.FileTime.Properties;
 
 namespace genBTC.FileTime.Models
 {
@@ -20,7 +17,7 @@ namespace genBTC.FileTime.Models
         /// <summary> Pass a list of files that had the read-only attribute fixed, so Form2 can display it </summary>
         public List<string> FilesReadOnlytoFix;
         /// <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
-        public List<NameDateObject> FilestoConfirmList;
+        internal List<NameDateObj> FilestoConfirmList;
 
         public ListView listViewContents;
 
@@ -40,7 +37,7 @@ namespace genBTC.FileTime.Models
             contentsFileList = new List<string>();
             filextlist = new List<string>();
             FilesReadOnlytoFix = new List<string>();
-            FilestoConfirmList = new List<NameDateObject>();
+            FilestoConfirmList = new List<NameDateObj>();
             Skips = new SkippedHSR();
             random = new Random();
         }
@@ -53,30 +50,31 @@ namespace genBTC.FileTime.Models
             listViewContents.Items.Clear();
         }
 
-
-        public static List<string> PopulateFileList(string path, DataModel dataModel)
+        public List<string> PopulateFileList(string path)
         {
             foreach (string filename in Directory.GetFiles(path))
-                dataModel.contentsFileList.Add(Path.GetFileName(filename));
-            return dataModel.contentsFileList;
+                contentsFileList.Add(Path.GetFileName(filename));
+            return contentsFileList;
         }
 
-        public static List<string> PopulateDirList(string path, DataModel dataModel)
+        public List<string> PopulateDirList(string path)
         {
             foreach (string subDirectory in Directory.GetDirectories(path))
-                dataModel.contentsDirList.Add(Path.GetFileName(subDirectory));
-            return dataModel.contentsDirList;
+                contentsDirList.Add(Path.GetFileName(subDirectory));
+            return contentsDirList;
         }
+
+
 
         /// <summary>
         /// Display subfiles and subdirectories in the right panel listview
         /// </summary>
         /// <param name="filesonly">Don't show the directories, only files.</param>
         /// reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
-        public static void DisplayContentsList(DataModel dataModel, bool checkboxRecurse, string labelname, bool filesonly = true)
+        public void DisplayContentsList(bool checkboxRecurse, string labelname, bool filesonly = true)
         {
             //Clear the contents UI + datamodel
-            dataModel.Clear();
+            this.Clear();
 
             string directoryName = labelname;
 
@@ -88,17 +86,17 @@ namespace genBTC.FileTime.Models
                 //part 1: list and store all the subdirectories
                 try
                 {
-                    PopulateDirList(directoryName, dataModel);
+                    PopulateDirList(directoryName);
                 }
                 catch (UnauthorizedAccessException)
                 { }
                 //Sort them
-                dataModel.contentsDirList.Sort(SharedHelper.explorerStringComparer());
+                this.contentsDirList.Sort(SharedHelper.explorerStringComparer());
                 //Add them to the listview.
-                foreach (string subDirectory in dataModel.contentsDirList)
+                foreach (string subDirectory in this.contentsDirList)
                 {
                     // Display all the sub directories using the directory icon (enum 1)
-                    dataModel.listViewContents.Items.Add(subDirectory, (int)ListViewIcon.Directory);
+                    this.listViewContents.Items.Add(subDirectory, (int)ListViewIcon.Directory);
                 }
             }
 
@@ -116,31 +114,30 @@ namespace genBTC.FileTime.Models
                     if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
                     {
                         //if not already in the list, then add it
-                        if (dataModel.filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
+                        if (this.filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
                         {
-                            dataModel.filextlist.Add(SharedHelper.CurrExten);
+                            this.filextlist.Add(SharedHelper.CurrExten);
                             //call NativeExtractIcon to get the filesystem icon of the filename
-                            dataModel.imageListFiles.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
+                            this.imageListFiles.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
                         }
                     }
                     else //if it is a shortcut, grab icon directly.
-                        dataModel.imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
+                        this.imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
 
-                    dataModel.contentsFileList.Add(justName);
+                    this.contentsFileList.Add(justName);
                 }
             }
             catch (UnauthorizedAccessException)
             { }
             //Sort them
-            dataModel.contentsFileList.Sort(SharedHelper.explorerStringComparer());
+            this.contentsFileList.Sort(SharedHelper.explorerStringComparer());
             //Add them to the listview.
-            foreach (string file in dataModel.contentsFileList)
+            foreach (string file in this.contentsFileList)
             {
                 string exten = Path.GetExtension(file);
-                dataModel.listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
+                this.listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
             }
         }
-
     //
     }
 }

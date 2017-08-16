@@ -7,7 +7,7 @@ namespace genBTC.FileTime.Forms
     public partial class Form_ChooseDate : Form
     {
         /// <summary> the date object that will be accessed by the other form </summary>
-        public NameDateObject Datechosen = new NameDateObject();
+        internal NameDateObj Datechosen = new NameDateObj();
 
         /// <summary>  a small form, used only for choosing a date. </summary>
         public Form_ChooseDate(ListViewItem theitem)

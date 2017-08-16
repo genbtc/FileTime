@@ -6,7 +6,7 @@ namespace genBTC.FileTime.mViewModels
 {
     /// <summary>
     /// Custom List View control that supports context menu, explorer-like sorting, and explorer-like styles.
-    /// (Currently used for FORM_CONFIRM
+    /// (Currently used for FORM_CONFIRM)
     /// </summary>
     public class CustomListView : ListView
     {
@@ -16,11 +16,9 @@ namespace genBTC.FileTime.mViewModels
         public static extern int SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
-        #endregion Native Imports
-
         private static extern int SetWindowTheme(IntPtr hWnd, string textSubAppName, string textSubIdList);
-
         private const int WM_CHANGEUISTATE = 0x127;
+        #endregion Native Imports
 
         /// <summary> keeps track of how often the selection is firing </summary>
         public Timer ItemSelectionChangedTimer;
@@ -35,7 +33,7 @@ namespace genBTC.FileTime.mViewModels
             View = View.Details;
             FullRowSelect = true;
             //Instanciate the listview with sorting activated:
-            //            this.ListViewItemSorter = new ListViewItemExplorerLikeComparer();
+            //            this.ListViewItemSorter = new ExplorerLikeComparer();
 
             //this removes the ugly dotted line around focused item:
             SendMessage(Handle, WM_CHANGEUISTATE, 0x10001, 0);

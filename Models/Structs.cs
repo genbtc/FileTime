@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* All Internal Structs or Enums */
+using System;
 
 namespace genBTC.FileTime.Models
 {

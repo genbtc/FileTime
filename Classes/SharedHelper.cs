@@ -4,7 +4,6 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using genBTC.FileTime.mViewModels;
 using genBTC.FileTime.Properties;
 
 namespace genBTC.FileTime.Classes
@@ -12,6 +11,14 @@ namespace genBTC.FileTime.Classes
     //This needs to be renamed to something once we figure out why all this stuff is allowed to be seperate, Sort it. Refactor it.
     class SharedHelper
     {
+        //native call to do string compare like the OS
+        [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
+        public static extern int StrCmpLogicalW(String x, String y);
+        public static IComparer<string> explorerStringComparer()
+        {
+            return new ExplorerLikeComparer();
+        }
+
         public static readonly char Seperator = Path.DirectorySeparatorChar;
         public static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
@@ -28,13 +35,6 @@ namespace genBTC.FileTime.Classes
             return attributes & ~attributesToRemove;
         }
 
-        //native call to do string compare like the OS
-        [DllImport("shlwapi.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
-        public static extern int StrCmpLogicalW(String x, String y);
-        public static IComparer<string> explorerStringComparer()
-        {
-            return new ExplorerComparerstringHelper();
-        }
         /// <summary>  Reasons to be invisible  </summary>
         public static FileAttributes SyncSettingstoInvisibleFlag()
         {

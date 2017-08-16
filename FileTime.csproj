@@ -125,21 +125,20 @@
     <Compile Include="AssemblyVersion.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\NameDateObject.cs" />
+    <Compile Include="Models\NameDateObj.cs" />
     <Compile Include="Models\DataModel1.cs" />
     <Compile Include="Models\Structs.cs" />
     <Compile Include="mViewModels\CustomListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\ExplorerComparerstringHelper.cs" />
-    <Compile Include="Classes\ListViewItemExplorerLikeComparer.cs" />
+    <Compile Include="Classes\ExplorerLikeSort.cs" />
     <Compile Include="Classes\Native\NativeScroll.cs" />
     <Compile Include="Classes\Native\NativeSelect.cs" />
-    <Compile Include="Models\OldNewDate.cs" />
+    <Compile Include="Models\DateNewOldObj.cs" />
     <Compile Include="Models\DataModel2.cs" />
     <Compile Include="Classes\Native\NativeExtractIcon.cs" />
     <Compile Include="Classes\SharedHelper.cs" />
-    <Compile Include="mViewModels\NameDateObjectListViewVm.cs" />
+    <Compile Include="mViewModels\NameDateObjListViewVMdl.cs" />
     <Compile Include="Forms\Form_ChooseDate.cs">
       <SubType>Form</SubType>
     </Compile>

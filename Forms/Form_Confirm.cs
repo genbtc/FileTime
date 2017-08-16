@@ -96,7 +96,7 @@ namespace genBTC.FileTime.Forms
         }
 
         /// <summary>
-        /// turn the NameDateObject lists from Form_Main into the listview on Form_Confirm </summary>
+        /// turn the NameDateObj lists from Form_Main into the listview on Form_Confirm </summary>
         /// use the results as the new data model.
         public void MakeListView()
         {
@@ -105,7 +105,7 @@ namespace genBTC.FileTime.Forms
             listView1_Confirm.BeginUpdate();
             listView1_Confirm.ItemChecked -= listView1_Confirm_ItemChecked; //event
             //this is wrapped in the event handlers -=, += because extremely modifying the collection with these handlers would cause lots of lag
-            foreach (NameDateObject newobject in _formmain._dataModel.FilestoConfirmList)
+            foreach (NameDateObj newobject in _formmain._dataModel.FilestoConfirmList)
             {
                 var theitem = new ListViewItem(newobject.Name, newobject.FileOrDirType);
                 theitem.SubItems.Add(newobject.Created.ToString());
@@ -358,14 +358,14 @@ namespace genBTC.FileTime.Forms
             //first sort the list.
             listView1_Confirm.BeginUpdate();
             //because it has to function on adjacent items, sort alphabetically first.
-            listView1_Confirm.ListViewItemSorter = new ListViewItemExplorerLikeComparer();
+            listView1_Confirm.ListViewItemSorter = new ExpLikeCmpHelperforListView();
             if (listView1_Confirm.Items.Count >= 2)
             {
                 for (int i = 0; i < listView1_Confirm.Items.Count - 1; i++)
                 {
-                    var thing1 = new NameDateObjectListViewVm(listView1_Confirm.Items[i]);
-                    var thing2 = new NameDateObjectListViewVm(listView1_Confirm.Items[i + 1]);
-                    var newthing = new NameDateObjectListViewVm();
+                    var thing1 = new NameDateObjListViewVMdl(listView1_Confirm.Items[i]);
+                    var thing2 = new NameDateObjListViewVMdl(listView1_Confirm.Items[i + 1]);
+                    var newthing = new NameDateObjListViewVMdl();
                     if (newthing.Compare(thing1, thing2))
                     {
                         listView1_Confirm.Items.RemoveAt(i);
@@ -390,7 +390,7 @@ namespace genBTC.FileTime.Forms
             var theitem = listView1_Confirm.SelectedItems[0];
             var dateform = new Form_ChooseDate(theitem);
             dateform.ShowDialog();
-            var dateToUse = new NameDateObject();
+            var dateToUse = new NameDateObj();
             if (dateform.DialogResult == DialogResult.OK)
                 dateToUse = dateform.Datechosen;
             Cursor.Current = Cursors.WaitCursor;

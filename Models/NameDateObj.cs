@@ -6,13 +6,13 @@ using genBTC.FileTime.Classes;
 namespace genBTC.FileTime.Models
 {
     /// <summary>Class object with 5 properties to refer to a file/dir</summary>
-    public class NameDateObject
+    internal class NameDateObj
     {
         //private time fields
         private DateTime? _a, _c, _m;
 
         /// <summary> constructor with a listviewitem </summary>
-        public NameDateObject(ListViewItem thing)
+        public NameDateObj(ListViewItem thing)
         {
             FileOrDirType = thing.ImageIndex;
             Name = thing.SubItems[0].Text;
@@ -22,7 +22,7 @@ namespace genBTC.FileTime.Models
         }
 
         /// <summary> default Constructor (Initializer)</summary>
-        public NameDateObject()
+        public NameDateObj()
         {
             Name = "";
             FileOrDirType = 0;
@@ -75,11 +75,11 @@ namespace genBTC.FileTime.Models
         }
 
         /// <summary>
-        /// Explorer-like Sort, that orders two NameDateObject's by their name property
+        /// Explorer-like Sort, that orders two NameDateObj's by their name property
         /// </summary>
-        public class ExplorerLikeSort : IComparer<NameDateObject>
+        public class ExplorerLikeSort : IComparer<NameDateObj>
         {
-            public int Compare(NameDateObject obj1, NameDateObject obj2)
+            public int Compare(NameDateObj obj1, NameDateObj obj2)
             {
                 return SharedHelper.StrCmpLogicalW(obj1.Name, obj2.Name);
             }

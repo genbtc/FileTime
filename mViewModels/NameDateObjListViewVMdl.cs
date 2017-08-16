@@ -3,13 +3,13 @@ using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime.mViewModels
 {
-    /// <summary>ViewModel version of the NameDateObject(Name + 3 Dates)</summary>
-    public class NameDateObjectListViewVm
+    /// <summary>ViewModel version of the NameDateObj(Name + 3 Dates)</summary>
+    internal class NameDateObjListViewVMdl
     {
         private string _a, _c, _m;
 
         /// <summary> construct with a listviewitem </summary>
-        public NameDateObjectListViewVm(ListViewItem thing)
+        public NameDateObjListViewVMdl(ListViewItem thing)
         {
             FileOrDirType = thing.ImageIndex;
             Name = thing.SubItems[0].Text;
@@ -18,8 +18,8 @@ namespace genBTC.FileTime.mViewModels
             Accessed = thing.SubItems[3].Text;
         }
 
-        /// <summary> construct with a NameDateObject </summary>
-        public NameDateObjectListViewVm(NameDateObject thing)
+        /// <summary> construct with a NameDateObj </summary>
+        public NameDateObjListViewVMdl(NameDateObj thing)
         {
             FileOrDirType = thing.FileOrDirType;
             Name = thing.Name;
@@ -29,7 +29,7 @@ namespace genBTC.FileTime.mViewModels
         }
 
         /// <summary> Empty default constructor (initializer) </summary>
-        public NameDateObjectListViewVm()
+        public NameDateObjListViewVMdl()
         {
             FileOrDirType = 0;
         }
@@ -75,7 +75,7 @@ namespace genBTC.FileTime.mViewModels
         /// Compares two of these objects's DATES, Combines any dates that are null or not null and returns only one
         /// Looks super stupid, but makes the "Try to combine DUPlicate filenames" actually work. Help ?
         /// </summary>
-        public bool Compare(NameDateObjectListViewVm thing1, NameDateObjectListViewVm thing2)
+        public bool Compare(NameDateObjListViewVMdl thing1, NameDateObjListViewVMdl thing2)
         {
             if (thing1.Name != thing2.Name) return false;
             //Created
