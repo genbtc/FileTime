@@ -25,6 +25,7 @@ namespace genBTC.FileTime.Forms
         //Stub to access Form_Main from this form
         private readonly List<string> _filextlist = new List<string>();
         private readonly Form_Main _formmain;
+        private DataModel dataModel;
 
         /// <summary> list of listview items's checkbox state bool values </summary>
         private List<bool> _checklist;
@@ -38,6 +39,7 @@ namespace genBTC.FileTime.Forms
         /// <summary> the fixreadonly active files count (checked in between fix and unfix) </summary>
         public int active = 0;
 
+        
         /// <summary> Form 2 creation and initialization code. </summary>
         /// <param name="f1">so we can modify publics in the main form</param>
         public Form_Confirm(Form_Main f1)
@@ -50,6 +52,7 @@ namespace genBTC.FileTime.Forms
             _itemsSetCount = 0;
 
             _formmain = f1;
+            dataModel = _formmain._dataModel;
 
             MakeListView();
         }
@@ -58,54 +61,18 @@ namespace genBTC.FileTime.Forms
 
         #region Main logic and actions, Buttons, Behind-Code and Logic Functions
 
-        /// <summary>
-        /// Show a message box of any files that were cleared of their read-only tag.
-        /// </summary>
-        public void FixReadonlyResults()
-        {
-            if ((_formmain._dataModel.FilesReadOnlytoFix.Count > 0) && (active == 0))
-            {
-                string listoffixedreadonlyfiles = "";
-                foreach (string file in _formmain._dataModel.FilesReadOnlytoFix)
-                    listoffixedreadonlyfiles += file + "\n";
-                DialogResult dr =
-                    MessageBox.Show(listoffixedreadonlyfiles + "\nRead-Only must be un-set to change date. Continue?",
-                        "Read-Only Files: ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    foreach (string file in _formmain._dataModel.FilesReadOnlytoFix)
-                    {
-                        FileAttributes fileattribs = File.GetAttributes(file);
-                        File.SetAttributes(file, SharedHelper.RemoveAttributes(fileattribs, FileAttributes.ReadOnly));
-                    }
-                    DialogResult dr2 = MessageBox.Show("Turn read-only back on when the confirm window is closed?",
-                        "Make Files Read-Only again?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr2 == DialogResult.No)
-                        _formmain._dataModel.FilesReadOnlytoFix.Clear();
-                    else
-                        active = _formmain._dataModel.FilesReadOnlytoFix.Count;
-                }
-                else
-                    _formmain._dataModel.FilesReadOnlytoFix.Clear();
-            }
-            else if (active > 0)
-            {
-                ResetReadOnly();
-                active = 0;
-            }
-        }
 
         /// <summary>
         /// turn the NameDateObj lists from Form_Main into the listview on Form_Confirm </summary>
         /// use the results as the new data model.
         public void MakeListView()
         {
-            FixReadonlyResults();
+            dataModel.FixReadonlyResults(active);
             _checklist = new List<bool>();
             listView1_Confirm.BeginUpdate();
             listView1_Confirm.ItemChecked -= listView1_Confirm_ItemChecked; //event
             //this is wrapped in the event handlers -=, += because extremely modifying the collection with these handlers would cause lots of lag
-            foreach (NameDateObj newobject in _formmain._dataModel.FilestoConfirmList)
+            foreach (NameDateObj newobject in dataModel.FilestoConfirmList)
             {
                 var theitem = new ListViewItem(newobject.Name, newobject.FileOrDirType);
                 theitem.SubItems.Add(newobject.Created.ToString());
@@ -138,17 +105,6 @@ namespace genBTC.FileTime.Forms
             StoreCheckboxes();
         }
 
-        /// <summary> Adds the read-only attribute back after it was removed </summary>
-        public void ResetReadOnly()
-        {
-            if (_formmain._dataModel.FilesReadOnlytoFix.Count <= 0)
-                return;
-            foreach (string file in _formmain._dataModel.FilesReadOnlytoFix)
-                File.SetAttributes(file, File.GetAttributes(file) | FileAttributes.ReadOnly);
-            // the | is needed for boolean algebra of attribute flags (it means: add readonly)
-            _formmain._dataModel.FilesReadOnlytoFix.Clear();
-        }
-
         /// <summary>
         ///Clear the main form's fileconfirm list if form2 is closed.
         ///If the user does not want to clear the list, they can leave the form_Confirm open
@@ -156,8 +112,8 @@ namespace genBTC.FileTime.Forms
         /// </summary>
         private void Form_Confirm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _formmain._dataModel.FilestoConfirmList.Clear();
-            ResetReadOnly();
+            dataModel.FilestoConfirmList.Clear();
+            dataModel.ResetReadOnly();
         }
 
         /// <summary>

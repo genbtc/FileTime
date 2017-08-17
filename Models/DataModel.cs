@@ -31,8 +31,7 @@ namespace genBTC.FileTime.Models
         internal BoolCMA checkboxes;
         internal guistatus gui;
         #endregion Vars
-
-
+        
         /// <summary>  Constructor  </summary>
         internal DataModel()
         {
@@ -70,10 +69,9 @@ namespace genBTC.FileTime.Models
         }
 
         /// <summary>
-        /// Display subfiles and subdirectories in the right panel listview
+        /// Display subfiles and subdirectories in the right panel listview  and show a file icon
         /// </summary>
         /// <param name="filesonly">Don't show the directories, only files.</param>
-        /// reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
         internal void DisplayContentsList(bool checkboxRecurse, string labelname, bool filesonly = true)
         {
             //Clear the datamodel + contents UI
@@ -84,9 +82,9 @@ namespace genBTC.FileTime.Models
             if (!Directory.Exists(directoryName))
                 return;
 
+            //Directories:
             if (!filesonly && checkboxRecurse)
             {
-                //part 1: resetList and store all the subdirectories
                 try
                 {
                     PopulateDirList(directoryName);
@@ -103,32 +101,10 @@ namespace genBTC.FileTime.Models
                 }
             }
 
-            // (Display all of the files and show a file icon)
+            //Files: (Display all of the files and show a file icon)
             try
             {
-                //part 2: resetList all subfiles, match the extension and find the icon.
-                foreach (string file in Directory.GetFiles(directoryName))
-                {
-                    var fileAttribs = File.GetAttributes(file);
-                    if ((fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) != 0)
-                        continue; //skip the rest if its supposed to be "invisible" based on the mask
-                    var justName = Path.GetFileName(file);
-                    SharedHelper.CurrExten = Path.GetExtension(file);
-                    if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
-                    {
-                        //if not already in the resetList, then add it
-                        if (filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
-                        {
-                            filextlist.Add(SharedHelper.CurrExten);
-                            //call NativeExtractIcon to get the filesystem icon of the filename
-                            listViewContents.LargeImageList.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
-                        }
-                    }
-                    else //if it is a shortcut, grab icon directly.
-                        imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
-
-                    contentsFileList.Add(justName);
-                }
+                AddImagesExtsToFileLists(directoryName);
             }
             catch (UnauthorizedAccessException)
             { }
@@ -139,6 +115,36 @@ namespace genBTC.FileTime.Models
             {
                 string exten = Path.GetExtension(file);
                 listViewContents.Items.Add(file, exten != ".lnk" ? exten : file);
+            }
+        }
+
+
+        /// <summary> Fill the contents list window with files's own Icons, given a directory name path </summary>
+        private void AddImagesExtsToFileLists(string directoryName)
+        {
+            contentsFileList.Clear();
+            //part 2: resetList all subfiles, match the extension and find the icon.
+            foreach (string file in Directory.GetFiles(directoryName))
+            {
+                var fileAttribs = File.GetAttributes(file);
+                if ((fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) != 0)
+                    continue; //skip the rest if its supposed to be "invisible" based on the mask
+                var justName = Path.GetFileName(file);
+                SharedHelper.CurrExten = Path.GetExtension(file);
+                if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
+                {
+                    //if not already in the resetList, then add it
+                    if (filextlist.FindLastIndex(SharedHelper.FindCurExt) == -1)
+                    {
+                        filextlist.Add(SharedHelper.CurrExten);
+                        //call NativeExtractIcon to get the filesystem icon of the filename
+                        imageListFiles.Images.Add(SharedHelper.CurrExten, NativeExtractIcon.GetIcon(file, true));
+                    }
+                }
+                else //if it is a shortcut, grab icon directly.
+                    imageListFiles.Images.Add(justName, NativeExtractIcon.GetIcon(file, true));
+
+                contentsFileList.Add(justName);
             }
         }
 
@@ -272,7 +278,7 @@ namespace genBTC.FileTime.Models
         /// </summary>
         /// <param name="directoryPath">Full path to the directory</param>
         /// req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        internal void RecurseSubDirectoryMode1(string directoryPath, bool checkedRecurse, bool checkedShouldFiles)
+        internal void RecurseSubDirectoryMode1(string directoryPath)
         {
             DateTime? nullorfileDateTime = DecideWhichTimeMode1(directoryPath);
             if (nullorfileDateTime == null)
@@ -280,10 +286,10 @@ namespace genBTC.FileTime.Models
             var fileDateTime = (DateTime)nullorfileDateTime;
 
             // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
-            if (checkedRecurse)
-                SetTimeDateEachDirectory(directoryPath, fileDateTime, true, checkedShouldFiles);
+            if (gui.checkboxRecurse)
+                SetTimeDateEachDirectory(directoryPath, fileDateTime);
             // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
-            if (checkedShouldFiles)
+            if (gui.checkboxShouldFiles)
                 SetTimeDateEachFile(directoryPath, fileDateTime);
         }
 
@@ -295,7 +301,20 @@ namespace genBTC.FileTime.Models
         {
             NameDateObj timeInside = DecideWhichTimeMode2(directoryPath);
             SkipOrAddFile(directoryPath, true);
-            NameDateObj subFile = Makedateobject(directoryPath, timeInside);
+
+            //Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
+            var currentobject = new NameDateObjListViewVMdl(timeInside) { Name = directoryPath, FileOrDirType = 1 };
+
+            //If Checkbox is selected:
+            if (!checkboxes.C)
+                currentobject.Created = "N/A"; // Set the Creation date/time if selected
+            if (!checkboxes.M)
+                currentobject.Modified = "N/A"; // Set the Modified date/time if selected
+            if (!checkboxes.A)
+                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
+
+            NameDateObj subFile = new NameDateObj(currentobject.Converter());
+
             FilestoConfirmList.Add(subFile);
 
             try
@@ -310,12 +329,12 @@ namespace genBTC.FileTime.Models
         }
 
         /// <summary>  Mode 1P (start at its Parent) </summary>
-        internal void RecurseSubDirectoryMode1Parent(string directoryPath, bool checkedRecurse, bool checkedShouldFiles)
+        internal void RecurseSubDirectoryMode1Parent(string directoryPath)
         {
             try
             {
                 foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode1(Path.Combine(directoryPath, subfolder), checkedRecurse, checkedShouldFiles);
+                    RecurseSubDirectoryMode1(Path.Combine(directoryPath, subfolder));
             }
             catch (UnauthorizedAccessException)
             { }
@@ -340,7 +359,7 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Set Directory Time
         /// </summary>
-        internal void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime, bool checkedRecurse, bool checkedShouldFiles)
+        internal void SetTimeDateEachDirectory(string directoryPath, DateTime fileDateTime)
         {
             try
             {
@@ -351,7 +370,7 @@ namespace genBTC.FileTime.Models
                     // Set the date/time for the sub directory
                     SetFileDateTimeMode1(eachdir, fileDateTime, true);
                     // Recurse (loop) through each sub-sub directory
-                    RecurseSubDirectoryMode1(eachdir, checkedRecurse, checkedShouldFiles);
+                    RecurseSubDirectoryMode1(eachdir);
                 }
             } //catch for GetDirs
             catch (UnauthorizedAccessException)
@@ -423,16 +442,7 @@ namespace genBTC.FileTime.Models
         internal void SetFileDateTimeMode1(string filePath, DateTime fileTime, bool isDirectory)
         {
             SkipOrAddFile(filePath, isDirectory);
-
-            NameDateObj currentobject = Makedateobject(filePath, fileTime, isDirectory);
-            FilestoConfirmList.Add(currentobject);
-        }
-
-        /// <summary>
-        /// Static. Overloaded. Make a NameDateObj out of 1 filename; writes A SINGLE time to all 3 date properties.
-        /// </summary>
-        internal NameDateObj Makedateobject(string filePath, DateTime fileTime, bool isDirectory)
-        {
+            //Make a NameDateObj out of 1 filename; Check all 3 date properties, and only write a time on match
             var currentobject = new NameDateObj { Name = filePath, FileOrDirType = SharedHelper.Bool2Int(isDirectory) };
 
             // Set the Creation date/time if selected
@@ -444,31 +454,16 @@ namespace genBTC.FileTime.Models
             // Set the last access time if selected
             if (checkboxes.A)
                 currentobject.Accessed = fileTime;
-            return currentobject;
-        }
-        /// <summary>
-        /// Static. Overloaded. Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
-        /// </summary>
-        internal NameDateObj Makedateobject(string folderPath, NameDateObj subObj)
-        {
-            var currentobject = new NameDateObjListViewVMdl(subObj) { Name = folderPath, FileOrDirType = 1 };
 
-            //If Checkbox is selected:
-            if (!checkboxes.C)
-                currentobject.Created = "N/A"; // Set the Creation date/time if selected
-            if (!checkboxes.M)
-                currentobject.Modified = "N/A"; // Set the Modified date/time if selected
-            if (!checkboxes.A)
-                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
-            return new NameDateObj(currentobject.Converter());
+            FilestoConfirmList.Add(currentobject);
         }
 
         /// <summary>
         /// Display the date and time of the selected file (also works on Directories)
         /// </summary>
-        internal DisplayCmaTimeData GetCmaTimes(string pathName)
+        internal NameDateStruct GetCmaTimes(string pathName)
         {
-            var cma = new DisplayCmaTimeData { PathName = pathName };
+            var cma = new NameDateStruct { PathName = pathName };
             if (cma.PathName != "")
             {
                 cma.Created = File.GetCreationTime(cma.PathName).ToString();
@@ -490,6 +485,35 @@ namespace genBTC.FileTime.Models
             return cma;
         }
 
+        private NameDateObj thingtoreturn;
+        internal bool DecideTimeRG1and2(string directoryPath)
+        {
+
+            thingtoreturn = new NameDateObj();
+
+            if (gui.radioGroupBox1SpecifyTime)
+            {
+                thingtoreturn.Name = gui.PathName;
+                var specifiedDate = DateTime.Parse(gui.dateTimePickerDate.Date.ToString("d") + " " +
+                                                   gui.dateTimePickerTime.Hour + ":" +
+                                                   gui.dateTimePickerTime.Minute + ":" +
+                                                   gui.dateTimePickerTime.Second);
+                thingtoreturn.Created = specifiedDate;
+                thingtoreturn.Modified = specifiedDate;
+                thingtoreturn.Accessed = specifiedDate;
+                return false;
+            }
+            else if (gui.radioGroupBox2CurrentSelect)
+            {
+                thingtoreturn.Name = gui.PathName;
+                thingtoreturn.Created = DateTime.Parse(gui.Created);
+                thingtoreturn.Modified = DateTime.Parse(gui.Modified);
+                thingtoreturn.Accessed = DateTime.Parse(gui.Accessed);
+                return false;
+            }
+            else
+                return true;
+        }
         /// <summary>
         /// Very long function that does a simple task. Read in the options the user set for the operation, and
         /// Decide on the timestamp it should use, by the end we will have a single object with 3 times.
@@ -500,26 +524,9 @@ namespace genBTC.FileTime.Models
             var extractlist = new List<string>();
 
             var timelist = new List<NameDateObj>();
-            var thingtoreturn = new NameDateObj();
 
-            if (gui.radioGroupBox1SpecifyTime)
-            {
-                thingtoreturn.Name = gui.labelHiddenPathName;
-                var specifiedDate = DateTime.Parse(gui.dateTimePickerDate.Date.ToString("d") + " " +
-                                                   gui.dateTimePickerTime.Hour + ":" +
-                                                   gui.dateTimePickerTime.Minute + ":" +
-                                                   gui.dateTimePickerTime.Second);
-                thingtoreturn.Created = specifiedDate;
-                thingtoreturn.Modified = specifiedDate;
-                thingtoreturn.Accessed = specifiedDate;
-            }
-            else if (gui.radioGroupBox2CurrentSelect)
-            {
-                thingtoreturn.Name = gui.labelHiddenPathName;
-                thingtoreturn.Created = DateTime.Parse(gui.Created);
-                thingtoreturn.Modified = DateTime.Parse(gui.Modified);
-                thingtoreturn.Accessed = DateTime.Parse(gui.Accessed);
-            }
+            if (!DecideTimeRG1and2(directoryPath))
+                ;
             //Begin checking Conditional for which file is newest oldest etc
             else if (gui.radioGroupBox3UseTimeFrom)
             {
@@ -685,5 +692,52 @@ namespace genBTC.FileTime.Models
             return thingtoreturn;
         }
         //;
+
+        /// <summary>
+        /// Show a message box of any files that were cleared of their read-only tag.
+        /// </summary>
+        internal void FixReadonlyResults(int active)
+        {
+            if ((FilesReadOnlytoFix.Count > 0) && (active == 0))
+            {
+                string listoffixedreadonlyfiles = "";
+                foreach (string file in FilesReadOnlytoFix)
+                    listoffixedreadonlyfiles += file + "\n";
+                DialogResult dr =
+                    MessageBox.Show(listoffixedreadonlyfiles + "\nRead-Only must be un-set to change date. Continue?",
+                        "Read-Only Files: ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    foreach (string file in FilesReadOnlytoFix)
+                    {
+                        FileAttributes fileattribs = File.GetAttributes(file);
+                        File.SetAttributes(file, SharedHelper.RemoveAttributes(fileattribs, FileAttributes.ReadOnly));
+                    }
+                    DialogResult dr2 = MessageBox.Show("Turn read-only back on when the confirm window is closed?",
+                        "Make Files Read-Only again?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr2 == DialogResult.No)
+                        FilesReadOnlytoFix.Clear();
+                    else
+                        active = FilesReadOnlytoFix.Count;
+                }
+                else
+                    FilesReadOnlytoFix.Clear();
+            }
+            else if (active > 0)
+            {
+                ResetReadOnly();
+                active = 0;
+            }
+        }
+        /// <summary> Adds the read-only attribute back after it was removed </summary>
+        internal void ResetReadOnly()
+        {
+            if (FilesReadOnlytoFix.Count <= 0)
+                return;
+            foreach (string file in FilesReadOnlytoFix)
+                File.SetAttributes(file, File.GetAttributes(file) | FileAttributes.ReadOnly);
+            // the | is needed for boolean algebra of attribute flags (it means: add readonly)
+            FilesReadOnlytoFix.Clear();
+        }
     }
 }

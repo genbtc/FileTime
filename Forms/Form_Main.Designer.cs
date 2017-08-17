@@ -123,7 +123,7 @@ namespace genBTC.FileTime.Forms
             this.radioButton3_AccessedDate = new System.Windows.Forms.RadioButton();
             this.label_AccessedTime = new System.Windows.Forms.Label();
             this.radioButtonPanel1_DecideWhichTime = new UIToolbox.RadioButtonPanel();
-            this.radioGroupBox1_pickFolderForCompare = new UIToolbox.RadioGroupBox();
+            this.radioGroupBox4_pickFolderForCompare = new UIToolbox.RadioGroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3_AccessedDate = new System.Windows.Forms.Label();
             this.label2_ModifiedDate = new System.Windows.Forms.Label();
@@ -153,7 +153,7 @@ namespace genBTC.FileTime.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dataModelBindingSource)).BeginInit();
             this.groupBoxCMA.SuspendLayout();
             this.radioButtonPanel1_DecideWhichTime.SuspendLayout();
-            this.radioGroupBox1_pickFolderForCompare.SuspendLayout();
+            this.radioGroupBox4_pickFolderForCompare.SuspendLayout();
             this.radioGroupBox3_UseTimeFrom.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -323,6 +323,7 @@ namespace genBTC.FileTime.Forms
             this.label_FPath.Name = "label_FPath";
             this.label_FPath.Size = new System.Drawing.Size(353, 21);
             this.label_FPath.TabIndex = 1;
+            // 
             // dataModelBindingSource
             // 
             this.dataModelBindingSource.DataSource = typeof(genBTC.FileTime.Models.DataModel);
@@ -347,6 +348,7 @@ namespace genBTC.FileTime.Forms
             this.checkBox_Recurse.Size = new System.Drawing.Size(172, 18);
             this.checkBox_Recurse.TabIndex = 9;
             this.checkBox_Recurse.Text = "Recurse Sub-Directories";
+            this.checkBox_Recurse.CheckedChanged += new System.EventHandler(this.checkBox_Recurse_CheckedChanged);
             // 
             // checkBoxShouldFiles
             // 
@@ -361,6 +363,7 @@ namespace genBTC.FileTime.Forms
             this.checkBoxShouldFiles.TabIndex = 8;
             this.checkBoxShouldFiles.Text = "Perform the operation on FILES inside also";
             this.checkBoxShouldFiles.UseVisualStyleBackColor = true;
+            this.checkBoxShouldFiles.CheckedChanged += new System.EventHandler(this.checkBoxShouldFiles_CheckedChanged);
             // 
             // groupBoxCMA
             // 
@@ -475,7 +478,7 @@ namespace genBTC.FileTime.Forms
             // 
             this.radioButtonPanel1_DecideWhichTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButtonPanel1_DecideWhichTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox1_pickFolderForCompare);
+            this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.radioGroupBox4_pickFolderForCompare);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_CreationTime);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label3_AccessedDate);
             this.radioButtonPanel1_DecideWhichTime.Controls.Add(this.label_ModificationTime);
@@ -493,13 +496,13 @@ namespace genBTC.FileTime.Forms
             // 
             // radioGroupBox1_pickFolderForCompare
             // 
-            this.radioGroupBox1_pickFolderForCompare.Controls.Add(this.label1);
-            this.radioGroupBox1_pickFolderForCompare.Location = new System.Drawing.Point(9, 82);
-            this.radioGroupBox1_pickFolderForCompare.Name = "radioGroupBox1_pickFolderForCompare";
-            this.radioGroupBox1_pickFolderForCompare.Size = new System.Drawing.Size(114, 73);
-            this.radioGroupBox1_pickFolderForCompare.TabIndex = 13;
-            this.radioGroupBox1_pickFolderForCompare.TabStop = false;
-            this.radioGroupBox1_pickFolderForCompare.Text = " ";
+            this.radioGroupBox4_pickFolderForCompare.Controls.Add(this.label1);
+            this.radioGroupBox4_pickFolderForCompare.Location = new System.Drawing.Point(9, 82);
+            this.radioGroupBox4_pickFolderForCompare.Name = "radioGroupBox1_pickFolderForCompare";
+            this.radioGroupBox4_pickFolderForCompare.Size = new System.Drawing.Size(114, 73);
+            this.radioGroupBox4_pickFolderForCompare.TabIndex = 13;
+            this.radioGroupBox4_pickFolderForCompare.TabStop = false;
+            this.radioGroupBox4_pickFolderForCompare.Text = " ";
             // 
             // label1
             // 
@@ -835,8 +838,8 @@ namespace genBTC.FileTime.Forms
             this.groupBoxCMA.ResumeLayout(false);
             this.radioButtonPanel1_DecideWhichTime.ResumeLayout(false);
             this.radioButtonPanel1_DecideWhichTime.PerformLayout();
-            this.radioGroupBox1_pickFolderForCompare.ResumeLayout(false);
-            this.radioGroupBox1_pickFolderForCompare.PerformLayout();
+            this.radioGroupBox4_pickFolderForCompare.ResumeLayout(false);
+            this.radioGroupBox4_pickFolderForCompare.PerformLayout();
             this.radioGroupBox3_UseTimeFrom.ResumeLayout(false);
             this.radioGroupBox3_UseTimeFrom.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -864,7 +867,7 @@ namespace genBTC.FileTime.Forms
         private ToolTip toolTip1;
         private WindowsExplorer.ExplorerTree explorerTree1;
         private SplitContainer splitContainer1;
-        private UIToolbox.RadioGroupBox radioGroupBox1_pickFolderForCompare;
+        private UIToolbox.RadioGroupBox radioGroupBox4_pickFolderForCompare;
         private Label label1;
         private BindingSource dataModelBindingSource;
 

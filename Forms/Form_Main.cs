@@ -52,7 +52,9 @@ namespace genBTC.FileTime.Forms
                 radioButton3Random = radioButton3_Random.Checked,
                 dateTimePickerDate = dateTimePicker_Date.Value,
                 dateTimePickerTime = dateTimePicker_Time.Value,
-                labelHiddenPathName = labelHidden_PathName.Text
+                PathName = labelHidden_PathName.Text,
+                checkboxRecurse = checkBox_Recurse.Checked,
+                checkboxShouldFiles = checkBoxShouldFiles.Checked
             };
 
             return radios;
@@ -125,7 +127,7 @@ namespace genBTC.FileTime.Forms
                 explorerTree1.BrowseTo();
                 RefreshContentsRightPanel();
             }
-            catch //very broad catch, with no reason or explanation?
+            catch //Catches any errors caused by starting up in a non existing directory, and make sure using the explorer tree is safe.
             {
                 ClearOnError();
             }
@@ -137,18 +139,23 @@ namespace genBTC.FileTime.Forms
 
         private void button_Browse_Click(object sender, EventArgs e)
         {
-            string path = SharedHelper.OpenFile(CwdPathName);
-
+            string path = SharedHelper.OpenFilePicker(CwdPathName);
+            //safer when we get the path out of a file picker.
             explorerTree1.SetCurrentPath(path);
             explorerTree1.BrowseTo();
         }
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
+            
             string comparefolder;
-            if (radioGroupBox1_pickFolderForCompare.Checked)
-                comparefolder = SharedHelper.OpenFile(CwdPathName);
+            if (radioGroupBox4_pickFolderForCompare.Checked)
+            {
+                comparefolder = SharedHelper.OpenFilePicker(CwdPathName);
+                StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
+            }
+            else
+                StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
         }
 
         #endregion Buttons
@@ -157,7 +164,7 @@ namespace genBTC.FileTime.Forms
         //Menu items:
         private void menuItem_FileOpen_Click(object sender, EventArgs e)
         {
-            SharedHelper.OpenFile(CwdPathName);
+            SharedHelper.OpenFilePicker(CwdPathName);
         }
 
         private void menuItem_FileExit_Click(object sender, EventArgs e)
@@ -254,6 +261,7 @@ namespace genBTC.FileTime.Forms
         {
             var checkboxes = QueryCMAcheckboxes();
             button_GoUpdate.Enabled = (checkboxes.C | checkboxes.M | checkboxes.A);
+            _dataModel.checkboxes = checkboxes;
         }
 
         /// <summary>
@@ -284,8 +292,9 @@ namespace genBTC.FileTime.Forms
         { 
             // Display the folder path and the contents of it.
             _dataModel.DisplayContentsList(checkBox_Recurse.Checked, CwdPathName);
-            imageList_Files = _dataModel.imageListFiles;
-            listView_Contents = _dataModel.listViewContents;
+            //Copy these 2 over manually. they need to get shoved into the UI
+            //imageList_Files = _dataModel.imageListFiles;
+            //listView_Contents = _dataModel.listViewContents;
         }
 
         /// <summary>  Return the value of the checkboxes "CMA Time"   </summary>
@@ -297,9 +306,19 @@ namespace genBTC.FileTime.Forms
                 M = checkBox_ModifiedDateTime.Checked,
                 A = checkBox_AccessedDateTime.Checked
             };
+            _dataModel.checkboxes = checkboxes;
             return checkboxes;
         }
 
+        private void checkBox_Recurse_CheckedChanged(object sender, EventArgs e)
+        {
+            _dataModel.gui.checkboxRecurse = ((CheckBox)sender).Checked;
+        }
+
+        private void checkBoxShouldFiles_CheckedChanged(object sender, EventArgs e)
+        {
+            _dataModel.gui.checkboxShouldFiles = ((CheckBox)sender).Checked;
+        }
         /// <summary>
         /// Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
         /// </summary>
@@ -347,6 +366,7 @@ namespace genBTC.FileTime.Forms
         /// <summary>
         /// Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
         /// then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+        /// This is a nice staging point place for making EVERYTHING happen.
         /// </summary>
         private void StartUpBothModes1And2(int mode2, string startingdir)
         {
@@ -362,7 +382,7 @@ namespace genBTC.FileTime.Forms
             {
                 case (0):
                     if (Confirmation.active > 0)
-                        Confirmation.FixReadonlyResults();
+                        _dataModel.FixReadonlyResults(Confirmation.active);
 
                     if (Settings.Default.mode1addrootdir)
                     {
@@ -381,18 +401,20 @@ namespace genBTC.FileTime.Forms
 
                     //TODO: where I should add worker process
                     if (Settings.Default.useRootDirAsContainer)
-                        _dataModel.RecurseSubDirectoryMode1Parent(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked);
+                        _dataModel.RecurseSubDirectoryMode1Parent(startingdir);
                     else
-                        _dataModel.RecurseSubDirectoryMode1(startingdir, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked);
+                        _dataModel.RecurseSubDirectoryMode1(startingdir);
                     //end worker process
                     break;
 
                 case (1):
+                    //TODO: here too:
                     if (Settings.Default.useRootDirAsContainer)
                         _dataModel.RecurseSubDirectoryMode2Parent(startingdir);
                     else
                         _dataModel.RecurseSubDirectoryMode2(startingdir);
                     break;
+                //TODO: THREEDO: combine both.
             }
 
             var itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.S;
@@ -421,6 +443,7 @@ namespace genBTC.FileTime.Forms
         }
 
         #endregion >>Main Logic Code<<
+        // Program Logic continues in FORM_CONFIRM.cs
     }
     #endregion FORM_MAIN1
 }

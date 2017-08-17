@@ -7,13 +7,13 @@ using System.Resources;
 // associated with an assembly.
 //
 
-[assembly: AssemblyTitle("FileTime")]
+[assembly: AssemblyTitle("FileTime v1.1")]
 [assembly:
     AssemblyDescription("Sets the creation, last write and last access date and time of user selected files/folders")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("genBTC")]
 [assembly: AssemblyProduct("genBTC Project: FileTime")]
-[assembly: AssemblyCopyright("© 2014: genBTC")]
+[assembly: AssemblyCopyright("© 2014: genBTC (modified 2017)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,7 +28,7 @@ using System.Resources;
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.1.1.*")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the

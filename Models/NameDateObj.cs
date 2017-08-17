@@ -8,8 +8,12 @@ namespace genBTC.FileTime.Models
     /// <summary>Class object with 5 properties to refer to a file/dir</summary>
     internal class NameDateObj
     {
+
         //private time fields
         private DateTime? _a, _c, _m;
+
+        public bool isBlank;
+        public object which;
 
         /// <summary> constructor with a listviewitem </summary>
         public NameDateObj(ListViewItem thing)
@@ -19,6 +23,8 @@ namespace genBTC.FileTime.Models
             Created = Listviewtodateornull(thing.SubItems[1].Text);
             Modified = Listviewtodateornull(thing.SubItems[2].Text);
             Accessed = Listviewtodateornull(thing.SubItems[3].Text);
+            isBlank = false;
+            which = null;
         }
 
         /// <summary> default Constructor (Initializer)</summary>
@@ -26,6 +32,8 @@ namespace genBTC.FileTime.Models
         {
             Name = "";
             FileOrDirType = 0;
+            isBlank = true;
+            which = null;
         }
 
         /// <summary>quick flag to know whether we're a file or a dir
