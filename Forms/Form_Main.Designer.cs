@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using WindowsExplorer;
+using UIToolbox;
 
 namespace genBTC.FileTime.Forms
 {
@@ -8,7 +11,7 @@ namespace genBTC.FileTime.Forms
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -59,19 +62,19 @@ namespace genBTC.FileTime.Forms
         private RadioButton radioButton3_setfromAccessed;
         private RadioButton radioButton2_setfromModified;
         private RadioButton radioButton1_setfromCreation;
-        private UIToolbox.RadioButtonPanel radioButtonPanel1_DecideWhichTime;
-        private UIToolbox.RadioGroupBox radioGroupBox3_UseTimeFrom;
-        private UIToolbox.RadioGroupBox radioGroupBox1_SpecifyTime;
+        private RadioButtonPanel radioButtonPanel1_DecideWhichTime;
+        private RadioGroupBox radioGroupBox3_UseTimeFrom;
+        private RadioGroupBox radioGroupBox1_SpecifyTime;
         private Panel panel1;
         private Panel panel2;
         private RadioButton radioButton3_Random;
         private RadioButton radioButton2_Newest;
         private RadioButton radioButton1_Oldest;
-        private UIToolbox.RadioGroupBox radioGroupBox2_CurrentSelectionTime;
+        private RadioGroupBox radioGroupBox2_CurrentSelectionTime;
         private Label label3_AccessedDate;
         private Label label2_ModifiedDate;
         private Label label1_CreationDate;
-        private UIToolbox.RadioButtonPanel radioButtonPanel2;
+        private RadioButtonPanel radioButtonPanel2;
         private Panel panel3;
         private RadioButton radioButton2_useTimefromSubdir;
         private RadioButton radioButton1_useTimefromFile;
@@ -865,9 +868,9 @@ namespace genBTC.FileTime.Forms
         private TabPage tabPage1;
         private TabPage tabPage2;
         private ToolTip toolTip1;
-        private WindowsExplorer.ExplorerTree explorerTree1;
+        private ExplorerTree explorerTree1;
         private SplitContainer splitContainer1;
-        private UIToolbox.RadioGroupBox radioGroupBox4_pickFolderForCompare;
+        private RadioGroupBox radioGroupBox4_pickFolderForCompare;
         private Label label1;
         private BindingSource dataModelBindingSource;
 

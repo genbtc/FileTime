@@ -1,4 +1,5 @@
 ﻿/* All Internal Structs or Enums */
+
 using System;
 
 namespace genBTC.FileTime.Models
@@ -95,5 +96,5 @@ namespace genBTC.FileTime.Models
 
         /// <summary> Directory icon in listView image list </summary>
         Directory = 1
-    };
+    }
 }

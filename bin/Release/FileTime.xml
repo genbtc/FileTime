@@ -94,6 +94,9 @@
         <member name="F:genBTC.FileTime.Models.DataModel.FilesReadOnlytoFix">
             <summary> Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </summary>
         </member>
+        <member name="F:genBTC.FileTime.Models.DataModel.fixreadonlyActive">
+            <summary> the fixreadonly fixreadonlyActive files count (checked in between fix and unfix) </summary>
+        </member>
         <member name="F:genBTC.FileTime.Models.DataModel.FilestoConfirmList">
             <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
         </member>
@@ -103,12 +106,19 @@
         <member name="M:genBTC.FileTime.Models.DataModel.Clear(System.Boolean)">
             <summary> Clear contents Dir + File lists </summary>
         </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.GetCmaTimesFromFilesystem(System.String)">
+            <summary>
+            Display the date and time of the selected file (also works on Directories)
+            </summary>
+        </member>
         <member name="M:genBTC.FileTime.Models.DataModel.DisplayContentsList(System.Boolean,System.String,System.Boolean)">
             <summary>
-            Display subfiles and subdirectories in the right panel listview
+            Display subfiles and subdirectories in the right panel listview  and show a file icon
             </summary>
             <param name="filesonly">Don't show the directories, only files.</param>
-            reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.AddImagesExtsToFileLists(System.String)">
+            <summary> Fill the contents list window with files's own Icons, given a directory name path </summary>
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1(System.String)">
             <summary>
@@ -121,7 +131,7 @@
             Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String,System.Boolean,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1(System.String)">
             <summary>
             Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
             (Only adds to the confirm list, Form 2 will actually write changes).
@@ -135,13 +145,10 @@
             </summary>
             <param name="directoryPath">Path to start in.</param>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String,System.Boolean,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String)">
             <summary>  Mode 1P (start at its Parent) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent(System.String)">
-            <summary>  Mode 2P (start at its Parent)  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime,System.Boolean,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory(System.String,System.DateTime)">
             <summary>
             Set Directory Time
             </summary>
@@ -151,35 +158,19 @@
             Set File Time
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SkipOrAddFile(System.String,System.Boolean)">
-            <summary>
-            Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1(System.String,System.DateTime,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList(System.String,System.DateTime,System.Boolean)">
             <summary> STATIC.
             Set the date/time for a single file/directory (This works on files and directories)
             Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
             (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
             </summary>
-            Requires: Pass in the datamodel and the checkbox states.
             <param name="filePath">Full path to the file/directory</param>
             <param name="fileTime">Date/Time to set the file/directory</param>
             <param name="isDirectory">Is this a directory???</param>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Makedateobject(System.String,System.DateTime,System.Boolean)">
+        <member name="M:genBTC.FileTime.Models.DataModel.SkipOrAddFile(System.String,System.Boolean)">
             <summary>
-            Static. Overloaded. Make a NameDateObj out of 1 filename; writes A SINGLE time to all 3 date properties.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.Makedateobject(System.String,genBTC.FileTime.Models.NameDateObj)">
-            <summary>
-            Static. Overloaded. Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.GetCmaTimes(System.String)">
-            <summary>
-            Display the date and time of the selected file (also works on Directories)
+            Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.DecideWhichTimeMode2(System.String)">
@@ -188,6 +179,14 @@
             Decide on the timestamp it should use, by the end we will have a single object with 3 times.
             This will need to be hit with broad strokes if we attempt to do any more work on the program.
             </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.FixReadonlyResults">
+            <summary>
+            Show a message box of any files that were cleared of their read-only tag.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.ResetReadOnly">
+            <summary> Adds the read-only attribute back after it was removed </summary>
         </member>
         <member name="T:genBTC.FileTime.Models.NameDateObj">
             <summary>Class object with 5 properties to refer to a file/dir</summary>
@@ -235,7 +234,7 @@
         <member name="M:genBTC.FileTime.Models.SkippedHSR.Reset">
             <summary>  Reset the skip count of Hidden system and readonly files  </summary>
         </member>
-        <member name="T:genBTC.FileTime.Models.DisplayCmaTimeData">
+        <member name="T:genBTC.FileTime.Models.NameDateStruct">
             <summary>  Store some the fields that the GUI uses. Small Version. </summary>
         </member>
         <member name="T:genBTC.FileTime.Models.guistatus">
@@ -459,7 +458,7 @@
         <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
             <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFile(System.String)">
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String)">
             <summary>
             Display the Folder Browser Dialog and then display the selected
             file path and the directories and files in the folder.
@@ -502,17 +501,10 @@
         <member name="F:genBTC.FileTime.Forms.Form_Confirm._itemsSetCount">
             <summary> Count of the number of files/directories that have been set </summary>
         </member>
-        <member name="F:genBTC.FileTime.Forms.Form_Confirm.active">
-            <summary> the fixreadonly active files count (checked in between fix and unfix) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.#ctor(genBTC.FileTime.Forms.Form_Main)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.#ctor(genBTC.FileTime.Models.DataModel)">
             <summary> Form 2 creation and initialization code. </summary>
-            <param name="f1">so we can modify publics in the main form</param>
-        </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.FixReadonlyResults">
-            <summary>
-            Show a message box of any files that were cleared of their read-only tag.
-            </summary>
+            <param name="f1DataModel"></param>
+            
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.MakeListView">
             <summary>
@@ -521,9 +513,6 @@
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.UpdateStatusBar">
             <summary> Show current number of files on the status bar line, and store all checkboxes each time </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.ResetReadOnly">
-            <summary> Adds the read-only attribute back after it was removed </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
              <summary>
@@ -662,7 +651,7 @@
         <member name="F:genBTC.FileTime.Forms.Form_Main.Confirmation">
             <summary> Stub for Form 2 to be accessed once it is opened. </summary>
         </member>
-        <member name="F:genBTC.FileTime.Forms.Form_Main.itemSelectionChangedTimer">
+        <member name="F:genBTC.FileTime.Forms.Form_Main._itemSelectionChangedTimer">
             <summary>  a Timer to keep track of the selected line, prevents clicking too fast (timeout)</summary>
         </member>
         <member name="F:genBTC.FileTime.Forms.Form_Main.SELECTION_TIMEOUT">
@@ -675,7 +664,7 @@
             <summary> After the InitializeComponent() loads the designer, the designer will fire an event handler signifying its done loading</summary>
         </member>
         <member name="P:genBTC.FileTime.Forms.Form_Main.CwdPathName">
-            <summary> Public Setter to the private var in Datamodel.  </summary>
+            <summary> Public Setter to the private variable in Datamodel.  </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.RefreshDataBinding_labelFPath">
             <summary>
@@ -690,7 +679,7 @@
         <member name="M:genBTC.FileTime.Forms.Form_Main.menuItem_Preferences_Click(System.Object,System.EventArgs)">
             <summary> Create and initialize preferences </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Main._ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.ItemSelectionChangedTimer_Tick(System.Object,System.EventArgs)">
             <summary>
             Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
             when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() ---
@@ -716,6 +705,7 @@
         <member name="M:genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel">
             <summary>
             Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+            TODO: Can be moved to model later.
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes">
@@ -734,10 +724,23 @@
         <member name="M:genBTC.FileTime.Forms.Form_Main.CallDisplayCma(System.Windows.Forms.ListView,System.String)">
             <summary>  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma </summary>
         </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpMode3(System.Int32,System.String)">
+            <summary>
+            Mode 3. Recursive, file Tree time compare mode.
+            </summary>
+            <param name="mode2"></param>
+            <param name="startingdir"></param>
+        </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
             <summary>
             Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
             then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+            This is a nice staging point place for making EVERYTHING happen.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse">
+            <summary>
+            Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.LaunchForm2Go">

@@ -19,7 +19,7 @@ namespace genBTC.FileTime.Forms
         public Form_Preferences(string currentdirParam)
         {
             InitializeComponent();
-            this._currentdir = currentdirParam;
+            _currentdir = currentdirParam;
         }
 
         //OK button saves stuff

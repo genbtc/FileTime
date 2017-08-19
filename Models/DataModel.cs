@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
@@ -16,6 +18,8 @@ namespace genBTC.FileTime.Models
         internal List<string> contentsDirList, contentsFileList, filextlist;
         /// <summary> Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </summary>
         internal List<string> FilesReadOnlytoFix;
+        /// <summary> the fixreadonly fixreadonlyActive files count (checked in between fix and unfix) </summary>
+        public int fixreadonlyActive = 0;
         /// <summary> List of Class to be passed to Form 2 for confirmation of files</summary>
         internal List<NameDateObj> FilestoConfirmList;
 
@@ -54,6 +58,41 @@ namespace genBTC.FileTime.Models
                 listViewContents.Items.Clear();
         }
 
+        /// <summary>
+        /// Display the date and time of the selected file (also works on Directories)
+        /// </summary>
+        public static NameDateStruct GetCmaTimesFromFilesystem(string pathName)
+        {
+            NameDateStruct cma;
+            if (pathName != "")
+            {
+                cma = new NameDateStruct
+                {
+                    PathName = pathName,
+                    Created = File.GetCreationTime(pathName).ToString(CultureInfo.CurrentCulture),
+                    Modified = File.GetLastWriteTime(pathName).ToString(CultureInfo.CurrentCulture),
+                    Accessed = File.GetLastAccessTime(pathName).ToString(CultureInfo.CurrentCulture),
+                    HiddenPathName = pathName,
+                    Selected = true
+                };
+            }
+            else
+            {
+                // Maybe no file/directory is selected
+                // Then Blank out the display of date/time.
+                cma = new NameDateStruct
+                {
+                    PathName = pathName,
+                    Created = "",
+                    Modified = "",
+                    Accessed = "",
+                    HiddenPathName = "",
+                    Selected = false
+                };
+            }
+            return cma;
+        }
+
         internal List<string> PopulateFileList(string path)
         {
             foreach (string filename in Directory.GetFiles(path))
@@ -65,6 +104,8 @@ namespace genBTC.FileTime.Models
         {
             foreach (string subDirectory in Directory.GetDirectories(path))
                 contentsDirList.Add(Path.GetFileName(subDirectory));
+            //Get a list of files in the selected folder (This can't be done in .NET 2.0)
+            //IEnumerable files = Directory.EnumerateFiles(path, "*", SearchOption.AllDirectories);
             return contentsDirList;
         }
 
@@ -314,7 +355,7 @@ namespace genBTC.FileTime.Models
                 currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
 
             NameDateObj subFile = new NameDateObj(currentobject.Converter());
-
+            //AddONEFiletoConfirmList(filename, fileDateTime, false);
             FilestoConfirmList.Add(subFile);
 
             try
@@ -342,19 +383,6 @@ namespace genBTC.FileTime.Models
             { }
         }
         // These just point back to the above functions, using the parent folderinstead.
-        /// <summary>  Mode 2P (start at its Parent)  </summary>
-        internal void RecurseSubDirectoryMode2Parent(string directoryPath)
-        {
-            try
-            {
-                foreach (string subfolder in Directory.GetDirectories(directoryPath))
-                    RecurseSubDirectoryMode2(Path.Combine(directoryPath, subfolder));
-            }
-            catch (UnauthorizedAccessException)
-            { }
-            catch (DirectoryNotFoundException)
-            { }
-        }
 
         /// <summary>
         /// Set Directory Time
@@ -368,7 +396,7 @@ namespace genBTC.FileTime.Models
                 foreach (string eachdir in subDirectories)
                 {
                     // Set the date/time for the sub directory
-                    SetFileDateTimeMode1(eachdir, fileDateTime, true);
+                    AddONEFiletoConfirmList(eachdir, fileDateTime, true);
                     // Recurse (loop) through each sub-sub directory
                     RecurseSubDirectoryMode1(eachdir);
                 }
@@ -387,10 +415,37 @@ namespace genBTC.FileTime.Models
                 string[] subFiles = Directory.GetFiles(directoryPath);
                 Array.Sort(subFiles, SharedHelper.explorerStringComparer());
                 foreach (string filename in subFiles)
-                    SetFileDateTimeMode1(filename, fileDateTime, false);
+                    AddONEFiletoConfirmList(filename, fileDateTime, false);
             } //catch for GetFiles
             catch (UnauthorizedAccessException)
             { }
+        }
+
+        /// <summary> STATIC.
+        /// Set the date/time for a single file/directory (This works on files and directories)
+        /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
+        /// (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
+        /// </summary>
+        /// <param name="filePath">Full path to the file/directory</param>
+        /// <param name="fileTime">Date/Time to set the file/directory</param>
+        /// <param name="isDirectory">Is this a directory???</param>
+        internal void AddONEFiletoConfirmList(string filePath, DateTime fileTime, bool isDirectory)
+        {
+            SkipOrAddFile(filePath, isDirectory);
+            //Make a NameDateObj out of 1 filename; Check all 3 date properties, and only write a time on match
+            var currentobject = new NameDateObj { Name = filePath, FileOrDirType = SharedHelper.Bool2Int(isDirectory) };
+
+            // Set the Creation date/time if selected
+            if (checkboxes.C)
+                currentobject.Created = fileTime;
+            // Set the Modified date/time is selected
+            if (checkboxes.M)
+                currentobject.Modified = fileTime;
+            // Set the last access time if selected
+            if (checkboxes.A)
+                currentobject.Accessed = fileTime;
+
+            FilestoConfirmList.Add(currentobject);
         }
 
         /// <summary>
@@ -398,7 +453,15 @@ namespace genBTC.FileTime.Models
         /// </summary>
         internal void SkipOrAddFile(string path, bool isDirectory)
         {
-            FileAttributes fAttr = File.GetAttributes(path);
+            // NOTE: The following is where an error would occur if you try and scan a directory with Longpaths in it.
+            // I have tried to fix it in the app.config and the app.manifest file with some XML tags, but they didnt work.
+            // In the end, Windows 10 build 10240 is too old to support Paths > 260 chars...crazy right. ?
+            // Since its a managed app I would prefer to keep native code out if possible.
+            // For now the only thing i can do is Target .NET 4.6.2
+            // https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/
+
+            // TODO: Revisit this when a few months go by to figure out if anything has changed with >260 Longpaths 
+            FileAttributes fAttr = File.GetAttributes(path); //longpath unsafe
 
             if (((fAttr & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
             {
@@ -430,61 +493,6 @@ namespace genBTC.FileTime.Models
             }
         }
 
-        /// <summary> STATIC.
-        /// Set the date/time for a single file/directory (This works on files and directories)
-        /// Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List
-        /// (Only adds to the confirm list, Form 2 (Confirm) will actually write changes).
-        /// </summary>
-        /// Requires: Pass in the datamodel and the checkbox states.
-        /// <param name="filePath">Full path to the file/directory</param>
-        /// <param name="fileTime">Date/Time to set the file/directory</param>
-        /// <param name="isDirectory">Is this a directory???</param>
-        internal void SetFileDateTimeMode1(string filePath, DateTime fileTime, bool isDirectory)
-        {
-            SkipOrAddFile(filePath, isDirectory);
-            //Make a NameDateObj out of 1 filename; Check all 3 date properties, and only write a time on match
-            var currentobject = new NameDateObj { Name = filePath, FileOrDirType = SharedHelper.Bool2Int(isDirectory) };
-
-            // Set the Creation date/time if selected
-            if (checkboxes.C)
-                currentobject.Created = fileTime;
-            // Set the Modified date/time is selected
-            if (checkboxes.M)
-                currentobject.Modified = fileTime;
-            // Set the last access time if selected
-            if (checkboxes.A)
-                currentobject.Accessed = fileTime;
-
-            FilestoConfirmList.Add(currentobject);
-        }
-
-        /// <summary>
-        /// Display the date and time of the selected file (also works on Directories)
-        /// </summary>
-        internal NameDateStruct GetCmaTimes(string pathName)
-        {
-            var cma = new NameDateStruct { PathName = pathName };
-            if (cma.PathName != "")
-            {
-                cma.Created = File.GetCreationTime(cma.PathName).ToString();
-                cma.Modified = File.GetLastWriteTime(cma.PathName).ToString();
-                cma.Accessed = File.GetLastAccessTime(cma.PathName).ToString();
-                cma.HiddenPathName = cma.PathName;
-                cma.Selected = true;
-            }
-            else
-            {
-                // Maybe no file/directory is selected
-                // Then Blank out the display of date/time.
-                cma.Created = "";
-                cma.Modified = "";
-                cma.Accessed = "";
-                cma.HiddenPathName = "";
-                cma.Selected = false;
-            }
-            return cma;
-        }
-
         private NameDateObj thingtoreturn;
         internal bool DecideTimeRG1and2(string directoryPath)
         {
@@ -503,7 +511,7 @@ namespace genBTC.FileTime.Models
                 thingtoreturn.Accessed = specifiedDate;
                 return false;
             }
-            else if (gui.radioGroupBox2CurrentSelect)
+            if (gui.radioGroupBox2CurrentSelect)
             {
                 thingtoreturn.Name = gui.PathName;
                 thingtoreturn.Created = DateTime.Parse(gui.Created);
@@ -511,8 +519,7 @@ namespace genBTC.FileTime.Models
                 thingtoreturn.Accessed = DateTime.Parse(gui.Accessed);
                 return false;
             }
-            else
-                return true;
+            return true;
         }
         /// <summary>
         /// Very long function that does a simple task. Read in the options the user set for the operation, and
@@ -696,13 +703,11 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Show a message box of any files that were cleared of their read-only tag.
         /// </summary>
-        internal void FixReadonlyResults(int active)
+        internal void FixReadonlyResults()
         {
-            if ((FilesReadOnlytoFix.Count > 0) && (active == 0))
+            if ((FilesReadOnlytoFix.Count > 0) && (fixreadonlyActive == 0))
             {
-                string listoffixedreadonlyfiles = "";
-                foreach (string file in FilesReadOnlytoFix)
-                    listoffixedreadonlyfiles += file + "\n";
+                string listoffixedreadonlyfiles = FilesReadOnlytoFix.Aggregate((current, file) => current + (file + "\n"));
                 DialogResult dr =
                     MessageBox.Show(listoffixedreadonlyfiles + "\nRead-Only must be un-set to change date. Continue?",
                         "Read-Only Files: ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -718,15 +723,15 @@ namespace genBTC.FileTime.Models
                     if (dr2 == DialogResult.No)
                         FilesReadOnlytoFix.Clear();
                     else
-                        active = FilesReadOnlytoFix.Count;
+                        fixreadonlyActive = FilesReadOnlytoFix.Count;
                 }
                 else
                     FilesReadOnlytoFix.Clear();
             }
-            else if (active > 0)
+            else if (fixreadonlyActive > 0)
             {
                 ResetReadOnly();
-                active = 0;
+                fixreadonlyActive = 0;
             }
         }
         /// <summary> Adds the read-only attribute back after it was removed </summary>

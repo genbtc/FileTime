@@ -10,8 +10,8 @@ using System.IO;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Classes.Native;
-using genBTC.FileTime.Models;
 using genBTC.FileTime.mViewModels;
+using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime.Forms
 {
@@ -24,7 +24,6 @@ namespace genBTC.FileTime.Forms
 
         //Stub to access Form_Main from this form
         private readonly List<string> _filextlist = new List<string>();
-        private readonly Form_Main _formmain;
         private DataModel dataModel;
 
         /// <summary> list of listview items's checkbox state bool values </summary>
@@ -36,13 +35,10 @@ namespace genBTC.FileTime.Forms
         /// <summary> Count of the number of files/directories that have been set </summary>
         private int _itemsSetCount;
 
-        /// <summary> the fixreadonly active files count (checked in between fix and unfix) </summary>
-        public int active = 0;
-
-        
         /// <summary> Form 2 creation and initialization code. </summary>
-        /// <param name="f1">so we can modify publics in the main form</param>
-        public Form_Confirm(Form_Main f1)
+        /// <param name="f1DataModel"></param>
+        /// 
+        internal Form_Confirm(DataModel f1DataModel)
         {
             //Required for Windows Form Designer support
             InitializeComponent();
@@ -51,8 +47,7 @@ namespace genBTC.FileTime.Forms
             _itemsErrorsCount = 0;
             _itemsSetCount = 0;
 
-            _formmain = f1;
-            dataModel = _formmain._dataModel;
+            dataModel = f1DataModel;
 
             MakeListView();
         }
@@ -67,7 +62,7 @@ namespace genBTC.FileTime.Forms
         /// use the results as the new data model.
         public void MakeListView()
         {
-            dataModel.FixReadonlyResults(active);
+            dataModel.FixReadonlyResults();
             _checklist = new List<bool>();
             listView1_Confirm.BeginUpdate();
             listView1_Confirm.ItemChecked -= listView1_Confirm_ItemChecked; //event
@@ -394,7 +389,7 @@ namespace genBTC.FileTime.Forms
                             else                        //if its a file, get the directory of it
                                 path = Path.GetDirectoryName(thing.SubItems[0].Text);
             */
-            Process.Start("explorer.exe", @path);
+            Process.Start("explorer.exe", path);
         }
 
         /// <summary> Delete Item... </summary>

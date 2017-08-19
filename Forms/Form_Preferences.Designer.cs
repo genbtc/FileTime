@@ -1,11 +1,14 @@
-﻿namespace genBTC.FileTime.Forms
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace genBTC.FileTime.Forms
 {
     partial class Form_Preferences
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -98,9 +101,9 @@
             this.checkBox8_useRootDirAsContainer.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::genBTC.FileTime.Properties.Settings.Default, "useRootDirAsContainer", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox8_useRootDirAsContainer.Location = new System.Drawing.Point(13, 211);
             this.checkBox8_useRootDirAsContainer.Name = "checkBox8_useRootDirAsContainer";
-            this.checkBox8_useRootDirAsContainer.Size = new System.Drawing.Size(318, 17);
+            this.checkBox8_useRootDirAsContainer.Size = new System.Drawing.Size(235, 17);
             this.checkBox8_useRootDirAsContainer.TabIndex = 19;
-            this.checkBox8_useRootDirAsContainer.Text = "Use root directory as container and operate on all subfolders";
+            this.checkBox8_useRootDirAsContainer.Text = "Mode 1 recurses subdirs to find ALL subfiles";
             this.toolTip1.SetToolTip(this.checkBox8_useRootDirAsContainer, resources.GetString("checkBox8_useRootDirAsContainer.ToolTip"));
             this.checkBox8_useRootDirAsContainer.UseVisualStyleBackColor = true;
             // 
@@ -117,9 +120,9 @@
             this.checkBox7_Mode1addRootDir.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::genBTC.FileTime.Properties.Settings.Default, "mode1addrootdir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox7_Mode1addRootDir.Location = new System.Drawing.Point(13, 187);
             this.checkBox7_Mode1addRootDir.Name = "checkBox7_Mode1addRootDir";
-            this.checkBox7_Mode1addRootDir.Size = new System.Drawing.Size(205, 17);
+            this.checkBox7_Mode1addRootDir.Size = new System.Drawing.Size(298, 17);
             this.checkBox7_Mode1addRootDir.TabIndex = 18;
-            this.checkBox7_Mode1addRootDir.Text = "Include Root Directory during Mode 1";
+            this.checkBox7_Mode1addRootDir.Text = "Mode 1 adds the dir \"./\" (target root) to be changed also";
             this.checkBox7_Mode1addRootDir.UseVisualStyleBackColor = true;
             // 
             // checkBox4a_ShowReadOnly
@@ -269,21 +272,21 @@
 
         #endregion
 
-        public System.Windows.Forms.CheckBox checkBox1_ShowReadOnlyNotices;
-        public System.Windows.Forms.CheckBox checkBox4b_SkipReadOnly;
-        public System.Windows.Forms.CheckBox checkBox3b_SkipHidden;
-        public System.Windows.Forms.CheckBox checkBox2b_SkipSystem;
-        public System.Windows.Forms.CheckBox checkBox6_StartupDir;
-        public System.Windows.Forms.TextBox textBox6_startupdir;
-        private System.Windows.Forms.Button button1_OK;
-        private System.Windows.Forms.Button button2_Cancel;
-        public System.Windows.Forms.CheckBox checkBox3a_ShowHidden;
-        private System.Windows.Forms.CheckBox checkBox2a_ShowSystem;
-        private System.Windows.Forms.CheckBox checkBox4a_ShowReadOnly;
-        private System.Windows.Forms.Button button_UseCurrentDir;
-        private System.Windows.Forms.Button button_Browse;
-        private System.Windows.Forms.CheckBox checkBox7_Mode1addRootDir;
-        private System.Windows.Forms.CheckBox checkBox8_useRootDirAsContainer;
-        private System.Windows.Forms.ToolTip toolTip1;
+        public CheckBox checkBox1_ShowReadOnlyNotices;
+        public CheckBox checkBox4b_SkipReadOnly;
+        public CheckBox checkBox3b_SkipHidden;
+        public CheckBox checkBox2b_SkipSystem;
+        public CheckBox checkBox6_StartupDir;
+        public TextBox textBox6_startupdir;
+        private Button button1_OK;
+        private Button button2_Cancel;
+        public CheckBox checkBox3a_ShowHidden;
+        private CheckBox checkBox2a_ShowSystem;
+        private CheckBox checkBox4a_ShowReadOnly;
+        private Button button_UseCurrentDir;
+        private Button button_Browse;
+        private CheckBox checkBox7_Mode1addRootDir;
+        private CheckBox checkBox8_useRootDirAsContainer;
+        private ToolTip toolTip1;
     }
 }

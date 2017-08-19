@@ -64,6 +64,6 @@ namespace genBTC.FileTime.Classes.Native
             public int iGroupId;
             public int cColumns;
             public IntPtr puColumns;
-        };
+        }
     }
 }
