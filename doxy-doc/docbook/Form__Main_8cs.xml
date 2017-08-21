@@ -23,6 +23,13 @@ GUI : Main Form Window of the Program.
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceSystem_1_1Linq">System::Linq</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </simplesect>
     <simplesect>
         <title>Detailed Description</title>

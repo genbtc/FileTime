@@ -6,6 +6,13 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer">genBTC::FileTime::Classes::DirComparer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView">genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</link></para>
 <para><emphasis>&lt;summary&gt; Explorer-like Sort, for ListViewItem - used by listview.Sorter &lt;/summary&gt;</emphasis></para>
                     </listitem>
@@ -16,6 +23,13 @@
                     <listitem>
                         <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer">genBTC::FileTime::Classes::ExplorerLikeComparer</link></para>
 <para><emphasis>&lt;summary&gt; Explorer-like Sort, for strings &lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer">genBTC::FileTime::Classes::FileComparer</link></para>
                     </listitem>
                 </itemizedlist>
             </para>

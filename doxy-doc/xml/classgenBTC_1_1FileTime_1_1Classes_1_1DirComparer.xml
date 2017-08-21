@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer" kind="class" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Classes::DirComparer</compoundname>
+    <basecompoundref refid="classIEqualityComparer" prot="public" virt="non-virtual">IEqualityComparer&lt; DirectoryInfo &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ae2fb00a638b20e5de238f8dd36d162b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Classes.DirComparer.Equals</definition>
+        <argsstring>(DirectoryInfo f1, DirectoryInfo f2)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>DirectoryInfo</type>
+          <declname>f1</declname>
+        </param>
+        <param>
+          <type>DirectoryInfo</type>
+          <declname>f2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/FileComparer.cs" line="43" column="1" bodyfile="Classes/FileComparer.cs" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ad8ecc887ef9309ed91456bae2289739f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Classes.DirComparer.GetHashCode</definition>
+        <argsstring>(DirectoryInfo fi)</argsstring>
+        <name>GetHashCode</name>
+        <param>
+          <type>DirectoryInfo</type>
+          <declname>fi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/FileComparer.cs" line="57" column="1" bodyfile="Classes/FileComparer.cs" bodystart="57" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>IEqualityComparer&lt; DirectoryInfo &gt;</label>
+        <link refid="classIEqualityComparer"/>
+      </node>
+      <node id="14">
+        <label>genBTC.FileTime.Classes.DirComparer</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17">
+        <label>IEqualityComparer&lt; DirectoryInfo &gt;</label>
+        <link refid="classIEqualityComparer"/>
+      </node>
+      <node id="16">
+        <label>genBTC.FileTime.Classes.DirComparer</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Classes/FileComparer.cs" line="40" column="1" bodyfile="Classes/FileComparer.cs" bodystart="39" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ae2fb00a638b20e5de238f8dd36d162b6" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::DirComparer</scope><name>Equals</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ad8ecc887ef9309ed91456bae2289739f" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::DirComparer</scope><name>GetHashCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

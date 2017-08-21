@@ -10,26 +10,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="66">
+      <node id="72">
         <label>IComparer</label>
         <link refid="classIComparer"/>
       </node>
-      <node id="67">
+      <node id="73">
         <label>genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</label>
         <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView"/>
-        <childnode refid="66" relation="public-inheritance">
+        <childnode refid="72" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="68">
+      <node id="74">
         <label>genBTC::FileTime::Classes::ExplorerLikeComparer&lt; string &gt;</label>
         <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer"/>
-        <childnode refid="66" relation="public-inheritance">
+        <childnode refid="72" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="69">
+      <node id="75">
         <label>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort&lt; NameDateObj &gt;</label>
         <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort"/>
-        <childnode refid="66" relation="public-inheritance">
+        <childnode refid="72" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

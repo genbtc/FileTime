@@ -51,41 +51,42 @@
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" kind="variable"><name>gui</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a23bb91d68f4028304086c4dad5bb41b0" kind="variable"><name>contentsFileList</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0689c0413d3a436b4c4bded1001e977b" kind="variable"><name>filextlist</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa2d60371e277af18fc1d2b45725ed231" kind="variable"><name>thingtoreturn</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac10ad63b0ce33838d6ef3badd6ccedc5" kind="variable"><name>fixreadonlyActive</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad7ce30885dde9101862f8bf75032d402" kind="function"><name>DataModel</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b" kind="function"><name>Clear</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70bf0d8494851633ef774a62b4c9048d" kind="function"><name>PopulateFileList</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4792452d26b386fedb946a81c885ef02" kind="function"><name>PopulateDirList</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" kind="function"><name>DisplayContentsList</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" kind="function"><name>DecideWhichTimeMode1</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" kind="function"><name>DecideTimeFromSubDirFile</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e" kind="function"><name>RecurseSubDirectoryMode1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a18bcdec5b474bc9b0eece9d8856ba4f7" kind="function"><name>DecideTimeFromSubdirOrSubfile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4879e17c0c285da2e1749f6f6e6a8913" kind="function"><name>RecurseSubDirectoryMode1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4" kind="function"><name>RecurseSubDirectoryMode2</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489" kind="function"><name>RecurseSubDirectoryMode1Parent</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b" kind="function"><name>RecurseSubDirectoryMode2Parent</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85" kind="function"><name>SetTimeDateEachDirectory</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a00bfcf2df19f275804d80ce46eeed134" kind="function"><name>RecurseSubDirectoryMode3</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1adeab181bc642b460fb7d12e43a996a1d" kind="function"><name>RecurseSubDirectoryMode1Parent</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaaf1378db214ee5aa4075e4a5b1a01e7" kind="function"><name>SetTimeDateEachDirectory</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa18f20f8dcf75fb4a7b87dab143ae010" kind="function"><name>SetTimeDateEachFile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" kind="function"><name>AddONEFiletoConfirmList</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" kind="function"><name>SkipOrAddFile</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270" kind="function"><name>SetFileDateTimeMode1</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" kind="function"><name>Makedateobject</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d" kind="function"><name>Makedateobject</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172" kind="function"><name>GetCmaTimes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a2f9eb45a3ac52ba498992d6faea2f2da" kind="function"><name>DecideTimeRG1and2</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" kind="function"><name>DecideWhichTimeMode2</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a9b232e99482a4a1b0483d4f7bd2a5541" kind="function"><name>FixReadonlyResults</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a03ad7673720673c17fcaf3943428d57c" kind="function"><name>ResetReadOnly</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a09e8580b4dd602e7d8e4ffb07eaa2a42" kind="function"><name>GetCmaTimesFromFilesystem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a230ae2b4a58763aa5b924005c79d8295" kind="function"><name>AddImagesExtsToFileLists</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3b5db833571136a40376d683c76424a7" kind="function"><name>StoreDateByCMACheckboxes</name></member>
   </compound>
-  <compound refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj" kind="class"><name>genBTC::FileTime::Models::DateNewOldObj</name>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1af02d00ddb65250c6ceb0c513d631eb52" kind="variable"><name>Index</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a3ddaab21a60aacd3e28cb0210f25a743" kind="variable"><name>MaxDate</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ace8b01fe15d677ace45e76d3904defaf" kind="variable"><name>MaxIndex</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1ab43dd9ac8aec3ccc6b6c53011d1865c7" kind="variable"><name>MinDate</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a4a72d7694721d7189b507c57129e74f7" kind="variable"><name>MinIndex</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj_1a11e38ed729e9cbfd03733e69434274ca" kind="function"><name>DateNewOldObj</name></member>
+  <compound refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld" kind="class"><name>genBTC::FileTime::Models::DateMinMaxNewOld</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld_1ad5700d410647251385e5a1ca1aaea095" kind="variable"><name>Index</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld_1a0aa2bda189f1fcf8a236382aa2db9485" kind="variable"><name>MaxDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld_1ae936211150367abc96aaded3b186700b" kind="variable"><name>MaxIndex</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld_1a665574a0c610ee926ea43800857c9b01" kind="variable"><name>MinDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld_1ab2218c0aae76e6f1e33c827747522bbd" kind="variable"><name>MinIndex</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld_1a4d8f0274a781dddc6dcd5da43184dd45" kind="function"><name>DateMinMaxNewOld</name></member>
   </compound>
-  <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData" kind="struct"><name>genBTC::FileTime::Models::DisplayCmaTimeData</name>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a382614b4836f5f22a5a0122a25317216" kind="variable"><name>Accessed</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a6a8b4bb3e7b175308fc52789d2c2093b" kind="variable"><name>Created</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a50c0eafd7bbc8a514c3bdb90b3fccf77" kind="variable"><name>HiddenPathName</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1afe82ba3790315bdedff2f84bdf9228a8" kind="variable"><name>Modified</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a7f03acd23437f8bd3da690deb85941cc" kind="variable"><name>PathName</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a8a312ad9b69b8d251af8f3a3842a77e9" kind="variable"><name>Selected</name></member>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer" kind="class"><name>genBTC::FileTime::Classes::DirComparer</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ae2fb00a638b20e5de238f8dd36d162b6" kind="function"><name>Equals</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ad8ecc887ef9309ed91456bae2289739f" kind="function"><name>GetHashCode</name></member>
   </compound>
   <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView" kind="class"><name>genBTC::FileTime::Classes::ExpLikeCmpHelperforListView</name>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView_1af40ed5e789e19a50f7d4f8e9447e0ceb" kind="function"><name>Compare</name></member>
@@ -194,6 +195,10 @@
     <member refid="classExtractIcon_1ac568a2bbf178d24eaf0cd498172478c3" kind="function"><name>ExtractIcon</name></member>
     <member refid="classExtractIcon_1ad9ae4597b218182802d990e363b172e5" kind="function"><name>GetIcon</name></member>
   </compound>
+  <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer" kind="class"><name>genBTC::FileTime::Classes::FileComparer</name>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer_1aea79705552d24da7d59eb4c4be93c24e" kind="function"><name>Equals</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer_1acbfbd4c2670721311154ec96f40aa779" kind="function"><name>GetHashCode</name></member>
+  </compound>
   <compound refid="classForm" kind="class"><name>Form</name>
   </compound>
   <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About" kind="class"><name>genBTC::FileTime::Forms::Form_About</name>
@@ -239,7 +244,7 @@
   </compound>
   <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm" kind="class"><name>genBTC::FileTime::Forms::Form_Confirm</name>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a37bc8e6a954dba0fabf2880baafe6c83" kind="variable"><name>_filextlist</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af477d8d488626f2dafcc97023f4da148" kind="variable"><name>_formmain</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a075d0cd8b926977575862f293afbcd71" kind="variable"><name>dataModel</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af814be06aa5a0863959c13b2553aff74" kind="variable"><name>_checklist</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a59abffe28d291d962bc7917b5e5f69" kind="variable"><name>_itemsErrorsCount</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3125e5305487cecb2c5c9c5b461d781b" kind="variable"><name>_itemsSetCount</name></member>
@@ -247,8 +252,8 @@
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3642f9d3e61d6174b91a38ea0a4915e" kind="variable"><name>imageList_Files</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad859279ef35572af16b7892d517a822f" kind="variable"><name>label1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a94b8aa95d0d2a5d178fda6ba01592fec" kind="variable"><name>button1_Confirm</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acb36bee5d6976cbecda945cf09a6b1dc" kind="variable"><name>listView1_Confirm</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7f642d78dbe42d4ad650b363351acbc6" kind="variable"><name>contextMenuStrip1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af5588a68ed7022f1b1ebb71dae270c2e" kind="variable"><name>listView1Confirm</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae5442c653b6bc726efaf5a8d8f6410c9" kind="variable"><name>rightClickContextMenu1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a60aa76cf1b84e57a7060ce71baecde9c" kind="variable"><name>groupBoxConditions</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a78523dec38766e2c1ca2148239d09039" kind="variable"><name>radioButton3All</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa3d38de87badf2d37b11d34dace27697" kind="variable"><name>radioButton2Older</name></member>
@@ -258,9 +263,8 @@
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a44646f92691ba50186ceb50d31afb531" kind="variable"><name>selectAllToolStripMenuItem</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8101c72e19286de6bcf42a850ded3498" kind="variable"><name>deSelectAllToolStripMenuItem</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1e4be85619506a93fcb216c2bef5a672" kind="variable"><name>invertSelectionToolStripMenuItem</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abf92838201f83c108849c52b6d23da06" kind="variable"><name>ComboBox1</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae301ad7d805d73e21478263cd0959464" kind="variable"><name>ComboBox2</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a18dc01274ca6d2191249f7f0c89ea606" kind="variable"><name>ComboBox3</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aac7b868d8c6a7047488b9038ec525923" kind="variable"><name>comboBox2_Modified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0dcfe5368b66f06273c216b0bc1bf7d2" kind="variable"><name>comboBox3_Accessed</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae775fb93b7da5cd44d21f0dd9d273d69" kind="variable"><name>removeNAOnlysToolStripMenuItem</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a346a46754f67e99ecfd964d1afc73b87" kind="variable"><name>label2</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac094dbeb2fa056b77cea0a19ad9a0309" kind="variable"><name>panel1</name></member>
@@ -268,52 +272,54 @@
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af8f04124ec9b181c674213693d0fc292" kind="variable"><name>ColumnHeader_Created</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aeddc07228f54ca3d89532561e36a8f12" kind="variable"><name>ColumnHeader_Modified</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2a0aeff72d36b5e196f2135cdf80fb5e" kind="variable"><name>ColumnHeader_Accessed</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1bc1c8bdee44edc0b7548134f3028fa1" kind="variable"><name>toolStripMenuItem1</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a2ec1a40c03ac4fdd8a43841dbc5dca68" kind="variable"><name>toolStripMenuItem2</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4fd42c11c21c02ea6214c933b2c600bc" kind="variable"><name>toolStripMenuItem3</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a673a6deb636523702c66e64200f1f6c2" kind="variable"><name>toolStripMenuItem4</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a042de0cb0e9f32b7f7de078141b44dab" kind="variable"><name>toolStripMenuItem1_ChangeDate</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9ca2e157a919c3022fdf07286d7f5e5c" kind="variable"><name>toolStripMenuItem2_UnsetCreated</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a95fbbbd935042464c17f45e0310174b1" kind="variable"><name>toolStripMenuItem3_UnsetModified</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aae609059d829b4e1e19ac79ffd62c10a" kind="variable"><name>toolStripMenuItem4_UnsetAccessed</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af7d326a11e1cc4fe4afa1616c2735abe" kind="variable"><name>toolStripSeparator1</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a56e71cffa65f82ba181d5a9a75be0b71" kind="variable"><name>toolStripMenuItem5</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac093d6751cd02214296904e1042811ff" kind="variable"><name>toolStripMenuItem7_OpenExplorer</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1acea1a126cbbb70c0233dec8d47b72084" kind="variable"><name>statusStrip1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0666b573711accaeb386c72ca16244b6" kind="variable"><name>toolStripProgressBar1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af48a7f3ab10bfff94f0b51396ee5c799" kind="variable"><name>toolStripStatusLabel1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d4e814c3cce5e98c372c68eb33044b" kind="variable"><name>condenseMultipleLinesToolStripMenuItem</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a372805d1413eca52d5ec1671a63a8086" kind="variable"><name>toolStripMenuItem6</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad29eedba05697d15bc8420c89130a23f" kind="variable"><name>active</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1c414476848ba5e520e59175bfdc0ca5" kind="function"><name>Form_Confirm</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9" kind="function"><name>FixReadonlyResults</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3c01c9b3242c405938b224b21930f7e6" kind="variable"><name>toolStripMenuItem6_RemoveItem</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a78eb67d5bde74562e63e44360cb15e1d" kind="variable"><name>toolStripMenuItem5_unSetALL</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1adf64360e6f4375dd9106678fc4fb2cd0" kind="variable"><name>comboBox1_Created</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a95f987f1a5664bc6d9ddd518c65c998c" kind="function"><name>Form_Confirm</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" kind="function"><name>MakeListView</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8cb4bf423609764a3a98fe85de819c55" kind="function"><name>ResetReadOnly</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af62fb0c7e4aaf23671fcb591c28e436c" kind="function"><name>UpdateStatusBar</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6" kind="function"><name>Form_Confirm_FormClosing</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a117fd75bb0dc712a1bdf49140fb93f07" kind="function"><name>DoConditionalAgeCheck</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a36d17d1505fae79c610daff068c6d5ad" kind="function"><name>button1_Confirm_Click</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3d349d69687095aba05751e9d1cc78d9" kind="function"><name>ThreeComboBox_SelectedChange</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9" kind="function"><name>selectAllToolStripMenuItem_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471" kind="function"><name>deSelectAllToolStripMenuItem_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab0447665a6354a8015a4cbc25dd8857e" kind="function"><name>invertSelectionToolStripMenuItem_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae685e7b9564920a6d03e82cfc4dca4a6" kind="function"><name>removeNAOnlysToolStripMenuItem_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae812db4140d91f832ff782cb0e584fd1" kind="function"><name>condenseMultipleLinesToolStripMenuItem_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa38d84ab108896374502e1d427fb8073" kind="function"><name>toolStripMenuItem1_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a655ed83e871c1ae8f99cc139b742581f" kind="function"><name>toolStripMenu_ThreeRemoves</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae89c06d5a8209746475c1454cb11721e" kind="function"><name>toolStripMenuItem5_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3262dd1dc9413b0b77ef2ad335af6fe7" kind="function"><name>toolStripMenuItem6_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a67e58ae4d8a3a6816c148a8d9f0845cf" kind="function"><name>RestoreCheckboxes</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72204e6ed2578b7c6196f37d85aa05c0" kind="function"><name>RestoreCheckboxes</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0afeb990e61b20cf1ad64015b2e03b0d" kind="function"><name>StoreCheckboxes</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab7410828fda5dc98c741655ea1c115b6" kind="function"><name>StoreCheckboxes</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae0cda54950b51f40b081432f4d70d5dd" kind="function"><name>listView1_Confirm_ItemChecked</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a01d43473e59f5f4664e91ccf9b9a36" kind="function"><name>listView_selectAllToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab6ce8f5b38902d21eb611a978ea884a2" kind="function"><name>listView_deSelectAllToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac4a5a8975e122f284404f649fd85a6d7" kind="function"><name>listView_invertSelectionToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae03fc738865a83244000b295e48d426a" kind="function"><name>listView_removeNAOnlysToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9e17d99571d809afb2fec9d0dc500c59" kind="function"><name>listView_condenseMultipleLinesToolStripMenuItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae94f876324215b18ecc241b6a807caae" kind="function"><name>listView_SetDatesOfAllSelecteds</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a10fe9a6a87c2c6fb5b6a1147967719c4" kind="function"><name>listView_RemoveDatesOfAllSelecteds</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a637366b34998599f876e6aa15066b570" kind="function"><name>toolStripMenuItem1_ChangeDate_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afc7388e0401968131424c81bbfc1ff03" kind="function"><name>toolStripMenuItem234_ThreeRemoves_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac90d2374717e06d56ae82ec06e736cb5" kind="function"><name>toolStripMenuItem5_unSetALL_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a98151ca52a230a78b29e9e60933ff7f1" kind="function"><name>toolStripMenuItem6_RemoveItem_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae572f0630a3ffff2439293d78da1eb37" kind="function"><name>toolStripMenuItem7_OpenExplorer_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aee90ceaacdee750b993e891c46017472" kind="function"><name>listView_RestoreAllCheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6f0ffdbeaaab86b6f8cd541b77b4d412" kind="function"><name>listView_RestoreCheckbox</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7b3d2b64a9c7aedc1881b262c6a28f8c" kind="function"><name>listView_StoreAllCheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72c2f4347a4da9de82639cac069cf455" kind="function"><name>listView_StoreCheckbox</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a89726c5f2f155e5e9ca3720f6afa6483" kind="function"><name>listView1Confirm_ItemChecked</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a03c1e9fd2796db43388d5ba42dc78eee" kind="function"><name>menuStrip1_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a01eff90114426a685e7182097ef665e8" kind="function"><name>listView1_Confirm_KeyUp</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1adbb2660c211a0dc06440307d5b6678c8" kind="function"><name>listView1Confirm_KeyUp</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afd8a0d9126bdb2940d7c3240db21f579" kind="function"><name>InitializeComponent</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a4616216c87c2d9b2e4f7186be47208b3" kind="function"><name>contextMenuStrip1_Opening</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d2f09053bdda2a34bc4453bc0fe50b" kind="function"><name>SetTime</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a876d3051bf64f9e4970ff5a4cbf05e91" kind="function"><name>DoConditionalAgeCheck</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0454ff5874b841a47795a16bc4b945a9" kind="function"><name>SetTime</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1d80bc70235bc2e505c27d38ed0d73a7" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main" kind="class"><name>genBTC::FileTime::Forms::Form_Main</name>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac43e6cedc1a02cee5f74303c88989e85" kind="variable"><name>_dataModel</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a961c69c26a86d103aa18c94ed47f64fa" kind="variable"><name>Confirmation</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab39f29e05c9c8a5b28ab5bcfe7d24cd6" kind="variable"><name>itemSelectionChangedTimer</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a198a77faa02fa79955cb5189d8e4b3c6" kind="variable"><name>_itemSelectionChangedTimer</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a9dc556ed4e1ff438e51671de2f4f5569" kind="variable"><name>SELECTION_TIMEOUT</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a985eace2323e9c05c017d893130cbcf8" kind="variable"><name>components</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af868ee07ac7c4d39122f578dac492faa" kind="variable"><name>button_Browse</name></member>
@@ -374,15 +380,13 @@
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae87686c01623663d11467a9747de4e40" kind="variable"><name>toolTip1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a29b482d6669a00e5967bd16c46cf15c4" kind="variable"><name>explorerTree1</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a45ace186cc153f05afcf0b23a4431d19" kind="variable"><name>splitContainer1</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3d34e27cfa0147a06f0c44e0ae012653" kind="variable"><name>radioGroupBox1_pickFolderForCompare</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a929c6e9d1133d5145320af4a0416ecd2" kind="variable"><name>label1</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0838508e11906128e6e386800b8dd21c" kind="variable"><name>radioGroupBox4_pickFolderForCompare</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a976a4fcc51957dc1c830ae71e4da1271" kind="variable"><name>label_folderCompareRadioButton</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a61e7729be598283dfdaa71be07313695" kind="variable"><name>dataModelBindingSource</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a001f8fbcdc3eb56ceaa74c55d61c7272" kind="property"><name>CwdPathName</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5c5b5a7935885ef5a978c899e132e92f" kind="function"><name>GetGUIRadioButtonStatusData</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a54b091dbe473dade0ab327251d4e39fe" kind="function"><name>Form_Main_Load</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" kind="function"><name>Form_Main_Run</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" kind="function"><name>button_Browse_Click</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310" kind="function"><name>button_Update_Click</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7" kind="function"><name>menuItem_FileOpen_Click</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3e8d7159bc0c46df6759d6a5c0f654d3" kind="function"><name>menuItem_FileExit_Click</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a83f634713107f726b4305b7c48d27521" kind="function"><name>menuItem_HelpContents_Click</name></member>
@@ -393,16 +397,23 @@
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a02c021b382703b63cf3c8634545342dc" kind="function"><name>label3_AccessDate_Click</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1addacf24429bcec3cc0ffe054fbbf4a02" kind="function"><name>tabControl1_Selected</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aaf1d361704f1764c55debc5320620d89" kind="function"><name>tabControl1_MouseHover</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e" kind="function"><name>_ItemSelectionChangedTimer_Tick</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a353b2723b229c123419c9d042576e778" kind="function"><name>ItemSelectionChangedTimer_Tick</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af159301a48967d2639cad7e6c9c80bfd" kind="function"><name>listView_Contents_ItemSelectionChanged</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" kind="function"><name>checkBox_DateTime_CheckedChanged</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3f3cfcfcda8f8cf3a6b26167772fb281" kind="function"><name>explorerTree1_PathChanged</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df" kind="function"><name>QueryCMAcheckboxes</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a58f7756fdd24a4dc415274d675ef48c0" kind="function"><name>checkBox_Recurse_CheckedChanged</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa79016bf2779c672606bd933598d978e" kind="function"><name>checkBoxShouldFiles_CheckedChanged</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762" kind="function"><name>ClearOnError</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" kind="function"><name>DisplayCma</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac438e5c68134f0edca782692ed1a4a84" kind="function"><name>CallDisplayCma</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" kind="function"><name>button_Browse_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310" kind="function"><name>button_Update_Click</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7f71239199fdba2ffb8af466b9c0068d" kind="function"><name>StartUpMode3</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" kind="function"><name>PrepareDataModelForUse</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" kind="function"><name>StartUpBothModes1And2</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" kind="function"><name>LaunchForm2Go</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af8d00c086a8828fe496feec61e95da6e" kind="function"><name>label_folderCompareRadioButton_Click</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba" kind="function"><name>InitializeComponent</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7b631f446375bba4fc1ab8c5309f0ce6" kind="function"><name>Form_Main</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aeb572681ad49ed4b9a5483c3652b1175" kind="function"><name>RefreshDataBinding_labelFPath</name></member>
@@ -437,31 +448,36 @@
     <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a9e1272169f107d98c18de0e0ad643477" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus" kind="struct"><name>genBTC::FileTime::Models::guistatus</name>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" kind="variable"><name>Accessed</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a375d52cfed32dd1fc1464a0ae31508ff" kind="variable"><name>checkboxRecurse</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3476b9ac0517230b0ce1ab6bc8a968d7" kind="variable"><name>checkboxShouldFiles</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" kind="variable"><name>radioGroupBox1SpecifyTime</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" kind="variable"><name>dateTimePickerDate</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" kind="variable"><name>radioGroupBox2CurrentSelect</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" kind="variable"><name>Created</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" kind="variable"><name>Modified</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" kind="variable"><name>dateTimePickerDate</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2d57f1ce6d2be16577be655f927df3ce" kind="variable"><name>labelHiddenPathName</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" kind="variable"><name>radioButton1Oldest</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" kind="variable"><name>radioButton1_setfromCreated</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" kind="variable"><name>radioButton1_useTimefromFile</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" kind="variable"><name>radioButton2Newest</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" kind="variable"><name>radioButton2_setfromModified</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" kind="variable"><name>radioButton2_useTimefromSubdir</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" kind="variable"><name>radioButton3Random</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" kind="variable"><name>radioButton3_setfromAccessed</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" kind="variable"><name>radioGroupBox1SpecifyTime</name></member>
-    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" kind="variable"><name>radioGroupBox2CurrentSelect</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" kind="variable"><name>Accessed</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af718e320c686fd55d469e2b2ce527f99" kind="variable"><name>PathName</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" kind="variable"><name>radioGroupBox3UseTimeFrom</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1ade2fae85372b8030dce0d5a71b957990" kind="variable"><name>rg2rb1Creation</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a0ee7354921de7a3935388a2dc3cedb27" kind="variable"><name>rg2rb2Modified</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afde815c17bb8aaadf3d7b6a1d22e3426" kind="variable"><name>rg2rb3LastAccess</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" kind="variable"><name>radioButton1_useTimefromFile</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" kind="variable"><name>radioButton2_useTimefromSubdir</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" kind="variable"><name>radioButton1Oldest</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" kind="variable"><name>radioButton2Newest</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" kind="variable"><name>radioButton3Random</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" kind="variable"><name>radioButton1_setfromCreated</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" kind="variable"><name>dateTimePickerTime</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" kind="variable"><name>radioButton2_setfromModified</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" kind="variable"><name>radioButton3_setfromAccessed</name></member>
     <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a9010a701f58a183bc4e079af909ff838" kind="variable"><name>radioButton4_setfromRandom</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a70948ce49dc5710431ee06297dcb5317" kind="variable"><name>HiddenPathName</name></member>
   </compound>
   <compound refid="classIComparer" kind="class"><name>IComparer</name>
   </compound>
   <compound refid="classIEnumerable" kind="class"><name>IEnumerable</name>
+  </compound>
+  <compound refid="classIEqualityComparer" kind="class"><name>IEqualityComparer</name>
   </compound>
   <compound refid="classWindowsExplorer_1_1Kernel32" kind="class"><name>WindowsExplorer::Kernel32</name>
     <member refid="classWindowsExplorer_1_1Kernel32_1a7ab4d641c4c7114014a77c92c7d60c3f" kind="function"><name>GetDriveType</name></member>
@@ -485,6 +501,8 @@
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb6a84eef1fb77726e009f6137e5a46d" kind="variable"><name>_a</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1ab4833eda13289580da2fa04f36aac21f" kind="variable"><name>_c</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1afc51e5988ab164716449336fcb3ae273" kind="variable"><name>_m</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a8e1093978e2e2ab822603b6f04d14d34" kind="variable"><name>isBlank</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1ac5545acaf92daa69ff61e3247317a9a1" kind="variable"><name>which</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a2edd2e54b89f4feb9f2f6f9b86fee5ba" kind="property"><name>FileOrDirType</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" kind="property"><name>Name</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" kind="property"><name>Created</name></member>
@@ -506,11 +524,20 @@
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0b1fd55712b915ae20dc82d50cd62573" kind="property"><name>Accessed</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a5297b0991118fe195a70643fc565f600" kind="function"><name>NameDateObjListViewVMdl</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223" kind="function"><name>NameDateObjListViewVMdl</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40" kind="function"><name>NameDateObjListViewVMdl</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241" kind="function"><name>NameDateObjListViewVMdl</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a20aa2a9c892ef5d0f5928695f3cf92d5" kind="function"><name>Compare</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abef5d6f4fc3c61a17957b52455257203" kind="function"><name>Converter</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a28066a9b990ea14d6b2f3c086ea67bcd" kind="function"><name>Nullordatestring</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1ab8c8af3754d3f8a61189253443562dbc" kind="function"><name>DatestringorNa</name></member>
+  </compound>
+  <compound refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct" kind="struct"><name>genBTC::FileTime::Models::NameDateStruct</name>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a21490db42301c7eefeedf23f4fe22b96" kind="variable"><name>Accessed</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1acd07ad0dfd0de7690bfb85ab9a1cde60" kind="variable"><name>Created</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1aebe4a0ea4540da8d07dae9665a6a7785" kind="variable"><name>HiddenPathName</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a6824877b094db35709aa608898adfe21" kind="variable"><name>Modified</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a7e322d3d56a2c8ceb1c28dc752b2e69c" kind="variable"><name>PathName</name></member>
+    <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a50af34fc8200a59cd6625fe34215c2f3" kind="variable"><name>Selected</name></member>
   </compound>
   <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon" kind="class"><name>genBTC::FileTime::Classes::Native::NativeExtractIcon</name>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1a8e5e0f7a5d7ea0e17d17c83214a33f81" kind="enum"><name>SHGFI</name></member>
@@ -549,6 +576,7 @@
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1ab0198e61538c43a87147c674dcdbf8db" kind="function"><name>SendMessageLVItem</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3" kind="function"><name>SelectAllItems</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" kind="function"><name>DeselectAllItems</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a4661d586d25c1fdcaf6020006d2d0a24" kind="function"><name>InvertSelection</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78" kind="function"><name>SetItemState</name></member>
   </compound>
   <compound refid="classWindowsExplorer_1_1ServerEnum_1_1NETRESOURCE" kind="class"><name>WindowsExplorer::ServerEnum::NETRESOURCE</name>
@@ -594,6 +622,7 @@
   </compound>
   <compound refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper" kind="class"><name>genBTC::FileTime::Classes::SharedHelper</name>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" kind="variable"><name>Seperator</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac7414723650ca31d0240bb7c03d506ad" kind="variable"><name>SeperatorString</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a9027ac895c6f046db2ac5066c74548b3" kind="variable"><name>UserDesktop</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" kind="variable"><name>CurrExten</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a30c0ab78648a723fc6f15a05ea07ee45" kind="variable"><name>Filextlist</name></member>
@@ -603,7 +632,7 @@
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0" kind="function"><name>RemoveAttributes</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" kind="function"><name>SyncSettingstoInvisibleFlag</name></member>
     <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b" kind="function"><name>Bool2Int</name></member>
-    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" kind="function"><name>OpenFile</name></member>
+    <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a55c71cc744574e8b4e72d496a4f5c340" kind="function"><name>OpenFilePicker</name></member>
   </compound>
   <compound refid="structExtractIcon_1_1SHFILEINFO" kind="struct"><name>ExtractIcon::SHFILEINFO</name>
     <member refid="structExtractIcon_1_1SHFILEINFO_1a264e1cd859903baff6a667f2a3eced5b" kind="variable"><name>hIcon</name></member>
@@ -657,7 +686,11 @@
   </compound>
   <compound refid="namespaceSystem_1_1Drawing" kind="namespace"><name>System::Drawing</name>
   </compound>
+  <compound refid="namespaceSystem_1_1Globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
   <compound refid="namespaceSystem_1_1IO" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespaceSystem_1_1Linq" kind="namespace"><name>System::Linq</name>
   </compound>
   <compound refid="namespaceSystem_1_1Reflection" kind="namespace"><name>System::Reflection</name>
   </compound>
@@ -710,7 +743,7 @@
   </compound>
   <compound refid="DataModel_8cs" kind="file"><name>DataModel.cs</name>
   </compound>
-  <compound refid="DateNewOldObj_8cs" kind="file"><name>DateNewOldObj.cs</name>
+  <compound refid="DateMinMaxNewOld_8cs" kind="file"><name>DateMinMaxNewOld.cs</name>
   </compound>
   <compound refid="ExplorerLikeSort_8cs" kind="file"><name>ExplorerLikeSort.cs</name>
   </compound>
@@ -719,6 +752,8 @@
   <compound refid="ExplorerTree_8Designer_8cs" kind="file"><name>ExplorerTree.Designer.cs</name>
   </compound>
   <compound refid="ExtractIcon_8cs" kind="file"><name>ExtractIcon.cs</name>
+  </compound>
+  <compound refid="FileComparer_8cs" kind="file"><name>FileComparer.cs</name>
   </compound>
   <compound refid="Form__About_8cs" kind="file"><name>Form_About.cs</name>
   </compound>
@@ -758,7 +793,21 @@
   </compound>
   <compound refid="Structs_8cs" kind="file"><name>Structs.cs</name>
   </compound>
+  <compound refid="Debug_2TemporaryGeneratedFile__036C0B5B-1481-4323-8D20-8F5ADCB23D92_8cs" kind="file"><name>Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="Release_2TemporaryGeneratedFile__036C0B5B-1481-4323-8D20-8F5ADCB23D92_8cs" kind="file"><name>Release/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="Debug_2TemporaryGeneratedFile__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="Release_2TemporaryGeneratedFile__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>Release/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="Debug_2TemporaryGeneratedFile__E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3_8cs" kind="file"><name>Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="Release_2TemporaryGeneratedFile__E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3_8cs" kind="file"><name>Release/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
   <compound refid="dir_0c68614ac8d8401edbf4146ded722294" kind="dir"><name>Classes</name>
+  </compound>
+  <compound refid="dir_a71c3b2ad23b9ff58220dd012d201987" kind="dir"><name>Debug</name>
   </compound>
   <compound refid="dir_f5ddc4b96038e2e782829a8a44084eee" kind="dir"><name>Forms</name>
   </compound>
@@ -768,7 +817,11 @@
   </compound>
   <compound refid="dir_0d800a1bc9a2227f570fa51d24a3a788" kind="dir"><name>Native</name>
   </compound>
+  <compound refid="dir_43724e81dd40e09f32417973865cdd64" kind="dir"><name>obj</name>
+  </compound>
   <compound refid="dir_d051c76eebdc544d9c3d734575641c72" kind="dir"><name>Properties</name>
+  </compound>
+  <compound refid="dir_9fe5cc214b8578ee5b8e153089aca810" kind="dir"><name>Release</name>
   </compound>
   <compound refid="dir_5b156f3f051148dc61ef5027c05b1105" kind="dir"><name>WindowsExplorer</name>
   </compound>

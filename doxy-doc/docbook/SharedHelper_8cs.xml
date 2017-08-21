@@ -23,13 +23,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="namespaceSystem_1_1IO">System::IO</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>struct <link linkend="namespaceSystem_1_1Threading">System::Threading</link></para>
                     </listitem>
                 </itemizedlist>

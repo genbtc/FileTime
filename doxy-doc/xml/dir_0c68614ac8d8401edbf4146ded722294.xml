@@ -5,6 +5,7 @@
     <innerdir refid="dir_0d800a1bc9a2227f570fa51d24a3a788">Native</innerdir>
     <innerfile refid="ExplorerLikeSort_8cs">ExplorerLikeSort.cs</innerfile>
     <innerfile refid="ExtractIcon_8cs">ExtractIcon.cs</innerfile>
+    <innerfile refid="FileComparer_8cs">FileComparer.cs</innerfile>
     <innerfile refid="SharedHelper_8cs">SharedHelper.cs</innerfile>
     <briefdescription>
     </briefdescription>

@@ -69,14 +69,29 @@ $(document).ready(function(){initNavTree('classgenBTC_1_1FileTime_1_1Models_1_1D
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pac-methods">Package Functions</a> &#124;
 <a href="#pac-attribs">Package Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">genBTC.FileTime.Models.DataModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a09e8580b4dd602e7d8e4ffb07eaa2a42"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct.html">NameDateStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a09e8580b4dd602e7d8e4ffb07eaa2a42">GetCmaTimesFromFilesystem</a> (string pathName)</td></tr>
+<tr class="memdesc:a09e8580b4dd602e7d8e4ffb07eaa2a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the date and time of the selected file (also works on Directories)  <a href="#a09e8580b4dd602e7d8e4ffb07eaa2a42">More...</a><br /></td></tr>
+<tr class="separator:a09e8580b4dd602e7d8e4ffb07eaa2a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ac10ad63b0ce33838d6ef3badd6ccedc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#ac10ad63b0ce33838d6ef3badd6ccedc5">fixreadonlyActive</a> = 0</td></tr>
+<tr class="memdesc:ac10ad63b0ce33838d6ef3badd6ccedc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the fixreadonly fixreadonlyActive files count (checked in between fix and unfix)  <a href="#ac10ad63b0ce33838d6ef3badd6ccedc5">More...</a><br /></td></tr>
+<tr class="separator:ac10ad63b0ce33838d6ef3badd6ccedc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:ad7ce30885dde9101862f8bf75032d402"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#ad7ce30885dde9101862f8bf75032d402">DataModel</a> ()</td></tr>
@@ -90,50 +105,49 @@ Package Functions</h2></td></tr>
 <tr class="memitem:a4792452d26b386fedb946a81c885ef02"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a4792452d26b386fedb946a81c885ef02">PopulateDirList</a> (string path)</td></tr>
 <tr class="separator:a4792452d26b386fedb946a81c885ef02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a088cf45bfc4ee1ee839116dde320040a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a088cf45bfc4ee1ee839116dde320040a">DisplayContentsList</a> (bool checkboxRecurse, string labelname, bool filesonly=true)</td></tr>
-<tr class="memdesc:a088cf45bfc4ee1ee839116dde320040a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display subfiles and subdirectories in the right panel listview  <a href="#a088cf45bfc4ee1ee839116dde320040a">More...</a><br /></td></tr>
+<tr class="memdesc:a088cf45bfc4ee1ee839116dde320040a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display subfiles and subdirectories in the right panel listview and show a file icon  <a href="#a088cf45bfc4ee1ee839116dde320040a">More...</a><br /></td></tr>
 <tr class="separator:a088cf45bfc4ee1ee839116dde320040a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c1cf0d5ae8da39824ab17ecf8de5be3"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a7c1cf0d5ae8da39824ab17ecf8de5be3">DecideWhichTimeMode1</a> (string path)</td></tr>
 <tr class="memdesc:a7c1cf0d5ae8da39824ab17ecf8de5be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior.  <a href="#a7c1cf0d5ae8da39824ab17ecf8de5be3">More...</a><br /></td></tr>
 <tr class="separator:a7c1cf0d5ae8da39824ab17ecf8de5be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af26f78729d27f5a07c169f63ea6776ee"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#af26f78729d27f5a07c169f63ea6776ee">DecideTimeFromSubDirFile</a> (string path)</td></tr>
-<tr class="memdesc:af26f78729d27f5a07c169f63ea6776ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check all the subdirs or subfiles. And decide the time. Called from above: <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a7c1cf0d5ae8da39824ab17ecf8de5be3" title="Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior...">DecideWhichTimeMode1()</a> { radioGroupBox3_UseTimeFrom  <a href="#af26f78729d27f5a07c169f63ea6776ee">More...</a><br /></td></tr>
-<tr class="separator:af26f78729d27f5a07c169f63ea6776ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acedd13ad08d38a0d1e74181d9dfec09e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#acedd13ad08d38a0d1e74181d9dfec09e">RecurseSubDirectoryMode1</a> (string directoryPath, bool checkedRecurse, bool checkedShouldFiles)</td></tr>
-<tr class="memdesc:acedd13ad08d38a0d1e74181d9dfec09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() (Only adds to the confirm list, <a class="el" href="classForm.html">Form</a> 2 will actually write changes).  <a href="#acedd13ad08d38a0d1e74181d9dfec09e">More...</a><br /></td></tr>
-<tr class="separator:acedd13ad08d38a0d1e74181d9dfec09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18bcdec5b474bc9b0eece9d8856ba4f7"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a18bcdec5b474bc9b0eece9d8856ba4f7">DecideTimeFromSubdirOrSubfile</a> (string path)</td></tr>
+<tr class="memdesc:a18bcdec5b474bc9b0eece9d8856ba4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check all the subdirs or subfiles. And decide the time. Called from above: <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a7c1cf0d5ae8da39824ab17ecf8de5be3" title="Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior...">DecideWhichTimeMode1()</a> { radioGroupBox3_UseTimeFrom  <a href="#a18bcdec5b474bc9b0eece9d8856ba4f7">More...</a><br /></td></tr>
+<tr class="separator:a18bcdec5b474bc9b0eece9d8856ba4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4879e17c0c285da2e1749f6f6e6a8913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a4879e17c0c285da2e1749f6f6e6a8913">RecurseSubDirectoryMode1</a> (string directoryPath)</td></tr>
+<tr class="memdesc:a4879e17c0c285da2e1749f6f6e6a8913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() (Only adds to the confirm list, <a class="el" href="classForm.html">Form</a> 2 will actually write changes).  <a href="#a4879e17c0c285da2e1749f6f6e6a8913">More...</a><br /></td></tr>
+<tr class="separator:a4879e17c0c285da2e1749f6f6e6a8913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01bc79ad926855a98c1fd7f564c83fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a01bc79ad926855a98c1fd7f564c83fb4">RecurseSubDirectoryMode2</a> (string directoryPath)</td></tr>
 <tr class="memdesc:a01bc79ad926855a98c1fd7f564c83fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 2: Recursive.  <a href="#a01bc79ad926855a98c1fd7f564c83fb4">More...</a><br /></td></tr>
 <tr class="separator:a01bc79ad926855a98c1fd7f564c83fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab27c8f1da6399dc3a0578de23c15b489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#ab27c8f1da6399dc3a0578de23c15b489">RecurseSubDirectoryMode1Parent</a> (string directoryPath, bool checkedRecurse, bool checkedShouldFiles)</td></tr>
-<tr class="memdesc:ab27c8f1da6399dc3a0578de23c15b489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 1P (start at its Parent)  <a href="#ab27c8f1da6399dc3a0578de23c15b489">More...</a><br /></td></tr>
-<tr class="separator:ab27c8f1da6399dc3a0578de23c15b489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8260df34ae907fe98985de6d2ebe60b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#ad8260df34ae907fe98985de6d2ebe60b">RecurseSubDirectoryMode2Parent</a> (string directoryPath)</td></tr>
-<tr class="memdesc:ad8260df34ae907fe98985de6d2ebe60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 2P (start at its Parent)  <a href="#ad8260df34ae907fe98985de6d2ebe60b">More...</a><br /></td></tr>
-<tr class="separator:ad8260df34ae907fe98985de6d2ebe60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24fe5eb560a3e877e1fcc7c75cd19e85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a24fe5eb560a3e877e1fcc7c75cd19e85">SetTimeDateEachDirectory</a> (string directoryPath, DateTime fileDateTime, bool checkedRecurse, bool checkedShouldFiles)</td></tr>
-<tr class="memdesc:a24fe5eb560a3e877e1fcc7c75cd19e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Directory Time  <a href="#a24fe5eb560a3e877e1fcc7c75cd19e85">More...</a><br /></td></tr>
-<tr class="separator:a24fe5eb560a3e877e1fcc7c75cd19e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bfcf2df19f275804d80ce46eeed134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a00bfcf2df19f275804d80ce46eeed134">RecurseSubDirectoryMode3</a> (string targetPath, string comparePath)</td></tr>
+<tr class="memdesc:a00bfcf2df19f275804d80ce46eeed134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 3: Recursive.  <a href="#a00bfcf2df19f275804d80ce46eeed134">More...</a><br /></td></tr>
+<tr class="separator:a00bfcf2df19f275804d80ce46eeed134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeab181bc642b460fb7d12e43a996a1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#adeab181bc642b460fb7d12e43a996a1d">RecurseSubDirectoryMode1Parent</a> (string directoryPath)</td></tr>
+<tr class="memdesc:adeab181bc642b460fb7d12e43a996a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode 1P (start at its Parent)  <a href="#adeab181bc642b460fb7d12e43a996a1d">More...</a><br /></td></tr>
+<tr class="separator:adeab181bc642b460fb7d12e43a996a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf1378db214ee5aa4075e4a5b1a01e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#aaaf1378db214ee5aa4075e4a5b1a01e7">SetTimeDateEachDirectory</a> (string directoryPath, DateTime fileDateTime)</td></tr>
+<tr class="memdesc:aaaf1378db214ee5aa4075e4a5b1a01e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Directory Time  <a href="#aaaf1378db214ee5aa4075e4a5b1a01e7">More...</a><br /></td></tr>
+<tr class="separator:aaaf1378db214ee5aa4075e4a5b1a01e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa18f20f8dcf75fb4a7b87dab143ae010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#aa18f20f8dcf75fb4a7b87dab143ae010">SetTimeDateEachFile</a> (string directoryPath, DateTime fileDateTime)</td></tr>
 <tr class="memdesc:aa18f20f8dcf75fb4a7b87dab143ae010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set File Time  <a href="#aa18f20f8dcf75fb4a7b87dab143ae010">More...</a><br /></td></tr>
 <tr class="separator:aa18f20f8dcf75fb4a7b87dab143ae010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517aad07f47846a11ffdf32f374b9ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a517aad07f47846a11ffdf32f374b9ba8">AddONEFiletoConfirmList</a> (string filePath, DateTime fileTime, bool isDirectory)</td></tr>
+<tr class="memdesc:a517aad07f47846a11ffdf32f374b9ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">STATIC. Set the date/time for a single file/directory (This works on files and directories) Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List (Only adds to the confirm list, <a class="el" href="classForm.html">Form</a> 2 (Confirm) will actually write changes).  <a href="#a517aad07f47846a11ffdf32f374b9ba8">More...</a><br /></td></tr>
+<tr class="separator:a517aad07f47846a11ffdf32f374b9ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68049503fe3d6b54563a804735f04aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a68049503fe3d6b54563a804735f04aa2">SkipOrAddFile</a> (string path, bool isDirectory)</td></tr>
 <tr class="memdesc:a68049503fe3d6b54563a804735f04aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed  <a href="#a68049503fe3d6b54563a804735f04aa2">More...</a><br /></td></tr>
 <tr class="separator:a68049503fe3d6b54563a804735f04aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf5607fc36596f4174126a571fdc7270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#aaf5607fc36596f4174126a571fdc7270">SetFileDateTimeMode1</a> (string filePath, DateTime fileTime, bool isDirectory)</td></tr>
-<tr class="memdesc:aaf5607fc36596f4174126a571fdc7270"><td class="mdescLeft">&#160;</td><td class="mdescRight">STATIC. Set the date/time for a single file/directory (This works on files and directories) Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List (Only adds to the confirm list, <a class="el" href="classForm.html">Form</a> 2 (Confirm) will actually write changes).  <a href="#aaf5607fc36596f4174126a571fdc7270">More...</a><br /></td></tr>
-<tr class="separator:aaf5607fc36596f4174126a571fdc7270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7637eda9126f930f608093437f535599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a7637eda9126f930f608093437f535599">Makedateobject</a> (string filePath, DateTime fileTime, bool isDirectory)</td></tr>
-<tr class="memdesc:a7637eda9126f930f608093437f535599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static. Overloaded. Make a <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html" title="Class object with 5 properties to refer to a file/dir">NameDateObj</a> out of 1 filename; writes A SINGLE time to all 3 date properties.  <a href="#a7637eda9126f930f608093437f535599">More...</a><br /></td></tr>
-<tr class="separator:a7637eda9126f930f608093437f535599"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61f5f6a5dc9059f683c1421d8970548d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a61f5f6a5dc9059f683c1421d8970548d">Makedateobject</a> (string folderPath, <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a> subObj)</td></tr>
-<tr class="memdesc:a61f5f6a5dc9059f683c1421d8970548d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static. Overloaded. Make a <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html" title="Class object with 5 properties to refer to a file/dir">NameDateObj</a> out of 1 filename; writes each time time to the date attribute that was radiobutton selected.  <a href="#a61f5f6a5dc9059f683c1421d8970548d">More...</a><br /></td></tr>
-<tr class="separator:a61f5f6a5dc9059f683c1421d8970548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fed6bff70f80afe7749b7101325f172"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData.html">DisplayCmaTimeData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a5fed6bff70f80afe7749b7101325f172">GetCmaTimes</a> (string pathName)</td></tr>
-<tr class="memdesc:a5fed6bff70f80afe7749b7101325f172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the date and time of the selected file (also works on Directories)  <a href="#a5fed6bff70f80afe7749b7101325f172">More...</a><br /></td></tr>
-<tr class="separator:a5fed6bff70f80afe7749b7101325f172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9eb45a3ac52ba498992d6faea2f2da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a2f9eb45a3ac52ba498992d6faea2f2da">DecideTimeRG1and2</a> (string directoryPath)</td></tr>
+<tr class="separator:a2f9eb45a3ac52ba498992d6faea2f2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b28f5ddf941fa162ca70c39c1c2e4b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a8b28f5ddf941fa162ca70c39c1c2e4b0">DecideWhichTimeMode2</a> (string directoryPath)</td></tr>
 <tr class="memdesc:a8b28f5ddf941fa162ca70c39c1c2e4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Very long function that does a simple task. Read in the options the user set for the operation, and Decide on the timestamp it should use, by the end we will have a single object with 3 times. This will need to be hit with broad strokes if we attempt to do any more work on the program.  <a href="#a8b28f5ddf941fa162ca70c39c1c2e4b0">More...</a><br /></td></tr>
 <tr class="separator:a8b28f5ddf941fa162ca70c39c1c2e4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b232e99482a4a1b0483d4f7bd2a5541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a9b232e99482a4a1b0483d4f7bd2a5541">FixReadonlyResults</a> ()</td></tr>
+<tr class="memdesc:a9b232e99482a4a1b0483d4f7bd2a5541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a message box of any files that were cleared of their read-only tag.  <a href="#a9b232e99482a4a1b0483d4f7bd2a5541">More...</a><br /></td></tr>
+<tr class="separator:a9b232e99482a4a1b0483d4f7bd2a5541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ad7673720673c17fcaf3943428d57c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a03ad7673720673c17fcaf3943428d57c">ResetReadOnly</a> ()</td></tr>
+<tr class="memdesc:a03ad7673720673c17fcaf3943428d57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the read-only attribute back after it was removed  <a href="#a03ad7673720673c17fcaf3943428d57c">More...</a><br /></td></tr>
+<tr class="separator:a03ad7673720673c17fcaf3943428d57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
 Package Attributes</h2></td></tr>
@@ -161,16 +175,26 @@ Package Attributes</h2></td></tr>
 <tr class="memitem:ac776338bd7865341536e1b301ab2e837"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgenBTC_1_1FileTime_1_1Models_1_1guistatus.html">guistatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#ac776338bd7865341536e1b301ab2e837">gui</a></td></tr>
 <tr class="separator:ac776338bd7865341536e1b301ab2e837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a230ae2b4a58763aa5b924005c79d8295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a230ae2b4a58763aa5b924005c79d8295">AddImagesExtsToFileLists</a> (string directoryName)</td></tr>
+<tr class="memdesc:a230ae2b4a58763aa5b924005c79d8295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the contents list window with files's own Icons, given a directory name path  <a href="#a230ae2b4a58763aa5b924005c79d8295">More...</a><br /></td></tr>
+<tr class="separator:a230ae2b4a58763aa5b924005c79d8295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5db833571136a40376d683c76424a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a3b5db833571136a40376d683c76424a7">StoreDateByCMACheckboxes</a> (<a class="el" href="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl.html">NameDateObjListViewVMdl</a> currentobject)</td></tr>
+<tr class="separator:a3b5db833571136a40376d683c76424a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a23bb91d68f4028304086c4dad5bb41b0"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a23bb91d68f4028304086c4dad5bb41b0">contentsFileList</a></td></tr>
 <tr class="separator:a23bb91d68f4028304086c4dad5bb41b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0689c0413d3a436b4c4bded1001e977b"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a0689c0413d3a436b4c4bded1001e977b">filextlist</a></td></tr>
 <tr class="separator:a0689c0413d3a436b4c4bded1001e977b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d60371e277af18fc1d2b45725ed231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#aa2d60371e277af18fc1d2b45725ed231">thingtoreturn</a> Error - <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">File</a> is Read Only. Continue showing Read-Only notifications?&quot;</td></tr>
+<tr class="separator:aa2d60371e277af18fc1d2b45725ed231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00012">12</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00014">14</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad7ce30885dde9101862f8bf75032d402"></a>
 <div class="memitem">
@@ -195,7 +219,7 @@ Private Attributes</h2></td></tr>
 
 <p>Constructor </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00037">37</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00040">40</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -224,9 +248,41 @@ Private Attributes</h2></td></tr>
 
 <p>Clear contents Dir + File lists </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00050">50</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00053">53</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00306">genBTC.FileTime.Forms.Form_Main.ClearOnError()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00302">genBTC.FileTime.Forms.Form_Main.ClearOnError()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09e8580b4dd602e7d8e4ffb07eaa2a42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct.html">NameDateStruct</a> genBTC.FileTime.Models.DataModel.GetCmaTimesFromFilesystem </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pathName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display the date and time of the selected file (also works on Directories) </p>
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00064">64</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>.</p>
+
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00313">genBTC.FileTime.Forms.Form_Main.DisplayCma()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +308,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00058">58</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00096">96</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 <p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>.</p>
 
@@ -280,7 +336,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00065">65</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00103">103</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 <p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>.</p>
 
@@ -324,20 +380,49 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display subfiles and subdirectories in the right panel listview </p>
+<p>Display subfiles and subdirectories in the right panel listview and show a file icon </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filesonly</td><td>Don't show the directories, only files.</td></tr>
   </table>
   </dd>
 </dl>
-<p>reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00077">77</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00116">116</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>References <a class="el" href="SharedHelper_8cs_source.html#l00025">genBTC.FileTime.Classes.SharedHelper.CurrExten</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, <a class="el" href="SharedHelper_8cs_source.html#l00017">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer()</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="SharedHelper_8cs_source.html#l00028">genBTC.FileTime.Classes.SharedHelper.FindCurExt()</a>, <a class="el" href="NativeExtractIcon_8cs_source.html#l00033">genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon()</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00039">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag()</a>.</p>
+<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00017">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer()</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00283">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00267">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a230ae2b4a58763aa5b924005c79d8295"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.AddImagesExtsToFileLists </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>directoryName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill the contents list window with files's own Icons, given a directory name path </p>
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00164">164</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>References <a class="el" href="SharedHelper_8cs_source.html#l00026">genBTC.FileTime.Classes.SharedHelper.CurrExten</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="SharedHelper_8cs_source.html#l00029">genBTC.FileTime.Classes.SharedHelper.FindCurExt()</a>, <a class="el" href="NativeExtractIcon_8cs_source.html#l00033">genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon()</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00040">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag()</a>.</p>
 
 </div>
 </div>
@@ -366,15 +451,15 @@ Private Attributes</h2></td></tr>
 <p>Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior. </p>
 <p>reqs: (string path), contentsDirList, contentsFileList, guistatus </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00149">149</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00196">196</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>References <a class="el" href="Structs_8cs_source.html#l00058">genBTC.FileTime.Models.guistatus.Accessed</a>, <a class="el" href="Structs_8cs_source.html#l00059">genBTC.FileTime.Models.guistatus.Created</a>, <a class="el" href="Structs_8cs_source.html#l00061">genBTC.FileTime.Models.guistatus.dateTimePickerDate</a>, <a class="el" href="Structs_8cs_source.html#l00061">genBTC.FileTime.Models.guistatus.dateTimePickerTime</a>, <a class="el" href="Structs_8cs_source.html#l00060">genBTC.FileTime.Models.guistatus.Modified</a>, <a class="el" href="Structs_8cs_source.html#l00078">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</a>, <a class="el" href="Structs_8cs_source.html#l00079">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</a>, <a class="el" href="Structs_8cs_source.html#l00080">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</a>, <a class="el" href="Structs_8cs_source.html#l00081">genBTC.FileTime.Models.guistatus.rg2rb1Creation</a>, <a class="el" href="Structs_8cs_source.html#l00082">genBTC.FileTime.Models.guistatus.rg2rb2Modified</a>, and <a class="el" href="Structs_8cs_source.html#l00083">genBTC.FileTime.Models.guistatus.rg2rb3LastAccess</a>.</p>
+<p>References <a class="el" href="Structs_8cs_source.html#l00069">genBTC.FileTime.Models.guistatus.Accessed</a>, <a class="el" href="Structs_8cs_source.html#l00067">genBTC.FileTime.Models.guistatus.Created</a>, <a class="el" href="Structs_8cs_source.html#l00063">genBTC.FileTime.Models.guistatus.dateTimePickerDate</a>, <a class="el" href="Structs_8cs_source.html#l00063">genBTC.FileTime.Models.guistatus.dateTimePickerTime</a>, <a class="el" href="Structs_8cs_source.html#l00068">genBTC.FileTime.Models.guistatus.Modified</a>, <a class="el" href="Structs_8cs_source.html#l00061">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</a>, <a class="el" href="Structs_8cs_source.html#l00065">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</a>, <a class="el" href="Structs_8cs_source.html#l00073">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</a>, <a class="el" href="Structs_8cs_source.html#l00075">genBTC.FileTime.Models.guistatus.rg2rb1Creation</a>, <a class="el" href="Structs_8cs_source.html#l00076">genBTC.FileTime.Models.guistatus.rg2rb2Modified</a>, and <a class="el" href="Structs_8cs_source.html#l00077">genBTC.FileTime.Models.guistatus.rg2rb3LastAccess</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af26f78729d27f5a07c169f63ea6776ee"></a>
+<a class="anchor" id="a18bcdec5b474bc9b0eece9d8856ba4f7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -382,7 +467,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DateTime genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile </td>
+          <td class="memname">DateTime genBTC.FileTime.Models.DataModel.DecideTimeFromSubdirOrSubfile </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -398,13 +483,13 @@ Private Attributes</h2></td></tr>
 
 <p>Check all the subdirs or subfiles. And decide the time. Called from above: <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html#a7c1cf0d5ae8da39824ab17ecf8de5be3" title="Returns a DateTime after examining the radiobuttons/checkboxes to specify the logic behavior...">DecideWhichTimeMode1()</a> { radioGroupBox3_UseTimeFrom </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00181">181</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00228">228</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="Structs_8cs_source.html#l00065">genBTC.FileTime.Models.guistatus.radioButton1_setfromCreated</a>, <a class="el" href="Structs_8cs_source.html#l00067">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</a>, <a class="el" href="Structs_8cs_source.html#l00063">genBTC.FileTime.Models.guistatus.radioButton1Oldest</a>, <a class="el" href="Structs_8cs_source.html#l00070">genBTC.FileTime.Models.guistatus.radioButton2_setfromModified</a>, <a class="el" href="Structs_8cs_source.html#l00072">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</a>, <a class="el" href="Structs_8cs_source.html#l00068">genBTC.FileTime.Models.guistatus.radioButton2Newest</a>, <a class="el" href="Structs_8cs_source.html#l00075">genBTC.FileTime.Models.guistatus.radioButton3_setfromAccessed</a>, <a class="el" href="Structs_8cs_source.html#l00073">genBTC.FileTime.Models.guistatus.radioButton3Random</a>, and <a class="el" href="Structs_8cs_source.html#l00075">genBTC.FileTime.Models.guistatus.radioButton4_setfromRandom</a>.</p>
+<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="Structs_8cs_source.html#l00085">genBTC.FileTime.Models.guistatus.radioButton1_setfromCreated</a>, <a class="el" href="Structs_8cs_source.html#l00079">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</a>, <a class="el" href="Structs_8cs_source.html#l00082">genBTC.FileTime.Models.guistatus.radioButton1Oldest</a>, <a class="el" href="Structs_8cs_source.html#l00085">genBTC.FileTime.Models.guistatus.radioButton2_setfromModified</a>, <a class="el" href="Structs_8cs_source.html#l00080">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</a>, <a class="el" href="Structs_8cs_source.html#l00083">genBTC.FileTime.Models.guistatus.radioButton2Newest</a>, <a class="el" href="Structs_8cs_source.html#l00085">genBTC.FileTime.Models.guistatus.radioButton3_setfromAccessed</a>, <a class="el" href="Structs_8cs_source.html#l00084">genBTC.FileTime.Models.guistatus.radioButton3Random</a>, and <a class="el" href="Structs_8cs_source.html#l00085">genBTC.FileTime.Models.guistatus.radioButton4_setfromRandom</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acedd13ad08d38a0d1e74181d9dfec09e"></a>
+<a class="anchor" id="a4879e17c0c285da2e1749f6f6e6a8913"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -415,24 +500,8 @@ Private Attributes</h2></td></tr>
           <td class="memname">void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1 </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>directoryPath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>directoryPath</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>checkedRecurse</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>checkedShouldFiles</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -451,9 +520,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <p>req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00275">275</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00304">304</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>References <a class="el" href="Structs_8cs_source.html#l00059">genBTC.FileTime.Models.guistatus.checkboxRecurse</a>, and <a class="el" href="Structs_8cs_source.html#l00060">genBTC.FileTime.Models.guistatus.checkboxShouldFiles</a>.</p>
+
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
 
 </div>
 </div>
@@ -487,15 +558,15 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00294">294</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00323">323</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 <p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab27c8f1da6399dc3a0578de23c15b489"></a>
+<a class="anchor" id="a00bfcf2df19f275804d80ce46eeed134"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -503,22 +574,16 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent </td>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3 </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>directoryPath</em>, </td>
+          <td class="paramname"><em>targetPath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>checkedRecurse</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>checkedShouldFiles</em>&#160;</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>comparePath</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -533,17 +598,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mode 1P (start at its Parent) </p>
+<p>Mode 3: Recursive. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetPath</td><td>Write Path to modify times of. </td></tr>
+    <tr><td class="paramname">comparePath</td><td>Read Path used as source of time data.</td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00313">313</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00353">353</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>.</p>
+<p>References <a class="el" href="SharedHelper_8cs_source.html#l00022">genBTC.FileTime.Classes.SharedHelper.Seperator</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00023">genBTC.FileTime.Classes.SharedHelper.SeperatorString</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00384">genBTC.FileTime.Forms.Form_Main.StartUpMode3()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad8260df34ae907fe98985de6d2ebe60b"></a>
+<a class="anchor" id="a3b5db833571136a40376d683c76424a7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -551,7 +623,35 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent </td>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.StoreDateByCMACheckboxes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl.html">NameDateObjListViewVMdl</a>&#160;</td>
+          <td class="paramname"><em>currentobject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00441">441</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>References <a class="el" href="Structs_8cs_source.html#l00009">genBTC.FileTime.Models.BoolCMA.A</a>, <a class="el" href="NameDateObjListViewVMdl_8cs_source.html#l00070">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Accessed</a>, <a class="el" href="Structs_8cs_source.html#l00010">genBTC.FileTime.Models.BoolCMA.C</a>, <a class="el" href="NameDateObjListViewVMdl_8cs_source.html#l00056">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created</a>, <a class="el" href="Structs_8cs_source.html#l00011">genBTC.FileTime.Models.BoolCMA.M</a>, and <a class="el" href="NameDateObjListViewVMdl_8cs_source.html#l00063">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Modified</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adeab181bc642b460fb7d12e43a996a1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>directoryPath</em></td><td>)</td>
@@ -565,17 +665,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mode 2P (start at its Parent) </p>
+<p>Mode 1P (start at its Parent) </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00327">327</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00454">454</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 <p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a24fe5eb560a3e877e1fcc7c75cd19e85"></a>
+<a class="anchor" id="aaaf1378db214ee5aa4075e4a5b1a01e7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -592,19 +690,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">DateTime&#160;</td>
-          <td class="paramname"><em>fileDateTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>checkedRecurse</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>checkedShouldFiles</em>&#160;</td>
+          <td class="paramname"><em>fileDateTime</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -621,7 +707,7 @@ Private Attributes</h2></td></tr>
 
 <p>Set Directory Time </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00343">343</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00471">471</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 <p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00017">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer()</a>.</p>
 
@@ -661,9 +747,65 @@ Private Attributes</h2></td></tr>
 
 <p>Set File Time </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00364">364</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00492">492</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 <p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00017">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a517aad07f47846a11ffdf32f374b9ba8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>fileTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isDirectory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>STATIC. Set the date/time for a single file/directory (This works on files and directories) Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List (Only adds to the confirm list, <a class="el" href="classForm.html">Form</a> 2 (Confirm) will actually write changes). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Full path to the file/directory</td></tr>
+    <tr><td class="paramname">fileTime</td><td>Date/Time to set the file/directory</td></tr>
+    <tr><td class="paramname">isDirectory</td><td>Is this a directory???</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00513">513</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>References <a class="el" href="Structs_8cs_source.html#l00009">genBTC.FileTime.Models.BoolCMA.A</a>, <a class="el" href="SharedHelper_8cs_source.html#l00049">genBTC.FileTime.Classes.SharedHelper.Bool2Int()</a>, <a class="el" href="Structs_8cs_source.html#l00010">genBTC.FileTime.Models.BoolCMA.C</a>, and <a class="el" href="Structs_8cs_source.html#l00011">genBTC.FileTime.Models.BoolCMA.M</a>.</p>
+
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
 
 </div>
 </div>
@@ -701,13 +843,13 @@ Private Attributes</h2></td></tr>
 
 <p>Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00380">380</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00536">536</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>References <a class="el" href="Settings_8Designer_8cs_source.html#l00020">genBTC.FileTime.Properties.Settings.Default</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="Structs_8cs_source.html#l00016">genBTC.FileTime.Models.SkippedHSR.H</a>, <a class="el" href="Structs_8cs_source.html#l00019">genBTC.FileTime.Models.SkippedHSR.R</a>, <a class="el" href="Structs_8cs_source.html#l00022">genBTC.FileTime.Models.SkippedHSR.S</a>, <a class="el" href="Settings_8Designer_8cs_source.html#l00029">genBTC.FileTime.Properties.Settings.ShowNoticesReadOnly</a>, <a class="el" href="Settings_8Designer_8cs_source.html#l00053">genBTC.FileTime.Properties.Settings.SkipHidden</a>, <a class="el" href="Settings_8Designer_8cs_source.html#l00065">genBTC.FileTime.Properties.Settings.SkipReadOnly</a>, and <a class="el" href="Settings_8Designer_8cs_source.html#l00041">genBTC.FileTime.Properties.Settings.SkipSystem</a>.</p>
+<p>References <a class="el" href="Settings_8Designer_8cs_source.html#l00020">genBTC.FileTime.Properties.Settings.Default</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="Structs_8cs_source.html#l00017">genBTC.FileTime.Models.SkippedHSR.H</a>, <a class="el" href="Structs_8cs_source.html#l00020">genBTC.FileTime.Models.SkippedHSR.R</a>, <a class="el" href="Structs_8cs_source.html#l00023">genBTC.FileTime.Models.SkippedHSR.S</a>, <a class="el" href="Settings_8Designer_8cs_source.html#l00029">genBTC.FileTime.Properties.Settings.ShowNoticesReadOnly</a>, <a class="el" href="Settings_8Designer_8cs_source.html#l00053">genBTC.FileTime.Properties.Settings.SkipHidden</a>, <a class="el" href="Settings_8Designer_8cs_source.html#l00065">genBTC.FileTime.Properties.Settings.SkipReadOnly</a>, and <a class="el" href="Settings_8Designer_8cs_source.html#l00041">genBTC.FileTime.Properties.Settings.SkipSystem</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aaf5607fc36596f4174126a571fdc7270"></a>
+<a class="anchor" id="a2f9eb45a3ac52ba498992d6faea2f2da"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -715,150 +857,10 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1 </td>
+          <td class="memname">bool genBTC.FileTime.Models.DataModel.DecideTimeRG1and2 </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>filePath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">DateTime&#160;</td>
-          <td class="paramname"><em>fileTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isDirectory</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>STATIC. Set the date/time for a single file/directory (This works on files and directories) Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List (Only adds to the confirm list, <a class="el" href="classForm.html">Form</a> 2 (Confirm) will actually write changes). </p>
-<p>Requires: Pass in the datamodel and the checkbox states. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filePath</td><td>Full path to the file/directory</td></tr>
-    <tr><td class="paramname">fileTime</td><td>Date/Time to set the file/directory</td></tr>
-    <tr><td class="paramname">isDirectory</td><td>Is this a directory???</td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00423">423</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
-
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7637eda9126f930f608093437f535599"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a> genBTC.FileTime.Models.DataModel.Makedateobject </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>filePath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">DateTime&#160;</td>
-          <td class="paramname"><em>fileTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isDirectory</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Static. Overloaded. Make a <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html" title="Class object with 5 properties to refer to a file/dir">NameDateObj</a> out of 1 filename; writes A SINGLE time to all 3 date properties. </p>
-
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00434">434</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
-
-<p>References <a class="el" href="Structs_8cs_source.html#l00008">genBTC.FileTime.Models.BoolCMA.A</a>, <a class="el" href="SharedHelper_8cs_source.html#l00048">genBTC.FileTime.Classes.SharedHelper.Bool2Int()</a>, <a class="el" href="Structs_8cs_source.html#l00009">genBTC.FileTime.Models.BoolCMA.C</a>, and <a class="el" href="Structs_8cs_source.html#l00010">genBTC.FileTime.Models.BoolCMA.M</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a61f5f6a5dc9059f683c1421d8970548d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a> genBTC.FileTime.Models.DataModel.Makedateobject </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>folderPath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a>&#160;</td>
-          <td class="paramname"><em>subObj</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Static. Overloaded. Make a <a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html" title="Class object with 5 properties to refer to a file/dir">NameDateObj</a> out of 1 filename; writes each time time to the date attribute that was radiobutton selected. </p>
-
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00452">452</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
-
-<p>References <a class="el" href="Structs_8cs_source.html#l00008">genBTC.FileTime.Models.BoolCMA.A</a>, <a class="el" href="Structs_8cs_source.html#l00009">genBTC.FileTime.Models.BoolCMA.C</a>, <a class="el" href="NameDateObjListViewVMdl_8cs_source.html#l00045">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created</a>, and <a class="el" href="Structs_8cs_source.html#l00010">genBTC.FileTime.Models.BoolCMA.M</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5fed6bff70f80afe7749b7101325f172"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData.html">DisplayCmaTimeData</a> genBTC.FileTime.Models.DataModel.GetCmaTimes </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>pathName</em></td><td>)</td>
+          <td class="paramname"><em>directoryPath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -869,13 +871,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display the date and time of the selected file (also works on Directories) </p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00583">583</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00469">469</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
-
-<p>References <a class="el" href="Structs_8cs_source.html#l00046">genBTC.FileTime.Models.DisplayCmaTimeData.Created</a>, and <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>.</p>
-
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00317">genBTC.FileTime.Forms.Form_Main.DisplayCma()</a>.</p>
+<p>References <a class="el" href="NameDateObj_8cs_source.html#l00064">genBTC.FileTime.Models.NameDateObj.Accessed</a>, <a class="el" href="Structs_8cs_source.html#l00069">genBTC.FileTime.Models.guistatus.Accessed</a>, <a class="el" href="NameDateObj_8cs_source.html#l00050">genBTC.FileTime.Models.NameDateObj.Created</a>, <a class="el" href="Structs_8cs_source.html#l00067">genBTC.FileTime.Models.guistatus.Created</a>, <a class="el" href="Structs_8cs_source.html#l00063">genBTC.FileTime.Models.guistatus.dateTimePickerDate</a>, <a class="el" href="Structs_8cs_source.html#l00063">genBTC.FileTime.Models.guistatus.dateTimePickerTime</a>, <a class="el" href="NameDateObj_8cs_source.html#l00057">genBTC.FileTime.Models.NameDateObj.Modified</a>, <a class="el" href="Structs_8cs_source.html#l00068">genBTC.FileTime.Models.guistatus.Modified</a>, <a class="el" href="NameDateObj_8cs_source.html#l00045">genBTC.FileTime.Models.NameDateObj.Name</a>, <a class="el" href="Structs_8cs_source.html#l00070">genBTC.FileTime.Models.guistatus.PathName</a>, <a class="el" href="Structs_8cs_source.html#l00061">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</a>, and <a class="el" href="Structs_8cs_source.html#l00065">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</a>.</p>
 
 </div>
 </div>
@@ -903,9 +901,71 @@ Private Attributes</h2></td></tr>
 
 <p>Very long function that does a simple task. Read in the options the user set for the operation, and Decide on the timestamp it should use, by the end we will have a single object with 3 times. This will need to be hit with broad strokes if we attempt to do any more work on the program. </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00498">498</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00615">615</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>References <a class="el" href="NameDateObj_8cs_source.html#l00056">genBTC.FileTime.Models.NameDateObj.Accessed</a>, <a class="el" href="Structs_8cs_source.html#l00058">genBTC.FileTime.Models.guistatus.Accessed</a>, <a class="el" href="NameDateObj_8cs_source.html#l00042">genBTC.FileTime.Models.NameDateObj.Created</a>, <a class="el" href="Structs_8cs_source.html#l00059">genBTC.FileTime.Models.guistatus.Created</a>, <a class="el" href="Structs_8cs_source.html#l00061">genBTC.FileTime.Models.guistatus.dateTimePickerDate</a>, <a class="el" href="Structs_8cs_source.html#l00061">genBTC.FileTime.Models.guistatus.dateTimePickerTime</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="Structs_8cs_source.html#l00062">genBTC.FileTime.Models.guistatus.labelHiddenPathName</a>, <a class="el" href="NameDateObj_8cs_source.html#l00049">genBTC.FileTime.Models.NameDateObj.Modified</a>, <a class="el" href="Structs_8cs_source.html#l00060">genBTC.FileTime.Models.guistatus.Modified</a>, <a class="el" href="Structs_8cs_source.html#l00067">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</a>, <a class="el" href="Structs_8cs_source.html#l00063">genBTC.FileTime.Models.guistatus.radioButton1Oldest</a>, <a class="el" href="Structs_8cs_source.html#l00072">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</a>, <a class="el" href="Structs_8cs_source.html#l00068">genBTC.FileTime.Models.guistatus.radioButton2Newest</a>, <a class="el" href="Structs_8cs_source.html#l00073">genBTC.FileTime.Models.guistatus.radioButton3Random</a>, <a class="el" href="Structs_8cs_source.html#l00078">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</a>, <a class="el" href="Structs_8cs_source.html#l00079">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</a>, <a class="el" href="Structs_8cs_source.html#l00080">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00039">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag()</a>.</p>
+<p>References <a class="el" href="NameDateObj_8cs_source.html#l00064">genBTC.FileTime.Models.NameDateObj.Accessed</a>, <a class="el" href="NameDateObj_8cs_source.html#l00050">genBTC.FileTime.Models.NameDateObj.Created</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</a>, <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, <a class="el" href="NameDateObj_8cs_source.html#l00057">genBTC.FileTime.Models.NameDateObj.Modified</a>, <a class="el" href="NameDateObj_8cs_source.html#l00045">genBTC.FileTime.Models.NameDateObj.Name</a>, <a class="el" href="Structs_8cs_source.html#l00079">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</a>, <a class="el" href="Structs_8cs_source.html#l00082">genBTC.FileTime.Models.guistatus.radioButton1Oldest</a>, <a class="el" href="Structs_8cs_source.html#l00080">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</a>, <a class="el" href="Structs_8cs_source.html#l00083">genBTC.FileTime.Models.guistatus.radioButton2Newest</a>, <a class="el" href="Structs_8cs_source.html#l00084">genBTC.FileTime.Models.guistatus.radioButton3Random</a>, <a class="el" href="Structs_8cs_source.html#l00073">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00040">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b232e99482a4a1b0483d4f7bd2a5541"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.FixReadonlyResults </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show a message box of any files that were cleared of their read-only tag. </p>
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00782">782</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>, and <a class="el" href="SharedHelper_8cs_source.html#l00034">genBTC.FileTime.Classes.SharedHelper.RemoveAttributes()</a>.</p>
+
+<p>Referenced by <a class="el" href="Form__Confirm_8cs_source.html#l00063">genBTC.FileTime.Forms.Form_Confirm.MakeListView()</a>, and <a class="el" href="Form__Main_8cs_source.html#l00409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03ad7673720673c17fcaf3943428d57c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genBTC.FileTime.Models.DataModel.ResetReadOnly </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the read-only attribute back after it was removed </p>
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00814">814</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>References <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</a>.</p>
+
+<p>Referenced by <a class="el" href="Form__Confirm_8cs_source.html#l00108">genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing()</a>.</p>
 
 </div>
 </div>
@@ -930,7 +990,7 @@ Private Attributes</h2></td></tr>
 
 <p>Main Lists for filenames. Dir , File, Ext </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00016">16</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00018">18</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -952,7 +1012,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00016">16</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00018">18</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -974,7 +1034,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00016">16</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00018">18</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1058,25 @@ Private Attributes</h2></td></tr>
 
 <p>Pass a resetList of files that had the read-only attribute fixed, so Form2 can display it </p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00018">18</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00020">20</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac10ad63b0ce33838d6ef3badd6ccedc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int genBTC.FileTime.Models.DataModel.fixreadonlyActive = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the fixreadonly fixreadonlyActive files count (checked in between fix and unfix) </p>
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00022">22</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
 
 </div>
 </div>
@@ -1022,9 +1100,9 @@ Private Attributes</h2></td></tr>
 
 <p>List of Class to be passed to <a class="el" href="classForm.html">Form</a> 2 for confirmation of files</p>
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00020">20</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00024">24</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Confirm_8cs_source.html#l00108">genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing()</a>, <a class="el" href="Form__Confirm_8cs_source.html#l00063">genBTC.FileTime.Forms.Form_Confirm.MakeListView()</a>, and <a class="el" href="Form__Main_8cs_source.html#l00396">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse()</a>.</p>
 
 </div>
 </div>
@@ -1046,9 +1124,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00022">22</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
-
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00283">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel()</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00026">26</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -1070,9 +1146,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00024">24</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
-
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00283">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel()</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00028">28</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -1094,9 +1168,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00026">26</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00030">30</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00477">genBTC.FileTime.Forms.Form_Main.LaunchForm2Go()</a>, and <a class="el" href="Form__Main_8cs_source.html#l00396">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse()</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1192,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00028">28</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00032">32</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -1140,7 +1214,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00029">29</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00033">33</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>
@@ -1162,9 +1236,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00031">31</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00035">35</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00235">genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged()</a>, <a class="el" href="Form__Main_8cs_source.html#l00396">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse()</a>, and <a class="el" href="Form__Main_8cs_source.html#l00277">genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes()</a>.</p>
 
 </div>
 </div>
@@ -1186,9 +1260,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00032">32</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00036">36</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
-<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00351">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2()</a>.</p>
+<p>Referenced by <a class="el" href="Form__Main_8cs_source.html#l00289">genBTC.FileTime.Forms.Form_Main.checkBox_Recurse_CheckedChanged()</a>, <a class="el" href="Form__Main_8cs_source.html#l00294">genBTC.FileTime.Forms.Form_Main.checkBoxShouldFiles_CheckedChanged()</a>, and <a class="el" href="Form__Main_8cs_source.html#l00396">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2d60371e277af18fc1d2b45725ed231"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html">NameDateObj</a> genBTC.FileTime.Models.DataModel.thingtoreturn Error - <a class="el" href="namespacegenBTC_1_1FileTime_1_1Models.html#a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">File</a> is Read Only. Continue showing Read-Only notifications?&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataModel_8cs_source.html#l00582">582</a> of file <a class="el" href="DataModel_8cs_source.html">DataModel.cs</a>.</p>
 
 </div>
 </div>

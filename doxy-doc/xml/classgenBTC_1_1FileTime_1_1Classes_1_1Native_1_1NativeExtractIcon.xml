@@ -261,8 +261,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Classes/Native/NativeExtractIcon.cs" line="33" column="1" bodyfile="Classes/Native/NativeExtractIcon.cs" bodystart="33" bodyend="49"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</referencedby>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="101" endline="131">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a230ae2b4a58763aa5b924005c79d8295" compoundref="DataModel_8cs" startline="164" endline="190">genBTC.FileTime.Models.DataModel.AddImagesExtsToFileLists</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="63" endline="93">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

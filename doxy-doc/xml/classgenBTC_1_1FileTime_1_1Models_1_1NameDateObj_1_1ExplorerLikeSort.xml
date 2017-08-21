@@ -23,8 +23,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/NameDateObj.cs" line="82" column="1" bodyfile="Models/NameDateObj.cs" bodystart="82" bodyend="85"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="37">genBTC.FileTime.Models.NameDateObj.Name</references>
+        <location file="Models/NameDateObj.cs" line="90" column="1" bodyfile="Models/NameDateObj.cs" bodystart="90" bodyend="93"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="45">genBTC.FileTime.Models.NameDateObj.Name</references>
         <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a72c533359c49e0e1b77878f1c47d164a">genBTC.FileTime.Classes.SharedHelper.StrCmpLogicalW</references>
       </memberdef>
       </sectiondef>
@@ -33,30 +33,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="23">
+      <node id="26">
         <label>genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort</label>
         <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="27" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="24">
+      <node id="27">
         <label>IComparer&lt; NameDateObj &gt;</label>
         <link refid="classIComparer"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="25">
+      <node id="28">
         <label>genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort</label>
         <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort"/>
-        <childnode refid="26" relation="public-inheritance">
+        <childnode refid="29" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="26">
+      <node id="29">
         <label>IComparer&lt; NameDateObj &gt;</label>
         <link refid="classIComparer"/>
       </node>
     </collaborationgraph>
-    <location file="Models/NameDateObj.cs" line="81" column="1" bodyfile="Models/NameDateObj.cs" bodystart="80" bodyend="86"/>
+    <location file="Models/NameDateObj.cs" line="89" column="1" bodyfile="Models/NameDateObj.cs" bodystart="88" bodyend="94"/>
     <listofallmembers>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1_1ExplorerLikeSort_1ae95eb55163eb0fc3b22263a8e8bb4bd8" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateObj::ExplorerLikeSort</scope><name>Compare</name></member>
     </listofallmembers>

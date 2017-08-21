@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Preferences.cs" line="19" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="19" bodyend="23"/>
+        <location file="Forms/Form_Preferences.cs" line="19" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="19" bodyend="22"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Preferences.cs" line="26" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="26" bodyend="38"/>
+        <location file="Forms/Form_Preferences.cs" line="25" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="25" bodyend="37"/>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1aeac9777e8e2d82f4d532578e89ddecac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Preferences.cs" line="41" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="41" bodyend="45"/>
+        <location file="Forms/Form_Preferences.cs" line="40" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="40" bodyend="44"/>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a8bb3628fcbffc7fa60373514b76a4457" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -325,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Preferences.cs" line="48" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="48" bodyend="51"/>
+        <location file="Forms/Form_Preferences.cs" line="47" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ade029483c7134e7a864ee0b8475f2361" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Preferences.cs" line="53" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="53" bodyend="87"/>
+        <location file="Forms/Form_Preferences.cs" line="52" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="52" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1ae22d6c0ab2502fd4ece5f5d828e5d313" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -394,30 +394,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="61">
+      <node id="67">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
-      <node id="60">
+      <node id="66">
         <label>genBTC.FileTime.Forms.Form_Preferences</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences"/>
-        <childnode refid="61" relation="public-inheritance">
+        <childnode refid="67" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="63">
+      <node id="69">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
-      <node id="62">
+      <node id="68">
         <label>genBTC.FileTime.Forms.Form_Preferences</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Forms/Form_Preferences.cs" line="15" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="14" bodyend="88"/>
+    <location file="Forms/Form_Preferences.cs" line="15" column="1" bodyfile="Forms/Form_Preferences.cs" bodystart="14" bodyend="87"/>
     <listofallmembers>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a0d0fcc156096c1c1d5bdd7b9a5061405" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>_currentdir</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences_1a281c6a90053ba74e3fd34de00d771f37" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Preferences</scope><name>button1_Click</name></member>

@@ -8,6 +8,8 @@ var classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj =
     [ "_a", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#aeb6a84eef1fb77726e009f6137e5a46d", null ],
     [ "_c", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#ab4833eda13289580da2fa04f36aac21f", null ],
     [ "_m", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#afc51e5988ab164716449336fcb3ae273", null ],
+    [ "isBlank", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#a8e1093978e2e2ab822603b6f04d14d34", null ],
+    [ "which", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#ac5545acaf92daa69ff61e3247317a9a1", null ],
     [ "FileOrDirType", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#a2edd2e54b89f4feb9f2f6f9b86fee5ba", null ],
     [ "Name", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#a53731524117edaa395cb2c6e3efada4e", null ],
     [ "Created", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html#a111f904d85223c4eaeb297464b0490c3", null ],

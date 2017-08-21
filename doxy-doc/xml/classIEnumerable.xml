@@ -8,13 +8,13 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="72">
+      <node id="78">
         <label>WindowsExplorer.ServerEnum</label>
         <link refid="classWindowsExplorer_1_1ServerEnum"/>
-        <childnode refid="71" relation="public-inheritance">
+        <childnode refid="77" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="71">
+      <node id="77">
         <label>IEnumerable</label>
         <link refid="classIEnumerable"/>
       </node>

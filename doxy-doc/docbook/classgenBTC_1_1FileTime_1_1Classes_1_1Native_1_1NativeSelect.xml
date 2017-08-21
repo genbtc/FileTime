@@ -45,9 +45,7 @@ IntPtr hWnd, int msg, int wParam, ref <link linkend="structgenBTC_1_1FileTime_1_
                 <itemizedlist>
                     <listitem>
                         <para>static void <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3">SelectAllItems</link> (
-ListView list)<para><emphasis>&lt;summary&gt;
-Select all rows on the given listview
-&lt;/summary&gt;</emphasis></para>
+ListView list)<para><emphasis>&lt;summary&gt;  Select all rows on the given listview  &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -56,9 +54,16 @@ Select all rows on the given listview
                 <itemizedlist>
                     <listitem>
                         <para>static void <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327">DeselectAllItems</link> (
-ListView list)<para><emphasis>&lt;summary&gt;
-Deselect all rows on the given listview
-&lt;/summary&gt;</emphasis></para>
+ListView list)<para><emphasis>&lt;summary&gt;  Deselect all rows on the given listview  &lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a4661d586d25c1fdcaf6020006d2d0a24">InvertSelection</link> (
+ListView list)<para><emphasis>&lt;summary&gt;  Invert selection on all rows on the listview and cleanup the focus line. &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -83,9 +88,7 @@ Set the item state on the given item
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3">
-                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems (ListView list)</title> <emphasis>&lt;summary&gt;
-Select all rows on the given listview
-&lt;/summary&gt;</emphasis>
+                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems (ListView list)</title> <emphasis>&lt;summary&gt;  Select all rows on the given listview  &lt;/summary&gt;</emphasis>
                 
 <para>
                 <formalpara>
@@ -110,9 +113,7 @@ Select all rows on the given listview
 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327">
-                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems (ListView list)</title> <emphasis>&lt;summary&gt;
-Deselect all rows on the given listview
-&lt;/summary&gt;</emphasis>
+                <title>static void genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems (ListView list)</title> <emphasis>&lt;summary&gt;  Deselect all rows on the given listview  &lt;/summary&gt;</emphasis>
                 
 <para>
                 <formalpara>
@@ -134,6 +135,35 @@ Deselect all rows on the given listview
                     </table>
                 </formalpara>
                 </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a4661d586d25c1fdcaf6020006d2d0a24">
+                <title>static int genBTC.FileTime.Classes.Native.NativeSelect.InvertSelection (ListView list)</title> <emphasis>&lt;summary&gt;  Invert selection on all rows on the listview and cleanup the focus line. &lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>list</entry>
+                                <entry>
+<para>The listview whose items are to be deselected</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>int lastselectedindex (focus line index #)</para>
+</formalpara>
+</para>
 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78">

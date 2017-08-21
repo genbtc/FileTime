@@ -20,19 +20,11 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj">genBTC::FileTime::Models::DateNewOldObj</link></para>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld">genBTC::FileTime::Models::DateMinMaxNewOld</link></para>
 <para><emphasis>&lt;summary&gt;
 Class: given a list of DateTime?s, get oldest and newest date and the index of each
 This is for the &quot;Source time from&quot; option - it looks at an entire subfolder of files.
 &lt;/summary&gt;</emphasis></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData">genBTC::FileTime::Models::DisplayCmaTimeData</link></para>
-<para><emphasis>&lt;summary&gt;  Store some the fields that the GUI uses. Small Version. &lt;/summary&gt;</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -49,6 +41,14 @@ This is for the &quot;Source time from&quot; option - it looks at an entire subf
                     <listitem>
                         <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">genBTC::FileTime::Models::NameDateObj</link></para>
 <para><emphasis>&lt;summary&gt;Class object with 5 properties to refer to a file/dir&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct">genBTC::FileTime::Models::NameDateStruct</link></para>
+<para><emphasis>&lt;summary&gt;  Store some the fields that the GUI uses. Small Version. &lt;/summary&gt;</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>

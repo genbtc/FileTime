@@ -88,8 +88,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Classes/Native/NativeSelect.cs" line="19" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="19" bodyend="22"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9" compoundref="Form__Confirm_8cs" startline="308" endline="313">genBTC.FileTime.Forms.Form_Confirm.selectAllToolStripMenuItem_Click</referencedby>
+        <location file="Classes/Native/NativeSelect.cs" line="17" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="17" bodyend="24"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a01d43473e59f5f4664e91ccf9b9a36" compoundref="Form__Confirm_8cs" startline="250" endline="253">genBTC.FileTime.Forms.Form_Confirm.listView_selectAllToolStripMenuItem_Click</referencedby>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -114,8 +114,35 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Classes/Native/NativeSelect.cs" line="28" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="28" bodyend="31"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471" compoundref="Form__Confirm_8cs" startline="315" endline="320">genBTC.FileTime.Forms.Form_Confirm.deSelectAllToolStripMenuItem_Click</referencedby>
+        <location file="Classes/Native/NativeSelect.cs" line="28" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="28" bodyend="35"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab6ce8f5b38902d21eb611a978ea884a2" compoundref="Form__Confirm_8cs" startline="255" endline="258">genBTC.FileTime.Forms.Form_Confirm.listView_deSelectAllToolStripMenuItem_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a4661d586d25c1fdcaf6020006d2d0a24" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int genBTC.FileTime.Classes.Native.NativeSelect.InvertSelection</definition>
+        <argsstring>(ListView list)</argsstring>
+        <name>InvertSelection</name>
+        <param>
+          <type>ListView</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Invert selection on all rows on the listview and cleanup the focus line. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listview whose items are to be deselected</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int lastselectedindex (focus line index #)</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Classes/Native/NativeSelect.cs" line="40" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="40" bodyend="57"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac4a5a8975e122f284404f649fd85a6d7" compoundref="Form__Confirm_8cs" startline="260" endline="263">genBTC.FileTime.Forms.Form_Confirm.listView_invertSelectionToolStripMenuItem_Click</referencedby>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a8d6a3f3be0d28416e08e6b89e3094d78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -173,16 +200,17 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Classes/Native/NativeSelect.cs" line="40" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="40" bodyend="48"/>
+        <location file="Classes/Native/NativeSelect.cs" line="66" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="66" bodyend="74"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Classes/Native/NativeSelect.cs" line="8" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="7" bodyend="68"/>
+    <location file="Classes/Native/NativeSelect.cs" line="8" column="1" bodyfile="Classes/Native/NativeSelect.cs" bodystart="7" bodyend="94"/>
     <listofallmembers>
       <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1abd7c6be88ce9b7d4ef3ecd4fcd175327" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>DeselectAllItems</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a4661d586d25c1fdcaf6020006d2d0a24" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>InvertSelection</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a78dda0c14cff7dd902c57c3880a370c8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>LVM_FIRST</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1a87ba590baae60e8857ed1eef3d005bcc" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>LVM_SETITEMSTATE</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1af7ba30bd38e138ecf8ec917e94035cb3" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Classes::Native::NativeSelect</scope><name>SelectAllItems</name></member>

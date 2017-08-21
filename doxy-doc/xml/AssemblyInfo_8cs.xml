@@ -18,13 +18,13 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>associated<sp/>with<sp/>an<sp/>assembly.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal">[assembly:<sp/>AssemblyTitle(</highlight><highlight class="stringliteral">&quot;FileTime&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">[assembly:<sp/>AssemblyTitle(</highlight><highlight class="stringliteral">&quot;FileTime<sp/>v1.1&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">[assembly:</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>AssemblyDescription(</highlight><highlight class="stringliteral">&quot;Sets<sp/>the<sp/>creation,<sp/>last<sp/>write<sp/>and<sp/>last<sp/>access<sp/>date<sp/>and<sp/>time<sp/>of<sp/>user<sp/>selected<sp/>files/folders&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="13"><highlight class="normal">[assembly:<sp/>AssemblyConfiguration(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">[assembly:<sp/>AssemblyCompany(</highlight><highlight class="stringliteral">&quot;genBTC&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">[assembly:<sp/>AssemblyProduct(</highlight><highlight class="stringliteral">&quot;genBTC<sp/>Project:<sp/>FileTime&quot;</highlight><highlight class="normal">)]</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">[assembly:<sp/>AssemblyCopyright(</highlight><highlight class="stringliteral">&quot;©<sp/>2014:<sp/>genBTC&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">[assembly:<sp/>AssemblyCopyright(</highlight><highlight class="stringliteral">&quot;©<sp/>2014:<sp/>genBTC<sp/>(modified<sp/>2017)&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">[assembly:<sp/>AssemblyTrademark(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="18"><highlight class="normal">[assembly:<sp/>AssemblyCulture(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
@@ -39,7 +39,7 @@
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>specify<sp/>all<sp/>the<sp/>values<sp/>or<sp/>you<sp/>can<sp/>default<sp/>the<sp/>Revision<sp/>and<sp/>Build<sp/>Numbers</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>using<sp/>the<sp/>&apos;*&apos;<sp/>as<sp/>shown<sp/>below:</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal">[assembly:<sp/>AssemblyVersion(</highlight><highlight class="stringliteral">&quot;1.0.*&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">[assembly:<sp/>AssemblyVersion(</highlight><highlight class="stringliteral">&quot;1.1.1.*&quot;</highlight><highlight class="normal">)]</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>order<sp/>to<sp/>sign<sp/>your<sp/>assembly<sp/>you<sp/>must<sp/>specify<sp/>a<sp/>key<sp/>to<sp/>use.<sp/>Refer<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>

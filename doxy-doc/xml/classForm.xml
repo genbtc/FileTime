@@ -12,38 +12,38 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="35">
+      <node id="42">
         <label>genBTC.FileTime.Forms.Form_ChooseDate</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__ChooseDate"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="40" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="37">
+      <node id="44">
         <label>genBTC.FileTime.Forms.Form_Main</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="40" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="33">
+      <node id="40">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
-      <node id="36">
+      <node id="43">
         <label>genBTC.FileTime.Forms.Form_Confirm</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="40" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="38">
+      <node id="45">
         <label>genBTC.FileTime.Forms.Form_Preferences</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="40" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="34">
+      <node id="41">
         <label>genBTC.FileTime.Forms.Form_About</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="40" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

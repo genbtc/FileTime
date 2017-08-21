@@ -6,7 +6,35 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>string Accessed</para>
+                        <para>bool checkboxRecurse</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool checkboxShouldFiles</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioGroupBox1SpecifyTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DateTime dateTimePickerDate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioGroupBox2CurrentSelect</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -27,84 +55,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>DateTime dateTimePickerDate</para>
+                        <para>string Accessed</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>string labelHiddenPathName</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton1Oldest</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton1_setfromCreated</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton1_useTimefromFile</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton2Newest</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton2_setfromModified</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton2_useTimefromSubdir</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton3Random</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioButton3_setfromAccessed</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioGroupBox1SpecifyTime</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool radioGroupBox2CurrentSelect</para>
+                        <para>string PathName</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -136,6 +94,48 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton1_useTimefromFile</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton2_useTimefromSubdir</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton1Oldest</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton2Newest</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton3Random</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton1_setfromCreated</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </section>
         <section>
             <title>Data Fields</title>
@@ -149,7 +149,31 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>bool radioButton2_setfromModified</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool radioButton3_setfromAccessed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>bool radioButton4_setfromRandom</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string HiddenPathName</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -160,10 +184,13 @@
     </simplesect>
         <simplesect>
             <title>Detailed Description</title>
-                <para>Definition at line 57 of file Structs.cs</para>
+                <para>Definition at line 58 of file Structs.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Structs.cs</para></listitem></itemizedlist></para>
         </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
         <section>
             <title>Field Documentation</title>
         </section>

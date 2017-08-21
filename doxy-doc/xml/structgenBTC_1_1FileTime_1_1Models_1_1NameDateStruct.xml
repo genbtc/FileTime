@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct" kind="struct" language="C#" prot="package">
+    <compoundname>genBTC::FileTime::Models::NameDateStruct</compoundname>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a21490db42301c7eefeedf23f4fe22b96" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.NameDateStruct.Accessed</definition>
+        <argsstring></argsstring>
+        <name>Accessed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="46" column="1" bodyfile="Models/Structs.cs" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="313" endline="325">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40" compoundref="NameDateObjListViewVMdl_8cs" startline="33" endline="40">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1acd07ad0dfd0de7690bfb85ab9a1cde60" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.NameDateStruct.Created</definition>
+        <argsstring></argsstring>
+        <name>Created</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="47" column="1" bodyfile="Models/Structs.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="313" endline="325">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40" compoundref="NameDateObjListViewVMdl_8cs" startline="33" endline="40">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1aebe4a0ea4540da8d07dae9665a6a7785" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.NameDateStruct.HiddenPathName</definition>
+        <argsstring></argsstring>
+        <name>HiddenPathName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="49" column="1" bodyfile="Models/Structs.cs" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="313" endline="325">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a6824877b094db35709aa608898adfe21" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.NameDateStruct.Modified</definition>
+        <argsstring></argsstring>
+        <name>Modified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="50" column="1" bodyfile="Models/Structs.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="313" endline="325">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40" compoundref="NameDateObjListViewVMdl_8cs" startline="33" endline="40">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a7e322d3d56a2c8ceb1c28dc752b2e69c" prot="package" static="no" mutable="no">
+        <type>string</type>
+        <definition>string genBTC.FileTime.Models.NameDateStruct.PathName</definition>
+        <argsstring></argsstring>
+        <name>PathName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="51" column="1" bodyfile="Models/Structs.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40" compoundref="NameDateObjListViewVMdl_8cs" startline="33" endline="40">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a50af34fc8200a59cd6625fe34215c2f3" prot="package" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.NameDateStruct.Selected</definition>
+        <argsstring></argsstring>
+        <name>Selected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Structs.cs" line="53" column="1" bodyfile="Models/Structs.cs" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="313" endline="325">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Store some the fields that the GUI uses. Small Version. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/Structs.cs" line="45" column="1" bodyfile="Models/Structs.cs" bodystart="44" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a21490db42301c7eefeedf23f4fe22b96" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateStruct</scope><name>Accessed</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1acd07ad0dfd0de7690bfb85ab9a1cde60" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateStruct</scope><name>Created</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1aebe4a0ea4540da8d07dae9665a6a7785" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateStruct</scope><name>HiddenPathName</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a6824877b094db35709aa608898adfe21" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateStruct</scope><name>Modified</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a7e322d3d56a2c8ceb1c28dc752b2e69c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateStruct</scope><name>PathName</name></member>
+      <member refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a50af34fc8200a59cd6625fe34215c2f3" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::NameDateStruct</scope><name>Selected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

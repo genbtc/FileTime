@@ -1300,25 +1300,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="27">
+      <node id="30">
         <label>WindowsExplorer.ExplorerTree</label>
         <link refid="classWindowsExplorer_1_1ExplorerTree"/>
-        <childnode refid="28" relation="public-inheritance">
+        <childnode refid="31" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="28">
+      <node id="31">
         <label>UserControl</label>
         <link refid="classUserControl"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="29">
+      <node id="32">
         <label>WindowsExplorer.ExplorerTree</label>
         <link refid="classWindowsExplorer_1_1ExplorerTree"/>
-        <childnode refid="30" relation="public-inheritance">
+        <childnode refid="33" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="30">
+      <node id="33">
         <label>UserControl</label>
         <link refid="classUserControl"/>
       </node>

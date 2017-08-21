@@ -14,8 +14,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="8" column="1" bodyfile="Models/Structs.cs" bodystart="8" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+        <location file="Models/Structs.cs" line="9" column="1" bodyfile="Models/Structs.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" compoundref="DataModel_8cs" startline="513" endline="530">genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" compoundref="Form__Main_8cs" startline="235" endline="240">genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3b5db833571136a40376d683c76424a7" compoundref="DataModel_8cs" startline="441" endline="451">genBTC.FileTime.Models.DataModel.StoreDateByCMACheckboxes</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" prot="package" static="no" mutable="no">
         <type>bool</type>
@@ -28,8 +30,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="9" column="1" bodyfile="Models/Structs.cs" bodystart="9" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+        <location file="Models/Structs.cs" line="10" column="1" bodyfile="Models/Structs.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" compoundref="DataModel_8cs" startline="513" endline="530">genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" compoundref="Form__Main_8cs" startline="235" endline="240">genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3b5db833571136a40376d683c76424a7" compoundref="DataModel_8cs" startline="441" endline="451">genBTC.FileTime.Models.DataModel.StoreDateByCMACheckboxes</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" prot="package" static="no" mutable="no">
         <type>bool</type>
@@ -42,15 +46,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="10" column="1" bodyfile="Models/Structs.cs" bodystart="10" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" compoundref="DataModel_8cs" startline="434" endline="448">genBTC.FileTime.Models.DataModel.Makedateobject</referencedby>
+        <location file="Models/Structs.cs" line="11" column="1" bodyfile="Models/Structs.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" compoundref="DataModel_8cs" startline="513" endline="530">genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" compoundref="Form__Main_8cs" startline="235" endline="240">genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3b5db833571136a40376d683c76424a7" compoundref="DataModel_8cs" startline="441" endline="451">genBTC.FileTime.Models.DataModel.StoreDateByCMACheckboxes</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Models/Structs.cs" line="7" column="1" bodyfile="Models/Structs.cs" bodystart="6" bodyend="11"/>
+    <location file="Models/Structs.cs" line="8" column="1" bodyfile="Models/Structs.cs" bodystart="7" bodyend="12"/>
     <listofallmembers>
       <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::BoolCMA</scope><name>A</name></member>
       <member refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::BoolCMA</scope><name>C</name></member>

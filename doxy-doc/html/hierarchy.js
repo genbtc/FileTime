@@ -6,8 +6,7 @@ var hierarchy =
     [ "genBTC.FileTime.AssemblyVersion", "classgenBTC_1_1FileTime_1_1AssemblyVersion.html", null ],
     [ "genBTC.FileTime.Models.BoolCMA", "structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA.html", null ],
     [ "genBTC.FileTime.Models.DataModel", "classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html", null ],
-    [ "genBTC.FileTime.Models.DateNewOldObj", "classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj.html", null ],
-    [ "genBTC.FileTime.Models.DisplayCmaTimeData", "structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData.html", null ],
+    [ "genBTC.FileTime.Models.DateMinMaxNewOld", "classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld.html", null ],
     [ "ExtractIcon", "classExtractIcon.html", null ],
     [ "Form", "classForm.html", [
       [ "genBTC.FileTime.Forms.Form_About", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__About.html", null ],
@@ -25,10 +24,15 @@ var hierarchy =
     [ "IEnumerable", "classIEnumerable.html", [
       [ "WindowsExplorer.ServerEnum", "classWindowsExplorer_1_1ServerEnum.html", null ]
     ] ],
+    [ "IEqualityComparer", "classIEqualityComparer.html", [
+      [ "genBTC.FileTime.Classes.DirComparer", "classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer.html", null ],
+      [ "genBTC.FileTime.Classes.FileComparer", "classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer.html", null ]
+    ] ],
     [ "WindowsExplorer.Kernel32", "classWindowsExplorer_1_1Kernel32.html", null ],
     [ "genBTC.FileTime.Classes.Native.NativeSelect.LVITEM", "structgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect_1_1LVITEM.html", null ],
     [ "genBTC.FileTime.Models.NameDateObj", "classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj.html", null ],
     [ "genBTC.FileTime.mViewModels.NameDateObjListViewVMdl", "classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl.html", null ],
+    [ "genBTC.FileTime.Models.NameDateStruct", "structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct.html", null ],
     [ "genBTC.FileTime.Classes.Native.NativeExtractIcon", "classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon.html", null ],
     [ "genBTC.FileTime.Classes.Native.NativeScroll", "classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeScroll.html", null ],
     [ "genBTC.FileTime.Classes.Native.NativeSelect", "classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeSelect.html", null ],

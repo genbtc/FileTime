@@ -8,13 +8,13 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="107">
+      <node id="119">
         <label>WindowsExplorer.ExplorerTree</label>
         <link refid="classWindowsExplorer_1_1ExplorerTree"/>
-        <childnode refid="106" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="106">
+      <node id="118">
         <label>UserControl</label>
         <link refid="classUserControl"/>
       </node>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer">
+<title>genBTC::FileTime::Classes::FileComparer class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer_1aea79705552d24da7d59eb4c4be93c24e">Equals</link> (
+FileInfo f1, FileInfo f2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer_1acbfbd4c2670721311154ec96f40aa779">GetHashCode</link> (
+FileInfo fi)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer_1aea79705552d24da7d59eb4c4be93c24e">
+                <title>bool genBTC.FileTime.Classes.FileComparer.Equals (FileInfo f1, FileInfo f2)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer_1acbfbd4c2670721311154ec96f40aa779">
+                <title>int genBTC.FileTime.Classes.FileComparer.GetHashCode (FileInfo fi)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

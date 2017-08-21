@@ -4,10 +4,10 @@
     <compoundname>genBTC::FileTime::Models</compoundname>
     <innerclass refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA" prot="package">genBTC::FileTime::Models::BoolCMA</innerclass>
     <innerclass refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel" prot="package">genBTC::FileTime::Models::DataModel</innerclass>
-    <innerclass refid="classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj" prot="package">genBTC::FileTime::Models::DateNewOldObj</innerclass>
-    <innerclass refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData" prot="package">genBTC::FileTime::Models::DisplayCmaTimeData</innerclass>
+    <innerclass refid="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld" prot="package">genBTC::FileTime::Models::DateMinMaxNewOld</innerclass>
     <innerclass refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus" prot="package">genBTC::FileTime::Models::guistatus</innerclass>
     <innerclass refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" prot="package">genBTC::FileTime::Models::NameDateObj</innerclass>
+    <innerclass refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct" prot="package">genBTC::FileTime::Models::NameDateStruct</innerclass>
     <innerclass refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR" prot="package">genBTC::FileTime::Models::SkippedHSR</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4" prot="package" static="no">
@@ -34,13 +34,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="88" column="1" bodyfile="Models/Structs.cs" bodystart="87" bodyend="94"/>
+        <location file="Models/Structs.cs" line="93" column="1" bodyfile="Models/Structs.cs" bodystart="92" bodyend="99"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Models/DataModel.cs" line="11" column="1"/>
+    <location file="Models/DataModel.cs" line="13" column="1"/>
   </compounddef>
 </doxygen>

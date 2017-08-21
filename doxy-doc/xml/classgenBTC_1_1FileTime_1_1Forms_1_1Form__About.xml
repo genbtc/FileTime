@@ -272,26 +272,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="41">
+      <node id="48">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
-      <node id="40">
+      <node id="47">
         <label>genBTC.FileTime.Forms.Form_About</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About"/>
-        <childnode refid="41" relation="public-inheritance">
+        <childnode refid="48" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="43">
+      <node id="50">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
-      <node id="42">
+      <node id="49">
         <label>genBTC.FileTime.Forms.Form_About</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__About"/>
-        <childnode refid="43" relation="public-inheritance">
+        <childnode refid="50" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

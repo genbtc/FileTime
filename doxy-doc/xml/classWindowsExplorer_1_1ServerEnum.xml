@@ -237,25 +237,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="92">
+      <node id="104">
         <label>WindowsExplorer.ServerEnum</label>
         <link refid="classWindowsExplorer_1_1ServerEnum"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="105" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="93">
+      <node id="105">
         <label>IEnumerable</label>
         <link refid="classIEnumerable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="94">
+      <node id="106">
         <label>WindowsExplorer.ServerEnum</label>
         <link refid="classWindowsExplorer_1_1ServerEnum"/>
-        <childnode refid="95" relation="public-inheritance">
+        <childnode refid="107" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="95">
+      <node id="107">
         <label>IEnumerable</label>
         <link refid="classIEnumerable"/>
       </node>

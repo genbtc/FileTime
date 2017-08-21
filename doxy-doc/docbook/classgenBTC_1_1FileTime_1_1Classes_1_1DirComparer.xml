@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer">
+<title>genBTC::FileTime::Classes::DirComparer class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ae2fb00a638b20e5de238f8dd36d162b6">Equals</link> (
+DirectoryInfo f1, DirectoryInfo f2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ad8ecc887ef9309ed91456bae2289739f">GetHashCode</link> (
+DirectoryInfo fi)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ae2fb00a638b20e5de238f8dd36d162b6">
+                <title>bool genBTC.FileTime.Classes.DirComparer.Equals (DirectoryInfo f1, DirectoryInfo f2)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer_1ad8ecc887ef9309ed91456bae2289739f">
+                <title>int genBTC.FileTime.Classes.DirComparer.GetHashCode (DirectoryInfo fi)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

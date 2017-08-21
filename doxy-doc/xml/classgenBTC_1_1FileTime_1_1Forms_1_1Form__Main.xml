@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="63" column="1" bodyfile="Forms/Form_Main.cs" bodystart="63" bodyend="-1"/>
+        <location file="Forms/Form_Main.cs" line="67" column="1" bodyfile="Forms/Form_Main.cs" bodystart="67" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -30,15 +30,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="66" column="1" bodyfile="Forms/Form_Main.cs" bodystart="66" bodyend="-1"/>
+        <location file="Forms/Form_Main.cs" line="70" column="1" bodyfile="Forms/Form_Main.cs" bodystart="70" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab39f29e05c9c8a5b28ab5bcfe7d24cd6" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a198a77faa02fa79955cb5189d8e4b3c6" prot="private" static="no" mutable="no">
         <type>readonly Timer</type>
-        <definition>readonly Timer genBTC.FileTime.Forms.Form_Main.itemSelectionChangedTimer</definition>
+        <definition>readonly Timer genBTC.FileTime.Forms.Form_Main._itemSelectionChangedTimer</definition>
         <argsstring></argsstring>
-        <name>itemSelectionChangedTimer</name>
+        <name>_itemSelectionChangedTimer</name>
         <initializer>= new Timer()</initializer>
         <briefdescription>
 <para>a Timer to keep track of the selected line, prevents clicking too fast (timeout)</para>        </briefdescription>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="69" column="1" bodyfile="Forms/Form_Main.cs" bodystart="69" bodyend="-1"/>
+        <location file="Forms/Form_Main.cs" line="73" column="1" bodyfile="Forms/Form_Main.cs" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a9dc556ed4e1ff438e51671de2f4f5569" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="71" column="1" bodyfile="Forms/Form_Main.cs" bodystart="71" bodyend="-1"/>
+        <location file="Forms/Form_Main.cs" line="75" column="1" bodyfile="Forms/Form_Main.cs" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a985eace2323e9c05c017d893130cbcf8" prot="private" static="no" mutable="no">
         <type>System.ComponentModel.IContainer</type>
@@ -750,7 +750,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="860" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="860" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="867" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="867" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a97bcc785ad611d0d5df55e59428edc9a" prot="private" static="no" mutable="no">
         <type>TabControl</type>
@@ -763,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="861" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="861" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="868" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="868" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a191e31620cf5338399da5c41749be33d" prot="private" static="no" mutable="no">
         <type>TabPage</type>
@@ -776,7 +776,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="862" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="862" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="869" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="869" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a309cb7e7a6b769582dd7c41d29459e95" prot="private" static="no" mutable="no">
         <type>TabPage</type>
@@ -789,7 +789,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="863" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="863" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="870" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="870" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae87686c01623663d11467a9747de4e40" prot="private" static="no" mutable="no">
         <type>ToolTip</type>
@@ -802,7 +802,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="864" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="864" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="871" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="871" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a29b482d6669a00e5967bd16c46cf15c4" prot="private" static="no" mutable="no">
         <type><ref refid="classWindowsExplorer_1_1ExplorerTree" kindref="compound">WindowsExplorer.ExplorerTree</ref></type>
@@ -815,7 +815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="865" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="865" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="872" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="872" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a45ace186cc153f05afcf0b23a4431d19" prot="private" static="no" mutable="no">
         <type>SplitContainer</type>
@@ -828,33 +828,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="866" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="866" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="873" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="873" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3d34e27cfa0147a06f0c44e0ae012653" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0838508e11906128e6e386800b8dd21c" prot="private" static="no" mutable="no">
         <type>UIToolbox.RadioGroupBox</type>
-        <definition>UIToolbox.RadioGroupBox genBTC.FileTime.Forms.Form_Main.radioGroupBox1_pickFolderForCompare</definition>
+        <definition>UIToolbox.RadioGroupBox genBTC.FileTime.Forms.Form_Main.radioGroupBox4_pickFolderForCompare</definition>
         <argsstring></argsstring>
-        <name>radioGroupBox1_pickFolderForCompare</name>
+        <name>radioGroupBox4_pickFolderForCompare</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="867" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="867" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="874" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="874" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a929c6e9d1133d5145320af4a0416ecd2" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a976a4fcc51957dc1c830ae71e4da1271" prot="private" static="no" mutable="no">
         <type>Label</type>
-        <definition>Label genBTC.FileTime.Forms.Form_Main.label1</definition>
+        <definition>Label genBTC.FileTime.Forms.Form_Main.label_folderCompareRadioButton</definition>
         <argsstring></argsstring>
-        <name>label1</name>
+        <name>label_folderCompareRadioButton</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="868" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="868" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="875" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="875" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a61e7729be598283dfdaa71be07313695" prot="private" static="no" mutable="no">
         <type>BindingSource</type>
@@ -867,7 +867,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="869" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="869" bodyend="-1"/>
+        <location file="Forms/Form_Main.Designer.cs" line="876" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="876" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -877,12 +877,12 @@
         <argsstring></argsstring>
         <name>CwdPathName</name>
         <briefdescription>
-<para>Public Setter to the private var in Datamodel. </para>        </briefdescription>
+<para>Public Setter to the private variable in Datamodel. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="97" column="1" bodyfile="Forms/Form_Main.cs" bodystart="98" bodyend="-1"/>
+        <location file="Forms/Form_Main.cs" line="103" column="1" bodyfile="Forms/Form_Main.cs" bodystart="104" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -897,7 +897,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="31" column="1" bodyfile="Forms/Form_Main.cs" bodystart="31" bodyend="59"/>
+        <location file="Forms/Form_Main.cs" line="34" column="1" bodyfile="Forms/Form_Main.cs" bodystart="34" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a54b091dbe473dade0ab327251d4e39fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -918,7 +918,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="85" column="1" bodyfile="Forms/Form_Main.cs" bodystart="85" bodyend="94"/>
+        <location file="Forms/Form_Main.cs" line="91" column="1" bodyfile="Forms/Form_Main.cs" bodystart="91" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac8f3b402ac5cd492a867ea269af3f3b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -931,56 +931,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="118" column="1" bodyfile="Forms/Form_Main.cs" bodystart="118" bodyend="132"/>
+        <location file="Forms/Form_Main.cs" line="120" column="1" bodyfile="Forms/Form_Main.cs" bodystart="120" bodyend="134"/>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
         <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" compoundref="SharedHelper_8cs" startline="22">genBTC.FileTime.Classes.SharedHelper.Seperator</references>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1ab8d2bb6641d879fb83163c1c265056a9" compoundref="Settings_8Designer_8cs" startline="125">genBTC.FileTime.Properties.Settings.StartupDir</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a9027ac895c6f046db2ac5066c74548b3" compoundref="SharedHelper_8cs" startline="23">genBTC.FileTime.Classes.SharedHelper.UserDesktop</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a9027ac895c6f046db2ac5066c74548b3" compoundref="SharedHelper_8cs" startline="24">genBTC.FileTime.Classes.SharedHelper.UserDesktop</references>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5cf92ee59075488246c22bfd07ed61aa" compoundref="Settings_8Designer_8cs" startline="113">genBTC.FileTime.Properties.Settings.useStartupDir</references>
-      </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void genBTC.FileTime.Forms.Form_Main.button_Browse_Click</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>button_Browse_Click</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="138" column="1" bodyfile="Forms/Form_Main.cs" bodystart="138" bodyend="144"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" compoundref="SharedHelper_8cs" startline="57" endline="85">genBTC.FileTime.Classes.SharedHelper.OpenFile</references>
-      </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void genBTC.FileTime.Forms.Form_Main.button_Update_Click</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>button_Update_Click</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="146" column="1" bodyfile="Forms/Form_Main.cs" bodystart="146" bodyend="152"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" compoundref="SharedHelper_8cs" startline="57" endline="85">genBTC.FileTime.Classes.SharedHelper.OpenFile</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1001,8 +957,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="158" column="1" bodyfile="Forms/Form_Main.cs" bodystart="158" bodyend="161"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5" compoundref="SharedHelper_8cs" startline="57" endline="85">genBTC.FileTime.Classes.SharedHelper.OpenFile</references>
+        <location file="Forms/Form_Main.cs" line="140" column="1" bodyfile="Forms/Form_Main.cs" bodystart="140" bodyend="143"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a55c71cc744574e8b4e72d496a4f5c340" compoundref="SharedHelper_8cs" startline="58" endline="85">genBTC.FileTime.Classes.SharedHelper.OpenFilePicker</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3e8d7159bc0c46df6759d6a5c0f654d3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1023,7 +979,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="163" column="1" bodyfile="Forms/Form_Main.cs" bodystart="163" bodyend="166"/>
+        <location file="Forms/Form_Main.cs" line="145" column="1" bodyfile="Forms/Form_Main.cs" bodystart="145" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a83f634713107f726b4305b7c48d27521" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1044,7 +1000,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="168" column="1" bodyfile="Forms/Form_Main.cs" bodystart="168" bodyend="171"/>
+        <location file="Forms/Form_Main.cs" line="150" column="1" bodyfile="Forms/Form_Main.cs" bodystart="150" bodyend="153"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad9c299f1d563c39b5868f74480ad23b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1065,7 +1021,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="173" column="1" bodyfile="Forms/Form_Main.cs" bodystart="173" bodyend="177"/>
+        <location file="Forms/Form_Main.cs" line="155" column="1" bodyfile="Forms/Form_Main.cs" bodystart="155" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6e8e09a25d5f722771ef4c3f17b3e50a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1086,7 +1042,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="180" column="1" bodyfile="Forms/Form_Main.cs" bodystart="180" bodyend="184"/>
+        <location file="Forms/Form_Main.cs" line="162" column="1" bodyfile="Forms/Form_Main.cs" bodystart="162" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20dffccb97a6238d315aead6ab7aab86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1107,7 +1063,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="190" column="1" bodyfile="Forms/Form_Main.cs" bodystart="190" bodyend="193"/>
+        <location file="Forms/Form_Main.cs" line="172" column="1" bodyfile="Forms/Form_Main.cs" bodystart="172" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a1cbabe648a4d08483911e416b8e9c0cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1128,7 +1084,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="195" column="1" bodyfile="Forms/Form_Main.cs" bodystart="195" bodyend="198"/>
+        <location file="Forms/Form_Main.cs" line="177" column="1" bodyfile="Forms/Form_Main.cs" bodystart="177" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a02c021b382703b63cf3c8634545342dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1149,7 +1105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="200" column="1" bodyfile="Forms/Form_Main.cs" bodystart="200" bodyend="203"/>
+        <location file="Forms/Form_Main.cs" line="182" column="1" bodyfile="Forms/Form_Main.cs" bodystart="182" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1addacf24429bcec3cc0ffe054fbbf4a02" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1170,7 +1126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="205" column="1" bodyfile="Forms/Form_Main.cs" bodystart="205" bodyend="211"/>
+        <location file="Forms/Form_Main.cs" line="187" column="1" bodyfile="Forms/Form_Main.cs" bodystart="187" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aaf1d361704f1764c55debc5320620d89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1191,13 +1147,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="213" column="1" bodyfile="Forms/Form_Main.cs" bodystart="213" bodyend="218"/>
+        <location file="Forms/Form_Main.cs" line="195" column="1" bodyfile="Forms/Form_Main.cs" bodystart="195" bodyend="200"/>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a353b2723b229c123419c9d042576e778" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void genBTC.FileTime.Forms.Form_Main._ItemSelectionChangedTimer_Tick</definition>
+        <definition>void genBTC.FileTime.Forms.Form_Main.ItemSelectionChangedTimer_Tick</definition>
         <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>_ItemSelectionChangedTimer_Tick</name>
+        <name>ItemSelectionChangedTimer_Tick</name>
         <param>
           <type>object</type>
           <declname>sender</declname>
@@ -1212,7 +1168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="229" column="1" bodyfile="Forms/Form_Main.cs" bodystart="229" bodyend="233"/>
+        <location file="Forms/Form_Main.cs" line="211" column="1" bodyfile="Forms/Form_Main.cs" bodystart="211" bodyend="215"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af159301a48967d2639cad7e6c9c80bfd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1233,7 +1189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="238" column="1" bodyfile="Forms/Form_Main.cs" bodystart="238" bodyend="248"/>
+        <location file="Forms/Form_Main.cs" line="220" column="1" bodyfile="Forms/Form_Main.cs" bodystart="220" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1254,7 +1210,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="253" column="1" bodyfile="Forms/Form_Main.cs" bodystart="253" bodyend="257"/>
+        <location file="Forms/Form_Main.cs" line="235" column="1" bodyfile="Forms/Form_Main.cs" bodystart="235" bodyend="240"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" compoundref="Structs_8cs" startline="9">genBTC.FileTime.Models.BoolCMA.A</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" compoundref="Structs_8cs" startline="10">genBTC.FileTime.Models.BoolCMA.C</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" compoundref="DataModel_8cs" startline="35">genBTC.FileTime.Models.DataModel.checkboxes</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" compoundref="Structs_8cs" startline="11">genBTC.FileTime.Models.BoolCMA.M</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3f3cfcfcda8f8cf3a6b26167772fb281" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1275,8 +1235,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="263" column="1" bodyfile="Forms/Form_Main.cs" bodystart="263" bodyend="274"/>
+        <location file="Forms/Form_Main.cs" line="246" column="1" bodyfile="Forms/Form_Main.cs" bodystart="246" bodyend="257"/>
         <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" compoundref="SharedHelper_8cs" startline="22">genBTC.FileTime.Classes.SharedHelper.Seperator</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac7414723650ca31d0240bb7c03d506ad" compoundref="SharedHelper_8cs" startline="23">genBTC.FileTime.Classes.SharedHelper.SeperatorString</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA" kindref="compound">BoolCMA</ref></type>
@@ -1289,7 +1250,54 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="292" column="1" bodyfile="Forms/Form_Main.cs" bodystart="292" bodyend="301"/>
+        <location file="Forms/Form_Main.cs" line="277" column="1" bodyfile="Forms/Form_Main.cs" bodystart="277" bodyend="287"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" compoundref="DataModel_8cs" startline="35">genBTC.FileTime.Models.DataModel.checkboxes</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a58f7756fdd24a4dc415274d675ef48c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.checkBox_Recurse_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>checkBox_Recurse_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="289" column="1" bodyfile="Forms/Form_Main.cs" bodystart="289" bodyend="292"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a375d52cfed32dd1fc1464a0ae31508ff" compoundref="Structs_8cs" startline="59">genBTC.FileTime.Models.guistatus.checkboxRecurse</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" compoundref="DataModel_8cs" startline="36">genBTC.FileTime.Models.DataModel.gui</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa79016bf2779c672606bd933598d978e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.checkBoxShouldFiles_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>checkBoxShouldFiles_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="294" column="1" bodyfile="Forms/Form_Main.cs" bodystart="294" bodyend="297"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3476b9ac0517230b0ce1ab6bc8a968d7" compoundref="Structs_8cs" startline="60">genBTC.FileTime.Models.guistatus.checkboxShouldFiles</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" compoundref="DataModel_8cs" startline="36">genBTC.FileTime.Models.DataModel.gui</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1302,8 +1310,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="306" column="1" bodyfile="Forms/Form_Main.cs" bodystart="306" bodyend="312"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b" compoundref="DataModel_8cs" startline="50" endline="56">genBTC.FileTime.Models.DataModel.Clear</references>
+        <location file="Forms/Form_Main.cs" line="302" column="1" bodyfile="Forms/Form_Main.cs" bodystart="302" bodyend="308"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b" compoundref="DataModel_8cs" startline="53" endline="59">genBTC.FileTime.Models.DataModel.Clear</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1320,9 +1328,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="317" column="1" bodyfile="Forms/Form_Main.cs" bodystart="317" bodyend="329"/>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a6a8b4bb3e7b175308fc52789d2c2093b" compoundref="Structs_8cs" startline="46">genBTC.FileTime.Models.DisplayCmaTimeData.Created</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172" compoundref="DataModel_8cs" startline="469" endline="491">genBTC.FileTime.Models.DataModel.GetCmaTimes</references>
+        <location file="Forms/Form_Main.cs" line="313" column="1" bodyfile="Forms/Form_Main.cs" bodystart="313" bodyend="325"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a21490db42301c7eefeedf23f4fe22b96" compoundref="Structs_8cs" startline="46">genBTC.FileTime.Models.NameDateStruct.Accessed</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1acd07ad0dfd0de7690bfb85ab9a1cde60" compoundref="Structs_8cs" startline="47">genBTC.FileTime.Models.NameDateStruct.Created</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a09e8580b4dd602e7d8e4ffb07eaa2a42" compoundref="DataModel_8cs" startline="64" endline="94">genBTC.FileTime.Models.DataModel.GetCmaTimesFromFilesystem</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1aebe4a0ea4540da8d07dae9665a6a7785" compoundref="Structs_8cs" startline="49">genBTC.FileTime.Models.NameDateStruct.HiddenPathName</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a6824877b094db35709aa608898adfe21" compoundref="Structs_8cs" startline="50">genBTC.FileTime.Models.NameDateStruct.Modified</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct_1a50af34fc8200a59cd6625fe34215c2f3" compoundref="Structs_8cs" startline="53">genBTC.FileTime.Models.NameDateStruct.Selected</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac438e5c68134f0edca782692ed1a4a84" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1343,7 +1355,91 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="332" column="1" bodyfile="Forms/Form_Main.cs" bodystart="332" bodyend="341"/>
+        <location file="Forms/Form_Main.cs" line="328" column="1" bodyfile="Forms/Form_Main.cs" bodystart="328" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.button_Browse_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button_Browse_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="343" column="1" bodyfile="Forms/Form_Main.cs" bodystart="343" bodyend="349"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a55c71cc744574e8b4e72d496a4f5c340" compoundref="SharedHelper_8cs" startline="58" endline="85">genBTC.FileTime.Classes.SharedHelper.OpenFilePicker</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.button_Update_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button_Update_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="351" column="1" bodyfile="Forms/Form_Main.cs" bodystart="351" bodyend="374"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a55c71cc744574e8b4e72d496a4f5c340" compoundref="SharedHelper_8cs" startline="58" endline="85">genBTC.FileTime.Classes.SharedHelper.OpenFilePicker</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7f71239199fdba2ffb8af466b9c0068d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.StartUpMode3</definition>
+        <argsstring>(string targetPath, string comparePath)</argsstring>
+        <name>StartUpMode3</name>
+        <param>
+          <type>string</type>
+          <declname>targetPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>comparePath</declname>
+        </param>
+        <briefdescription>
+<para>Mode 3. Recursive, file Tree time compare mode. <ulink url="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq</ulink> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="384" column="1" bodyfile="Forms/Form_Main.cs" bodystart="384" bodyend="390"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a00bfcf2df19f275804d80ce46eeed134" compoundref="DataModel_8cs" startline="353" endline="439">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse</definition>
+        <argsstring>()</argsstring>
+        <name>PrepareDataModelForUse</name>
+        <briefdescription>
+<para>Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="396" column="1" bodyfile="Forms/Form_Main.cs" bodystart="396" bodyend="402"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" compoundref="DataModel_8cs" startline="35">genBTC.FileTime.Models.DataModel.checkboxes</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab6a151bd3d3486e1f0cd13423ee7be95" compoundref="DataModel_8cs" startline="24">genBTC.FileTime.Models.DataModel.FilestoConfirmList</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" compoundref="DataModel_8cs" startline="36">genBTC.FileTime.Models.DataModel.gui</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b" compoundref="Structs_8cs" startline="35" endline="40">genBTC.FileTime.Models.SkippedHSR.Reset</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a77d6c20d2d38130887a5a883f9ab9598" compoundref="DataModel_8cs" startline="30">genBTC.FileTime.Models.DataModel.Skips</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1359,30 +1455,21 @@
           <declname>startingdir</declname>
         </param>
         <briefdescription>
-<para>Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model. </para>        </briefdescription>
+<para>Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use, then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model. This is a nice staging point place for making EVERYTHING happen. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="351" column="1" bodyfile="Forms/Form_Main.cs" bodystart="351" bodyend="409"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ad29eedba05697d15bc8420c89130a23f" compoundref="Form__Confirm_8cs" startline="39">genBTC.FileTime.Forms.Form_Confirm.active</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" compoundref="DataModel_8cs" startline="31">genBTC.FileTime.Models.DataModel.checkboxes</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="149" endline="176">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</references>
+        <location file="Forms/Form_Main.cs" line="409" column="1" bodyfile="Forms/Form_Main.cs" bodystart="409" bodyend="474"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" compoundref="DataModel_8cs" startline="513" endline="530">genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" compoundref="DataModel_8cs" startline="196" endline="223">genBTC.FileTime.Models.DataModel.DecideWhichTimeMode1</references>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab6a151bd3d3486e1f0cd13423ee7be95" compoundref="DataModel_8cs" startline="20">genBTC.FileTime.Models.DataModel.FilestoConfirmList</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9" compoundref="Form__Confirm_8cs" startline="64" endline="96">genBTC.FileTime.Forms.Form_Confirm.FixReadonlyResults</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" compoundref="DataModel_8cs" startline="32">genBTC.FileTime.Models.DataModel.gui</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" compoundref="Structs_8cs" startline="16">genBTC.FileTime.Models.SkippedHSR.H</references>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac10ad63b0ce33838d6ef3badd6ccedc5" compoundref="DataModel_8cs" startline="22">genBTC.FileTime.Models.DataModel.fixreadonlyActive</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a9b232e99482a4a1b0483d4f7bd2a5541" compoundref="DataModel_8cs" startline="782" endline="812">genBTC.FileTime.Models.DataModel.FixReadonlyResults</references>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a0d95413a8822702c44e33a79aa595b04" compoundref="Settings_8Designer_8cs" startline="137">genBTC.FileTime.Properties.Settings.mode1addrootdir</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" compoundref="Structs_8cs" startline="19">genBTC.FileTime.Models.SkippedHSR.R</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e" compoundref="DataModel_8cs" startline="275" endline="288">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489" compoundref="DataModel_8cs" startline="313" endline="324">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4" compoundref="DataModel_8cs" startline="294" endline="310">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b" compoundref="DataModel_8cs" startline="327" endline="338">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b" compoundref="Structs_8cs" startline="34" endline="39">genBTC.FileTime.Models.SkippedHSR.Reset</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" compoundref="Structs_8cs" startline="22">genBTC.FileTime.Models.SkippedHSR.S</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270" compoundref="DataModel_8cs" startline="423" endline="429">genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a77d6c20d2d38130887a5a883f9ab9598" compoundref="DataModel_8cs" startline="26">genBTC.FileTime.Models.DataModel.Skips</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4879e17c0c285da2e1749f6f6e6a8913" compoundref="DataModel_8cs" startline="304" endline="317">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4" compoundref="DataModel_8cs" startline="323" endline="346">genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2</references>
         <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a1b0d452a069c8e66e98b2d7e03fc5cd6" compoundref="Settings_8Designer_8cs" startline="149">genBTC.FileTime.Properties.Settings.useRootDirAsContainer</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -1396,8 +1483,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="412" column="1" bodyfile="Forms/Form_Main.cs" bodystart="412" bodyend="421"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="101" endline="131">genBTC.FileTime.Forms.Form_Confirm.MakeListView</references>
+        <location file="Forms/Form_Main.cs" line="477" column="1" bodyfile="Forms/Form_Main.cs" bodystart="477" bodyend="495"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" compoundref="Structs_8cs" startline="17">genBTC.FileTime.Models.SkippedHSR.H</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="63" endline="93">genBTC.FileTime.Forms.Form_Confirm.MakeListView</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" compoundref="Structs_8cs" startline="20">genBTC.FileTime.Models.SkippedHSR.R</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" compoundref="Structs_8cs" startline="23">genBTC.FileTime.Models.SkippedHSR.S</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a77d6c20d2d38130887a5a883f9ab9598" compoundref="DataModel_8cs" startline="30">genBTC.FileTime.Models.DataModel.Skips</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af8d00c086a8828fe496feec61e95da6e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Forms.Form_Main.label_folderCompareRadioButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>label_folderCompareRadioButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Forms/Form_Main.cs" line="497" column="1" bodyfile="Forms/Form_Main.cs" bodystart="497" bodyend="500"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1410,7 +1522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.Designer.cs" line="88" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="88" bodyend="857"/>
+        <location file="Forms/Form_Main.Designer.cs" line="88" column="1" bodyfile="Forms/Form_Main.Designer.cs" bodystart="88" bodyend="864"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -1425,7 +1537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="75" column="1" bodyfile="Forms/Form_Main.cs" bodystart="75" bodyend="82"/>
+        <location file="Forms/Form_Main.cs" line="81" column="1" bodyfile="Forms/Form_Main.cs" bodystart="81" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aeb572681ad49ed4b9a5483c3652b1175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1438,7 +1550,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="109" column="1" bodyfile="Forms/Form_Main.cs" bodystart="109" bodyend="113"/>
+        <location file="Forms/Form_Main.cs" line="111" column="1" bodyfile="Forms/Form_Main.cs" bodystart="111" bodyend="115"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -1448,15 +1560,13 @@
         <argsstring>()</argsstring>
         <name>RefreshContentsRightPanel</name>
         <briefdescription>
-<para>Wrapper for DisplayContentsList that manages imageList and listView resources automatically. </para>        </briefdescription>
+<para>Wrapper for DisplayContentsList that manages imageList and listView resources automatically. TODO: Can be moved to model later. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Forms/Form_Main.cs" line="283" column="1" bodyfile="Forms/Form_Main.cs" bodystart="283" bodyend="289"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="77" endline="143">genBTC.FileTime.Models.DataModel.DisplayContentsList</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1afb7a9e98ce2debbacd2acf45bda4c499" compoundref="DataModel_8cs" startline="24">genBTC.FileTime.Models.DataModel.imageListFiles</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3873ffb133524678416b5dc5b35b51ca" compoundref="DataModel_8cs" startline="22">genBTC.FileTime.Models.DataModel.listViewContents</references>
+        <location file="Forms/Form_Main.cs" line="267" column="1" bodyfile="Forms/Form_Main.cs" bodystart="267" bodyend="274"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" compoundref="DataModel_8cs" startline="116" endline="160">genBTC.FileTime.Models.DataModel.DisplayContentsList</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -1491,52 +1601,49 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="54">
+      <node id="60">
         <label>genBTC.FileTime.Forms.Form_Main</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main"/>
-        <childnode refid="55" relation="public-inheritance">
+        <childnode refid="61" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="55">
+      <node id="61">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="56">
+      <node id="62">
         <label>genBTC.FileTime.Forms.Form_Main</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="63" relation="public-inheritance">
         </childnode>
-        <childnode refid="58" relation="usage">
+        <childnode refid="64" relation="usage">
           <edgelabel>Confirmation</edgelabel>
         </childnode>
       </node>
-      <node id="57">
+      <node id="63">
         <label>Form</label>
         <link refid="classForm"/>
       </node>
-      <node id="58">
+      <node id="64">
         <label>genBTC.FileTime.Forms.Form_Confirm</label>
         <link refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="63" relation="public-inheritance">
         </childnode>
-        <childnode refid="59" relation="usage">
-          <edgelabel>listView1_Confirm</edgelabel>
-        </childnode>
-        <childnode refid="56" relation="usage">
-          <edgelabel>_formmain</edgelabel>
+        <childnode refid="65" relation="usage">
+          <edgelabel>listView1Confirm</edgelabel>
         </childnode>
       </node>
-      <node id="59">
+      <node id="65">
         <label>genBTC.FileTime.mViewModels.CustomListView</label>
         <link refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1CustomListView"/>
       </node>
     </collaborationgraph>
-    <location file="Forms/Form_Main.cs" line="29" column="1" bodyfile="Forms/Form_Main.cs" bodystart="28" bodyend="424"/>
+    <location file="Forms/Form_Main.cs" line="32" column="1" bodyfile="Forms/Form_Main.cs" bodystart="31" bodyend="504"/>
     <listofallmembers>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac43e6cedc1a02cee5f74303c88989e85" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>_dataModel</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>_ItemSelectionChangedTimer_Tick</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a198a77faa02fa79955cb5189d8e4b3c6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>_itemSelectionChangedTimer</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af868ee07ac7c4d39122f578dac492faa" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>button_Browse</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>button_Browse_Click</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7a5df0f34eab6ab5fd66a3a7bd9517a1" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>button_GoUpdate</name></member>
@@ -1547,7 +1654,9 @@
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>checkBox_DateTime_CheckedChanged</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a88d33dce294e533be29c371a365b774b" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>checkBox_ModifiedDateTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad257b30d2d3ef0fb3c16fbbfa76b0930" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>checkBox_Recurse</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a58f7756fdd24a4dc415274d675ef48c0" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>checkBox_Recurse_CheckedChanged</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a429c639d7cf2fca60e3dc1b3f08d3842" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>checkBoxShouldFiles</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa79016bf2779c672606bd933598d978e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>checkBoxShouldFiles_CheckedChanged</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>ClearOnError</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a985eace2323e9c05c017d893130cbcf8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>components</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a961c69c26a86d103aa18c94ed47f64fa" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>Confirmation</name></member>
@@ -1566,8 +1675,7 @@
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27ee7c2a2435b01cab6c9b278da051f4" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>groupBoxCMA</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a453d71f4c8dcb90bf9429350f197cda2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>imageList_Files</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>InitializeComponent</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab39f29e05c9c8a5b28ab5bcfe7d24cd6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>itemSelectionChangedTimer</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a929c6e9d1133d5145320af4a0416ecd2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a353b2723b229c123419c9d042576e778" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>ItemSelectionChangedTimer_Tick</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ae52408e3a2cad2c2258f4793dd172e39" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label1_CreationDate</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20dffccb97a6238d315aead6ab7aab86" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label1_CreationDate_Click</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a639d41e4ec7f7ca774a48ac7d18feff0" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label2_ModifiedDate</name></member>
@@ -1577,6 +1685,8 @@
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aac04a434dc9cd34e51fe5611348002d8" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_AccessedTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac6f6bdbd6dc3439f1d32f8477e69ffe4" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_CreationTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aea71844fa0239edfbc60d43adca2ccd6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_FilePathHeading</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a976a4fcc51957dc1c830ae71e4da1271" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_folderCompareRadioButton</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af8d00c086a8828fe496feec61e95da6e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_folderCompareRadioButton_Click</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6013b83e40ffeea4d81aa42ba2a0538e" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_FPath</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a659db9cb7ce29bbbee06b9c393fe0e53" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>label_ModificationTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a00d144629fd550850797c5063a759868" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>labelHidden_PathName</name></member>
@@ -1602,6 +1712,7 @@
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a42f93da37b3be9b0138295b715a3c042" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>panel1</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a96c4a529334d24b3f7162b1915b79e06" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>panel2</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad4ee2b4e2a0f58aff0ffe25c7840fa6d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>panel3</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>PrepareDataModelForUse</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>QueryCMAcheckboxes</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a327857b6d99a92a61620f4f54d59e9b6" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioButton1_CreationDate</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a20c8b1a9480697f0cda588ff1ae8c3d2" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioButton1_Oldest</name></member>
@@ -1617,15 +1728,16 @@
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a904b6fc2c406bed51a6f0a44a16277a0" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioButton4_setfromRandom</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad530a172ca761d72f10dc5440cfb7899" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioButtonPanel1_DecideWhichTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a65ced4685ab9ded3feac23f6178e5171" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioButtonPanel2</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3d34e27cfa0147a06f0c44e0ae012653" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioGroupBox1_pickFolderForCompare</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a52d048c4bd397ab77607f3424c0336da" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioGroupBox1_SpecifyTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ab3a416d5f2087222dba9ac6312b74a8a" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioGroupBox2_CurrentSelectionTime</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a61e4303739fc2e77629e00b4207ea1cf" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioGroupBox3_UseTimeFrom</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0838508e11906128e6e386800b8dd21c" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>radioGroupBox4_pickFolderForCompare</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>RefreshContentsRightPanel</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aeb572681ad49ed4b9a5483c3652b1175" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>RefreshDataBinding_labelFPath</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a9dc556ed4e1ff438e51671de2f4f5569" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>SELECTION_TIMEOUT</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a45ace186cc153f05afcf0b23a4431d19" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>splitContainer1</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>StartUpBothModes1And2</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7f71239199fdba2ffb8af466b9c0068d" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>StartUpMode3</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a97bcc785ad611d0d5df55e59428edc9a" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>tabControl1</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aaf1d361704f1764c55debc5320620d89" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>tabControl1_MouseHover</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1addacf24429bcec3cc0ffe054fbbf4a02" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Forms::Form_Main</scope><name>tabControl1_Selected</name></member>

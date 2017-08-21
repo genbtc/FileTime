@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="DateMinMaxNewOld_8cs">
+    <title>DateMinMaxNewOld.cs File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld">genBTC::FileTime::Models::DateMinMaxNewOld</link></para>
+<para><emphasis>&lt;summary&gt;
+Class: given a list of DateTime?s, get oldest and newest date and the index of each
+This is for the &quot;Source time from&quot; option - it looks at an entire subfolder of files.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacegenBTC_1_1FileTime_1_1Models">genBTC::FileTime::Models</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file DateMinMaxNewOld.cs</para>
+    </simplesect>
+</section>

@@ -20,6 +20,13 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceSystem_1_1Globalization">System::Globalization</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </simplesect>
     <simplesect>
         <title>Detailed Description</title>

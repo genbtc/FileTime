@@ -26,7 +26,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>readonly Timer itemSelectionChangedTimer<para><emphasis>&lt;summary&gt;  a Timer to keep track of the selected line, prevents clicking too fast (timeout)&lt;/summary&gt;</emphasis></para></para>
+                        <para>readonly Timer _itemSelectionChangedTimer<para><emphasis>&lt;summary&gt;  a Timer to keep track of the selected line, prevents clicking too fast (timeout)&lt;/summary&gt;</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -455,14 +455,14 @@ Required designer variable.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>UIToolbox.RadioGroupBox radioGroupBox1_pickFolderForCompare</para>
+                        <para>UIToolbox.RadioGroupBox radioGroupBox4_pickFolderForCompare</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Label label1</para>
+                        <para>Label label_folderCompareRadioButton</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -510,22 +510,6 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt; After the InitializeC
 At this point we can run our code (that wants to interact with our designer GUI).
 &lt;/summary&gt;</emphasis></para>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397">button_Browse_Click</link> (
-object sender, EventArgs e)</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310">button_Update_Click</link> (
-object sender, EventArgs e)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -613,7 +597,7 @@ object sender, EventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e">_ItemSelectionChangedTimer_Tick</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a353b2723b229c123419c9d042576e778">ItemSelectionChangedTimer_Tick</link> (
 object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
 Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
 when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() &amp;mdash;
@@ -669,6 +653,22 @@ Update the textlabel box for FilePath when the Explorer Tree path changes.
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a58f7756fdd24a4dc415274d675ef48c0">checkBox_Recurse_CheckedChanged</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa79016bf2779c672606bd933598d978e">checkBoxShouldFiles_CheckedChanged</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762">ClearOnError</link> (
 )<para><emphasis>&lt;summary&gt;
 Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
@@ -700,10 +700,50 @@ ListView listViewContents, string srcPath)<para><emphasis>&lt;summary&gt;  Updat
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397">button_Browse_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310">button_Update_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7f71239199fdba2ffb8af466b9c0068d">StartUpMode3</link> (
+string targetPath, string comparePath)<para><emphasis>&lt;summary&gt;
+Mode 3. Recursive, file Tree time compare mode.
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006">PrepareDataModelForUse</link> (
+)<para><emphasis>&lt;summary&gt;
+Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac">StartUpBothModes1And2</link> (
 int mode2, string startingdir)<para><emphasis>&lt;summary&gt;
 Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
 then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+This is a nice staging point place for making EVERYTHING happen.
 &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -715,6 +755,14 @@ then adds them to the confirm list to be handled by the form_confirm window (par
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830">LaunchForm2Go</link> (
 )<para><emphasis>&lt;summary&gt; Show files to be changed in the confirmation window (Show Form 2) &lt;/summary&gt;</emphasis></para>
 </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af8d00c086a8828fe496feec61e95da6e">label_folderCompareRadioButton_Click</link> (
+object sender, EventArgs e)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -762,6 +810,7 @@ The Text Box Data Binding is rebound.
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5">RefreshContentsRightPanel</link> (
 )<para><emphasis>&lt;summary&gt;
 Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+TODO: Can be moved to model later.
 &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -788,13 +837,13 @@ Clean up any resources being used.
     </simplesect>
         <simplesect>
             <title>Detailed Description</title>
-                <para>Definition at line 29 of file Form_Main.cs</para>
+                <para>Definition at line 32 of file Form_Main.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
         </simplesect>
             <simplesect>
                 <title>DataModel genBTC.FileTime.Forms.Form_Main._dataModel</title>                
-                <para>Definition at line 63 of file Form_Main.cs</para>
+                <para>Definition at line 67 of file Form_Main.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
             </simplesect>
@@ -802,7 +851,7 @@ Clean up any resources being used.
             <title>Field Documentation</title>
             <simplesect>
                 <title>Form_Confirm genBTC.FileTime.Forms.Form_Main.Confirmation</title>                
-                <para>Definition at line 66 of file Form_Main.cs</para>
+                <para>Definition at line 70 of file Form_Main.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
             </simplesect>
@@ -810,14 +859,14 @@ Clean up any resources being used.
         <section>
             <title>Field Documentation</title>
             <simplesect>
-                <title>readonly Timer genBTC.FileTime.Forms.Form_Main.itemSelectionChangedTimer</title>                
-                <para>Definition at line 69 of file Form_Main.cs</para>
+                <title>readonly Timer genBTC.FileTime.Forms.Form_Main._itemSelectionChangedTimer</title>                
+                <para>Definition at line 73 of file Form_Main.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
             </simplesect>
             <simplesect>
                 <title>const int genBTC.FileTime.Forms.Form_Main.SELECTION_TIMEOUT</title>                
-                <para>Definition at line 71 of file Form_Main.cs</para>
+                <para>Definition at line 75 of file Form_Main.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Form_Main.cs</para></listitem></itemizedlist></para>
             </simplesect>
@@ -840,14 +889,6 @@ Clean up any resources being used.
                 <title>void genBTC.FileTime.Forms.Form_Main.Form_Main_Run ()</title> <emphasis>&lt;summary&gt;
 At this point we can run our code (that wants to interact with our designer GUI).
 &lt;/summary&gt;</emphasis>
-                
-            </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397">
-                <title>void genBTC.FileTime.Forms.Form_Main.button_Browse_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
-                
-            </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310">
-                <title>void genBTC.FileTime.Forms.Form_Main.button_Update_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7aab8d23a91b56003a3e7894268b64a7">
@@ -890,8 +931,8 @@ At this point we can run our code (that wants to interact with our designer GUI)
                 <title>void genBTC.FileTime.Forms.Form_Main.tabControl1_MouseHover (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6f1472c353ff6fb2a42ff1537cb1ab7e">
-                <title>void genBTC.FileTime.Forms.Form_Main._ItemSelectionChangedTimer_Tick (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a353b2723b229c123419c9d042576e778">
+                <title>void genBTC.FileTime.Forms.Form_Main.ItemSelectionChangedTimer_Tick (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
 Timer Event function. Used to prevent the currently selected Textboxes for the 3 Times from blanking
 when an item selection is changed. Assosciated with listView_Contents_ItemSelectionChanged() &amp;mdash;
 Fires after some delay (SELECTION_TIMEOUT ms) and if there still is nothing selected, calls CallDisplayCma().
@@ -921,6 +962,14 @@ Update the textlabel box for FilePath when the Explorer Tree path changes.
                 <title>BoolCMA genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes ()</title> <emphasis>&lt;summary&gt;  Return the value of the checkboxes &quot;CMA Time&quot;   &lt;/summary&gt;</emphasis>
                 
             </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a58f7756fdd24a4dc415274d675ef48c0">
+                <title>void genBTC.FileTime.Forms.Form_Main.checkBox_Recurse_CheckedChanged (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa79016bf2779c672606bd933598d978e">
+                <title>void genBTC.FileTime.Forms.Form_Main.checkBoxShouldFiles_CheckedChanged (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762">
                 <title>void genBTC.FileTime.Forms.Form_Main.ClearOnError ()</title> <emphasis>&lt;summary&gt;
 Clear both ListViews and the three data container lists, blanks the selected date, and erases the top current dir textbox.
@@ -937,15 +986,41 @@ Display file&apos;s times in the Tri-Textbox bottom UI for the currently selecte
                 <title>void genBTC.FileTime.Forms.Form_Main.CallDisplayCma (ListView listViewContents, string srcPath)</title> <emphasis>&lt;summary&gt;  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma &lt;/summary&gt;</emphasis>
                 
             </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ad7ed6cf16769b28b18476fb35d82b397">
+                <title>void genBTC.FileTime.Forms.Form_Main.button_Browse_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a6abe9334b962644996f24a534ad02310">
+                <title>void genBTC.FileTime.Forms.Form_Main.button_Update_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7f71239199fdba2ffb8af466b9c0068d">
+                <title>void genBTC.FileTime.Forms.Form_Main.StartUpMode3 (string targetPath, string comparePath)</title> <emphasis>&lt;summary&gt;
+Mode 3. Recursive, file Tree time compare mode.
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006">
+                <title>void genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse ()</title> <emphasis>&lt;summary&gt;
+Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
+&lt;/summary&gt;</emphasis>
+                
+            </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac">
                 <title>void genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2 (int mode2, string startingdir)</title> <emphasis>&lt;summary&gt;
 Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
 then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
+This is a nice staging point place for making EVERYTHING happen.
 &lt;/summary&gt;</emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830">
                 <title>void genBTC.FileTime.Forms.Form_Main.LaunchForm2Go ()</title> <emphasis>&lt;summary&gt; Show files to be changed in the confirmation window (Show Form 2) &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af8d00c086a8828fe496feec61e95da6e">
+                <title>void genBTC.FileTime.Forms.Form_Main.label_folderCompareRadioButton_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa51b8dbab904c77738af35590f64fbba">
@@ -968,6 +1043,7 @@ The Text Box Data Binding is rebound.
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5">
                 <title>void genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel ()</title> <emphasis>&lt;summary&gt;
 Wrapper for DisplayContentsList that manages imageList and listView resources automatically.
+TODO: Can be moved to model later.
 &lt;/summary&gt;</emphasis>
                 
             </section>

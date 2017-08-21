@@ -13,7 +13,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>readonly Form_Main _formmain</para>
+                        <para>DataModel dataModel</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -74,14 +74,14 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>CustomListView listView1_Confirm</para>
+                        <para>CustomListView listView1Confirm</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ContextMenuStrip contextMenuStrip1</para>
+                        <para>ContextMenuStrip rightClickContextMenu1</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -151,21 +151,14 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ComboBox ComboBox1</para>
+                        <para>ComboBox comboBox2_Modified</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ComboBox ComboBox2</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>ComboBox ComboBox3</para>
+                        <para>ComboBox comboBox3_Accessed</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -221,28 +214,28 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ToolStripMenuItem toolStripMenuItem1</para>
+                        <para>ToolStripMenuItem toolStripMenuItem1_ChangeDate</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ToolStripMenuItem toolStripMenuItem2</para>
+                        <para>ToolStripMenuItem toolStripMenuItem2_UnsetCreated</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ToolStripMenuItem toolStripMenuItem3</para>
+                        <para>ToolStripMenuItem toolStripMenuItem3_UnsetModified</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ToolStripMenuItem toolStripMenuItem4</para>
+                        <para>ToolStripMenuItem toolStripMenuItem4_UnsetAccessed</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -256,7 +249,7 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ToolStripMenuItem toolStripMenuItem5</para>
+                        <para>ToolStripMenuItem toolStripMenuItem7_OpenExplorer</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -291,7 +284,14 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>ToolStripMenuItem toolStripMenuItem6</para>
+                        <para>ToolStripMenuItem toolStripMenuItem6_RemoveItem</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ToolStripMenuItem toolStripMenuItem5_unSetALL</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -301,7 +301,7 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int active<para><emphasis>&lt;summary&gt; the fixreadonly active files count (checked in between fix and unfix) &lt;/summary&gt;</emphasis></para></para>
+                        <para>ComboBox comboBox1_Created</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -311,38 +311,21 @@ the contents of this method with the code editor.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1c414476848ba5e520e59175bfdc0ca5">Form_Confirm</link> (
-<link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main">Form_Main</link> f1)<para><emphasis>&lt;summary&gt; Form 2 creation and initialization code. &lt;/summary&gt;</emphasis></para>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a95f987f1a5664bc6d9ddd518c65c998c">Form_Confirm</link> (
+<link linkend="classgenBTC_1_1FileTime_1_1Models_1_1DataModel">DataModel</link> f1DataModel)<para><emphasis>&lt;summary&gt; Form 2 creation and initialization code. &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
             </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9">FixReadonlyResults</link> (
-)<para><emphasis>&lt;summary&gt;
-Show a message box of any files that were cleared of their read-only tag.
-&lt;/summary&gt;</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
+        </section>
+        <section>
+            <title></title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c">MakeListView</link> (
 )<para><emphasis>&lt;summary&gt;
 turn the NameDateObj lists from Form_Main into the listview on Form_Confirm &lt;/summary&gt;</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8cb4bf423609764a3a98fe85de819c55">ResetReadOnly</link> (
-)<para><emphasis>&lt;summary&gt; Adds the read-only attribute back after it was removed &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -354,7 +337,8 @@ turn the NameDateObj lists from Form_Main into the listview on Form_Confirm &lt;
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af62fb0c7e4aaf23671fcb591c28e436c">UpdateStatusBar</link> (
-)<para><emphasis>&lt;summary&gt; Show current number of files on the status bar line, and store all checkboxes each time &lt;/summary&gt;</emphasis></para>
+)<para><emphasis>&lt;summary&gt; Show current number of files on the status bar line, and store all checkboxes each time 
+Most likely this is being called because the number of items have changed, so make a new list of stored checkboxes.  &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -363,23 +347,11 @@ turn the NameDateObj lists from Form_Main into the listview on Form_Confirm &lt;
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6">Form_Confirm_FormClosing</link> (
-object sender, FormClosingEventArgs e)<para><emphasis>&lt;summary&gt;
+object sender, FormClosingEventArgs e)<para><emphasis>&lt;summary&gt; Cleanup.
 Clear the main form&apos;s fileconfirm list if form2 is closed.
 If the user does not want to clear the list, they can leave the form_Confirm open
  and access form_Main multiple times to incrementally add to the form_Confirm list.
  &lt;/summary&gt;</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>bool <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a117fd75bb0dc712a1bdf49140fb93f07">DoConditionalAgeCheck</link> (
-DateTime newdate, string pathName, int cmAtype)<para><emphasis>&lt;summary&gt;
-Check the radiobuttons, then check the filesystem&apos;s existing dates and
-returns true if files should be modified.
-&lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -407,7 +379,7 @@ object sender, EventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9">selectAllToolStripMenuItem_Click</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a01d43473e59f5f4664e91ccf9b9a36">listView_selectAllToolStripMenuItem_Click</link> (
 object sender, EventArgs e)</para>
                     </listitem>
                 </itemizedlist>
@@ -415,7 +387,7 @@ object sender, EventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471">deSelectAllToolStripMenuItem_Click</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab6ce8f5b38902d21eb611a978ea884a2">listView_deSelectAllToolStripMenuItem_Click</link> (
 object sender, EventArgs e)</para>
                     </listitem>
                 </itemizedlist>
@@ -423,7 +395,7 @@ object sender, EventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab0447665a6354a8015a4cbc25dd8857e">invertSelectionToolStripMenuItem_Click</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac4a5a8975e122f284404f649fd85a6d7">listView_invertSelectionToolStripMenuItem_Click</link> (
 object sender, EventArgs e)</para>
                     </listitem>
                 </itemizedlist>
@@ -431,7 +403,7 @@ object sender, EventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae685e7b9564920a6d03e82cfc4dca4a6">removeNAOnlysToolStripMenuItem_Click</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae03fc738865a83244000b295e48d426a">listView_removeNAOnlysToolStripMenuItem_Click</link> (
 object sender, EventArgs e)</para>
                     </listitem>
                 </itemizedlist>
@@ -439,7 +411,7 @@ object sender, EventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae812db4140d91f832ff782cb0e584fd1">condenseMultipleLinesToolStripMenuItem_Click</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9e17d99571d809afb2fec9d0dc500c59">listView_condenseMultipleLinesToolStripMenuItem_Click</link> (
 object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
 Combine all the adjacent items which have the same name, and matching blank/nonblank or identical date attributes
 &lt;/summary&gt;</emphasis></para>
@@ -450,7 +422,23 @@ Combine all the adjacent items which have the same name, and matching blank/nonb
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa38d84ab108896374502e1d427fb8073">toolStripMenuItem1_Click</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae94f876324215b18ecc241b6a807caae">listView_SetDatesOfAllSelecteds</link> (
+<link linkend="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj">NameDateObj</link> dateToUse)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a10fe9a6a87c2c6fb5b6a1147967719c4">listView_RemoveDatesOfAllSelecteds</link> (
+int menunumber)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a637366b34998599f876e6aa15066b570">toolStripMenuItem1_ChangeDate_Click</link> (
 object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Change Date... &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -459,7 +447,7 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Change Date... &lt;/s
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a655ed83e871c1ae8f99cc139b742581f">toolStripMenu_ThreeRemoves</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afc7388e0401968131424c81bbfc1ff03">toolStripMenuItem234_ThreeRemoves_Click</link> (
 object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Remove 1=Created,2=Modified,3=Accessed... &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -468,8 +456,16 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Remove 1=Created,2=Mo
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae89c06d5a8209746475c1454cb11721e">toolStripMenuItem5_Click</link> (
-object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Open Explorer here... &lt;/summary&gt;</emphasis></para>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac90d2374717e06d56ae82ec06e736cb5">toolStripMenuItem5_unSetALL_Click</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a98151ca52a230a78b29e9e60933ff7f1">toolStripMenuItem6_RemoveItem_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Remove Item from list... &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -477,8 +473,8 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Open Explorer here...
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3262dd1dc9413b0b77ef2ad335af6fe7">toolStripMenuItem6_Click</link> (
-object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Delete Item... &lt;/summary&gt;</emphasis></para>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae572f0630a3ffff2439293d78da1eb37">toolStripMenuItem7_OpenExplorer_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Open Explorer to selected path. Supports multi-selection up to 10 items &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -486,7 +482,7 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Delete Item... &lt;/s
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a67e58ae4d8a3a6816c148a8d9f0845cf">RestoreCheckboxes</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aee90ceaacdee750b993e891c46017472">listView_RestoreAllCheckboxes</link> (
 )<para><emphasis>&lt;summary&gt; restore all the checkboxes at once (not used?) &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -495,7 +491,7 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt; Delete Item... &lt;/s
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72204e6ed2578b7c6196f37d85aa05c0">RestoreCheckboxes</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6f0ffdbeaaab86b6f8cd541b77b4d412">listView_RestoreCheckbox</link> (
 int index)<para><emphasis>&lt;summary&gt; restore only one checkbox.  &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -504,9 +500,10 @@ int index)<para><emphasis>&lt;summary&gt; restore only one checkbox.  &lt;/summa
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0afeb990e61b20cf1ad64015b2e03b0d">StoreCheckboxes</link> (
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7b3d2b64a9c7aedc1881b262c6a28f8c">listView_StoreAllCheckboxes</link> (
 )<para><emphasis>&lt;summary&gt;
-Clear list if any, and store entire new list of checkboxes. (could not direct copy the internal array (see comments))
+Clear list if any, and store entire new list of checkboxes. 
+TODO: could not direct copy the internal array (see comments) - revisit.
 &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -515,10 +512,10 @@ Clear list if any, and store entire new list of checkboxes. (could not direct co
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab7410828fda5dc98c741655ea1c115b6">StoreCheckboxes</link> (
-ItemCheckedEventArgs e)<para><emphasis>&lt;summary&gt;
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72c2f4347a4da9de82639cac069cf455">listView_StoreCheckbox</link> (
+int itemIndex, bool itemChecked)<para><emphasis>&lt;summary&gt;
 Change stored value of one checkbox in the checklist storage array.
- Called multiple times from listView1_Confirm_ItemChecked, e is the item being changed.
+ Called multiple times from listView1Confirm_ItemChecked, e is the item being changed.
 &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
@@ -527,8 +524,14 @@ Change stored value of one checkbox in the checklist storage array.
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae0cda54950b51f40b081432f4d70d5dd">listView1_Confirm_ItemChecked</link> (
-object sender, ItemCheckedEventArgs e)</para>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a89726c5f2f155e5e9ca3720f6afa6483">listView1Confirm_ItemChecked</link> (
+object sender, ItemCheckedEventArgs e)<para><emphasis>&lt;summary&gt;
+Trick to store/cache item selection checkboxes.
+Should save time, and improve lag on large lists with large (&gt;25) selections.
+TODO: revisit this, and invent a better trick for &gt;25 items. 
+TODO: benchmark the store and restore, optimize.
+&lt;/summary&gt;</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -536,7 +539,7 @@ object sender, ItemCheckedEventArgs e)</para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a03c1e9fd2796db43388d5ba42dc78eee">menuStrip1_Click</link> (
-object sender, EventArgs e)<para><emphasis>&lt;summary&gt;change focus back to the listview when the menu is clicked (so it doesnt go gray)&lt;/summary&gt;</emphasis></para>
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;Trick to change focus back to the listview when the menu is clicked (so it doesnt go gray)&lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -544,8 +547,8 @@ object sender, EventArgs e)<para><emphasis>&lt;summary&gt;change focus back to t
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a01eff90114426a685e7182097ef665e8">listView1_Confirm_KeyUp</link> (
-object sender, KeyEventArgs e)<para><emphasis>&lt;summary&gt; respond to the delete key as if the delete context menu was clicked &lt;/summary&gt;</emphasis></para>
+                        <para>void <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1adbb2660c211a0dc06440307d5b6678c8">listView1Confirm_KeyUp</link> (
+object sender, KeyEventArgs e)<para><emphasis>&lt;summary&gt; respond to the delete key, and call the delete context menu &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -572,8 +575,23 @@ object sender, System.ComponentModel.CancelEventArgs e)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static bool <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d2f09053bdda2a34bc4453bc0fe50b">SetTime</link> (
-int cma, string path, DateTime date)<para><emphasis>&lt;summary&gt; Function which touches the filesystem to set the dates &lt;/summary&gt;</emphasis></para>
+                        <para>static bool <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a876d3051bf64f9e4970ff5a4cbf05e91">DoConditionalAgeCheck</link> (
+int cmaType, string pathName, DateTime newDate, bool useNewer, bool useOlder)<para><emphasis>&lt;summary&gt;
+Check the radiobuttons, then check the filesystem&apos;s existing dates and
+returns true if files should be modified.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static bool <link linkend="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0454ff5874b841a47795a16bc4b945a9">SetTime</link> (
+int cmaType, string pathName, DateTime newDate)<para><emphasis>&lt;summary&gt; Function which touches the filesystem to set the dates &lt;/summary&gt;</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -638,15 +656,9 @@ Clean up any resources being used.
         </section>
         <section>
             <title>Field Documentation</title>
-            <simplesect>
-                <title>int genBTC.FileTime.Forms.Form_Confirm.active</title>                
-                <para>Definition at line 39 of file Form_Confirm.cs</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>Form_Confirm.cs</para></listitem></itemizedlist></para>
-            </simplesect>
         </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1c414476848ba5e520e59175bfdc0ca5">
-                <title>genBTC.FileTime.Forms.Form_Confirm.Form_Confirm (Form_Main f1)</title> <emphasis>&lt;summary&gt; Form 2 creation and initialization code. &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a95f987f1a5664bc6d9ddd518c65c998c">
+                <title>genBTC.FileTime.Forms.Form_Confirm.Form_Confirm (DataModel f1DataModel)</title> <emphasis>&lt;summary&gt; Form 2 creation and initialization code. &lt;/summary&gt;</emphasis>
                 
 <para>
                 <formalpara>
@@ -658,10 +670,8 @@ Clean up any resources being used.
                         <colspec colwidth="4*"/>
                         <tbody>
                             <row>
-                                <entry>f1</entry>
-                                <entry>
-<para>so we can modify publics in the main form</para>
-</entry>
+                                <entry>f1DataModel</entry>
+                                <entry></entry>
                             </row>
                         </tbody>
                         </tgroup>
@@ -670,12 +680,6 @@ Clean up any resources being used.
                 </para>
 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac258c9acb47b501411857f4f28b556d9">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.FixReadonlyResults ()</title> <emphasis>&lt;summary&gt;
-Show a message box of any files that were cleared of their read-only tag.
-&lt;/summary&gt;</emphasis>
-                
-            </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c">
                 <title>void genBTC.FileTime.Forms.Form_Confirm.MakeListView ()</title> <emphasis>&lt;summary&gt;
 turn the NameDateObj lists from Form_Main into the listview on Form_Confirm &lt;/summary&gt;</emphasis>
@@ -683,27 +687,17 @@ turn the NameDateObj lists from Form_Main into the listview on Form_Confirm &lt;
 <para>use the results as the new data model. </para>
 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a8cb4bf423609764a3a98fe85de819c55">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.ResetReadOnly ()</title> <emphasis>&lt;summary&gt; Adds the read-only attribute back after it was removed &lt;/summary&gt;</emphasis>
-                
-            </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1af62fb0c7e4aaf23671fcb591c28e436c">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.UpdateStatusBar ()</title> <emphasis>&lt;summary&gt; Show current number of files on the status bar line, and store all checkboxes each time &lt;/summary&gt;</emphasis>
+                <title>void genBTC.FileTime.Forms.Form_Confirm.UpdateStatusBar ()</title> <emphasis>&lt;summary&gt; Show current number of files on the status bar line, and store all checkboxes each time 
+Most likely this is being called because the number of items have changed, so make a new list of stored checkboxes.  &lt;/summary&gt;</emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing (object sender, FormClosingEventArgs e)</title> <emphasis>&lt;summary&gt;
+                <title>void genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing (object sender, FormClosingEventArgs e)</title> <emphasis>&lt;summary&gt; Cleanup.
 Clear the main form&apos;s fileconfirm list if form2 is closed.
 If the user does not want to clear the list, they can leave the form_Confirm open
  and access form_Main multiple times to incrementally add to the form_Confirm list.
  &lt;/summary&gt;</emphasis>
-                
-            </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a117fd75bb0dc712a1bdf49140fb93f07">
-                <title>bool genBTC.FileTime.Forms.Form_Confirm.DoConditionalAgeCheck (DateTime newdate, string pathName, int cmAtype)</title> <emphasis>&lt;summary&gt;
-Check the radiobuttons, then check the filesystem&apos;s existing dates and
-returns true if files should be modified.
-&lt;/summary&gt;</emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a36d17d1505fae79c610daff068c6d5ad">
@@ -717,75 +711,93 @@ Shows a progress bar.
                 <title>void genBTC.FileTime.Forms.Form_Confirm.ThreeComboBox_SelectedChange (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa439fe0976242cbeec3ca3a3f6efe2d9">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.selectAllToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9a01d43473e59f5f4664e91ccf9b9a36">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_selectAllToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1abc151248db4094efaf30da52ada2c471">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.deSelectAllToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab6ce8f5b38902d21eb611a978ea884a2">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_deSelectAllToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab0447665a6354a8015a4cbc25dd8857e">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.invertSelectionToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac4a5a8975e122f284404f649fd85a6d7">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_invertSelectionToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae685e7b9564920a6d03e82cfc4dca4a6">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.removeNAOnlysToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae03fc738865a83244000b295e48d426a">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_removeNAOnlysToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae812db4140d91f832ff782cb0e584fd1">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.condenseMultipleLinesToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a9e17d99571d809afb2fec9d0dc500c59">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_condenseMultipleLinesToolStripMenuItem_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
 Combine all the adjacent items which have the same name, and matching blank/nonblank or identical date attributes
 &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa38d84ab108896374502e1d427fb8073">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Change Date... &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae94f876324215b18ecc241b6a807caae">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_SetDatesOfAllSelecteds (NameDateObj dateToUse)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a655ed83e871c1ae8f99cc139b742581f">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenu_ThreeRemoves (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Remove 1=Created,2=Modified,3=Accessed... &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a10fe9a6a87c2c6fb5b6a1147967719c4">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_RemoveDatesOfAllSelecteds (int menunumber)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae89c06d5a8209746475c1454cb11721e">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Open Explorer here... &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a637366b34998599f876e6aa15066b570">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1_ChangeDate_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Change Date... &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a3262dd1dc9413b0b77ef2ad335af6fe7">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Delete Item... &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afc7388e0401968131424c81bbfc1ff03">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem234_ThreeRemoves_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Remove 1=Created,2=Modified,3=Accessed... &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a67e58ae4d8a3a6816c148a8d9f0845cf">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes ()</title> <emphasis>&lt;summary&gt; restore all the checkboxes at once (not used?) &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ac90d2374717e06d56ae82ec06e736cb5">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_unSetALL_Click (object sender, EventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72204e6ed2578b7c6196f37d85aa05c0">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes (int index)</title> <emphasis>&lt;summary&gt; restore only one checkbox.  &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a98151ca52a230a78b29e9e60933ff7f1">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_RemoveItem_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Remove Item from list... &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0afeb990e61b20cf1ad64015b2e03b0d">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes ()</title> <emphasis>&lt;summary&gt;
-Clear list if any, and store entire new list of checkboxes. (could not direct copy the internal array (see comments))
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae572f0630a3ffff2439293d78da1eb37">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem7_OpenExplorer_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt; Open Explorer to selected path. Supports multi-selection up to 10 items &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aee90ceaacdee750b993e891c46017472">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_RestoreAllCheckboxes ()</title> <emphasis>&lt;summary&gt; restore all the checkboxes at once (not used?) &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6f0ffdbeaaab86b6f8cd541b77b4d412">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_RestoreCheckbox (int index)</title> <emphasis>&lt;summary&gt; restore only one checkbox.  &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a7b3d2b64a9c7aedc1881b262c6a28f8c">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_StoreAllCheckboxes ()</title> <emphasis>&lt;summary&gt;
+Clear list if any, and store entire new list of checkboxes. 
+TODO: could not direct copy the internal array (see comments) - revisit.
 &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ab7410828fda5dc98c741655ea1c115b6">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes (ItemCheckedEventArgs e)</title> <emphasis>&lt;summary&gt;
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a72c2f4347a4da9de82639cac069cf455">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView_StoreCheckbox (int itemIndex, bool itemChecked)</title> <emphasis>&lt;summary&gt;
 Change stored value of one checkbox in the checklist storage array.
- Called multiple times from listView1_Confirm_ItemChecked, e is the item being changed.
+ Called multiple times from listView1Confirm_ItemChecked, e is the item being changed.
 &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1ae0cda54950b51f40b081432f4d70d5dd">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm_ItemChecked (object sender, ItemCheckedEventArgs e)</title> <emphasis></emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a89726c5f2f155e5e9ca3720f6afa6483">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView1Confirm_ItemChecked (object sender, ItemCheckedEventArgs e)</title> <emphasis>&lt;summary&gt;
+Trick to store/cache item selection checkboxes.
+Should save time, and improve lag on large lists with large (&gt;25) selections.
+TODO: revisit this, and invent a better trick for &gt;25 items. 
+TODO: benchmark the store and restore, optimize.
+&lt;/summary&gt;</emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a03c1e9fd2796db43388d5ba42dc78eee">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.menuStrip1_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;change focus back to the listview when the menu is clicked (so it doesnt go gray)&lt;/summary&gt;</emphasis>
+                <title>void genBTC.FileTime.Forms.Form_Confirm.menuStrip1_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;Trick to change focus back to the listview when the menu is clicked (so it doesnt go gray)&lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a01eff90114426a685e7182097ef665e8">
-                <title>void genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm_KeyUp (object sender, KeyEventArgs e)</title> <emphasis>&lt;summary&gt; respond to the delete key as if the delete context menu was clicked &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1adbb2660c211a0dc06440307d5b6678c8">
+                <title>void genBTC.FileTime.Forms.Form_Confirm.listView1Confirm_KeyUp (object sender, KeyEventArgs e)</title> <emphasis>&lt;summary&gt; respond to the delete key, and call the delete context menu &lt;/summary&gt;</emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1afd8a0d9126bdb2940d7c3240db21f579">
@@ -796,9 +808,20 @@ Change stored value of one checkbox in the checklist storage array.
                 <title>void genBTC.FileTime.Forms.Form_Confirm.contextMenuStrip1_Opening (object sender, System.ComponentModel.CancelEventArgs e)</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1aa1d2f09053bdda2a34bc4453bc0fe50b">
-                <title>static bool genBTC.FileTime.Forms.Form_Confirm.SetTime (int cma, string path, DateTime date)</title> <emphasis>&lt;summary&gt; Function which touches the filesystem to set the dates &lt;/summary&gt;</emphasis>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a876d3051bf64f9e4970ff5a4cbf05e91">
+                <title>static bool genBTC.FileTime.Forms.Form_Confirm.DoConditionalAgeCheck (int cmaType, string pathName, DateTime newDate, bool useNewer, bool useOlder)</title> <emphasis>&lt;summary&gt;
+Check the radiobuttons, then check the filesystem&apos;s existing dates and
+returns true if files should be modified.
+&lt;/summary&gt;</emphasis>
                 
+<para>TODO: Tuple radioButton1Newer radioButton2Older </para>
+
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a0454ff5874b841a47795a16bc4b945a9">
+                <title>static bool genBTC.FileTime.Forms.Form_Confirm.SetTime (int cmaType, string pathName, DateTime newDate)</title> <emphasis>&lt;summary&gt; Function which touches the filesystem to set the dates &lt;/summary&gt;</emphasis>
+                
+<para>Notes: Directory works on both files and dirs. </para>
+
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a1d80bc70235bc2e505c27d38ed0d73a7">
                 <title>override void genBTC.FileTime.Forms.Form_Confirm.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;

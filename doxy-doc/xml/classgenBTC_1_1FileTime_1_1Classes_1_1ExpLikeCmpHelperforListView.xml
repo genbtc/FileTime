@@ -32,26 +32,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="16">
+      <node id="19">
         <label>IComparer</label>
         <link refid="classIComparer"/>
       </node>
-      <node id="15">
+      <node id="18">
         <label>genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</label>
         <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView"/>
-        <childnode refid="16" relation="public-inheritance">
+        <childnode refid="19" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="18">
+      <node id="21">
         <label>IComparer</label>
         <link refid="classIComparer"/>
       </node>
-      <node id="17">
+      <node id="20">
         <label>genBTC.FileTime.Classes.ExpLikeCmpHelperforListView</label>
         <link refid="classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView"/>
-        <childnode refid="18" relation="public-inheritance">
+        <childnode refid="21" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

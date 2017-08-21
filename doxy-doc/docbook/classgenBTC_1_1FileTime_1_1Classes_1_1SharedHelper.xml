@@ -13,6 +13,13 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>static readonly string SeperatorString</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>static readonly string UserDesktop</para>
                     </listitem>
                 </itemizedlist>
@@ -93,7 +100,7 @@ bool fileOrDir)<para><emphasis>&lt;summary&gt; Return 1 if bool=true (Directory)
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static string <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5">OpenFile</link> (
+                        <para>static string <link linkend="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a55c71cc744574e8b4e72d496a4f5c340">OpenFilePicker</link> (
 string inpath)<para><emphasis>&lt;summary&gt;
 Display the Folder Browser Dialog and then display the selected
 file path and the directories and files in the folder.
@@ -130,8 +137,8 @@ file path and the directories and files in the folder.
                 <title>static int genBTC.FileTime.Classes.SharedHelper.Bool2Int (bool fileOrDir)</title> <emphasis>&lt;summary&gt; Return 1 if bool=true (Directory) otherwise 0=false (File) &lt;/summary&gt;</emphasis>
                 
             </section>
-            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1aa0127c2a9443238de0d47dc1b8e825b5">
-                <title>static string genBTC.FileTime.Classes.SharedHelper.OpenFile (string inpath)</title> <emphasis>&lt;summary&gt;
+            <section xml:id="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a55c71cc744574e8b4e72d496a4f5c340">
+                <title>static string genBTC.FileTime.Classes.SharedHelper.OpenFilePicker (string inpath)</title> <emphasis>&lt;summary&gt;
 Display the Folder Browser Dialog and then display the selected
 file path and the directories and files in the folder.
 &lt;/summary&gt;</emphasis>

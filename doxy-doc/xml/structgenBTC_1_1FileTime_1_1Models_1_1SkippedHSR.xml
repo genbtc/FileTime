@@ -14,9 +14,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="16" column="1" bodyfile="Models/Structs.cs" bodystart="16" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/Structs.cs" line="17" column="1" bodyfile="Models/Structs.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" compoundref="Form__Main_8cs" startline="477" endline="495">genBTC.FileTime.Forms.Form_Main.LaunchForm2Go</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="536" endline="580">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" prot="package" static="no" mutable="no">
         <type>int</type>
@@ -29,9 +29,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="19" column="1" bodyfile="Models/Structs.cs" bodystart="19" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/Structs.cs" line="20" column="1" bodyfile="Models/Structs.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" compoundref="Form__Main_8cs" startline="477" endline="495">genBTC.FileTime.Forms.Form_Main.LaunchForm2Go</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="536" endline="580">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" prot="package" static="no" mutable="no">
         <type>int</type>
@@ -44,9 +44,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="22" column="1" bodyfile="Models/Structs.cs" bodystart="22" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="380" endline="412">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/Structs.cs" line="23" column="1" bodyfile="Models/Structs.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" compoundref="Form__Main_8cs" startline="477" endline="495">genBTC.FileTime.Forms.Form_Main.LaunchForm2Go</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" compoundref="DataModel_8cs" startline="536" endline="580">genBTC.FileTime.Models.DataModel.SkipOrAddFile</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="25" column="1" bodyfile="Models/Structs.cs" bodystart="25" bodyend="31"/>
+        <location file="Models/Structs.cs" line="26" column="1" bodyfile="Models/Structs.cs" bodystart="26" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a4c1d14890c57c374d047ccf1f484c40b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -86,15 +86,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/Structs.cs" line="34" column="1" bodyfile="Models/Structs.cs" bodystart="34" bodyend="39"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/Structs.cs" line="35" column="1" bodyfile="Models/Structs.cs" bodystart="35" bodyend="40"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" compoundref="Form__Main_8cs" startline="396" endline="402">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Models/Structs.cs" line="14" column="1" bodyfile="Models/Structs.cs" bodystart="13" bodyend="40"/>
+    <location file="Models/Structs.cs" line="15" column="1" bodyfile="Models/Structs.cs" bodystart="14" bodyend="41"/>
     <listofallmembers>
       <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>H</name></member>
       <member refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::SkippedHSR</scope><name>R</name></member>

@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="16" column="1" bodyfile="Models/DataModel.cs" bodystart="16" bodyend="-1"/>
+        <location file="Models/DataModel.cs" line="18" column="1" bodyfile="Models/DataModel.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0603afa0ebbcc7e07a0f3ac413803986" prot="package" static="no" mutable="no">
         <type>List&lt; string &gt;</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="18" column="1" bodyfile="Models/DataModel.cs" bodystart="18" bodyend="-1"/>
+        <location file="Models/DataModel.cs" line="20" column="1" bodyfile="Models/DataModel.cs" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab6a151bd3d3486e1f0cd13423ee7be95" prot="package" static="no" mutable="no">
         <type>List&lt; <ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref> &gt;</type>
@@ -40,8 +40,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="20" column="1" bodyfile="Models/DataModel.cs" bodystart="20" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="24" column="1" bodyfile="Models/DataModel.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6" compoundref="Form__Confirm_8cs" startline="108" endline="112">genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="63" endline="93">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" compoundref="Form__Main_8cs" startline="396" endline="402">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3873ffb133524678416b5dc5b35b51ca" prot="package" static="no" mutable="no">
         <type>ListView</type>
@@ -54,8 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="22" column="1" bodyfile="Models/DataModel.cs" bodystart="22" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5" compoundref="Form__Main_8cs" startline="283" endline="289">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel</referencedby>
+        <location file="Models/DataModel.cs" line="26" column="1" bodyfile="Models/DataModel.cs" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1afb7a9e98ce2debbacd2acf45bda4c499" prot="package" static="no" mutable="no">
         <type>ImageList</type>
@@ -68,8 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="24" column="1" bodyfile="Models/DataModel.cs" bodystart="24" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5" compoundref="Form__Main_8cs" startline="283" endline="289">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel</referencedby>
+        <location file="Models/DataModel.cs" line="28" column="1" bodyfile="Models/DataModel.cs" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a77d6c20d2d38130887a5a883f9ab9598" prot="package" static="no" mutable="no">
         <type><ref refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR" kindref="compound">SkippedHSR</ref></type>
@@ -82,8 +82,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="26" column="1" bodyfile="Models/DataModel.cs" bodystart="26" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="30" column="1" bodyfile="Models/DataModel.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a0e72d1e8f7c000ff23916861ae4dd830" compoundref="Form__Main_8cs" startline="477" endline="495">genBTC.FileTime.Forms.Form_Main.LaunchForm2Go</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" compoundref="Form__Main_8cs" startline="396" endline="402">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a95bc953a4fcc598e37ec64649c024f7d" prot="package" static="no" mutable="no">
         <type>Random</type>
@@ -96,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="28" column="1" bodyfile="Models/DataModel.cs" bodystart="28" bodyend="-1"/>
+        <location file="Models/DataModel.cs" line="32" column="1" bodyfile="Models/DataModel.cs" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8d92d280391468b77d08f63f5570b77c" prot="package" static="no" mutable="no">
         <type>string</type>
@@ -109,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="29" column="1" bodyfile="Models/DataModel.cs" bodystart="29" bodyend="-1"/>
+        <location file="Models/DataModel.cs" line="33" column="1" bodyfile="Models/DataModel.cs" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" prot="package" static="no" mutable="no">
         <type><ref refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA" kindref="compound">BoolCMA</ref></type>
@@ -122,8 +123,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="31" column="1" bodyfile="Models/DataModel.cs" bodystart="31" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="35" column="1" bodyfile="Models/DataModel.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a27dc1f2e09e4bd5e39063083fd431940" compoundref="Form__Main_8cs" startline="235" endline="240">genBTC.FileTime.Forms.Form_Main.checkBox_DateTime_CheckedChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" compoundref="Form__Main_8cs" startline="396" endline="402">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a3311a4a38306caebdffdd650457f33df" compoundref="Form__Main_8cs" startline="277" endline="287">genBTC.FileTime.Forms.Form_Main.QueryCMAcheckboxes</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" prot="package" static="no" mutable="no">
         <type><ref refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus" kindref="compound">guistatus</ref></type>
@@ -136,8 +139,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="32" column="1" bodyfile="Models/DataModel.cs" bodystart="32" bodyend="-1"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="36" column="1" bodyfile="Models/DataModel.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a58f7756fdd24a4dc415274d675ef48c0" compoundref="Form__Main_8cs" startline="289" endline="292">genBTC.FileTime.Forms.Form_Main.checkBox_Recurse_CheckedChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1aa79016bf2779c672606bd933598d978e" compoundref="Form__Main_8cs" startline="294" endline="297">genBTC.FileTime.Forms.Form_Main.checkBoxShouldFiles_CheckedChanged</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a5213763564008fced210e5ff9df8a006" compoundref="Form__Main_8cs" startline="396" endline="402">genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -152,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="16" column="1" bodyfile="Models/DataModel.cs" bodystart="16" bodyend="-1"/>
+        <location file="Models/DataModel.cs" line="18" column="1" bodyfile="Models/DataModel.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0689c0413d3a436b4c4bded1001e977b" prot="private" static="no" mutable="no">
         <type>List&lt; string &gt;</type>
@@ -165,7 +170,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="16" column="1" bodyfile="Models/DataModel.cs" bodystart="16" bodyend="-1"/>
+        <location file="Models/DataModel.cs" line="18" column="1" bodyfile="Models/DataModel.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa2d60371e277af18fc1d2b45725ed231" prot="private" static="no" mutable="no">
+        <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
+        <definition>NameDateObj genBTC.FileTime.Models.DataModel.thingtoreturn</definition>
+        <argsstring></argsstring>
+        <name>thingtoreturn</name>
+        <initializer> Error - <ref refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e" kindref="member">File</ref> is Read Only. Continue showing Read-Only notifications?&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="582" column="1" bodyfile="Models/DataModel.cs" bodystart="582" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac10ad63b0ce33838d6ef3badd6ccedc5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int genBTC.FileTime.Models.DataModel.fixreadonlyActive</definition>
+        <argsstring></argsstring>
+        <name>fixreadonlyActive</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>the fixreadonly fixreadonlyActive files count (checked in between fix and unfix) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="22" column="1" bodyfile="Models/DataModel.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="409" endline="474">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -180,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="37" column="1" bodyfile="Models/DataModel.cs" bodystart="37" bodyend="47"/>
+        <location file="Models/DataModel.cs" line="40" column="1" bodyfile="Models/DataModel.cs" bodystart="40" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -197,8 +233,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="50" column="1" bodyfile="Models/DataModel.cs" bodystart="50" bodyend="56"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762" compoundref="Form__Main_8cs" startline="306" endline="312">genBTC.FileTime.Forms.Form_Main.ClearOnError</referencedby>
+        <location file="Models/DataModel.cs" line="53" column="1" bodyfile="Models/DataModel.cs" bodystart="53" bodyend="59"/>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1ac25d3157b850a474c66b19a0bf5d0762" compoundref="Form__Main_8cs" startline="302" endline="308">genBTC.FileTime.Forms.Form_Main.ClearOnError</referencedby>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70bf0d8494851633ef774a62b4c9048d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; string &gt;</type>
@@ -215,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="58" column="1" bodyfile="Models/DataModel.cs" bodystart="58" bodyend="63"/>
+        <location file="Models/DataModel.cs" line="96" column="1" bodyfile="Models/DataModel.cs" bodystart="96" bodyend="101"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4792452d26b386fedb946a81c885ef02" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -233,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="65" column="1" bodyfile="Models/DataModel.cs" bodystart="65" bodyend="70"/>
+        <location file="Models/DataModel.cs" line="103" column="1" bodyfile="Models/DataModel.cs" bodystart="103" bodyend="110"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -255,7 +291,7 @@
           <defval>true</defval>
         </param>
         <briefdescription>
-<para>Display subfiles and subdirectories in the right panel listview </para>        </briefdescription>
+<para>Display subfiles and subdirectories in the right panel listview and show a file icon </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -265,18 +301,13 @@
 <para>Don&apos;t show the directories, only files.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkbox_recurse, filextlist, imageList_Files </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="77" column="1" bodyfile="Models/DataModel.cs" bodystart="77" bodyend="143"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" compoundref="SharedHelper_8cs" startline="25">genBTC.FileTime.Classes.SharedHelper.CurrExten</references>
+        <location file="Models/DataModel.cs" line="116" column="1" bodyfile="Models/DataModel.cs" bodystart="116" bodyend="160"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
         <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864" compoundref="SharedHelper_8cs" startline="17" endline="20">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer</references>
-        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe" compoundref="SharedHelper_8cs" startline="28" endline="31">genBTC.FileTime.Classes.SharedHelper.FindCurExt</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1abaf93807bc85def078adf6a70604b2d2" compoundref="NativeExtractIcon_8cs" startline="33" endline="49">genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="39" endline="45">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</references>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5" compoundref="Form__Main_8cs" startline="283" endline="289">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a4157c581b3d2c22c32381452af3f9df5" compoundref="Form__Main_8cs" startline="267" endline="274">genBTC.FileTime.Forms.Form_Main.RefreshContentsRightPanel</referencedby>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DateTime</type>
@@ -293,25 +324,25 @@ reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkb
 <para>reqs: (string path), contentsDirList, contentsFileList, guistatus </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="149" column="1" bodyfile="Models/DataModel.cs" bodystart="149" bodyend="176"/>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" compoundref="Structs_8cs" startline="58">genBTC.FileTime.Models.guistatus.Accessed</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" compoundref="Structs_8cs" startline="59">genBTC.FileTime.Models.guistatus.Created</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" compoundref="Structs_8cs" startline="61">genBTC.FileTime.Models.guistatus.dateTimePickerDate</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" compoundref="Structs_8cs" startline="61">genBTC.FileTime.Models.guistatus.dateTimePickerTime</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" compoundref="Structs_8cs" startline="60">genBTC.FileTime.Models.guistatus.Modified</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" compoundref="Structs_8cs" startline="78">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" compoundref="Structs_8cs" startline="79">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" compoundref="Structs_8cs" startline="80">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1ade2fae85372b8030dce0d5a71b957990" compoundref="Structs_8cs" startline="81">genBTC.FileTime.Models.guistatus.rg2rb1Creation</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a0ee7354921de7a3935388a2dc3cedb27" compoundref="Structs_8cs" startline="82">genBTC.FileTime.Models.guistatus.rg2rb2Modified</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afde815c17bb8aaadf3d7b6a1d22e3426" compoundref="Structs_8cs" startline="83">genBTC.FileTime.Models.guistatus.rg2rb3LastAccess</references>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="196" column="1" bodyfile="Models/DataModel.cs" bodystart="196" bodyend="223"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" compoundref="Structs_8cs" startline="69">genBTC.FileTime.Models.guistatus.Accessed</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" compoundref="Structs_8cs" startline="67">genBTC.FileTime.Models.guistatus.Created</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" compoundref="Structs_8cs" startline="63">genBTC.FileTime.Models.guistatus.dateTimePickerDate</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" compoundref="Structs_8cs" startline="63">genBTC.FileTime.Models.guistatus.dateTimePickerTime</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" compoundref="Structs_8cs" startline="68">genBTC.FileTime.Models.guistatus.Modified</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" compoundref="Structs_8cs" startline="61">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" compoundref="Structs_8cs" startline="65">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" compoundref="Structs_8cs" startline="73">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1ade2fae85372b8030dce0d5a71b957990" compoundref="Structs_8cs" startline="75">genBTC.FileTime.Models.guistatus.rg2rb1Creation</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a0ee7354921de7a3935388a2dc3cedb27" compoundref="Structs_8cs" startline="76">genBTC.FileTime.Models.guistatus.rg2rb2Modified</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afde815c17bb8aaadf3d7b6a1d22e3426" compoundref="Structs_8cs" startline="77">genBTC.FileTime.Models.guistatus.rg2rb3LastAccess</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="409" endline="474">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a18bcdec5b474bc9b0eece9d8856ba4f7" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DateTime</type>
-        <definition>DateTime genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile</definition>
+        <definition>DateTime genBTC.FileTime.Models.DataModel.DecideTimeFromSubdirOrSubfile</definition>
         <argsstring>(string path)</argsstring>
-        <name>DecideTimeFromSubDirFile</name>
+        <name>DecideTimeFromSubdirOrSubfile</name>
         <param>
           <type>string</type>
           <declname>path</declname>
@@ -322,34 +353,26 @@ reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkb
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="181" column="1" bodyfile="Models/DataModel.cs" bodystart="181" bodyend="267"/>
+        <location file="Models/DataModel.cs" line="228" column="1" bodyfile="Models/DataModel.cs" bodystart="228" bodyend="296"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" compoundref="Structs_8cs" startline="65">genBTC.FileTime.Models.guistatus.radioButton1_setfromCreated</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" compoundref="Structs_8cs" startline="67">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" compoundref="Structs_8cs" startline="63">genBTC.FileTime.Models.guistatus.radioButton1Oldest</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" compoundref="Structs_8cs" startline="70">genBTC.FileTime.Models.guistatus.radioButton2_setfromModified</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" compoundref="Structs_8cs" startline="72">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" compoundref="Structs_8cs" startline="68">genBTC.FileTime.Models.guistatus.radioButton2Newest</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" compoundref="Structs_8cs" startline="75">genBTC.FileTime.Models.guistatus.radioButton3_setfromAccessed</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" compoundref="Structs_8cs" startline="73">genBTC.FileTime.Models.guistatus.radioButton3Random</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a9010a701f58a183bc4e079af909ff838" compoundref="Structs_8cs" startline="75">genBTC.FileTime.Models.guistatus.radioButton4_setfromRandom</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a11e1de8dc8e4594fdf22ca2143bf622a" compoundref="Structs_8cs" startline="85">genBTC.FileTime.Models.guistatus.radioButton1_setfromCreated</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" compoundref="Structs_8cs" startline="79">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" compoundref="Structs_8cs" startline="82">genBTC.FileTime.Models.guistatus.radioButton1Oldest</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a7cd965385b3c26d4f758b4bfad0e9c22" compoundref="Structs_8cs" startline="85">genBTC.FileTime.Models.guistatus.radioButton2_setfromModified</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" compoundref="Structs_8cs" startline="80">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" compoundref="Structs_8cs" startline="83">genBTC.FileTime.Models.guistatus.radioButton2Newest</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a61606c22eb4e8437d5f397dc261822f6" compoundref="Structs_8cs" startline="85">genBTC.FileTime.Models.guistatus.radioButton3_setfromAccessed</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" compoundref="Structs_8cs" startline="84">genBTC.FileTime.Models.guistatus.radioButton3Random</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a9010a701f58a183bc4e079af909ff838" compoundref="Structs_8cs" startline="85">genBTC.FileTime.Models.guistatus.radioButton4_setfromRandom</references>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4879e17c0c285da2e1749f6f6e6a8913" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1</definition>
-        <argsstring>(string directoryPath, bool checkedRecurse, bool checkedShouldFiles)</argsstring>
+        <argsstring>(string directoryPath)</argsstring>
         <name>RecurseSubDirectoryMode1</name>
         <param>
           <type>string</type>
           <declname>directoryPath</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>checkedRecurse</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>checkedShouldFiles</declname>
         </param>
         <briefdescription>
 <para>Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime() (Only adds to the confirm list, <ref refid="classForm" kindref="compound">Form</ref> 2 will actually write changes). </para>        </briefdescription>
@@ -365,8 +388,10 @@ reqs: listviewcontents, contentsDirList,contentsFileList, labelFpathText, checkb
 req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="275" column="1" bodyfile="Models/DataModel.cs" bodystart="275" bodyend="288"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="304" column="1" bodyfile="Models/DataModel.cs" bodystart="304" bodyend="317"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a375d52cfed32dd1fc1464a0ae31508ff" compoundref="Structs_8cs" startline="59">genBTC.FileTime.Models.guistatus.checkboxRecurse</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3476b9ac0517230b0ce1ab6bc8a968d7" compoundref="Structs_8cs" startline="60">genBTC.FileTime.Models.guistatus.checkboxShouldFiles</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="409" endline="474">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -391,26 +416,57 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="294" column="1" bodyfile="Models/DataModel.cs" bodystart="294" bodyend="310"/>
+        <location file="Models/DataModel.cs" line="323" column="1" bodyfile="Models/DataModel.cs" bodystart="323" bodyend="346"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="409" endline="474">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a00bfcf2df19f275804d80ce46eeed134" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3</definition>
+        <argsstring>(string targetPath, string comparePath)</argsstring>
+        <name>RecurseSubDirectoryMode3</name>
+        <param>
+          <type>string</type>
+          <declname>targetPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>comparePath</declname>
+        </param>
+        <briefdescription>
+<para>Mode 3: Recursive. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write Path to modify times of. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>comparePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Read Path used as source of time data.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="353" column="1" bodyfile="Models/DataModel.cs" bodystart="353" bodyend="439"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ad2e4cd71f4b2b6402d93a66a07b3b2c8" compoundref="SharedHelper_8cs" startline="22">genBTC.FileTime.Classes.SharedHelper.Seperator</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac7414723650ca31d0240bb7c03d506ad" compoundref="SharedHelper_8cs" startline="23">genBTC.FileTime.Classes.SharedHelper.SeperatorString</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a7f71239199fdba2ffb8af466b9c0068d" compoundref="Form__Main_8cs" startline="384" endline="390">genBTC.FileTime.Forms.Form_Main.StartUpMode3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1adeab181bc642b460fb7d12e43a996a1d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent</definition>
-        <argsstring>(string directoryPath, bool checkedRecurse, bool checkedShouldFiles)</argsstring>
+        <argsstring>(string directoryPath)</argsstring>
         <name>RecurseSubDirectoryMode1Parent</name>
         <param>
           <type>string</type>
           <declname>directoryPath</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>checkedRecurse</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>checkedShouldFiles</declname>
         </param>
         <briefdescription>
 <para>Mode 1P (start at its Parent) </para>        </briefdescription>
@@ -418,33 +474,13 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="313" column="1" bodyfile="Models/DataModel.cs" bodystart="313" bodyend="324"/>
+        <location file="Models/DataModel.cs" line="454" column="1" bodyfile="Models/DataModel.cs" bodystart="454" bodyend="465"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode2Parent</definition>
-        <argsstring>(string directoryPath)</argsstring>
-        <name>RecurseSubDirectoryMode2Parent</name>
-        <param>
-          <type>string</type>
-          <declname>directoryPath</declname>
-        </param>
-        <briefdescription>
-<para>Mode 2P (start at its Parent) </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Models/DataModel.cs" line="327" column="1" bodyfile="Models/DataModel.cs" bodystart="327" bodyend="338"/>
-        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaaf1378db214ee5aa4075e4a5b1a01e7" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectory</definition>
-        <argsstring>(string directoryPath, DateTime fileDateTime, bool checkedRecurse, bool checkedShouldFiles)</argsstring>
+        <argsstring>(string directoryPath, DateTime fileDateTime)</argsstring>
         <name>SetTimeDateEachDirectory</name>
         <param>
           <type>string</type>
@@ -454,21 +490,13 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
           <type>DateTime</type>
           <declname>fileDateTime</declname>
         </param>
-        <param>
-          <type>bool</type>
-          <declname>checkedRecurse</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>checkedShouldFiles</declname>
-        </param>
         <briefdescription>
 <para>Set Directory Time </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="343" column="1" bodyfile="Models/DataModel.cs" bodystart="343" bodyend="359"/>
+        <location file="Models/DataModel.cs" line="471" column="1" bodyfile="Models/DataModel.cs" bodystart="471" bodyend="487"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
         <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864" compoundref="SharedHelper_8cs" startline="17" endline="20">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer</references>
       </memberdef>
@@ -491,45 +519,15 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="364" column="1" bodyfile="Models/DataModel.cs" bodystart="364" bodyend="375"/>
+        <location file="Models/DataModel.cs" line="492" column="1" bodyfile="Models/DataModel.cs" bodystart="492" bodyend="503"/>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
         <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a39656ee10a1e2355703bd9d285d07864" compoundref="SharedHelper_8cs" startline="17" endline="20">genBTC.FileTime.Classes.SharedHelper.explorerStringComparer</references>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void genBTC.FileTime.Models.DataModel.SkipOrAddFile</definition>
-        <argsstring>(string path, bool isDirectory)</argsstring>
-        <name>SkipOrAddFile</name>
-        <param>
-          <type>string</type>
-          <declname>path</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>isDirectory</declname>
-        </param>
-        <briefdescription>
-<para>Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Models/DataModel.cs" line="380" column="1" bodyfile="Models/DataModel.cs" bodystart="380" bodyend="412"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
-        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" compoundref="Structs_8cs" startline="16">genBTC.FileTime.Models.SkippedHSR.H</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" compoundref="Structs_8cs" startline="19">genBTC.FileTime.Models.SkippedHSR.R</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" compoundref="Structs_8cs" startline="22">genBTC.FileTime.Models.SkippedHSR.S</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a55d317289f21e284204963254b401e3e" compoundref="Settings_8Designer_8cs" startline="29">genBTC.FileTime.Properties.Settings.ShowNoticesReadOnly</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a48703dc726b3afeeded4096df966dc6e" compoundref="Settings_8Designer_8cs" startline="53">genBTC.FileTime.Properties.Settings.SkipHidden</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5e754668094b1230292f559313b44cfb" compoundref="Settings_8Designer_8cs" startline="65">genBTC.FileTime.Properties.Settings.SkipReadOnly</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a7631f85d156658d00bc611fdeda098c8" compoundref="Settings_8Designer_8cs" startline="41">genBTC.FileTime.Properties.Settings.SkipSystem</references>
-      </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void genBTC.FileTime.Models.DataModel.SetFileDateTimeMode1</definition>
+        <definition>void genBTC.FileTime.Models.DataModel.AddONEFiletoConfirmList</definition>
         <argsstring>(string filePath, DateTime fileTime, bool isDirectory)</argsstring>
-        <name>SetFileDateTimeMode1</name>
+        <name>AddONEFiletoConfirmList</name>
         <param>
           <type>string</type>
           <declname>filePath</declname>
@@ -545,7 +543,7 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
         <briefdescription>
 <para>STATIC. Set the date/time for a single file/directory (This works on files and directories) Go through the list, skipping H,S,R files, and add all the file+date objects to the Confirmation List (Only adds to the confirm list, <ref refid="classForm" kindref="compound">Form</ref> 2 (Confirm) will actually write changes). </para>        </briefdescription>
         <detaileddescription>
-<para>Requires: Pass in the datamodel and the checkbox states. <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>filePath</parametername>
 </parameternamelist>
@@ -570,82 +568,71 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="423" column="1" bodyfile="Models/DataModel.cs" bodystart="423" bodyend="429"/>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="351" endline="409">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+        <location file="Models/DataModel.cs" line="513" column="1" bodyfile="Models/DataModel.cs" bodystart="513" bodyend="530"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" compoundref="Structs_8cs" startline="9">genBTC.FileTime.Models.BoolCMA.A</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b" compoundref="SharedHelper_8cs" startline="49" endline="52">genBTC.FileTime.Classes.SharedHelper.Bool2Int</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" compoundref="Structs_8cs" startline="10">genBTC.FileTime.Models.BoolCMA.C</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" compoundref="Structs_8cs" startline="11">genBTC.FileTime.Models.BoolCMA.M</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="409" endline="474">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
-        <definition>NameDateObj genBTC.FileTime.Models.DataModel.Makedateobject</definition>
-        <argsstring>(string filePath, DateTime fileTime, bool isDirectory)</argsstring>
-        <name>Makedateobject</name>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.DataModel.SkipOrAddFile</definition>
+        <argsstring>(string path, bool isDirectory)</argsstring>
+        <name>SkipOrAddFile</name>
         <param>
           <type>string</type>
-          <declname>filePath</declname>
-        </param>
-        <param>
-          <type>DateTime</type>
-          <declname>fileTime</declname>
+          <declname>path</declname>
         </param>
         <param>
           <type>bool</type>
           <declname>isDirectory</declname>
         </param>
         <briefdescription>
-<para>Static. Overloaded. Make a <ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref> out of 1 filename; writes A SINGLE time to all 3 date properties. </para>        </briefdescription>
+<para>Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="434" column="1" bodyfile="Models/DataModel.cs" bodystart="434" bodyend="448"/>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" compoundref="Structs_8cs" startline="8">genBTC.FileTime.Models.BoolCMA.A</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac18e5b82cacadadfb07161c98447f21b" compoundref="SharedHelper_8cs" startline="48" endline="51">genBTC.FileTime.Classes.SharedHelper.Bool2Int</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" compoundref="Structs_8cs" startline="9">genBTC.FileTime.Models.BoolCMA.C</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" compoundref="Structs_8cs" startline="10">genBTC.FileTime.Models.BoolCMA.M</references>
-      </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
-        <definition>NameDateObj genBTC.FileTime.Models.DataModel.Makedateobject</definition>
-        <argsstring>(string folderPath, NameDateObj subObj)</argsstring>
-        <name>Makedateobject</name>
-        <param>
-          <type>string</type>
-          <declname>folderPath</declname>
-        </param>
-        <param>
-          <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
-          <declname>subObj</declname>
-        </param>
-        <briefdescription>
-<para>Static. Overloaded. Make a <ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref> out of 1 filename; writes each time time to the date attribute that was radiobutton selected. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Models/DataModel.cs" line="452" column="1" bodyfile="Models/DataModel.cs" bodystart="452" bodyend="464"/>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" compoundref="Structs_8cs" startline="8">genBTC.FileTime.Models.BoolCMA.A</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" compoundref="Structs_8cs" startline="9">genBTC.FileTime.Models.BoolCMA.C</references>
-        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abd0793434b14a5d2cb47c4ae7718afb4" compoundref="NameDateObjListViewVMdl_8cs" startline="45">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" compoundref="Structs_8cs" startline="10">genBTC.FileTime.Models.BoolCMA.M</references>
-      </memberdef>
-      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData" kindref="compound">DisplayCmaTimeData</ref></type>
-        <definition>DisplayCmaTimeData genBTC.FileTime.Models.DataModel.GetCmaTimes</definition>
-        <argsstring>(string pathName)</argsstring>
-        <name>GetCmaTimes</name>
-        <param>
-          <type>string</type>
-          <declname>pathName</declname>
-        </param>
-        <briefdescription>
-<para>Display the date and time of the selected file (also works on Directories) </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Models/DataModel.cs" line="469" column="1" bodyfile="Models/DataModel.cs" bodystart="469" bodyend="491"/>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData_1a6a8b4bb3e7b175308fc52789d2c2093b" compoundref="Structs_8cs" startline="46">genBTC.FileTime.Models.DisplayCmaTimeData.Created</references>
+        <location file="Models/DataModel.cs" line="536" column="1" bodyfile="Models/DataModel.cs" bodystart="536" bodyend="580"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a4d9e4e09fc2f77f142e4a5600d18d7d0" compoundref="Settings_8Designer_8cs" startline="20">genBTC.FileTime.Properties.Settings.Default</references>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
-        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="317" endline="329">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1ae09b8347bedd3b86505b812da797a636" compoundref="Structs_8cs" startline="17">genBTC.FileTime.Models.SkippedHSR.H</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a449adfde543bd92895e09c0949f202d3" compoundref="Structs_8cs" startline="20">genBTC.FileTime.Models.SkippedHSR.R</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR_1a20d723c67a37664ee8f7cd438f16b365" compoundref="Structs_8cs" startline="23">genBTC.FileTime.Models.SkippedHSR.S</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a55d317289f21e284204963254b401e3e" compoundref="Settings_8Designer_8cs" startline="29">genBTC.FileTime.Properties.Settings.ShowNoticesReadOnly</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a48703dc726b3afeeded4096df966dc6e" compoundref="Settings_8Designer_8cs" startline="53">genBTC.FileTime.Properties.Settings.SkipHidden</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a5e754668094b1230292f559313b44cfb" compoundref="Settings_8Designer_8cs" startline="65">genBTC.FileTime.Properties.Settings.SkipReadOnly</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Properties_1_1Settings_1a7631f85d156658d00bc611fdeda098c8" compoundref="Settings_8Designer_8cs" startline="41">genBTC.FileTime.Properties.Settings.SkipSystem</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a2f9eb45a3ac52ba498992d6faea2f2da" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool genBTC.FileTime.Models.DataModel.DecideTimeRG1and2</definition>
+        <argsstring>(string directoryPath)</argsstring>
+        <name>DecideTimeRG1and2</name>
+        <param>
+          <type>string</type>
+          <declname>directoryPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="583" column="1" bodyfile="Models/DataModel.cs" bodystart="583" bodyend="609"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" compoundref="NameDateObj_8cs" startline="64">genBTC.FileTime.Models.NameDateObj.Accessed</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" compoundref="Structs_8cs" startline="69">genBTC.FileTime.Models.guistatus.Accessed</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" compoundref="NameDateObj_8cs" startline="50">genBTC.FileTime.Models.NameDateObj.Created</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" compoundref="Structs_8cs" startline="67">genBTC.FileTime.Models.guistatus.Created</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" compoundref="Structs_8cs" startline="63">genBTC.FileTime.Models.guistatus.dateTimePickerDate</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" compoundref="Structs_8cs" startline="63">genBTC.FileTime.Models.guistatus.dateTimePickerTime</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" compoundref="NameDateObj_8cs" startline="57">genBTC.FileTime.Models.NameDateObj.Modified</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" compoundref="Structs_8cs" startline="68">genBTC.FileTime.Models.guistatus.Modified</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="45">genBTC.FileTime.Models.NameDateObj.Name</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af718e320c686fd55d469e2b2ce527f99" compoundref="Structs_8cs" startline="70">genBTC.FileTime.Models.guistatus.PathName</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" compoundref="Structs_8cs" startline="61">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" compoundref="Structs_8cs" startline="65">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</references>
       </memberdef>
       <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj" kindref="compound">NameDateObj</ref></type>
@@ -662,27 +649,121 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Models/DataModel.cs" line="498" column="1" bodyfile="Models/DataModel.cs" bodystart="498" bodyend="686"/>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" compoundref="NameDateObj_8cs" startline="56">genBTC.FileTime.Models.NameDateObj.Accessed</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a094e73c721f9194492c4bb04e3724733" compoundref="Structs_8cs" startline="58">genBTC.FileTime.Models.guistatus.Accessed</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" compoundref="NameDateObj_8cs" startline="42">genBTC.FileTime.Models.NameDateObj.Created</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a39e9400062a3aaa6b07acae1374604fb" compoundref="Structs_8cs" startline="59">genBTC.FileTime.Models.guistatus.Created</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1afd0b78330254ac5385d34faa14b55e4b" compoundref="Structs_8cs" startline="61">genBTC.FileTime.Models.guistatus.dateTimePickerDate</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a408477fd9c2330e0f130b467c04b2c24" compoundref="Structs_8cs" startline="61">genBTC.FileTime.Models.guistatus.dateTimePickerTime</references>
+        <location file="Models/DataModel.cs" line="615" column="1" bodyfile="Models/DataModel.cs" bodystart="615" bodyend="776"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a25c8798cf9fccbd44f201bb72df93491" compoundref="NameDateObj_8cs" startline="64">genBTC.FileTime.Models.NameDateObj.Accessed</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a111f904d85223c4eaeb297464b0490c3" compoundref="NameDateObj_8cs" startline="50">genBTC.FileTime.Models.NameDateObj.Created</references>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
         <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2d57f1ce6d2be16577be655f927df3ce" compoundref="Structs_8cs" startline="62">genBTC.FileTime.Models.guistatus.labelHiddenPathName</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" compoundref="NameDateObj_8cs" startline="49">genBTC.FileTime.Models.NameDateObj.Modified</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a68f6288911a9b7d42b566e594c99360c" compoundref="Structs_8cs" startline="60">genBTC.FileTime.Models.guistatus.Modified</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" compoundref="Structs_8cs" startline="67">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" compoundref="Structs_8cs" startline="63">genBTC.FileTime.Models.guistatus.radioButton1Oldest</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" compoundref="Structs_8cs" startline="72">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" compoundref="Structs_8cs" startline="68">genBTC.FileTime.Models.guistatus.radioButton2Newest</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" compoundref="Structs_8cs" startline="73">genBTC.FileTime.Models.guistatus.radioButton3Random</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1acde101352c3eb11b80880679f764ce49" compoundref="Structs_8cs" startline="78">genBTC.FileTime.Models.guistatus.radioGroupBox1SpecifyTime</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af77f434d4ea3bec542470550c6769da0" compoundref="Structs_8cs" startline="79">genBTC.FileTime.Models.guistatus.radioGroupBox2CurrentSelect</references>
-        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" compoundref="Structs_8cs" startline="80">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</references>
-        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="39" endline="45">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1aeb1f471f456e88dd6b23ca994858b546" compoundref="NameDateObj_8cs" startline="57">genBTC.FileTime.Models.NameDateObj.Modified</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj_1a53731524117edaa395cb2c6e3efada4e" compoundref="NameDateObj_8cs" startline="45">genBTC.FileTime.Models.NameDateObj.Name</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a8542611eb4d6ac570ca7feccc64ac26c" compoundref="Structs_8cs" startline="79">genBTC.FileTime.Models.guistatus.radioButton1_useTimefromFile</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a813c3cba6792f6e82661d1b88e1f6a0a" compoundref="Structs_8cs" startline="82">genBTC.FileTime.Models.guistatus.radioButton1Oldest</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a2aec6e7844fb1374f94404bede27a1e9" compoundref="Structs_8cs" startline="80">genBTC.FileTime.Models.guistatus.radioButton2_useTimefromSubdir</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1af47be934dca3c7993b144641c3439d83" compoundref="Structs_8cs" startline="83">genBTC.FileTime.Models.guistatus.radioButton2Newest</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a733ea13b5bdca9055b019bfff9f2730b" compoundref="Structs_8cs" startline="84">genBTC.FileTime.Models.guistatus.radioButton3Random</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus_1a3731024c10428189134e4100cbe8e803" compoundref="Structs_8cs" startline="73">genBTC.FileTime.Models.guistatus.radioGroupBox3UseTimeFrom</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="40" endline="46">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a9b232e99482a4a1b0483d4f7bd2a5541" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.DataModel.FixReadonlyResults</definition>
+        <argsstring>()</argsstring>
+        <name>FixReadonlyResults</name>
+        <briefdescription>
+<para>Show a message box of any files that were cleared of their read-only tag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="782" column="1" bodyfile="Models/DataModel.cs" bodystart="782" bodyend="812"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a5dd2552f20d039de4d53481d8fe396b0" compoundref="SharedHelper_8cs" startline="34" endline="37">genBTC.FileTime.Classes.SharedHelper.RemoveAttributes</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a58b663e7dfbb87ffe54921ba19f5644c" compoundref="Form__Confirm_8cs" startline="63" endline="93">genBTC.FileTime.Forms.Form_Confirm.MakeListView</referencedby>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1a047d474cb325b9dda51ad8bfcb6b14ac" compoundref="Form__Main_8cs" startline="409" endline="474">genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a03ad7673720673c17fcaf3943428d57c" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.DataModel.ResetReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>ResetReadOnly</name>
+        <briefdescription>
+<para>Adds the read-only attribute back after it was removed </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="814" column="1" bodyfile="Models/DataModel.cs" bodystart="814" bodyend="822"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Confirm_1a6be09c9c2455f2c8b7993b7cbb1349b6" compoundref="Form__Confirm_8cs" startline="108" endline="112">genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a09e8580b4dd602e7d8e4ffb07eaa2a42" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct" kindref="compound">NameDateStruct</ref></type>
+        <definition>static NameDateStruct genBTC.FileTime.Models.DataModel.GetCmaTimesFromFilesystem</definition>
+        <argsstring>(string pathName)</argsstring>
+        <name>GetCmaTimesFromFilesystem</name>
+        <param>
+          <type>string</type>
+          <declname>pathName</declname>
+        </param>
+        <briefdescription>
+<para>Display the date and time of the selected file (also works on Directories) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="64" column="1" bodyfile="Models/DataModel.cs" bodystart="64" bodyend="94"/>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+        <referencedby refid="classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main_1af0b1cab45218f43aeee9b6824647b92b" compoundref="Form__Main_8cs" startline="313" endline="325">genBTC.FileTime.Forms.Form_Main.DisplayCma</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a230ae2b4a58763aa5b924005c79d8295" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.DataModel.AddImagesExtsToFileLists</definition>
+        <argsstring>(string directoryName)</argsstring>
+        <name>AddImagesExtsToFileLists</name>
+        <param>
+          <type>string</type>
+          <declname>directoryName</declname>
+        </param>
+        <briefdescription>
+<para>Fill the contents list window with files&apos;s own Icons, given a directory name path </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="164" column="1" bodyfile="Models/DataModel.cs" bodystart="164" bodyend="190"/>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1ac64a832434ec5cab2eae83e01d3a60be" compoundref="SharedHelper_8cs" startline="26">genBTC.FileTime.Classes.SharedHelper.CurrExten</references>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4ae73cda510e8bb947f7e61089e5581494">genBTC.FileTime.Models.Directory</references>
+        <references refid="namespacegenBTC_1_1FileTime_1_1Models_1a4bfa85aa472c7f8d8eef2dba13d1d8d4a0b27918290ff5323bea1e3b78a9cf04e">genBTC.FileTime.Models.File</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a43755aee56383c21bd95d1581e6377fe" compoundref="SharedHelper_8cs" startline="29" endline="32">genBTC.FileTime.Classes.SharedHelper.FindCurExt</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon_1abaf93807bc85def078adf6a70604b2d2" compoundref="NativeExtractIcon_8cs" startline="33" endline="49">genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon</references>
+        <references refid="classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper_1a7f0fdfe07e68e7f3945e8a8d42e22ec4" compoundref="SharedHelper_8cs" startline="40" endline="46">genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag</references>
+      </memberdef>
+      <memberdef kind="function" id="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3b5db833571136a40376d683c76424a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void genBTC.FileTime.Models.DataModel.StoreDateByCMACheckboxes</definition>
+        <argsstring>(NameDateObjListViewVMdl currentobject)</argsstring>
+        <name>StoreDateByCMACheckboxes</name>
+        <param>
+          <type><ref refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl" kindref="compound">NameDateObjListViewVMdl</ref></type>
+          <declname>currentobject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/DataModel.cs" line="441" column="1" bodyfile="Models/DataModel.cs" bodystart="441" bodyend="451"/>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a71294cb2920ac3bcf7f487a0ae15385c" compoundref="Structs_8cs" startline="9">genBTC.FileTime.Models.BoolCMA.A</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0b1fd55712b915ae20dc82d50cd62573" compoundref="NameDateObjListViewVMdl_8cs" startline="70">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Accessed</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a1ed7d9b7e9f2e035e14f62d25e3794fd" compoundref="Structs_8cs" startline="10">genBTC.FileTime.Models.BoolCMA.C</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1abd0793434b14a5d2cb47c4ae7718afb4" compoundref="NameDateObjListViewVMdl_8cs" startline="56">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Created</references>
+        <references refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA_1a7c74a3052bf23a0f0ada3995784f07f7" compoundref="Structs_8cs" startline="11">genBTC.FileTime.Models.BoolCMA.M</references>
+        <references refid="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1adc152d4f53e4d862491993903ce1c02e" compoundref="NameDateObjListViewVMdl_8cs" startline="63">genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.Modified</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -690,7 +771,7 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="10">
+      <node id="11">
         <label>genBTC.FileTime.Models.BoolCMA</label>
         <link refid="structgenBTC_1_1FileTime_1_1Models_1_1BoolCMA"/>
       </node>
@@ -704,6 +785,9 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
           <edgelabel>Skips</edgelabel>
         </childnode>
         <childnode refid="10" relation="usage">
+          <edgelabel>thingtoreturn</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
           <edgelabel>checkboxes</edgelabel>
         </childnode>
       </node>
@@ -711,44 +795,53 @@ req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked </para>        </deta
         <label>genBTC.FileTime.Models.guistatus</label>
         <link refid="structgenBTC_1_1FileTime_1_1Models_1_1guistatus"/>
       </node>
+      <node id="10">
+        <label>genBTC.FileTime.Models.NameDateObj</label>
+        <link refid="classgenBTC_1_1FileTime_1_1Models_1_1NameDateObj"/>
+      </node>
       <node id="9">
         <label>genBTC.FileTime.Models.SkippedHSR</label>
         <link refid="structgenBTC_1_1FileTime_1_1Models_1_1SkippedHSR"/>
       </node>
     </collaborationgraph>
-    <location file="Models/DataModel.cs" line="13" column="1" bodyfile="Models/DataModel.cs" bodystart="12" bodyend="688"/>
+    <location file="Models/DataModel.cs" line="15" column="1" bodyfile="Models/DataModel.cs" bodystart="14" bodyend="823"/>
     <listofallmembers>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a230ae2b4a58763aa5b924005c79d8295" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>AddImagesExtsToFileLists</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a517aad07f47846a11ffdf32f374b9ba8" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>AddONEFiletoConfirmList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a1099cd3be6141a1cdd0398fec91ec869" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>checkboxes</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac570d6cb14f26e4800f3aebbd110783b" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>Clear</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70b7904cc633ce90f3dbbda0152f8298" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>contentsDirList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a23bb91d68f4028304086c4dad5bb41b0" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>contentsFileList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8d92d280391468b77d08f63f5570b77c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>CwdPathName</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad7ce30885dde9101862f8bf75032d402" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DataModel</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1af26f78729d27f5a07c169f63ea6776ee" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DecideTimeFromSubDirFile</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a18bcdec5b474bc9b0eece9d8856ba4f7" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DecideTimeFromSubdirOrSubfile</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a2f9eb45a3ac52ba498992d6faea2f2da" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DecideTimeRG1and2</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7c1cf0d5ae8da39824ab17ecf8de5be3" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DecideWhichTimeMode1</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a8b28f5ddf941fa162ca70c39c1c2e4b0" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DecideWhichTimeMode2</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a088cf45bfc4ee1ee839116dde320040a" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>DisplayContentsList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0603afa0ebbcc7e07a0f3ac413803986" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>FilesReadOnlytoFix</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab6a151bd3d3486e1f0cd13423ee7be95" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>FilestoConfirmList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a0689c0413d3a436b4c4bded1001e977b" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>filextlist</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a5fed6bff70f80afe7749b7101325f172" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>GetCmaTimes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac10ad63b0ce33838d6ef3badd6ccedc5" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>fixreadonlyActive</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a9b232e99482a4a1b0483d4f7bd2a5541" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>FixReadonlyResults</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a09e8580b4dd602e7d8e4ffb07eaa2a42" prot="public" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>GetCmaTimesFromFilesystem</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ac776338bd7865341536e1b301ab2e837" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>gui</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1afb7a9e98ce2debbacd2acf45bda4c499" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>imageListFiles</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3873ffb133524678416b5dc5b35b51ca" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>listViewContents</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a7637eda9126f930f608093437f535599" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>Makedateobject</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a61f5f6a5dc9059f683c1421d8970548d" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>Makedateobject</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4792452d26b386fedb946a81c885ef02" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>PopulateDirList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a70bf0d8494851633ef774a62b4c9048d" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>PopulateFileList</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a95bc953a4fcc598e37ec64649c024f7d" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>random</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1acedd13ad08d38a0d1e74181d9dfec09e" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode1</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ab27c8f1da6399dc3a0578de23c15b489" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode1Parent</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a4879e17c0c285da2e1749f6f6e6a8913" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode1</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1adeab181bc642b460fb7d12e43a996a1d" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode1Parent</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a01bc79ad926855a98c1fd7f564c83fb4" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode2</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1ad8260df34ae907fe98985de6d2ebe60b" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode2Parent</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaf5607fc36596f4174126a571fdc7270" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>SetFileDateTimeMode1</name></member>
-      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a24fe5eb560a3e877e1fcc7c75cd19e85" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>SetTimeDateEachDirectory</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a00bfcf2df19f275804d80ce46eeed134" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>RecurseSubDirectoryMode3</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a03ad7673720673c17fcaf3943428d57c" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>ResetReadOnly</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aaaf1378db214ee5aa4075e4a5b1a01e7" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>SetTimeDateEachDirectory</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa18f20f8dcf75fb4a7b87dab143ae010" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>SetTimeDateEachFile</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a68049503fe3d6b54563a804735f04aa2" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>SkipOrAddFile</name></member>
       <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a77d6c20d2d38130887a5a883f9ab9598" prot="package" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>Skips</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1a3b5db833571136a40376d683c76424a7" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>StoreDateByCMACheckboxes</name></member>
+      <member refid="classgenBTC_1_1FileTime_1_1Models_1_1DataModel_1aa2d60371e277af18fc1d2b45725ed231" prot="private" virt="non-virtual"><scope>genBTC::FileTime::Models::DataModel</scope><name>thingtoreturn</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -6,8 +6,9 @@ var classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper =
     [ "RemoveAttributes", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#a5dd2552f20d039de4d53481d8fe396b0", null ],
     [ "SyncSettingstoInvisibleFlag", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#a7f0fdfe07e68e7f3945e8a8d42e22ec4", null ],
     [ "Bool2Int", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#ac18e5b82cacadadfb07161c98447f21b", null ],
-    [ "OpenFile", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#aa0127c2a9443238de0d47dc1b8e825b5", null ],
+    [ "OpenFilePicker", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#a55c71cc744574e8b4e72d496a4f5c340", null ],
     [ "Seperator", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#ad2e4cd71f4b2b6402d93a66a07b3b2c8", null ],
+    [ "SeperatorString", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#ac7414723650ca31d0240bb7c03d506ad", null ],
     [ "UserDesktop", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#a9027ac895c6f046db2ac5066c74548b3", null ],
     [ "CurrExten", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#ac64a832434ec5cab2eae83e01d3a60be", null ],
     [ "Filextlist", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html#a30c0ab78648a723fc6f15a05ea07ee45", null ]

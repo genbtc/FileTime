@@ -20,7 +20,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1DisplayCmaTimeData">genBTC::FileTime::Models::DisplayCmaTimeData</link></para>
+                        <para>struct <link linkend="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct">genBTC::FileTime::Models::NameDateStruct</link></para>
 <para><emphasis>&lt;summary&gt;  Store some the fields that the GUI uses. Small Version. &lt;/summary&gt;</emphasis></para>
                     </listitem>
                 </itemizedlist>

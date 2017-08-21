@@ -10,8 +10,8 @@ var files =
     [ "DataModel.cs", "DataModel_8cs.html", [
       [ "DataModel", "classgenBTC_1_1FileTime_1_1Models_1_1DataModel.html", "classgenBTC_1_1FileTime_1_1Models_1_1DataModel" ]
     ] ],
-    [ "DateNewOldObj.cs", "DateNewOldObj_8cs.html", [
-      [ "DateNewOldObj", "classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj.html", "classgenBTC_1_1FileTime_1_1Models_1_1DateNewOldObj" ]
+    [ "DateMinMaxNewOld.cs", "DateMinMaxNewOld_8cs.html", [
+      [ "DateMinMaxNewOld", "classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld.html", "classgenBTC_1_1FileTime_1_1Models_1_1DateMinMaxNewOld" ]
     ] ],
     [ "ExplorerLikeSort.cs", "ExplorerLikeSort_8cs.html", [
       [ "ExplorerLikeComparer", "classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer.html", "classgenBTC_1_1FileTime_1_1Classes_1_1ExplorerLikeComparer" ],
@@ -24,6 +24,10 @@ var files =
     [ "ExtractIcon.cs", "ExtractIcon_8cs.html", [
       [ "ExtractIcon", "classExtractIcon.html", "classExtractIcon" ],
       [ "SHFILEINFO", "structExtractIcon_1_1SHFILEINFO.html", "structExtractIcon_1_1SHFILEINFO" ]
+    ] ],
+    [ "FileComparer.cs", "FileComparer_8cs.html", [
+      [ "FileComparer", "classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer.html", "classgenBTC_1_1FileTime_1_1Classes_1_1FileComparer" ],
+      [ "DirComparer", "classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer.html", "classgenBTC_1_1FileTime_1_1Classes_1_1DirComparer" ]
     ] ],
     [ "Form_About.cs", "Form__About_8cs.html", [
       [ "Form_About", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__About.html", "classgenBTC_1_1FileTime_1_1Forms_1_1Form__About" ]
@@ -82,5 +86,11 @@ var files =
     [ "SharedHelper.cs", "SharedHelper_8cs.html", [
       [ "SharedHelper", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper.html", "classgenBTC_1_1FileTime_1_1Classes_1_1SharedHelper" ]
     ] ],
-    [ "Structs.cs", "Structs_8cs.html", "Structs_8cs" ]
+    [ "Structs.cs", "Structs_8cs.html", "Structs_8cs" ],
+    [ "Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs", "Debug_2TemporaryGeneratedFile__036C0B5B-1481-4323-8D20-8F5ADCB23D92_8cs.html", null ],
+    [ "Release/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs", "Release_2TemporaryGeneratedFile__036C0B5B-1481-4323-8D20-8F5ADCB23D92_8cs.html", null ],
+    [ "Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs", "Debug_2TemporaryGeneratedFile__5937a670-0e60-4077-877b-f7221da3dda1_8cs.html", null ],
+    [ "Release/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs", "Release_2TemporaryGeneratedFile__5937a670-0e60-4077-877b-f7221da3dda1_8cs.html", null ],
+    [ "Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs", "Debug_2TemporaryGeneratedFile__E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3_8cs.html", null ],
+    [ "Release/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs", "Release_2TemporaryGeneratedFile__E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3_8cs.html", null ]
 ];

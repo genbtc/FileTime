@@ -14,7 +14,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
@@ -29,9 +29,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AssemblyInfo_8cs.html",
-"classgenBTC_1_1FileTime_1_1Classes_1_1Native_1_1NativeExtractIcon.html#a8e5e0f7a5d7ea0e17d17c83214a33f81a9b7da861f8f2e6c5f4b7caf079aa8bd6",
-"classgenBTC_1_1FileTime_1_1Forms_1_1Form__Preferences.html#a4a08890a4ecba4cbd9666e39787803cb",
-"structgenBTC_1_1FileTime_1_1Models_1_1guistatus.html#af77f434d4ea3bec542470550c6769da0"
+"classgenBTC_1_1FileTime_1_1Classes_1_1ExpLikeCmpHelperforListView.html#af40ed5e789e19a50f7d4f8e9447e0ceb",
+"classgenBTC_1_1FileTime_1_1Forms_1_1Form__Main.html#ad257b30d2d3ef0fb3c16fbbfa76b0930",
+"structExtractIcon_1_1SHFILEINFO.html#a2d9f6e8e70e6b1d24d279ac84b128bd7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

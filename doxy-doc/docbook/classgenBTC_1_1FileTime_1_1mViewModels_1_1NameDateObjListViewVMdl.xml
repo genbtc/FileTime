@@ -81,6 +81,14 @@ ListViewItem thing)<para><emphasis>&lt;summary&gt; construct with a listviewitem
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para> <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40">NameDateObjListViewVMdl</link> (
+<link linkend="structgenBTC_1_1FileTime_1_1Models_1_1NameDateStruct">NameDateStruct</link> thing)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para> <link linkend="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241">NameDateObjListViewVMdl</link> (
 )<para><emphasis>&lt;summary&gt; Empty default constructor (initializer) &lt;/summary&gt;</emphasis></para>
 </para>
@@ -134,7 +142,7 @@ string value)</para>
     </simplesect>
         <simplesect>
             <title>Detailed Description</title>
-                <para>Definition at line 8 of file NameDateObjListViewVMdl.cs</para>
+                <para>Definition at line 10 of file NameDateObjListViewVMdl.cs</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>NameDateObjListViewVMdl.cs</para></listitem></itemizedlist></para>
         </simplesect>
@@ -147,6 +155,10 @@ string value)</para>
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a4d97bafb4abd7e33ff5578fc834ba223">
                 <title>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl (NameDateObj thing)</title> <emphasis>&lt;summary&gt; construct with a NameDateObj &lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a6455434bd3cf3900a7a4e5b3e964bb40">
+                <title>genBTC.FileTime.mViewModels.NameDateObjListViewVMdl.NameDateObjListViewVMdl (NameDateStruct thing)</title> <emphasis></emphasis>
                 
             </section>
             <section xml:id="classgenBTC_1_1FileTime_1_1mViewModels_1_1NameDateObjListViewVMdl_1a0c5bf08e27bdaadf0b9c6a831b8dd241">
