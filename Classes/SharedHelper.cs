@@ -20,6 +20,7 @@ namespace genBTC.FileTime.Classes
         }
 
         public static readonly char Seperator = Path.DirectorySeparatorChar;
+        public static readonly string SeperatorString = Path.DirectorySeparatorChar.ToString();
         public static readonly string UserDesktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         public static string CurrExten;

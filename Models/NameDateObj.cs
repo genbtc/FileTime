@@ -48,22 +48,22 @@ namespace genBTC.FileTime.Models
         /// <summary>returns an object: DateTime or null </summary>
         public object Created
         {
-            get { return Nullordate(_c); }
-            set { _c = (DateTime?)value; }
+            get => Nullordate(_c);
+            set => _c = (DateTime?)value;
         }
 
         /// <summary>returns an object: DateTime or null </summary>
         public object Modified
         {
-            get { return Nullordate(_m); }
-            set { _m = (DateTime?)value; }
+            get => Nullordate(_m);
+            set => _m = (DateTime?)value;
         }
 
         /// <summary>returns an object: DateTime or null </summary>
         public object Accessed
         {
-            get { return Nullordate(_a); }
-            set { _a = (DateTime?)value; }
+            get => Nullordate(_a);
+            set => _a = (DateTime?)value;
         }
 
         //helper function to check date for null - this helps the GUI display "N/A"

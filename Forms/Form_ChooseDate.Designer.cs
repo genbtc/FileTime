@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace genBTC.FileTime.Forms
 {
@@ -8,7 +7,7 @@ namespace genBTC.FileTime.Forms
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.

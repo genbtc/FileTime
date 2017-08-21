@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using System.Windows.Forms;
-using WindowsExplorer;
-using UIToolbox;
+﻿using System.Windows.Forms;
 
 namespace genBTC.FileTime.Forms
 {
@@ -11,7 +8,7 @@ namespace genBTC.FileTime.Forms
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -62,19 +59,19 @@ namespace genBTC.FileTime.Forms
         private RadioButton radioButton3_setfromAccessed;
         private RadioButton radioButton2_setfromModified;
         private RadioButton radioButton1_setfromCreation;
-        private RadioButtonPanel radioButtonPanel1_DecideWhichTime;
-        private RadioGroupBox radioGroupBox3_UseTimeFrom;
-        private RadioGroupBox radioGroupBox1_SpecifyTime;
+        private UIToolbox.RadioButtonPanel radioButtonPanel1_DecideWhichTime;
+        private UIToolbox.RadioGroupBox radioGroupBox3_UseTimeFrom;
+        private UIToolbox.RadioGroupBox radioGroupBox1_SpecifyTime;
         private Panel panel1;
         private Panel panel2;
         private RadioButton radioButton3_Random;
         private RadioButton radioButton2_Newest;
         private RadioButton radioButton1_Oldest;
-        private RadioGroupBox radioGroupBox2_CurrentSelectionTime;
+        private UIToolbox.RadioGroupBox radioGroupBox2_CurrentSelectionTime;
         private Label label3_AccessedDate;
         private Label label2_ModifiedDate;
         private Label label1_CreationDate;
-        private RadioButtonPanel radioButtonPanel2;
+        private UIToolbox.RadioButtonPanel radioButtonPanel2;
         private Panel panel3;
         private RadioButton radioButton2_useTimefromSubdir;
         private RadioButton radioButton1_useTimefromFile;
@@ -127,7 +124,7 @@ namespace genBTC.FileTime.Forms
             this.label_AccessedTime = new System.Windows.Forms.Label();
             this.radioButtonPanel1_DecideWhichTime = new UIToolbox.RadioButtonPanel();
             this.radioGroupBox4_pickFolderForCompare = new UIToolbox.RadioGroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_folderCompareRadioButton = new System.Windows.Forms.Label();
             this.label3_AccessedDate = new System.Windows.Forms.Label();
             this.label2_ModifiedDate = new System.Windows.Forms.Label();
             this.label1_CreationDate = new System.Windows.Forms.Label();
@@ -165,6 +162,7 @@ namespace genBTC.FileTime.Forms
             this.radioGroupBox2_CurrentSelectionTime.SuspendLayout();
             this.radioButtonPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -497,25 +495,27 @@ namespace genBTC.FileTime.Forms
             this.radioButtonPanel1_DecideWhichTime.Size = new System.Drawing.Size(430, 161);
             this.radioButtonPanel1_DecideWhichTime.TabIndex = 1;
             // 
-            // radioGroupBox1_pickFolderForCompare
+            // radioGroupBox4_pickFolderForCompare
             // 
-            this.radioGroupBox4_pickFolderForCompare.Controls.Add(this.label1);
+            this.radioGroupBox4_pickFolderForCompare.Controls.Add(this.label_folderCompareRadioButton);
             this.radioGroupBox4_pickFolderForCompare.Location = new System.Drawing.Point(9, 82);
-            this.radioGroupBox4_pickFolderForCompare.Name = "radioGroupBox1_pickFolderForCompare";
+            this.radioGroupBox4_pickFolderForCompare.Name = "radioGroupBox4_pickFolderForCompare";
             this.radioGroupBox4_pickFolderForCompare.Size = new System.Drawing.Size(114, 73);
             this.radioGroupBox4_pickFolderForCompare.TabIndex = 13;
             this.radioGroupBox4_pickFolderForCompare.TabStop = false;
             this.radioGroupBox4_pickFolderForCompare.Text = " ";
             // 
-            // label1
+            // label_folderCompareRadioButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 19);
-            this.label1.MaximumSize = new System.Drawing.Size(118, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Choose 2nd identical folder as source, at the prompt...";
+            this.label_folderCompareRadioButton.AutoSize = true;
+            this.label_folderCompareRadioButton.Location = new System.Drawing.Point(2, 15);
+            this.label_folderCompareRadioButton.MaximumSize = new System.Drawing.Size(118, 90);
+            this.label_folderCompareRadioButton.MinimumSize = new System.Drawing.Size(0, 55);
+            this.label_folderCompareRadioButton.Name = "label_folderCompareRadioButton";
+            this.label_folderCompareRadioButton.Size = new System.Drawing.Size(109, 55);
+            this.label_folderCompareRadioButton.TabIndex = 1;
+            this.label_folderCompareRadioButton.Text = "Choose 2nd identical folder as source, at the prompt...";
+            this.label_folderCompareRadioButton.Click += new System.EventHandler(this.label_folderCompareRadioButton_Click);
             // 
             // label3_AccessedDate
             // 
@@ -857,6 +857,7 @@ namespace genBTC.FileTime.Forms
             this.tabControl1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -868,10 +869,10 @@ namespace genBTC.FileTime.Forms
         private TabPage tabPage1;
         private TabPage tabPage2;
         private ToolTip toolTip1;
-        private ExplorerTree explorerTree1;
+        private WindowsExplorer.ExplorerTree explorerTree1;
         private SplitContainer splitContainer1;
-        private RadioGroupBox radioGroupBox4_pickFolderForCompare;
-        private Label label1;
+        private UIToolbox.RadioGroupBox radioGroupBox4_pickFolderForCompare;
+        private Label label_folderCompareRadioButton;
         private BindingSource dataModelBindingSource;
 
     }

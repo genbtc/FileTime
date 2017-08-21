@@ -7,7 +7,7 @@ namespace genBTC.FileTime.Models
     /// Class: given a list of DateTime?s, get oldest and newest date and the index of each
     /// This is for the "Source time from" option - it looks at an entire subfolder of files.
     /// </summary>
-    internal class DateNewOldObj
+    internal class DateMinMaxNewOld
     {
         /// <summary> total indexes </summary>
         public int Index;
@@ -30,7 +30,7 @@ namespace genBTC.FileTime.Models
         /// Constructor for the class. Also does all the work.
         /// </summary>
         /// <param name="timelist">a List of DateTime?s</param>
-        public DateNewOldObj(IEnumerable<DateTime?> timelist)
+        public DateMinMaxNewOld(IEnumerable<DateTime?> timelist)
         {
             foreach (DateTime? dt in timelist)
             {

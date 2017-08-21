@@ -1,14 +1,11 @@
-﻿using System.ComponentModel;
-using System.Windows.Forms;
-
-namespace genBTC.FileTime.Forms
+﻿namespace genBTC.FileTime.Forms
 {
     partial class Form_Preferences
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -272,21 +269,21 @@ namespace genBTC.FileTime.Forms
 
         #endregion
 
-        public CheckBox checkBox1_ShowReadOnlyNotices;
-        public CheckBox checkBox4b_SkipReadOnly;
-        public CheckBox checkBox3b_SkipHidden;
-        public CheckBox checkBox2b_SkipSystem;
-        public CheckBox checkBox6_StartupDir;
-        public TextBox textBox6_startupdir;
-        private Button button1_OK;
-        private Button button2_Cancel;
-        public CheckBox checkBox3a_ShowHidden;
-        private CheckBox checkBox2a_ShowSystem;
-        private CheckBox checkBox4a_ShowReadOnly;
-        private Button button_UseCurrentDir;
-        private Button button_Browse;
-        private CheckBox checkBox7_Mode1addRootDir;
-        private CheckBox checkBox8_useRootDirAsContainer;
-        private ToolTip toolTip1;
+        public System.Windows.Forms.CheckBox checkBox1_ShowReadOnlyNotices;
+        public System.Windows.Forms.CheckBox checkBox4b_SkipReadOnly;
+        public System.Windows.Forms.CheckBox checkBox3b_SkipHidden;
+        public System.Windows.Forms.CheckBox checkBox2b_SkipSystem;
+        public System.Windows.Forms.CheckBox checkBox6_StartupDir;
+        public System.Windows.Forms.TextBox textBox6_startupdir;
+        private System.Windows.Forms.Button button1_OK;
+        private System.Windows.Forms.Button button2_Cancel;
+        public System.Windows.Forms.CheckBox checkBox3a_ShowHidden;
+        private System.Windows.Forms.CheckBox checkBox2a_ShowSystem;
+        private System.Windows.Forms.CheckBox checkBox4a_ShowReadOnly;
+        private System.Windows.Forms.Button button_UseCurrentDir;
+        private System.Windows.Forms.Button button_Browse;
+        private System.Windows.Forms.CheckBox checkBox7_Mode1addRootDir;
+        private System.Windows.Forms.CheckBox checkBox8_useRootDirAsContainer;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

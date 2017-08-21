@@ -61,7 +61,7 @@ namespace genBTC.FileTime.Classes.Native
             }
 
             public readonly IntPtr hIcon;
-        }
+        };
 
         [Flags]
         private enum SHGFI
@@ -101,7 +101,7 @@ namespace genBTC.FileTime.Classes.Native
             /// <summary>apply the appropriate overlays</summary>
             AddOverlays = 0x000000020,
             /// <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
-            OverlayIndex = 0x000000040
+            OverlayIndex = 0x000000040,
         }
     }
 }

@@ -12,7 +12,10 @@
 
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using genBTC.FileTime.Classes;
 using genBTC.FileTime.Models;
@@ -244,7 +247,7 @@ namespace genBTC.FileTime.Forms
         {
             Cursor.Current = Cursors.WaitCursor;
             CwdPathName = explorerTree1.CurrentPath;
-            if (!CwdPathName.EndsWith(SharedHelper.Seperator.ToString()))
+            if (!CwdPathName.EndsWith(SharedHelper.SeperatorString))
                 CwdPathName += SharedHelper.Seperator;
             // Display the folder path and the contents of it.
             RefreshContentsRightPanel();
@@ -351,14 +354,20 @@ namespace genBTC.FileTime.Forms
             {
                 MessageBox.Show("Error! Nothing to decide time from!! \n" +
                                 "Please choose an Option, to the right of the Mode.",
-                    "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string comparefolder;
             if (radioGroupBox4_pickFolderForCompare.Checked)
             {
-                comparefolder = SharedHelper.OpenFilePicker(CwdPathName);
-                StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
+                string comparefolder = SharedHelper.OpenFilePicker(CwdPathName);
+                if (string.IsNullOrEmpty(comparefolder))
+                { 
+                    MessageBox.Show("Error! No folder to compare to!! \n" +
+                                    "Please choose a folder to use for the comparison. (time source folder)",
+                        @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                StartUpMode3(CwdPathName, comparefolder);
             }
             else
                 StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
@@ -370,12 +379,26 @@ namespace genBTC.FileTime.Forms
 
         /// <summary>
         /// Mode 3. Recursive, file Tree time compare mode.
+        /// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq
         /// </summary>
-        /// <param name="mode2"></param>
-        /// <param name="startingdir"></param>
-        private void StartUpMode3(int mode2, string startingdir)
+        private void StartUpMode3(string targetPath, string comparePath)
         {
             PrepareDataModelForUse();
+            _dataModel.RecurseSubDirectoryMode3(targetPath, comparePath);
+            //Launch Form 2
+            LaunchForm2Go();
+        }
+
+
+        /// <summary>
+        /// Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
+        /// </summary>
+        private void PrepareDataModelForUse()
+        {
+            _dataModel.FilestoConfirmList.Clear();
+            _dataModel.Skips.Reset();
+            _dataModel.gui = GetGUIRadioButtonStatusData();
+            _dataModel.checkboxes = QueryCMAcheckboxes();
         }
 
         /// <summary>
@@ -401,7 +424,7 @@ namespace genBTC.FileTime.Forms
                         {
                             MessageBox.Show("Error! Nothing to decide time from. \n" +
                                             "Sub-File or Sub-Dir button requires files/dirs to be SHOWN on the right-side Contents panel...",
-                                "PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
 
@@ -441,36 +464,26 @@ namespace genBTC.FileTime.Forms
                     } else
                         _dataModel.RecurseSubDirectoryMode2(startingdir);
                     break;
+                default:
+                    break;
                 //TODO: THREEDO: combine both.
             }
 
-            int itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.S;
-            if (itemsSkippedCount > 0)
-            {
-                string skippedmessage = "";
-                skippedmessage += "There were " + _dataModel.Skips.S + " System files/directories skipped.\n" + 
-                                  "There were " + _dataModel.Skips.H + " Hidden files/directories skipped.\n" + 
-                                  "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
-                MessageBox.Show(skippedmessage, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             //Launch Form 2
             LaunchForm2Go();
-        }
-
-        /// <summary>
-        /// Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
-        /// </summary>
-        private void PrepareDataModelForUse()
-        {
-            _dataModel.FilestoConfirmList.Clear();
-            _dataModel.Skips.Reset();
-            _dataModel.gui = GetGUIRadioButtonStatusData();
-            _dataModel.checkboxes = QueryCMAcheckboxes();
         }
 
         /// <summary> Show files to be changed in the confirmation window (Show Form 2) </summary>
         private void LaunchForm2Go()
         {
+            int itemsSkippedCount = _dataModel.Skips.H + _dataModel.Skips.R + _dataModel.Skips.S;
+            if (itemsSkippedCount > 0)
+            {
+                string skippedmessage = "There were " + _dataModel.Skips.S + " System files/directories skipped.\n" +
+                                        "There were " + _dataModel.Skips.H + " Hidden files/directories skipped.\n" +
+                                        "There were " + _dataModel.Skips.R + " Read-Only files/directories skipped.";
+                MessageBox.Show(skippedmessage, @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             if (Confirmation.Visible)
             {
                 Confirmation.MakeListView();
@@ -479,6 +492,11 @@ namespace genBTC.FileTime.Forms
                 Confirmation = new Form_Confirm(_dataModel);
                 Confirmation.Show();
             }
+        }
+
+        private void label_folderCompareRadioButton_Click(object sender, EventArgs e)
+        {
+            radioGroupBox4_pickFolderForCompare.Checked = Enabled;
         }
 
         #endregion >>Main Logic Code<<

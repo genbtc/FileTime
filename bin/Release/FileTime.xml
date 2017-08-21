@@ -82,6 +82,131 @@
             </summary>
             <returns>HTML format string with the assembly version attributes</returns>
         </member>
+        <member name="T:genBTC.FileTime.Classes.ExplorerLikeComparer">
+            <summary> Explorer-like Sort, for strings </summary>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.ExpLikeCmpHelperforListView">
+            <summary> Explorer-like Sort, for ListViewItem - used by listview.Sorter </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeScroll.SetScrollPos(System.IntPtr,System.Int32,System.Int32,System.Boolean)">
+            <summary> Manually scroll a control </summary>
+            <param name="hWnd">Window Handle</param>
+            <param name="nBar">Which scroll Bar?, 0x0 for horizontal or 0x1 for Vertical</param>
+            <param name="nPos">New scroll position, in pixels</param>
+            <param name="bRedraw">redraw is usually true</param>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeScroll.ScrollH(System.Windows.Forms.TreeNode,System.Int32,System.Boolean)">
+            <summary> Only for treenodes. and only horizontal. </summary>
+            <param name="thing">the TreeNode being passed, to scroll into view.</param>
+            <param name="pixelsH">pixels to scroll by</param>
+            <param name="abs">absolute? otherwise, get current position and add pixelsH to that</param>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems(System.Windows.Forms.ListView)">
+            <summary>  Select all rows on the given listview  </summary>
+            <param name="list">The listview whose items are to be selected</param>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems(System.Windows.Forms.ListView)">
+            <summary>  Deselect all rows on the given listview  </summary>
+            <param name="list">The listview whose items are to be deselected</param>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.InvertSelection(System.Windows.Forms.ListView)">
+            <summary>  Invert selection on all rows on the listview and cleanup the focus line. </summary> 
+            <param name="list">The listview whose items are to be deselected</param>
+            <returns>int lastselectedindex (focus line index #)</returns>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.SetItemState(System.Windows.Forms.ListView,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Set the item state on the given item
+            </summary>
+            <param name="list">The listview whose item's state is to be changed</param>
+            <param name="itemIndex">The index of the item to be changed</param>
+            <param name="mask">Which bits of the value are to be set?</param>
+            <param name="value">The value to be set</param>
+        </member>
+        <member name="T:genBTC.FileTime.Classes.Native.NativeExtractIcon">
+            <summary> Grabs the filesystem or system icon cache for a string filePath.</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_PATH">
+            <summary>Maximal Length of unmanaged Windows-Path-strings</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_TYPE">
+            <summary>Maximal Length of unmanaged Typename</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon(System.String,System.Boolean)">
+            <summary>
+            Get the associated Icon for a file or application, this method always returns
+            an icon.  If the strPath is invalid or there is no idonc the default icon is returned
+            </summary>
+            <param name="strPath">full path to the file</param>
+            <param name="bSmall">if true, the 16x16 icon is returned otherwise the 32x32</param>
+            <returns></returns>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Icon">
+            <summary>get icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.DisplayName">
+            <summary>get display name</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.TypeName">
+            <summary>get type name</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attributes">
+            <summary>get attributes</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.IconLocation">
+            <summary>get icon location</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ExeType">
+            <summary>return exe type</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SysIconIndex">
+            <summary>get system icon index</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LinkOverlay">
+            <summary>put a link overlay on icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Selected">
+            <summary>show icon in selected state</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attr_Specified">
+            <summary>get only specified attributes</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LargeIcon">
+            <summary>get large icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SmallIcon">
+            <summary>get small icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OpenIcon">
+            <summary>get open icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ShellIconSize">
+            <summary>get shell size icon</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.PIDL">
+            <summary>pszPath is a pidl</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.UseFileAttributes">
+            <summary>use passed dwFileAttribute</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.AddOverlays">
+            <summary>apply the appropriate overlays</summary>
+        </member>
+        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OverlayIndex">
+            <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag">
+            <summary>  Reasons to be invisible  </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
+            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String)">
+            <summary>
+            Display the Folder Browser Dialog and then display the selected
+            file path and the directories and files in the folder.
+            </summary>
+        </member>
         <member name="F:genBTC.FileTime.Models.DataModel.contentsDirList">
             <summary> Main Lists for filenames. Dir , File, Ext </summary>
         </member>
@@ -126,7 +251,7 @@
             </summary>
             reqs: (string path), contentsDirList, contentsFileList, guistatus
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubDirFile(System.String)">
+        <member name="M:genBTC.FileTime.Models.DataModel.DecideTimeFromSubdirOrSubfile(System.String)">
             <summary>
             Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
             </summary>
@@ -144,6 +269,13 @@
             Mode 2: Recursive.
             </summary>
             <param name="directoryPath">Path to start in.</param>
+        </member>
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3(System.String,System.String)">
+            <summary>
+            Mode 3: Recursive.
+            </summary>
+            <param name="targetPath">Write Path to modify times of. </param>
+            <param name="comparePath">Read Path used as source of time data.</param>
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String)">
             <summary>  Mode 1P (start at its Parent) </summary>
@@ -249,28 +381,28 @@
         <member name="F:genBTC.FileTime.Models.ListViewIcon.Directory">
             <summary> Directory icon in listView image list </summary>
         </member>
-        <member name="T:genBTC.FileTime.Models.DateNewOldObj">
+        <member name="T:genBTC.FileTime.Models.DateMinMaxNewOld">
             <summary>
             Class: given a list of DateTime?s, get oldest and newest date and the index of each
             This is for the "Source time from" option - it looks at an entire subfolder of files.
             </summary>
         </member>
-        <member name="F:genBTC.FileTime.Models.DateNewOldObj.Index">
+        <member name="F:genBTC.FileTime.Models.DateMinMaxNewOld.Index">
             <summary> total indexes </summary>
         </member>
-        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MaxDate">
+        <member name="F:genBTC.FileTime.Models.DateMinMaxNewOld.MaxDate">
             <summary> maxdate </summary>
         </member>
-        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MaxIndex">
+        <member name="F:genBTC.FileTime.Models.DateMinMaxNewOld.MaxIndex">
             <summary> maxindex are indexes of the maxdate </summary>
         </member>
-        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MinDate">
+        <member name="F:genBTC.FileTime.Models.DateMinMaxNewOld.MinDate">
             <summary> mindate </summary>
         </member>
-        <member name="F:genBTC.FileTime.Models.DateNewOldObj.MinIndex">
+        <member name="F:genBTC.FileTime.Models.DateMinMaxNewOld.MinIndex">
             <summary> minindex are indexes of the mindate </summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.DateNewOldObj.#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.DateTime}})">
+        <member name="M:genBTC.FileTime.Models.DateMinMaxNewOld.#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.DateTime}})">
             <summary>
             Takes a list of datetimes(which came from a list of files) and
             calculates the newest and oldest dates and stores the indexes too.
@@ -340,130 +472,6 @@
             <summary> Converts this class into a ListViewItem. </summary>
             <returns>  Returns a listviewitem</returns>
         </member>
-        <member name="T:genBTC.FileTime.Classes.ExplorerLikeComparer">
-            <summary> Explorer-like Sort, for strings </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.ExpLikeCmpHelperforListView">
-            <summary> Explorer-like Sort, for ListViewItem - used by listview.Sorter </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeScroll.SetScrollPos(System.IntPtr,System.Int32,System.Int32,System.Boolean)">
-            <summary> Manually scroll a control </summary>
-            <param name="hWnd">Window Handle</param>
-            <param name="nBar">Which scroll Bar?, 0x0 for horizontal or 0x1 for Vertical</param>
-            <param name="nPos">New scroll position, in pixels</param>
-            <param name="bRedraw">redraw is usually true</param>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeScroll.ScrollH(System.Windows.Forms.TreeNode,System.Int32,System.Boolean)">
-            <summary> Only for treenodes. and only horizontal. </summary>
-            <param name="thing">the TreeNode being passed, to scroll into view.</param>
-            <param name="pixelsH">pixels to scroll by</param>
-            <param name="abs">absolute? otherwise, get current position and add pixelsH to that</param>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.SelectAllItems(System.Windows.Forms.ListView)">
-            <summary>
-            Select all rows on the given listview
-            </summary>
-            <param name="list">The listview whose items are to be selected</param>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.DeselectAllItems(System.Windows.Forms.ListView)">
-            <summary>
-            Deselect all rows on the given listview
-            </summary>
-            <param name="list">The listview whose items are to be deselected</param>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeSelect.SetItemState(System.Windows.Forms.ListView,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Set the item state on the given item
-            </summary>
-            <param name="list">The listview whose item's state is to be changed</param>
-            <param name="itemIndex">The index of the item to be changed</param>
-            <param name="mask">Which bits of the value are to be set?</param>
-            <param name="value">The value to be set</param>
-        </member>
-        <member name="T:genBTC.FileTime.Classes.Native.NativeExtractIcon">
-            <summary> Grabs the filesystem or system icon cache for a string filePath.</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_PATH">
-            <summary>Maximal Length of unmanaged Windows-Path-strings</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.MAX_TYPE">
-            <summary>Maximal Length of unmanaged Typename</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.Native.NativeExtractIcon.GetIcon(System.String,System.Boolean)">
-            <summary>
-            Get the associated Icon for a file or application, this method always returns
-            an icon.  If the strPath is invalid or there is no idonc the default icon is returned
-            </summary>
-            <param name="strPath">full path to the file</param>
-            <param name="bSmall">if true, the 16x16 icon is returned otherwise the 32x32</param>
-            <returns></returns>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Icon">
-            <summary>get icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.DisplayName">
-            <summary>get display name</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.TypeName">
-            <summary>get type name</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attributes">
-            <summary>get attributes</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.IconLocation">
-            <summary>get icon location</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ExeType">
-            <summary>return exe type</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SysIconIndex">
-            <summary>get system icon index</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LinkOverlay">
-            <summary>put a link overlay on icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Selected">
-            <summary>show icon in selected state</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.Attr_Specified">
-            <summary>get only specified attributes</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.LargeIcon">
-            <summary>get large icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.SmallIcon">
-            <summary>get small icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OpenIcon">
-            <summary>get open icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.ShellIconSize">
-            <summary>get shell size icon</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.PIDL">
-            <summary>pszPath is a pidl</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.UseFileAttributes">
-            <summary>use passed dwFileAttribute</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.AddOverlays">
-            <summary>apply the appropriate overlays</summary>
-        </member>
-        <member name="F:genBTC.FileTime.Classes.Native.NativeExtractIcon.SHGFI.OverlayIndex">
-            <summary>Get the index of the overlay in the upper 8 bits of the iIcon</summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.SharedHelper.SyncSettingstoInvisibleFlag">
-            <summary>  Reasons to be invisible  </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
-            <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String)">
-            <summary>
-            Display the Folder Browser Dialog and then display the selected
-            file path and the directories and files in the folder.
-            </summary>
-        </member>
         <member name="F:genBTC.FileTime.Forms.Form_ChooseDate.Datechosen">
             <summary> the date object that will be accessed by the other form </summary>
         </member>
@@ -512,23 +520,26 @@
             use the results as the new data model.
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.UpdateStatusBar">
-            <summary> Show current number of files on the status bar line, and store all checkboxes each time </summary>
+            <summary> Show current number of files on the status bar line, and store all checkboxes each time 
+            Most likely this is being called because the number of items have changed, so make a new list of stored checkboxes.  </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.Form_Confirm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
-             <summary>
+             <summary> Cleanup.
             Clear the main form's fileconfirm list if form2 is closed.
             If the user does not want to clear the list, they can leave the form_Confirm open
              and access form_Main multiple times to incrementally add to the form_Confirm list.
              </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.DoConditionalAgeCheck(System.DateTime,System.String,System.Int32)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.DoConditionalAgeCheck(System.Int32,System.String,System.DateTime,System.Boolean,System.Boolean)">
             <summary>
             Check the radiobuttons, then check the filesystem's existing dates and
             returns true if files should be modified.
             </summary>
+            TODO: Tuple radioButton1Newer radioButton2Older
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.SetTime(System.Int32,System.String,System.DateTime)">
             <summary> Function which touches the filesystem to set the dates </summary>
+            Notes: Directory works on both files and dirs.
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.button1_Confirm_Click(System.Object,System.EventArgs)">
             <summary>
@@ -536,45 +547,54 @@
             Shows a progress bar.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.condenseMultipleLinesToolStripMenuItem_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView_condenseMultipleLinesToolStripMenuItem_Click(System.Object,System.EventArgs)">
             <summary>
             Combine all the adjacent items which have the same name, and matching blank/nonblank or identical date attributes
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem1_ChangeDate_Click(System.Object,System.EventArgs)">
             <summary> Change Date... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenu_ThreeRemoves(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem234_ThreeRemoves_Click(System.Object,System.EventArgs)">
             <summary> Remove 1=Created,2=Modified,3=Accessed... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_Click(System.Object,System.EventArgs)">
-            <summary> Open Explorer here... </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_DeleteItem_Click(System.Object,System.EventArgs)">
             <summary> Delete Item... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_OpenExplorer_Click(System.Object,System.EventArgs)">
+            <summary> Open Explorer to selected path. Supports multi-selection up to 10 items </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView_RestoreAllCheckboxes">
             <summary> restore all the checkboxes at once (not used?) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.RestoreCheckboxes(System.Int32)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView_RestoreCheckbox(System.Int32)">
             <summary> restore only one checkbox.  </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView_StoreAllCheckboxes">
             <summary>
-            Clear list if any, and store entire new list of checkboxes. (could not direct copy the internal array (see comments))
+            Clear list if any, and store entire new list of checkboxes. 
+            TODO: could not direct copy the internal array (see comments) - revisit.
             </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.StoreCheckboxes(System.Windows.Forms.ItemCheckedEventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView_StoreCheckbox(System.Int32,System.Boolean)">
             <summary>
             Change stored value of one checkbox in the checklist storage array.
-             Called multiple times from listView1_Confirm_ItemChecked, e is the item being changed.
+             Called multiple times from listView1Confirm_ItemChecked, e is the item being changed.
+            </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView1Confirm_ItemChecked(System.Object,System.Windows.Forms.ItemCheckedEventArgs)">
+            <summary>
+            Trick to store/cache item selection checkboxes.
+            Should save time, and improve lag on large lists with large (>25) selections.
+            TODO: revisit this, and invent a better trick for >25 items. 
+            TODO: benchmark the store and restore, optimize.
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.menuStrip1_Click(System.Object,System.EventArgs)">
-            <summary>change focus back to the listview when the menu is clicked (so it doesnt go gray)</summary>
+            <summary>Trick to change focus back to the listview when the menu is clicked (so it doesnt go gray)</summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView1_Confirm_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
-            <summary> respond to the delete key as if the delete context menu was clicked </summary>
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView1Confirm_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary> respond to the delete key, and call the delete context menu </summary>
         </member>
         <member name="F:genBTC.FileTime.Forms.Form_Confirm.components">
             <summary>
@@ -724,23 +744,22 @@
         <member name="M:genBTC.FileTime.Forms.Form_Main.CallDisplayCma(System.Windows.Forms.ListView,System.String)">
             <summary>  Update the GUI - Display the DateTime for the currently selected file. Calls DisplayCma </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpMode3(System.Int32,System.String)">
+        <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpMode3(System.String,System.String)">
             <summary>
             Mode 3. Recursive, file Tree time compare mode.
+            https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq
             </summary>
-            <param name="mode2"></param>
-            <param name="startingdir"></param>
+        </member>
+        <member name="M:genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse">
+            <summary>
+            Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
+            </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.StartUpBothModes1And2(System.Int32,System.String)">
             <summary>
             Launches Mode 1 and Mode 2. This runs a LONG process on the folders/files. It decides which time to use,
             then adds them to the confirm list to be handled by the form_confirm window (part2). Cant move into the model.
             This is a nice staging point place for making EVERYTHING happen.
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Main.PrepareDataModelForUse">
-            <summary>
-            Resets the files-to-confirm list, Skips count, reads GUIstatus data (radios), reads CMA checkboxes (lazy/dupe gui fields)
             </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Main.LaunchForm2Go">

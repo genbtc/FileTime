@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.IO;
+using System.Windows.Forms;
+using genBTC.FileTime.Classes;
 using genBTC.FileTime.Models;
 
 namespace genBTC.FileTime.mViewModels
@@ -28,6 +30,15 @@ namespace genBTC.FileTime.mViewModels
             Accessed = thing.Accessed.ToString();
         }
 
+        public NameDateObjListViewVMdl(NameDateStruct thing)
+        {
+            FileOrDirType = SharedHelper.Bool2Int(Directory.Exists(thing.PathName));
+            Name = thing.PathName;
+            Created = thing.Created;
+            Modified = thing.Modified;
+            Accessed = thing.Accessed;
+        }
+
         /// <summary> Empty default constructor (initializer) </summary>
         public NameDateObjListViewVMdl()
         {
@@ -43,22 +54,22 @@ namespace genBTC.FileTime.mViewModels
         /// <summary>returns a string of DateTime.ToString or null </summary>
         public string Created
         {
-            get { return _c; }
-            set { _c = Nullordatestring(value); }
+            get => _c;
+            set => _c = Nullordatestring(value);
         }
 
         /// <summary>returns a string of DateTime.ToString or null </summary>
         public string Modified
         {
-            get { return _m; }
-            set { _m = Nullordatestring(value); }
+            get => _m;
+            set => _m = Nullordatestring(value);
         }
 
         /// <summary>returns a string of DateTime.ToString or null </summary>
         public string Accessed
         {
-            get { return _a; }
-            set { _a = Nullordatestring(value); }
+            get => _a;
+            set => _a = Nullordatestring(value);
         }
 
         private static string Nullordatestring(string value)

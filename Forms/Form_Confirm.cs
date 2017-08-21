@@ -64,8 +64,8 @@ namespace genBTC.FileTime.Forms
         {
             dataModel.FixReadonlyResults();
             _checklist = new List<bool>();
-            listView1_Confirm.BeginUpdate();
-            listView1_Confirm.ItemChecked -= listView1_Confirm_ItemChecked; //event
+            listView1Confirm.BeginUpdate();
+            listView1Confirm.ItemChecked -= listView1Confirm_ItemChecked; //event
             //this is wrapped in the event handlers -=, += because extremely modifying the collection with these handlers would cause lots of lag
             foreach (NameDateObj newobject in dataModel.FilestoConfirmList)
             {
@@ -85,22 +85,22 @@ namespace genBTC.FileTime.Forms
                     }
                     theitem.ImageKey = SharedHelper.CurrExten;
                 }
-                listView1_Confirm.Items.Add(theitem);
+                listView1Confirm.Items.Add(theitem);
             }
-            listView1_Confirm.EndUpdate();
-            listView1_Confirm.ItemChecked += listView1_Confirm_ItemChecked; //event
+            listView1Confirm.EndUpdate();
+            listView1Confirm.ItemChecked += listView1Confirm_ItemChecked; //event
             UpdateStatusBar();
         }
 
-        /// <summary> Show current number of files on the status bar line, and store all checkboxes each time </summary>
+        /// <summary> Show current number of files on the status bar line, and store all checkboxes each time 
+        /// Most likely this is being called because the number of items have changed, so make a new list of stored checkboxes.  </summary>
         private void UpdateStatusBar()
         {
-            toolStripStatusLabel1.Text = "Total Items: " + listView1_Confirm.Items.Count;
-            //most likely this is being called because the number of items have changed, so make a new list of stored checkboxes.
-            StoreCheckboxes();
+            toolStripStatusLabel1.Text = "Total Items: " + listView1Confirm.Items.Count;
+            listView_StoreAllCheckboxes();  //TODO: seems costly.
         }
 
-        /// <summary>
+        /// <summary> Cleanup.
         ///Clear the main form's fileconfirm list if form2 is closed.
         ///If the user does not want to clear the list, they can leave the form_Confirm open
         /// and access form_Main multiple times to incrementally add to the form_Confirm list.
@@ -115,53 +115,45 @@ namespace genBTC.FileTime.Forms
         /// Check the radiobuttons, then check the filesystem's existing dates and
         /// returns true if files should be modified.
         /// </summary>
-        private bool DoConditionalAgeCheck(DateTime newdate, string pathName, int cmAtype)
+        /// TODO: Tuple radioButton1Newer radioButton2Older
+        private static bool DoConditionalAgeCheck(int cmaType, string pathName, DateTime newDate, bool useNewer, bool useOlder)
         {
             try
             {
                 var olddate = new DateTime();
-                if (cmAtype == 1)
+                if (cmaType == 1)
                     olddate = File.GetCreationTime(pathName);
-                if (cmAtype == 2)
+                if (cmaType == 2)
                     olddate = File.GetLastWriteTime(pathName);
-                if (cmAtype == 3)
+                if (cmaType == 3)
                     olddate = File.GetLastAccessTime(pathName);
-                if (radioButton1Newer.Checked)
-                    return (newdate > olddate);
-                if (radioButton2Older.Checked)
-                    return (newdate < olddate);
+                if (useNewer)
+                    return (newDate > olddate);
+                if (useOlder)
+                    return (newDate < olddate);
                 return true;
             }
+            //ArgumentException, ArgumentNullException, PathTooLongException, NotSupportedException
             catch (UnauthorizedAccessException) { return false; }
         }
 
         /// <summary> Function which touches the filesystem to set the dates </summary>
-        private static bool SetTime(int cma, string path, DateTime date)
+        /// Notes: Directory works on both files and dirs.
+        public static bool SetTime(int cmaType, string pathName, DateTime newDate)
         {
             try
             {
-                switch (cma)
-                {
-                    //Directory works on both files and dirs.
-                    case 1:
-                        Directory.SetCreationTime(path, date);
-                        break;
-
-                    case 2:
-                        Directory.SetLastWriteTime(path, date);
-                        break;
-
-                    case 3:
-                        Directory.SetLastAccessTime(path, date);
-                        break;
-
-                    default:
-                        return false;
-                }
+                if (cmaType == 1)
+                    Directory.SetCreationTime(pathName, newDate);
+                else if (cmaType == 2)
+                    Directory.SetLastWriteTime(pathName, newDate);
+                else if (cmaType == 3)
+                    Directory.SetLastAccessTime(pathName, newDate);
+                return true;
             }
-            catch (UnauthorizedAccessException) { return false; }
             catch (FileNotFoundException) { return false; }
-            return true;
+            catch (UnauthorizedAccessException) { return false; }
+            //ArgumentException, ArgumentNullException, PathTooLongException, NotSupportedException, PlatformNotSupportedException, ArgumentOutOfRangeException
         }
 
         /// <summary>
@@ -170,11 +162,11 @@ namespace genBTC.FileTime.Forms
         /// </summary>
         private void button1_Confirm_Click(object sender, EventArgs e)
         {
-            toolStripProgressBar1.Maximum = listView1_Confirm.Items.Count;
+            toolStripProgressBar1.Maximum = listView1Confirm.Items.Count;
             toolStripProgressBar1.Value = 0;
             _itemsErrorsCount = 0;
             _itemsSetCount = 0;
-            foreach (ListViewItem thing in listView1_Confirm.Items)
+            foreach (ListViewItem thing in listView1Confirm.Items)
             {
                 int attributesetcount = 0;
                 //only perform a change if it was checkboxed.
@@ -185,20 +177,19 @@ namespace genBTC.FileTime.Forms
                     {
                         if (thing.SubItems[i].Text == "N/A")
                             continue;   //skip if it was N/A
-                        DateTime dateToUse = DateTime.Parse(thing.SubItems[i].Text);
-                        if (DoConditionalAgeCheck(dateToUse, thing.Text, i))
+                        var dateToUse = DateTime.Parse(thing.SubItems[i].Text);
+                        //Skip files by date if we chose "Skip older" Or "Skip newer"
+                        if (!DoConditionalAgeCheck(i, thing.Text, dateToUse, radioButton1Newer.Checked, radioButton2Older.Checked)) continue;
+                        //Set the Time and Check the result, then increment the count
+                        if (SetTime(i, thing.Text, dateToUse))
+                            ++attributesetcount;
+                        else
                         {
-                            var success = SetTime(i, thing.Text, dateToUse);
-                            if (success)
-                                ++attributesetcount;
-                            else
-                            {
-                                ++_itemsErrorsCount;
-                                thing.BackColor = Color.FromName("Red");
-                                MessageBox.Show(
-                                    "Error in setting date/time:  " + dateToUse + "   on '" + thing.Text + "': \r\n\r\n",
-                                    "Date/Time Error " + _itemsErrorsCount, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            }
+                            ++_itemsErrorsCount;
+                            thing.BackColor = Color.FromName("Red");
+                            MessageBox.Show(
+                                $@"Error in setting date/time:  {dateToUse}   on '{thing.Text}': ",
+                                $@"Date/Time Error #{_itemsErrorsCount}", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                     if (attributesetcount > 0)
@@ -213,7 +204,7 @@ namespace genBTC.FileTime.Forms
             string message = _itemsSetCount + " file(s)/directorie(s) have had their date/time set";
             if (_itemsErrorsCount > 0)
                 message += "\r\n\r\n There were " + _itemsErrorsCount + " error(s)";
-            MessageBox.Show(message, "Info Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message, @"Operation Complete!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Column Header ComboBox Event
@@ -222,16 +213,16 @@ namespace genBTC.FileTime.Forms
             var currentbox = (ComboBox)sender;
             int boxnumber = 0;
             //current columnboxnumber that was clicked
-            if (sender.Equals(ComboBox1)) //created column combobox
+            if (sender.Equals(comboBox1_Created)) //created column combobox
                 boxnumber = 1;
-            if (sender.Equals(ComboBox2)) //modified column combobox
+            if (sender.Equals(comboBox2_Modified)) //modified column combobox
                 boxnumber = 2;
-            if (sender.Equals(ComboBox3)) //accessed column combobox
+            if (sender.Equals(comboBox3_Accessed)) //accessed column combobox
                 boxnumber = 3;
             //two dimensional array. outer = current column, inner = column numbers to copy
             int[,] cols = { { 2, 3 }, { 1, 3 }, { 1, 2 } };
-            listView1_Confirm.BeginUpdate();
-            foreach (ListViewItem thing in listView1_Confirm.Items)
+            listView1Confirm.BeginUpdate();
+            foreach (ListViewItem thing in listView1Confirm.Items)
             {
                 if (!thing.Checked)
                     continue; //if not checked, skip to next
@@ -248,105 +239,80 @@ namespace genBTC.FileTime.Forms
                 if (currentbox.SelectedIndex == 3) //unset
                     thing.SubItems[boxnumber].Text = "N/A";
             }
-            listView1_Confirm.EndUpdate();
+            listView1Confirm.EndUpdate();
             currentbox.SelectedIndex = 0;
         }
 
         #endregion Main logic and actions, Buttons, Behind-Code and Logic Functions
 
-        #region the menubar (Edit... MenuStrip)
+        #region the menubar (Edit... MenuStrip) (has ListView controls too)
 
-        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listView_selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1_Confirm.BeginUpdate();
-            NativeSelect.SelectAllItems(listView1_Confirm);
-            listView1_Confirm.EndUpdate();
+            NativeSelect.SelectAllItems(listView1Confirm);
         }
 
-        private void deSelectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listView_deSelectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1_Confirm.BeginUpdate();
-            NativeSelect.DeselectAllItems(listView1_Confirm);
-            listView1_Confirm.EndUpdate();
+            NativeSelect.DeselectAllItems(listView1Confirm);
         }
 
-        private void invertSelectionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listView_invertSelectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int lastselectedindex = 0;
-            listView1_Confirm.BeginUpdate();
-            foreach (ListViewItem item in listView1_Confirm.Items)
-            {
-                item.Selected = !item.Selected;
-                if (item.Selected)
-                    lastselectedindex = item.Index;
-            }
-            if (listView1_Confirm.FocusedItem != null)
-                listView1_Confirm.FocusedItem.Focused = false;
-            listView1_Confirm.Items[lastselectedindex].Focused = true;
-            listView1_Confirm.EndUpdate();
+            NativeSelect.InvertSelection(listView1Confirm);
         }
 
-        private void removeNAOnlysToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listView_removeNAOnlysToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1_Confirm.BeginUpdate();
-            listView1_Confirm.SelectedIndices.Clear();
-            foreach (ListViewItem thing in listView1_Confirm.Items)
+            listView1Confirm.BeginUpdate();
+            //
+            listView1Confirm.SelectedIndices.Clear();
+            foreach (ListViewItem thing in listView1Confirm.Items)
             {
                 if ((thing.SubItems[1].Text == "N/A") &&
                     (thing.SubItems[2].Text == "N/A") &&
                     (thing.SubItems[3].Text == "N/A"))
-                    listView1_Confirm.Items.RemoveAt(thing.Index);
+                    listView1Confirm.Items.RemoveAt(thing.Index);
             }
-            listView1_Confirm.EndUpdate();
+            //
+            listView1Confirm.EndUpdate();
             UpdateStatusBar();
         }
 
         /// <summary>
         /// Combine all the adjacent items which have the same name, and matching blank/nonblank or identical date attributes
         /// </summary>
-        private void condenseMultipleLinesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listView_condenseMultipleLinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //first sort the list.
-            listView1_Confirm.BeginUpdate();
+            listView1Confirm.BeginUpdate();
             //because it has to function on adjacent items, sort alphabetically first.
-            listView1_Confirm.ListViewItemSorter = new ExpLikeCmpHelperforListView();
-            if (listView1_Confirm.Items.Count >= 2)
+            listView1Confirm.ListViewItemSorter = new ExpLikeCmpHelperforListView();
+            if (listView1Confirm.Items.Count >= 2)
             {
-                for (int i = 0; i < listView1_Confirm.Items.Count - 1; i++)
+                for (var i = 0; i < listView1Confirm.Items.Count - 1; i++)
                 {
-                    var thing1 = new NameDateObjListViewVMdl(listView1_Confirm.Items[i]);
-                    var thing2 = new NameDateObjListViewVMdl(listView1_Confirm.Items[i + 1]);
+                    var thing1 = new NameDateObjListViewVMdl(listView1Confirm.Items[i]);
+                    var thing2 = new NameDateObjListViewVMdl(listView1Confirm.Items[i + 1]);
                     var newthing = new NameDateObjListViewVMdl();
+                    //TODO: Pretty sure you are not supposed to do the following:
                     if (newthing.Compare(thing1, thing2))
                     {
-                        listView1_Confirm.Items.RemoveAt(i);
-                        listView1_Confirm.Items.RemoveAt(i);
-                        listView1_Confirm.Items.Add(newthing.Converter());
+                        listView1Confirm.Items.RemoveAt(i);
+                        listView1Confirm.Items.RemoveAt(i);
+                        listView1Confirm.Items.Add(newthing.Converter());
                         i--;
                     }
                 }
             }
-            listView1_Confirm.ListViewItemSorter = null;
-            listView1_Confirm.EndUpdate();
+            listView1Confirm.ListViewItemSorter = null;
+            listView1Confirm.EndUpdate();
             UpdateStatusBar();
         }
 
-        #endregion the menubar (Edit... MenuStrip)
-
-        #region CustomListView RightClick ContextMenu
-
-        /// <summary> Change Date... </summary>
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void listView_SetDatesOfAllSelecteds(NameDateObj dateToUse)
         {
-            var theitem = listView1_Confirm.SelectedItems[0];
-            var dateform = new Form_ChooseDate(theitem);
-            dateform.ShowDialog();
-            var dateToUse = new NameDateObj();
-            if (dateform.DialogResult == DialogResult.OK)
-                dateToUse = dateform.Datechosen;
-            Cursor.Current = Cursors.WaitCursor;
-            listView1_Confirm.BeginUpdate();
-            foreach (ListViewItem thing in listView1_Confirm.SelectedItems)
+            foreach (ListViewItem thing in listView1Confirm.SelectedItems)
             {
                 if (dateToUse.Created.ToString() != "N/A")
                     thing.SubItems[1].Text = dateToUse.Created.ToString();
@@ -355,60 +321,82 @@ namespace genBTC.FileTime.Forms
                 if (dateToUse.Accessed.ToString() != "N/A")
                     thing.SubItems[3].Text = dateToUse.Accessed.ToString();
             }
-            listView1_Confirm.EndUpdate();
+        }
+
+        private void listView_RemoveDatesOfAllSelecteds(int menunumber)
+        {
+            foreach (ListViewItem thing in listView1Confirm.SelectedItems)
+                thing.SubItems[menunumber].Text = "N/A";
+        }
+
+        #endregion the menubar (Edit... MenuStrip)
+
+        #region CustomListView RightClick ContextMenu
+        /// <summary> Change Date... </summary>
+        private void toolStripMenuItem1_ChangeDate_Click(object sender, EventArgs e)
+        {
+            var theitem = listView1Confirm.SelectedItems[0];
+            var dateform = new Form_ChooseDate(theitem);
+            dateform.ShowDialog();
+            var dateToUse = new NameDateObj();
+            if (dateform.DialogResult == DialogResult.OK)
+                dateToUse = dateform.Datechosen;
+            Cursor.Current = Cursors.WaitCursor;
+            listView1Confirm.BeginUpdate();
+            listView_SetDatesOfAllSelecteds(dateToUse);
+            listView1Confirm.EndUpdate();
             Cursor.Current = Cursors.Default;
         }
 
         /// <summary> Remove 1=Created,2=Modified,3=Accessed... </summary>
-        private void toolStripMenu_ThreeRemoves(object sender, EventArgs e)
+        private void toolStripMenuItem234_ThreeRemoves_Click(object sender, EventArgs e)
         {
             int menunumber = 0;
-            if (sender.Equals(toolStripMenuItem2))
+            if (sender.Equals(toolStripMenuItem2_UnsetCreated))
                 menunumber = 1;
-            if (sender.Equals(toolStripMenuItem3))
+            if (sender.Equals(toolStripMenuItem3_UnsetModified))
                 menunumber = 2;
-            if (sender.Equals(toolStripMenuItem4))
+            if (sender.Equals(toolStripMenuItem4_UnsetAccessed))
                 menunumber = 3;
             Cursor.Current = Cursors.WaitCursor;
-            listView1_Confirm.BeginUpdate();
-            foreach (ListViewItem thing in listView1_Confirm.SelectedItems)
-                thing.SubItems[menunumber].Text = "N/A";
-            listView1_Confirm.EndUpdate();
+            listView1Confirm.BeginUpdate();
+            listView_RemoveDatesOfAllSelecteds(menunumber);
+            listView1Confirm.EndUpdate();
             Cursor.Current = Cursors.Default;
         }
 
-        /// <summary> Open Explorer here... </summary>
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        private void toolStripMenuItem5_unSetALL_Click(object sender, EventArgs e)
         {
-            string path = "";
-            foreach (ListViewItem thing in listView1_Confirm.SelectedItems)
-                path = thing.ImageIndex == 1 ? thing.SubItems[0].Text : Path.GetDirectoryName(thing.SubItems[0].Text);
-            //old
-            /*              if (thing.ImageIndex == 1)  //if its a directory,
-                                path = thing.SubItems[0].Text;
-                            else                        //if its a file, get the directory of it
-                                path = Path.GetDirectoryName(thing.SubItems[0].Text);
-            */
-            Process.Start("explorer.exe", path);
+            Cursor.Current = Cursors.WaitCursor;
+            listView1Confirm.BeginUpdate();
+            foreach (ListViewItem thing in listView1Confirm.SelectedItems)
+            {
+                thing.SubItems[1].Text = "N/A";
+                thing.SubItems[2].Text = "N/A";
+                thing.SubItems[3].Text = "N/A";
+            }
+            listView1Confirm.EndUpdate();
+            Cursor.Current = Cursors.Default;
         }
 
-        /// <summary> Delete Item... </summary>
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        /// <summary> Remove Item from list... </summary>
+        //TODO: make static
+        private void toolStripMenuItem6_RemoveItem_Click(object sender, EventArgs e)
         {
             //easy but slow. 3000 removals per second with beginupdate/endupdate (850 without)
-            //while (listView1_Confirm.SelectedIndices.Count > 0)
+            //while (listView1Confirm.SelectedIndices.Count > 0)
             //{
-            //    listView1_Confirm.Items.RemoveAt(listView1_Confirm.SelectedIndices[0]);
+            //    listView1Confirm.Items.RemoveAt(listView1Confirm.SelectedIndices[0]);
             //}
             //fast (13,500 per second) - but confusing code, and slightly more memory.
             //Make an int array out of the selected indices, then...
-            var selectarray = new int[listView1_Confirm.SelectedIndices.Count];
-            listView1_Confirm.SelectedIndices.CopyTo(selectarray, 0);
+            var selectarray = new int[listView1Confirm.SelectedIndices.Count];
+            listView1Confirm.SelectedIndices.CopyTo(selectarray, 0);
             // turn that into a list.
             var selectlist = new List<int>(selectarray);
             //Make a listviewitem array out of the entire listview, then...
-            var allitemsArray = new ListViewItem[listView1_Confirm.Items.Count];
-            listView1_Confirm.Items.CopyTo(allitemsArray, 0);
+            var allitemsArray = new ListViewItem[listView1Confirm.Items.Count];
+            listView1Confirm.Items.CopyTo(allitemsArray, 0);
             // turn that into a list.
             var allitemsList = new List<ListViewItem>(allitemsArray);
             int i = 0; //iterator
@@ -421,13 +409,29 @@ namespace genBTC.FileTime.Forms
             }
             //Start updating without repainting.
             Cursor.Current = Cursors.WaitCursor;
-            listView1_Confirm.BeginUpdate();
-            listView1_Confirm.Items.Clear(); //Clear the listview items
-            listView1_Confirm.Items.AddRange(allitemsList.ToArray()); //addrange the modified list.ToArray back
+            listView1Confirm.BeginUpdate();
+            listView1Confirm.Items.Clear(); //Clear the listview items
+            listView1Confirm.Items.AddRange(allitemsList.ToArray()); //addrange the modified list.ToArray back
             //Finished Updating, allow repainting again.
-            listView1_Confirm.EndUpdate();
+            listView1Confirm.EndUpdate();
             Cursor.Current = Cursors.Default;
             UpdateStatusBar();
+        }
+
+
+        /// <summary> Open Explorer to selected path. Supports multi-selection up to 10 items </summary>
+        private void toolStripMenuItem7_OpenExplorer_Click(object sender, EventArgs e)
+        {
+            if (listView1Confirm.SelectedItems.Count > 10)
+            {
+                MessageBox.Show(@"You selected more than 10 items and tried to open them all in explorer windows. Not a good idea.", @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            foreach (ListViewItem thing in listView1Confirm.SelectedItems)
+            {
+                string path = thing.ImageIndex == 1 ? thing.SubItems[0].Text : Path.GetDirectoryName(thing.SubItems[0].Text);
+                Process.Start("explorer.exe", path);
+            }
         }
 
         #endregion CustomListView RightClick ContextMenu
@@ -435,86 +439,104 @@ namespace genBTC.FileTime.Forms
         #region Checkbox handler/protector and Event Handler Functions
 
         /// <summary> restore all the checkboxes at once (not used?) </summary>
-        private void RestoreCheckboxes()
+        private void listView_RestoreAllCheckboxes()
         {
-            if (_checklist.Count <= 0)
+            listView1Confirm.ItemChecked -= listView1Confirm_ItemChecked;
+            if (_checklist.Count <= 0)  //should never happen.
                 return;
-            int index = 0;
-            foreach (ListViewItem thing in listView1_Confirm.Items)
+            var index = 0;
+            foreach (ListViewItem thing in listView1Confirm.Items)
             {
                 thing.Checked = _checklist[index];
                 index++;
             }
+            listView1Confirm.ItemChecked += listView1Confirm_ItemChecked;
         }
 
         /// <summary> restore only one checkbox.  </summary>
-        private void RestoreCheckboxes(int index)
+        private void listView_RestoreCheckbox(int index)
         {
-            if (_checklist.Count <= 0)
-                return; //maybe not needed.
-            listView1_Confirm.Items[index].Checked = _checklist[index];
+            listView1Confirm.ItemChecked -= listView1Confirm_ItemChecked;
+            if (_checklist.Count <= 0)  //should never happen.
+                return;
+            listView1Confirm.Items[index].Checked = _checklist[index];
+            listView1Confirm.ItemChecked += listView1Confirm_ItemChecked;
         }
 
         /// <summary>
-        /// Clear list if any, and store entire new list of checkboxes. (could not direct copy the internal array (see comments))
+        /// Clear list if any, and store entire new list of checkboxes. 
+        /// TODO: could not direct copy the internal array (see comments) - revisit.
         /// </summary>
-        private void StoreCheckboxes()
+        private void listView_StoreAllCheckboxes()
         {
             _checklist.Clear();
-            foreach (ListViewItem thing in listView1_Confirm.Items)
-                _checklist.Add(thing.Checked); //create the checkbox list for the whole listview
-            //int[] checkedarray = new int[listView1_Confirm.CheckedIndices.Count];
-            //((ICollection<int>)listView1_Confirm.CheckedIndices).CopyTo(checkedarray, 0);
-            //failed because CopyTo does not exeist on CheckedIndices like it does on SelectedIndices
+            //create the checkbox list for the whole listview
+            foreach (ListViewItem thing in listView1Confirm.Items)
+                _checklist.Add(thing.Checked); 
+            //var checkedarray = new int[listView1Confirm.CheckedIndices.Count];
+            //listView1Confirm.CheckedIndices.CopyTo(checkedarray, 0);
+            //NOTE: this failed because CopyTo does not exeist on CheckedIndices like it does on SelectedIndices
         }
 
         /// <summary>
         /// Change stored value of one checkbox in the checklist storage array.
-        ///  Called multiple times from listView1_Confirm_ItemChecked, e is the item being changed.
+        ///  Called multiple times from listView1Confirm_ItemChecked, e is the item being changed.
         /// </summary>
-        private void StoreCheckboxes(ItemCheckedEventArgs e)
+        private void listView_StoreCheckbox(int itemIndex, bool itemChecked)
         {
+            // if (_checklist.Count <= 0) return; //maybe not needed?
+            //TODO: double-check your assumptions, error handling?
             //if checkbox list is not empty, then it must exist fully. (this is never empty now).
-            // And we can just modify single items.
-            _checklist[e.Item.Index] = e.Item.Checked; //update the list with the item that was changed.
+            // And we can just modify single items. We want this to be fast.
+            // We are trying to eliminate code from this because it runs a lot and has a performance impact
+            _checklist[itemIndex] = itemChecked; //update the list with the item that was changed.
         }
 
-        private void listView1_Confirm_ItemChecked(object sender, ItemCheckedEventArgs e)
+        /// <summary>
+        /// Trick to store/cache item selection checkboxes.
+        /// Should save time, and improve lag on large lists with large (>25) selections.
+        /// TODO: revisit this, and invent a better trick for >25 items. 
+        /// TODO: benchmark the store and restore, optimize.
+        /// </summary>
+        private void listView1Confirm_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            if (listView1_Confirm.SelectedItems.Count > 25)
+            //if so many items are selected, dont use this trick.
+            if (listView1Confirm.SelectedItems.Count > 25)
             {
-                listView1_Confirm.ItemChecked -= listView1_Confirm_ItemChecked;
-                //if so many items are selected, remove this handler forever..... (not ideal)
+                listView1Confirm.ItemChecked -= listView1Confirm_ItemChecked;
                 return;
             }
-
-            if (listView1_Confirm.ItemSelectionChangedTimer.Enabled)
+            //Explanation of whats happening here:
+            //The listview has a 100ms timeout because its a moron control, and was behaving badly.
+            //If we have triggered a timeout already, restore the old checkbox.
+            if (!listView1Confirm.ItemSelectionChangedTimer.Enabled)
             {
-                int i = e.Item.Index;
-                listView1_Confirm.ItemChecked -= listView1_Confirm_ItemChecked;
-                RestoreCheckboxes(i);
-                listView1_Confirm.ItemChecked += listView1_Confirm_ItemChecked;
-                //q++;
+                listView_StoreCheckbox(e.Item.Index, e.Item.Checked);
+            } else
+            //or if everythings OK, just store the checkbox that was passed by parameter.
+            //TODO: Maybe invert the if ?
+            {
+                listView_RestoreCheckbox(e.Item.Index);
             }
-            else //store checkboxes incrementally
-                StoreCheckboxes(e);
         }
 
-        /// <summary>change focus back to the listview when the menu is clicked (so it doesnt go gray)</summary>
+        /// <summary>Trick to change focus back to the listview when the menu is clicked (so it doesnt go gray)</summary>
         private void menuStrip1_Click(object sender, EventArgs e)
         {
-            listView1_Confirm.Focus();
+            listView1Confirm.Focus();
         }
 
-        /// <summary> respond to the delete key as if the delete context menu was clicked </summary>
-        private void listView1_Confirm_KeyUp(object sender, KeyEventArgs e)
+        /// <summary> respond to the delete key, and call the delete context menu </summary>
+        private void listView1Confirm_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 46)
             {
-                toolStripMenuItem6_Click(sender, e);
+                toolStripMenuItem6_RemoveItem_Click(sender, e);
             }
         }
 
         #endregion Checkbox handler/protector and Event Handler Functions
+
+
     }
 }

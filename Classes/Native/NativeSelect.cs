@@ -12,22 +12,48 @@ namespace genBTC.FileTime.Classes.Native
         [DllImport("user32.dll", EntryPoint = "SendMessage", CharSet = CharSet.Auto)]
         public static extern IntPtr SendMessageLVItem(IntPtr hWnd, int msg, int wParam, ref LVITEM lvi);
 
-        /// <summary>
-        /// Select all rows on the given listview
-        /// </summary>
+        /// <summary>  Select all rows on the given listview  </summary>
         /// <param name="list">The listview whose items are to be selected</param>
         public static void SelectAllItems(ListView list)
         {
-            SetItemState(list, -1, 2, 2);
+            Cursor.Current = Cursors.WaitCursor;
+            list.BeginUpdate();
+                SetItemState(list, -1, 2, 2);
+            list.EndUpdate();
+            Cursor.Current = Cursors.Default;
         }
 
-        /// <summary>
-        /// Deselect all rows on the given listview
-        /// </summary>
+        /// <summary>  Deselect all rows on the given listview  </summary>
         /// <param name="list">The listview whose items are to be deselected</param>
         public static void DeselectAllItems(ListView list)
         {
-            SetItemState(list, -1, 2, 0);
+            Cursor.Current = Cursors.WaitCursor;
+            list.BeginUpdate();
+                SetItemState(list, -1, 2, 0);
+            list.EndUpdate();
+            Cursor.Current = Cursors.Default;
+        }
+
+        /// <summary>  Invert selection on all rows on the listview and cleanup the focus line. </summary> 
+        /// <param name="list">The listview whose items are to be deselected</param>
+        /// <returns>int lastselectedindex (focus line index #)</returns>
+        public static int InvertSelection(ListView list)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            list.BeginUpdate();
+            var lastselectedindex = 0;
+                foreach (ListViewItem item in list.Items)
+                {
+                    item.Selected = !item.Selected;
+                    if (item.Selected)
+                        lastselectedindex = item.Index;
+                }
+                if (list.FocusedItem != null)
+                    list.FocusedItem.Focused = false;
+            list.Items[lastselectedindex].Focused = true;
+            list.EndUpdate();
+            Cursor.Current = Cursors.Default;
+            return lastselectedindex;
         }
 
         /// <summary>
@@ -64,6 +90,6 @@ namespace genBTC.FileTime.Classes.Native
             public int iGroupId;
             public int cColumns;
             public IntPtr puColumns;
-        }
+        };
     }
 }

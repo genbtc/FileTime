@@ -63,7 +63,6 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -87,7 +86,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -108,9 +106,6 @@
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup />
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <Name>System</Name>
@@ -133,6 +128,7 @@
     <Compile Include="AssemblyVersion.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\FileComparer.cs" />
     <Compile Include="Models\DataModel.cs" />
     <Compile Include="Models\NameDateObj.cs" />
     <Compile Include="Models\Structs.cs" />
@@ -142,7 +138,7 @@
     <Compile Include="Classes\ExplorerLikeSort.cs" />
     <Compile Include="Classes\Native\NativeScroll.cs" />
     <Compile Include="Classes\Native\NativeSelect.cs" />
-    <Compile Include="Models\DateNewOldObj.cs" />
+    <Compile Include="Models\DateMinMaxNewOld.cs" />
     <Compile Include="Classes\Native\NativeExtractIcon.cs" />
     <Compile Include="Classes\SharedHelper.cs" />
     <Compile Include="mViewModels\NameDateObjListViewVMdl.cs" />
@@ -230,7 +226,6 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="app.manifest" />
     <None Include="Properties\DataSources\genBTC.FileTime.Models.DataModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

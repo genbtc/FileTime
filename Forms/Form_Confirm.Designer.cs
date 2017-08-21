@@ -17,7 +17,7 @@ namespace genBTC.FileTime.Forms
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-//            synclistView1_ConfirmToFilesToConfirmList();
+//            synclistView1ConfirmToFilesToConfirmList();
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -52,23 +52,24 @@ namespace genBTC.FileTime.Forms
             this.invertSelectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeNAOnlysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.condenseMultipleLinesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.ComboBox2 = new System.Windows.Forms.ComboBox();
-            this.ComboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox1_Created = new System.Windows.Forms.ComboBox();
+            this.comboBox2_Modified = new System.Windows.Forms.ComboBox();
+            this.comboBox3_Accessed = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rightClickContextMenu1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1_ChangeDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2_UnsetCreated = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3_UnsetModified = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4_UnsetAccessed = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5_unSetALL = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6_RemoveItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7_OpenExplorer = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.listView1_Confirm = new CustomListView();
+            this.listView1Confirm = new genBTC.FileTime.mViewModels.CustomListView();
             this.ColumnHeader_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader_Created = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader_Modified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,7 +77,7 @@ namespace genBTC.FileTime.Forms
             this.groupBoxConditions.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.rightClickContextMenu1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,88 +184,88 @@ namespace genBTC.FileTime.Forms
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
-            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
+            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.listView_selectAllToolStripMenuItem_Click);
             // 
             // deSelectAllToolStripMenuItem
             // 
             this.deSelectAllToolStripMenuItem.Name = "deSelectAllToolStripMenuItem";
-            this.deSelectAllToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.deSelectAllToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.deSelectAllToolStripMenuItem.Text = "De-Select All";
-            this.deSelectAllToolStripMenuItem.Click += new System.EventHandler(this.deSelectAllToolStripMenuItem_Click);
+            this.deSelectAllToolStripMenuItem.Click += new System.EventHandler(this.listView_deSelectAllToolStripMenuItem_Click);
             // 
             // invertSelectionToolStripMenuItem
             // 
             this.invertSelectionToolStripMenuItem.Name = "invertSelectionToolStripMenuItem";
-            this.invertSelectionToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.invertSelectionToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.invertSelectionToolStripMenuItem.Text = "Invert Selection";
-            this.invertSelectionToolStripMenuItem.Click += new System.EventHandler(this.invertSelectionToolStripMenuItem_Click);
+            this.invertSelectionToolStripMenuItem.Click += new System.EventHandler(this.listView_invertSelectionToolStripMenuItem_Click);
             // 
             // removeNAOnlysToolStripMenuItem
             // 
             this.removeNAOnlysToolStripMenuItem.Name = "removeNAOnlysToolStripMenuItem";
-            this.removeNAOnlysToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.removeNAOnlysToolStripMenuItem.Text = "Remove N/A Onlys";
-            this.removeNAOnlysToolStripMenuItem.Click += new System.EventHandler(this.removeNAOnlysToolStripMenuItem_Click);
+            this.removeNAOnlysToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.removeNAOnlysToolStripMenuItem.Text = "Remove N/A\'s Only";
+            this.removeNAOnlysToolStripMenuItem.Click += new System.EventHandler(this.listView_removeNAOnlysToolStripMenuItem_Click);
             // 
             // condenseMultipleLinesToolStripMenuItem
             // 
             this.condenseMultipleLinesToolStripMenuItem.Name = "condenseMultipleLinesToolStripMenuItem";
-            this.condenseMultipleLinesToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.condenseMultipleLinesToolStripMenuItem.Text = "Combine DUPlicate Filenames (Try)";
-            this.condenseMultipleLinesToolStripMenuItem.Click += new System.EventHandler(this.condenseMultipleLinesToolStripMenuItem_Click);
+            this.condenseMultipleLinesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.condenseMultipleLinesToolStripMenuItem.Text = "Remove Dupes";
+            this.condenseMultipleLinesToolStripMenuItem.Click += new System.EventHandler(this.listView_condenseMultipleLinesToolStripMenuItem_Click);
             // 
-            // ComboBox1
+            // comboBox1_Created
             // 
-            this.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.ComboBox1.Items.AddRange(new object[] {
+            this.comboBox1_Created.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1_Created.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1_Created.FormattingEnabled = true;
+            this.comboBox1_Created.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.comboBox1_Created.Items.AddRange(new object[] {
             "",
             "Copy from Modified",
             "Copy from Accessed",
             "Unset Created"});
-            this.ComboBox1.Location = new System.Drawing.Point(3, 2);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(128, 21);
-            this.ComboBox1.TabIndex = 12;
-            this.ComboBox1.SelectedIndexChanged += new System.EventHandler(this.ThreeComboBox_SelectedChange);
+            this.comboBox1_Created.Location = new System.Drawing.Point(3, 2);
+            this.comboBox1_Created.Name = "comboBox1_Created";
+            this.comboBox1_Created.Size = new System.Drawing.Size(128, 21);
+            this.comboBox1_Created.TabIndex = 12;
+            this.comboBox1_Created.SelectedIndexChanged += new System.EventHandler(this.ThreeComboBox_SelectedChange);
             // 
-            // ComboBox2
+            // comboBox2_Modified
             // 
-            this.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox2.FormattingEnabled = true;
-            this.ComboBox2.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.ComboBox2.Items.AddRange(new object[] {
+            this.comboBox2_Modified.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2_Modified.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2_Modified.FormattingEnabled = true;
+            this.comboBox2_Modified.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.comboBox2_Modified.Items.AddRange(new object[] {
             "",
             "Copy from Created",
             "Copy from Accessed",
             "Unset Modified"});
-            this.ComboBox2.Location = new System.Drawing.Point(135, 2);
-            this.ComboBox2.Name = "ComboBox2";
-            this.ComboBox2.Size = new System.Drawing.Size(125, 21);
-            this.ComboBox2.TabIndex = 13;
-            this.ComboBox2.SelectedIndexChanged += new System.EventHandler(this.ThreeComboBox_SelectedChange);
+            this.comboBox2_Modified.Location = new System.Drawing.Point(135, 2);
+            this.comboBox2_Modified.Name = "comboBox2_Modified";
+            this.comboBox2_Modified.Size = new System.Drawing.Size(125, 21);
+            this.comboBox2_Modified.TabIndex = 13;
+            this.comboBox2_Modified.SelectedIndexChanged += new System.EventHandler(this.ThreeComboBox_SelectedChange);
             // 
-            // ComboBox3
+            // comboBox3_Accessed
             // 
-            this.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox3.FormattingEnabled = true;
-            this.ComboBox3.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.ComboBox3.Items.AddRange(new object[] {
+            this.comboBox3_Accessed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3_Accessed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3_Accessed.FormattingEnabled = true;
+            this.comboBox3_Accessed.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.comboBox3_Accessed.Items.AddRange(new object[] {
             "",
             "Copy from Created",
             "Copy from Modified",
             "Unset Accessed"});
-            this.ComboBox3.Location = new System.Drawing.Point(264, 2);
-            this.ComboBox3.Name = "ComboBox3";
-            this.ComboBox3.Size = new System.Drawing.Size(125, 21);
-            this.ComboBox3.TabIndex = 14;
-            this.ComboBox3.SelectedIndexChanged += new System.EventHandler(this.ThreeComboBox_SelectedChange);
+            this.comboBox3_Accessed.Location = new System.Drawing.Point(264, 2);
+            this.comboBox3_Accessed.Name = "comboBox3_Accessed";
+            this.comboBox3_Accessed.Size = new System.Drawing.Size(125, 21);
+            this.comboBox3_Accessed.TabIndex = 14;
+            this.comboBox3_Accessed.SelectedIndexChanged += new System.EventHandler(this.ThreeComboBox_SelectedChange);
             // 
             // label2
             // 
@@ -278,75 +279,83 @@ namespace genBTC.FileTime.Forms
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.ComboBox2);
-            this.panel1.Controls.Add(this.ComboBox1);
-            this.panel1.Controls.Add(this.ComboBox3);
+            this.panel1.Controls.Add(this.comboBox2_Modified);
+            this.panel1.Controls.Add(this.comboBox1_Created);
+            this.panel1.Controls.Add(this.comboBox3_Accessed);
             this.panel1.Location = new System.Drawing.Point(411, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(392, 24);
             this.panel1.TabIndex = 16;
             // 
-            // contextMenuStrip1
+            // rightClickContextMenu1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem6,
+            this.rightClickContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1_ChangeDate,
+            this.toolStripMenuItem2_UnsetCreated,
+            this.toolStripMenuItem3_UnsetModified,
+            this.toolStripMenuItem4_UnsetAccessed,
+            this.toolStripMenuItem5_unSetALL,
+            this.toolStripMenuItem6_RemoveItem,
             this.toolStripSeparator1,
-            this.toolStripMenuItem5});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 142);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.toolStripMenuItem7_OpenExplorer});
+            this.rightClickContextMenu1.Name = "contextMenuStrip1";
+            this.rightClickContextMenu1.Size = new System.Drawing.Size(195, 164);
+            this.rightClickContextMenu1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem1_ChangeDate
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
-            this.toolStripMenuItem1.Text = "Change &Date...";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripMenuItem1_ChangeDate.Name = "toolStripMenuItem1_ChangeDate";
+            this.toolStripMenuItem1_ChangeDate.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem1_ChangeDate.Text = "Change &Dates...";
+            this.toolStripMenuItem1_ChangeDate.Click += new System.EventHandler(this.toolStripMenuItem1_ChangeDate_Click);
             // 
-            // toolStripMenuItem2
+            // toolStripMenuItem2_UnsetCreated
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(184, 22);
-            this.toolStripMenuItem2.Text = "Un-Set &Created";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenu_ThreeRemoves);
+            this.toolStripMenuItem2_UnsetCreated.Name = "toolStripMenuItem2_UnsetCreated";
+            this.toolStripMenuItem2_UnsetCreated.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem2_UnsetCreated.Text = "Un-Set &Created";
+            this.toolStripMenuItem2_UnsetCreated.Click += new System.EventHandler(this.toolStripMenuItem234_ThreeRemoves_Click);
             // 
-            // toolStripMenuItem3
+            // toolStripMenuItem3_UnsetModified
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(184, 22);
-            this.toolStripMenuItem3.Text = "Un-Set &Modified";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenu_ThreeRemoves);
+            this.toolStripMenuItem3_UnsetModified.Name = "toolStripMenuItem3_UnsetModified";
+            this.toolStripMenuItem3_UnsetModified.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem3_UnsetModified.Text = "Un-Set &Modified";
+            this.toolStripMenuItem3_UnsetModified.Click += new System.EventHandler(this.toolStripMenuItem234_ThreeRemoves_Click);
             // 
-            // toolStripMenuItem4
+            // toolStripMenuItem4_UnsetAccessed
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(184, 22);
-            this.toolStripMenuItem4.Text = "Un-Set &Accessed";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenu_ThreeRemoves);
+            this.toolStripMenuItem4_UnsetAccessed.Name = "toolStripMenuItem4_UnsetAccessed";
+            this.toolStripMenuItem4_UnsetAccessed.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem4_UnsetAccessed.Text = "Un-Set &Accessed";
+            this.toolStripMenuItem4_UnsetAccessed.Click += new System.EventHandler(this.toolStripMenuItem234_ThreeRemoves_Click);
             // 
-            // toolStripMenuItem6
+            // toolStripMenuItem5_unSetALL
             // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(184, 22);
-            this.toolStripMenuItem6.Text = "Delete Item from List";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            this.toolStripMenuItem5_unSetALL.Name = "toolStripMenuItem5_unSetALL";
+            this.toolStripMenuItem5_unSetALL.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem5_unSetALL.Text = "Un-Set ALL";
+            this.toolStripMenuItem5_unSetALL.Click += new System.EventHandler(this.toolStripMenuItem5_unSetALL_Click);
+            // 
+            // toolStripMenuItem6_RemoveItem
+            // 
+            this.toolStripMenuItem6_RemoveItem.Name = "toolStripMenuItem6_RemoveItem";
+            this.toolStripMenuItem6_RemoveItem.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem6_RemoveItem.Text = "Remove Item from List";
+            this.toolStripMenuItem6_RemoveItem.Click += new System.EventHandler(this.toolStripMenuItem6_RemoveItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
             // 
-            // toolStripMenuItem5
+            // toolStripMenuItem7_OpenExplorer
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(184, 22);
-            this.toolStripMenuItem5.Text = "&Open Explorer Here";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            this.toolStripMenuItem7_OpenExplorer.Name = "toolStripMenuItem7_OpenExplorer";
+            this.toolStripMenuItem7_OpenExplorer.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem7_OpenExplorer.Text = "&Open Explorer Here";
+            this.toolStripMenuItem7_OpenExplorer.Click += new System.EventHandler(this.toolStripMenuItem7_OpenExplorer_Click);
             // 
             // statusStrip1
             // 
@@ -383,32 +392,32 @@ namespace genBTC.FileTime.Forms
             this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.toolStripProgressBar1.ToolTipText = "Progress Bar";
             // 
-            // listView1_Confirm
+            // listView1Confirm
             // 
-            this.listView1_Confirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listView1Confirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1_Confirm.CheckBoxes = true;
-            this.listView1_Confirm.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView1Confirm.CheckBoxes = true;
+            this.listView1Confirm.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader_Name,
             this.ColumnHeader_Created,
             this.ColumnHeader_Modified,
             this.ColumnHeader_Accessed});
-            this.listView1_Confirm.ContextMenuAllowed = false;
-            this.listView1_Confirm.ContextMenuStrip = this.contextMenuStrip1;
-            this.listView1_Confirm.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1_Confirm.FullRowSelect = true;
-            this.listView1_Confirm.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1_Confirm.HideSelection = false;
-            this.listView1_Confirm.Location = new System.Drawing.Point(12, 47);
-            this.listView1_Confirm.Name = "listView1_Confirm";
-            this.listView1_Confirm.ShowItemToolTips = true;
-            this.listView1_Confirm.Size = new System.Drawing.Size(827, 350);
-            this.listView1_Confirm.SmallImageList = this.imageList_Files;
-            this.listView1_Confirm.TabIndex = 2;
-            this.listView1_Confirm.UseCompatibleStateImageBehavior = false;
-            this.listView1_Confirm.View = System.Windows.Forms.View.Details;
-            this.listView1_Confirm.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listView1_Confirm_KeyUp);
+            this.listView1Confirm.ContextMenuAllowed = false;
+            this.listView1Confirm.ContextMenuStrip = this.rightClickContextMenu1;
+            this.listView1Confirm.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1Confirm.FullRowSelect = true;
+            this.listView1Confirm.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1Confirm.HideSelection = false;
+            this.listView1Confirm.Location = new System.Drawing.Point(12, 47);
+            this.listView1Confirm.Name = "listView1Confirm";
+            this.listView1Confirm.ShowItemToolTips = true;
+            this.listView1Confirm.Size = new System.Drawing.Size(827, 350);
+            this.listView1Confirm.SmallImageList = this.imageList_Files;
+            this.listView1Confirm.TabIndex = 2;
+            this.listView1Confirm.UseCompatibleStateImageBehavior = false;
+            this.listView1Confirm.View = System.Windows.Forms.View.Details;
+            this.listView1Confirm.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listView1Confirm_KeyUp);
             // 
             // ColumnHeader_Name
             // 
@@ -442,7 +451,7 @@ namespace genBTC.FileTime.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBoxConditions);
             this.Controls.Add(this.button1_Confirm);
-            this.Controls.Add(this.listView1_Confirm);
+            this.Controls.Add(this.listView1Confirm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -456,7 +465,7 @@ namespace genBTC.FileTime.Forms
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.rightClickContextMenu1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -470,13 +479,13 @@ namespace genBTC.FileTime.Forms
         // If contextMenuAllowed is false, set e.Cancel to true and return. This is stop the context menu from actually opening.
         void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (this.listView1_Confirm.ContextMenuAllowed == false)
+            if (this.listView1Confirm.ContextMenuAllowed == false)
                 e.Cancel = true;
         }
 
 
-        private CustomListView listView1_Confirm;
-        private ContextMenuStrip contextMenuStrip1;
+        private CustomListView listView1Confirm;
+        private ContextMenuStrip rightClickContextMenu1;
 
         private GroupBox groupBoxConditions;
         private RadioButton radioButton3All;
@@ -487,9 +496,9 @@ namespace genBTC.FileTime.Forms
         private ToolStripMenuItem selectAllToolStripMenuItem;
         private ToolStripMenuItem deSelectAllToolStripMenuItem;
         private ToolStripMenuItem invertSelectionToolStripMenuItem;
-        private ComboBox ComboBox1;
-        private ComboBox ComboBox2;
-        private ComboBox ComboBox3;
+        public ComboBox comboBox1_Created;
+        private ComboBox comboBox2_Modified;
+        private ComboBox comboBox3_Accessed;
         private ToolStripMenuItem removeNAOnlysToolStripMenuItem;
         private Label label2;
         private Panel panel1;
@@ -497,17 +506,17 @@ namespace genBTC.FileTime.Forms
         private ColumnHeader ColumnHeader_Created;
         private ColumnHeader ColumnHeader_Modified;
         private ColumnHeader ColumnHeader_Accessed;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
-        private ToolStripMenuItem toolStripMenuItem4;
+        private ToolStripMenuItem toolStripMenuItem1_ChangeDate;
+        private ToolStripMenuItem toolStripMenuItem2_UnsetCreated;
+        private ToolStripMenuItem toolStripMenuItem3_UnsetModified;
+        private ToolStripMenuItem toolStripMenuItem4_UnsetAccessed;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem toolStripMenuItem7_OpenExplorer;
         private StatusStrip statusStrip1;
         private ToolStripProgressBar toolStripProgressBar1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripMenuItem condenseMultipleLinesToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem6;
-
+        private ToolStripMenuItem toolStripMenuItem6_RemoveItem;
+        private ToolStripMenuItem toolStripMenuItem5_unSetALL;
     }
 }

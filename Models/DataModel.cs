@@ -217,7 +217,7 @@ namespace genBTC.FileTime.Models
             }
             else if (gui.radioGroupBox3UseTimeFrom)
             {
-                dateToUse = DecideTimeFromSubDirFile(path);
+                dateToUse = DecideTimeFromSubdirOrSubfile(path);
             }
             return dateToUse;
         }
@@ -225,7 +225,7 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Check all the subdirs or subfiles. And decide the time. Called from above: DecideWhichTimeMode1() { radioGroupBox3_UseTimeFrom
         /// </summary>
-        internal DateTime? DecideTimeFromSubDirFile(string path)
+        internal DateTime? DecideTimeFromSubdirOrSubfile(string path)
         {
             var dateToUse = new DateTime?();
             var extractlist = new List<string>();
@@ -241,7 +241,8 @@ namespace genBTC.FileTime.Models
             // if the resetList is blank due to no files actually existing then we have nothing to do, so stop here.
             if (extractlist.Count == 0)
                 return null;
-            //for Any/Random attribute mode, decide which attribute and stick with it.
+            //for Any/Random attribute mode, decide which attribute and stick with it. (create before loop)
+            // (and seed already exists so we dont regenerate seed through every recursive call to this.
             int randomNumber = random.Next(0, 3);
             var timelist = new List<DateTime?>();
             //start iterating through
@@ -252,48 +253,29 @@ namespace genBTC.FileTime.Models
                 {
                     string fullpath = Path.Combine(path, subitem);
                     string timelisttype = null; //this was made just in case.
-                    if (gui.radioButton1_setfromCreated)
+                    if (gui.radioButton1_setfromCreated || gui.radioButton4_setfromRandom && randomNumber == 0)
                     {
                         timelisttype = "Created";
                         looptempDate = File.GetCreationTime(fullpath);
                     }
-                    else if (gui.radioButton2_setfromModified)
+                    else if (gui.radioButton2_setfromModified || gui.radioButton4_setfromRandom && randomNumber == 1)
                     {
                         timelisttype = "Modified";
                         looptempDate = File.GetLastWriteTime(fullpath);
                     }
-                    else if (gui.radioButton3_setfromAccessed)
+                    else if (gui.radioButton3_setfromAccessed || gui.radioButton4_setfromRandom && randomNumber == 2)
                     {
                         timelisttype = "Accessed";
                         looptempDate = File.GetLastAccessTime(fullpath);
                     }
-                    else if (gui.radioButton4_setfromRandom)
-                    {
-                        switch (randomNumber)
-                        {
-                            case 0:
-                                timelisttype = "Created";
-                                looptempDate = File.GetCreationTime(fullpath);
-                                break;
-
-                            case 1:
-                                timelisttype = "Modified";
-                                looptempDate = File.GetLastWriteTime(fullpath);
-                                break;
-
-                            case 2:
-                                timelisttype = "Accessed";
-                                looptempDate = File.GetLastAccessTime(fullpath);
-                                break;
-                        }
-                    }
                     timelist.Add(looptempDate);
-                    var stopbotheringme = timelisttype; //remove "unused var" warning
+                    string stopbotheringme = timelisttype; //remove "unused var" warning
                 }
+                //TODO: Check exceptions all over the code, and make sure we have enough
                 catch (UnauthorizedAccessException)
-                { }
+                { } //wraps GetFileTimes in error handling
             }
-            var minmax = new DateNewOldObj(timelist);
+            var minmax = new DateMinMaxNewOld(timelist);
             if (gui.radioButton1Oldest)
             {
                 if (minmax.MinDate != null)
@@ -346,13 +328,7 @@ namespace genBTC.FileTime.Models
             //Make a NameDateObj out of 1 filename; writes each time time to the date attribute that was radiobutton selected.
             var currentobject = new NameDateObjListViewVMdl(timeInside) { Name = directoryPath, FileOrDirType = 1 };
 
-            //If Checkbox is selected:
-            if (!checkboxes.C)
-                currentobject.Created = "N/A"; // Set the Creation date/time if selected
-            if (!checkboxes.M)
-                currentobject.Modified = "N/A"; // Set the Modified date/time if selected
-            if (!checkboxes.A)
-                currentobject.Accessed = "N/A"; // Set the Last Access date/time if selected
+            StoreDateByCMACheckboxes(currentobject);
 
             NameDateObj subFile = new NameDateObj(currentobject.Converter());
             //AddONEFiletoConfirmList(filename, fileDateTime, false);
@@ -367,6 +343,111 @@ namespace genBTC.FileTime.Models
             { }
             catch (DirectoryNotFoundException)
             { }
+        }
+
+        /// <summary>
+        /// Mode 3: Recursive.
+        /// </summary>
+        /// <param name="targetPath">Write Path to modify times of. </param>
+        /// <param name="comparePath">Read Path used as source of time data.</param>
+        internal void RecurseSubDirectoryMode3(string targetPath, string comparePath)
+        {
+            //The paths coming out of the explorer Tree are \\ terminated, and the File picker ones are not.
+            if (!comparePath.EndsWith(SharedHelper.SeperatorString))
+                comparePath += SharedHelper.Seperator;
+
+            //uses DirectoryInfo to:
+            // Take a snapshot of the file system.  Makes an IEnumerable.
+
+            IEnumerable<FileInfo> destFileList = new DirectoryInfo(targetPath).GetFiles("*.*", SearchOption.AllDirectories);
+            IEnumerable<DirectoryInfo> destDirList = new DirectoryInfo(targetPath).GetDirectories("*.*", SearchOption.AllDirectories);
+
+            IEnumerable<FileInfo> srcFileList = new DirectoryInfo(comparePath).GetFiles("*.*", SearchOption.AllDirectories);
+            IEnumerable<DirectoryInfo> srcDirList = new DirectoryInfo(comparePath).GetDirectories("*.*", SearchOption.AllDirectories);
+
+            //A custom file comparer defined in FileComparer.cs (Compared by Name and Length)
+            FileComparer myFileCompare = new FileComparer();
+            DirComparer myDirCompare = new DirComparer();
+
+            //This query determines whether the two folders contain identical file lists, 
+            // based on the custom file comparer that is defined in the FileCompare class. 
+            bool areIdentical = srcFileList.SequenceEqual(destFileList, myFileCompare);
+            //Console.WriteLine(areIdentical ? "the folders DO contain the same files" : "The folders do NOT contain the same files");
+            bool areIdenticalDirs = destDirList.SequenceEqual(srcDirList, myDirCompare);
+            //Console.WriteLine(areIdenticalDirs ? "the two folders are the same" : "The two folders are not the same");
+
+            // Find the common DIRS. 
+            var queryCommonDirs = srcDirList.Intersect(destDirList, myDirCompare);
+
+            DirectoryInfo[] commonDirs = queryCommonDirs as DirectoryInfo[] ?? queryCommonDirs.ToArray();
+            if (commonDirs.Any())
+            {
+                //Console.WriteLine(@"The following folders are in both:");
+                foreach (var d in commonDirs)
+                {
+                    //Console.WriteLine(d.FullName); //shows which items end up in result list  
+                    NameDateStruct srcdirtime = GetCmaTimesFromFilesystem(d.FullName);
+                    string nameChanged = d.FullName.Replace(comparePath, targetPath);
+                    SkipOrAddFile(nameChanged, isDirectory: false);
+
+                    //Make a NameDateObj out of 1 filename
+                    var currentobject = new NameDateObjListViewVMdl(srcdirtime) { Name = nameChanged };
+                    //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
+                    StoreDateByCMACheckboxes(currentobject);
+                    
+                    NameDateObj subDir = new NameDateObj(currentobject.Converter());
+                    
+                    FilestoConfirmList.Add(subDir);
+                }
+            }
+            else
+            {
+                //Console.WriteLine(@"There are no common folders between the two folders.");
+            }
+
+            // PopulateFileList + GetCmaTimesFromFilesystem + SkipOrAddFile +  FilesToConfirm.Add
+            // Find the common files. It produces a sequence and doesn't execute until the foreach statement.  
+            var queryCommonFiles = srcFileList.Intersect(destFileList, myFileCompare);
+
+            FileInfo[] commonFiles = queryCommonFiles as FileInfo[] ?? queryCommonFiles.ToArray();
+
+            if (commonFiles.Any())
+            {
+                //Console.WriteLine(@"The following files are in both folders:");
+                foreach (var f in commonFiles)
+                {
+                    //Console.WriteLine(f.FullName); //shows which items end up in result list  
+                    NameDateStruct srcfiletime = GetCmaTimesFromFilesystem(f.FullName);
+                    string nameChanged = f.FullName.Replace(comparePath, targetPath);
+                    SkipOrAddFile(nameChanged, isDirectory: false);
+                    
+                    //Make a NameDateObj out of 1 filename
+                    var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged };
+                    //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
+                    StoreDateByCMACheckboxes(currentobject);
+
+                    NameDateObj subFile = new NameDateObj(currentobject.Converter());
+                    
+                    FilestoConfirmList.Add(subFile);
+
+                }
+            }
+            else
+            {
+                //Console.WriteLine(@"There are no common files in the two folders.");
+            }
+        }
+
+        private void StoreDateByCMACheckboxes(NameDateObjListViewVMdl currentobject)
+        {
+            //TODO: stop using N/A as a placeholder for logic
+            //If Checkbox is selected:
+            if (!checkboxes.C)
+                currentobject.Created = "N/A"; // Only Set the Creation date/time if selected
+            if (!checkboxes.M)
+                currentobject.Modified = "N/A"; // Only Set the Modified date/time if selected
+            if (!checkboxes.A)
+                currentobject.Accessed = "N/A"; // Only Set the Last Access date/time if selected
         }
 
         /// <summary>  Mode 1P (start at its Parent) </summary>
@@ -448,32 +529,36 @@ namespace genBTC.FileTime.Models
             FilestoConfirmList.Add(currentobject);
         }
 
+
         /// <summary>
         /// Tracks H,S,R skipcount. Print a Messagebox Question if trying to skip read only files, and fix RO files if needed
         /// </summary>
         internal void SkipOrAddFile(string path, bool isDirectory)
         {
+            if (isDirectory) return;    //so, idk why I came in here?
+
             // NOTE: The following is where an error would occur if you try and scan a directory with Longpaths in it.
             // I have tried to fix it in the app.config and the app.manifest file with some XML tags, but they didnt work.
             // In the end, Windows 10 build 10240 is too old to support Paths > 260 chars...crazy right. ?
             // Since its a managed app I would prefer to keep native code out if possible.
             // For now the only thing i can do is Target .NET 4.6.2
             // https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/
-
+            //Should really assert something before we get this far, this isnt the right function to be erroring out in:
             // TODO: Revisit this when a few months go by to figure out if anything has changed with >260 Longpaths 
+            // >
             FileAttributes fAttr = File.GetAttributes(path); //longpath unsafe
 
-            if (((fAttr & FileAttributes.System) == FileAttributes.System) && Settings.Default.SkipSystem)
+            if ((fAttr & FileAttributes.System) == FileAttributes.System && Settings.Default.SkipSystem)
             {
                 Skips.S++;
                 return; // Skip system files and directories
             }
-            if (((fAttr & FileAttributes.Hidden) == FileAttributes.Hidden) && Settings.Default.SkipHidden)
+            if ((fAttr & FileAttributes.Hidden) == FileAttributes.Hidden && Settings.Default.SkipHidden)
             {
                 Skips.H++;
                 return; // Skip hidden files and directories
             }
-            if (((fAttr & FileAttributes.ReadOnly) == FileAttributes.ReadOnly) && !isDirectory)
+            if ((fAttr & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
             {
                 if (Settings.Default.SkipReadOnly)
                 {
@@ -484,8 +569,9 @@ namespace genBTC.FileTime.Models
                 {
                     DialogResult dr =
                         MessageBox.Show(
-                            "The file '" + path + "' is Read-Only.\n\nContinue showing Read-Only notifications?",
-                            "Read-Only", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            "The file '" + path + "' is Read-Only.\n\n" +
+                            "The Files Will be Fixed Silently ANYWAY, So hit No to stop these popups\nYou can change re-enable this warning in Preferences at any time.",
+                            @" Error - File is Read Only. Continue showing Read-Only notifications?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     Settings.Default.ShowNoticesReadOnly = (dr == DialogResult.Yes);
                 }
                 //add them to the list to be readOnly+Fixed before they are timewritten.
@@ -543,20 +629,14 @@ namespace genBTC.FileTime.Models
                     try
                     {
                         // Get List of the subfiles (full path)
-                        foreach (string subFile in Directory.GetFiles(directoryPath))
-                        {
-                            var fileAttribs = File.GetAttributes(subFile);
-                            if ((fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) != 0)
-                                continue;
-                            var fullPathtoFileName = Path.Combine(directoryPath, subFile);
-                            extractlist.Add(fullPathtoFileName);
-                        }
+                        extractlist.AddRange(from subFile in Directory.GetFiles(directoryPath) let fileAttribs = File.GetAttributes(subFile)
+                                             where (fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) == 0 select Path.Combine(directoryPath, subFile));
                     } // catch failure of GetAttributes
                     catch (FileNotFoundException ex)
                     {
                         MessageBox.Show(
                             "Error getting attributes of a file in '" + directoryPath + "': \r\n\r\n" + ex.Message,
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     } // catch failure of GetFiles
                     catch (UnauthorizedAccessException)
                     { } //show nothing because this is normal for this method when encountering inaccessible files
@@ -566,11 +646,7 @@ namespace genBTC.FileTime.Models
                     try
                     {
                         // Get List of the subdirs (full path)
-                        foreach (string subDirectory in Directory.GetDirectories(directoryPath))
-                        {
-                            var directoryName = Path.Combine(directoryPath, subDirectory);
-                            extractlist.Add(directoryName);
-                        }
+                        extractlist.AddRange(Directory.GetDirectories(directoryPath).Select(subDirectory => Path.Combine(directoryPath, subDirectory)));
                     } // catch failure from GetDirs
                     catch (UnauthorizedAccessException)
                     { } //show nothing because this is normal for this method when encountering inaccessible dirs
@@ -616,9 +692,9 @@ namespace genBTC.FileTime.Models
                 //Make a new list of the lists we just made (Collection initializer)
                 var threetimelists = new List<List<DateTime?>> { creationtimelist, modtimelist, accesstimelist };
                 //Instantiate 3 new vars as a new class that processes the min and max date from the 3 lists we just made
-                var cre = new DateNewOldObj(creationtimelist);
-                var mod = new DateNewOldObj(modtimelist);
-                var acc = new DateNewOldObj(accesstimelist);
+                var cre = new DateMinMaxNewOld(creationtimelist);
+                var mod = new DateMinMaxNewOld(modtimelist);
+                var acc = new DateMinMaxNewOld(accesstimelist);
 
                 ////Create 2 lists(min and max), containing the 3 min/max dates.
                 //DateTime?[] minarray = { cre.minDate, mod.minDate, acc.minDate };
@@ -709,8 +785,8 @@ namespace genBTC.FileTime.Models
             {
                 string listoffixedreadonlyfiles = FilesReadOnlytoFix.Aggregate((current, file) => current + (file + "\n"));
                 DialogResult dr =
-                    MessageBox.Show(listoffixedreadonlyfiles + "\nRead-Only must be un-set to change date. Continue?",
-                        "Read-Only Files: ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    MessageBox.Show(listoffixedreadonlyfiles + @"Read-Only must be un-set to change date. Continue?",
+                        @"PEBKAC Error ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
                     foreach (string file in FilesReadOnlytoFix)
@@ -718,8 +794,8 @@ namespace genBTC.FileTime.Models
                         FileAttributes fileattribs = File.GetAttributes(file);
                         File.SetAttributes(file, SharedHelper.RemoveAttributes(fileattribs, FileAttributes.ReadOnly));
                     }
-                    DialogResult dr2 = MessageBox.Show("Turn read-only back on when the confirm window is closed?",
-                        "Make Files Read-Only again?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult dr2 = MessageBox.Show(@"Turn read-only back on when the confirm window is closed?",
+                        @"PEBKAC Error ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr2 == DialogResult.No)
                         FilesReadOnlytoFix.Clear();
                     else
