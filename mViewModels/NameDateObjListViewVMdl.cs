@@ -32,8 +32,8 @@ namespace genBTC.FileTime.mViewModels
 
         public NameDateObjListViewVMdl(NameDateQuick thing)
         {
-            FileOrDirType = SharedHelper.Bool2Int(Directory.Exists(thing.PathName));
             Name = thing.PathName;
+            FileOrDirType = SharedHelper.Bool2Int(Directory.Exists(thing.PathName));
             Created = thing.Created;
             Modified = thing.Modified;
             Accessed = thing.Accessed;

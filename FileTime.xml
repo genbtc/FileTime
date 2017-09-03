@@ -273,31 +273,14 @@
             </summary>
             <param name="directoryPath">Path to start in.</param>
         </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachDirectoryMode3(System.String,System.DateTime)">
+        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3(System.String,System.String)">
             <summary>
-            Set Directory Time
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.SetTimeDateEachFileMode3(System.String,System.DateTime)">
-            <summary>
-            Set File Time
-            </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode32(System.String,System.String)">
-            <summary>
-            Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+            Mode 3: Process One directory, Process 2nd Dir. with recursive sub-directory support. Calls SetFileDateTime()
             (Only adds to the confirm list, Form 2 will actually write changes).
             </summary>
             <param name="targetPath">Full path to the targetPath directory</param>
             <param name="comparePath">Full path to the comparePath directory</param>
             req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        </member>
-        <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3(System.String,System.String)">
-            <summary>
-            Mode 3: Recursive.
-            </summary>
-            <param name="targetPath">Write Path to modify times of. </param>
-            <param name="comparePath">Read Path used as source of time data.</param>
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String)">
             <summary>  Mode 1P (start at its Parent) </summary>

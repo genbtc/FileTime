@@ -373,161 +373,161 @@ namespace genBTC.FileTime.Models
             }
         }
 
-        public IEnumerable<string> GetAllFiles(string path, string searchPattern)
+        public IEnumerable<string> GetAllFilesRecursive(string path, string searchPattern)
         {
             return Directory.EnumerateFiles(path, searchPattern).Union(
                 Directory.EnumerateDirectories(path).SelectMany(d =>
                 {
                     try
                     {
-                        return GetAllFiles(d, searchPattern);
+                        return GetAllFilesRecursive(d, searchPattern);
                     }
-                    catch (UnauthorizedAccessException)
-                    {
+                    catch (UnauthorizedAccessException) {
                         return Enumerable.Empty<string>();
                     }
-                    catch (DirectoryNotFoundException)
-                    {
+                    catch (DirectoryNotFoundException) {
                         return Enumerable.Empty<string>();
                     }
                 }));
         }
-        public IEnumerable<string> GetAllDirs(string path, string searchPattern)
-        {
-            return Directory.EnumerateDirectories(path).SelectMany(d =>
-                {
-                    try
-                    {
-                        return GetAllDirs(d, searchPattern);
-                    } catch (UnauthorizedAccessException)
-                    {
-                        return Enumerable.Empty<string>();
-                    } catch (DirectoryNotFoundException)
-                    {
-                        return Enumerable.Empty<string>();
-                    }
-                });
-        }
-        /// <summary>
-        /// Set Directory Time
-        /// </summary>
-        internal void SetTimeDateEachDirectoryMode3(string directoryPath, DateTime fileDateTime)
+        public IEnumerable<string> SafeEnumerateFiles(string path, string searchPattern)
         {
             try
             {
-                string[] subDirectories = Directory.GetDirectories(directoryPath);
-                Array.Sort(subDirectories, SharedHelper.explorerStringComparer());
-                foreach (string eachdir in subDirectories)
-                {
-                    // Set the date/time for the sub directory
-                    AddONEFiletoConfirmList(eachdir, fileDateTime, true);
-                    // Recurse (loop) through each sub-sub directory
-                    RecurseSubDirectoryMode3(directoryPath, eachdir);
-                }
-            } //catch for GetDirs
+                return Directory.EnumerateFiles(path, searchPattern);
+            }
             catch (UnauthorizedAccessException)
-            { }
+            {
+                return Enumerable.Empty<string>();
+            }
+            catch (DirectoryNotFoundException)
+            {
+                return Enumerable.Empty<string>();
+            }
+            catch (FileNotFoundException)
+            {
+                return Enumerable.Empty<string>();
+            }
+        }
+
+        public IEnumerable<string> GetAllDirs(string path, string searchPattern)
+        {
+            return Directory.EnumerateDirectories(path, searchPattern);
+        }
+        private IEnumerable<String> GetFilesAndDirsSafely(string path, string file_pattern, bool recurse)
+        {
+            IEnumerable<String> emptyList = new string[0];
+
+            if (File.Exists(path))
+                return new[] { path };
+
+            if (!Directory.Exists(path))
+                return emptyList;
+
+            var topDirectory = new DirectoryInfo(path);
+
+            // Enumerate the files just in the top directory.
+            var files = topDirectory.EnumerateFiles(file_pattern);
+            var fileInfos = files as FileInfo[] ?? files.ToArray();
+            int filesLength = fileInfos.Length;
+            var filesList = Enumerable.Range(0, filesLength).Select(i =>
+                {
+                    string filename = null;
+                    try
+                    {
+                        var file = fileInfos.ElementAt(i);
+                        filename = file.FullName;
+                    } catch (UnauthorizedAccessException)
+                    { } catch (FileNotFoundException)
+                    { } catch (InvalidOperationException)
+                    { }
+                    return filename;
+                })
+                .Where(i => null != i);
+
+            if (!recurse)
+                return filesList;
+
+            var dirs = topDirectory.EnumerateDirectories("*");
+            var directoryInfos = dirs as DirectoryInfo[] ?? dirs.ToArray();
+            int dirsLength = directoryInfos.Length;
+            var dirsList = Enumerable.Range(0, dirsLength).SelectMany(i =>
+            {
+                try
+                {
+                    var dir = directoryInfos.ElementAt(i);
+                    string dirname = dir.FullName;
+                    return GetFilesAndDirsSafely(dirname, file_pattern, recurse);
+                } catch (UnauthorizedAccessException)
+                { } catch (DirectoryNotFoundException)
+                { } catch (InvalidOperationException)
+                { }
+                return emptyList;
+            });
+        
+            return filesList.Concat(dirsList);
         }
 
         /// <summary>
-        /// Set File Time
-        /// </summary>
-        internal void SetTimeDateEachFileMode3(string directoryPath, DateTime fileDateTime)
-        {
-            try
-            {
-                string[] subFiles = Directory.GetFiles(directoryPath);
-                Array.Sort(subFiles, SharedHelper.explorerStringComparer());
-                foreach (string filename in subFiles)
-                    AddONEFiletoConfirmList(filename, fileDateTime, false);
-            } //catch for GetFiles
-            catch (UnauthorizedAccessException)
-            { }
-        }
-        /// <summary>
-        /// Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+        /// Mode 3: Process One directory, Process 2nd Dir. with recursive sub-directory support. Calls SetFileDateTime()
         /// (Only adds to the confirm list, Form 2 will actually write changes).
         /// </summary>
         /// <param name="targetPath">Full path to the targetPath directory</param>
         /// <param name="comparePath">Full path to the comparePath directory</param>
         /// req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
-        internal void RecurseSubDirectoryMode32(string targetPath, string comparePath)
-        {
-            DateTime? nullorfileDateTime = DecideWhichTimeMode1(comparePath);
-            if (nullorfileDateTime == null)
-                return; //if nothing could be decided, exit. otherwise continue
-            var fileDateTime = (DateTime)nullorfileDateTime;
-
-            // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
-            if (gui.checkboxRecurse)
-                SetTimeDateEachDirectoryMode3(comparePath, fileDateTime);
-            // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
-            if (gui.checkboxShouldFiles)
-                SetTimeDateEachFileMode3(comparePath, fileDateTime);
-        }
-
-        /// <summary>
-        /// Mode 3: Recursive.
-        /// </summary>
-        /// <param name="targetPath">Write Path to modify times of. </param>
-        /// <param name="comparePath">Read Path used as source of time data.</param>
         internal void RecurseSubDirectoryMode3(string targetPath, string comparePath)
         {
-            //The paths coming out of the explorer Tree are \\ terminated, and the File picker ones are not.
+            //no point continuing if we have nothing matching to compare to.
+            if (!Directory.Exists(comparePath))
+                return;
             if (!comparePath.EndsWith(SharedHelper.SeperatorString))
                 comparePath += SharedHelper.Seperator;
 
             // Take a snapshot of the paths of the file system.  Makes an IEnumerable.
-            IEnumerable<string> destFileList = GetAllFiles(targetPath, "*.*");
-            IEnumerable<string> destDirList = GetAllDirs(targetPath, "*.*");
-
-            IEnumerable<string> srcFileList = GetAllFiles(comparePath, "*.*");
-            IEnumerable<string> srcDirList = GetAllDirs(comparePath, "*.*");
-            // PopulateFileList + GetCmaTimesFromFilesystem + SkipOrAddFile +  FilesToConfirm.Add
-
+            IEnumerable<string> destFileList = GetFilesAndDirsSafely(targetPath, "*", false);
+            IEnumerable<string> srcFileList = GetFilesAndDirsSafely(comparePath, "*", false);
             // Find the common files. It produces a sequence and doesn't execute until the foreach statement.  
             IEnumerable<string> queryCommonFiles = srcFileList.Intersect(destFileList, SharedHelper.explorerStringEqualityComparer(targetPath, comparePath));
 
-            //Console.WriteLine(@"The following files are in both folders:");
             foreach (string f in queryCommonFiles)
             {
-                //Console.WriteLine(f.FullName); //shows which items end up in result list  
                 NameDateQuick srcfiletime = GetCmaTimesFromFilesystem(f);
                 string nameChanged = f.Replace(comparePath, targetPath);
                 SkipOrAddFile(nameChanged, isDirectory: false);
-                    
-                //Make a NameDateObj out of 1 filename
-                var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged };
+
+                var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged, FileOrDirType = SharedHelper.Bool2Int(Directory.Exists(nameChanged)) };
                 //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
                 StoreDateByCMACheckboxes(currentobject);
 
-                var subFile = new NameDateObj(currentobject.Converter());
-                    
-                FilestoConfirmList.Add(subFile);
+                var item = new NameDateObj(currentobject.Converter());
+
+                FilestoConfirmList.Add(item);
             }
-
-            // Find the common DIRS. It produces a sequence and doesn't execute until the foreach statement.  
-            IEnumerable<string> queryCommonDirs = srcDirList.Intersect(destDirList, SharedHelper.explorerStringEqualityComparer(targetPath, comparePath));
-
-            //Console.WriteLine(@"The following files are in both folders:");
-            foreach (string f in queryCommonDirs)
+/*            try
             {
-                //Console.WriteLine(f.FullName); //shows which items end up in result list  
-                NameDateQuick srcdirtime = GetCmaTimesFromFilesystem(f);
-                string nameChanged = f.Replace(comparePath, targetPath);
-                SkipOrAddFile(nameChanged, isDirectory: true);
-
-                //Make a NameDateObj out of 1 filename
-                var currentobject = new NameDateObjListViewVMdl(srcdirtime) { Name = nameChanged };
-                //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
-                StoreDateByCMACheckboxes(currentobject);
-
-                var subDir = new NameDateObj(currentobject.Converter());
-
-                FilestoConfirmList.Add(subDir);
+                foreach (string subfolder in GetAllDirs(targetPath, "*"))
+                {
+                    string combinedTargetPath = Path.Combine(targetPath, subfolder);
+                    string combinedSourcePath = Path.Combine(comparePath, subfolder);
+                    RecurseSubDirectoryMode3(combinedTargetPath, combinedSourcePath);
+                }
             }
+            catch (UnauthorizedAccessException)
+            { }
+            catch (DirectoryNotFoundException)
+            { }*/
+
+            NameDateQuick srcdirtime = GetCmaTimesFromFilesystem(comparePath);
+            string dirChanged = comparePath.Replace(comparePath, targetPath);
+
+            var dirobject = new NameDateObjListViewVMdl(srcdirtime) { Name = dirChanged };
+            //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
+            StoreDateByCMACheckboxes(dirobject);
+
+            var subDir = new NameDateObj(dirobject.Converter());
+
+            FilestoConfirmList.Add(subDir);
         }
-        
 
         private void StoreDateByCMACheckboxes(NameDateObjListViewVMdl currentobject)
         {
