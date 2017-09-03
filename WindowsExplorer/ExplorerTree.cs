@@ -480,14 +480,17 @@ namespace WindowsExplorer
         /// </summary>
         private void tvwMain_DoubleClick(object sender, EventArgs e)
         {
-            TreeNode n = treeview1.SelectedNode;
-
-            if (!treeview1.SelectedNode.IsExpanded)
-                treeview1.SelectedNode.Collapse();
-            else
+            if (treeview1.SelectedNode != null)
             {
-                if (n.Text != "Desktop")
-                    ExploreTreeNode(n);
+                TreeNode n = treeview1.SelectedNode;
+
+                if (treeview1.SelectedNode != null && !treeview1.SelectedNode.IsExpanded)
+                    treeview1.SelectedNode.Collapse();
+                else
+                {
+                    if (n.Text != @"Desktop")
+                        ExploreTreeNode(n);
+                }
             }
         }
 

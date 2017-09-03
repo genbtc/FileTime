@@ -59,7 +59,7 @@ namespace genBTC.FileTime.Classes
         /// Display the Folder Browser Dialog and then display the selected
         /// file path and the directories and files in the folder.
         /// </summary>
-        public static string OpenFilePicker(string inpath)
+        public static string OpenFilePicker(string inpath, string message)
         {
             //Feed in a path to start in or use current path as dialog path:
             if (inpath == null)
@@ -68,11 +68,12 @@ namespace genBTC.FileTime.Classes
             //start a new windows api filebrowser dialog on its own thread.
             var t = new Thread(() =>
             {
+                string description = message;
                 var openFile = new FolderBrowserDialog
                 {
                     ShowNewFolderButton = false,
                     SelectedPath = inpath,
-                    Description = "Select the folder you want to view/change the subfolders of:"
+                    Description = description
                 };
                 //use current path as dialog path
 

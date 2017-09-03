@@ -139,7 +139,7 @@ namespace genBTC.FileTime.Forms
 
         private void menuItem_FileOpen_Click(object sender, EventArgs e)
         {
-            SharedHelper.OpenFilePicker(CwdPathName);
+            SharedHelper.OpenFilePicker(CwdPathName, "Select the folder you want to view/change the subfolders of:");
         }
 
         private void menuItem_FileExit_Click(object sender, EventArgs e)
@@ -342,7 +342,7 @@ namespace genBTC.FileTime.Forms
 
         private void button_Browse_Click(object sender, EventArgs e)
         {
-            string path = SharedHelper.OpenFilePicker(CwdPathName);
+            string path = SharedHelper.OpenFilePicker(CwdPathName, "Select a folder to browse to: ");
             //safer when we get the path out of a file picker.
             explorerTree1.SetCurrentPath(path);
             explorerTree1.BrowseTo();
@@ -350,27 +350,28 @@ namespace genBTC.FileTime.Forms
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            if (!radioGroupBox4_pickFolderForCompare.Checked && !radioGroupBox3_UseTimeFrom.Checked && !radioGroupBox2_CurrentSelectionTime.Checked && !radioGroupBox1_SpecifyTime.Checked)
+            if (radioGroupBox4_pickFolderForCompare.Checked || radioGroupBox3_UseTimeFrom.Checked || 
+                radioGroupBox2_CurrentSelectionTime.Checked || radioGroupBox1_SpecifyTime.Checked)
+            {
+                if (radioGroupBox4_pickFolderForCompare.Checked)
+                {
+                    string comparefolder = SharedHelper.OpenFilePicker(CwdPathName, "Select the SOURCE folder to grab the times from:");
+                    if (string.IsNullOrEmpty(comparefolder))
+                    {
+                        MessageBox.Show("Error! No folder to compare to!! \n" +
+                                        "Please choose a folder to use for the comparison. (time source folder)",
+                            @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    StartUpMode3(CwdPathName, comparefolder);
+                } else
+                    StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
+            } else
             {
                 MessageBox.Show("Error! Nothing to decide time from!! \n" +
                                 "Please choose an Option, to the right of the Mode.",
                     @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
-            if (radioGroupBox4_pickFolderForCompare.Checked)
-            {
-                string comparefolder = SharedHelper.OpenFilePicker(CwdPathName);
-                if (string.IsNullOrEmpty(comparefolder))
-                { 
-                    MessageBox.Show("Error! No folder to compare to!! \n" +
-                                    "Please choose a folder to use for the comparison. (time source folder)",
-                        @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                StartUpMode3(CwdPathName, comparefolder);
-            }
-            else
-                StartUpBothModes1And2(tabControl1.SelectedIndex, CwdPathName);
         }
 
         #endregion

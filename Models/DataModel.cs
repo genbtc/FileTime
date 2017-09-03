@@ -414,7 +414,7 @@ namespace genBTC.FileTime.Models
         {
             return Directory.EnumerateDirectories(path, searchPattern);
         }
-        private IEnumerable<String> GetFilesAndDirsSafely(string path, string file_pattern, bool recurse)
+        private IEnumerable<String> GetFilesAndDirsSafely(string path, string filePattern, bool recurse)
         {
             IEnumerable<String> emptyList = new string[0];
 
@@ -427,10 +427,11 @@ namespace genBTC.FileTime.Models
             var topDirectory = new DirectoryInfo(path);
 
             // Enumerate the files just in the top directory.
-            var files = topDirectory.EnumerateFiles(file_pattern);
+            var files = topDirectory.EnumerateFiles(filePattern);
             var fileInfos = files as FileInfo[] ?? files.ToArray();
             int filesLength = fileInfos.Length;
-            var filesList = Enumerable.Range(0, filesLength).Select(i =>
+            IEnumerable<String> topDirEnum = Enumerable.Repeat(path, 1);
+            IEnumerable<String> filesList = Enumerable.Range(0, filesLength).Select(i =>
                 {
                     string filename = null;
                     try
@@ -446,26 +447,26 @@ namespace genBTC.FileTime.Models
                 .Where(i => null != i);
 
             if (!recurse)
-                return filesList;
+                return topDirEnum.Concat(filesList);
 
             var dirs = topDirectory.EnumerateDirectories("*");
             var directoryInfos = dirs as DirectoryInfo[] ?? dirs.ToArray();
             int dirsLength = directoryInfos.Length;
-            var dirsList = Enumerable.Range(0, dirsLength).SelectMany(i =>
+            IEnumerable<String> dirsList = Enumerable.Range(0, dirsLength).SelectMany(i =>
             {
                 try
                 {
                     var dir = directoryInfos.ElementAt(i);
                     string dirname = dir.FullName;
-                    return GetFilesAndDirsSafely(dirname, file_pattern, recurse);
+                    return GetFilesAndDirsSafely(dirname, filePattern, recurse);
                 } catch (UnauthorizedAccessException)
                 { } catch (DirectoryNotFoundException)
                 { } catch (InvalidOperationException)
                 { }
                 return emptyList;
             });
-        
-            return filesList.Concat(dirsList);
+
+            return topDirEnum.Concat(filesList.Concat(dirsList));
         }
 
         /// <summary>
@@ -484,8 +485,8 @@ namespace genBTC.FileTime.Models
                 comparePath += SharedHelper.Seperator;
 
             // Take a snapshot of the paths of the file system.  Makes an IEnumerable.
-            IEnumerable<string> destFileList = GetFilesAndDirsSafely(targetPath, "*", false);
-            IEnumerable<string> srcFileList = GetFilesAndDirsSafely(comparePath, "*", false);
+            IEnumerable<string> destFileList = GetFilesAndDirsSafely(targetPath, "*", true);
+            IEnumerable<string> srcFileList = GetFilesAndDirsSafely(comparePath, "*", true);
             // Find the common files. It produces a sequence and doesn't execute until the foreach statement.  
             IEnumerable<string> queryCommonFiles = srcFileList.Intersect(destFileList, SharedHelper.explorerStringEqualityComparer(targetPath, comparePath));
 
@@ -493,9 +494,10 @@ namespace genBTC.FileTime.Models
             {
                 NameDateQuick srcfiletime = GetCmaTimesFromFilesystem(f);
                 string nameChanged = f.Replace(comparePath, targetPath);
-                SkipOrAddFile(nameChanged, isDirectory: false);
+                bool isDirectory = Directory.Exists(nameChanged);
+                SkipOrAddFile(nameChanged, isDirectory);
 
-                var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged, FileOrDirType = SharedHelper.Bool2Int(Directory.Exists(nameChanged)) };
+                var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged, FileOrDirType = SharedHelper.Bool2Int(isDirectory) };
                 //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
                 StoreDateByCMACheckboxes(currentobject);
 
@@ -503,30 +505,6 @@ namespace genBTC.FileTime.Models
 
                 FilestoConfirmList.Add(item);
             }
-/*            try
-            {
-                foreach (string subfolder in GetAllDirs(targetPath, "*"))
-                {
-                    string combinedTargetPath = Path.Combine(targetPath, subfolder);
-                    string combinedSourcePath = Path.Combine(comparePath, subfolder);
-                    RecurseSubDirectoryMode3(combinedTargetPath, combinedSourcePath);
-                }
-            }
-            catch (UnauthorizedAccessException)
-            { }
-            catch (DirectoryNotFoundException)
-            { }*/
-
-            NameDateQuick srcdirtime = GetCmaTimesFromFilesystem(comparePath);
-            string dirChanged = comparePath.Replace(comparePath, targetPath);
-
-            var dirobject = new NameDateObjListViewVMdl(srcdirtime) { Name = dirChanged };
-            //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
-            StoreDateByCMACheckboxes(dirobject);
-
-            var subDir = new NameDateObj(dirobject.Converter());
-
-            FilestoConfirmList.Add(subDir);
         }
 
         private void StoreDateByCMACheckboxes(NameDateObjListViewVMdl currentobject)

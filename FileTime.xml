@@ -204,7 +204,7 @@
         <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
             <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String)">
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String,System.String)">
             <summary>
             Display the Folder Browser Dialog and then display the selected
             file path and the directories and files in the folder.
