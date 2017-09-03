@@ -30,7 +30,7 @@ namespace genBTC.FileTime.mViewModels
             Accessed = thing.Accessed.ToString();
         }
 
-        public NameDateObjListViewVMdl(NameDateStruct thing)
+        public NameDateObjListViewVMdl(NameDateQuick thing)
         {
             FileOrDirType = SharedHelper.Bool2Int(Directory.Exists(thing.PathName));
             Name = thing.PathName;

@@ -40,19 +40,6 @@ namespace genBTC.FileTime.Models
         }
     }
 
-    /// <summary>  Store some the fields that the GUI uses. Small Version. </summary>
-    internal struct NameDateStruct
-    {
-        internal string Accessed;
-        internal string Created;
-
-        internal string HiddenPathName;
-        internal string Modified;
-        internal string PathName;
-
-        internal bool Selected;
-    }
-
     /// <summary>  Store all(most) the fields that the GUI uses, for populating the viewmodel. </summary>
     internal struct guistatus
     {

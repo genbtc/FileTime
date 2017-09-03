@@ -312,7 +312,7 @@ namespace genBTC.FileTime.Forms
         /// </summary>
         private void DisplayCma(string path)
         {
-            NameDateStruct cma = DataModel.GetCmaTimesFromFilesystem(path);
+            NameDateQuick cma = DataModel.GetCmaTimesFromFilesystem(path);
 
             label_CreationTime.Text = cma.Created;
             label_ModificationTime.Text = cma.Modified;

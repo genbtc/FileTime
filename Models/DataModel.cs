@@ -61,12 +61,12 @@ namespace genBTC.FileTime.Models
         /// <summary>
         /// Display the date and time of the selected file (also works on Directories)
         /// </summary>
-        public static NameDateStruct GetCmaTimesFromFilesystem(string pathName)
+        public static NameDateQuick GetCmaTimesFromFilesystem(string pathName)
         {
-            NameDateStruct cma;
+            NameDateQuick cma;
             if (pathName != "")
             {
-                cma = new NameDateStruct
+                cma = new NameDateQuick
                 {
                     PathName = pathName,
                     Created = File.GetCreationTime(pathName).ToString(CultureInfo.CurrentCulture),
@@ -80,15 +80,7 @@ namespace genBTC.FileTime.Models
             {
                 // Maybe no file/directory is selected
                 // Then Blank out the display of date/time.
-                cma = new NameDateStruct
-                {
-                    PathName = pathName,
-                    Created = "",
-                    Modified = "",
-                    Accessed = "",
-                    HiddenPathName = "",
-                    Selected = false
-                };
+                cma = new NameDateQuick();
             }
             return cma;
         }
@@ -170,7 +162,7 @@ namespace genBTC.FileTime.Models
                 var fileAttribs = File.GetAttributes(file);
                 if ((fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) != 0)
                     continue; //skip the rest if its supposed to be "invisible" based on the mask
-                var justName = Path.GetFileName(file);
+                string justName = Path.GetFileName(file);
                 SharedHelper.CurrExten = Path.GetExtension(file);
                 if ((SharedHelper.CurrExten != ".lnk")) //if its not a shortcut
                 {
@@ -330,8 +322,8 @@ namespace genBTC.FileTime.Models
 
             StoreDateByCMACheckboxes(currentobject);
 
-            NameDateObj subFile = new NameDateObj(currentobject.Converter());
-            //AddONEFiletoConfirmList(filename, fileDateTime, false);
+            var subFile = new NameDateObj(currentobject.Converter());
+
             FilestoConfirmList.Add(subFile);
 
             try
@@ -343,6 +335,135 @@ namespace genBTC.FileTime.Models
             { }
             catch (DirectoryNotFoundException)
             { }
+        }
+        
+        private static void ShowAllFoldersUnder(string path, int indent)
+        {
+            try
+            {
+                if ((File.GetAttributes(path) & FileAttributes.ReparsePoint)
+                    != FileAttributes.ReparsePoint)
+                {
+                    foreach (string folder in Directory.GetDirectories(path))
+                    {
+                        Console.WriteLine(
+                            "{0}{1}", new string(' ', indent), Path.GetFileName(folder));
+                        ShowAllFoldersUnder(folder, indent + 2);
+                    }
+                }
+            }
+            catch (UnauthorizedAccessException) { }
+        }
+
+        private static IEnumerable<string> GetFileSystemEntries(string directory, string searchPattern)
+        {
+            IEnumerable<string> files = null;
+            try
+            {
+                files = Directory.EnumerateFileSystemEntries(directory, searchPattern, SearchOption.TopDirectoryOnly);
+            }
+            catch (UnauthorizedAccessException)
+            {
+            }
+
+            if (files == null) yield break;
+            foreach (string file in files)
+            {
+                yield return file;
+            }
+        }
+
+        public IEnumerable<string> GetAllFiles(string path, string searchPattern)
+        {
+            return Directory.EnumerateFiles(path, searchPattern).Union(
+                Directory.EnumerateDirectories(path).SelectMany(d =>
+                {
+                    try
+                    {
+                        return GetAllFiles(d, searchPattern);
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                        return Enumerable.Empty<string>();
+                    }
+                    catch (DirectoryNotFoundException)
+                    {
+                        return Enumerable.Empty<string>();
+                    }
+                }));
+        }
+        public IEnumerable<string> GetAllDirs(string path, string searchPattern)
+        {
+            return Directory.EnumerateDirectories(path).SelectMany(d =>
+                {
+                    try
+                    {
+                        return GetAllDirs(d, searchPattern);
+                    } catch (UnauthorizedAccessException)
+                    {
+                        return Enumerable.Empty<string>();
+                    } catch (DirectoryNotFoundException)
+                    {
+                        return Enumerable.Empty<string>();
+                    }
+                });
+        }
+        /// <summary>
+        /// Set Directory Time
+        /// </summary>
+        internal void SetTimeDateEachDirectoryMode3(string directoryPath, DateTime fileDateTime)
+        {
+            try
+            {
+                string[] subDirectories = Directory.GetDirectories(directoryPath);
+                Array.Sort(subDirectories, SharedHelper.explorerStringComparer());
+                foreach (string eachdir in subDirectories)
+                {
+                    // Set the date/time for the sub directory
+                    AddONEFiletoConfirmList(eachdir, fileDateTime, true);
+                    // Recurse (loop) through each sub-sub directory
+                    RecurseSubDirectoryMode3(directoryPath, eachdir);
+                }
+            } //catch for GetDirs
+            catch (UnauthorizedAccessException)
+            { }
+        }
+
+        /// <summary>
+        /// Set File Time
+        /// </summary>
+        internal void SetTimeDateEachFileMode3(string directoryPath, DateTime fileDateTime)
+        {
+            try
+            {
+                string[] subFiles = Directory.GetFiles(directoryPath);
+                Array.Sort(subFiles, SharedHelper.explorerStringComparer());
+                foreach (string filename in subFiles)
+                    AddONEFiletoConfirmList(filename, fileDateTime, false);
+            } //catch for GetFiles
+            catch (UnauthorizedAccessException)
+            { }
+        }
+        /// <summary>
+        /// Mode 1: Process One directory, with recursive sub-directory support. Calls SetFileDateTime()
+        /// (Only adds to the confirm list, Form 2 will actually write changes).
+        /// </summary>
+        /// <param name="targetPath">Full path to the targetPath directory</param>
+        /// <param name="comparePath">Full path to the comparePath directory</param>
+        /// req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
+        internal void RecurseSubDirectoryMode32(string targetPath, string comparePath)
+        {
+            DateTime? nullorfileDateTime = DecideWhichTimeMode1(comparePath);
+            if (nullorfileDateTime == null)
+                return; //if nothing could be decided, exit. otherwise continue
+            var fileDateTime = (DateTime)nullorfileDateTime;
+
+            // Set the date/time for each sub directory but only if "Recurse Sub-Directories" is checkboxed.
+            if (gui.checkboxRecurse)
+                SetTimeDateEachDirectoryMode3(comparePath, fileDateTime);
+            // Set the date/time for each file, but only if "Perform operation on files" is checkboxed.
+            if (gui.checkboxShouldFiles)
+                SetTimeDateEachFileMode3(comparePath, fileDateTime);
         }
 
         /// <summary>
@@ -356,87 +477,57 @@ namespace genBTC.FileTime.Models
             if (!comparePath.EndsWith(SharedHelper.SeperatorString))
                 comparePath += SharedHelper.Seperator;
 
-            //uses DirectoryInfo to:
-            // Take a snapshot of the file system.  Makes an IEnumerable.
+            // Take a snapshot of the paths of the file system.  Makes an IEnumerable.
+            IEnumerable<string> destFileList = GetAllFiles(targetPath, "*.*");
+            IEnumerable<string> destDirList = GetAllDirs(targetPath, "*.*");
 
-            IEnumerable<FileInfo> destFileList = new DirectoryInfo(targetPath).GetFiles("*.*", SearchOption.AllDirectories);
-            IEnumerable<DirectoryInfo> destDirList = new DirectoryInfo(targetPath).GetDirectories("*.*", SearchOption.AllDirectories);
-
-            IEnumerable<FileInfo> srcFileList = new DirectoryInfo(comparePath).GetFiles("*.*", SearchOption.AllDirectories);
-            IEnumerable<DirectoryInfo> srcDirList = new DirectoryInfo(comparePath).GetDirectories("*.*", SearchOption.AllDirectories);
-
-            //A custom file comparer defined in FileComparer.cs (Compared by Name and Length)
-            FileComparer myFileCompare = new FileComparer();
-            DirComparer myDirCompare = new DirComparer();
-
-            //This query determines whether the two folders contain identical file lists, 
-            // based on the custom file comparer that is defined in the FileCompare class. 
-            bool areIdentical = srcFileList.SequenceEqual(destFileList, myFileCompare);
-            //Console.WriteLine(areIdentical ? "the folders DO contain the same files" : "The folders do NOT contain the same files");
-            bool areIdenticalDirs = destDirList.SequenceEqual(srcDirList, myDirCompare);
-            //Console.WriteLine(areIdenticalDirs ? "the two folders are the same" : "The two folders are not the same");
-
-            // Find the common DIRS. 
-            var queryCommonDirs = srcDirList.Intersect(destDirList, myDirCompare);
-
-            DirectoryInfo[] commonDirs = queryCommonDirs as DirectoryInfo[] ?? queryCommonDirs.ToArray();
-            if (commonDirs.Any())
-            {
-                //Console.WriteLine(@"The following folders are in both:");
-                foreach (var d in commonDirs)
-                {
-                    //Console.WriteLine(d.FullName); //shows which items end up in result list  
-                    NameDateStruct srcdirtime = GetCmaTimesFromFilesystem(d.FullName);
-                    string nameChanged = d.FullName.Replace(comparePath, targetPath);
-                    SkipOrAddFile(nameChanged, isDirectory: false);
-
-                    //Make a NameDateObj out of 1 filename
-                    var currentobject = new NameDateObjListViewVMdl(srcdirtime) { Name = nameChanged };
-                    //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
-                    StoreDateByCMACheckboxes(currentobject);
-                    
-                    NameDateObj subDir = new NameDateObj(currentobject.Converter());
-                    
-                    FilestoConfirmList.Add(subDir);
-                }
-            }
-            else
-            {
-                //Console.WriteLine(@"There are no common folders between the two folders.");
-            }
-
+            IEnumerable<string> srcFileList = GetAllFiles(comparePath, "*.*");
+            IEnumerable<string> srcDirList = GetAllDirs(comparePath, "*.*");
             // PopulateFileList + GetCmaTimesFromFilesystem + SkipOrAddFile +  FilesToConfirm.Add
+
             // Find the common files. It produces a sequence and doesn't execute until the foreach statement.  
-            var queryCommonFiles = srcFileList.Intersect(destFileList, myFileCompare);
+            IEnumerable<string> queryCommonFiles = srcFileList.Intersect(destFileList, SharedHelper.explorerStringEqualityComparer(targetPath, comparePath));
 
-            FileInfo[] commonFiles = queryCommonFiles as FileInfo[] ?? queryCommonFiles.ToArray();
-
-            if (commonFiles.Any())
+            //Console.WriteLine(@"The following files are in both folders:");
+            foreach (string f in queryCommonFiles)
             {
-                //Console.WriteLine(@"The following files are in both folders:");
-                foreach (var f in commonFiles)
-                {
-                    //Console.WriteLine(f.FullName); //shows which items end up in result list  
-                    NameDateStruct srcfiletime = GetCmaTimesFromFilesystem(f.FullName);
-                    string nameChanged = f.FullName.Replace(comparePath, targetPath);
-                    SkipOrAddFile(nameChanged, isDirectory: false);
+                //Console.WriteLine(f.FullName); //shows which items end up in result list  
+                NameDateQuick srcfiletime = GetCmaTimesFromFilesystem(f);
+                string nameChanged = f.Replace(comparePath, targetPath);
+                SkipOrAddFile(nameChanged, isDirectory: false);
                     
-                    //Make a NameDateObj out of 1 filename
-                    var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged };
-                    //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
-                    StoreDateByCMACheckboxes(currentobject);
+                //Make a NameDateObj out of 1 filename
+                var currentobject = new NameDateObjListViewVMdl(srcfiletime) { Name = nameChanged };
+                //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
+                StoreDateByCMACheckboxes(currentobject);
 
-                    NameDateObj subFile = new NameDateObj(currentobject.Converter());
+                var subFile = new NameDateObj(currentobject.Converter());
                     
-                    FilestoConfirmList.Add(subFile);
-
-                }
+                FilestoConfirmList.Add(subFile);
             }
-            else
+
+            // Find the common DIRS. It produces a sequence and doesn't execute until the foreach statement.  
+            IEnumerable<string> queryCommonDirs = srcDirList.Intersect(destDirList, SharedHelper.explorerStringEqualityComparer());
+
+            //Console.WriteLine(@"The following files are in both folders:");
+            foreach (string f in queryCommonDirs)
             {
-                //Console.WriteLine(@"There are no common files in the two folders.");
+                //Console.WriteLine(f.FullName); //shows which items end up in result list  
+                NameDateQuick srcdirtime = GetCmaTimesFromFilesystem(f);
+                string nameChanged = f.Replace(comparePath, targetPath);
+                SkipOrAddFile(nameChanged, isDirectory: true);
+
+                //Make a NameDateObj out of 1 filename
+                var currentobject = new NameDateObjListViewVMdl(srcdirtime) { Name = nameChanged };
+                //If Checkbox is selected: writes each time time to the date attribute that was radiobutton selected.
+                StoreDateByCMACheckboxes(currentobject);
+
+                var subDir = new NameDateObj(currentobject.Converter());
+
+                FilestoConfirmList.Add(subDir);
             }
         }
+        
 
         private void StoreDateByCMACheckboxes(NameDateObjListViewVMdl currentobject)
         {
@@ -580,9 +671,8 @@ namespace genBTC.FileTime.Models
         }
 
         private NameDateObj thingtoreturn;
-        internal bool DecideTimeRG1and2(string directoryPath)
+        internal bool ObtainParseSpecifiedTimeGUIBoxes()
         {
-
             thingtoreturn = new NameDateObj();
 
             if (gui.radioGroupBox1SpecifyTime)
@@ -595,16 +685,13 @@ namespace genBTC.FileTime.Models
                 thingtoreturn.Created = specifiedDate;
                 thingtoreturn.Modified = specifiedDate;
                 thingtoreturn.Accessed = specifiedDate;
-                return false;
+                return true;
             }
-            if (gui.radioGroupBox2CurrentSelect)
-            {
-                thingtoreturn.Name = gui.PathName;
-                thingtoreturn.Created = DateTime.Parse(gui.Created);
-                thingtoreturn.Modified = DateTime.Parse(gui.Modified);
-                thingtoreturn.Accessed = DateTime.Parse(gui.Accessed);
-                return false;
-            }
+            if (!gui.radioGroupBox2CurrentSelect) return false;
+            thingtoreturn.Name = gui.PathName;
+            thingtoreturn.Created = DateTime.Parse(gui.Created);
+            thingtoreturn.Modified = DateTime.Parse(gui.Modified);
+            thingtoreturn.Accessed = DateTime.Parse(gui.Accessed);
             return true;
         }
         /// <summary>
@@ -618,160 +705,159 @@ namespace genBTC.FileTime.Models
 
             var timelist = new List<NameDateObj>();
 
-            if (!DecideTimeRG1and2(directoryPath))
-                ;
+            if (ObtainParseSpecifiedTimeGUIBoxes())
+                return thingtoreturn;
             //Begin checking Conditional for which file is newest oldest etc
-            else if (gui.radioGroupBox3UseTimeFrom)
+            if (!gui.radioGroupBox3UseTimeFrom)
+                return thingtoreturn;
+            //decide if they wanted to use time from subfile or subdir
+            if (gui.radioButton1_useTimefromFile)
             {
-                //decide if they wanted to use time from subfile or subdir
-                if (gui.radioButton1_useTimefromFile)
+                try
                 {
-                    try
-                    {
-                        // Get List of the subfiles (full path)
-                        extractlist.AddRange(from subFile in Directory.GetFiles(directoryPath) let fileAttribs = File.GetAttributes(subFile)
-                                             where (fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) == 0 select Path.Combine(directoryPath, subFile));
-                    } // catch failure of GetAttributes
-                    catch (FileNotFoundException ex)
-                    {
-                        MessageBox.Show(
-                            "Error getting attributes of a file in '" + directoryPath + "': \r\n\r\n" + ex.Message,
-                            @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    } // catch failure of GetFiles
-                    catch (UnauthorizedAccessException)
-                    { } //show nothing because this is normal for this method when encountering inaccessible files
-                }
-                else if (gui.radioButton2_useTimefromSubdir)
+                    // Get List of the subfiles (full path)
+                    extractlist.AddRange(from subFile in Directory.GetFiles(directoryPath) let fileAttribs = File.GetAttributes(subFile)
+                        where (fileAttribs & SharedHelper.SyncSettingstoInvisibleFlag()) == 0 select Path.Combine(directoryPath, subFile));
+                } // catch failure of GetAttributes
+                catch (FileNotFoundException ex)
                 {
-                    try
-                    {
-                        // Get List of the subdirs (full path)
-                        extractlist.AddRange(Directory.GetDirectories(directoryPath).Select(subDirectory => Path.Combine(directoryPath, subDirectory)));
-                    } // catch failure from GetDirs
-                    catch (UnauthorizedAccessException)
-                    { } //show nothing because this is normal for this method when encountering inaccessible dirs
-                }
-
-                // ## Exit out early:
-                // if the list is empty, theres nothing to do, then return an empty object.?????
-                if (extractlist.Count == 0)
-                    return thingtoreturn;
-
-                // ---------------------------------------------------------------------------------//
-                // ## MID WAY POINT ##
-                // We have our first list and now we apply it to the 3 other CMA lists per all the files
-                // And where we actually decide whether to keep our time or use the new time.
-                // ---------------------------------------------------------------------------------//
-
-                foreach (string fullpath in extractlist)
-                {
-                    var decidetemp = new NameDateObj { Name = fullpath };
-                    //grab all 3 times and put them in a decidetemp object
-                    try
-                    {
-                        decidetemp.Created = File.GetCreationTime(fullpath); // File Class works on dirs also
-                        decidetemp.Modified = File.GetLastWriteTime(fullpath);
-                        decidetemp.Accessed = File.GetLastAccessTime(fullpath);
-                        //add the temp object to the list of objects
-                        timelist.Add(decidetemp);
-                    }
-                    catch (UnauthorizedAccessException)
-                    { }
-                }
-                //make 3 new lists, one for each date containing every NameDateObj
-                var creationtimelist = new List<DateTime?>();
-                var modtimelist = new List<DateTime?>();
-                var accesstimelist = new List<DateTime?>();
-                //populate the new seperated lists with the times from the combinedobject list (timelist)
-                foreach (NameDateObj timeobject in timelist)
-                {
-                    creationtimelist.Add((DateTime?)timeobject.Created);
-                    modtimelist.Add((DateTime?)timeobject.Modified);
-                    accesstimelist.Add((DateTime?)timeobject.Accessed);
-                }
-                //Make a new list of the lists we just made (Collection initializer)
-                var threetimelists = new List<List<DateTime?>> { creationtimelist, modtimelist, accesstimelist };
-                //Instantiate 3 new vars as a new class that processes the min and max date from the 3 lists we just made
-                var cre = new DateMinMaxNewOld(creationtimelist);
-                var mod = new DateMinMaxNewOld(modtimelist);
-                var acc = new DateMinMaxNewOld(accesstimelist);
-
-                ////Create 2 lists(min and max), containing the 3 min/max dates.
-                //DateTime?[] minarray = { cre.minDate, mod.minDate, acc.minDate };
-                //DateTime?[] maxarray = { cre.maxDate, mod.maxDate, acc.maxDate };
-                ////Instantiate themin/themax as the new class that calculates the min and max date from the 3 dates above.
-                //var themin = new DatesNewestOldest(new List<DateTime?>(minarray));
-                //var themax = new DatesNewestOldest(new List<DateTime?>(maxarray));
-                ////Keep track of the min/max indexes in this 1,2,3 format too.
-                //int[] minindexesarray = { cre.minIndex, mod.minIndex, acc.minIndex };
-                //int[] maxindexesarray = { cre.maxIndex, mod.maxIndex, acc.maxIndex };
-
-                string filenameused = "";
-                //var dateToUse = new DateTime?();
-
-                //Decide which to use.
-
-                if (gui.radioButton1Oldest)
-                {
-                    //mode a: set ALL attributes to the oldest date of whichever attribute was oldest.
-                    //                    dateToUse = (DateTime?)minarray[themin.minIndex];
-                    //                    filenameused = timelist[minindexesarray[themin.minIndex]].Name;
-                    //                    thingtoreturn.Created = dateToUse;
-                    //                    thingtoreturn.Modified= dateToUse;
-                    //                    thingtoreturn.Accessed = dateToUse;
-
-                    //mode b: the more desirable mode:
-                    //set each attribute to OLDest date from EACH attribute
-                    thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
-                    thingtoreturn.Created = cre.MinDate;
-                    thingtoreturn.Modified = mod.MinDate;
-                    thingtoreturn.Accessed = acc.MinDate;
-                }
-                //the above comments obviously can apply to newer mode also with a small edit.
-                else if (gui.radioButton2Newest)
-                {
-                    //set each attribute to NEWest date from EACH attribute
-                    thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
-                    thingtoreturn.Created = cre.MaxDate;
-                    thingtoreturn.Modified = mod.MaxDate;
-                    thingtoreturn.Accessed = acc.MaxDate;
-                }
-                else if (gui.radioButton3Random)
-                {
-                    //Mode A: (old) - removed the following 4 radio buttons
-                    //pick a subfile/dir at random, then pick an attribute(C,M,A) at random
-                    //    int randomindex = random.Next(0, timelist.Count);
-                    //    filenameused = timelist[randomindex].Name;
-
-                    //    if (radioButton1_setfromCreation.Checked)
-                    //        thingtoreturn.Created = (DateTime?)threetimelists[0][randomindex];
-                    //    if (radioButton2_setfromModified.Checked)
-                    //        thingtoreturn.Modified = (DateTime?)threetimelists[1][randomindex];
-                    //    if (radioButton3_setfromAccessed.Checked)
-                    //        thingtoreturn.Accessed = (DateTime?)threetimelists[2][randomindex];
-                    //    if (radioButton4_setfromRandom.Checked)
-                    //    {
-                    //        int cmarandomize = random.Next(0, 3);
-                    //        dateToUse = (DateTime?)threetimelists[cmarandomize][randomindex];
-
-                    //        if (cmarandomize == 0)
-                    //            thingtoreturn.Created = dateToUse;
-                    //        else if (cmarandomize == 1)
-                    //            thingtoreturn.Modified = dateToUse;
-                    //        else if (cmarandomize == 2)
-                    //            thingtoreturn.Accessed = dateToUse;
-                    //    }
-                    //Mode B: (current)
-                    //Pick a subfile/dir at random, copy all 3 attributes from it, to the return object.
-                    int randomindex = random.Next(0, timelist.Count);
-                    filenameused = timelist[randomindex].Name;
-                    thingtoreturn.Created = threetimelists[0][randomindex];
-                    thingtoreturn.Modified = threetimelists[1][randomindex];
-                    thingtoreturn.Accessed = threetimelists[2][randomindex];
-                }
-                //Set the thingtoReturn Name to what we just determined.
-                thingtoreturn.Name = filenameused;
+                    MessageBox.Show(
+                        "Error getting attributes of a file in '" + directoryPath + "': \r\n\r\n" + ex.Message,
+                        @"PEBKAC Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } // catch failure of GetFiles
+                catch (UnauthorizedAccessException)
+                { } //show nothing because this is normal for this method when encountering inaccessible files
             }
+            else if (gui.radioButton2_useTimefromSubdir)
+            {
+                try
+                {
+                    // Get List of the subdirs (full path)
+                    extractlist.AddRange(Directory.GetDirectories(directoryPath).Select(subDirectory => Path.Combine(directoryPath, subDirectory)));
+                } // catch failure from GetDirs
+                catch (UnauthorizedAccessException)
+                { } //show nothing because this is normal for this method when encountering inaccessible dirs
+            }
+
+            // ## Exit out early:
+            // if the list is empty, theres nothing to do, then return an empty object.?????
+            if (extractlist.Count == 0)
+                return thingtoreturn;
+
+            // ---------------------------------------------------------------------------------//
+            // ## MID WAY POINT ##
+            // We have our first list and now we apply it to the 3 other CMA lists per all the files
+            // And where we actually decide whether to keep our time or use the new time.
+            // ---------------------------------------------------------------------------------//
+
+            foreach (string fullpath in extractlist)
+            {
+                var decidetemp = new NameDateObj { Name = fullpath };
+                //grab all 3 times and put them in a decidetemp object
+                try
+                {
+                    decidetemp.Created = File.GetCreationTime(fullpath); // File Class works on dirs also
+                    decidetemp.Modified = File.GetLastWriteTime(fullpath);
+                    decidetemp.Accessed = File.GetLastAccessTime(fullpath);
+                    //add the temp object to the list of objects
+                    timelist.Add(decidetemp);
+                }
+                catch (UnauthorizedAccessException)
+                { }
+            }
+            //make 3 new lists, one for each date containing every NameDateObj
+            var creationtimelist = new List<DateTime?>();
+            var modtimelist = new List<DateTime?>();
+            var accesstimelist = new List<DateTime?>();
+            //populate the new seperated lists with the times from the combinedobject list (timelist)
+            foreach (NameDateObj timeobject in timelist)
+            {
+                creationtimelist.Add((DateTime?)timeobject.Created);
+                modtimelist.Add((DateTime?)timeobject.Modified);
+                accesstimelist.Add((DateTime?)timeobject.Accessed);
+            }
+            //Make a new list of the lists we just made (Collection initializer)
+            var threetimelists = new List<List<DateTime?>> { creationtimelist, modtimelist, accesstimelist };
+            //Instantiate 3 new vars as a new class that processes the min and max date from the 3 lists we just made
+            var cre = new DateMinMaxNewOld(creationtimelist);
+            var mod = new DateMinMaxNewOld(modtimelist);
+            var acc = new DateMinMaxNewOld(accesstimelist);
+
+            ////Create 2 lists(min and max), containing the 3 min/max dates.
+            //DateTime?[] minarray = { cre.minDate, mod.minDate, acc.minDate };
+            //DateTime?[] maxarray = { cre.maxDate, mod.maxDate, acc.maxDate };
+            ////Instantiate themin/themax as the new class that calculates the min and max date from the 3 dates above.
+            //var themin = new DatesNewestOldest(new List<DateTime?>(minarray));
+            //var themax = new DatesNewestOldest(new List<DateTime?>(maxarray));
+            ////Keep track of the min/max indexes in this 1,2,3 format too.
+            //int[] minindexesarray = { cre.minIndex, mod.minIndex, acc.minIndex };
+            //int[] maxindexesarray = { cre.maxIndex, mod.maxIndex, acc.maxIndex };
+
+            string filenameused = "";
+            //var dateToUse = new DateTime?();
+
+            //Decide which to use.
+
+            if (gui.radioButton1Oldest)
+            {
+                //mode a: set ALL attributes to the oldest date of whichever attribute was oldest.
+                //                    dateToUse = (DateTime?)minarray[themin.minIndex];
+                //                    filenameused = timelist[minindexesarray[themin.minIndex]].Name;
+                //                    thingtoreturn.Created = dateToUse;
+                //                    thingtoreturn.Modified= dateToUse;
+                //                    thingtoreturn.Accessed = dateToUse;
+
+                //mode b: the more desirable mode:
+                //set each attribute to OLDest date from EACH attribute
+                thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
+                thingtoreturn.Created = cre.MinDate;
+                thingtoreturn.Modified = mod.MinDate;
+                thingtoreturn.Accessed = acc.MinDate;
+            }
+            //the above comments obviously can apply to newer mode also with a small edit.
+            else if (gui.radioButton2Newest)
+            {
+                //set each attribute to NEWest date from EACH attribute
+                thingtoreturn.Name = "Mode 2: Three Different Filenames"; // note to self.
+                thingtoreturn.Created = cre.MaxDate;
+                thingtoreturn.Modified = mod.MaxDate;
+                thingtoreturn.Accessed = acc.MaxDate;
+            }
+            else if (gui.radioButton3Random)
+            {
+                //Mode A: (old) - removed the following 4 radio buttons
+                //pick a subfile/dir at random, then pick an attribute(C,M,A) at random
+                //    int randomindex = random.Next(0, timelist.Count);
+                //    filenameused = timelist[randomindex].Name;
+
+                //    if (radioButton1_setfromCreation.Checked)
+                //        thingtoreturn.Created = (DateTime?)threetimelists[0][randomindex];
+                //    if (radioButton2_setfromModified.Checked)
+                //        thingtoreturn.Modified = (DateTime?)threetimelists[1][randomindex];
+                //    if (radioButton3_setfromAccessed.Checked)
+                //        thingtoreturn.Accessed = (DateTime?)threetimelists[2][randomindex];
+                //    if (radioButton4_setfromRandom.Checked)
+                //    {
+                //        int cmarandomize = random.Next(0, 3);
+                //        dateToUse = (DateTime?)threetimelists[cmarandomize][randomindex];
+
+                //        if (cmarandomize == 0)
+                //            thingtoreturn.Created = dateToUse;
+                //        else if (cmarandomize == 1)
+                //            thingtoreturn.Modified = dateToUse;
+                //        else if (cmarandomize == 2)
+                //            thingtoreturn.Accessed = dateToUse;
+                //    }
+                //Mode B: (current)
+                //Pick a subfile/dir at random, copy all 3 attributes from it, to the return object.
+                int randomindex = random.Next(0, timelist.Count);
+                filenameused = timelist[randomindex].Name;
+                thingtoreturn.Created = threetimelists[0][randomindex];
+                thingtoreturn.Modified = threetimelists[1][randomindex];
+                thingtoreturn.Accessed = threetimelists[2][randomindex];
+            }
+            //Set the thingtoReturn Name to what we just determined.
+            thingtoreturn.Name = filenameused;
             return thingtoreturn;
         }
         //;

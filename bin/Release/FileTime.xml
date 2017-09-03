@@ -351,6 +351,9 @@
             Explorer-like Sort, that orders two NameDateObj's by their name property
             </summary>
         </member>
+        <member name="T:genBTC.FileTime.Models.NameDateQuick">
+            <summary>  Store some the fields that the GUI uses. Small Version. </summary>
+        </member>
         <member name="F:genBTC.FileTime.Models.SkippedHSR.H">
             <summary> Count of the number of hidden files skipped </summary>
         </member>
@@ -365,9 +368,6 @@
         </member>
         <member name="M:genBTC.FileTime.Models.SkippedHSR.Reset">
             <summary>  Reset the skip count of Hidden system and readonly files  </summary>
-        </member>
-        <member name="T:genBTC.FileTime.Models.NameDateStruct">
-            <summary>  Store some the fields that the GUI uses. Small Version. </summary>
         </member>
         <member name="T:genBTC.FileTime.Models.guistatus">
             <summary>  Store all(most) the fields that the GUI uses, for populating the viewmodel. </summary>
@@ -558,10 +558,10 @@
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem234_ThreeRemoves_Click(System.Object,System.EventArgs)">
             <summary> Remove 1=Created,2=Modified,3=Accessed... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem5_DeleteItem_Click(System.Object,System.EventArgs)">
-            <summary> Delete Item... </summary>
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_RemoveItem_Click(System.Object,System.EventArgs)">
+            <summary> Remove Item from list... </summary>
         </member>
-        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem6_OpenExplorer_Click(System.Object,System.EventArgs)">
+        <member name="M:genBTC.FileTime.Forms.Form_Confirm.toolStripMenuItem7_OpenExplorer_Click(System.Object,System.EventArgs)">
             <summary> Open Explorer to selected path. Supports multi-selection up to 10 items </summary>
         </member>
         <member name="M:genBTC.FileTime.Forms.Form_Confirm.listView_RestoreAllCheckboxes">

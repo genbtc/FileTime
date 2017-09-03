@@ -131,6 +131,7 @@
     <Compile Include="Classes\FileComparer.cs" />
     <Compile Include="Models\DataModel.cs" />
     <Compile Include="Models\NameDateObj.cs" />
+    <Compile Include="Models\NameDateQuick.cs" />
     <Compile Include="Models\Structs.cs" />
     <Compile Include="mViewModels\CustomListView.cs">
       <SubType>Component</SubType>

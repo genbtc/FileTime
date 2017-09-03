@@ -18,6 +18,10 @@ namespace genBTC.FileTime.Classes
         {
             return new ExplorerLikeComparer();
         }
+        public static IEqualityComparer<string> explorerStringEqualityComparer(string targetPath, string comparePath)
+        {
+            return new ExplorerLikeEqualityComparer(string targetPath, string comparePath);
+        }
 
         public static readonly char Seperator = Path.DirectorySeparatorChar;
         public static readonly string SeperatorString = Path.DirectorySeparatorChar.ToString();
