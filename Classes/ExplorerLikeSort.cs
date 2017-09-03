@@ -16,24 +16,25 @@ namespace genBTC.FileTime.Classes
     /// <summary> Explorer-like Sort, for strings </summary>
     public class ExplorerLikeEqualityComparer : IEqualityComparer<string>
     {
-        public string TargetPath { get; private set; }
-        public string ComparePath { get; private set; }
+        public string XPath { get; }
+        public string YPath { get; }
 
-        public ExplorerLikeEqualityComparer(string targetPath, string comparePath)
+        public ExplorerLikeEqualityComparer(string xPath, string yPath)
         {
-            TargetPath = targetPath;
-            ComparePath = comparePath;
+            XPath = xPath ?? throw new ArgumentNullException(nameof(xPath));
+            YPath = yPath ?? throw new ArgumentNullException(nameof(yPath));
         }
 
         public bool Equals(string x, string y)
         {
-            string yChanged = y?.Replace(ComparePath, TargetPath);
+            string yChanged = y?.Replace(YPath, XPath);
             return SharedHelper.StrCmpLogicalW(x, yChanged).Equals(0);
         }
 
         public int GetHashCode(string x)
         {
-            return x.GetHashCode();
+            string xChanged = x.Replace(XPath, YPath);
+            return xChanged.GetHashCode();
         }
     }
     /// <summary> Explorer-like Sort, for ListViewItem - used by listview.Sorter </summary>

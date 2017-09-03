@@ -507,7 +507,7 @@ namespace genBTC.FileTime.Models
             }
 
             // Find the common DIRS. It produces a sequence and doesn't execute until the foreach statement.  
-            IEnumerable<string> queryCommonDirs = srcDirList.Intersect(destDirList, SharedHelper.explorerStringEqualityComparer());
+            IEnumerable<string> queryCommonDirs = srcDirList.Intersect(destDirList, SharedHelper.explorerStringEqualityComparer(targetPath, comparePath));
 
             //Console.WriteLine(@"The following files are in both folders:");
             foreach (string f in queryCommonDirs)
