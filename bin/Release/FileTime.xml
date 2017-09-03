@@ -85,6 +85,9 @@
         <member name="T:genBTC.FileTime.Classes.ExplorerLikeComparer">
             <summary> Explorer-like Sort, for strings </summary>
         </member>
+        <member name="T:genBTC.FileTime.Classes.ExplorerLikeEqualityComparer">
+            <summary> Explorer-like Sort, for strings </summary>
+        </member>
         <member name="T:genBTC.FileTime.Classes.ExpLikeCmpHelperforListView">
             <summary> Explorer-like Sort, for ListViewItem - used by listview.Sorter </summary>
         </member>
@@ -201,7 +204,7 @@
         <member name="M:genBTC.FileTime.Classes.SharedHelper.Bool2Int(System.Boolean)">
             <summary> Return 1 if bool=true (Directory) otherwise 0=false (File) </summary>
         </member>
-        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String)">
+        <member name="M:genBTC.FileTime.Classes.SharedHelper.OpenFilePicker(System.String,System.String)">
             <summary>
             Display the Folder Browser Dialog and then display the selected
             file path and the directories and files in the folder.
@@ -272,10 +275,12 @@
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode3(System.String,System.String)">
             <summary>
-            Mode 3: Recursive.
+            Mode 3: Process One directory, Process 2nd Dir. with recursive sub-directory support. Calls SetFileDateTime()
+            (Only adds to the confirm list, Form 2 will actually write changes).
             </summary>
-            <param name="targetPath">Write Path to modify times of. </param>
-            <param name="comparePath">Read Path used as source of time data.</param>
+            <param name="targetPath">Full path to the targetPath directory</param>
+            <param name="comparePath">Full path to the comparePath directory</param>
+            req, checkBox_Recurse.Checked, checkBoxShouldFiles.Checked
         </member>
         <member name="M:genBTC.FileTime.Models.DataModel.RecurseSubDirectoryMode1Parent(System.String)">
             <summary>  Mode 1P (start at its Parent) </summary>
@@ -323,12 +328,6 @@
         <member name="T:genBTC.FileTime.Models.NameDateObj">
             <summary>Class object with 5 properties to refer to a file/dir</summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor(System.Windows.Forms.ListViewItem)">
-            <summary> constructor with a listviewitem </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor">
-            <summary> default Constructor (Initializer)</summary>
-        </member>
         <member name="P:genBTC.FileTime.Models.NameDateObj.FileOrDirType">
             <summary>quick flag to know whether we're a file or a dir
             int FileOrDirType: 0 (File) or 1 (Dir)
@@ -345,6 +344,12 @@
         </member>
         <member name="P:genBTC.FileTime.Models.NameDateObj.Accessed">
             <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor(System.Windows.Forms.ListViewItem)">
+            <summary> constructor with a listviewitem </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor">
+            <summary> default Constructor (Initializer)</summary>
         </member>
         <member name="T:genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort">
             <summary>

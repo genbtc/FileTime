@@ -26,6 +26,7 @@
     <OldToolsVersion>0.0</OldToolsVersion>
     <UpgradeBackupLocation />
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -40,7 +41,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -70,7 +70,7 @@
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile />
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;__DEMO__,__DEMO_EXPERIMENTAL__</DefineConstants>
     <DocumentationFile>FileTime.xml</DocumentationFile>
     <DebugSymbols>false</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
@@ -119,6 +119,9 @@
     <Reference Include="UIToolbox.RadioGroupBox, Version=1.1.0.0, Culture=neutral, PublicKeyToken=1e4be6f27f1c1744, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\RadioGroupBox\UIToolbox.RadioGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ZetaLongPaths, Version=1.0.0.18, Culture=neutral, PublicKeyToken=b764f59068f31f38, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZetaLongPaths.1.0.0.18\lib\net40-full\ZetaLongPaths.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -226,7 +229,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\genBTC.FileTime.Models.DataModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,6 +243,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent />
-    <PostBuildEvent>"C:\Program Files (x86)\Inno Setup 5\Compil32.exe" /cc "C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\inno.iss"</PostBuildEvent>
+    <PostBuildEvent>"C:\Program Files (x86)\Inno Setup 5\Compil32.exe" /cc "E:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\inno.iss"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -615,19 +615,20 @@ namespace genBTC.FileTime.Models
             //Should really assert something before we get this far, this isnt the right function to be erroring out in:
             // TODO: Revisit this when a few months go by to figure out if anything has changed with >260 Longpaths 
             // >
-            FileAttributes fAttr = File.GetAttributes(path); //longpath unsafe
+            //FileAttributes fAttr = File.GetAttributes(path); //longpath unsafe
+            var fAttr = ZetaLongPaths.ZlpIOHelper.GetFileAttributes(path);
 
-            if ((fAttr & FileAttributes.System) == FileAttributes.System && Settings.Default.SkipSystem)
+            if ((fAttr & ZetaLongPaths.Native.FileAttributes.System) == ZetaLongPaths.Native.FileAttributes.System && Settings.Default.SkipSystem)
             {
                 Skips.S++;
                 return; // Skip system files and directories
             }
-            if ((fAttr & FileAttributes.Hidden) == FileAttributes.Hidden && Settings.Default.SkipHidden)
+            if ((fAttr & ZetaLongPaths.Native.FileAttributes.Hidden) == ZetaLongPaths.Native.FileAttributes.Hidden && Settings.Default.SkipHidden)
             {
                 Skips.H++;
                 return; // Skip hidden files and directories
             }
-            if ((fAttr & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+            if ((fAttr & ZetaLongPaths.Native.FileAttributes.Readonly) == ZetaLongPaths.Native.FileAttributes.Readonly)
             {
                 if (Settings.Default.SkipReadOnly)
                 {

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "FileTime"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.1"
 #define MyAppPublisher "genBTC"
 #define MyAppURL "http://genBTC.blogspot.com"
 #define MyAppExeName "FileTime.exe"
@@ -35,7 +35,6 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\FileTime.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\FileTime.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-;Source: "C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\LivingObjects.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\EOFL\Documents\Visual Studio 2010\Projects\CodeProject-FileTime\FileTime\bin\Release\UIToolbox.RadioGroupBox.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

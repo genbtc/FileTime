@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Resources;
 
@@ -7,7 +8,7 @@ using System.Resources;
 // associated with an assembly.
 //
 
-[assembly: AssemblyTitle("FileTime v1.1")]
+[assembly: AssemblyTitle("FileTime v1.11.10000")]
 [assembly:
     AssemblyDescription("Sets the creation, last write and last access date and time of user selected files/folders")]
 [assembly: AssemblyConfiguration("")]
@@ -28,7 +29,7 @@ using System.Resources;
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.1.1.*")]
+[assembly: AssemblyVersion("1.1.1.10002")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the
@@ -60,3 +61,6 @@ using System.Resources;
 [assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]
 [assembly: NeutralResourcesLanguage("en-US")]
+[assembly: AssemblyFileVersion("1.1.1.10002")]
+[assembly: Guid("80B54331-BCA0-4D10-8F0B-93AAA8C475B3")]
+

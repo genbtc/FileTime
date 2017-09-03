@@ -14,28 +14,6 @@ namespace genBTC.FileTime.Models
 
         public bool isBlank;
         public object which;
-
-        /// <summary> constructor with a listviewitem </summary>
-        public NameDateObj(ListViewItem thing)
-        {
-            FileOrDirType = thing.ImageIndex;
-            Name = thing.SubItems[0].Text;
-            Created = Listviewtodateornull(thing.SubItems[1].Text);
-            Modified = Listviewtodateornull(thing.SubItems[2].Text);
-            Accessed = Listviewtodateornull(thing.SubItems[3].Text);
-            isBlank = false;
-            which = null;
-        }
-
-        /// <summary> default Constructor (Initializer)</summary>
-        public NameDateObj()
-        {
-            Name = "";
-            FileOrDirType = 0;
-            isBlank = true;
-            which = null;
-        }
-
         /// <summary>quick flag to know whether we're a file or a dir
         /// int FileOrDirType: 0 (File) or 1 (Dir)
         /// </summary>
@@ -65,6 +43,29 @@ namespace genBTC.FileTime.Models
             get => Nullordate(_a);
             set => _a = (DateTime?)value;
         }
+
+        /// <summary> constructor with a listviewitem </summary>
+        public NameDateObj(ListViewItem thing)
+        {
+            FileOrDirType = thing.ImageIndex;
+            Name = thing.SubItems[0].Text;
+            Created = Listviewtodateornull(thing.SubItems[1].Text);
+            Modified = Listviewtodateornull(thing.SubItems[2].Text);
+            Accessed = Listviewtodateornull(thing.SubItems[3].Text);
+            isBlank = false;
+            which = null;
+        }
+
+        /// <summary> default Constructor (Initializer)</summary>
+        public NameDateObj()
+        {
+            Name = "";
+            FileOrDirType = 0;
+            isBlank = true;
+            which = null;
+        }
+
+
 
         //helper function to check date for null - this helps the GUI display "N/A"
         private static object Nullordate(DateTime? x)

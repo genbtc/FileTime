@@ -328,12 +328,6 @@
         <member name="T:genBTC.FileTime.Models.NameDateObj">
             <summary>Class object with 5 properties to refer to a file/dir</summary>
         </member>
-        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor(System.Windows.Forms.ListViewItem)">
-            <summary> constructor with a listviewitem </summary>
-        </member>
-        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor">
-            <summary> default Constructor (Initializer)</summary>
-        </member>
         <member name="P:genBTC.FileTime.Models.NameDateObj.FileOrDirType">
             <summary>quick flag to know whether we're a file or a dir
             int FileOrDirType: 0 (File) or 1 (Dir)
@@ -350,6 +344,12 @@
         </member>
         <member name="P:genBTC.FileTime.Models.NameDateObj.Accessed">
             <summary>returns an object: DateTime or null </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor(System.Windows.Forms.ListViewItem)">
+            <summary> constructor with a listviewitem </summary>
+        </member>
+        <member name="M:genBTC.FileTime.Models.NameDateObj.#ctor">
+            <summary> default Constructor (Initializer)</summary>
         </member>
         <member name="T:genBTC.FileTime.Models.NameDateObj.ExplorerLikeSort">
             <summary>
